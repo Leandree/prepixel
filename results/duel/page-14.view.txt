@@ -1,0 +1,39 @@
+text 20,41,122,38 "Orders"
+text 20,101,111,19 "5 open orders"
+text 30,142,52,19 "Order"
+text 224,142,87,19 "Customer"
+text 571,142,44,19 "Total"
+text 824,142,59,19 "Status"
+text 30,180,54,19 "#4400"
+text 224,180,88,19 "Verofa SAS"
+text 571,180,66,19 "€374.30"
+text 832,180,64,19 "Pending"
+button 1085,174,51,31
+text 1097,182,27,15 "Ship"
+text 30,224,54,19 "#4401"
+text 224,224,76,19 "Sapini SA"
+text 571,224,76,19 "€2282.22"
+text 832,224,64,19 "Pending"
+button 1085,218,51,31
+text 1097,226,27,15 "Ship"
+text 30,268,54,19 "#4402"
+text 224,268,113,19 "Mivemi GmbH"
+text 571,268,66,19 "€785.43"
+text 832,268,64,19 "Pending"
+button 1085,262,51,31
+text 1097,270,27,15 "Ship"
+text 30,312,54,19 "#4403"
+text 224,312,90,19 "Tilufa SARL"
+text 571,312,76,19 "€2765.98"
+text 832,312,40,19 "Draft"
+button 1085,306,51,31
+text 1097,314,27,15 "Ship"
+text 30,356,54,19 "#4404"
+text 224,356,84,19 "Duroka SA"
+text 571,356,76,19 "€1878.83"
+text 832,356,64,19 "Pending"
+button 1085,350,51,31
+text 1097,358,27,15 "Ship"
+input 20,393,185,21 id=cust
+button 205,388,83,31 id=add
+text 217,396,59,15 "Add order"

@@ -1,0 +1,57 @@
+text 20,41,122,38 "Orders"
+text 20,101,111,19 "8 open orders"
+text 30,142,52,19 "Order"
+text 221,142,87,19 "Customer"
+text 571,142,44,19 "Total"
+text 819,142,59,19 "Status"
+text 30,180,54,19 "#4900"
+text 221,180,84,19 "Fanimo SA"
+text 571,180,76,19 "€3009.92"
+text 827,180,33,19 "Paid"
+button 1088,174,51,31
+text 1100,182,27,15 "Ship"
+text 30,224,54,19 "#4901"
+text 221,224,87,19 "Mirero SAS"
+text 571,224,76,19 "€1688.65"
+text 827,224,40,19 "Draft"
+button 1088,218,51,31
+text 1100,226,27,15 "Ship"
+text 30,268,54,19 "#4902"
+text 221,268,115,19 "Repimo GmbH"
+text 571,268,66,19 "€354.55"
+text 827,268,33,19 "Paid"
+button 1088,262,51,31
+text 1100,270,27,15 "Ship"
+text 30,312,54,19 "#4903"
+text 221,312,114,19 "Romiso GmbH"
+text 571,312,76,19 "€3170.06"
+text 827,312,40,19 "Draft"
+button 1088,306,51,31
+text 1100,314,27,15 "Ship"
+text 30,356,54,19 "#4904"
+text 221,356,94,19 "Vesomi SAS"
+text 571,356,76,19 "€2539.59"
+text 827,356,64,19 "Pending"
+button 1088,350,51,31
+text 1100,358,27,15 "Ship"
+text 30,400,54,19 "#4905"
+text 221,400,87,19 "Sofamo SA"
+text 571,400,76,19 "€1443.68"
+text 827,400,33,19 "Paid"
+button 1088,394,51,31
+text 1100,402,27,15 "Ship"
+text 30,444,54,19 "#4906"
+text 221,444,116,19 "Vemore GmbH"
+text 571,444,76,19 "€2344.87"
+text 827,444,68,19 "Overdue"
+button 1088,438,51,31
+text 1100,446,27,15 "Ship"
+text 30,488,54,19 "#4907"
+text 221,488,90,19 "Safati & Co"
+text 571,488,76,19 "€2203.06"
+text 827,488,40,19 "Draft"
+button 1088,482,51,31
+text 1100,490,27,15 "Ship"
+input 20,525,185,21 id=cust
+button 205,520,83,31 id=add
+text 217,528,59,15 "Add order"

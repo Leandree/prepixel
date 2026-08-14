@@ -1,0 +1,45 @@
+text 20,41,122,38 "Orders"
+text 20,101,111,19 "6 open orders"
+text 30,142,52,19 "Order"
+text 227,142,87,19 "Customer"
+text 548,142,44,19 "Total"
+text 804,142,59,19 "Status"
+text 30,180,54,19 "#3300"
+text 227,180,90,19 "Kamoso SA"
+text 548,180,76,19 "€4146.55"
+text 812,180,40,19 "Draft"
+button 1082,174,51,31
+text 1094,182,27,15 "Ship"
+text 30,224,54,19 "#3301"
+text 227,224,78,19 "Baluro SA"
+text 548,224,76,19 "€3490.20"
+text 812,224,33,19 "Paid"
+button 1082,218,51,31
+text 1094,226,27,15 "Ship"
+text 30,268,54,19 "#3302"
+text 227,268,81,19 "Nivepi Ltd"
+text 548,268,66,19 "€869.22"
+text 812,268,33,19 "Paid"
+button 1082,262,51,31
+text 1094,270,27,15 "Ship"
+text 30,312,54,19 "#3303"
+text 227,312,88,19 "Batiba SAS"
+text 548,312,76,19 "€3687.05"
+text 812,312,40,19 "Draft"
+button 1082,306,51,31
+text 1094,314,27,15 "Ship"
+text 30,356,54,19 "#3304"
+text 227,356,101,19 "Vemomo Ltd"
+text 548,356,66,19 "€987.80"
+text 812,356,68,19 "Overdue"
+button 1082,350,51,31
+text 1094,358,27,15 "Ship"
+text 30,400,54,19 "#3305"
+text 227,400,82,19 "Fakave SA"
+text 548,400,66,19 "€224.96"
+text 812,400,33,19 "Paid"
+button 1082,394,51,31
+text 1094,402,27,15 "Ship"
+input 20,437,185,21 id=cust
+button 205,432,83,31 id=add
+text 217,440,59,15 "Add order"

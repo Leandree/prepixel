@@ -1,0 +1,57 @@
+text 20,41,122,38 "Orders"
+text 20,101,111,19 "8 open orders"
+text 30,142,52,19 "Order"
+text 227,142,87,19 "Customer"
+text 548,142,44,19 "Total"
+text 804,142,59,19 "Status"
+text 30,180,54,19 "#3900"
+text 227,180,79,19 "Tinidu Ltd"
+text 548,180,66,19 "€661.55"
+text 812,180,64,19 "Pending"
+button 1082,174,51,31
+text 1094,182,27,15 "Ship"
+text 30,224,54,19 "#3901"
+text 227,224,91,19 "Tiduba SAS"
+text 548,224,76,19 "€1086.08"
+text 812,224,64,19 "Pending"
+button 1082,218,51,31
+text 1094,226,27,15 "Ship"
+text 30,268,54,19 "#3902"
+text 227,268,81,19 "Katidu Ltd"
+text 548,268,76,19 "€3102.41"
+text 812,268,40,19 "Draft"
+button 1082,262,51,31
+text 1094,270,27,15 "Ship"
+text 30,312,54,19 "#3903"
+text 227,312,95,19 "Basomo Ltd"
+text 548,312,76,19 "€2559.30"
+text 812,312,64,19 "Pending"
+button 1082,306,51,31
+text 1094,314,27,15 "Ship"
+text 30,356,54,19 "#3904"
+text 227,356,96,19 "Sobave SAS"
+text 548,356,76,19 "€2700.78"
+text 812,356,33,19 "Paid"
+button 1082,350,51,31
+text 1094,358,27,15 "Ship"
+text 30,400,54,19 "#3905"
+text 227,400,77,19 "Miluso SA"
+text 548,400,76,19 "€2248.63"
+text 812,400,40,19 "Draft"
+button 1082,394,51,31
+text 1094,402,27,15 "Ship"
+text 30,444,54,19 "#3906"
+text 227,444,92,19 "Lusaso SAS"
+text 548,444,76,19 "€4872.92"
+text 812,444,68,19 "Overdue"
+button 1082,438,51,31
+text 1094,446,27,15 "Ship"
+text 30,488,54,19 "#3907"
+text 227,488,100,19 "Sokasa & Co"
+text 548,488,76,19 "€2223.31"
+text 812,488,68,19 "Overdue"
+button 1082,482,51,31
+text 1094,490,27,15 "Ship"
+input 20,525,185,21 id=cust
+button 205,520,83,31 id=add
+text 217,528,59,15 "Add order"

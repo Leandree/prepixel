@@ -1,0 +1,45 @@
+text 20,41,122,38 "Orders"
+text 20,101,111,19 "6 open orders"
+text 30,142,52,19 "Order"
+text 226,142,87,19 "Customer"
+text 564,142,44,19 "Total"
+text 819,142,59,19 "Status"
+text 30,180,54,19 "#3500"
+text 226,180,81,19 "Retive Ltd"
+text 564,180,66,19 "€326.97"
+text 827,180,64,19 "Pending"
+button 1083,174,51,31
+text 1095,182,27,15 "Ship"
+text 30,224,54,19 "#3501"
+text 226,224,77,19 "Tikaso SA"
+text 564,224,76,19 "€2401.62"
+text 827,224,40,19 "Draft"
+button 1083,218,51,31
+text 1095,226,27,15 "Ship"
+text 30,268,54,19 "#3502"
+text 226,268,77,19 "Pisopi Ltd"
+text 564,268,76,19 "€4481.69"
+text 827,268,33,19 "Paid"
+button 1083,262,51,31
+text 1095,270,27,15 "Ship"
+text 30,312,54,19 "#3503"
+text 226,312,108,19 "Luvelu GmbH"
+text 564,312,76,19 "€2030.09"
+text 827,312,64,19 "Pending"
+button 1083,306,51,31
+text 1095,314,27,15 "Ship"
+text 30,356,54,19 "#3504"
+text 226,356,93,19 "Lusamo Ltd"
+text 564,356,66,19 "€925.08"
+text 827,356,40,19 "Draft"
+button 1083,350,51,31
+text 1095,358,27,15 "Ship"
+text 30,400,54,19 "#3505"
+text 226,400,71,19 "Tipiro SA"
+text 564,400,66,19 "€355.36"
+text 827,400,33,19 "Paid"
+button 1083,394,51,31
+text 1095,402,27,15 "Ship"
+input 20,437,185,21 id=cust
+button 205,432,83,31 id=add
+text 217,440,59,15 "Add order"

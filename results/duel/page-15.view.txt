@@ -1,0 +1,39 @@
+text 20,41,122,38 "Orders"
+text 20,101,111,19 "5 open orders"
+text 30,142,52,19 "Order"
+text 221,142,87,19 "Customer"
+text 571,142,44,19 "Total"
+text 819,142,59,19 "Status"
+text 30,180,54,19 "#4500"
+text 221,180,109,19 "Bapiso GmbH"
+text 571,180,76,19 "€1008.21"
+text 827,180,64,19 "Pending"
+button 1088,174,51,31
+text 1100,182,27,15 "Ship"
+text 30,224,54,19 "#4501"
+text 221,224,116,19 "Lumomo SARL"
+text 571,224,66,19 "€832.48"
+text 827,224,33,19 "Paid"
+button 1088,218,51,31
+text 1100,226,27,15 "Ship"
+text 30,268,54,19 "#4502"
+text 221,268,88,19 "Pibasa SAS"
+text 571,268,76,19 "€3846.28"
+text 827,268,68,19 "Overdue"
+button 1088,262,51,31
+text 1100,270,27,15 "Ship"
+text 30,312,54,19 "#4503"
+text 221,312,106,19 "Mobare SARL"
+text 571,312,76,19 "€1107.57"
+text 827,312,40,19 "Draft"
+button 1088,306,51,31
+text 1100,314,27,15 "Ship"
+text 30,356,54,19 "#4504"
+text 221,356,85,19 "Tidulu SAS"
+text 571,356,76,19 "€1857.07"
+text 827,356,33,19 "Paid"
+button 1088,350,51,31
+text 1100,358,27,15 "Ship"
+input 20,393,185,21 id=cust
+button 205,388,83,31 id=add
+text 217,396,59,15 "Add order"

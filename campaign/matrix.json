@@ -557,6 +557,70 @@
     },
     {
       "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium/CDP",
+      "app": "Precision-vs-pixels duel (20 randomized order-console pages)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (controlled experiment)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Same pages captured both ways: hardened structured view (exact bytes) vs real screenshot (exact dims -> official Anthropic image-token formula w*h/750). Accuracy: model answers 3 mechanical tasks per page from each condition independently.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Accuracy PARITY: 18/18 correct from the structured view AND 18/18 from screenshots (n=6 pages x 3 tasks: count-by-status, max-total customer, id-of-target-customer). On clean legible pages pixels also score 100% \u2014 so the duel's win here is COST, not accuracy. The accuracy ADVANTAGE of structure shows up in the degraded regimes tested separately (occlusion, off-viewport, tiny text) where screenshots lose information; parity here is the honest baseline."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Structured view enumerates all rows/buttons with boxes; whole page, no scrolling."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "covered in the CDP cell"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "covered in living-screen cells"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "covered in grounding eval (4/4)"
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "covered in visual eval (3/3 x2)"
+        }
+      },
+      "measurements": {
+        "view_bytes": 1580,
+        "view_tokens_est": 391,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "n=20 pages for cost, n=6 for paired accuracy. Cost: structured avg 391 tok (est, chars/4) & 1580 bytes vs screenshot 1366 img-tokens (EXACT public formula) & 57576 png bytes => 3.5x fewer tokens, 36.4x fewer bytes, every page. Token estimate caveat: no offline BPE tokenizer available (network-blocked), so structured tokens use the standard chars/4 approximation; the screenshot side is exact, and the byte ratio (36x, tokenizer-independent) corroborates the direction. Figure: results/duel/fig_duel.png."
+      },
+      "runtime_verification": {
+        "method": "mechanical check of both conditions' answers vs held-out randomized ground truth",
+        "agreement": "structured 18/18, pixels 18/18 \u2014 parity"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux, reference cell)",
+      "date": "2026-08-14",
+      "raw_artifacts": [
+        "results/duel/duel-cost.json",
+        "results/duel/duel-summary.json",
+        "results/duel/fig_duel.png",
+        "results/duel/answers-structured.json",
+        "results/duel/answers-pixels.json"
+      ]
+    },
+    {
+      "os": "linux",
       "os_version": "Ubuntu 24.04, Qt 5.15",
       "app": "Qt Widgets (examples/widgets/calculator) \u2014 representative Qt app",
       "stack": "qt",

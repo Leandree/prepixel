@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-11 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+12 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -8,6 +8,7 @@
 |----|-----|-------|---------|---------|---------|---------:|---------:|:---------------------:|
 | linux | Chromium / Chrome DevTools Protocol (covers all Electron apps: VS Code, Slack, Discord, Teams) | chromium | cdp | ✅ works | explicit | 308 | 1,366 | ✅ |
 | linux | Native OS-level blind click driven by structured coordinates | chromium | cdp | 🟡 partial | blocked |  | 1,366 | ✅ |
+| linux | Precision-vs-pixels duel (20 randomized order-console pages) | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
 | linux | Adversarial: occlusion & visibility tricks (the safety-claim stress test) | chromium | cdp | ✅ works | explicit |  | 1,366 | ✅ |
 | linux | All-canvas 'game' page (perimeter-law control) | custom-canvas | pixels-baseline | ⬜ unavailable | explicit | 7 | 1,366 | ✅ |
 | linux | GNOME Text Editor — hard-text stress (ligatures, accents, RTL Arabic, emoji, CJK) | gtk4 | render-tree-tap | ✅ works | explicit |  | 1,366 | ✅ |
@@ -26,7 +27,7 @@ The production-safety question: could a router know the channel in advance, and 
 |-----------------|---------|------------------|--------------|
 | --remote-debugging-port responds on the target process (Electron apps expose the same) | cdp | ✅ works | explicit |
 | CDP responds | cdp | 🟡 partial | blocked |
-| n/a | cdp | ✅ works | explicit |
+| n/a | cdp | ✅ works | — |
 | single CANVAS element covering the viewport; DOM has no text/interactive nodes inside it | pixels-baseline | ⬜ unavailable | explicit |
 | libgtk-4.so; text nodes name their font per run | render-tree-tap | ✅ works | explicit |
 | org.a11y.Bus not activatable in headless sandbox; app does not register | accessibility-api | ⛔ blocked | blocked |
@@ -38,8 +39,8 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 7/11.
-- **Silent divergences** (disqualifying): 0/11 ✅ none found
-- Cells **not** predictable in advance: 0/11 ✅ none
+- Cells where structure **works**: 8/12.
+- **Silent divergences** (disqualifying): 0/12 ✅ none found
+- Cells **not** predictable in advance: 0/12 ✅ none
 
 Reading: every failure so far is either **explicit** (opaque rect / honest empty tree) or **blocked** (OS/env), and every channel was detectable from a stack signature before use. That is the pattern a production router needs. The open risk to hunt on the other OSes is any **silent** cell — a channel that returns a view disagreeing with the screen without declaring it.

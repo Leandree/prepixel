@@ -32,3 +32,25 @@ from a detectable signature, which channel is available and what it covers — a
 the channel fail explicitly rather than silently?** If yes, the approach is a safe
 production primitive with a documented perimeter. If the working set is
 unpredictable or fails silently, that is the honest negative the paper must report.
+
+## Canonical battery (freeze this — every OS/channel runs the same)
+
+Every result cell must run the identical T1–T6 battery and emit a JSON validating
+against `results-schema.json`. Validate before aggregating:
+
+```bash
+python3 campaign/validate.py     # schema-checks every results/*.json (CI-friendly)
+python3 campaign/aggregate.py    # builds MATRIX.md + matrix.json
+```
+
+- **T1 read** — put known text on screen, recover it through the channel (exact match).
+- **T2 enumerate** — interactive elements + boxes vs ground truth.
+- **T3 live value** — typed field value visible in the channel.
+- **T4 living screen** — self-updating region: change seen? cost/tick? idle = 0?
+- **T5 blind action** — click at channel-derived coords; intended effect verified.
+- **T6 pictorial** — image/canvas declared as opaque rect + crop-able (never silent).
+
+Plus the transverse fields: bytes/tokens of the view and diff, capture latency,
+stack-detection signature, `predictable_before_use`, and `failure_class`
+(`none` / `explicit` / `silent` / `blocked`). The one result that disqualifies the
+approach for production is a **silent** cell; hunt for it deliberately.

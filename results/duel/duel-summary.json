@@ -1,0 +1,16 @@
+{
+  "n_pages_cost": 20,
+  "n_pages_accuracy": 6,
+  "accuracy": {
+    "structured": "18/18",
+    "pixels": "18/18"
+  },
+  "avg_cost": {
+    "structured_tokens_est": 391,
+    "pixels_img_tokens_exact": 1366,
+    "token_ratio": 3.5,
+    "structured_bytes": 1580,
+    "pixels_png_bytes": 57576,
+    "byte_ratio": 36.4
+  }
+}

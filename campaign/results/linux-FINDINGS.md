@@ -84,3 +84,22 @@ Four adversarial/robustness tests added after the first pass:
   Chromium DevTools-port flakiness after many headless relaunches (env, not
   approach). Windows/macOS agents complete this natively via UIA+SendInput /
   AXFrame+CGEvent.
+
+---
+
+## Precision-vs-pixels duel (the reviewer's experiment)
+
+Same 20 randomized pages, both conditions, same model, mechanical verification.
+
+- **Accuracy: parity.** 18/18 correct from the structured view AND 18/18 from
+  screenshots (n=6 × 3 tasks). On clean legible pages, pixels score 100% too — so on
+  *this* set the win is purely cost. The accuracy *advantage* of structure is real
+  but lives in the degraded regimes tested separately (occlusion, off-viewport, tiny
+  text), not on legible screens. Stated honestly so the paper doesn't overclaim.
+- **Cost: 3.5× fewer tokens, 36× fewer bytes**, every page (n=20). Screenshot side
+  uses the EXACT public image-token formula; structured side uses chars/4 (no offline
+  BPE tokenizer — network-blocked), corroborated by the tokenizer-independent 36×
+  byte ratio. Figure: `results/duel/fig_duel.png`.
+- **Infra hardening:** added `campaign/validate.py` (schema-checks every result JSON
+  before aggregation) and froze the canonical T1–T6 battery in `campaign/README.md`,
+  so the Windows/macOS agents produce directly-comparable, aggregatable data.
