@@ -1,0 +1,95 @@
+{
+  "note": "Merged semantic desktop view assembled by the router: WM map + per-window best channel. No single OS channel provides this; the agent composes it.",
+  "display": ":9",
+  "n_windows": 4,
+  "coverage_summary": {
+    "works": 3,
+    "unavailable": 1,
+    "predictable_before_use": 4
+  },
+  "windows_bottom_to_top": [
+    {
+      "title": "gtk_known.txt (/tmp) - Text Editor",
+      "pid": 2132,
+      "geometry": [
+        1040,
+        280,
+        700,
+        520
+      ],
+      "z_order": 0,
+      "focused": false,
+      "stack": "gtk4",
+      "stack_signature": "libgtk-4.so mapped",
+      "channel": "render-tree-tap",
+      "verdict": "works",
+      "coverage": "full render tree (glyph-decoded text)",
+      "failure_class": "none",
+      "note": "gsk_render_node_serialize via hook/gdb; completeness proven separately",
+      "predictable_before_use": true
+    },
+    {
+      "title": "/tmp/qt_known.txt",
+      "pid": 2534,
+      "geometry": [
+        340,
+        595,
+        700,
+        500
+      ],
+      "z_order": 1,
+      "focused": false,
+      "stack": "qt",
+      "stack_signature": "libQt5XcbQpa.so.5.15.13 mapped",
+      "channel": "accessibility-api",
+      "verdict": "unavailable",
+      "coverage": "no public render-tree; AT-SPI if QAccessible",
+      "failure_class": "explicit",
+      "note": "Qt exposes no render-tree serialization; falls to AT-SPI/pixels",
+      "predictable_before_use": true
+    },
+    {
+      "title": "LibreOffice 24.2 Document Recovery",
+      "pid": 2577,
+      "geometry": [
+        709,
+        384,
+        504,
+        352
+      ],
+      "z_order": 2,
+      "focused": false,
+      "stack": "office-native",
+      "stack_signature": "soffice process",
+      "channel": "object-model",
+      "verdict": "works",
+      "coverage": "full document model (text/tables/shapes)",
+      "failure_class": "none",
+      "note": "UNO socket :2002 live",
+      "predictable_before_use": true,
+      "extracted_content_note": "UNO getString() proven in standalone cell (exact text incl. accents, ~21 tok)"
+    },
+    {
+      "title": "Orders Console - Chromium",
+      "pid": 1964,
+      "geometry": [
+        60,
+        60,
+        800,
+        600
+      ],
+      "z_order": 3,
+      "focused": true,
+      "stack": "chromium",
+      "stack_signature": "chromium binary mapped",
+      "channel": "cdp",
+      "verdict": "works",
+      "coverage": "text+widgets+declared-opaque-rects",
+      "failure_class": "explicit",
+      "note": "CDP :9222 live; covers all Electron apps identically",
+      "predictable_before_use": true,
+      "extracted_content": "text 8,8,112,36 \"Invoices\"\nbutton 8,66,72,21 id=pay\ntext 16,69,56,15 \"Pay 1240\"\ntext 8,103,140,17 \"Client: Dupont SARL\"",
+      "extracted_tokens": 30
+    }
+  ]
+}

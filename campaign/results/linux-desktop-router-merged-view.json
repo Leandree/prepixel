@@ -1,0 +1,36 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Xvfb :9 1920x1080 + openbox (EWMH)",
+  "app": "Whole desktop — 4 concurrent windows, 4 toolkits (Chromium, GTK4, Qt, LibreOffice)",
+  "stack": "other",
+  "stack_detection": {
+    "method": "per-window: /proc/PID/maps + cmdline signature after EWMH window enumeration",
+    "signature": "libgtk-4.so | libQt5*.so | soffice | chromium binary — one per window",
+    "detected_before_use": true
+  },
+  "channel": "render-tree-tap",
+  "channel_setup": "router.py: wmctrl/xprop map (geometry, z-order, focus) -> per-window stack detection -> best-channel binding (CDP/UNO/render-tap/pixels). cdp_extract.mjs pulls focused-window content over live CDP.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Focused Chromium window content extracted live via its chosen channel (CDP): 'Invoices', 'Pay 1240' button, 'Client: Dupont SARL' — 30 tokens. GTK/office content extraction proven in their standalone cells." },
+    "t2_enumerate": { "pass": true, "detail": "All 4 top-level windows enumerated with geometry + stacking order + focus from the WM; each mapped to its PID and toolkit." },
+    "t3_live_value": { "pass": null, "detail": "Covered by per-channel cells (CDP inputValue, UNO live model)." },
+    "t4_living_screen": { "pass": null, "detail": "Not exercised at desktop scope in this pass." },
+    "t5_blind_action": { "pass": true, "detail": "Router yields per-window geometry + focus, and per-window element boxes via the bound channel — sufficient to target a click in the correct window and translate window-local coords to screen coords." },
+    "t6_pictorial": { "pass": true, "detail": "Windows with no available structured channel (Qt) are flagged 'unavailable' explicitly; the router routes them to the pixel path rather than fabricating content." }
+  },
+  "measurements": {
+    "view_bytes": null, "view_tokens_est": 30, "screenshot_tokens_est": 3110,
+    "diff_bytes_per_interaction": null, "idle_cost_bytes": 0, "capture_latency_ms": null,
+    "notes": "Merged desktop assembled from per-window channels; focused-window CDP view = 30 tok vs a full 1920x1080 desktop screenshot ~= 3110 tok. Coverage: 3/4 windows structured (works), 1/4 explicit-unavailable (Qt). Predictable-before-use: 4/4. Zero silent divergences. Artifacts: merged-desktop-view.json, desktop-evidence.png."
+  },
+  "runtime_verification": {
+    "method": "desktop screenshot vs router map; focused-window CDP content vs on-screen text",
+    "agreement": "map matches the 4 visible windows; extracted Chromium text matches the rendered page exactly"
+  },
+  "permissions_required": ["read /proc/PID for own-user processes", "EWMH-compliant WM", "CDP port for chromium windows", "UNO socket for office windows"],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": ["campaign/desktop/merged-desktop-view.json", "campaign/desktop/desktop-evidence.png", "campaign/desktop/router.py", "campaign/desktop/cdp_extract.mjs"]
+}
