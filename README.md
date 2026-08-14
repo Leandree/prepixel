@@ -1,85 +1,168 @@
 # pipeline-tap
 
-**What if computer-use agents read the rendering pipeline's *input* instead of its *output*?**
+**Can a computer-use agent read the rendering pipeline's *input* (the structured
+scene the machine is about to draw) instead of its *output* (a screenshot)?**
 
-Today's computer-use agents (Anthropic computer use, OpenAI CUA, Gemini Computer Use, UI-TARS) perceive the screen as the GPU's *output*: a screenshot per step, ~1,000–4,800 vision tokens each, re-interpreted from scratch every time — even when nothing changed. Yet the machine the agent runs on *forward-rendered* that screen milliseconds earlier from structured representations that still exist in memory: DOM, layout tree, display lists, draw commands. Screenshot perception is inverse graphics on a scene we already have the source for.
+Today's agents (Anthropic computer use, OpenAI CUA, Gemini Computer Use, UI-TARS)
+perceive the screen as pixels: one screenshot per step, ~1,000–4,800 vision tokens
+each, re-interpreted from scratch every time — even when nothing changed. Yet the
+machine *forward-rendered* that screen milliseconds earlier from structured data
+that still exists in memory (DOM, layout tree, display list, document model).
+Screenshot perception is **inverse graphics on a scene we already have the source
+for.** This repo probes whether reading that source is cheaper, safer, and
+continuous — and, crucially, whether it works *predictably enough to ship*.
 
-This PoC taps one rung of that pipeline — Chromium, via the Chrome DevTools Protocol — and measures what an agent would actually pay to *see* and to *watch* at each level:
+> **The thesis is not "never use pixels."** It's *"stop doing image interpretation
+> you don't need."* Structure is the backbone; pixels are a targeted fallback for
+> the regions structure can't read (games, video, canvas). The whole point is that
+> the boundary between the two is **knowable in advance and never silent.**
 
-1. **Screenshot** (pixels — the GPU's output)
-2. **Distilled DOM/layout view** (semantic text: visible strings + interactive elements + boxes + live input values)
-3. **Skia paint ops** (the display list — one rung above the GPU command stream)
+---
 
-## Findings
+## TL;DR — what we found (all measured, in this repo)
 
-### 1. Same screen, three costs — and semantics evaporate on the way down
+- **Cost.** On app UIs the structured view is **3.5× fewer tokens and 36× fewer
+  bytes** than a screenshot (n=20 pages, screenshot side uses the *exact* image-token
+  formula). Perceiving a *change* costs 14–205 tokens vs a flat 1,366 for a
+  re-screenshot; an idle frame costs **0**. Watching a self-updating screen for 6 s:
+  **14× less** than screenshots at 1 fps.
+- **Accuracy.** On legible screens, **parity**: 18/18 correct from structure and
+  18/18 from pixels. Structure's *accuracy advantage* appears only in degraded
+  regimes (occlusion, off-viewport, tiny text) — stated honestly, not overclaimed.
+- **It generalizes beyond the browser.** We tapped a real GTK4 app's render tree
+  (`gsk_renderer_render`) and re-rendered it to the exact on-screen frame; recovered
+  text (incl. Arabic/emoji/CJK) from glyph IDs; read LibreOffice's document model via
+  UNO at ~65× less than a screenshot.
+- **The wrong level is the literal GPU stream.** By the Vulkan/Skia layer, text is
+  already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
+  rung up**: the toolkit render tree / display list / document model.
+- **Safety (the production question).** Across 12 stacks: **zero silent
+  divergences**, **100% predictable in advance** from a stack signature. We *found*
+  two silent-divergence classes (occlusion, off-viewport leak) and closed them with a
+  hit-test pass + the window-manager map. Failures are always **explicit** (declared
+  opaque rect / honest empty tree) or **blocked** (OS policy) — never a view that
+  lies about the screen.
+- **The merged desktop view.** No single OS channel is both whole-screen and
+  semantic (the compositor has all windows but only pixels; each toolkit is semantic
+  but per-window). A **router** assembles it: window-manager map (geometry, z-order,
+  focus) + best channel per window. Demonstrated live on 4 windows / 4 toolkits.
 
-![Fig 1](results/fig1_representations.png)
+See `campaign/MATRIX.md` for the full coverage matrix.
 
-On an app-like UI, the distilled semantic view costs **308 tokens vs 1,366** for a screenshot (4.4× less), captures in **3–5 ms vs ~120 ms**, and covers the *whole page*, not just the viewport. On a text-heavy article the full-page DOM view costs more tokens than one screenshot — but it replaces the *N* scroll-screenshot steps needed to read the article, and never mis-OCRs a word.
+---
 
-The paint-op stream (display list) is the **semantic-evaporation exhibit**. The same screen region, three levels:
+## 🤖 AGENTS: START HERE — what you must do
+
+If you are an AI coding agent running **natively on a Windows, macOS, or Linux
+machine**, your job is to **extend the coverage matrix for your OS** by probing real
+applications and recording results in a fixed schema. You are *not* trying to prove
+the idea works — you are mapping its real boundary, and especially hunting for the
+one disqualifying outcome: a **silent divergence** (a structured view that disagrees
+with the screen without declaring it).
+
+Do this, in order:
+
+1. **Read `campaign/agent-brief-COMMON.md`** — the core safety question (H5), the
+   T1–T6 test battery, the strict output format, and scope discipline. Read it fully.
+2. **Read your OS brief:** `campaign/agent-brief-windows.md`,
+   `campaign/agent-brief-macos.md`, or `campaign/agent-brief-linux.md`. It lists the
+   channels to probe (UIA / AX / AT-SPI / CDP / UNO / render-tap …) and the apps to
+   test, tier by tier.
+3. **Run the T1–T6 battery on each app.** For every (app × channel), write one JSON
+   file `campaign/results/<os>-<app>-<channel>.json` that validates against
+   `campaign/results-schema.json`. Keep raw evidence (dumps, screenshots you took to
+   verify) under `campaign/results/artifacts/`.
+4. **Append a prose note** per OS to `campaign/results/<os>-FINDINGS.md`: what
+   surprised you, any silent divergence you found, your honest read on predictability.
+5. **Validate and aggregate before you finish:**
+   ```bash
+   python3 campaign/validate.py     # every result JSON must pass the schema
+   python3 campaign/aggregate.py    # rebuilds MATRIX.md + matrix.json
+   ```
+6. **The Linux cell is already done as a worked example** — read
+   `campaign/results/linux-*.json` and `campaign/results/linux-FINDINGS.md` to see
+   exactly the shape and honesty level expected, then mirror it for your OS.
+
+**What "done well" means:** breadth over depth (cover the listed apps at T1–T6 rather
+than perfecting one), record `blocked`/`unavailable` cells as first-class results
+(a SIP wall or a toolkit with no render tree is *data*, not failure), and if a
+channel *looks* available but returns a view that disagrees with the screen, flag it
+`failure_class: "silent"` — that is the headline result everyone is looking for.
+
+Prime silent-divergence suspects to attack: **UIA on custom-drawn Windows apps**,
+**thin SwiftUI accessibility trees on macOS**, and any app that paints to a canvas.
+
+---
+
+## Repo map
 
 ```
-# DOM/layout view — text and affordances intact
-text 422,190,105,19 "Dupont SARL"
-button 1183,182,56,33 "Ship"
-input 244,343,209,36 id=customer placeholder=Customer name value="Durand SAS"
-
-# Skia paint ops (one level below) — geometry survives, content is gone
-drawRRect {"left":244.5,"top":399.5,"right":1255.5,"bottom":443.5,...}
-drawTextBlob @244,120 color=#FF000000   ← no string, not even glyph IDs
-drawTextBlob @457.2,120 color=#FF000000
-
-# GPU command stream (one level further) — textured quads over a glyph atlas
-# (not even reachable via CDP; text was rasterized on the CPU before submission)
+README.md                     ← you are here (master orientation)
+src/                          ← browser PoC + experiments (Node/Playwright + Python)
+  capture.mjs                 ·  CDP capture: screenshot / DOM view / Skia paint ops
+  distill-hardened.mjs        ·  hardened in-page distiller (hit-test occlusion, clip off-viewport)
+  duel.mjs                    ·  precision-vs-pixels duel (20 randomized pages)
+  run-representations.mjs     ·  exp 1: three representations, token cost
+  run-diffs.mjs               ·  exp 2: change diffs + living screen
+  gen-eval*.mjs / verify-*    ·  grounding + visual grounding evals (randomized, mechanical)
+  make-figures.py, make-duel-figure.py
+pages/                        ← synthetic test pages
+native/                       ← GTK4 render-tree tap (beyond the browser)
+  gsktap.c, tap.gdb           ·  LD_PRELOAD shim + gdb tap on gsk_renderer_render
+  decode_glyphs.py            ·  glyph-ID → text via reverse cmap
+  samples/                    ·  a captured render tree + its exact re-render
+campaign/                     ← the multi-OS test campaign (agents: this is your job)
+  PROTOCOLE.md                ·  master protocol (FR): hypotheses, matrix, safety criterion
+  agent-brief-COMMON.md       ·  READ FIRST — H5, T1–T6, output format
+  agent-brief-{windows,macos,linux}.md
+  results-schema.json         ·  the JSON schema every result must satisfy
+  validate.py                 ·  schema-gate every result
+  aggregate.py                ·  build MATRIX.md + matrix.json
+  MATRIX.md                   ·  the aggregated coverage + predictability matrix
+  results/                    ·  one JSON per (app × channel) + per-OS FINDINGS
+  desktop/                    ·  the semantic-compositor router (router.py, cdp_extract.mjs)
+results/                      ← figures + measurement outputs from src/ experiments
 ```
 
-By the display-list level, `drawTextBlob` exposes position and color but **no text content whatsoever**. The literal "GPU input" is *below* this. The semantic sweet spot is above: the layout/render tree.
-
-### 2. Perceiving *change*: diffs are 7–100× cheaper, and idleness is free
-
-![Fig 2](results/fig2_change.png)
-
-A screenshot policy pays 1,366 tokens to perceive any change — including no change at all. A structured-diff policy pays for what changed: 205 tokens for a click that reflows a table and pops a toast, 50 for typed text, 14 for a toast fading out, **0 when nothing happened**.
-
-### 3. Watching a *living* screen
-
-![Fig 3](results/fig3_living.png)
-
-Screens change without the agent acting (feeds, toasts, progress bars — see LivingScreen, arXiv:2606.04701). Watching a self-updating feed for 6 s costs **8,196 tokens** under a 1 fps screenshot policy vs **587 tokens** as structured diffs (**14× less**) — and the diff stream is *event-shaped*: it tells the agent *what* changed without a frame-comparison puzzle. This is the event-camera argument transposed to the desktop: frames are a dense, redundant re-encoding of a change stream the compositor already computes (damage regions).
-
-## Run it
+## Run the Linux PoCs
 
 ```bash
-npm install
-node src/run-representations.mjs   # experiment 1: three representations
-node src/run-diffs.mjs             # experiment 2: interaction diffs + living screen
+npm install                        # playwright-core
+node src/run-representations.mjs   # three representations, token cost
+node src/run-diffs.mjs             # change diffs + living screen
+node src/duel.mjs                  # precision-vs-pixels cost duel (n=20)
 python3 src/make-figures.py        # regenerate figures
+# native GTK4 tap (needs gtk4 + gdb):  see native/README.md
+# desktop router (needs an X desktop): python3 campaign/desktop/router.py
 ```
 
-Requires Chromium (uses `playwright-core`; set `executablePath` in `src/capture.mjs` if needed).
+## The safety criterion, precisely
 
-## Method notes & honest limitations
-
-- Token estimates: images via Claude's documented formula (w×h/750); text at 4 chars/token. Not model-exact; relative magnitudes are the point.
-- The distilled DOM view is deliberately simple (visible text, interactive elements, boxes, input values, opacity/visibility filtering). It already handles: typed values (`inputValue`), invisible-but-laid-out content (faded toasts). It does **not** yet handle: canvas/WebGL content (opaque at every structured level — the fallback is pixels), shadow DOM subtleties, cross-origin iframes, CSS-generated content.
-- Layout reflow inflates diffs (a column resize re-emits its rows). Box-tolerant diffing would shrink diffs further; our numbers are therefore *conservative*.
-- Screenshot capture time (~120 ms) is headless-Chromium-specific; the token cost is not.
-- One browser, two synthetic pages. This is a probe, not a benchmark. The GTK4 (GSK render nodes) and Vulkan-layer (literal GPU stream, expected negative result) probes are the next rungs.
+A channel is usable in production iff it is **(1) predictable** — a router can tell
+from a signature (loaded libs, open debug port, UNO socket, accessibility response)
+*before acting* whether structure is available and what it covers; **(2) explicit on
+failure** — uncovered regions are declared (opaque rect / empty tree), never
+silently wrong; **(3) verifiable at runtime** — the view can be cross-checked against
+a screenshot. A channel that sometimes works but can't be predicted, or that fails
+silently, is a **negative** result — report it as such.
 
 ## Why this isn't just "use the accessibility tree"
 
-It is adjacent — and the 1990s already ran this play: screen readers built "off-screen models" by hooking GDI/QuickDraw drawing calls, then the industry replaced them with semantic accessibility APIs. Two things are different now: (1) the render/layout tree *cannot lie or be missing* — it is what's on screen, by construction, whereas a11y trees are unmaintained exactly where agents need them most; (2) the consumer is no longer a brittle heuristic engine but an LLM, which is precisely a machine for interpreting heterogeneous structured noise. Whether that's enough is the question the paper takes up.
+It's adjacent, and the 1990s already ran this play: screen readers built "off-screen
+models" by hooking GDI/QuickDraw draw calls, then the industry replaced them with
+accessibility APIs. What's different now: (1) the render tree *cannot be missing or
+lie* — it is what's on screen, by construction — whereas a11y trees are unmaintained
+exactly where agents need them; (2) the consumer is an LLM, a machine for
+interpreting heterogeneous structured noise, not a brittle heuristic engine. The
+accessibility API is in fact the OS-provided *merge* of per-app semantic trees — one
+valid channel among several the router chooses from.
 
-## Native probe (GTK4) — beyond the browser
+## Status
 
-`native/` taps a real GTK4 app (`gtk4-widget-factory`) at the exact moment it submits its scene to the rendering pipeline: `gsk_renderer_render()`. Findings, mirroring the browser results on a native toolkit:
-
-- **Interception friction is real**: Ubuntu builds libgtk with `-Bsymbolic`, so the LD_PRELOAD shim (`gsktap.c`) cannot interpose intra-library calls — the capture uses a gdb-based tap (`tap.gdb`) instead. Production would use a toolkit hook or patched lib; the 1990s off-screen-model fragility story, replayed in miniature.
-- **The captured tree is the whole screen, by construction**: `gtk4-rendernode-tool render` re-renders the intercepted tree into the exact on-screen frame (`native/samples/rerendered-frame.png`) — text, widgets, and even photos (texture nodes embed their bitmaps).
-- **Text survives as glyph IDs** (`glyphs: 70 7, 82 8, ...`, post-shaping): recoverable with a one-time reverse-cmap per font (`decode_glyphs.py` decodes the samples to `"comboboxentry"`, `"Click icon to change mode"`). Ligatures/complex scripts would be lossy — the predicted "glyph problem", confirmed and mostly solvable.
-- **Sizes** (widget-factory, 1332×751): 339 KB/frame serialized, of which 198 KB is embedded texture payloads (sendable once — stable identity) and 142 KB verbose structure (pre-distillation). **Inter-frame diffs: ~1–2 KB** while an animation runs — the same event-shaped economics as the browser probe.
+Linux reference cells complete (12, schema-valid, 0 silent, 100% predictable).
+Windows and macOS are open — that's the agent job above. After the matrix fills
+across all three OSes, the write-up is a position paper (arXiv cs.HC/cs.AI) + a blog
+post; project notes live in the attached Claude project.
 
 ## License
 

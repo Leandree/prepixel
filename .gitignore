@@ -1,3 +1,8 @@
 node_modules/
 results/*.raw.json
 *.log
+# regenerable duel bulk (keep page-0 as sample)
+results/duel/page-[1-9]*.html
+results/duel/page-[1-9]*.view.txt
+results/duel/shots/page-[1-9]*.png
+results/*.paint.raw.json
