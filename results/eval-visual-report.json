@@ -1,0 +1,44 @@
+{
+  "v1": {
+    "got": [
+      {
+        "kind": "square",
+        "color": "orange"
+      },
+      {
+        "kind": "circle",
+        "color": "orange"
+      },
+      {
+        "kind": "circle",
+        "color": "orange"
+      }
+    ],
+    "want": [
+      {
+        "kind": "square",
+        "color": "orange"
+      },
+      {
+        "kind": "circle",
+        "color": "orange"
+      },
+      {
+        "kind": "circle",
+        "color": "orange"
+      }
+    ],
+    "pass": true
+  },
+  "v2": {
+    "got": 5996,
+    "want": 5996,
+    "pass": true
+  },
+  "v3": {
+    "got": 4,
+    "want": 4,
+    "pass": true
+  },
+  "score": "3/3"
+}

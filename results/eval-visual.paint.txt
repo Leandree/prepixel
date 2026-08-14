@@ -1,0 +1,20 @@
+drawPaint #00000000
+drawRect {"left":0,"top":0,"right":1280,"bottom":800}
+drawTextBlob @20,42 color=#FF000000
+drawTextBlob @20,82 color=#FF000000
+drawTextBlob @156.984375,82 color=#FF000000
+drawTextBlob @180.984375,82 color=#FF000000
+drawTextBlob @20,122 color=#FF000000
+save
+clipRect
+concat44
+save
+clipRect
+drawRect {"left":0,"top":0,"right":360,"bottom":120}
+drawPath
+drawRect {"left":85,"top":38,"right":129,"bottom":82}
+drawPath
+drawPath
+restore
+restore
+drawTextBlob @20,305 color=#FF000000

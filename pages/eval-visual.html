@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Mixed content</title></head>
+<body style="font-family:sans-serif;margin:20px">
+  <h2>Rapport hebdo</h2>
+  <p>Statut du pipeline : <strong>OK</strong> — dernier build 14:02</p>
+  <h3>Illustration produit</h3>
+  <img id="illu" width="360" height="120" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjAiIGhlaWdodD0iMTIwIj48cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjEyMCIgZmlsbD0iI2Y0ZjFlYSIvPjxwb2x5Z29uIHBvaW50cz0iNDUsMzQgMjAsODIgNzAsODIiIGZpbGw9IiNkNjI4MjgiLz48cmVjdCB4PSI4NSIgeT0iMzgiIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgZmlsbD0iIzdjM2FlZCIvPjxwb2x5Z29uIHBvaW50cz0iMTY5LDM0IDE0NCw4MiAxOTQsODIiIGZpbGw9IiMxNTgwM2QiLz48cG9seWdvbiBwb2ludHM9IjIzMSwzNCAyMDYsODIgMjU2LDgyIiBmaWxsPSIjMTU4MDNkIi8+PC9zdmc+" alt="">
+  <h3>Mini-jeu (canvas)</h3>
+  <canvas id="game" width="420" height="140"></canvas>
+  <script>
+    const ctx = document.getElementById('game').getContext('2d');
+    ctx.fillStyle = '#0b0b1a'; ctx.fillRect(0,0,420,140);
+    ctx.fillStyle = '#0f0'; ctx.font = 'bold 22px monospace';
+    ctx.fillText('SCORE 5243', 12, 32);
+    ctx.fillStyle = '#e6e6e6';
+    for (let i = 0; i < 5; i++) { const x = 20 + i * 55; ctx.fillRect(x, 80, 34, 24); ctx.fillRect(x+8, 70, 18, 10); }
+  </script>
+</body></html>

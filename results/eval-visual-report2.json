@@ -1,0 +1,52 @@
+{
+  "v1": {
+    "got": [
+      {
+        "kind": "triangle",
+        "color": "red"
+      },
+      {
+        "kind": "square",
+        "color": "purple"
+      },
+      {
+        "kind": "triangle",
+        "color": "green"
+      },
+      {
+        "kind": "triangle",
+        "color": "green"
+      }
+    ],
+    "want": [
+      {
+        "kind": "triangle",
+        "color": "red"
+      },
+      {
+        "kind": "square",
+        "color": "purple"
+      },
+      {
+        "kind": "triangle",
+        "color": "green"
+      },
+      {
+        "kind": "triangle",
+        "color": "green"
+      }
+    ],
+    "pass": true
+  },
+  "v2": {
+    "got": 5243,
+    "want": 5243,
+    "pass": true
+  },
+  "v3": {
+    "got": 5,
+    "want": 5,
+    "pass": true
+  },
+  "score": "3/3 (round 2)"
+}

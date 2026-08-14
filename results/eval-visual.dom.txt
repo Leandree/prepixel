@@ -1,0 +1,8 @@
+text 20,20,171,27 "Rapport hebdo"
+text 20,68,137,17 "Statut du pipeline :"
+text 157,68,24,17 "OK"
+text 181,68,157,17 "— dernier build 14:02"
+text 20,105,165,21 "Illustration produit"
+[pixels] img 20,145,360,120 src=<data-url> alt=
+text 20,288,152,21 "Mini-jeu (canvas)"
+[pixels] canvas 20,329,420,140

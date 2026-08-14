@@ -1,0 +1,10 @@
+{
+  "v1": [
+    { "kind": "triangle", "color": "red" },
+    { "kind": "square", "color": "purple" },
+    { "kind": "triangle", "color": "green" },
+    { "kind": "triangle", "color": "green" }
+  ],
+  "v2": 5243,
+  "v3": 5
+}

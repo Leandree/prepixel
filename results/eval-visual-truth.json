@@ -1,0 +1,23 @@
+{
+  "shapes": [
+    {
+      "kind": "triangle",
+      "color": "red"
+    },
+    {
+      "kind": "square",
+      "color": "purple"
+    },
+    {
+      "kind": "triangle",
+      "color": "green"
+    },
+    {
+      "kind": "triangle",
+      "color": "green"
+    }
+  ],
+  "nShapes": 4,
+  "score": 5243,
+  "invaders": 5
+}
