@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pipeline-tap campaign result (one JSON file per app × channel probe)",
+  "type": "object",
+  "required": ["os", "os_version", "app", "stack", "stack_detection", "channel", "verdict", "failure_class", "tests", "measurements", "agent", "date"],
+  "properties": {
+    "os": { "enum": ["windows", "macos", "linux"] },
+    "os_version": { "type": "string" },
+    "app": { "type": "string", "description": "e.g. 'Word 2024', 'VS Code 1.102', 'TextEdit'" },
+    "stack": { "enum": ["chromium", "electron", "win32-gdi", "winui-xaml", "wpf", "office-native", "appkit", "swiftui", "catalyst", "qt", "gtk4", "flutter", "swing", "custom-canvas", "game", "other"] },
+    "stack_detection": {
+      "type": "object",
+      "required": ["method", "signature", "detected_before_use"],
+      "properties": {
+        "method": { "type": "string", "description": "how the stack was identified (loaded modules, linked frameworks, open CDP port, process name...)" },
+        "signature": { "type": "string", "description": "the concrete signal, e.g. 'Qt6Core.dll loaded', 'libgtk-4.so.1 mapped', 'CDP :9222 responds'" },
+        "detected_before_use": { "type": "boolean", "description": "H5: could a router have predicted channel availability BEFORE probing?" }
+      }
+    },
+    "channel": { "enum": ["cdp", "accessibility-api", "render-tree-tap", "display-list-hook", "object-model", "vm-service", "java-access-bridge", "pixels-baseline"] },
+    "channel_setup": { "type": "string", "description": "what was needed: flags, permissions, injection method" },
+    "verdict": { "enum": ["works", "partial", "unavailable", "blocked"] },
+    "failure_class": { "enum": ["none", "explicit", "silent", "blocked"], "description": "silent = channel returned a view that diverged from the screen WITHOUT declaring it (disqualifying). explicit = gaps declared (opaque rects / errors). blocked = OS policy/permissions." },
+    "tests": {
+      "type": "object",
+      "properties": {
+        "t1_read_text":       { "$ref": "#/$defs/test", "description": "read known on-screen text through the channel; exact match?" },
+        "t2_enumerate":       { "$ref": "#/$defs/test", "description": "interactive elements + bounding boxes vs ground truth" },
+        "t3_live_value":      { "$ref": "#/$defs/test", "description": "typed field value visible in the channel?" },
+        "t4_living_screen":   { "$ref": "#/$defs/test", "description": "self-updating region (clock/progress): change seen? cost per tick?" },
+        "t5_blind_action":    { "$ref": "#/$defs/test", "description": "click at channel-derived coords; intended effect verified?" },
+        "t6_pictorial":       { "$ref": "#/$defs/test", "description": "images/canvas regions declared with rects? targeted crop possible?" }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "properties": {
+        "view_bytes": { "type": "number" },
+        "view_tokens_est": { "type": "number", "description": "text: chars/4; image: w*h/750" },
+        "screenshot_tokens_est": { "type": "number" },
+        "diff_bytes_per_interaction": { "type": "number" },
+        "idle_cost_bytes": { "type": "number", "description": "cost when nothing changes (should be 0)" },
+        "capture_latency_ms": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "runtime_verification": {
+      "type": "object",
+      "description": "H5.3 spot-check: does the channel view agree with a screenshot?",
+      "properties": {
+        "method": { "type": "string", "description": "e.g. '5 questions answered from both, compared' or 're-render + pixel diff'" },
+        "agreement": { "type": "string" }
+      }
+    },
+    "permissions_required": { "type": "array", "items": { "type": "string" } },
+    "agent": { "type": "string", "description": "who ran this (e.g. 'claude-code on leandre-macbook')" },
+    "date": { "type": "string" },
+    "raw_artifacts": { "type": "array", "items": { "type": "string" }, "description": "paths of dumps/screenshots kept as evidence" }
+  },
+  "$defs": {
+    "test": {
+      "type": "object",
+      "required": ["pass"],
+      "properties": {
+        "pass": { "type": ["boolean", "null"], "description": "null = not applicable / not run" },
+        "detail": { "type": "string" }
+      }
+    }
+  }
+}
