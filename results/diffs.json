@@ -1,0 +1,86 @@
+{
+  "screenshotTokensPerFrame": 1366,
+  "steps": [
+    {
+      "name": "click Ship #1043 (badge + toast)",
+      "diffLines": 25,
+      "diffBytes": 819,
+      "diffTokens": 205,
+      "screenshotTokens": 1366,
+      "captureMs": 3,
+      "diffPreview": "- text 422,148,87,19 \"Customer\"\n- text 696,148,44,19 \"Total\"\n- text 920,148,59,19 \"Status\"\n- text 422,190,105,19 \"Dupont SARL\"\n- text 696,190,81,19 \"€1,240.00\"\n- text 928,194,25,14 \"Paid\""
+    },
+    {
+      "name": "toast disappears (idle wait)",
+      "diffLines": 1,
+      "diffBytes": 53,
+      "diffTokens": 14,
+      "screenshotTokens": 1366,
+      "captureMs": 3,
+      "diffPreview": "- text 978,749,262,19 \"Order #1043 marked as shipped\""
+    },
+    {
+      "name": "type customer name",
+      "diffLines": 2,
+      "diffBytes": 199,
+      "diffTokens": 50,
+      "screenshotTokens": 1366,
+      "captureMs": 3,
+      "diffPreview": "- input 244,343,209,36 id=customer placeholder=Customer name aria-label=Customer name value=\"\"\n+ input 244,343,209,36 id=customer placeholder=Customer name aria-label=Customer name value=\"Durand SAS\""
+    },
+    {
+      "name": "submit form (new row + toast)",
+      "diffLines": 17,
+      "diffBytes": 753,
+      "diffTokens": 189,
+      "screenshotTokens": 1366,
+      "captureMs": 5,
+      "diffPreview": "- input 244,343,209,36 id=customer placeholder=Customer name aria-label=Customer name value=\"Durand SAS\"\n- select 461,343,98,36 id=status aria-label=Status\n- button 567,343,85,36 type=submit id=addBtn\n- text 579,353,61,16 \"Add order\"\n- text 257,412,110,19 \"Live activity\"\n+ text 256,337,54,19 \"#1045\""
+    },
+    {
+      "name": "no-op (nothing changed)",
+      "diffLines": 0,
+      "diffBytes": 0,
+      "diffTokens": 0,
+      "screenshotTokens": 1366,
+      "captureMs": 4,
+      "diffPreview": ""
+    }
+  ],
+  "living": {
+    "samples": [
+      {
+        "second": 1,
+        "diffTokens": 30,
+        "diffLines": 2
+      },
+      {
+        "second": 2,
+        "diffTokens": 97,
+        "diffLines": 7
+      },
+      {
+        "second": 3,
+        "diffTokens": 115,
+        "diffLines": 8
+      },
+      {
+        "second": 4,
+        "diffTokens": 115,
+        "diffLines": 8
+      },
+      {
+        "second": 5,
+        "diffTokens": 115,
+        "diffLines": 8
+      },
+      {
+        "second": 6,
+        "diffTokens": 115,
+        "diffLines": 8
+      }
+    ],
+    "screenshotPolicyTokens": 8196,
+    "diffPolicyTokens": 587
+  }
+}

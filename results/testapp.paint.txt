@@ -1,0 +1,86 @@
+drawPaint #00000000
+drawRect {"left":0,"top":0,"right":1280,"bottom":800}
+drawRect {"left":0,"top":0,"right":220,"bottom":800}
+drawRRect {"type":"Simple","left":16,"top":119,"right":204,"bottom":154,"upperLeftRadius":{"xRadius":6,"yRadius":6},"upperRightRadius":{"xRadius":6,"yRadius":6},"lowerRightRadius":{"xRadius":6,"yRadius":6},"lowerLeftRadius":{"xRadius":6,"yRadius":6}}
+drawTextBlob @16,58 color=#FFE2E8F0
+drawTextBlob @24,107 color=#FFE2E8F0
+drawTextBlob @24,142 color=#FFE2E8F0
+drawTextBlob @24,177 color=#FFE2E8F0
+drawTextBlob @24,212 color=#FFE2E8F0
+save
+clipRect
+drawRect {"left":244,"top":175,"right":410,"bottom":176}
+drawRect {"left":410,"top":175,"right":684,"bottom":176}
+drawRect {"left":684,"top":175,"right":908,"bottom":176}
+drawRect {"left":908,"top":175,"right":1095,"bottom":176}
+drawRect {"left":1095,"top":175,"right":1256,"bottom":176}
+drawRect {"left":244,"top":224,"right":410,"bottom":225}
+drawRect {"left":410,"top":224,"right":684,"bottom":225}
+drawRect {"left":684,"top":224,"right":908,"bottom":225}
+drawRect {"left":908,"top":224,"right":1095,"bottom":225}
+drawRect {"left":1095,"top":224,"right":1256,"bottom":225}
+drawRect {"left":244,"top":273,"right":410,"bottom":274}
+drawRect {"left":410,"top":273,"right":684,"bottom":274}
+drawRect {"left":684,"top":273,"right":908,"bottom":274}
+drawRect {"left":908,"top":273,"right":1095,"bottom":274}
+drawRect {"left":1095,"top":273,"right":1256,"bottom":274}
+drawRect {"left":244,"top":322,"right":410,"bottom":323}
+drawRect {"left":410,"top":322,"right":684,"bottom":323}
+drawRect {"left":684,"top":322,"right":908,"bottom":323}
+drawRect {"left":908,"top":322,"right":1095,"bottom":323}
+drawRect {"left":1095,"top":322,"right":1256,"bottom":323}
+drawRRect {"type":"Simple","left":244.5,"top":399.5,"right":1255.5,"bottom":443.5,"upperLeftRadius":{"xRadius":7.5,"yRadius":7.5},"upperRightRadius":{"xRadius":7.5,"yRadius":7.5},"lowerRightRadius":{"xRadius":7.5,"yRadius":7.5},"lowerLeftRadius":{"xRadius":7.5,"yRadius":7.5}}
+drawTextBlob @244,75 color=#FF000000
+drawTextBlob @244,120 color=#FF000000
+drawTextBlob @457.234375,120 color=#FF000000
+drawTextBlob @256,163 color=#FF000000
+drawTextBlob @421.765625,163 color=#FF000000
+drawTextBlob @696.21875,163 color=#FF000000
+drawTextBlob @919.9375,163 color=#FF000000
+drawTextBlob @256,205 color=#FF000000
+drawTextBlob @421.765625,205 color=#FF000000
+drawTextBlob @696.21875,205 color=#FF000000
+drawRRect {"type":"Simple","left":920,"top":192,"right":961,"bottom":210,"upperLeftRadius":{"xRadius":9,"yRadius":9},"upperRightRadius":{"xRadius":9,"yRadius":9},"lowerRightRadius":{"xRadius":9,"yRadius":9},"lowerLeftRadius":{"xRadius":9,"yRadius":9}}
+drawTextBlob @927.9375,205 color=#FF166534
+drawRRect {"type":"Simple","left":1107,"top":184,"right":1159,"bottom":216,"upperLeftRadius":{"xRadius":6,"yRadius":6},"upperRightRadius":{"xRadius":6,"yRadius":6},"lowerRightRadius":{"xRadius":6,"yRadius":6},"lowerLeftRadius":{"xRadius":6,"yRadius":6}}
+drawTextBlob @1118.625,205 color=#FFFFFFFF
+drawTextBlob @256,254 color=#FF000000
+drawTextBlob @421.765625,254 color=#FF000000
+drawTextBlob @696.21875,254 color=#FF000000
+drawRRect {"type":"Simple","left":920,"top":241,"right":984,"bottom":259,"upperLeftRadius":{"xRadius":9,"yRadius":9},"upperRightRadius":{"xRadius":9,"yRadius":9},"lowerRightRadius":{"xRadius":9,"yRadius":9},"lowerLeftRadius":{"xRadius":9,"yRadius":9}}
+drawTextBlob @927.9375,254 color=#FF854D0E
+drawRRect {"type":"Simple","left":1107,"top":233,"right":1159,"bottom":265,"upperLeftRadius":{"xRadius":6,"yRadius":6},"upperRightRadius":{"xRadius":6,"yRadius":6},"lowerRightRadius":{"xRadius":6,"yRadius":6},"lowerLeftRadius":{"xRadius":6,"yRadius":6}}
+drawTextBlob @1118.625,254 color=#FFFFFFFF
+drawTextBlob @256,303 color=#FF000000
+drawTextBlob @421.765625,303 color=#FF000000
+drawTextBlob @696.21875,303 color=#FF000000
+drawRRect {"type":"Simple","left":920,"top":290,"right":984,"bottom":308,"upperLeftRadius":{"xRadius":9,"yRadius":9},"upperRightRadius":{"xRadius":9,"yRadius":9},"lowerRightRadius":{"xRadius":9,"yRadius":9},"lowerLeftRadius":{"xRadius":9,"yRadius":9}}
+drawTextBlob @927.9375,303 color=#FF854D0E
+drawRRect {"type":"Simple","left":1107,"top":282,"right":1159,"bottom":314,"upperLeftRadius":{"xRadius":6,"yRadius":6},"upperRightRadius":{"xRadius":6,"yRadius":6},"lowerRightRadius":{"xRadius":6,"yRadius":6},"lowerLeftRadius":{"xRadius":6,"yRadius":6}}
+drawTextBlob @1118.625,303 color=#FFFFFFFF
+save
+clipRect
+drawRRect {"type":"Simple","left":244.5,"top":343.5,"right":452.5,"bottom":378.5,"upperLeftRadius":{"xRadius":2,"yRadius":2},"upperRightRadius":{"xRadius":2,"yRadius":2},"lowerRightRadius":{"xRadius":2,"yRadius":2},"lowerLeftRadius":{"xRadius":2,"yRadius":2}}
+drawRRect {"type":"Simple","left":244.5,"top":343.5,"right":452.5,"bottom":378.5,"upperLeftRadius":{"xRadius":2,"yRadius":2},"upperRightRadius":{"xRadius":2,"yRadius":2},"lowerRightRadius":{"xRadius":2,"yRadius":2},"lowerLeftRadius":{"xRadius":2,"yRadius":2}}
+restore
+save
+clipRect
+drawTextBlob @258,366 color=#FF757575
+restore
+save
+clipRect
+drawRRect {"type":"Simple","left":461.5,"top":343.5,"right":558.5,"bottom":378.5,"upperLeftRadius":{"xRadius":2,"yRadius":2},"upperRightRadius":{"xRadius":2,"yRadius":2},"lowerRightRadius":{"xRadius":2,"yRadius":2},"lowerLeftRadius":{"xRadius":2,"yRadius":2}}
+drawRRect {"type":"Simple","left":461.5,"top":343.5,"right":558.5,"bottom":378.5,"upperLeftRadius":{"xRadius":2,"yRadius":2},"upperRightRadius":{"xRadius":2,"yRadius":2},"lowerRightRadius":{"xRadius":2,"yRadius":2},"lowerLeftRadius":{"xRadius":2,"yRadius":2}}
+drawPath
+restore
+save
+clipRect
+drawTextBlob @478,366 color=#FF000000
+restore
+drawRRect {"type":"Simple","left":567,"top":343,"right":652,"bottom":379,"upperLeftRadius":{"xRadius":6,"yRadius":6},"upperRightRadius":{"xRadius":6,"yRadius":6},"lowerRightRadius":{"xRadius":6,"yRadius":6},"lowerLeftRadius":{"xRadius":6,"yRadius":6}}
+drawTextBlob @579,366 color=#FFFFFFFF
+save
+clipRRect
+drawTextBlob @257,427 color=#FF000000
+restore
+restore

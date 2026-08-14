@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Graphics pipeline — Encyclopedia</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 860px; margin: 0 auto; padding: 24px; line-height: 1.6; }
+  h1 { border-bottom: 1px solid #ccc; } h2 { margin-top: 28px; }
+  .infobox { float: right; width: 240px; border: 1px solid #ccc; padding: 10px; margin: 0 0 12px 16px; font-size: 13px; font-family: sans-serif; }
+  a { color: #0645ad; }
+</style>
+</head>
+<body>
+<h1>Graphics pipeline</h1>
+<div class="infobox"><strong>Graphics pipeline</strong><br>Stages: application, geometry, rasterization<br>APIs: <a href="#">Vulkan</a>, <a href="#">Direct3D</a>, <a href="#">Metal</a>, <a href="#">OpenGL</a><br>Output: framebuffer</div>
+<div id="content"></div>
+<script>
+  // Deterministic realistic-length article body (~15 sections, ~1500 words)
+  const sections = ['Overview', 'History', 'Application stage', 'Geometry processing', 'Vertex shading', 'Tessellation', 'Rasterization', 'Fragment shading', 'Text rendering', 'Compositing', 'Display lists', 'Command buffers', 'Modern APIs', 'Performance', 'See also'];
+  const sentences = [
+    'The graphics pipeline is the sequence of steps used to create a two-dimensional raster representation of a three-dimensional scene.',
+    'Commands issued by the application are validated, encoded and placed into a command buffer that the driver later submits to the hardware queue.',
+    'Vertex data is transformed from model space to world space, then to view space and finally to clip space by a series of matrix multiplications.',
+    'Text is typically shaped on the CPU by a library such as HarfBuzz, after which individual glyphs are rasterized and packed into an atlas texture.',
+    'The compositor combines the contents of multiple windows, each supplied as a finished buffer, into the final image scanned out to the display.',
+    'A display list records drawing operations in a compact, replayable form that decouples scene specification from execution.',
+    'Damage tracking allows the system to redraw only the regions of the screen whose contents have actually changed since the previous frame.',
+    'Batching merges many small draw operations into fewer, larger ones to reduce per-call overhead at the cost of structural information.',
+  ];
+  const el = document.getElementById('content');
+  let html = '';
+  for (let s = 0; s < sections.length; s++) {
+    html += `<h2>${sections[s]}</h2>`;
+    for (let p = 0; p < 2; p++) {
+      html += '<p>';
+      for (let i = 0; i < 6; i++) html += sentences[(s * 7 + p * 3 + i) % sentences.length] + ' ';
+      html += '</p>';
+    }
+  }
+  el.innerHTML = html;
+</script>
+</body>
+</html>

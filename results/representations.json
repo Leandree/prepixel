@@ -1,0 +1,58 @@
+[
+  {
+    "label": "testapp",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "wallMs": 322,
+    "screenshot": {
+      "bytes": 43218,
+      "captureMs": 152,
+      "tokensClaude": 1366,
+      "tokensPatch": 1334
+    },
+    "domSnapshot": {
+      "rawBytes": 14068,
+      "distilledBytes": 1230,
+      "captureMs": 3,
+      "tokensDistilled": 308
+    },
+    "paintOps": {
+      "rawBytes": 18662,
+      "distilledBytes": 6023,
+      "nOps": 86,
+      "captureMs": 167,
+      "tokensDistilled": 1506,
+      "error": null
+    }
+  },
+  {
+    "label": "article",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "wallMs": 259,
+    "screenshot": {
+      "bytes": 138608,
+      "captureMs": 93,
+      "tokensClaude": 1366,
+      "tokensPatch": 1334
+    },
+    "domSnapshot": {
+      "rawBytes": 31143,
+      "distilledBytes": 26589,
+      "captureMs": 3,
+      "tokensDistilled": 6648
+    },
+    "paintOps": {
+      "rawBytes": 34275,
+      "distilledBytes": 6932,
+      "nOps": 176,
+      "captureMs": 163,
+      "tokensDistilled": 1733,
+      "error": null
+    }
+  }
+]
