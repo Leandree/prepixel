@@ -1,0 +1,653 @@
+{
+ "app": "TextEdit",
+ "pid": 13411,
+ "bundle": "com.apple.TextEdit",
+ "windows": [
+  {
+   "role": "AXWindow",
+   "subrole": "AXStandardWindow",
+   "title": "Sans titre",
+   "frame": {
+    "x": 152.0,
+    "y": 73.0,
+    "w": 586.0,
+    "h": 488.0
+   },
+   "identifier": "_NS:34",
+   "actions": [
+    "AXRaise"
+   ],
+   "children": [
+    {
+     "role": "AXScrollArea",
+     "frame": {
+      "x": 152.0,
+      "y": 141.0,
+      "w": 586.0,
+      "h": 420.0
+     },
+     "identifier": "_NS:8",
+     "actions": [
+      "AXScrollLeftByPage",
+      "AXScrollRightByPage",
+      "AXScrollUpByPage",
+      "AXScrollDownByPage"
+     ],
+     "children": [
+      {
+       "role": "AXTextArea",
+       "value": "Le renard brun saute par-dessus le chien paresseux — pipeline-tap T1 éàçœ 🦊",
+       "frame": {
+        "x": 152.0,
+        "y": 173.0,
+        "w": 586.0,
+        "h": 382.0
+       },
+       "focused": true,
+       "identifier": "First Text View",
+       "actions": [
+        "AXShowMenu"
+       ]
+      },
+      {
+       "role": "AXScrollBar",
+       "value": 0.18518517911434174,
+       "frame": {
+        "x": 158.5,
+        "y": 543.0,
+        "w": 573.0,
+        "h": 19.0
+       },
+       "identifier": "_NS:24"
+      },
+      {
+       "role": "AXScrollBar",
+       "value": 0.615384578704834,
+       "frame": {
+        "x": 720.0,
+        "y": 172.0,
+        "w": 19.0,
+        "h": 382.5
+       },
+       "identifier": "_NS:27"
+      },
+      {
+       "role": "AXRuler",
+       "frame": {
+        "x": 152.0,
+        "y": 141.0,
+        "w": 586.0,
+        "h": 32.0
+       },
+       "actions": [
+        "AXPress"
+       ],
+       "children": [
+        {
+         "role": "AXRulerMarker",
+         "frame": {
+          "x": 153.0,
+          "y": 150.0,
+          "w": 9.0,
+          "h": 6.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 20.317460317460316,
+         "frame": {
+          "x": 729.0,
+          "y": 150.0,
+          "w": 9.0,
+          "h": 6.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "frame": {
+          "x": 153.0,
+          "y": 146.0,
+          "w": 9.0,
+          "h": 10.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 1.2698412698412698,
+         "frame": {
+          "x": 193.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 2.5396825396825395,
+         "frame": {
+          "x": 229.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 3.8095238095238093,
+         "frame": {
+          "x": 265.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 5.079365079365079,
+         "frame": {
+          "x": 301.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 6.349206349206349,
+         "frame": {
+          "x": 337.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 7.619047619047619,
+         "frame": {
+          "x": 373.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 8.88888888888889,
+         "frame": {
+          "x": 409.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 10.158730158730158,
+         "frame": {
+          "x": 445.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 11.428571428571429,
+         "frame": {
+          "x": 481.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 12.698412698412698,
+         "frame": {
+          "x": 517.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 13.968253968253968,
+         "frame": {
+          "x": 553.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        },
+        {
+         "role": "AXRulerMarker",
+         "value": 15.238095238095237,
+         "frame": {
+          "x": 589.0,
+          "y": 147.0,
+          "w": 6.0,
+          "h": 9.0
+         },
+         "actions": [
+          "AXDelete"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "role": "AXGroup",
+     "frame": {
+      "x": 159.0,
+      "y": 112.0,
+      "w": 85.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "children": [
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "gras",
+       "help": "Gras",
+       "frame": {
+        "x": 160.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      },
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "italique",
+       "help": "Italique",
+       "frame": {
+        "x": 181.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      },
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "souligner",
+       "help": "Souligné",
+       "frame": {
+        "x": 202.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      },
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "barré",
+       "help": "Barrer le texte",
+       "frame": {
+        "x": 223.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      }
+     ]
+    },
+    {
+     "role": "AXColorWell",
+     "description": "couleur du texte",
+     "value": "rgb 0 0 0 1",
+     "help": "Cliquer pour choisir la couleur du texte",
+     "frame": {
+      "x": 247.0,
+      "y": 112.0,
+      "w": 22.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXPress",
+      "Name:Afficher le tableau des couleurs\nTarget:0x0\nSelector:(null)"
+     ]
+    },
+    {
+     "role": "AXColorWell",
+     "description": "définir la couleur de fond",
+     "value": "rgb 1 1 1 1",
+     "help": "Cliquer pour choisir la couleur de fond du texte",
+     "frame": {
+      "x": 272.0,
+      "y": 112.0,
+      "w": 22.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXPress",
+      "Name:Afficher le tableau des couleurs\nTarget:0x0\nSelector:(null)"
+     ]
+    },
+    {
+     "role": "AXPopUpButton",
+     "description": "police de caractères",
+     "value": "Helvetica",
+     "help": "Choisir le type de caractères",
+     "frame": {
+      "x": 297.0,
+      "y": 112.0,
+      "w": 82.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXShowMenu",
+      "AXPress"
+     ]
+    },
+    {
+     "role": "AXPopUpButton",
+     "description": "style",
+     "value": "Courant",
+     "help": "Choisir le style",
+     "frame": {
+      "x": 382.0,
+      "y": 112.0,
+      "w": 82.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXShowMenu",
+      "AXPress"
+     ]
+    },
+    {
+     "role": "AXComboBox",
+     "description": "taille de la police",
+     "value": "12",
+     "help": "Définir la taille de police",
+     "frame": {
+      "x": 467.0,
+      "y": 112.0,
+      "w": 52.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXShowMenu",
+      "AXConfirm"
+     ],
+     "children": [
+      {
+       "role": "AXButton",
+       "description": "taille de la police",
+       "frame": {
+        "x": 495.5,
+        "y": 116.0,
+        "w": 19.5,
+        "h": 13.5
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      }
+     ]
+    },
+    {
+     "role": "AXGroup",
+     "frame": {
+      "x": 522.0,
+      "y": 112.0,
+      "w": 85.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "children": [
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "aligner à gauche",
+       "help": "Aligner le texte à gauche",
+       "frame": {
+        "x": 523.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      },
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "centrer",
+       "help": "Centrer le texte",
+       "frame": {
+        "x": 544.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      },
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "aligner à droite",
+       "help": "Aligner le texte à droite",
+       "frame": {
+        "x": 565.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      },
+      {
+       "role": "AXCheckBox",
+       "subrole": "AXSegment",
+       "description": "justifier complètement",
+       "help": "Justifier le texte",
+       "frame": {
+        "x": 586.0,
+        "y": 113.0,
+        "w": 20.0,
+        "h": 20.0
+       },
+       "enabled": true,
+       "actions": [
+        "AXPress"
+       ]
+      }
+     ]
+    },
+    {
+     "role": "AXMenuButton",
+     "description": "style de la liste",
+     "help": "Puces et numéros (liste)",
+     "frame": {
+      "x": 610.0,
+      "y": 112.0,
+      "w": 48.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXShowMenu",
+      "AXPress"
+     ]
+    },
+    {
+     "role": "AXPopUpButton",
+     "description": "espacement des lignes",
+     "value": "1,0",
+     "help": "Espacement lignes et paragraphes",
+     "frame": {
+      "x": 661.0,
+      "y": 112.0,
+      "w": 53.0,
+      "h": 22.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXShowMenu",
+      "AXPress"
+     ]
+    },
+    {
+     "role": "AXButton",
+     "subrole": "AXCloseButton",
+     "frame": {
+      "x": 160.0,
+      "y": 81.0,
+      "w": 16.0,
+      "h": 16.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXPress"
+     ]
+    },
+    {
+     "role": "AXButton",
+     "subrole": "AXFullScreenButton",
+     "help": "ce bouton peut également agrandir ou réduire la fenêtre",
+     "frame": {
+      "x": 206.0,
+      "y": 81.0,
+      "w": 16.0,
+      "h": 16.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXPress",
+      "AXZoomWindow",
+      "AXShowMenu"
+     ],
+     "children": [
+      {
+       "role": "AXGroup",
+       "frame": {
+        "x": 207.0,
+        "y": 82.0,
+        "w": 14.0,
+        "h": 14.0
+       }
+      }
+     ]
+    },
+    {
+     "role": "AXButton",
+     "subrole": "AXMinimizeButton",
+     "frame": {
+      "x": 183.0,
+      "y": 81.0,
+      "w": 16.0,
+      "h": 16.0
+     },
+     "enabled": true,
+     "actions": [
+      "AXPress"
+     ]
+    },
+    {
+     "role": "AXMenuButton",
+     "description": "actions relatives aux documents",
+     "frame": {
+      "x": 300.0,
+      "y": 80.0,
+      "w": 12.0,
+      "h": 18.0
+     },
+     "actions": [
+      "AXPress",
+      "AXShowMenu"
+     ]
+    },
+    {
+     "role": "AXStaticText",
+     "value": "Sans titre",
+     "frame": {
+      "x": 234.0,
+      "y": 81.0,
+      "w": 67.0,
+      "h": 16.0
+     },
+     "enabled": true
+    }
+   ]
+  }
+ ]
+}

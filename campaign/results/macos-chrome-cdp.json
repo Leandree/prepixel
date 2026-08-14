@@ -1,0 +1,49 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Google Chrome 151.0.7922.138 (isolated instance, temp profile)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "open debug port answers /json/version",
+    "signature": "http://127.0.0.1:9223/json/version → Chrome/151.0.7922.138, Protocol 1.3",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Launch with --remote-debugging-port=9223 --user-data-dir=<temp>. No OS permission needed (loopback socket) — CDP bypasses the whole TCC story. Could not attach to the user's already-running Chrome (no port opened at its launch): the channel exists only if the app was STARTED with it — key predictability limit vs Linux where the same rule applied.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "article.html h1 recovered char-exact from DOMSnapshot distillation; capture 2 ms."},
+    "t2_enumerate": { "pass": true, "detail": "testapp.html: 10/10 interactive elements (4 nav links, 3 Ship buttons, input, select, submit) with boxes, ids, aria-labels, placeholder and live value=\"\". Cross-checked against native compositor screenshot of the window: 1:1."},
+    "t3_live_value": { "pass": true, "detail": "Typed string visible in the distilled view via DOMSnapshot includeInputValues; re-capture 1 ms."},
+    "t4_living_screen": { "pass": true, "detail": "Self-updating feed at ~1.4 Hz: per-tick distilled diff 58–231 bytes (~15–58 tokens) vs 880 tokens for a viewport re-screenshot; idle ticks after stopFeed: 0,0,0 bytes."},
+    "t5_blind_action": { "pass": true, "detail": "FIRST ATTEMPT FAILED — and that is the macOS-specific finding: DOMSnapshot layout bounds are in DEVICE pixels (Retina DPR=2) while Input.dispatchMouseEvent takes CSS pixels; clicking the raw box coords missed the button. Divide by devicePixelRatio → click landed, page state flipped to CLICKED. On DPR=1 Linux this mismatch is invisible; a blind-click router MUST normalize by DPR. Predictable (DPR queryable), but nothing in the API labels the units — a coordinate-space trap rather than a view lie."},
+    "t6_pictorial": { "pass": true, "detail": "allcanvas.html: whole page distills to 29 bytes with the canvas DECLARED as '[pixels] canvas 0,0,2560,1600' (device px). No fabricated text (SCORE/LEVEL exist only in pixels). Targeted crop via Page.captureScreenshot clip on the declared rect = 880 tokens only when needed. Hardened distiller on occlusion.html correctly marks occluded content (226-byte view)."}
+  },
+  "measurements": {
+    "view_bytes": 1267,
+    "view_tokens_est": 315,
+    "screenshot_tokens_est": 880,
+    "diff_bytes_per_interaction": 150,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 2,
+    "notes": "view = distilled DOMSnapshot of testapp.html (same distiller as the Linux cell: visible text + interactive elements + declared opaque rects). Screenshot side = 980×672 CSS viewport → 880 tokens (w·h/750); at device pixels (Retina 2×) it would be 3512 tokens. diff_bytes_per_interaction = mean per-tick feed diff (58–231 B). Latencies: DOMSnapshot capture 1–2 ms on this page — indistinguishable from the Linux cell. Browser-chrome overlays (e.g. a Google Translate popup that appeared over the page) are OUTSIDE this channel's scope: CDP reads the page, not the browser window — the AX channel (see macos-chrome-accessibility-api) does see them; a desktop router should pair the two."
+  },
+  "runtime_verification": {
+    "method": "Native compositor screenshot (screencapture -l on the Chrome window) compared to the distilled view: orders table content, buttons, input placeholder; plus in-page state check after blind click.",
+    "agreement": "100% on page content. One scope gap surfaced honestly: the Translate popup visible in the native shot is browser UI, absent from the DOM view by design (declared scope, not a silent lie about page content)."
+  },
+  "permissions_required": [
+    "None (loopback CDP socket). Screen Recording only for the verification screenshot."
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-14",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/chrome-cdp-testapp-distilled.txt",
+    "campaign/results/artifacts/macos/chrome-cdp-testapp.png",
+    "campaign/results/artifacts/macos/chrome-cdp-allcanvas-distilled.txt",
+    "campaign/results/artifacts/macos/chrome-cdp-canvas-crop.png",
+    "campaign/results/artifacts/macos/chrome-cdp-occlusion-hardened.txt",
+    "campaign/results/artifacts/macos/chrome-native-window.png"
+  ]
+}

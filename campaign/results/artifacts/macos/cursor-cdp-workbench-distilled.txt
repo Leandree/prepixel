@@ -1,0 +1,56 @@
+button 160,11,48,48 type=button aria-label=Hide Sidebar id=base-ui-_r_1_
+button 320,11,48,48 type=button aria-label=Go Back id=base-ui-_r_3_
+button 370,11,48,48 type=button aria-label=Go Forward id=base-ui-_r_5_
+text 76,85,131,30 "New Agent"
+text 365,85,43,30 "⌘N"
+text 76,147,84,30 "Search"
+text 367,147,41,30 "⌘K"
+text 76,209,151,30 "Automations"
+text 76,271,127,30 "Customize"
+text 28,360,141,28 "Repositories"
+button 308,350,48,48 type=button aria-label=Customize Sidebar id=_r_8_
+button 370,350,48,48 type=button aria-label=Open Workspace id=_r_1v_
+text 76,423,79,30 "fairwai"
+text 76,485,390,30 "Development environment setup"
+text 360,485,54,30 "4mo"
+text 70,1424,291,28 "Upgrade to a Pro account"
+[pixels] img 24,1510,56,56 alt= src=https://workoscdn.com/images/v1/MSKGvelYekqe54rNI2E3xEjoXYVirOoy5kXBJHoSrrE
+text 96,1507,365,30 "carpentier.leandre@gmail.com"
+text 96,1544,106,28 "Free Plan"
+button 238,1514,116,48 type=button aria-label=Update: restart Cursor to install id=base-ui-_r_g_
+text 252,1523,88,30 "Update"
+button 370,1514,48,48 type=button aria-label=Settings id=base-ui-_r_i_
+button 2232,13,212,44 aria-label=Editor Window type=button
+text 2248,22,152,26 "Editor Window"
+button 2446,11,48,48 type=button aria-label=Chat actions id=_r_m_
+button 2496,11,48,48 type=button aria-label=Show Panel id=base-ui-_r_r_
+button 892,657,119,44 type=button id=base-ui-_r_11_
+text 904,664,71,30 "Home"
+text 1055,664,64,30 "Local"
+button 912,851,48,48 id=_r_16_ type=button aria-label=Add agents, context, tools
+button 968,851,288,48 type=button id=_r_26_
+text 986,860,226,30 "Composer 2.5 Fast"
+button 2040,851,48,48 aria-label=Start voice input type=button id=base-ui-_r_1g_
+button 892,981,1216,64 type=button
+text 974,998,195,30 "Start with a plan"
+text 1185,998,530,30 "Align on implementation before writing code"
+button 892,1045,1216,64 type=button
+text 974,1062,185,30 "Debug an issue"
+text 1175,1062,427,30 "Find root causes and fix tricky bugs"
+button 892,1109,1216,64 type=button
+text 974,1126,236,30 "Create a dashboard"
+text 1226,1126,509,30 "Visualize information in a custom interface"
+text 1049,1502,49,28 "Plan"
+text 1105,1502,64,28 "Mode"
+text 1175,1502,103,28 "improves"
+text 1285,1502,65,28 "agent"
+text 1356,1502,112,28 "outcomes"
+text 1475,1502,42,28 "and"
+text 1524,1502,103,28 "accuracy"
+text 1634,1502,11,28 "-"
+text 1652,1502,29,28 "hit"
+text 1688,1502,102,28 "shift+tab"
+text 1796,1502,23,28 "to"
+text 1826,1502,37,28 "get"
+text 1870,1502,81,28 "started"
+text 1047,1500,902,28 "Plan Mode improves agent outcomes and accuracy - hit shift+tab to get started"

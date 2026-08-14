@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-12 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+17 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -18,6 +18,11 @@
 | linux | LibreOffice Writer | office-native | object-model | ✅ works | — | 21 | 1,366 | ✅ |
 | linux | Whole desktop — 4 concurrent windows, 4 toolkits (Chromium, GTK4, Qt, LibreOffice) | other | render-tree-tap | ✅ works | explicit | 30 | 3,110 | ✅ |
 | linux | Qt Widgets (examples/widgets/calculator) — representative Qt app | qt | render-tree-tap | ⬜ unavailable | explicit |  | 1,366 | ✅ |
+| macos | Safari (system WebKit browser), pages/testapp.html + allcanvas.html | appkit | accessibility-api | ✅ works | explicit | 2,957 | 1,914 | ✅ |
+| macos | TextEdit (com.apple.TextEdit) | appkit | accessibility-api | ✅ works | explicit | 1,760 | 1,526 | ✅ |
+| macos | Google Chrome 151.0.7922.138 (isolated instance, temp profile) | chromium | accessibility-api | 🟡 partial | explicit | 4,948 | 880 | ✅ |
+| macos | Google Chrome 151.0.7922.138 (isolated instance, temp profile) | chromium | cdp | ✅ works | explicit | 315 | 880 | ✅ |
+| macos | Cursor 2.x (VS Code fork, Electron/Chromium 144) — isolated instance, temp profile | electron | cdp | ✅ works | explicit | 647 | 1,366 | ✅ |
 
 ## Predictability & safety (H5)
 
@@ -25,10 +30,15 @@ The production-safety question: could a router know the channel in advance, and 
 
 | Stack signature | Channel | Coverage verdict | Failure mode |
 |-----------------|---------|------------------|--------------|
+| com.apple.Safari; AXWindows returns a standard window; AXWebArea appears under the tab group only after the AT latch flips | accessibility-api | ✅ works | explicit |
+| bundle com.apple.TextEdit; AXUIElementCreateApplication(pid) returns full window tree (45 nodes) in 41 ms | accessibility-api | ✅ works | explicit |
 | --remote-debugging-port responds on the target process (Electron apps expose the same) | cdp | ✅ works | explicit |
 | CDP responds | cdp | 🟡 partial | blocked |
 | n/a | cdp | ✅ works | — |
+| AXUIElementCreateApplication(pid) answers, but see notes: content is LAZY — first shallow probe returned 72 nodes of window chrome only (page text absent) | accessibility-api | 🟡 partial | explicit |
+| http://127.0.0.1:9223/json/version → Chrome/151.0.7922.138, Protocol 1.3 | cdp | ✅ works | explicit |
 | single CANVAS element covering the viewport; DOM has no text/interactive nodes inside it | pixels-baseline | ⬜ unavailable | explicit |
+| http://127.0.0.1:9224/json/version → Chrome/144.0.7559.236; app warns 'remote-debugging-port is not in the list of known options, but still passed to Electron/Chromium' | cdp | ✅ works | explicit |
 | libgtk-4.so; text nodes name their font per run | render-tree-tap | ✅ works | explicit |
 | org.a11y.Bus not activatable in headless sandbox; app does not register | accessibility-api | ⛔ blocked | blocked |
 | libgtk-4.so.1 mapped; renderer submits via gsk_renderer_render() | render-tree-tap | ✅ works | — |
@@ -39,8 +49,8 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 8/12.
-- **Silent divergences** (disqualifying): 0/12 ✅ none found
-- Cells **not** predictable in advance: 0/12 ✅ none
+- Cells where structure **works**: 12/17.
+- **Silent divergences** (disqualifying): 0/17 ✅ none found
+- Cells **not** predictable in advance: 0/17 ✅ none
 
 Reading: every failure so far is either **explicit** (opaque rect / honest empty tree) or **blocked** (OS/env), and every channel was detectable from a stack signature before use. That is the pattern a production router needs. The open risk to hunt on the other OSes is any **silent** cell — a channel that returns a view disagreeing with the screen without declaring it.

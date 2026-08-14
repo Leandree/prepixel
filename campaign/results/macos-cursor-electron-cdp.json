@@ -1,0 +1,45 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Cursor 2.x (VS Code fork, Electron/Chromium 144) — isolated instance, temp profile",
+  "stack": "electron",
+  "stack_detection": {
+    "method": "open debug port answers /json/version; Electron flag pass-through",
+    "signature": "http://127.0.0.1:9224/json/version → Chrome/144.0.7559.236; app warns 'remote-debugging-port is not in the list of known options, but still passed to Electron/Chromium'",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Launch binary with --remote-debugging-port=9224 --user-data-dir=<short path>. Two real-world traps hit: (1) the app SILENTLY dies if user-data-dir exceeds the 103-char unix-socket limit (listen EINVAL on its single-instance socket) — a launch-orchestration failure mode, not a channel failure; (2) like Chrome, the port exists only if the app was launched with it — the user's running VS Code was NOT probeable via CDP without restarting it (declined: it was in active use).",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Workbench UI text read exactly from the DOMSnapshot distillation: menu items with keyboard shortcuts ('New Agent ⌘N', 'Search ⌘K'), section headers, repo names. Pre-login the same probe honestly returned only the 3-line login gate (218 B) — the channel reports what is on screen, gated content stays gated."},
+    "t2_enumerate": { "pass": true, "detail": "17 interactive elements with aria-labels and boxes (Hide Sidebar, Go Back/Forward, Open Workspace, Settings, 'Update: restart Cursor to install'…). Electron apps carry their own ARIA annotations — the DOM view inherits them for free."},
+    "t3_live_value": { "pass": null, "detail": "Not run — no safe writable field on this screen without triggering agent/workspace actions in the user's account; channel identical to the Chrome cell where T3 passed."},
+    "t4_living_screen": { "pass": true, "detail": "Idle workbench re-snapshots: 0,0,0 diff bytes across 3 s — a static Electron UI costs nothing to watch; capture 15 ms."},
+    "t5_blind_action": { "pass": null, "detail": "Skipped deliberately: every clickable on this screen mutates account state (agents, workspace). Blind-click mechanics for CDP proven in macos-chrome-cdp (device-px vs CSS-px DPR trap applies identically here: boxes are DPR=2 device px)."},
+    "t6_pictorial": { "pass": null, "detail": "No canvas/image region on the workbench start screen; nothing to declare."}
+  },
+  "measurements": {
+    "view_bytes": 2591,
+    "view_tokens_est": 647,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 15,
+    "notes": "Logged-in 'Cursor Agents' window, 1280×800-CSS-ish viewport (dpr 2 → screenshot at device px would be 5464 tokens). The distilled view (56 lines) is 2.1× cheaper than one CSS-resolution screenshot and self-labels every control via aria-label — no vision pass needed to name buttons. Login-gated content is an honest boundary: pre-login view was 218 B with exactly the two buttons that existed."
+  },
+  "runtime_verification": {
+    "method": "CDP screenshot of the same instant kept as artifact; text/controls compared against the distilled view.",
+    "agreement": "Full agreement on visible content; no fabricated content observed in either state (pre/post login)."
+  },
+  "permissions_required": [
+    "None (loopback CDP). The user chose to log the probe instance into their Cursor account; the temp profile (containing the auth token) was deleted after the probe."
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/cursor-cdp-workbench-distilled.txt",
+    "campaign/results/artifacts/macos/cursor-cdp-workbench.png"
+  ]
+}

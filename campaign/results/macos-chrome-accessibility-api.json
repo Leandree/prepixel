@@ -1,0 +1,46 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Google Chrome 151.0.7922.138 (isolated instance, temp profile)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "AX tree responds; AXWebArea node present under the window",
+    "signature": "AXUIElementCreateApplication(pid) answers, but see notes: content is LAZY — first shallow probe returned 72 nodes of window chrome only (page text absent)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Same Accessibility TCC grant as all AX cells. No app-side flag needed, but Chrome populates web-content accessibility ON DEMAND: the tree was a stub (window chrome only, 'Dupont'/'Customer name' absent) until sustained AX querying flagged an assistive client; a later probe then returned the full page (200 nodes incl. all table text and buttons). AXUIElementSetAttributeValue(app,'AXEnhancedUserInterface',true) itself returned error -25208, yet content appeared anyway after repeated deep queries.",
+  "verdict": "partial",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "After warm-up: page text (Orders, Dupont SARL, Ship, Customer name) present in the AX tree as real strings. BEFORE warm-up the same query honestly returned a near-empty web area — explicit emptiness, not wrong content."},
+    "t2_enumerate": { "pass": true, "detail": "Buttons/links/fields exposed with AXFrame rects once populated (200 nodes, 19.8 KB, 54 ms). Frames are in GLOBAL screen points (window at its real position) — directly clickable, unlike CDP device-pixel boxes."},
+    "t3_live_value": { "pass": null, "detail": "Not separately re-run on this channel (T3 done via CDP on the same instance); AX exposes AXValue on the input and there is no reason to expect divergence, but unmeasured = unclaimed."},
+    "t4_living_screen": { "pass": null, "detail": "Not measured on this channel (measured on CDP for the same app). AX would require polling or AXObserver notifications; cost expected higher than CDP diffs."},
+    "t5_blind_action": { "pass": null, "detail": "Not re-run via AX (proven on TextEdit cell for AX-coordinate clicking, and via CDP for this app)."},
+    "t6_pictorial": { "pass": true, "detail": "The canvas page exposes an AXWebArea whose canvas region carries no fabricated text — consistent with CDP's declared opaque rect."}
+  },
+  "measurements": {
+    "view_bytes": 19792,
+    "view_tokens_est": 4948,
+    "screenshot_tokens_est": 880,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 54,
+    "notes": "Full-depth AX walk of the populated page = 19.8 KB / ~4950 tokens — 15× heavier than the 1.3 KB distilled CDP view of the SAME screen, because AX nests every DOM group. An unbounded deep walk on the UNPOPULATED tree earlier cost >60 s (lazy population + per-attribute IPC round-trips): bound your walks. Two-channel lesson: for a Chromium app, CDP is the cheap semantic channel when you control the launch; AX is the no-flags fallback that also sees browser-chrome overlays (the Google Translate popup was in the AX window, invisible to CDP)."
+  },
+  "runtime_verification": {
+    "method": "String probes (Orders/Dupont/Customer name/Ship) against the AX serialization, cross-checked with the native window screenshot and the CDP view of the same instant.",
+    "agreement": "Agreement after population; before population the web area was explicitly (near-)empty — a predictability wrinkle, not a divergence: at no point did AX return content that contradicted the screen."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-14",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/chrome-ax-tree.json",
+    "campaign/results/artifacts/macos/chrome-ax-tree-enhanced.json",
+    "campaign/results/artifacts/macos/chrome-native-window.png"
+  ]
+}

@@ -1,0 +1,39 @@
+text 32,72,129,56 "Acme"
+a 32,168,376,70 href=#dashboard
+text 48,184,158,38 "Dashboard"
+a 32,238,376,70 href=#orders
+text 48,254,99,38 "Orders"
+a 32,308,376,70 href=#customers
+text 48,324,158,38 "Customers"
+a 32,378,376,70 href=#settings
+text 48,394,120,38 "Settings"
+text 488,91,205,76 "Orders"
+text 488,210,383,38 "3 open orders — last sync"
+text 871,210,77,38 "10:41"
+text 512,296,90,38 "Order"
+text 736,296,153,38 "Customer"
+text 1118,296,76,38 "Total"
+text 1423,296,101,38 "Status"
+text 512,381,92,38 "#1042"
+text 736,381,194,38 "Dupont SARL"
+text 1118,381,144,38 "€1,240.00"
+text 1439,389,49,28 "Paid"
+button 1695,368,104,64
+text 1719,384,56,31 "Ship"
+text 512,479,93,38 "#1043"
+text 736,479,172,38 "Martin & Co"
+text 1118,479,124,38 "€380.50"
+text 1439,487,92,28 "Pending"
+button 1695,466,104,64
+text 1719,482,56,31 "Ship"
+text 512,577,93,38 "#1044"
+text 736,577,164,38 "Bernard SA"
+text 1118,577,144,38 "€2,105.90"
+text 1439,585,92,28 "Pending"
+button 1695,564,104,64
+text 1719,580,56,31 "Ship"
+input 488,686,347,72 id=customer placeholder=Customer name aria-label=Customer name value=""
+select 851,686,195,72 id=status aria-label=Status
+button 1062,686,171,72 type=submit id=addBtn
+text 1086,706,123,31 "Add order"
+text 514,824,186,38 "Live activity"

@@ -1,0 +1,48 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session (not headless)",
+  "app": "TextEdit (com.apple.TextEdit)",
+  "stack": "appkit",
+  "stack_detection": {
+    "method": "NSWorkspace bundle identifier + AX tree responds with real content on first query",
+    "signature": "bundle com.apple.TextEdit; AXUIElementCreateApplication(pid) returns full window tree (45 nodes) in 41 ms",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Grant Accessibility (TCC) to the host process (Terminal.app) — one System Settings toggle by the user; pyobjc ApplicationServices AX* calls. Apple Events consent (separate TCC dialog) needed only for the AppleScript convenience used to create/close the throwaway document, not for AX itself.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Known sentence typed into a throwaway rich-text doc recovered character-exact via AXValue of the AXTextArea: accents (éàçœ), em-dash, and astral-plane emoji 🦊 all intact. Text arrives as real strings (no glyph IDs). Note: AX ranges count UTF-16 units (emoji = 2), Python counts code points — off-by-one trap for range math."},
+    "t2_enumerate": { "pass": true, "detail": "40+ interactive elements with exact AXFrame rects: text area, scroll area + 2 scrollbars, ruler + 15 markers, format bar (4 style AXCheckBoxes with AXDescription 'gras'/italique/…, 2 color wells, font/typeface popups, size combo, 4 alignment checkboxes, list + line-spacing menus), 3 traffic-light buttons. Cross-checked against a window screenshot: counts, labels and positions match 1:1."},
+    "t3_live_value": { "pass": true, "detail": "Typed ' T3-XKQ-42-macos' via synthetic CGEvents; AXValue of the text area reflects the live value immediately; single-attribute read <0.1 ms."},
+    "t4_living_screen": { "pass": null, "detail": "TextEdit has no self-updating region; living-screen is covered in the clock/CDP cells. Idle half measured here: polling AXValue 1×/s for 5 s while idle = 0 diff bytes (idle costs nothing, vs 1 screenshot/frame for pixels)."},
+    "t5_blind_action": { "pass": true, "detail": "Blind clicks from AXFrame-derived coords land exactly: caret jumped to text offset 1 (click near line start) and 87 (near line end), verified via AXSelectedTextRange — no screenshot used for aiming. Two instructive failures en route: (1) window was moved by the human mid-run → clicks at stale coords missed (TOCTOU race; mitigation: re-read frame immediately before acting + verify it unchanged after); (2) a modal sheet swallowed clicks on the format bar (see t6). AXPress actions (e.g. dismissing sheets) are coordinate-free and immune to both."},
+    "t6_pictorial": { "pass": true, "detail": "PNG pasted into the rich-text doc is DECLARED, not silently absorbed: AXValue grows by one U+FFFC object-replacement char and an AXImage child node appears under the text area with the image's exact on-screen rect (120×95 at its true position, matches screenshot) → targeted pixel crop is possible. Side-effect worth knowing: the paste opened a 'Convert to RTFD?' modal sheet."}
+  },
+  "measurements": {
+    "view_bytes": 7040,
+    "view_tokens_est": 1760,
+    "screenshot_tokens_est": 1526,
+    "diff_bytes_per_interaction": 64,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 41,
+    "notes": "view_bytes = compact-JSON serialization of the full window AX tree (45 nodes, all attributes). Screenshot side: this 586×488-logical window is 1172×976 px at Retina 2× → 1526 tokens (w·h/750); at logical resolution it would be 381 tokens — on a SMALL window a downscaled screenshot can be cheaper than the FULL AX dump; but an agent rarely needs the full dump (interactive-elements + text subset ≈ 2.5 KB ≈ 630 tokens), the AX view is queryable per-attribute (T3 re-read <0.1 ms, ~100 bytes) and idle costs 0. Full-screen baseline this machine: 1512×982 logical ≈ 1980 tokens (7920 at 2×). diff_bytes_per_interaction: re-reading just the changed AXValue after typing 16 chars ≈ 64 B vs re-screenshot."
+  },
+  "runtime_verification": {
+    "method": "Window screenshot vs AX view: element counts/labels/positions compared (T2); pasted-image AXImage rect vs its visible position (T6); text content vs screen (T1). Plus negative-space check: the 'invisible modal' hypothesis was tested and resolved — sheets do NOT appear in AXWindows but ARE exposed via AXFocusedWindow (role AXSheet) and as children of their parent window; the CGWindow (pixel) layer lists them as separate windows.",
+    "agreement": "100% on all cross-checks; no silent divergence found. The one candidate (format-bar B button unresponsive, AXValue stuck at 0) was explained: a modal sheet was blocking input, and the AX view did declare it (AXFocusedWindow) — explicit once you query the right attribute."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process — user toggle in System Settings",
+    "Screen Recording (TCC) — only for the verification screenshots, not for AX itself",
+    "Apple Events consent per scripted app (only for AppleScript document setup/teardown)"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-14",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/textedit-ax-tree.json",
+    "campaign/results/artifacts/macos/textedit-window-t2.png",
+    "campaign/results/artifacts/macos/textedit-t6-image-rtfd-sheet.png"
+  ]
+}

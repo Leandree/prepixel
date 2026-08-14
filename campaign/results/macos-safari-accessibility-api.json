@@ -1,0 +1,46 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Safari (system WebKit browser), pages/testapp.html + allcanvas.html",
+  "stack": "appkit",
+  "stack_detection": {
+    "method": "process bundle + AX responds; web content requires AT-latch (see setup)",
+    "signature": "com.apple.Safari; AXWindows returns a standard window; AXWebArea appears under the tab group only after the AT latch flips",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Accessibility TCC grant. Web content lives in a separate WebContent process bridged via remote AX elements and is NOT served to a plain AX client at first: initial walks returned window chrome only (31 nodes, no page text). Attempting AXUIElementSetAttributeValue(app, 'AXEnhancedUserInterface'/'AXManualAccessibility', true) returned errors (-25208/-25205) — and yet, as with Chrome, the accumulated AT-like traffic flipped WebKit's internal latch: the next walk returned the full page (109 nodes incl. every table cell, buttons, input with placeholder).",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "All page strings char-exact once populated: 'Dupont SARL', '#1042', '€1,240.00', 'Customer name', 'Ship' — real strings with AXFrame rects in global screen points."},
+    "t2_enumerate": { "pass": true, "detail": "Interactive elements (nav links, 3 Ship buttons, input, popup, Add order) exposed with frames; native window screenshot kept as cross-check artifact."},
+    "t3_live_value": { "pass": null, "detail": "Not separately run (proven on TextEdit for the AX channel; no reason for WebKit divergence, unmeasured = unclaimed)."},
+    "t4_living_screen": { "pass": null, "detail": "Not measured on Safari (living-screen economics measured on the CDP cell and the AX idle-cost on TextEdit)."},
+    "t5_blind_action": { "pass": null, "detail": "Not run in Safari; AX frames are global-points (directly clickable — same geometry model as the TextEdit cell where blind clicks passed)."},
+    "t6_pictorial": { "pass": true, "detail": "allcanvas.html (full-page canvas game mock): AXWebArea comes back with ZERO children and no fabricated text — 'SCORE 7788' exists only in pixels. Honest empty tree + known web-area frame = targeted crop possible. The wanted negative, delivered explicitly."}
+  },
+  "measurements": {
+    "view_bytes": 11827,
+    "view_tokens_est": 2957,
+    "screenshot_tokens_est": 1914,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 50,
+    "notes": "Populated testapp window = 109 nodes / 11.8 KB (raw serialization; a distilled subset would be ~3–4× smaller). Screenshot side: the window Safari opened is 1512×949 logical → 1914 tokens (7656 at Retina 2×). TWO startup hazards worth a router's attention: (1) during app launch the AX tree passed through a DEGENERATE state — AXWindows[0] titled 'Safari' with frame=None whose children cycled back to AXApplication, exploding a naive walker into 13k menu-item nodes (2.3 MB) — cycle-guard your walks and re-query after settle; (2) the AT-latch means the first probe of a WebKit/Chromium app may honestly under-report — probe, poke, re-probe before concluding 'unavailable'."
+  },
+  "runtime_verification": {
+    "method": "String probes against the populated tree + native compositor screenshot of the window; canvas page checked for fabricated text.",
+    "agreement": "Full agreement. Pre-latch emptiness and the startup cycle-state were both EXPLICIT (empty/degenerate), never content that contradicted the screen."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process",
+    "Screen Recording for verification shots"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/safari-ax-window.json",
+    "campaign/results/artifacts/macos/safari-native-window.png"
+  ]
+}
