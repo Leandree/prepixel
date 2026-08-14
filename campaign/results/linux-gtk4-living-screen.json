@@ -1,0 +1,29 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, GTK 4.14, gtk4-widget-factory (spinner + progress bars animating)",
+  "app": "GTK4 Widget Factory — animated",
+  "stack": "gtk4",
+  "stack_detection": { "method": "linked libs", "signature": "libgtk-4.so; gsk_renderer_render per frame", "detected_before_use": true },
+  "channel": "render-tree-tap",
+  "channel_setup": "gdb tap capturing consecutive GSK render-tree frames; structural diff computed with embedded texture payloads masked.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Static content decodes as in the text-editor cell." },
+    "t2_enumerate": { "pass": true, "detail": "Widgets enumerable with bounds." },
+    "t3_live_value": { "pass": null, "detail": "n/a" },
+    "t4_living_screen": { "pass": true, "detail": "Across 12 consecutive frames of an animating UI (spinner + progress bars), the semantic inter-frame diff is 15-19 changed lines = ~0.9-1.1 KB, isolating exactly the animating widgets. A screenshot policy would pay ~1366 tokens EVERY frame regardless; the structured diff pays only for what moved, and an idle frame diffs to ~0." },
+    "t5_blind_action": { "pass": null, "detail": "n/a" },
+    "t6_pictorial": { "pass": null, "detail": "n/a" }
+  },
+  "measurements": {
+    "view_bytes": 347819, "view_tokens_est": null, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": 1075, "idle_cost_bytes": 0, "capture_latency_ms": null,
+    "notes": "Native mirror of the browser living-screen result: event-shaped diffs ~1 KB/frame on animation vs a flat 1366 tok/frame screenshot cost. Full serialized frame is ~340 KB but 57% of that is embedded texture payloads (stable identity, sent once); the DIFF is what matters for a moving screen and it is tiny. Confirms the frames-vs-diffs economics hold on a native toolkit, not just Chromium."
+  },
+  "runtime_verification": { "method": "structural diff of consecutive intercepted trees (textures masked)", "agreement": "diffs localize to the animating widgets only" },
+  "permissions_required": ["ptrace own child"],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": []
+}

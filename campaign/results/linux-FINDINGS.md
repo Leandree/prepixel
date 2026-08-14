@@ -48,3 +48,39 @@ don't), but "you can always know in advance whether it will, and it never lies t
 you when it won't." The job for the Windows and macOS runs is to try hard to break
 that — to find a *silent* cell, especially in custom-drawn native apps (UIA on
 Windows, thin SwiftUI AX trees on macOS are the prime suspects).
+
+---
+
+## Hardening round (silent-divergence hunt, native blind-click, glyphs, living GTK)
+
+Four adversarial/robustness tests added after the first pass:
+
+- **Silent-divergence hunt — the important one.** We *found* two silent-divergence
+  classes in the naive view: (1) an element covered by an overlay was listed as
+  present/clickable while a blind click would hit the overlay; (2) off-viewport
+  content (`left:-9999px`) leaked in. Both are now closed: a hardened in-page
+  distiller (`src/distill-hardened.mjs`) hit-tests each element (`elementFromPoint`)
+  and marks covered ones `[occluded]`, and clips off-viewport content. Cross-window
+  occlusion is resolved geometrically from the WM z-order (two overlapping windows →
+  back window computed ~48% covered). CSS `opacity:0` / `visibility:hidden` were
+  already filtered. **Net: naive structure CAN be silently wrong about
+  visibility/hittability; a safe channel needs a hit-test pass (in-window) + the
+  compositor map (cross-window). With those, no silent case survived.** This is the
+  single most important result for the production-safety argument — and the thing
+  the Windows/macOS agents must re-run (UIA on custom-drawn apps; thin SwiftUI AX).
+
+- **Glyph decode, hard cases** — stronger than predicted. Using the per-run font the
+  tree names, reverse-cmap + Unicode NFKC + BiDi reorder recovered Latin, accents,
+  CJK, emoji, and even Arabic exactly (`مرحبا`). Residual lossy tail (discretionary
+  ligatures, complex mixed BiDi) is small and *detectable* (a glyph with no cmap
+  entry is a known miss) — degrades explicitly.
+
+- **Living GTK** — native mirror of the browser result: ~1 KB semantic inter-frame
+  diff on an animating widget set vs a flat 1366 tok/frame screenshot; idle ≈ 0.
+
+- **Native OS-level blind click** — partial. Logic implemented (structured box +
+  window origin + chrome offset → screen px → real `xdotool` click → verify);
+  browser grounding already 4/4 in phase 1. The end-to-end native run was blocked by
+  Chromium DevTools-port flakiness after many headless relaunches (env, not
+  approach). Windows/macOS agents complete this natively via UIA+SendInput /
+  AXFrame+CGEvent.

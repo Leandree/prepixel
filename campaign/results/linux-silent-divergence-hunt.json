@@ -1,0 +1,32 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium/CDP + Xvfb/openbox",
+  "app": "Adversarial: occlusion & visibility tricks (the safety-claim stress test)",
+  "stack": "chromium",
+  "stack_detection": { "method": "n/a (adversarial probe)", "signature": "n/a", "detected_before_use": true },
+  "channel": "cdp",
+  "channel_setup": "Naive distilled view vs a hardened in-page distiller (src/distill-hardened.mjs) with hit-testing; plus cross-window occlusion from the WM z-order map.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "CSS visibility tricks handled correctly: opacity:0 and visibility:hidden secrets are NOT leaked into the view (filtered). Positive control." },
+    "t2_enumerate": { "pass": true, "detail": "FOUND a silent-divergence class in the NAIVE view: a button covered by an overlay div was listed as present/actionable, but elementFromPoint at its center returns the overlay — a blind click would miss. Also found an off-viewport leak (content at left:-9999px appeared in the view with only a negative coord as tell)." },
+    "t3_live_value": { "pass": null, "detail": "n/a" },
+    "t4_living_screen": { "pass": null, "detail": "n/a" },
+    "t5_blind_action": { "pass": true, "detail": "After hardening, the occluded button is emitted as '... [occluded]' so a router will NOT aim a blind click there; it falls back to scrolling/closing the overlay or to pixels. Failure is now explicit." },
+    "t6_pictorial": { "pass": true, "detail": "Cross-window occlusion resolved geometrically: with two overlapping windows the router computes the back window as ~48% covered by the higher-z window from the WM map — so per-window content under the cover is knowably not-visible. Per-window structure alone is blind to this; the compositor map makes it explicit." }
+  },
+  "measurements": {
+    "view_bytes": null, "view_tokens_est": null, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null, "idle_cost_bytes": 0, "capture_latency_ms": null,
+    "notes": "Two genuine silent-divergence classes found and both closed: (1) in-window occlusion -> in-page hit-test marks [occluded]; (2) off-viewport leak -> dropped by viewport clipping; (3) cross-window occlusion -> resolved by WM z-order+geometry (back window 48% covered). Conclusion: NAIVE structure CAN be silently wrong about visibility/hittability; a safe channel must add a hit-test pass (within window) and use the compositor map (across windows). With those, no silent case survived. This is the key hardening result for the production-safety argument."
+  },
+  "runtime_verification": {
+    "method": "elementFromPoint hit-test vs listed elements; rectangle-overlap vs z-order for cross-window",
+    "agreement": "post-hardening view matches what is actually visible & hittable; occluded/off-screen content is dropped or tagged, never silently asserted"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": ["pages/occlusion.html", "src/distill-hardened.mjs"]
+}

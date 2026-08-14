@@ -1,0 +1,32 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, GTK 4.14, gnome-text-editor",
+  "app": "GNOME Text Editor — hard-text stress (ligatures, accents, RTL Arabic, emoji, CJK)",
+  "stack": "gtk4",
+  "stack_detection": { "method": "render tree text-node fonts", "signature": "libgtk-4.so; text nodes name their font per run", "detected_before_use": true },
+  "channel": "render-tree-tap",
+  "channel_setup": "GSK render tree via gdb tap; per-text-node glyph IDs decoded with the node's OWN named font (reverse cmap) + Unicode NFKC + BiDi reorder.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "All runs recovered when decoded with the correct per-node font (the tree names it, and font fallback splits runs by font): Latin 'office finance flag' ✓; precomposed accents 'café','naïve' ✓ (glyphs 171→é, 177→ï); CJK '你好' ✓ (WenQuanYi font); emoji '😀' ✓ (Noto Color Emoji, single color glyph 883). RTL Arabic recovered as presentation forms in visual order (ﺎﺒﺣﺮﻣ), then NFKC → base letters and reverse → 'مرحبا' exactly. Ligatures decompose via NFKC (ﬁ→fi, ﬂ→fl)." },
+    "t2_enumerate": { "pass": null, "detail": "n/a" },
+    "t3_live_value": { "pass": null, "detail": "n/a" },
+    "t4_living_screen": { "pass": null, "detail": "n/a" },
+    "t5_blind_action": { "pass": null, "detail": "n/a" },
+    "t6_pictorial": { "pass": null, "detail": "n/a" }
+  },
+  "measurements": {
+    "view_bytes": null, "view_tokens_est": null, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null, "idle_cost_bytes": null, "capture_latency_ms": null,
+    "notes": "Stronger than predicted. The 'glyph problem' is largely solved by three cheap steps: (1) use the per-run font the tree already names (fallback splits runs, so emoji/CJK land in their own nodes with the right font); (2) reverse cmap; (3) Unicode NFKC + BiDi reorder for presentation-form scripts and standard ligatures. Residual lossy cases: discretionary/custom ligatures with no NFKC decomposition (need GSUB reversal) and complex mixed-direction BiDi runs (need the run's resolved levels). These are a small, characterizable tail — and are DETECTABLE (a glyph with no cmap entry is a known miss), so they degrade explicitly, not silently."
+  },
+  "runtime_verification": {
+    "method": "decoded strings compared to the known source file contents",
+    "agreement": "exact for Latin/accents/CJK/emoji; exact for Arabic after NFKC+reorder"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": []
+}

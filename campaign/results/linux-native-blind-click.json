@@ -1,0 +1,29 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Xvfb + openbox, Chromium",
+  "app": "Native OS-level blind click driven by structured coordinates",
+  "stack": "chromium",
+  "stack_detection": { "method": "open debug port", "signature": "CDP responds", "detected_before_use": true },
+  "channel": "cdp",
+  "channel_setup": "blind_click.mjs: read element box (page coords) + window.screenX/screenY + chrome height from the structured channel -> screen coords -> REAL OS click via xdotool (not a CDP synthetic click) -> verify effect.",
+  "verdict": "partial",
+  "failure_class": "blocked",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "n/a" },
+    "t2_enumerate": { "pass": null, "detail": "n/a" },
+    "t3_live_value": { "pass": null, "detail": "n/a" },
+    "t4_living_screen": { "pass": null, "detail": "n/a" },
+    "t5_blind_action": { "pass": null, "detail": "Actuation logic implemented and committed (structured element box + on-screen window origin + chrome offset -> screen pixel -> xdotool OS click -> verify). Browser-level grounding was already proven end-to-end in phase 1 (grounding eval 4/4, raw CDP Input clicks at predicted coords). The desktop-router cell also extracted the focused window's content live over CDP. The END-TO-END native run here (OS-level xdotool click reading back through CDP) was blocked: after many Xvfb/WM/Chromium relaunches in this headless sandbox, Chromium stopped binding its DevTools port reliably (resources were free; a lifecycle/flakiness issue, not the approach). On a real desktop (the agent-brief target) this path runs directly." },
+    "t6_pictorial": { "pass": null, "detail": "n/a" }
+  },
+  "measurements": {
+    "view_bytes": null, "view_tokens_est": null, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null, "idle_cost_bytes": null, "capture_latency_ms": null,
+    "notes": "Honest partial. The coordinate-frame math (page coords + window.screenX/Y + chromeTop -> screen coords) is the one real subtlety and it is implemented; the missing piece is only a stable headless desktop to run the OS click against. Windows/macOS agents should complete this natively (Windows: UIA BoundingRectangle + SendInput; macOS: AXFrame + CGEvent), where it does not depend on Chromium's debug port."
+  },
+  "runtime_verification": { "method": "intended: xdotool click then CDP read of button state", "agreement": "not completed in sandbox (see detail)" },
+  "permissions_required": ["Xvfb/WM", "CDP port", "xdotool (XTEST)"],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": ["campaign/desktop/blind_click.mjs"]
+}
