@@ -1,0 +1,40 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, LibreOffice (soffice) headless",
+  "app": "LibreOffice Writer",
+  "stack": "office-native",
+  "stack_detection": {
+    "method": "process name + open UNO socket",
+    "signature": "soffice.bin running; UNO endpoint 'socket,port=2002;urp' accepts a connection",
+    "detected_before_use": true
+  },
+  "channel": "object-model",
+  "channel_setup": "soffice --headless --accept='socket,host=localhost,port=2002;urp;'; python3-uno resolves UnoUrlResolver -> Desktop.getCurrentComponent().getText().getString()",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Document text read exactly, including accents: 'UNO-SENTINEL-ALPHA\\nLigne deux avec accents: éàü and number 98765\\nTroisième paragraphe.' This is the document model itself — above any render tree; text is real strings, no glyph decoding needed." },
+    "t2_enumerate": { "pass": true, "detail": "UNO exposes the full object model (paragraphs, tables, frames, shapes, form controls) with enumerable structure and geometry; richer than a render tree for document semantics." },
+    "t3_live_value": { "pass": true, "detail": "getString() reflects the live in-memory document; edits are visible immediately via the same API." },
+    "t4_living_screen": { "pass": null, "detail": "N/A for a static document; UNO is event/model-based, not frame-based." },
+    "t5_blind_action": { "pass": true, "detail": "UNO can both locate (view cursor -> screen coords) and act directly via the model (insert/format) — actuation need not go through pixels at all." },
+    "t6_pictorial": { "pass": true, "detail": "Embedded images/shapes are enumerable objects with bounds and, for images, the bitmap — declarable and extractable; not silently lost." }
+  },
+  "measurements": {
+    "view_bytes": 86,
+    "view_tokens_est": 21,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": null,
+    "notes": "Object-model text for this page = ~21 tokens vs ~1366 for a page screenshot (~65x). Strongest positive class in the study: when the app exposes its document model, the render tree is unnecessary. Linux analog of Windows Word-via-COM."
+  },
+  "runtime_verification": {
+    "method": "known sentinel string typed into source doc, checked against getString()",
+    "agreement": "exact, accents preserved"
+  },
+  "permissions_required": ["local socket connection to own soffice instance"],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": []
+}

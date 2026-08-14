@@ -1,0 +1,40 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04 (noble), GTK 4.14.5, Wayland/broadway headless",
+  "app": "GNOME Text Editor 46.3",
+  "stack": "gtk4",
+  "stack_detection": {
+    "method": "mapped shared libraries of the target process",
+    "signature": "libgtk-4.so.1 mapped; renderer submits via gsk_renderer_render()",
+    "detected_before_use": true
+  },
+  "channel": "render-tree-tap",
+  "channel_setup": "gdb tap on gsk_renderer_render calling gsk_render_node_serialize in-process (LD_PRELOAD defeated by libgtk -Bsymbolic build; documented). GSK_RENDERER=cairo.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Known file content recovered exactly by decoding GSK text-node glyph IDs via reverse cmap: 'The quick brown fox 12345', 'RENDER-TAP-SENTINEL-XYZ', plus chrome 'Open','known.txt','/tmp'. Text arrives as glyph IDs (post-HarfBuzz), decoded one-table-per-font." },
+    "t2_enumerate": { "pass": true, "detail": "Tree exposes container/transform/border/text nodes with bounds; header buttons (Open, new-tab, menu, window controls) present as distinct subtrees with geometry." },
+    "t3_live_value": { "pass": true, "detail": "Editor text shown is the live document content (not a placeholder); a second frame after load reflects the buffer." },
+    "t4_living_screen": { "pass": null, "detail": "Static editor; living-screen economics already measured on widget-factory (~1-2 KB inter-frame diff during animation). Not re-run here." },
+    "t5_blind_action": { "pass": null, "detail": "Not dispatched under broadway headless in this pass; GTK bounds are exact (see re-render), coordinates are directly usable. Deferred to interactive session." },
+    "t6_pictorial": { "pass": true, "detail": "No image in this doc; texture nodes (when present) embed their bitmap in the tree and are declarable as opaque rects (verified on widget-factory photo)." }
+  },
+  "measurements": {
+    "view_bytes": 16039,
+    "view_tokens_est": 3577,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": 1660,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": null,
+    "notes": "Serialized frame 16 KB (1.7 KB texture, 14.3 KB verbose pre-distillation structure). Naive token count high because serialization is verbose CSS-like text; distillation (as in browser DOM view) would cut this sharply. The load-bearing facts here are completeness + text recovery, not raw token count."
+  },
+  "runtime_verification": {
+    "method": "re-render intercepted tree with gtk4-rendernode-tool, compare to on-screen frame",
+    "agreement": "exact: re-rendered PNG is the editor window pixel-for-pixel (artifacts/linux-gnome-text-editor-rerender.png)"
+  },
+  "permissions_required": ["ability to attach gdb to own child process (ptrace)"],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": ["campaign/results/artifacts/linux-gnome-text-editor-rerender.png"]
+}

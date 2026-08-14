@@ -1,0 +1,36 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium (headless), CDP",
+  "app": "Chromium / Chrome DevTools Protocol (covers all Electron apps: VS Code, Slack, Discord, Teams)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "open debug port",
+    "signature": "--remote-debugging-port responds on the target process (Electron apps expose the same)",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "CDP: DOMSnapshot.captureSnapshot (distilled semantic view) + LayerTree (paint ops). See parent repo src/capture.mjs.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Full visible text as real strings (no glyph decoding), plus off-viewport content. Verified in phase-1 grounding eval (4/4) on randomized data." },
+    "t2_enumerate": { "pass": true, "detail": "Interactive elements with roles, boxes, ids, live input values; whole page not just viewport." },
+    "t3_live_value": { "pass": true, "detail": "inputValue exposed; typed strings visible (measured)." },
+    "t4_living_screen": { "pass": true, "detail": "Structured diffs: 14 tok (toast fade) to 205 tok (table reflow); 0 on idle; living feed 6 s = 587 tok vs 8196 screenshot (14x)." },
+    "t5_blind_action": { "pass": true, "detail": "Coordinates from the view drove raw CDP Input clicks onto correct targets (phase-1 eval 4/4)." },
+    "t6_pictorial": { "pass": true, "detail": "img/canvas declared as [pixels] rects; targeted crops interpreted by vision (visual eval 3/3, 3/3). Opaque regions are explicit, never silent." }
+  },
+  "measurements": {
+    "view_bytes": 1221, "view_tokens_est": 308, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": 819, "idle_cost_bytes": 0, "capture_latency_ms": 4,
+    "notes": "Reference numbers from phase-1 (results/representations.json, diffs.json). App-UI structured view 308 tok vs 1366 screenshot (4.4x); capture 3-5 ms vs ~120 ms. This is the highest-coverage general channel because it covers the entire Chromium/Electron share of the desktop cross-OS with identical method."
+  },
+  "runtime_verification": {
+    "method": "grounding eval (4/4) + visual eval (3/3 x2), mechanical",
+    "agreement": "structured view + declared crops fully consistent with screen"
+  },
+  "permissions_required": ["ability to launch/attach with --remote-debugging-port"],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": ["results/representations.json", "results/diffs.json", "results/eval-report.json", "results/eval-visual-report.json"]
+}

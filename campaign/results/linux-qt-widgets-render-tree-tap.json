@@ -1,0 +1,33 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Qt 5.15",
+  "app": "Qt Widgets (examples/widgets/calculator) — representative Qt app",
+  "stack": "qt",
+  "stack_detection": {
+    "method": "linked libraries",
+    "signature": "libQt5Gui.so / libQt5Widgets.so mapped (or Qt6 equivalents)",
+    "detected_before_use": true
+  },
+  "channel": "render-tree-tap",
+  "channel_setup": "Investigated whether Qt exposes a serializable render tree analogous to GTK's gsk_render_node_serialize().",
+  "verdict": "unavailable",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "No public render-tree serialization exists in Qt. QWidget apps paint via QPainter into a backing store (pixels); Qt Quick composes a GPU scene graph (QSG) that is internal with no text-dump API. Unlike GTK there is no one-call tree export. The render-tap channel is therefore not available for Qt." },
+    "t2_enumerate": { "pass": null, "detail": "Not via render tap. Qt's semantic channel is AT-SPI (if the app enables QAccessible) — see the accessibility-api cell; blocked in this headless sandbox but the correct route on a real session." },
+    "t3_live_value": { "pass": null, "detail": "Via AT-SPI only." },
+    "t4_living_screen": { "pass": null, "detail": "N/A for render tap." },
+    "t5_blind_action": { "pass": null, "detail": "Via AT-SPI extents only." },
+    "t6_pictorial": { "pass": null, "detail": "N/A." }
+  },
+  "measurements": {
+    "view_bytes": null, "view_tokens_est": null, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null, "idle_cost_bytes": null, "capture_latency_ms": null,
+    "notes": "Documented architectural refusal — the contrast with GTK is a core finding: the render-tap approach is toolkit-dependent, not universal. GTK exposes gsk_render_node_serialize(); Qt exposes nothing equivalent. For Qt the only structured channel is AT-SPI (semantic API), which sidesteps the render level entirely. This is exactly the 'predictability' story: the available channel is a function of the toolkit signature, knowable in advance, but coverage varies sharply by toolkit."
+  },
+  "runtime_verification": { "method": "n/a", "agreement": "n/a" },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": []
+}

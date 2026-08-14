@@ -1,0 +1,33 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, GTK 4.14, headless (broadway, no seat/session)",
+  "app": "GNOME Calculator 46.3",
+  "stack": "gtk4",
+  "stack_detection": {
+    "method": "a11y bus registration check",
+    "signature": "org.a11y.Bus not activatable in headless sandbox; app does not register",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Attempted: dbus-run-session + at-spi-bus-launcher + at-spi2-registryd, then Atspi.init()/get_desktop walk via gi.repository.Atspi.",
+  "verdict": "blocked",
+  "failure_class": "blocked",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "Not reachable: AT-SPI client failed with 'A connection to the bus can't be made' — org.a11y.Bus is not provided without a real login session; xdg portals also fail (no display/seat). GTK4 also rejects legacy GTK_A11Y=atspi (GTK4 auto-registers only when a session a11y bus exists)." },
+    "t2_enumerate": { "pass": null, "detail": "Blocked (same cause)." },
+    "t3_live_value": { "pass": null, "detail": "Blocked." },
+    "t4_living_screen": { "pass": null, "detail": "Blocked." },
+    "t5_blind_action": { "pass": null, "detail": "Blocked." },
+    "t6_pictorial": { "pass": null, "detail": "Blocked." }
+  },
+  "measurements": {
+    "view_bytes": null, "view_tokens_est": null, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null, "idle_cost_bytes": null, "capture_latency_ms": null,
+    "notes": "Environmental block, NOT a property of AT-SPI itself. On a real logged-in Linux desktop AT-SPI is the standard cross-toolkit channel and is expected to work (the Linux agent brief covers it there). Recorded here because it is a genuine predictability datum: AT-SPI depends on a full session bus, so it is unavailable in headless/CI/server contexts where an agent might run — a routing consideration for production."
+  },
+  "runtime_verification": { "method": "n/a (blocked)", "agreement": "n/a" },
+  "permissions_required": ["a logged-in session bus providing org.a11y.Bus"],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": []
+}

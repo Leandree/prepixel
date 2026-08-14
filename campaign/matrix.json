@@ -1,0 +1,367 @@
+{
+  "cells": [
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium (headless), CDP",
+      "app": "All-canvas 'game' page (perimeter-law control)",
+      "stack": "custom-canvas",
+      "stack_detection": {
+        "method": "structured view composition",
+        "signature": "single CANVAS element covering the viewport; DOM has no text/interactive nodes inside it",
+        "detected_before_use": true
+      },
+      "channel": "pixels-baseline",
+      "channel_setup": "Chromium via CDP; DOMSnapshot distilled view.",
+      "verdict": "unavailable",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": false,
+          "detail": "Score/level text is drawn INTO the canvas; structured view sees none of it. But it does not lie: it emits exactly '[pixels] canvas 0,0,1280,800' \u2014 the whole screen declared as one opaque region. Agent must fall back to vision on that rect."
+        },
+        "t2_enumerate": {
+          "pass": false,
+          "detail": "No enumerable elements \u2014 correctly reported as one opaque canvas, not a fabricated tree."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "N/A."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "A real game would animate; the structured channel would keep declaring the same opaque rect (no free change signal) \u2014 pixels/diffing of the crop is the only option."
+        },
+        "t5_blind_action": {
+          "pass": false,
+          "detail": "No coordinates derivable from structure; aiming requires vision on the crop."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "THE key safety result: the opaque region is DECLARED with its exact rect. Failure is explicit, not silent \u2014 a router can detect 'structure covers 0% of this screen' before acting and switch to the pixel path."
+        }
+      },
+      "measurements": {
+        "view_bytes": 26,
+        "view_tokens_est": 7,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "This is the wanted NEGATIVE that proves the perimeter law and the safety property simultaneously: where structure yields nothing (games, video, remote desktop), it says so explicitly. Full-screen canvas apps (games, some Google Docs modes) collapse to the pixel baseline \u2014 no gain, but no silent loss either."
+      },
+      "runtime_verification": {
+        "method": "compare structured view coverage to screenshot content",
+        "agreement": "structured view explicitly covers 0% of on-screen content and declares it (opaque rect) \u2014 consistent, not divergent"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux, reference cell)",
+      "date": "2026-08-14",
+      "raw_artifacts": []
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium (headless), CDP",
+      "app": "Chromium / Chrome DevTools Protocol (covers all Electron apps: VS Code, Slack, Discord, Teams)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "open debug port",
+        "signature": "--remote-debugging-port responds on the target process (Electron apps expose the same)",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "CDP: DOMSnapshot.captureSnapshot (distilled semantic view) + LayerTree (paint ops). See parent repo src/capture.mjs.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Full visible text as real strings (no glyph decoding), plus off-viewport content. Verified in phase-1 grounding eval (4/4) on randomized data."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Interactive elements with roles, boxes, ids, live input values; whole page not just viewport."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "inputValue exposed; typed strings visible (measured)."
+        },
+        "t4_living_screen": {
+          "pass": true,
+          "detail": "Structured diffs: 14 tok (toast fade) to 205 tok (table reflow); 0 on idle; living feed 6 s = 587 tok vs 8196 screenshot (14x)."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Coordinates from the view drove raw CDP Input clicks onto correct targets (phase-1 eval 4/4)."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "img/canvas declared as [pixels] rects; targeted crops interpreted by vision (visual eval 3/3, 3/3). Opaque regions are explicit, never silent."
+        }
+      },
+      "measurements": {
+        "view_bytes": 1221,
+        "view_tokens_est": 308,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": 819,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 4,
+        "notes": "Reference numbers from phase-1 (results/representations.json, diffs.json). App-UI structured view 308 tok vs 1366 screenshot (4.4x); capture 3-5 ms vs ~120 ms. This is the highest-coverage general channel because it covers the entire Chromium/Electron share of the desktop cross-OS with identical method."
+      },
+      "runtime_verification": {
+        "method": "grounding eval (4/4) + visual eval (3/3 x2), mechanical",
+        "agreement": "structured view + declared crops fully consistent with screen"
+      },
+      "permissions_required": [
+        "ability to launch/attach with --remote-debugging-port"
+      ],
+      "agent": "claude (sandbox Linux, reference cell)",
+      "date": "2026-08-14",
+      "raw_artifacts": [
+        "results/representations.json",
+        "results/diffs.json",
+        "results/eval-report.json",
+        "results/eval-visual-report.json"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, GTK 4.14, headless (broadway, no seat/session)",
+      "app": "GNOME Calculator 46.3",
+      "stack": "gtk4",
+      "stack_detection": {
+        "method": "a11y bus registration check",
+        "signature": "org.a11y.Bus not activatable in headless sandbox; app does not register",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Attempted: dbus-run-session + at-spi-bus-launcher + at-spi2-registryd, then Atspi.init()/get_desktop walk via gi.repository.Atspi.",
+      "verdict": "blocked",
+      "failure_class": "blocked",
+      "tests": {
+        "t1_read_text": {
+          "pass": null,
+          "detail": "Not reachable: AT-SPI client failed with 'A connection to the bus can't be made' \u2014 org.a11y.Bus is not provided without a real login session; xdg portals also fail (no display/seat). GTK4 also rejects legacy GTK_A11Y=atspi (GTK4 auto-registers only when a session a11y bus exists)."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "Blocked (same cause)."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Blocked."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Blocked."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Blocked."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "Blocked."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Environmental block, NOT a property of AT-SPI itself. On a real logged-in Linux desktop AT-SPI is the standard cross-toolkit channel and is expected to work (the Linux agent brief covers it there). Recorded here because it is a genuine predictability datum: AT-SPI depends on a full session bus, so it is unavailable in headless/CI/server contexts where an agent might run \u2014 a routing consideration for production."
+      },
+      "runtime_verification": {
+        "method": "n/a (blocked)",
+        "agreement": "n/a"
+      },
+      "permissions_required": [
+        "a logged-in session bus providing org.a11y.Bus"
+      ],
+      "agent": "claude (sandbox Linux, reference cell)",
+      "date": "2026-08-14",
+      "raw_artifacts": []
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04 (noble), GTK 4.14.5, Wayland/broadway headless",
+      "app": "GNOME Text Editor 46.3",
+      "stack": "gtk4",
+      "stack_detection": {
+        "method": "mapped shared libraries of the target process",
+        "signature": "libgtk-4.so.1 mapped; renderer submits via gsk_renderer_render()",
+        "detected_before_use": true
+      },
+      "channel": "render-tree-tap",
+      "channel_setup": "gdb tap on gsk_renderer_render calling gsk_render_node_serialize in-process (LD_PRELOAD defeated by libgtk -Bsymbolic build; documented). GSK_RENDERER=cairo.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Known file content recovered exactly by decoding GSK text-node glyph IDs via reverse cmap: 'The quick brown fox 12345', 'RENDER-TAP-SENTINEL-XYZ', plus chrome 'Open','known.txt','/tmp'. Text arrives as glyph IDs (post-HarfBuzz), decoded one-table-per-font."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Tree exposes container/transform/border/text nodes with bounds; header buttons (Open, new-tab, menu, window controls) present as distinct subtrees with geometry."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "Editor text shown is the live document content (not a placeholder); a second frame after load reflects the buffer."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Static editor; living-screen economics already measured on widget-factory (~1-2 KB inter-frame diff during animation). Not re-run here."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Not dispatched under broadway headless in this pass; GTK bounds are exact (see re-render), coordinates are directly usable. Deferred to interactive session."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "No image in this doc; texture nodes (when present) embed their bitmap in the tree and are declarable as opaque rects (verified on widget-factory photo)."
+        }
+      },
+      "measurements": {
+        "view_bytes": 16039,
+        "view_tokens_est": 3577,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": 1660,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "Serialized frame 16 KB (1.7 KB texture, 14.3 KB verbose pre-distillation structure). Naive token count high because serialization is verbose CSS-like text; distillation (as in browser DOM view) would cut this sharply. The load-bearing facts here are completeness + text recovery, not raw token count."
+      },
+      "runtime_verification": {
+        "method": "re-render intercepted tree with gtk4-rendernode-tool, compare to on-screen frame",
+        "agreement": "exact: re-rendered PNG is the editor window pixel-for-pixel (artifacts/linux-gnome-text-editor-rerender.png)"
+      },
+      "permissions_required": [
+        "ability to attach gdb to own child process (ptrace)"
+      ],
+      "agent": "claude (sandbox Linux, reference cell)",
+      "date": "2026-08-14",
+      "raw_artifacts": [
+        "campaign/results/artifacts/linux-gnome-text-editor-rerender.png"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, LibreOffice (soffice) headless",
+      "app": "LibreOffice Writer",
+      "stack": "office-native",
+      "stack_detection": {
+        "method": "process name + open UNO socket",
+        "signature": "soffice.bin running; UNO endpoint 'socket,port=2002;urp' accepts a connection",
+        "detected_before_use": true
+      },
+      "channel": "object-model",
+      "channel_setup": "soffice --headless --accept='socket,host=localhost,port=2002;urp;'; python3-uno resolves UnoUrlResolver -> Desktop.getCurrentComponent().getText().getString()",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Document text read exactly, including accents: 'UNO-SENTINEL-ALPHA\\nLigne deux avec accents: \u00e9\u00e0\u00fc and number 98765\\nTroisi\u00e8me paragraphe.' This is the document model itself \u2014 above any render tree; text is real strings, no glyph decoding needed."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "UNO exposes the full object model (paragraphs, tables, frames, shapes, form controls) with enumerable structure and geometry; richer than a render tree for document semantics."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "getString() reflects the live in-memory document; edits are visible immediately via the same API."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "N/A for a static document; UNO is event/model-based, not frame-based."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "UNO can both locate (view cursor -> screen coords) and act directly via the model (insert/format) \u2014 actuation need not go through pixels at all."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Embedded images/shapes are enumerable objects with bounds and, for images, the bitmap \u2014 declarable and extractable; not silently lost."
+        }
+      },
+      "measurements": {
+        "view_bytes": 86,
+        "view_tokens_est": 21,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "Object-model text for this page = ~21 tokens vs ~1366 for a page screenshot (~65x). Strongest positive class in the study: when the app exposes its document model, the render tree is unnecessary. Linux analog of Windows Word-via-COM."
+      },
+      "runtime_verification": {
+        "method": "known sentinel string typed into source doc, checked against getString()",
+        "agreement": "exact, accents preserved"
+      },
+      "permissions_required": [
+        "local socket connection to own soffice instance"
+      ],
+      "agent": "claude (sandbox Linux, reference cell)",
+      "date": "2026-08-14",
+      "raw_artifacts": []
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, Qt 5.15",
+      "app": "Qt Widgets (examples/widgets/calculator) \u2014 representative Qt app",
+      "stack": "qt",
+      "stack_detection": {
+        "method": "linked libraries",
+        "signature": "libQt5Gui.so / libQt5Widgets.so mapped (or Qt6 equivalents)",
+        "detected_before_use": true
+      },
+      "channel": "render-tree-tap",
+      "channel_setup": "Investigated whether Qt exposes a serializable render tree analogous to GTK's gsk_render_node_serialize().",
+      "verdict": "unavailable",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": false,
+          "detail": "No public render-tree serialization exists in Qt. QWidget apps paint via QPainter into a backing store (pixels); Qt Quick composes a GPU scene graph (QSG) that is internal with no text-dump API. Unlike GTK there is no one-call tree export. The render-tap channel is therefore not available for Qt."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "Not via render tap. Qt's semantic channel is AT-SPI (if the app enables QAccessible) \u2014 see the accessibility-api cell; blocked in this headless sandbox but the correct route on a real session."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Via AT-SPI only."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "N/A for render tap."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Via AT-SPI extents only."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "N/A."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Documented architectural refusal \u2014 the contrast with GTK is a core finding: the render-tap approach is toolkit-dependent, not universal. GTK exposes gsk_render_node_serialize(); Qt exposes nothing equivalent. For Qt the only structured channel is AT-SPI (semantic API), which sidesteps the render level entirely. This is exactly the 'predictability' story: the available channel is a function of the toolkit signature, knowable in advance, but coverage varies sharply by toolkit."
+      },
+      "runtime_verification": {
+        "method": "n/a",
+        "agreement": "n/a"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux, reference cell)",
+      "date": "2026-08-14",
+      "raw_artifacts": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Game</title>
+<style>body{margin:0}</style></head><body>
+<canvas id="c" width="1280" height="800"></canvas>
+<script>
+const x=document.getElementById('c').getContext('2d');
+x.fillStyle='#101830';x.fillRect(0,0,1280,800);
+x.fillStyle='#0f0';x.font='bold 28px monospace';x.fillText('SCORE 7788  LEVEL 3',20,40);
+for(let i=0;i<8;i++){x.fillStyle='#e33';x.beginPath();x.arc(120+i*140,300,26,0,7);x.fill();}
+x.fillStyle='#4af';x.fillRect(600,700,80,40);
+</script></body></html>

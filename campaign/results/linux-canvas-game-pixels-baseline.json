@@ -1,0 +1,36 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium (headless), CDP",
+  "app": "All-canvas 'game' page (perimeter-law control)",
+  "stack": "custom-canvas",
+  "stack_detection": {
+    "method": "structured view composition",
+    "signature": "single CANVAS element covering the viewport; DOM has no text/interactive nodes inside it",
+    "detected_before_use": true
+  },
+  "channel": "pixels-baseline",
+  "channel_setup": "Chromium via CDP; DOMSnapshot distilled view.",
+  "verdict": "unavailable",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "Score/level text is drawn INTO the canvas; structured view sees none of it. But it does not lie: it emits exactly '[pixels] canvas 0,0,1280,800' — the whole screen declared as one opaque region. Agent must fall back to vision on that rect." },
+    "t2_enumerate": { "pass": false, "detail": "No enumerable elements — correctly reported as one opaque canvas, not a fabricated tree." },
+    "t3_live_value": { "pass": null, "detail": "N/A." },
+    "t4_living_screen": { "pass": null, "detail": "A real game would animate; the structured channel would keep declaring the same opaque rect (no free change signal) — pixels/diffing of the crop is the only option." },
+    "t5_blind_action": { "pass": false, "detail": "No coordinates derivable from structure; aiming requires vision on the crop." },
+    "t6_pictorial": { "pass": true, "detail": "THE key safety result: the opaque region is DECLARED with its exact rect. Failure is explicit, not silent — a router can detect 'structure covers 0% of this screen' before acting and switch to the pixel path." }
+  },
+  "measurements": {
+    "view_bytes": 26, "view_tokens_est": 7, "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null, "idle_cost_bytes": 0, "capture_latency_ms": null,
+    "notes": "This is the wanted NEGATIVE that proves the perimeter law and the safety property simultaneously: where structure yields nothing (games, video, remote desktop), it says so explicitly. Full-screen canvas apps (games, some Google Docs modes) collapse to the pixel baseline — no gain, but no silent loss either."
+  },
+  "runtime_verification": {
+    "method": "compare structured view coverage to screenshot content",
+    "agreement": "structured view explicitly covers 0% of on-screen content and declares it (opaque rect) — consistent, not divergent"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux, reference cell)",
+  "date": "2026-08-14",
+  "raw_artifacts": []
+}
