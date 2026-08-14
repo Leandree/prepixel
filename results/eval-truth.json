@@ -1,0 +1,44 @@
+{
+  "orders": [
+    {
+      "id": 2000,
+      "customer": "Luveba SAS",
+      "total": "3243.33",
+      "status": "Overdue"
+    },
+    {
+      "id": 2001,
+      "customer": "Renifa SA",
+      "total": "1385.44",
+      "status": "Overdue"
+    },
+    {
+      "id": 2002,
+      "customer": "Veduti SAS",
+      "total": "3706.62",
+      "status": "Pending"
+    },
+    {
+      "id": 2003,
+      "customer": "Baluve SAS",
+      "total": "91.88",
+      "status": "Pending"
+    },
+    {
+      "id": 2004,
+      "customer": "Roduba SARL",
+      "total": "1740.83",
+      "status": "Pending"
+    },
+    {
+      "id": 2005,
+      "customer": "Duluso SARL",
+      "total": "887.27",
+      "status": "Paid"
+    }
+  ],
+  "shipTarget": 2003,
+  "shipTargetCustomer": "Baluve SAS",
+  "nPending": 3,
+  "maxCustomer": "Veduti SAS"
+}

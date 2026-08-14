@@ -1,0 +1,10 @@
+{
+  "t1": 3,
+  "t2": "Veduti SAS",
+  "t3": { "x": 1133, "y": 347 },
+  "t4": {
+    "clickInput": { "x": 348, "y": 508 },
+    "text": "Nova Corp",
+    "clickSubmit": { "x": 609, "y": 508 }
+  }
+}

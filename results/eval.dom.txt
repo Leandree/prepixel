@@ -1,0 +1,57 @@
+text 16,36,74,28 "Acme"
+a 16,84,188,35 href=#dashboard
+text 24,92,87,19 "Dashboard"
+a 16,119,188,35 href=#orders
+text 24,127,54,19 "Orders"
+a 16,154,188,35 href=#customers
+text 24,162,86,19 "Customers"
+a 16,189,188,35 href=#settings
+text 24,197,66,19 "Settings"
+text 244,45,122,38 "Orders"
+text 244,105,213,19 "6 open orders — last sync"
+text 457,105,46,19 "10:41"
+text 256,148,52,19 "Order"
+text 422,148,87,19 "Customer"
+text 700,148,44,19 "Total"
+text 913,148,59,19 "Status"
+text 256,190,54,19 "#2000"
+text 422,190,95,19 "Luveba SAS"
+text 700,190,76,19 "€3243.33"
+text 921,194,51,14 "Overdue"
+button 1107,184,52,32
+text 1119,192,28,16 "Ship"
+text 256,239,54,19 "#2001"
+text 422,239,77,19 "Renifa SA"
+text 700,239,76,19 "€1385.44"
+text 921,243,51,14 "Overdue"
+button 1107,233,52,32
+text 1119,241,28,16 "Ship"
+text 256,288,54,19 "#2002"
+text 422,288,87,19 "Veduti SAS"
+text 700,288,76,19 "€3706.62"
+text 921,292,48,14 "Pending"
+button 1107,282,52,32
+text 1119,290,28,16 "Ship"
+text 256,337,54,19 "#2003"
+text 422,337,91,19 "Baluve SAS"
+text 700,337,56,19 "€91.88"
+text 921,341,48,14 "Pending"
+button 1107,331,52,32
+text 1119,339,28,16 "Ship"
+text 256,386,54,19 "#2004"
+text 422,386,107,19 "Roduba SARL"
+text 700,386,76,19 "€1740.83"
+text 921,390,48,14 "Pending"
+button 1107,380,52,32
+text 1119,388,28,16 "Ship"
+text 256,435,54,19 "#2005"
+text 422,435,102,19 "Duluso SARL"
+text 700,435,66,19 "€887.27"
+text 921,439,25,14 "Paid"
+button 1107,429,52,32
+text 1119,437,28,16 "Ship"
+input 244,490,209,36 id=customer placeholder=Customer name aria-label=Customer name value=""
+select 461,490,98,36 id=status aria-label=Status
+button 567,490,85,36 type=submit id=addBtn
+text 579,500,61,16 "Add order"
+text 257,559,110,19 "Live activity"
