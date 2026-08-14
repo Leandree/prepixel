@@ -1,0 +1,46 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Clock/Horloge (com.apple.clock, system SwiftUI app) — world clock + stopwatch",
+  "stack": "swiftui",
+  "stack_detection": {
+    "method": "system bundle id + AX answers with real content",
+    "signature": "com.apple.clock; window tree 25 nodes with labeled toolbar tabs on first query",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Accessibility TCC only. No AT-latch needed (unlike Chromium/WebKit/iWork) — system SwiftUI app is populated immediately.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "World-clock strings exact: 'Paris', '00:44', 'Jour : 06:43', 'Nuit : 21:06' as AXStaticText with frames."},
+    "t2_enumerate": { "pass": true, "detail": "Toolbar AXRadioGroup (Horloges/Alarmes/Chronomètre/Minuteurs), buttons, traffic lights — all with frames. SwiftUI label trap: control labels live in AXDescription, NOT AXTitle (a selector matching only AXTitle finds nothing)."},
+    "t3_live_value": { "pass": null, "detail": "No text input in this app."},
+    "t4_living_screen": { "pass": true, "detail": "Running stopwatch sampled 1×/s via one attribute read: 38 bytes/tick (~10 tokens), read latency 0.3–3.8 ms, exact seconds progression ('174 heures, 11 minutes, 44/45/46/47/48 secondes'). Idle regions cost 0 (unchanged reads compare equal). Pixel equivalent: one full re-screenshot per tick. The stopwatch digits are exposed as the DESCRIPTION of an AXGenericElement — a first naive poll of AXValue on nearby static texts read empty strings; the data was one attribute over. Probe both before declaring thinness."},
+    "t5_blind_action": { "pass": true, "detail": "Tab switch + stopwatch start via coordinate-free AXPress on elements found by role+description; effects verified in-channel (tab selected=1, display advancing)."},
+    "t6_pictorial": { "pass": null, "detail": "The analog world-clock face is decorative; not separately tested."}
+  },
+  "measurements": {
+    "view_bytes": 2535,
+    "view_tokens_est": 634,
+    "screenshot_tokens_est": 1049,
+    "diff_bytes_per_interaction": 38,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 43,
+    "notes": "Full window tree 25–30 nodes / 2.5 KB / 43 ms; watching the living region afterwards costs one 38-byte attribute read per second. Window 1024×768 → 1049 screenshot tokens (4194 at 2×) PER FRAME for pixel-watching: the structured watch is ~100× cheaper per second and loses nothing. Incident recorded for honesty: the user's stopwatch had been running ~174 h; the probe's exploratory button press paused it for ~3 min before restarting it (state restored, elapsed-time now lags reality by the pause) — semantic channels make destructive-adjacent controls exactly one AXPress away; a production router needs an allowlist of safe actions, same lesson as pixel agents."
+  },
+  "runtime_verification": {
+    "method": "Window screenshot artifact of the stopwatch tab vs AX content; tick progression cross-checked against wall-clock sleep(1) cadence.",
+    "agreement": "Exact: one 38-byte diff per wall-clock second, values monotonic; screenshot shows the same 174 h reading."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/clock-ax-window.json",
+    "campaign/results/artifacts/macos/clock-chrono-ax.json",
+    "campaign/results/artifacts/macos/clock-chrono-window.png"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Pages 14.x (iWork word processor)",
+  "stack": "appkit",
+  "stack_detection": {
+    "method": "app is AppleScript-scriptable (sdef present); Apple Events consent granted",
+    "signature": "tell application \"Pages\" responds; NSAppleScriptEnabled bundle",
+    "detected_before_use": true
+  },
+  "channel": "object-model",
+  "channel_setup": "Apple Events consent (one TCC dialog per host→app pair, granted by the user once). AppleScript 'body text of document 1' as the macOS analog of the Windows COM / LibreOffice UNO document-model channel.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Known sentence set then read back char-exact (accents, em-dash, 🦊) in 73 ms round-trip. REMARKABLE: object-model reads AND writes kept working while the session was LOCKED (screen on loginwindow) — the same moment AX was returning degenerate/empty trees. Channels have different failure modes; a router can exploit that."},
+    "t2_enumerate": { "pass": null, "detail": "Object model addresses document structure (paragraphs, character ranges), not on-screen controls — no bounding boxes at all. The channel is semantic but COORDINATE-FREE: it cannot aim a click; must be paired with AX for geometry."},
+    "t3_live_value": { "pass": true, "detail": "Two variants: (a) pure object-model write+read: 158 ms, exact; (b) real keyboard input via CGEvents → the typed marker appeared in 'body text' read via AppleScript (114 ms). The AX-side cross-read of (b) was INCONCLUSIVE due to a probe-side hazard worth recording: the cached AXTextArea handle had gone transient after UI churn (frame width 1.25 px — a caret-like remnant) and its AXValue lacked the marker; the earlier fresh walk did contain the full body text. Lesson: re-resolve AX element handles immediately before every read/act; stale handles read stale/void content without erroring."},
+    "t4_living_screen": { "pass": null, "detail": "No self-updating region in a static document."},
+    "t5_blind_action": { "pass": null, "detail": "Not applicable to a coordinate-free channel (see t2)."},
+    "t6_pictorial": { "pass": null, "detail": "Not run (no image inserted in this cell; TextEdit cell covers AX-side image declaration)."}
+  },
+  "measurements": {
+    "view_bytes": 82,
+    "view_tokens_est": 21,
+    "screenshot_tokens_est": 1285,
+    "diff_bytes_per_interaction": 10,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 73,
+    "notes": "view = the document body itself (82 bytes for the probe sentence) — the object model returns EXACTLY the semantic content, zero UI noise; contrast with the AX view of the same window: 93 nodes / 11.2 KB (and see below). Window 1016×949 logical → 1285 screenshot tokens (5142 at 2×). Latency: 73–158 ms per AppleScript round-trip (osascript process spawn included) — 30–70× slower than an in-process AX attribute read, but each call replaces an entire screenshot+OCR pass. AX-side contrast for the same app: the document body was ABSENT from AX (explicit — no AXLayoutArea at all) until the same AT-latch poke as Safari/Chrome flipped it (AXEnhancedUserInterface set → error -25208 → content appears anyway a beat later): THREE engines (Chromium, WebKit, iWork) gate their AX behind assistive-client detection. Under session lock, AXWindows returned the app's menu tree instead of windows (833-node degenerate view) while the object model was unaffected."
+  },
+  "runtime_verification": {
+    "method": "Dual-channel agreement: object-model body text vs AX AXTextArea value (after AT-latch), vs native window screenshot artifact.",
+    "agreement": "Object-model ↔ screen: exact. AX ↔ object-model: exact on fresh handles; a stale transient handle disagreed (probe artifact, documented in t3) — re-resolve handles before use."
+  },
+  "permissions_required": [
+    "Apple Events (Automation) consent for Terminal→Pages — one user click",
+    "Accessibility TCC only for the AX cross-checks, not for the channel itself"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/pages-ax-window.json",
+    "campaign/results/artifacts/macos/pages-native-window.png"
+  ]
+}

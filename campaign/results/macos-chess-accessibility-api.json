@@ -1,0 +1,44 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Chess/Échecs (com.apple.Chess) — Apple's 3D-rendered chess game",
+  "stack": "game",
+  "stack_detection": {
+    "method": "bundle id; AX answers with full game state on first query",
+    "signature": "com.apple.Chess; every piece an AXButton on first walk",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Accessibility TCC only.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Window title carries the live game state: 'Léandre Carpentier - Ordinateur (C'est aux blancs d'avancer)' — whose turn it is, as text."},
+    "t2_enumerate": { "pass": true, "detail": "EVERY piece is an AXButton labeled with piece and square ('tour blanche, a1', 'pion blanc, d2'…) with its on-screen frame — the semantic view of a 3D-rendered game IS the game state. 72 nodes / 12.2 KB / 16 ms."},
+    "t3_live_value": { "pass": null, "detail": "No text input."},
+    "t4_living_screen": { "pass": null, "detail": "Not tested (would require playing a move; read-only cell)."},
+    "t5_blind_action": { "pass": null, "detail": "Not exercised (a click would start moving pieces in a real game UI); frames are present and piece-precise, so aiming data exists."},
+    "t6_pictorial": { "pass": true, "detail": "The 3D board region is fully COVERED by labeled piece buttons — no opaque gap to declare. The 'wanted negative' did not materialize on this app."}
+  },
+  "measurements": {
+    "view_bytes": 12200,
+    "view_tokens_est": 3050,
+    "screenshot_tokens_est": 921,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 16,
+    "notes": "This cell was planned as the perimeter-law negative (game = pixels-only) and REFUTED it for this app: Apple annotated its 3D game for VoiceOver, so the structured channel reads a chess position better than a vision model reads the same screenshot (piece-on-square, zero ambiguity, 3D perspective irrelevant). Honest scope note: Apple's own game is NOT representative of the game tier — unannotated GL/Metal surfaces (typical Steam titles) remain the expected pixels-only territory; the boundary is developer annotation effort, not app category."
+  },
+  "runtime_verification": {
+    "method": "Board state from AX (16 white pieces on ranks 1–2, fresh game) vs the known just-launched state; title matches turn.",
+    "agreement": "Exact."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/chess-ax-window.json"
+  ]
+}

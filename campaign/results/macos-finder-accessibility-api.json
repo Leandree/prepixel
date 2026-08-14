@@ -1,0 +1,44 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Finder (system file manager), probe folder with 3 throwaway files",
+  "stack": "appkit",
+  "stack_detection": {
+    "method": "system process, always running; AX answers immediately",
+    "signature": "com.apple.finder; full window tree on first query (no AT-latch)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Accessibility TCC only. Window opened via 'open <dir>' (no Apple Events needed). NOTE: closing the window via AppleScript hit a pending Automation-consent dialog (Terminal→Finder) and timed out (-1712); the coordinate-free fallback worked instantly: AXPress on the window's AXCloseButton — the AX channel needs no per-app consent beyond the one global Accessibility grant.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "All 3 probe filenames (alpha/bravo/charlie.txt) present as exact strings in the window tree."},
+    "t2_enumerate": { "pass": true, "detail": "178 nodes / 17.4 KB / 85 ms: toolbar, sidebar favorites, file rows with per-file frames and AXSelected state."},
+    "t3_live_value": { "pass": null, "detail": "No text field exercised (rename field exists but was left untouched)."},
+    "t4_living_screen": { "pass": null, "detail": "Static folder; no self-updating region."},
+    "t5_blind_action": { "pass": true, "detail": "Blind click at the AXFrame center of 'bravo.txt' (no screenshot used): file selected; verified in-channel — exactly one row reports AXSelected=true and it is bravo.txt."},
+    "t6_pictorial": { "pass": null, "detail": "Icon previews not separately tested."}
+  },
+  "measurements": {
+    "view_bytes": 17379,
+    "view_tokens_est": 4345,
+    "screenshot_tokens_est": 1049,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 85,
+    "notes": "Raw serialization is attribute-heavy (17.4 KB); the agent-relevant subset (file rows + frames + selection) is ~2 KB. Selection state readable per-row makes click-verification free — no screenshot round-trip to confirm an action landed."
+  },
+  "runtime_verification": {
+    "method": "In-channel verification of the blind click (AXSelected flip on exactly the intended row).",
+    "agreement": "Exact."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/finder-ax-window.json"
+  ]
+}

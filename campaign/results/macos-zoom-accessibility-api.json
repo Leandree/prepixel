@@ -1,0 +1,44 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Zoom Workplace 6.x (us.zoom.xos) — home window, logged in, NOT in a meeting",
+  "stack": "other",
+  "stack_detection": {
+    "method": "bundle id; AX answers with labeled content on first query",
+    "signature": "us.zoom.xos; home window exposes 100+ nodes incl. 3 embedded AXWebArea (hybrid native+web UI)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Accessibility TCC only. Read-only probe (no clicks, no typing) — the app was probed as the campaign's prime custom-drawn silent-divergence suspect.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Rich labeled content: 'Rechercher (⌘E)', account button 'Zoom, Léandre Carpentier, Connecté…', navigation tabs with selection state ('Accueil, selected, 1 of 6', 'Réunions, 3 of 6')."},
+    "t2_enumerate": { "pass": true, "detail": "42 AXButtons + links + popups with frames. Nav tabs use role AXUnknown yet still carry full descriptive labels and selection state — role-agnostic readers keep working."},
+    "t3_live_value": { "pass": null, "detail": "Read-only cell by design (user's real account)."},
+    "t4_living_screen": { "pass": null, "detail": "Not tested (no meeting; the in-meeting video canvas is the real pictorial test and was out of scope on a live account)."},
+    "t5_blind_action": { "pass": null, "detail": "Read-only cell by design."},
+    "t6_pictorial": { "pass": null, "detail": "Home window has no video canvas. The in-meeting surface remains THE open question for Zoom; untested here, honestly deferred."}
+  },
+  "measurements": {
+    "view_bytes": 6848,
+    "view_tokens_est": 1712,
+    "screenshot_tokens_est": 878,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 17,
+    "notes": "The 'custom-drawn Electron-ish suspect' did NOT materialize on the home window: Zoom ships thorough AX annotations (three embedded WebAreas + native controls, all labeled, tab indices included). 55–103 nodes / 6.8 KB / 17 ms. A second small promo window exposed only 2 nodes ('Travaillez plus vite avec Zoom Workplace') — thin but honest. Verdict scope: home window only; in-meeting screen-share/video surfaces are expected to be declared-opaque at best and were not probed."
+  },
+  "runtime_verification": {
+    "method": "Labels cross-checked against the visible home window state (logged-in account name, selected tab).",
+    "agreement": "Exact on all probes."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/zoom-ax-window.json"
+  ]
+}

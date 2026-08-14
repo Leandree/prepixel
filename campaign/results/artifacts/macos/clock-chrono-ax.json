@@ -1,0 +1,282 @@
+{
+ "role": "AXWindow",
+ "title": "Horloge",
+ "frame": {
+  "x": 244.0,
+  "y": 79.0,
+  "w": 1024.0,
+  "h": 768.0
+ },
+ "children": [
+  {
+   "role": "AXGroup",
+   "frame": {
+    "x": 244.0,
+    "y": 79.0,
+    "w": 1024.0,
+    "h": 768.0
+   },
+   "children": [
+    {
+     "role": "AXGroup",
+     "frame": {
+      "x": 244.0,
+      "y": 79.0,
+      "w": 1024.0,
+      "h": 768.0
+     },
+     "children": [
+      {
+       "role": "AXGroup",
+       "frame": {
+        "x": 244.0,
+        "y": 79.0,
+        "w": 1024.0,
+        "h": 768.0
+       }
+      },
+      {
+       "role": "AXGroup",
+       "frame": {
+        "x": 244.0,
+        "y": 79.0,
+        "w": 1024.0,
+        "h": 768.0
+       },
+       "children": [
+        {
+         "role": "AXGroup",
+         "frame": {
+          "x": 244.0,
+          "y": 79.0,
+          "w": 1024.0,
+          "h": 768.0
+         },
+         "children": [
+          {
+           "role": "AXGenericElement",
+           "description": "174 heures, 11 minutes, 43 secondes",
+           "frame": {
+            "x": 556.0,
+            "y": 124.0,
+            "w": 400.0,
+            "h": 153.0
+           }
+          },
+          {
+           "role": "AXStaticText",
+           "description": "Nº de tour",
+           "frame": {
+            "x": 596.0,
+            "y": 282.0,
+            "w": 54.0,
+            "h": 14.0
+           }
+          },
+          {
+           "role": "AXStaticText",
+           "description": "Temps au tour",
+           "frame": {
+            "x": 719.0,
+            "y": 282.0,
+            "w": 75.0,
+            "h": 14.0
+           }
+          },
+          {
+           "role": "AXStaticText",
+           "description": "Total",
+           "frame": {
+            "x": 890.0,
+            "y": 282.0,
+            "w": 26.0,
+            "h": 14.0
+           }
+          },
+          {
+           "role": "AXGroup",
+           "frame": {
+            "x": 244.0,
+            "y": 304.0,
+            "w": 1024.0,
+            "h": 413.5
+           },
+           "children": [
+            {
+             "role": "AXGroup",
+             "description": "Tour 1, 174 heures, 11 minutes, 43 secondes, 174 heures, 11 minutes, 43 secondes, écoulé",
+             "frame": {
+              "x": 244.0,
+              "y": 304.0,
+              "w": 1024.0,
+              "h": 31.0
+             },
+             "children": [
+              {
+               "role": "AXStaticText",
+               "description": "Tour 1, 174 heures, 11 minutes, 43 secondes, 174 heures, 11 minutes, 43 secondes, écoulé",
+               "frame": {
+                "x": 244.0,
+                "y": 304.0,
+                "w": 1024.0,
+                "h": 31.0
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "role": "AXButton",
+           "description": "Effacer",
+           "frame": {
+            "x": 596.0,
+            "y": 769.0,
+            "w": 150.0,
+            "h": 28.0
+           }
+          },
+          {
+           "role": "AXButton",
+           "description": "Démarrer",
+           "frame": {
+            "x": 766.0,
+            "y": 769.0,
+            "w": 150.0,
+            "h": 28.0
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "role": "AXToolbar",
+   "frame": {
+    "x": 244.0,
+    "y": 79.0,
+    "w": 1024.0,
+    "h": 52.0
+   },
+   "children": [
+    {
+     "role": "AXGroup",
+     "frame": {
+      "x": 547.0,
+      "y": 79.0,
+      "w": 418.0,
+      "h": 52.0
+     },
+     "children": [
+      {
+       "role": "AXRadioGroup",
+       "value": "<AXUIElement 0x904d78630> {pid=5430}",
+       "frame": {
+        "x": 550.0,
+        "y": 86.0,
+        "w": 412.0,
+        "h": 38.0
+       },
+       "children": [
+        {
+         "role": "AXRadioButton",
+         "description": "Horloges",
+         "frame": {
+          "x": 551.0,
+          "y": 87.0,
+          "w": 102.5,
+          "h": 36.0
+         }
+        },
+        {
+         "role": "AXRadioButton",
+         "description": "Alarmes",
+         "frame": {
+          "x": 654.5,
+          "y": 87.0,
+          "w": 101.5,
+          "h": 36.0
+         }
+        },
+        {
+         "role": "AXRadioButton",
+         "value": 1,
+         "description": "Chronomètre",
+         "frame": {
+          "x": 757.0,
+          "y": 87.0,
+          "w": 101.5,
+          "h": 36.0
+         }
+        },
+        {
+         "role": "AXRadioButton",
+         "description": "Minuteurs",
+         "frame": {
+          "x": 859.5,
+          "y": 87.0,
+          "w": 101.5,
+          "h": 36.0
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "role": "AXButton",
+   "frame": {
+    "x": 262.0,
+    "y": 97.0,
+    "w": 16.0,
+    "h": 16.0
+   }
+  },
+  {
+   "role": "AXButton",
+   "frame": {
+    "x": 308.0,
+    "y": 97.0,
+    "w": 16.0,
+    "h": 16.0
+   },
+   "children": [
+    {
+     "role": "AXGroup",
+     "frame": {
+      "x": 309.0,
+      "y": 98.0,
+      "w": 14.0,
+      "h": 14.0
+     },
+     "children": [
+      {
+       "role": "AXGroup",
+       "frame": {
+        "x": 309.0,
+        "y": 98.0,
+        "w": 14.0,
+        "h": 14.0
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "role": "AXButton",
+   "frame": {
+    "x": 285.0,
+    "y": 97.0,
+    "w": 16.0,
+    "h": 16.0
+   }
+  }
+ ]
+}

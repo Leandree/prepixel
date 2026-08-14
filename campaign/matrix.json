@@ -741,6 +741,68 @@
     {
       "os": "macos",
       "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Chess/\u00c9checs (com.apple.Chess) \u2014 Apple's 3D-rendered chess game",
+      "stack": "game",
+      "stack_detection": {
+        "method": "bundle id; AX answers with full game state on first query",
+        "signature": "com.apple.Chess; every piece an AXButton on first walk",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Accessibility TCC only.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Window title carries the live game state: 'L\u00e9andre Carpentier - Ordinateur (C'est aux blancs d'avancer)' \u2014 whose turn it is, as text."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "EVERY piece is an AXButton labeled with piece and square ('tour blanche, a1', 'pion blanc, d2'\u2026) with its on-screen frame \u2014 the semantic view of a 3D-rendered game IS the game state. 72 nodes / 12.2 KB / 16 ms."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "No text input."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not tested (would require playing a move; read-only cell)."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Not exercised (a click would start moving pieces in a real game UI); frames are present and piece-precise, so aiming data exists."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "The 3D board region is fully COVERED by labeled piece buttons \u2014 no opaque gap to declare. The 'wanted negative' did not materialize on this app."
+        }
+      },
+      "measurements": {
+        "view_bytes": 12200,
+        "view_tokens_est": 3050,
+        "screenshot_tokens_est": 921,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 16,
+        "notes": "This cell was planned as the perimeter-law negative (game = pixels-only) and REFUTED it for this app: Apple annotated its 3D game for VoiceOver, so the structured channel reads a chess position better than a vision model reads the same screenshot (piece-on-square, zero ambiguity, 3D perspective irrelevant). Honest scope note: Apple's own game is NOT representative of the game tier \u2014 unannotated GL/Metal surfaces (typical Steam titles) remain the expected pixels-only territory; the boundary is developer annotation effort, not app category."
+      },
+      "runtime_verification": {
+        "method": "Board state from AX (16 white pieces on ranks 1\u20132, fresh game) vs the known just-launched state; title matches turn.",
+        "agreement": "Exact."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for host process"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/chess-ax-window.json"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
       "app": "Google Chrome 151.0.7922.138 (isolated instance, temp profile)",
       "stack": "chromium",
       "stack_detection": {
@@ -872,6 +934,70 @@
     {
       "os": "macos",
       "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Clock/Horloge (com.apple.clock, system SwiftUI app) \u2014 world clock + stopwatch",
+      "stack": "swiftui",
+      "stack_detection": {
+        "method": "system bundle id + AX answers with real content",
+        "signature": "com.apple.clock; window tree 25 nodes with labeled toolbar tabs on first query",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Accessibility TCC only. No AT-latch needed (unlike Chromium/WebKit/iWork) \u2014 system SwiftUI app is populated immediately.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "World-clock strings exact: 'Paris', '00:44', 'Jour : 06:43', 'Nuit : 21:06' as AXStaticText with frames."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Toolbar AXRadioGroup (Horloges/Alarmes/Chronom\u00e8tre/Minuteurs), buttons, traffic lights \u2014 all with frames. SwiftUI label trap: control labels live in AXDescription, NOT AXTitle (a selector matching only AXTitle finds nothing)."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "No text input in this app."
+        },
+        "t4_living_screen": {
+          "pass": true,
+          "detail": "Running stopwatch sampled 1\u00d7/s via one attribute read: 38 bytes/tick (~10 tokens), read latency 0.3\u20133.8 ms, exact seconds progression ('174 heures, 11 minutes, 44/45/46/47/48 secondes'). Idle regions cost 0 (unchanged reads compare equal). Pixel equivalent: one full re-screenshot per tick. The stopwatch digits are exposed as the DESCRIPTION of an AXGenericElement \u2014 a first naive poll of AXValue on nearby static texts read empty strings; the data was one attribute over. Probe both before declaring thinness."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Tab switch + stopwatch start via coordinate-free AXPress on elements found by role+description; effects verified in-channel (tab selected=1, display advancing)."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "The analog world-clock face is decorative; not separately tested."
+        }
+      },
+      "measurements": {
+        "view_bytes": 2535,
+        "view_tokens_est": 634,
+        "screenshot_tokens_est": 1049,
+        "diff_bytes_per_interaction": 38,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 43,
+        "notes": "Full window tree 25\u201330 nodes / 2.5 KB / 43 ms; watching the living region afterwards costs one 38-byte attribute read per second. Window 1024\u00d7768 \u2192 1049 screenshot tokens (4194 at 2\u00d7) PER FRAME for pixel-watching: the structured watch is ~100\u00d7 cheaper per second and loses nothing. Incident recorded for honesty: the user's stopwatch had been running ~174 h; the probe's exploratory button press paused it for ~3 min before restarting it (state restored, elapsed-time now lags reality by the pause) \u2014 semantic channels make destructive-adjacent controls exactly one AXPress away; a production router needs an allowlist of safe actions, same lesson as pixel agents."
+      },
+      "runtime_verification": {
+        "method": "Window screenshot artifact of the stopwatch tab vs AX content; tick progression cross-checked against wall-clock sleep(1) cadence.",
+        "agreement": "Exact: one 38-byte diff per wall-clock second, values monotonic; screenshot shows the same 174 h reading."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for host process"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/clock-ax-window.json",
+        "campaign/results/artifacts/macos/clock-chrono-ax.json",
+        "campaign/results/artifacts/macos/clock-chrono-window.png"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
       "app": "Cursor 2.x (VS Code fork, Electron/Chromium 144) \u2014 isolated instance, temp profile",
       "stack": "electron",
       "stack_detection": {
@@ -930,6 +1056,132 @@
       "raw_artifacts": [
         "campaign/results/artifacts/macos/cursor-cdp-workbench-distilled.txt",
         "campaign/results/artifacts/macos/cursor-cdp-workbench.png"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Finder (system file manager), probe folder with 3 throwaway files",
+      "stack": "appkit",
+      "stack_detection": {
+        "method": "system process, always running; AX answers immediately",
+        "signature": "com.apple.finder; full window tree on first query (no AT-latch)",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Accessibility TCC only. Window opened via 'open <dir>' (no Apple Events needed). NOTE: closing the window via AppleScript hit a pending Automation-consent dialog (Terminal\u2192Finder) and timed out (-1712); the coordinate-free fallback worked instantly: AXPress on the window's AXCloseButton \u2014 the AX channel needs no per-app consent beyond the one global Accessibility grant.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "All 3 probe filenames (alpha/bravo/charlie.txt) present as exact strings in the window tree."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "178 nodes / 17.4 KB / 85 ms: toolbar, sidebar favorites, file rows with per-file frames and AXSelected state."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "No text field exercised (rename field exists but was left untouched)."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Static folder; no self-updating region."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Blind click at the AXFrame center of 'bravo.txt' (no screenshot used): file selected; verified in-channel \u2014 exactly one row reports AXSelected=true and it is bravo.txt."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "Icon previews not separately tested."
+        }
+      },
+      "measurements": {
+        "view_bytes": 17379,
+        "view_tokens_est": 4345,
+        "screenshot_tokens_est": 1049,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 85,
+        "notes": "Raw serialization is attribute-heavy (17.4 KB); the agent-relevant subset (file rows + frames + selection) is ~2 KB. Selection state readable per-row makes click-verification free \u2014 no screenshot round-trip to confirm an action landed."
+      },
+      "runtime_verification": {
+        "method": "In-channel verification of the blind click (AXSelected flip on exactly the intended row).",
+        "agreement": "Exact."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for host process"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/finder-ax-window.json"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Pages 14.x (iWork word processor)",
+      "stack": "appkit",
+      "stack_detection": {
+        "method": "app is AppleScript-scriptable (sdef present); Apple Events consent granted",
+        "signature": "tell application \"Pages\" responds; NSAppleScriptEnabled bundle",
+        "detected_before_use": true
+      },
+      "channel": "object-model",
+      "channel_setup": "Apple Events consent (one TCC dialog per host\u2192app pair, granted by the user once). AppleScript 'body text of document 1' as the macOS analog of the Windows COM / LibreOffice UNO document-model channel.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Known sentence set then read back char-exact (accents, em-dash, \ud83e\udd8a) in 73 ms round-trip. REMARKABLE: object-model reads AND writes kept working while the session was LOCKED (screen on loginwindow) \u2014 the same moment AX was returning degenerate/empty trees. Channels have different failure modes; a router can exploit that."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "Object model addresses document structure (paragraphs, character ranges), not on-screen controls \u2014 no bounding boxes at all. The channel is semantic but COORDINATE-FREE: it cannot aim a click; must be paired with AX for geometry."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "Two variants: (a) pure object-model write+read: 158 ms, exact; (b) real keyboard input via CGEvents \u2192 the typed marker appeared in 'body text' read via AppleScript (114 ms). The AX-side cross-read of (b) was INCONCLUSIVE due to a probe-side hazard worth recording: the cached AXTextArea handle had gone transient after UI churn (frame width 1.25 px \u2014 a caret-like remnant) and its AXValue lacked the marker; the earlier fresh walk did contain the full body text. Lesson: re-resolve AX element handles immediately before every read/act; stale handles read stale/void content without erroring."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "No self-updating region in a static document."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Not applicable to a coordinate-free channel (see t2)."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "Not run (no image inserted in this cell; TextEdit cell covers AX-side image declaration)."
+        }
+      },
+      "measurements": {
+        "view_bytes": 82,
+        "view_tokens_est": 21,
+        "screenshot_tokens_est": 1285,
+        "diff_bytes_per_interaction": 10,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 73,
+        "notes": "view = the document body itself (82 bytes for the probe sentence) \u2014 the object model returns EXACTLY the semantic content, zero UI noise; contrast with the AX view of the same window: 93 nodes / 11.2 KB (and see below). Window 1016\u00d7949 logical \u2192 1285 screenshot tokens (5142 at 2\u00d7). Latency: 73\u2013158 ms per AppleScript round-trip (osascript process spawn included) \u2014 30\u201370\u00d7 slower than an in-process AX attribute read, but each call replaces an entire screenshot+OCR pass. AX-side contrast for the same app: the document body was ABSENT from AX (explicit \u2014 no AXLayoutArea at all) until the same AT-latch poke as Safari/Chrome flipped it (AXEnhancedUserInterface set \u2192 error -25208 \u2192 content appears anyway a beat later): THREE engines (Chromium, WebKit, iWork) gate their AX behind assistive-client detection. Under session lock, AXWindows returned the app's menu tree instead of windows (833-node degenerate view) while the object model was unaffected."
+      },
+      "runtime_verification": {
+        "method": "Dual-channel agreement: object-model body text vs AX AXTextArea value (after AT-latch), vs native window screenshot artifact.",
+        "agreement": "Object-model \u2194 screen: exact. AX \u2194 object-model: exact on fresh handles; a stale transient handle disagreed (probe artifact, documented in t3) \u2014 re-resolve handles before use."
+      },
+      "permissions_required": [
+        "Apple Events (Automation) consent for Terminal\u2192Pages \u2014 one user click",
+        "Accessibility TCC only for the AX cross-checks, not for the channel itself"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/pages-ax-window.json",
+        "campaign/results/artifacts/macos/pages-native-window.png"
       ]
     },
     {
@@ -1060,6 +1312,68 @@
         "campaign/results/artifacts/macos/textedit-ax-tree.json",
         "campaign/results/artifacts/macos/textedit-window-t2.png",
         "campaign/results/artifacts/macos/textedit-t6-image-rtfd-sheet.png"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Zoom Workplace 6.x (us.zoom.xos) \u2014 home window, logged in, NOT in a meeting",
+      "stack": "other",
+      "stack_detection": {
+        "method": "bundle id; AX answers with labeled content on first query",
+        "signature": "us.zoom.xos; home window exposes 100+ nodes incl. 3 embedded AXWebArea (hybrid native+web UI)",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Accessibility TCC only. Read-only probe (no clicks, no typing) \u2014 the app was probed as the campaign's prime custom-drawn silent-divergence suspect.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Rich labeled content: 'Rechercher (\u2318E)', account button 'Zoom, L\u00e9andre Carpentier, Connect\u00e9\u2026', navigation tabs with selection state ('Accueil, selected, 1 of 6', 'R\u00e9unions, 3 of 6')."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "42 AXButtons + links + popups with frames. Nav tabs use role AXUnknown yet still carry full descriptive labels and selection state \u2014 role-agnostic readers keep working."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Read-only cell by design (user's real account)."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not tested (no meeting; the in-meeting video canvas is the real pictorial test and was out of scope on a live account)."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Read-only cell by design."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "Home window has no video canvas. The in-meeting surface remains THE open question for Zoom; untested here, honestly deferred."
+        }
+      },
+      "measurements": {
+        "view_bytes": 6848,
+        "view_tokens_est": 1712,
+        "screenshot_tokens_est": 878,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 17,
+        "notes": "The 'custom-drawn Electron-ish suspect' did NOT materialize on the home window: Zoom ships thorough AX annotations (three embedded WebAreas + native controls, all labeled, tab indices included). 55\u2013103 nodes / 6.8 KB / 17 ms. A second small promo window exposed only 2 nodes ('Travaillez plus vite avec Zoom Workplace') \u2014 thin but honest. Verdict scope: home window only; in-meeting screen-share/video surfaces are expected to be declared-opaque at best and were not probed."
+      },
+      "runtime_verification": {
+        "method": "Labels cross-checked against the visible home window state (logged-in account name, selected tab).",
+        "agreement": "Exact on all probes."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for host process"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/zoom-ax-window.json"
       ]
     }
   ]
