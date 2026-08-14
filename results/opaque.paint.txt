@@ -1,0 +1,17 @@
+drawPaint #00000000
+drawRect {"left":0,"top":0,"right":1280,"bottom":800}
+drawTextBlob @8,42 color=#FF000000
+drawTextBlob @8,82 color=#FF000000
+drawTextBlob @141.421875,82 color=#FF000000
+save
+clipRect
+drawRRect {"type":"Simple","left":8.5,"top":102.5,"right":58.5,"bottom":122.5,"upperLeftRadius":{"xRadius":2,"yRadius":2},"upperRightRadius":{"xRadius":2,"yRadius":2},"lowerRightRadius":{"xRadius":2,"yRadius":2},"lowerLeftRadius":{"xRadius":2,"yRadius":2}}
+drawRRect {"type":"Simple","left":8.5,"top":102.5,"right":58.5,"bottom":122.5,"upperLeftRadius":{"xRadius":2,"yRadius":2},"upperRightRadius":{"xRadius":2,"yRadius":2},"lowerRightRadius":{"xRadius":2,"yRadius":2},"lowerLeftRadius":{"xRadius":2,"yRadius":2}}
+restore
+drawTextBlob @16,117 color=#FF000000
+drawTextBlob @8,165 color=#FF000000
+save
+concat44
+drawImageRect dst={"left":0,"top":0,"right":300,"bottom":120}
+restore
+drawTextBlob @8,357 color=#FF000000

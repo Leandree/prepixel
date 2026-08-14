@@ -31,6 +31,9 @@ export function distillDomSnapshot(snap) {
   const lines = [];
 
   const INTERACTIVE = new Set(['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA', 'SUMMARY', 'LABEL']);
+  // pictorial/opaque content: the structure can't read INSIDE these — declare them
+  // as explicit blind spots (rect + kind) so the agent can pull a pixel crop on demand.
+  const OPAQUE = new Set(['IMG', 'CANVAS', 'VIDEO', 'SVG', 'PICTURE', 'EMBED', 'OBJECT']);
   for (let li = 0; li < layout.nodeIndex.length; li++) {
     const ni = layout.nodeIndex[li];
     const box = layout.bounds[li].map(Math.round);
@@ -46,6 +49,17 @@ export function distillDomSnapshot(snap) {
     if (nodeType === 3) { // text node
       const t = (text || s(nodes.nodeValue[ni])).trim();
       if (t) lines.push(`text ${box.join(',')} "${t}"`);
+    } else if (OPAQUE.has(name)) {
+      const attrs = nodes.attributes[ni] || [];
+      const kv = [];
+      for (let a = 0; a < attrs.length; a += 2) {
+        const k = s(attrs[a]);
+        if (['alt', 'aria-label', 'src', 'title'].includes(k)) {
+          const v = s(attrs[a + 1]);
+          kv.push(`${k}=${v.startsWith('data:') ? '<data-url>' : v}`);
+        }
+      }
+      lines.push(`[pixels] ${name.toLowerCase()} ${box.join(',')} ${kv.join(' ')}`.trim());
     } else if (INTERACTIVE.has(name)) {
       var liveValue = inputValues.has(ni) ? ` value="${inputValues.get(ni)}"` : '';
       // find attributes
