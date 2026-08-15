@@ -1,0 +1,46 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "Notepad 11.x (Win11, tabbed, WinUI 3 shell + custom DirectWrite edit control WinUIEdit.dll)",
+  "stack": "winui-xaml",
+  "stack_detection": {
+    "method": "loaded-module enumeration on the process",
+    "signature": "Microsoft.UI.Xaml.dll + NotepadXamlUI.dll + WinUIEdit.dll mapped; UIA responds with a 70-node tree on first query (no AT-latch needed)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation` (UIAutomationCore COM client). No flags, no injection, no permissions. Process made per-monitor-DPI-aware so UIA physical-pixel rects, ImageGrab and SendInput share one frame.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Sentinel with accents + CJK + emoji read char-exact via TextPattern.DocumentRange.GetText(-1) ('PIPELINE-TAP-SENTINEL ... café naïve élève 日本語 🚀 END'). The edit control is CUSTOM-DRAWN (DirectWrite, WinUIEdit.dll) yet hands over the model string — the Windows analog of the macOS 'AX reports the text the app holds' result." },
+    "t2_enumerate": { "pass": true, "detail": "27 interactive lines (2 tabs incl. their dirty-state in the name, 3 menus, 13 formatting buttons with toggle state, tab-close/new buttons, settings). Screenshot cross-check: counts, labels and positions all match the visible window. Menu bar items appear twice (menuitem + button, XAML dual-role) — a cost quirk, not a divergence." },
+    "t3_live_value": { "pass": true, "detail": "Typed 'UIA-LIVE-9f3k7' at end of doc; immediately visible in TextPattern re-read. Interaction diff (unified) = 1197 bytes; the doc-value line dominates the diff because the distiller inlines the full text value." },
+    "t4_living_screen": { "pass": null, "detail": "No self-updating region in Notepad; living-screen cell run on Task Manager instead (windows-taskmgr-uia). Idle re-distill diff here = 0 bytes." },
+    "t5_blind_action": { "pass": true, "detail": "Clicked 'Fichier' at the center of the box published in the VIEW LINE (menuitem 114,51,61,32) via raw SendInput; menu popup confirmed IN CHANNEL (Enregistrer/Nouvel onglet items appear in re-distilled tree) before any screenshot was taken. 96-DPI machine: physical == logical pixels, no scaling trap possible here (see windows-dpi cell)." },
+    "t6_pictorial": { "pass": null, "detail": "No pictorial content in Notepad (1 decorative ImageControl declared as [pixels] line). Pictorial battery run on Paint instead (windows-paint-uia)." }
+  },
+  "measurements": {
+    "view_bytes": 2063,
+    "view_tokens_est": 502,
+    "screenshot_tokens_est": 1756,
+    "diff_bytes_per_interaction": 1197,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 77,
+    "notes": "View 502 tok vs 1756 (window screenshot 1287x1023 @ high-res tier; 1534 legacy tier) = 3.5x. Capture 77-102 ms — an order of magnitude slower than CDP (1-4 ms) but far under a screenshot round-trip. Stale-handle probe (macOS lesson, verified on Windows): after closing the tab, GetPattern(ValuePattern) on the held element returns None — no phantom value, a None-check away from explicit; it did NOT return plausible stale content. Notepad restored the user's previous session tab (wlicense.txt.txt) on launch — probe worked in its own tab; user session left intact and verified after cleanup."
+  },
+  "runtime_verification": {
+    "method": "window screenshot taken after distillation; enumeration (tabs, menus, buttons, status bar) and sentinel text compared by eye against the view",
+    "agreement": "full agreement; no element in the view absent from screen, none on screen missing from the view"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/notepad-uia-view.txt",
+    "campaign/results/artifacts/windows/notepad-uia-shot.png",
+    "campaign/results/artifacts/windows/notepad-uia-menu-view.txt",
+    "campaign/results/artifacts/windows/notepad-uia-menu-shot.png",
+    "campaign/results/artifacts/windows/notepad-uia-diff-after-typing.txt"
+  ]
+}

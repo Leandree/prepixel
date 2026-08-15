@@ -1,0 +1,43 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, live in-use machine",
+  "app": "File Explorer via Shell.Application COM — the shell's document model (object-model twin of windows-explorer-uia)",
+  "stack": "win32-gdi",
+  "stack_detection": {
+    "method": "COM class availability",
+    "signature": "CreateObject('Shell.Application') succeeds (always present on Windows); Windows() enumerates open Explorer windows with LocationURL",
+    "detected_before_use": true
+  },
+  "channel": "object-model",
+  "channel_setup": "comtypes CreateObject('Shell.Application'); no flags, no permissions, no injection. Same throwaway folder as the UIA cell.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Folder listing with names, sizes, types in 10.4 ms / 110 bytes / 28 tokens. Display names follow the same hidden-extension rule as the pixels ('alpha', 'beta.md') — the object model mirrors the shell's presentation, consistent with the UIA cell's finding (and it still discloses Type='Document texte')." },
+    "t2_enumerate": { "pass": true, "detail": "Items() enumerates the complete folder — semantic-only, NO coordinates: like macOS Pages via AppleScript, this channel must be paired with UIA for aiming." },
+    "t3_live_value": { "pass": true, "detail": "Created gamma-live.txt on disk; the COM view showed it on re-read (5.1 ms). The model is live, not a snapshot." },
+    "t5_blind_action": { "pass": true, "detail": "WRITE path without pixels: SelectItem(beta.md, select+deselectothers+focus) in 8 ms; read back via COM (SelectedItems=['beta.md']) AND cross-verified through the INDEPENDENT UIA channel: exactly one on-screen listitem [selected=True] 'beta.md'. Two structured channels agreeing about a state change neither took a picture for." },
+    "t4_living_screen": { "pass": null, "detail": "n/a (static folder)." },
+    "t6_pictorial": { "pass": null, "detail": "n/a." }
+  },
+  "measurements": {
+    "view_bytes": 110,
+    "view_tokens_est": 28,
+    "screenshot_tokens_est": 974,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 10,
+    "notes": "The Windows member of the object-model family, measured in the same class as its siblings: 28 tok vs 974-tok window screenshot (~35x), reads 5-10 ms, writes 8 ms — cf. LibreOffice/UNO 21 tok & 9-109 ms writes (Linux), Pages/AppleScript 21 tok & 73-158 ms (macOS). Windows' twist: the ALWAYS-INSTALLED object model is the shell itself (Shell.Application), not an office suite. The planned Word-via-COM star cell is separately recorded as blocked (windows-office-object-model)."
+  },
+  "runtime_verification": {
+    "method": "cross-channel: COM-written selection state read back via COM and independently via UIA; PrintWindow capture kept as evidence",
+    "agreement": "full three-way agreement (COM write -> COM read, UIA read, pixels)"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/explorer-com-uia-view.txt",
+    "campaign/results/artifacts/windows/explorer-com-shot.png"
+  ]
+}

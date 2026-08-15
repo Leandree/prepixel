@@ -1,0 +1,45 @@
+text 20,41,101,43 "Orders"
+text 20,106,99,21 "6 open orders"
+text 30,149,43,21 "Order"
+text 215,149,72,21 "Customer"
+text 544,149,37,21 "Total"
+text 787,149,46,21 "Status"
+text 30,188,44,21 "#3400"
+text 215,188,86,21 "Savelu & Co"
+text 544,188,55,21 "€937.75"
+text 795,188,30,21 "Paid"
+button 1066,183,51,31
+text 1078,191,27,15 "Ship"
+text 30,232,44,21 "#3401"
+text 215,232,92,21 "Sobaka SARL"
+text 544,232,64,21 "€4655.05"
+text 795,232,30,21 "Paid"
+button 1066,227,51,31
+text 1078,235,27,15 "Ship"
+text 30,276,44,21 "#3402"
+text 215,276,90,21 "Tipimo & Co"
+text 544,276,64,21 "€1801.70"
+text 795,276,35,21 "Draft"
+button 1066,271,51,31
+text 1078,279,27,15 "Ship"
+text 30,320,44,21 "#3403"
+text 215,320,69,21 "Sanive SA"
+text 544,320,64,21 "€2642.91"
+text 795,320,58,21 "Pending"
+button 1066,315,51,31
+text 1078,323,27,15 "Ship"
+text 30,364,44,21 "#3404"
+text 215,364,94,21 "Sofalu GmbH"
+text 544,364,64,21 "€4491.51"
+text 795,364,58,21 "Pending"
+button 1066,359,51,31
+text 1078,367,27,15 "Ship"
+text 30,408,44,21 "#3405"
+text 215,408,72,21 "Kamipi SA"
+text 544,408,64,21 "€2839.82"
+text 795,408,61,21 "Overdue"
+button 1066,403,51,31
+text 1078,411,27,15 "Ship"
+input 20,446,177,21 id=cust
+button 197,441,83,31 id=add
+text 209,449,59,15 "Add order"

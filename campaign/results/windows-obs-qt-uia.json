@@ -1,0 +1,43 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "OBS Studio 31.0.3 (Qt 6 Widgets) — user's real config, READ-ONLY probe",
+  "stack": "qt",
+  "stack_detection": {
+    "method": "loaded-module enumeration",
+    "signature": "Qt6Widgets.dll / Qt6Svg.dll / Qt6Network.dll mapped in obs64.exe; UIA answers through Qt's QAccessible->UIA bridge with a 185-node tree on first query",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation` against Qt's built-in Windows accessibility bridge. No flags needed. Zero clicks on the user's config (one allowlisted exception: answering OBS's own 'Mode sans échec' dialog with 'Lancer normalement' via InvokePattern, after our probe's force-kill caused it).",
+  "verdict": "partial",
+  "failure_class": "silent",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Dock semantics are RICH and exact: mixer channels with live values ('Desktop Audio' -3.2 dB, 'Mic/Aux' -15.0 dB '(actuellement muet)', 'nvidia broadcast' -9.8 dB), scene list ('comming soon' [selected=True] …), sources, transition, controls — every value cross-checked against the pixels." },
+    "t2_enumerate": { "pass": true, "detail": "185 nodes: buttons, sliders (with values), checkboxes (mute state), lists with selection. Qt maps QWidget semantics to UIA correctly wherever a widget IS the content." },
+    "t3_live_value": { "pass": null, "detail": "Not run — no typing into the user's OBS. Value exposure demonstrated by the mixer dB readings." },
+    "t4_living_screen": { "pass": null, "detail": "Idle diff = 0 bytes. Active VU-meter ticking not sampled (would require playing audio on the user's machine)." },
+    "t5_blind_action": { "pass": true, "detail": "The safe-mode dialog: a coordinate click FAILED (contested pixel space — another window covered the point; the hit-test guard caught it), while InvokePattern succeeded with no coordinates at all. Semantic actions bypass pixel-space contention — and are precisely what the action-allowlist must gate (cf. the macOS AXPress stopwatch incident)." },
+    "t6_pictorial": { "pass": false, "detail": "THE SILENT CELL THIS CAMPAIGN WAS HUNTING. The video preview renders 'On arrive bientôt' (a text source composited by OBS's GL pipeline) — plainly visible on screen. The UIA tree covers that area with an UNNAMED QWidget group: no text, no [pixels]/image marker, no 'I cannot read this' signal. A consumer asking 'what does the preview show?' reads 'nothing there' and is WRONG, with no in-channel warning. Contrast the explicit declarations elsewhere: browser '[pixels] canvas', Paint's named canvas group, Chromium-UIA's '[pixels] image'. Qt is not lying about widget content — it is silent about non-widget content." }
+  },
+  "measurements": {
+    "view_bytes": 4957,
+    "view_tokens_est": 1229,
+    "screenshot_tokens_est": 1275,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 574,
+    "notes": "Cost break-even (1229 vs 1275 tok), capture 470-640 ms — the slowest bridge measured (Qt proxies every property call). THE FINDING: the first genuinely silent-class divergence of the Windows campaign, in Qt's accessibility bridge on a real app — the video-preview region is an anonymous container while the screen shows readable text inside it. Honest qualifications: (1) predictable a priori — the Qt signature + app category (video compositor) tells a router in advance that pictorial regions will be UNMARKED, and OBS's preview rect is discoverable as 'large unnamed leaf container'; (2) mitigable at runtime — PrintWindow(PW_RENDERFULLCONTENT) captures the window's own surface without focus for a spot-check (technique added to the probe library during this cell); (3) the divergence is one of omission-without-declaration, not fabrication. Under the campaign's own standard (a view that disagrees with the screen without declaring it) it is recorded as silent, not excused. Op incidents kept: our force-kill triggered OBS's safe-mode dialog; foreground acquisition failed while the elevated Task Manager held focus — PrintWindow made ground truth possible anyway."
+  },
+  "runtime_verification": {
+    "method": "PrintWindow capture of OBS's own surface (no foreground needed) compared line-by-line with the view: mixer dB values, dock titles, scene/source lists, and the preview region content",
+    "agreement": "dock semantics: full agreement, value-exact. Preview region: DISAGREEMENT — screen shows text, channel shows an unnamed container with no opacity declaration (the recorded silent class)"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/obs-uia-view.txt",
+    "campaign/results/artifacts/windows/obs-uia-shot.png"
+  ]
+}

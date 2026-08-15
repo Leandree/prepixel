@@ -1,0 +1,45 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, live in-use desktop (user's real windows present)",
+  "app": "Whole desktop — 10 concurrent visible windows, 6 process families (elevated WinUI, Chromium x2 modes, Electron, WinUI Notepad, Terminal, Win32 dialog, shell)",
+  "stack": "other",
+  "stack_detection": {
+    "method": "per-window, from the Win32 map: process image name + elevation token query + open-port probe, BEFORE any content read",
+    "signature": "chrome.exe+port9235 -> cdp | chrome.exe/Discord.exe/Spotify.exe no port -> uia-latch | Notepad/Terminal/rundll32 -> uia | TokenElevation=True -> pixels-crop",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "router_win.py: EnumWindows + DwmGetWindowAttribute(CLOAKED) + GetWindowRect + TokenElevation = the compositor map (z-order, geometry, focus, elevation); then best-channel binding per window; content pulled through the bound channel for our probe windows only (privacy rule: the user's windows are mapped and classified, never content-walked).",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Content through the bound channel: timedate dialog via UIA (280 tok, live clock value '14:35:51' in the merged view), our Chrome window via CDP (binding verified on :9235/json; full extraction proven in windows-chrome-cdp). User windows deliberately not read." },
+    "t2_enumerate": { "pass": true, "detail": "10/10 visible windows mapped with z-order, geometry, pid, process, elevation, focus in 1.0 ms / 201 tokens — INCLUDING the elevated Task Manager that is entirely absent from UIA's root enumeration, and including the parked 'LibreOffice ... demande votre autorisation' UAC placeholder (pid unreadable = SYSTEM consent flow, itself a signal). The Win32 map is the layer that keeps the elevated blind spot explicit." },
+    "t3_live_value": { "pass": null, "detail": "Covered by per-channel cells." },
+    "t4_living_screen": { "pass": null, "detail": "Covered by windows-timedate-uia (the same clock, ticking, 80 B/s)." },
+    "t5_blind_action": { "pass": true, "detail": "The router supplies what the Calculator incident showed is mandatory: before any blind click, (a) the map says which window owns the target rect and whether it is foreground, (b) ControlFromPoint->GetTopLevelControl confirms the owner, (c) elevated targets are pre-declared unclickable (UIPI). These guards blocked a wrong-window click live earlier in the campaign." },
+    "t6_pictorial": { "pass": true, "detail": "Windows without a structured channel are routed to pixels EXPLICITLY: the elevated window -> screen-region crop (PrintWindow is also UIPI-blocked); FL-class custom apps -> region-map + crop. Nothing fabricated." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": 201,
+    "screenshot_tokens_est": 2765,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 1,
+    "notes": "The merged-view economics on a REAL cluttered desktop: 201-token window map (1 ms) + per-window views on demand (280 tok for the focused dialog) vs 2765 tokens per full-desktop screenshot. Coverage of the 10 windows: 1 cdp, 5 uia, 3 uia-latch, 1 pixels-crop(elevated) — every binding decided from signatures BEFORE reading, 0 silent. Windows' router differs from Linux/macOS in one structural way measured here: the WM map and the semantic channel are SEPARATE trust domains (Win32 sees elevated windows, UIA does not), so the map is not a convenience but the safety mechanism that turns the elevation blind spot from silent to explicit."
+  },
+  "runtime_verification": {
+    "method": "full-desktop screenshot captured alongside the map; window rects/z/titles compared",
+    "agreement": "map matches the screen incl. the maximized elevated Task Manager in front"
+  },
+  "permissions_required": ["none beyond a normal user session; elevated windows readable only as pixels"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/router-window-map.txt",
+    "campaign/results/artifacts/windows/router-merged-view.json",
+    "campaign/results/artifacts/windows/router-desktop-shot.png",
+    "campaign/windows/router_win.py"
+  ]
+}

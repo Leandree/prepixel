@@ -1,0 +1,46 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), DPR=1, live in-use machine",
+  "app": "Google Chrome 151.0.7922.138 (isolated instance, temp profile, repo test pages)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "open debug port",
+    "signature": "http://127.0.0.1:9231/json/version -> Chrome/151.0.7922.138, Protocol 1.3",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "chrome.exe --remote-debugging-port=9231 --user-data-dir=%TEMP%/pipeline-tap-chrome-profile; playwright-core connectOverCDP; the repo's hardened distiller (src/distill-hardened.mjs) unchanged.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "All known strings exact ('Dupont SARL', '€2,105.90', '3 open orders'). Hard-text page: 0 of 7 ground-truth text lines missing (mechanical self-check vs the DOM's own textContent)." },
+    "t2_enumerate": { "pass": true, "detail": "10/10 interactive elements (4 nav links, 3 Ship buttons, input, select, submit) with boxes and ids." },
+    "t3_live_value": { "pass": true, "detail": "Typed 'CDP-LIVE-77x'; view line shows value=\"CDP-LIVE-77x\" immediately. Interaction diff: 56 bytes." },
+    "t4_living_screen": { "pass": true, "detail": "1 Hz self-updating feed: per-tick line-diffs 120/182/238/239 B (~30-60 tok) vs a flat 1366-token re-screenshot; idle after stopFeed = 0 bytes. (First poll returned 0 — it fired before the first feed item; kept honest.)" },
+    "t5_blind_action": { "pass": true, "detail": "Ship button for row #1043 located purely by coordinate arithmetic on published view lines (text '#1043' y-overlap with a button line — the same text-to-control join the macOS navigation cell needed); CDP Input click at its center; verified IN CHANNEL: badge flipped to 'Shipped' AND the toast line appeared. Diff 309 B." },
+    "t6_pictorial": { "pass": true, "detail": "allcanvas.html distills to EXACTLY '[pixels] canvas 0,0,1280,800' — byte-identical to the Linux and macOS perimeter-law cells. occlusion.html: 2 covered elements tagged [occluded], none silently listed as hittable." }
+  },
+  "measurements": {
+    "view_bytes": 1099,
+    "view_tokens_est": 273,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": 309,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 8,
+    "notes": "Third-OS replication of the reference browser cell: 273 tok vs 1366 (5.0x) on the same app page class (Linux 308, macOS 315 — same family; small deltas are font-metric line wraps). Capture 8 ms. DPR=1 at 100% scaling, so the Retina coordinate trap documented on macOS cannot occur on this machine — the machine-truth is recorded in windows-dpi-token-tiers instead. Endpoint came up on first probe (fresh-port retry logic armed but unused)."
+  },
+  "runtime_verification": {
+    "method": "screenshot artifact captured alongside each view; T5/T4 effects verified in-channel first, screenshot kept as evidence",
+    "agreement": "full agreement on testapp/allcanvas/occlusion/hardtext"
+  },
+  "permissions_required": ["ability to launch chrome.exe with --remote-debugging-port"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/chrome-cdp-view-testapp.txt",
+    "campaign/results/artifacts/windows/chrome-cdp-shot-testapp.png",
+    "campaign/results/artifacts/windows/chrome-cdp-view-after-ship.txt",
+    "campaign/results/artifacts/windows/chrome-cdp-view-occlusion.txt",
+    "campaign/results/artifacts/windows/chrome-cdp-view-hardtext.txt"
+  ]
+}

@@ -1,0 +1,7 @@
+button 40,60,120,40 id=real [occluded]
+text 66,73,68,15 "Real button" [occluded]
+text 68,76,104,17 "Overlay on top"
+text 20,160,40,17 "Also:"
+text 279,160,36,17 "and"
+text 446,160,36,17 "and"
+text 482,160,75,17 "visible-tail."

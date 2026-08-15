@@ -1,0 +1,40 @@
+text 16,36,63,32 "Acme"
+a 16,88,188,37
+text 24,96,77,21 "Dashboard"
+a 16,125,188,37
+text 24,133,48,21 "Orders"
+a 16,162,188,37
+text 24,170,75,21 "Customers"
+a 16,199,188,37
+text 24,207,57,21 "Settings"
+text 244,45,101,43 "Orders"
+text 244,110,187,21 "3 open orders — last sync"
+text 431,110,38,21 "10:41"
+text 256,155,43,21 "Order"
+text 413,155,72,21 "Customer"
+text 687,155,37,21 "Total"
+text 898,155,46,21 "Status"
+text 256,198,44,21 "#1042"
+text 413,198,94,21 "Dupont SARL"
+text 687,198,67,21 "€1,240.00"
+text 906,202,22,16 "Paid"
+button 1092,193,52,32
+text 1104,201,28,16 "Ship"
+text 256,247,44,21 "#1043"
+text 413,247,87,21 "Martin & Co"
+text 687,247,55,21 "€380.50"
+text 906,251,44,16 "Shipped"
+button 1092,242,52,32
+text 1104,250,28,16 "Ship"
+text 256,296,44,21 "#1044"
+text 413,296,78,21 "Bernard SA"
+text 687,296,67,21 "€2,105.90"
+text 906,300,43,16 "Pending"
+button 1092,291,52,32
+text 1104,299,28,16 "Ship"
+input 244,352,198,36 id=customer value="CDP-LIVE-77x"
+select 450,352,98,36 id=status value="Paid"
+button 556,352,85,36 id=addBtn
+text 568,362,61,16 "Add order"
+text 257,421,89,21 "Live activity"
+text 1013,747,227,21 "Order #1043 marked as shipped"

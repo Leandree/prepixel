@@ -1,0 +1,44 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "Date and Time dialog (timedate.cpl) — legacy Win32/GDI dialog with a custom-drawn analog clock",
+  "stack": "win32-gdi",
+  "stack_detection": {
+    "method": "window class + UIA proxy response",
+    "signature": "classic #32770 dialog class; UIA answers through the MSAA/Win32 proxy providers with a 25-node tree on first query",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation`; the pre-XAML dialog is served by UIA's built-in Win32/MSAA proxy providers. No flags, no permissions.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Date ('samedi 15 août 2026'), time ('14:07:08'), timezone string and the full DST explanation paragraph all read as exact strings (ValuePattern on edits + Name on texts)." },
+    "t2_enumerate": { "pass": true, "detail": "6 buttons, 3 tabs (with selection state), 1 checkbox (toggle state), 3 value-bearing edits — all present with boxes; screenshot cross-check matches. One honest gap: the UAC shield glyph on 'Changer la date et l'heure...' (the needs-elevation affordance) is carried only by pixels; the channel does not represent it." },
+    "t3_live_value": { "pass": null, "detail": "Not run — the only editable values here are the SYSTEM date/time; changing them is destructive and behind UAC. Live-value already proven on Notepad/Calculator." },
+    "t4_living_screen": { "pass": true, "detail": "Both clocks tick in-channel every second: the custom-drawn ANALOG clock declares the digital time as its accessible Name (pane '14:07:09' -> '14:07:10' ...), and the Heure edit updates in lockstep. 6/6 polls saw the change. Changed-line cost 80 B (~20 tok) per tick vs 299 tok for a re-screenshot (~15x). Polling caveat kept honest: at 1 Hz with 36-269 ms capture latency the loop skipped one second (…13 -> …15); a production router should subscribe to UIA PropertyChanged events instead of polling." },
+    "t5_blind_action": { "pass": null, "detail": "Deliberately not run: every actionable control in this dialog either changes system time settings or is behind UAC — outside the action allowlist. Blind action already proven on Calculator/Notepad." },
+    "t6_pictorial": { "pass": true, "detail": "The custom-drawn analog clock face — the pictorial suspect — is NOT silent: its node carries the semantic value ('14:07:08') as the accessible name. 1990s-era Win32 accessibility annotation doing exactly what the thesis wants." }
+  },
+  "measurements": {
+    "view_bytes": 1156,
+    "view_tokens_est": 280,
+    "screenshot_tokens_est": 299,
+    "diff_bytes_per_interaction": 594,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": 37,
+    "notes": "View 280 tok ~ screenshot 299 tok (small dense dialog — near break-even, consistent with the density law). The living-screen economics are the point: 80 B of changed lines per second vs 299 tok/s of re-screenshots. diff_bytes_per_interaction=594 is the full unified-diff envelope per tick (context lines included); the semantic payload is the 80 B. Capture 37-269 ms (Win32 proxy jitter under load). No idle measurement: this dialog is never idle (clock always ticks) — idle=0 established on Notepad/Calculator cells."
+  },
+  "runtime_verification": {
+    "method": "screenshot taken right after first distillation; every view line located in the image, values compared",
+    "agreement": "full agreement incl. the analog-clock name matching the painted clock hands' time; one pixels-only semantic found (UAC shield glyph), noted in t2"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/timedate-uia-view.txt",
+    "campaign/results/artifacts/windows/timedate-uia-shot.png",
+    "campaign/results/artifacts/windows/timedate-uia-tick-diff.txt"
+  ]
+}

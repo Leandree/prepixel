@@ -1,0 +1,37 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, live in-use machine, non-elevated agent session",
+  "app": "Microsoft Word via COM (the brief's Tier C 'star case') / LibreOffice via UNO as fallback",
+  "stack": "office-native",
+  "stack_detection": {
+    "method": "COM registration query + install probe",
+    "signature": "New-Object -ComObject Word.Application -> REGDB_E_CLASSNOTREG 0x80040154 (no Office installed; Excel likewise); no LibreOffice present",
+    "detected_before_use": true
+  },
+  "channel": "object-model",
+  "channel_setup": "Attempted to provision LibreOffice for the UNO fallback: (1) winget machine install -> UAC consent dialog on the secure desktop, unreachable by any non-elevated agent BY DESIGN; (2) MSI per-user (MSIINSTALLPERUSER=1) -> exit 0 no-op, package is machine-scope only; (3) msiexec /a administrative extraction -> 1618 ERROR_INSTALL_ALREADY_RUNNING, the Windows Installer service is locked by the original msiexec still parked behind the unanswered UAC prompt.",
+  "verdict": "blocked",
+  "failure_class": "blocked",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "Blocked: no office application installed and none installable without a human answering UAC." },
+    "t2_enumerate": { "pass": null, "detail": "Blocked." },
+    "t3_live_value": { "pass": null, "detail": "Blocked." },
+    "t4_living_screen": { "pass": null, "detail": "Blocked." },
+    "t5_blind_action": { "pass": null, "detail": "Blocked." },
+    "t6_pictorial": { "pass": null, "detail": "Blocked." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": null,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Environmental block, not a channel property — Word-via-COM is proven technology (three decades of automation) and the family result is already established cross-OS (UNO on Linux 21 tok/65x, Pages on macOS 21 tok, Shell.Application on Windows 28 tok in windows-explorer-object-model). The genuine routing datum here: an AUTONOMOUS agent on Windows cannot cross a UAC consent dialog (secure desktop, unreachable by SendInput/UIA at any integrity level below the prompt's) — and a UAC prompt left unanswered locks the whole Windows Installer service (1618) for every subsequent MSI operation. Provisioning software is a human-in-the-loop step; agents must detect the pending-consent state (consent.exe process present) and queue, not retry. RESOLVED SAME DAY, with one last routing datum: the user clicked the UAC dialog and installed Office — the completed star cell is windows-word-object-model.json (18 tok vs 1446, 80x). The LibreOffice MSI itself never landed: the consent the user granted belonged to an msiexec whose parent (winget) we had already killed — an elevation granted to an ORPHANED request installs nothing, silently. Lesson: after any elevated step, verify the artifact (files/registry), never the click. UNO on Windows left unrun rather than re-raising a UAC prompt; the UNO family is already measured twice on Linux and Word covers Tier C here."
+  },
+  "runtime_verification": { "method": "n/a (blocked)", "agreement": "n/a" },
+  "permissions_required": ["one human click on the UAC consent dialog (secure desktop)"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": []
+}

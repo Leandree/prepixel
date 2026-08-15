@@ -1,0 +1,32 @@
+--- 
++++ 
+@@ -1,12 +1,11 @@
+-window 104,9,1287,1023 "pipeline-tap-probe.txt – Bloc-notes"
++window 104,9,1287,1023 "*pipeline-tap-probe.txt – Bloc-notes"
+ document 110,84,1275,910 "Éditeur de texte" value="PIPELINE-TAP-SENTINEL The quick brown fox 12345 café naïve élève 日本語 🚀 END
+-"
++UIA-LIVE-9f3k7"
+ tabitem 158,19,239,32 "wlicense.txt.txt. Non modifié." [selected=False]
+ text 167,27,79,15 "wlicense.txt.txt"
+-tabitem 393,19,247,32 "pipeline-tap-probe.txt. Non modifié." [selected=True]
++tabitem 393,19,247,32 "pipeline-tap-probe.txt. Modifié." [selected=True]
+ text 406,27,123,15 "pipeline-tap-probe.txt"
+-button 599,23,32,24 "Fermer l’onglet"
+-text 609,29,12,12 ""
++text 609,29,12,12 ""
+ button 643,25,32,24 "Ajouter un nouvel onglet"
+ text 653,31,12,12 ""
+ menuitem 114,51,61,32 "Fichier"
+@@ -43,9 +42,9 @@
+ text 1324,63,9,9 ""
+ [pixels] image 1318,57,20,20
+ button 1347,51,30,32 "Paramètres"
+-text 126,1002,59,16 "Ligne 1, colonne
+-1"
+-text 215,1002,72,16 "76 caractères"
++text 126,1002,68,16 "Ligne 2, colonne
++15"
++text 215,1002,72,16 "90 caractères"
+ text 417,994,67,32 "Texte brut"
+ text 1014,1002,32,16 "Zoom"
+ text 1082,1002,91,16 "Windows (CRLF)"

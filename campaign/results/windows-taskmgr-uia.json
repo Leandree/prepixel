@@ -1,0 +1,40 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine, admin user account",
+  "app": "Task Manager (Win11 WinUI rewrite, custom-drawn performance graphs)",
+  "stack": "winui-xaml",
+  "stack_detection": {
+    "method": "process token query before probing",
+    "signature": "OpenProcess + GetTokenInformation(TokenElevation) on taskmgr.exe returns True (auto-elevation for admin accounts, no UAC dialog shown); ControlFromHandle on its HWND returns a 1-node stub (window + empty title bar)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation from a Medium-integrity Python client (the default for any agent not shipped as signed UIAccess AT software).",
+  "verdict": "blocked",
+  "failure_class": "blocked",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "Blocked: the elevated (High-IL) process exposes nothing to a Medium-IL UIA client beyond a stub (WindowControl + empty TitleBarControl)." },
+    "t2_enumerate": { "pass": null, "detail": "Blocked (same boundary)." },
+    "t3_live_value": { "pass": null, "detail": "Blocked." },
+    "t4_living_screen": { "pass": null, "detail": "Blocked — living-screen battery moved to the Clock app (windows-clock-uia)." },
+    "t5_blind_action": { "pass": null, "detail": "Blocked, symmetrically: UIPI also rejects injected input and window messages toward the elevated window (Stop-Process: access denied; WM_CLOSE: swallowed). Reads and writes fail together." },
+    "t6_pictorial": { "pass": null, "detail": "Blocked — the custom-drawn graph honesty test could not be reached; would require an elevated or UIAccess client." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 2765,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "THE WINDOWS-SPECIFIC BOUNDARY, measured live. Two distinct behaviours: (1) per-window probe (ControlFromHandle) degrades to an HONEST STUB — explicit; (2) more dangerous: the elevated window is entirely ABSENT from the UIA root enumeration while plainly visible (maximized!) on screen. A router that derives 'what is on screen' from UIA enumeration alone silently misses a whole window — the closest thing to a silent class Windows produced in this campaign. It stays explicit only because the Win32 window map (EnumWindows/FindWindow, which DOES see elevated windows: hwnd, title, rect, pid) disagrees with the UIA enumeration, and that disagreement is mechanically detectable — the desktop-router argument (WM map + per-window channel) is therefore NOT optional on Windows. Predictable a priori: TokenElevation on the target pid answers before any probe. Production exits: ship the agent as a signed uiAccess=true binary (how commercial AT/RPA reads elevated UI) or run elevated. Screenshot side unaffected: pixels of elevated windows capture normally — a pure pixel agent would not even notice the boundary (and would click into it blind, since UIPI drops its clicks too)."
+  },
+  "runtime_verification": {
+    "method": "Win32 window map (FindWindow: visible, not cloaked, rect 0,0,1940,1100) cross-checked against UIA root enumeration (window absent) and ControlFromHandle (1-node stub)",
+    "agreement": "channels DISAGREE about window existence — the disagreement is the result, and it is mechanically detectable"
+  },
+  "permissions_required": ["High integrity level (elevation) or a signed uiAccess=true client to read; same to act"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": []
+}

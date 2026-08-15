@@ -1,0 +1,43 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), live in-use machine",
+  "app": "VS Code (Electron/Chromium 148) — isolated instance, temp profile, throwaway workspace",
+  "stack": "electron",
+  "stack_detection": {
+    "method": "open debug port",
+    "signature": ":9233/json/version -> Chrome/148.0.7778.97; Electron warns 'remote-debugging-port is not in the list of known options, but still passed to Electron/Chromium' (same banner as the macOS Cursor cell)",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Code.exe --remote-debugging-port=9233 --user-data-dir=%TEMP%/ptap-vscode-prof --disable-workspace-trust <probe.js>; playwright-core connectOverCDP; repo hardened distiller.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "File content readable as real strings incl. accents+CJK ('// café 日本語'). CAVEAT measured: Monaco splits each code line into SYNTAX-TOKEN spans — the sentinel arrives as 'ELECTRON' + 'TAP' + 'SENTINEL' text nodes sharing one y — same-line join (y-coordinate arithmetic on published lines) reconstructs it. The Electron mirror of glyph-run fragmentation: strings, not glyphs, but fragmented." },
+    "t2_enumerate": { "pass": true, "detail": "62 interactive lines; workbench self-labeled via aria (activity bar, explorer tree, tabs, status bar all named — probe.js appears in tab, explorer and status)." },
+    "t3_live_value": { "pass": true, "detail": "Typed into the Monaco editor via CDP; ' // LIVE-9z' visible in the re-distilled view immediately." },
+    "t4_living_screen": { "pass": null, "detail": "Idle check: two distills 1.2 s apart are byte-identical (idle = 0). Active living screen covered by the Chrome CDP cell." },
+    "t5_blind_action": { "pass": null, "detail": "Not repeated (proven on Chrome CDP + 3 UIA cells)." },
+    "t6_pictorial": { "pass": null, "detail": "No pictorial content in the throwaway workspace; canvas honesty proven on the Chrome CDP twin with the identical distiller." }
+  },
+  "measurements": {
+    "view_bytes": 2603,
+    "view_tokens_est": 648,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 23,
+    "notes": "Cross-OS replication to the token: 648 tok on Windows VS Code vs 647 on macOS Cursor (both Electron workbenches, same distiller) — the Electron slice of the desktop behaves identically across OSes, which is the CDP channel's core value. Capture 23 ms. Editor text virtualization noted: only rendered lines exist in the DOM (fine for what's-on-screen; whole-document reads belong to an object-model channel — here the extension host / LSP would be it)."
+  },
+  "runtime_verification": {
+    "method": "workbench screenshot artifact captured alongside the view",
+    "agreement": "view matches the rendered workbench (tabs, tree, editor line, status bar)"
+  },
+  "permissions_required": ["ability to launch Code.exe with --remote-debugging-port"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/vscode-cdp-view.txt",
+    "campaign/results/artifacts/windows/vscode-cdp-shot.png"
+  ]
+}

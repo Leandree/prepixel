@@ -1,0 +1,57 @@
+text 20,41,101,43 "Orders"
+text 20,106,99,21 "8 open orders"
+text 30,149,43,21 "Order"
+text 215,149,72,21 "Customer"
+text 545,149,37,21 "Total"
+text 787,149,46,21 "Status"
+text 30,188,44,21 "#3600"
+text 215,188,90,21 "Dukalu SARL"
+text 545,188,64,21 "€2316.38"
+text 795,188,30,21 "Paid"
+button 1066,183,51,31
+text 1078,191,27,15 "Ship"
+text 30,232,44,21 "#3601"
+text 215,232,91,21 "Nimiso & Co"
+text 545,232,64,21 "€2137.06"
+text 795,232,35,21 "Draft"
+button 1066,227,51,31
+text 1078,235,27,15 "Ship"
+text 30,276,44,21 "#3602"
+text 215,276,86,21 "Tidumo SAS"
+text 545,276,64,21 "€4339.65"
+text 795,276,35,21 "Draft"
+button 1066,271,51,31
+text 1078,279,27,15 "Ship"
+text 30,320,44,21 "#3603"
+text 215,320,74,21 "Roveka SA"
+text 545,320,64,21 "€3265.24"
+text 795,320,35,21 "Draft"
+button 1066,315,51,31
+text 1078,323,27,15 "Ship"
+text 30,364,44,21 "#3604"
+text 215,364,87,21 "Famini & Co"
+text 545,364,55,21 "€801.83"
+text 795,364,61,21 "Overdue"
+button 1066,359,51,31
+text 1078,367,27,15 "Ship"
+text 30,408,44,21 "#3605"
+text 215,408,95,21 "Luremo & Co"
+text 545,408,55,21 "€216.80"
+text 795,408,30,21 "Paid"
+button 1066,403,51,31
+text 1078,411,27,15 "Ship"
+text 30,452,44,21 "#3606"
+text 215,452,68,21 "Ninilu Ltd"
+text 545,452,64,21 "€1757.95"
+text 795,452,30,21 "Paid"
+button 1066,447,51,31
+text 1078,455,27,15 "Ship"
+text 30,496,44,21 "#3607"
+text 215,496,70,21 "Lubani SA"
+text 545,496,64,21 "€4540.97"
+text 795,496,35,21 "Draft"
+button 1066,491,51,31
+text 1078,499,27,15 "Ship"
+input 20,534,177,21 id=cust
+button 197,529,83,31 id=add
+text 209,537,59,15 "Add order"

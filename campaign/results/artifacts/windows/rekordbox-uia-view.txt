@@ -1,0 +1,268 @@
+window 0,23,1920,1009 "rekordbox"
+custom 1695,822,200,182 "rekordbox"
+button 1879,829,8,8 [toggle=0]
+button 1752,968,86,22 "subscribe" [toggle=0]
+custom 0,606,1920,400 "rekordbox"
+button 2,599,37,37 "WiFiSyncDetectButton"
+button 6,606,18,20 "ShowHideTreeShortcutButton"
+button 51,607,20,19 "ShowHideSubBrowseButton"
+radiobutton 78,611,22,10 "TAG" [toggle=0 selected=False]
+radiobutton 105,611,22,10 [toggle=1 selected=True]
+radiobutton 132,611,22,10 [toggle=0 selected=False]
+radiobutton 159,611,22,10 [toggle=0 selected=False]
+button 186,611,29,10 "ShowHidePaletteButton"
+text 39,628,349,25 "Collection"
+edit 418,606,316,26 "blank list" value="blank list"
+button 734,612,12,13 "MenuButton"
+edit 793,606,316,26 "blank list" value="blank list"
+button 1109,612,12,13 "MenuButton"
+edit 1168,606,316,26 "blank list" value="blank list"
+button 1484,612,12,13 "MenuButton"
+edit 1543,606,318,26 "blank list" value="blank list"
+button 1861,612,12,13 "MenuButton"
+button 1898,611,18,18 "HidePaletteButton" [toggle=1]
+button 5,644,20,20
+button 5,664,20,20
+button 5,684,20,20
+button 5,704,20,20
+button 5,724,20,20
+button 5,744,20,20
+button 5,764,20,20
+button 37,641,100,24 "Tree View"
+button 137,641,100,24 "Column View"
+button 42,665,20,15
+button 360,667,11,11
+button 310,682,40,12 "Start"
+button 360,682,11,11
+button 360,697,11,11
+button 360,712,11,11
+button 360,727,11,11
+button 360,742,11,11
+button 360,757,11,11
+button 360,772,11,11
+edit 1713,645,153,18
+button 1689,647,26,14 "SelectSearchFilterButton"
+button 1604,645,18,18 "SelectPartialArtworkButton"
+button 1642,645,18,18 "SelectFullArtworkButton"
+header 393,667,30,15 "Attribute"
+header 453,667,60,15 "#"
+header 543,667,128,15 "Summary"
+header 671,667,128,15 "Album"
+header 799,667,128,15 "Genre"
+header 927,667,90,15 "Rating"
+header 1017,667,80,15 "Time"
+header 1097,667,128,15 "Date Added"
+menubar 0,0,22,22 "Système"
+menuitem 0,0,22,22 "Système"
+button 1779,0,47,22 "Réduire"
+button 1826,0,46,22 "Restaurer"
+button 1872,0,48,22 "Fermer"
+button 1541,47,25,28
+slider 1686,48,22,22
+combobox 135,49,40,20 "2Deck Horizontal" value="2Deck Horizontal"
+button 195,49,20,20 [toggle=0]
+button 232,49,20,20 [toggle=0]
+button 269,49,20,20 [toggle=1]
+button 306,49,20,20 [toggle=1]
+button 343,49,20,20 [toggle=1]
+button 1582,50,47,20 "Free"
+combobox 10,51,110,16 "PERFORMANCE" value="PERFORMANCE"
+button 398,51,40,16 "LINK"
+button 1652,51,16,16 [toggle=0]
+text 1868,53,38,12 "18:51"
+button 1815,58,35,10 "AudioCpuGraphButton"
+button 6,76,10,10
+button 4,111,14,14
+button 22,134,10,18 [toggle=0]
+button 2,136,18,14 "RST"
+button 4,161,14,14
+button 6,200,10,10
+slider 922,223,24,24
+button 916,243,36,10 "TRIM" [toggle=0]
+slider 922,256,24,24
+button 916,276,36,10 "HIGH" [toggle=0]
+slider 922,289,24,24
+button 916,309,36,10 "MID" [toggle=0]
+slider 922,322,24,24
+button 916,342,36,10 "LOW" [toggle=0]
+button 916,362,36,18 "CUE" [toggle=0]
+slider 974,223,24,24
+button 968,243,36,10 "TRIM" [toggle=0]
+slider 974,256,24,24
+button 968,276,36,10 "HIGH" [toggle=0]
+slider 974,289,24,24
+button 968,309,36,10 "MID" [toggle=0]
+slider 974,322,24,24
+button 968,342,36,10 "LOW" [toggle=0]
+button 968,362,36,18 "CUE" [toggle=0]
+slider 922,383,24,56
+slider 974,383,24,56
+button 833,450,30,14 "1" [toggle=1]
+button 865,450,30,14 "2" [toggle=1]
+button 1025,450,30,14 "1" [toggle=0]
+button 1057,450,30,14 "2" [toggle=0]
+slider 912,455,96,24
+button 833,466,30,14 "3" [toggle=0]
+button 865,466,30,14 "4" [toggle=0]
+button 1025,466,30,14 "3" [toggle=0]
+button 1057,466,30,14 "4" [toggle=0]
+slider 683,454,24,24
+slider 747,454,24,24
+text 709,461,17,10 "MIX"
+text 773,461,30,10 "LEVEL"
+text 64,225,654,18 "Not Loaded."
+[pixels] image 25,226,34,34
+button 826,223,44,22 "BEAT
+SYNC" [toggle=0]
+button 872,225,24,18 [toggle=0]
+button 742,227,70,13 "KEY SYNC" [toggle=0]
+text 601,244,46,16 "-00:00"
+text 647,244,12,16 ".0"
+text 659,244,43,16 "00:00"
+text 702,244,12,16 ".0"
+button 756,249,25,12
+button 783,249,15,12
+button 826,249,70,13 "MASTER"
+text 1080,225,654,18 "Not Loaded."
+[pixels] image 1041,226,34,34
+button 1842,223,44,22 "BEAT
+SYNC" [toggle=0]
+button 1888,225,24,18 [toggle=0]
+button 1758,227,70,13 "KEY SYNC" [toggle=0]
+text 1617,244,46,16 "-00:00"
+text 1663,244,12,16 ".0"
+text 1675,244,43,16 "00:00"
+text 1718,244,12,16 ".0"
+button 1772,249,25,12
+button 1799,249,15,12
+button 1842,249,70,13 "MASTER"
+text 8,223,12,12 "1"
+text 1024,223,12,12 "2"
+button 0,312,28,65 [toggle=1]
+button 0,377,28,65 [toggle=0]
+text 46,326,11,11 "A"
+text 330,326,11,11 "E"
+text 614,326,11,11 "I"
+text 898,326,11,11 "M"
+text 46,347,11,11 "B"
+text 330,347,11,11 "F"
+text 614,347,11,11 "J"
+text 898,347,11,11 "N"
+text 46,368,11,11 "C"
+text 330,368,11,11 "G"
+text 614,368,11,11 "K"
+text 898,368,11,11 "O"
+text 46,389,11,11 "D"
+text 330,389,11,11 "H"
+text 614,389,11,11 "L"
+text 898,389,11,11 "P"
+button 38,412,68,20 "HOT CUE" [toggle=0]
+text 772,358,54,23 "00.00"
+text 762,381,26,11 "0.0"
+text 789,381,8,11 "%"
+text 801,381,32,11 "± 0"
+button 694,322,40,20 "INT" [toggle=0]
+button 864,322,30,18 "SLIP" [toggle=0]
+button 696,350,36,36 "Cue"
+button 864,350,30,18 "Q"
+button 696,396,36,36 "Play/Pause"
+button 864,414,30,18 "MT"
+text 1104,358,54,23 "00.00"
+text 1094,381,26,11 "0.0"
+text 1121,381,8,11 "%"
+text 1133,381,32,11 "± 0"
+button 1026,322,40,20 "INT" [toggle=0]
+button 1196,322,30,18 "SLIP" [toggle=0]
+button 1028,350,36,36 "Cue"
+button 1196,350,30,18 "Q"
+button 1028,396,36,36 "Play/Pause"
+button 1196,414,30,18 "MT"
+text 1322,326,11,11 "A"
+text 1606,326,11,11 "E"
+text 1890,326,11,11 "I"
+text 1322,347,11,11 "B"
+text 1606,347,11,11 "F"
+text 1890,347,11,11 "J"
+text 1322,368,11,11 "C"
+text 1606,368,11,11 "G"
+text 1890,368,11,11 "K"
+text 1322,389,11,11 "D"
+text 1606,389,11,11 "H"
+text 1890,389,11,11 "L"
+button 1814,412,68,20 "HOT CUE" [toggle=0]
+button 1892,312,28,65 [toggle=1]
+button 1892,377,28,65 [toggle=0]
+button 616,322,68,32 "16"
+button 616,356,33,33
+button 651,356,33,33
+button 616,391,33,18 "AU" [toggle=1]
+button 651,391,33,18 "MA"
+button 1236,322,68,32 "4"
+button 1236,356,33,33
+button 1271,356,33,33
+button 1236,391,33,18 "AU" [toggle=1]
+button 1271,391,33,18 "MA"
+button 1783,454,21,19 [toggle=0]
+combobox 1566,455,88,18 "Master Out" value="Master Out"
+slider 1664,455,24,24
+text 1809,458,50,14 "00:00:00"
+text 1861,460,7,11 "/"
+text 1870,460,40,11 "03:00:00"
+[pixels] image 10,495,201,16
+button 10,512,26,14
+[pixels] image 240,495,201,16
+button 240,512,26,14
+[pixels] image 470,495,201,16
+button 470,512,26,14
+[pixels] image 700,495,201,16
+button 700,512,26,14
+[pixels] image 1002,495,201,16
+button 1002,512,26,14
+[pixels] image 1232,495,201,16
+button 1232,512,26,14
+[pixels] image 1462,495,201,16
+button 1462,512,26,14
+[pixels] image 1692,495,201,16
+button 1692,512,26,14
+slider 930,497,24,24
+slider 966,502,26,47
+text 930,519,24,10 "GAIN"
+[pixels] image 10,539,201,16
+button 10,556,26,14
+[pixels] image 240,539,201,16
+button 240,556,26,14
+[pixels] image 470,539,201,16
+button 470,556,26,14
+[pixels] image 700,539,201,16
+button 700,556,26,14
+[pixels] image 1002,539,201,16
+button 1002,556,26,14
+[pixels] image 1232,539,201,16
+button 1232,556,26,14
+[pixels] image 1462,539,201,16
+button 1462,556,26,14
+[pixels] image 1692,539,201,16
+button 1692,556,26,14
+button 927,535,30,14 "CUE" [toggle=0]
+edit 934,553,52,20 "120.00" value="120.00"
+button 1545,577,20,20 [toggle=0]
+button 1570,577,20,20
+button 1000,578,20,20 [toggle=0]
+button 1025,578,20,20 [toggle=0]
+button 1050,578,46,20 "SAVE"
+text 1131,582,48,12 "PATTERN 1"
+combobox 1213,579,48,18 "1Bar" value="1Bar"
+button 1105,584,5,8
+button 1200,584,5,8
+button 938,578,20,20
+button 962,578,20,20
+button 740,583,68,10 "BPM SYNC" [toggle=0]
+button 828,583,51,10 "MASTER"
+radiobutton 43,584,22,10 [toggle=1 selected=True]
+radiobutton 71,584,22,10 [toggle=0 selected=False]
+radiobutton 99,584,22,10 [toggle=0 selected=False]
+radiobutton 127,584,22,10 [toggle=0 selected=False]
+button 710,584,9,10 "Q" [toggle=0]
+text 6,586,30,8 "BANK"
+text 1521,1012,330,16 "32 Tracks, 1 hours 51 minutes, 818.4 MB"
+button 1892,1012,16,16 "btnMultiWindow" [toggle=0]

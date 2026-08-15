@@ -1,0 +1,43 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), NVIDIA RTX 2080 Ti, live in-use machine",
+  "app": "Unigine Heaven Benchmark 4.0 (Direct3D11, windowed 1280x720) — real-time 3D scene at ~317 fps",
+  "stack": "game",
+  "stack_detection": {
+    "method": "window class + tree-shape probe",
+    "signature": "AppWindow class, D3D11 swapchain; UIA tree = 7 nodes, all OS window chrome (title bar, system menu, min/max/close), ZERO content children — the unambiguous zero-coverage signal",
+    "detected_before_use": true
+  },
+  "channel": "pixels-baseline",
+  "channel_setup": "UIA probed as the candidate structured channel; it yields nothing for the content area, so pixels are the only channel — which is the point of this control cell.",
+  "verdict": "unavailable",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "Screen shows in-engine text (FPS counter '317', 'NVIDIA GeForce RTX 2080 Ti', GPU clocks, temperature) and in-engine buttons (Benchmark/Camera/Settings/Quality/Sound/Quit) — none exist in the channel. Expected: it is all engine-drawn." },
+    "t2_enumerate": { "pass": false, "detail": "Only the OS min/max/close buttons enumerate. The in-scene UI is invisible to structure." },
+    "t3_live_value": { "pass": null, "detail": "n/a." },
+    "t4_living_screen": { "pass": null, "detail": "The scene animates continuously; the 7-node tree never changes — structural diff cost of a running game is 0 because coverage is 0. A vivid statement of both the cost property and its uselessness here." },
+    "t5_blind_action": { "pass": null, "detail": "No semantic targets; correctly refused." },
+    "t6_pictorial": { "pass": true, "detail": "PERIMETER LAW CONFIRMED, in its cleanest form: the tree ends at the window frame. Unlike FL Studio's named-but-empty panes (which mimic structure), a frame-only tree cannot be mistaken for content coverage — a router computes 'structural coverage of client area = 0%' from one walk and routes the whole rect to vision. Explicit by shape." }
+  },
+  "measurements": {
+    "view_bytes": 237,
+    "view_tokens_est": 59,
+    "screenshot_tokens_est": 1285,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 280,
+    "notes": "The wanted negative, plus one incidental positive: the first launch failed with a Win32 error dialog ('Engine::init(): can't initialize filesystem' — bad -data_path) and UIA read that dialog perfectly (6 nodes, exact message string). Even at the edge of the pixels-only territory, the OS-dialog layer stays structured — errors, the most safety-critical text an agent encounters, live on the structured side."
+  },
+  "runtime_verification": {
+    "method": "PrintWindow capture of the running scene vs the 7-node tree",
+    "agreement": "consistent: everything the channel claims (frame controls) is on screen; everything on screen beyond the frame is absent from the channel, and the frame-only shape declares that absence"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/heaven-uia-view.txt",
+    "campaign/results/artifacts/windows/heaven-uia-shot.png"
+  ]
+}

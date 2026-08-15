@@ -11,7 +11,7 @@ files = sorted(glob.glob(os.path.join(HERE, 'results', '*.json')))
 rows = []
 for f in files:
     try:
-        d = json.load(open(f))
+        d = json.load(open(f, encoding='utf-8'))
         if 'os' in d and 'app' in d:
             rows.append(d)
     except Exception as e:
@@ -57,9 +57,14 @@ lines += ['', '## Safety verdict', '',
           f'- Cells where structure **works**: {len(works)}/{n}.',
           f'- **Silent divergences** (disqualifying): {len(silent)}/{n}' + (' ✅ none found' if not silent else ' ❗ ' + ', '.join(d['app'] for d in silent)),
           f'- Cells **not** predictable in advance: {len(unpred)}/{n}' + (' ✅ none' if not unpred else ' ❗ ' + ', '.join(d['app'] for d in unpred)),
-          '',
-          'Reading: every failure so far is either **explicit** (opaque rect / honest empty tree) or **blocked** (OS/env), and every channel was detectable from a stack signature before use. That is the pattern a production router needs. The open risk to hunt on the other OSes is any **silent** cell — a channel that returns a view disagreeing with the screen without declaring it.']
+          '']
+if silent:
+    lines += ['Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: '
+              + '; '.join(f"**{d['app'].split(' — ')[0].split(' (')[0]}** ({d['os']})" for d in silent)
+              + '. See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.']
+else:
+    lines += ['Reading: every failure so far is either **explicit** (opaque rect / honest empty tree) or **blocked** (OS/env), and every channel was detectable from a stack signature before use. That is the pattern a production router needs. The open risk to hunt on the other OSes is any **silent** cell — a channel that returns a view disagreeing with the screen without declaring it.']
 
-open(os.path.join(HERE, 'MATRIX.md'), 'w').write('\n'.join(lines) + '\n')
-json.dump({'cells': rows}, open(os.path.join(HERE, 'matrix.json'), 'w'), indent=2)
+open(os.path.join(HERE, 'MATRIX.md'), 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
+json.dump({'cells': rows}, open(os.path.join(HERE, 'matrix.json'), 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
 print(f'wrote MATRIX.md and matrix.json from {n} cells; silent={len(silent)}, unpredictable={len(unpred)}')

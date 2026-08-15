@@ -1,0 +1,9 @@
+window 120,0,496,521 "Horloge"
+window 128,1,480,32 "Horloge"
+button 470,1,46,32 "Réduire Horloge"
+button 516,1,46,32 "Agrandir Horloge"
+button 562,1,46,32 "Fermer Horloge"
+window 128,1,480,512 "Horloge"
+text 192,78,352,80 "Horloge a besoin d’une mise à jour. Nous préparons la mise à jour pour vous..."
+[pixels] image 318,218,100,100
+text 140,9,44,16 "Horloge"

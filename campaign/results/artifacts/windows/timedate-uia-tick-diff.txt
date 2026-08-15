@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -1,10 +1,10 @@
+ window 156,156,463,483 "Date et heure"
+ pane 174,216,427,375 "Date et heure"
+-pane 186,235,142,144 "14:07:13"
++pane 186,235,142,144 "14:07:15"
+ text 335,254,250,15 "Date :"
+ edit 333,272,252,38 "Date :" value="‎samedi ‎15 ‎août ‎2026"
+ text 335,310,250,15 "Heure :"
+-edit 333,329,252,19 "Heure :" value="14:07:13"
++edit 333,329,252,19 "Heure :" value="14:07:15"
+ button 398,351,189,23 "Changer la date et l’heure..."
+ text 192,387,105,15 "Fuseau horaire"
+ edit 188,413,399,19 "Fuseau horaire" value="(UTC+01:00) Bruxelles, Copenhague, Madrid, Paris"

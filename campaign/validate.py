@@ -11,12 +11,12 @@ except ImportError:
     print("jsonschema not installed: pip install jsonschema"); sys.exit(2)
 
 HERE = os.path.dirname(__file__)
-schema = json.load(open(os.path.join(HERE, 'results-schema.json')))
+schema = json.load(open(os.path.join(HERE, 'results-schema.json'), encoding='utf-8'))
 v = Draft202012Validator(schema)
 files = sorted(glob.glob(os.path.join(HERE, 'results', '*.json')))
 bad = 0
 for f in files:
-    d = json.load(open(f))
+    d = json.load(open(f, encoding='utf-8'))
     errs = sorted(v.iter_errors(d), key=lambda e: e.path)
     name = os.path.basename(f)
     if errs:

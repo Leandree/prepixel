@@ -1,0 +1,6 @@
+window 182,182,1286,749 "Unigine Heaven Benchmark 4.0 Basic (Direct3D11)"
+menubar 190,190,22,22 "Système"
+menuitem 190,190,22,22 "Système"
+button 1326,183,47,25 "Réduire"
+button 1373,183,46,25 "Agrandir"
+button 1419,183,47,25 "Fermer"

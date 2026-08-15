@@ -1,0 +1,44 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "rekordbox 7.0.9 (Pioneer DJ, JUCE framework — fully custom-drawn like FL Studio), user's real library, READ-ONLY probe",
+  "stack": "custom-canvas",
+  "stack_detection": {
+    "method": "window class + tree-shape probe",
+    "signature": "JUCE_* window class; UIA answers with a RICH 549-node tree (141 named buttons, 17 sliders, radios, combos, 11 table headers) — JUCE >=6.1 ships an accessibility layer and Pioneer wired it. Predictor refined: custom-drawn + JUCE class -> expect annotated chrome, verify list contents separately",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation`. Zero clicks/keys on the user's library; the Upmgr updater gate was dismissed via InvokePattern ('Fermer') to reach the main window.",
+  "verdict": "partial",
+  "failure_class": "silent",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Live app STATE reads correctly: deck titles 'Not Loaded.' (x2), sampler BPM as a real edit value ('120.00'), status bar '32 Tracks, 1 hours 51 minutes, 818.4 MB' — all matching the pixels." },
+    "t2_enumerate": { "pass": true, "detail": "549 nodes: 141 buttons, 17 sliders, 8 radios, 4 combos, 6 edits — the ENTIRE custom-drawn performance chrome is annotated (names are developer IDs like 'WiFiSyncDetectButton', 'SelectFullArtworkButton': machine-usable, not user-facing labels). This REFUTES 'custom-drawn implies structural silence' for the second time in the campaign — the Windows twin of macOS Chess: the boundary is developer annotation, not rendering technology. Same rendering class as FL Studio (52 empty panes), opposite outcome." },
+    "t3_live_value": { "pass": null, "detail": "Not attempted (read-only on the user's library); value exposure shown by the BPM edit." },
+    "t4_living_screen": { "pass": null, "detail": "Not attempted (would require playing a deck on the user's setup)." },
+    "t5_blind_action": { "pass": null, "detail": "Not attempted on the user's live DJ library (an errant Invoke here loads/plays tracks). The updater dismissal demonstrated semantic action on this stack." },
+    "t6_pictorial": { "pass": false, "detail": "THE GAP, and it is the campaign's known silent class: the track-browser GRID. The channel declares the table's 11 column headers, then ZERO rows — while the screen lists the user's playlists and 11+ visible tracks with ratings. A naive consumer reads 'empty table'. Distinctive nuance vs OBS/FL: the view is SELF-INCONSISTENT in a detectable way (in-channel status bar says '32 Tracks' against an empty table; headers without rows) — a router can flag 'virtualized/unexposed list' from the view alone, but nothing DECLARES the rows unreadable, so it stays in the silent class by the campaign's standard." }
+  },
+  "measurements": {
+    "view_bytes": 8014,
+    "view_tokens_est": 2003,
+    "screenshot_tokens_est": 2584,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": 1533,
+    "notes": "View 2003 tok vs 2584 fullscreen-window shot. Capture 1.5-1.8 s — the slowest bridge measured in the campaign (JUCE proxies each property; 549 nodes x several properties). The two-sided verdict is the value of this cell: (a) JUCE proves annotation can ride on a fully custom renderer (141 controls, states, values); (b) the one region it left out — the content grid — is exactly the silent-by-omission class, now seen in three variants (Qt anonymous container, Delphi named-empty panes, JUCE headers-without-rows). Round-1 bonus datum kept: the Upmgr updater dialog (also JUCE) showed the same shape in miniature — named headers ('Current Version', 'Update Version'), empty CustomControl cells. Ops note: one transient window died mid-enumeration and threw COMError on .Name — the stale-handle race again; enumeration loops must guard every property read."
+  },
+  "runtime_verification": {
+    "method": "PrintWindow capture of the main window vs the distilled view and raw node dump; state values (deck titles, BPM, track count) compared against pixels",
+    "agreement": "chrome and states: full agreement, value-exact. Track browser: DISAGREEMENT by omission (headers + '32 Tracks' in channel, zero rows vs 11+ on screen) — recorded as the silent class"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/rekordbox-uia-view.txt",
+    "campaign/results/artifacts/windows/rekordbox-uia-rawnodes.json",
+    "campaign/results/artifacts/windows/rekordbox-uia-shot.png"
+  ]
+}

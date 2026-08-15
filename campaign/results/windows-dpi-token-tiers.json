@@ -1,0 +1,42 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, single 1920x1080 panel at 100% scaling (96 DPI) — machine truth, measured not assumed",
+  "app": "Display-scaling / image-token two-tier measurement (Windows counterpart of the macOS Retina and Linux DPR cells)",
+  "stack": "other",
+  "stack_detection": {
+    "method": "GetDeviceCaps + per-monitor-DPI-aware capture",
+    "signature": "LOGPIXELSX=96, HORZRES=DESKTOPHORZRES=1920x1080 (no DPI virtualization); ImageGrab returns exactly 1920x1080",
+    "detected_before_use": true
+  },
+  "channel": "pixels-baseline",
+  "channel_setup": "src/image-tokens.mjs (both API downscale tiers) applied to measured capture dimensions.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "n/a — cost cell." },
+    "t2_enumerate": { "pass": null, "detail": "n/a." },
+    "t3_live_value": { "pass": null, "detail": "n/a." },
+    "t4_living_screen": { "pass": null, "detail": "n/a." },
+    "t5_blind_action": { "pass": null, "detail": "n/a." },
+    "t6_pictorial": { "pass": null, "detail": "n/a." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 2765,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "MEASURED on this machine: full screen 1920x1080 -> 2765 tokens on a high-res model (no API downscale: 2.07 MP < 3.588 MP cap), 1534 on legacy tier (downscaled to ~1430x804). So on plain 1080p the high-res tier already DOUBLES the per-look cost vs the reference 1280x800 viewport (1366) — before any high-DPI hardware is involved. THE WINDOWS-SPECIFIC POINT, which inverts the macOS framing: display SCALING (100/125/150%) does not change capture cost here — Windows screenshots are physical pixels, and physical resolution is scale-invariant on a given panel (unlike macOS, where a Retina 'viewport screenshot' doubles with backing scale). What scaling DOES break on Windows is COORDINATES (UIA rects are physical px; a DPI-unaware client works in virtualized px — the classic blind-click trap; this machine at 96 DPI cannot exhibit it, stated honestly; all probes here were per-monitor-DPI-aware as the brief mandates). The cost trap moves to PANEL resolution: computed with the exact two-tier formula — QHD 2560x1440 -> 4784 highres / 1534 legacy; 4K 3840x2160 -> 4785 / 1534 (naive w*h/750 would claim 11060 — off by 2.3x, same class of error the macOS campaign caught). Structured views are resolution- AND scale-invariant (Notepad view: 502 tok at any DPI). Practical reading for a Windows fleet: on the common 1080p desktop the structured/pixels ratio for a full-screen look is 2765/view; on a 4K laptop it is capped at ~4785/view on high-res models and collapses to 1534/view on legacy models because the API throws the extra pixels away."
+  },
+  "runtime_verification": {
+    "method": "capture dimensions verified against GetDeviceCaps (no virtualization); token numbers from the exact public formula in src/image-tokens.mjs",
+    "agreement": "capture = 1920x1080 exactly; naive formula agrees with tiered formula at this resolution (below both caps)"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/fullscreen-shot.png"
+  ]
+}

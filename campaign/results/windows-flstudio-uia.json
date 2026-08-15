@@ -1,0 +1,44 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "FL Studio 2025 (Producer Edition v25.1.6) — fully custom-drawn UI (Delphi, TFruityLoopsMainForm), READ-ONLY probe, zero input sent",
+  "stack": "custom-canvas",
+  "stack_detection": {
+    "method": "window class + tree-shape probe",
+    "signature": "TFruityLoopsMainForm window class (Delphi/VCL custom); oleacc.dll + uiautomationcore.dll loaded (minimal a11y layer); first UIA walk returns 52 nodes that are ALL PaneControl — zero interactive control types, zero value patterns. That shape IS the router's predictor: 'custom-drawn, region map only'",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation`. Latch protocol applied (2 walks, 1.5 s apart — count stable at 52; not a lazy tree, a thin one).",
+  "verdict": "partial",
+  "failure_class": "silent",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "The screen shows dense readable content: tempo '140.000', pattern names, browser tree with dozens of labeled sample folders, mixer channel names. The channel exposes NONE of it — only ~15 region captions ('Browser', 'Channel rack', 'Recent projects', 'Start a new project')." },
+    "t2_enumerate": { "pass": false, "detail": "Zero interactive elements exposed. The step-sequencer cells, transport buttons, mixer faders, browser items — all painted, none in the tree. The welcome wizard's 'Recent projects' TQuickStringGrid node had NO children while the screen listed the user's recent projects inside it." },
+    "t3_live_value": { "pass": null, "detail": "Not attempted (read-only on the user's DAW; no values exposed to read anyway)." },
+    "t4_living_screen": { "pass": null, "detail": "Not attempted (the playing transport would be the living screen; nothing is exposed to observe)." },
+    "t5_blind_action": { "pass": null, "detail": "Deliberately not attempted: with no semantic targets, any blind click would be a pixel-guess — exactly what the thesis says NOT to do here. The correct router move is to route this window to vision, and the tree shape says so in advance." },
+    "t6_pictorial": { "pass": false, "detail": "The entire content surface is one giant undeclared pictorial region. Unlike the browser's '[pixels]' lines or Paint's named canvas, nothing marks the painted areas as unreadable — the tree offers named-but-empty rooms. Same silent class as the OBS preview, at whole-app scale." }
+  },
+  "measurements": {
+    "view_bytes": 506,
+    "view_tokens_est": 127,
+    "screenshot_tokens_est": 2642,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": 300,
+    "notes": "The brief's prime suspect, confirmed — with the important twist that saves the safety argument: the failure is PREDICTABLE. Signature chain: Delphi window class -> all-Pane 52-node tree with zero interactive types -> router concludes 'structure = region map only; content = pixels' BEFORE answering any content question. The 15 region captions are genuinely useful (they name WHERE things are: Browser/Channel rack/Playlist/Mixer rects for targeted crops) — FL's minimal a11y layer is a area-map, not a content channel. What makes it silent rather than explicit: nothing distinguishes 'empty pane' from 'pane full of painted content' — the same shape a genuinely empty panel would produce. Timing note for honesty: the UIA walks ran while the welcome wizard was up; the PrintWindow ground truth was captured ~30 s later after the wizard auto-dismissed — both states show the same channel-vs-screen asymmetry (wizard: empty grid node over a painted recent-projects list; workspace: empty panes over a dense DAW UI)."
+  },
+  "runtime_verification": {
+    "method": "PrintWindow(PW_RENDERFULLCONTENT) of FL's own surface vs the distilled view and raw node dump",
+    "agreement": "DISAGREEMENT by omission at whole-app scale: screen dense with text/controls, channel offers empty named panes — recorded as the silent class"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/flstudio-uia-view.txt",
+    "campaign/results/artifacts/windows/flstudio-uia-rawnodes.json",
+    "campaign/results/artifacts/windows/flstudio-uia-shot.png"
+  ]
+}

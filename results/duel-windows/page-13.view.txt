@@ -1,0 +1,57 @@
+text 20,41,101,43 "Orders"
+text 20,106,99,21 "8 open orders"
+text 30,149,43,21 "Order"
+text 213,149,72,21 "Customer"
+text 551,149,37,21 "Total"
+text 791,149,46,21 "Status"
+text 30,188,44,21 "#4300"
+text 213,188,81,21 "Bareti & Co"
+text 551,188,64,21 "€1125.46"
+text 799,188,58,21 "Pending"
+button 1068,183,51,31
+text 1080,191,27,15 "Ship"
+text 30,232,44,21 "#4301"
+text 213,232,97,21 "Mimoro SARL"
+text 551,232,64,21 "€3049.65"
+text 799,232,61,21 "Overdue"
+button 1068,227,51,31
+text 1080,235,27,15 "Ship"
+text 30,276,44,21 "#4302"
+text 213,276,91,21 "Kadumo SAS"
+text 551,276,64,21 "€5015.32"
+text 799,276,58,21 "Pending"
+button 1068,271,51,31
+text 1080,279,27,15 "Ship"
+text 30,320,44,21 "#4303"
+text 213,320,98,21 "Modusa & Co"
+text 551,320,64,21 "€4511.97"
+text 799,320,61,21 "Overdue"
+button 1068,315,51,31
+text 1080,323,27,15 "Ship"
+text 30,364,44,21 "#4304"
+text 213,364,72,21 "Sadupi SA"
+text 551,364,64,21 "€4172.67"
+text 799,364,30,21 "Paid"
+button 1068,359,51,31
+text 1080,367,27,15 "Ship"
+text 30,408,44,21 "#4305"
+text 213,408,85,21 "Minipi & Co"
+text 551,408,55,21 "€669.45"
+text 799,408,61,21 "Overdue"
+button 1068,403,51,31
+text 1080,411,27,15 "Ship"
+text 30,452,44,21 "#4306"
+text 213,452,75,21 "Rebafa Ltd"
+text 551,452,64,21 "€1948.12"
+text 799,452,35,21 "Draft"
+button 1068,447,51,31
+text 1080,455,27,15 "Ship"
+text 30,496,44,21 "#4307"
+text 213,496,71,21 "Rovepi SA"
+text 551,496,64,21 "€1959.71"
+text 799,496,30,21 "Paid"
+button 1068,491,51,31
+text 1080,499,27,15 "Ship"
+input 20,534,177,21 id=cust
+button 197,529,83,31 id=add
+text 209,537,59,15 "Add order"

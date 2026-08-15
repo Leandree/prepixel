@@ -1,0 +1,626 @@
+[
+ {
+  "t": "WindowControl",
+  "n": "FL Studio 2025",
+  "cls": "TFruityLoopsMainForm",
+  "r": [
+   0,
+   0,
+   1920,
+   1032
+  ],
+  "d": 0
+ },
+ {
+  "t": "PaneControl",
+  "n": "Welcome to FL Studio",
+  "cls": "TWelcomeWizard",
+  "r": [
+   523,
+   258,
+   874,
+   516
+  ],
+  "d": 1
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TWPControl",
+  "r": [
+   530,
+   287,
+   860,
+   480
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TDontShowAgainModule",
+  "r": [
+   965,
+   720,
+   410,
+   37
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "Start a new project",
+  "cls": "TChooseTemplateModule",
+  "r": [
+   965,
+   297,
+   410,
+   413
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickStringGrid",
+  "r": [
+   965,
+   322,
+   402,
+   374
+  ],
+  "d": 4
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickScrollBoxScroller",
+  "r": [
+   1350,
+   322,
+   17,
+   374
+  ],
+  "d": 5
+ },
+ {
+  "t": "PaneControl",
+  "n": "Recent projects",
+  "cls": "TRecentFilesModule",
+  "r": [
+   545,
+   297,
+   410,
+   460
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickStringGrid",
+  "r": [
+   545,
+   322,
+   402,
+   421
+  ],
+  "d": 4
+ },
+ {
+  "t": "PaneControl",
+  "n": "Welcome to FL Studio",
+  "cls": "TNewCaption",
+  "r": [
+   525,
+   261,
+   870,
+   26
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TWPControl",
+  "r": [
+   0,
+   82,
+   200,
+   950
+  ],
+  "d": 1
+ },
+ {
+  "t": "PaneControl",
+  "n": "Browser",
+  "cls": "TSampleListForm",
+  "r": [
+   0,
+   82,
+   200,
+   950
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   0,
+   1002,
+   200,
+   30
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEdit",
+  "r": [
+   57,
+   1005,
+   96,
+   23
+  ],
+  "d": 4
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   0,
+   106,
+   200,
+   36
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   15,
+   106,
+   170,
+   33
+  ],
+  "d": 4
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TDataBrowserTree",
+  "r": [
+   13,
+   142,
+   187,
+   860
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickScroller",
+  "r": [
+   0,
+   142,
+   13,
+   860
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "Browser",
+  "cls": "TNewCaption",
+  "r": [
+   2,
+   83,
+   196,
+   23
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TWPControl",
+  "r": [
+   208,
+   82,
+   1712,
+   950
+  ],
+  "d": 1
+ },
+ {
+  "t": "PaneControl",
+  "n": "Channel rack",
+  "cls": "TStepSeqForm",
+  "r": [
+   208,
+   82,
+   499,
+   126
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   213,
+   112,
+   488,
+   66
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "Channel rack",
+  "cls": "TNewCaption",
+  "r": [
+   212,
+   86,
+   491,
+   26
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   212,
+   178,
+   491,
+   26
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TNumBar",
+  "r": [
+   410,
+   191,
+   283,
+   15
+  ],
+  "d": 4
+ },
+ {
+  "t": "PaneControl",
+  "n": "Playlist -",
+  "cls": "TEventEditForm",
+  "r": [
+   782,
+   82,
+   1304,
+   916
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TNumBar",
+  "r": [
+   928,
+   165,
+   16,
+   807
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TNumBar",
+  "r": [
+   2059,
+   130,
+   21,
+   862
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickScroller",
+  "r": [
+   1060,
+   110,
+   1000,
+   21
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "Playlist -",
+  "cls": "TNewCaption",
+  "r": [
+   786,
+   86,
+   1296,
+   23
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TWPControl",
+  "r": [
+   949,
+   110,
+   112,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "Mixer - Master",
+  "cls": "TFXForm",
+  "r": [
+   224,
+   466,
+   1846,
+   500
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   231,
+   494,
+   88,
+   465
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   329,
+   494,
+   1499,
+   465
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "Mixer - Master",
+  "cls": "TNewCaption",
+  "r": [
+   228,
+   470,
+   1838,
+   23
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   1843,
+   494,
+   220,
+   465
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TVectorPanel",
+  "r": [
+   1843,
+   526,
+   220,
+   191
+  ],
+  "d": 4
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickControlBar",
+  "r": [
+   0,
+   0,
+   1920,
+   82
+  ],
+  "d": 1
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolBar",
+  "r": [
+   0,
+   0,
+   1919,
+   41
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "Splitter_1",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   1095,
+   0,
+   756,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   1851,
+   0,
+   68,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   1,
+   0,
+   300,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TNewMenu",
+  "r": [
+   4,
+   4,
+   293,
+   33
+  ],
+  "d": 4
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   497,
+   0,
+   136,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   301,
+   0,
+   196,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   937,
+   0,
+   156,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   765,
+   0,
+   172,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolBar",
+  "r": [
+   0,
+   41,
+   1919,
+   41
+  ],
+  "d": 2
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   624,
+   41,
+   144,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   1,
+   41,
+   300,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   532,
+   41,
+   92,
+   41
+  ],
+  "d": 3
+ },
+ {
+  "t": "PaneControl",
+  "n": "",
+  "cls": "TQuickEditToolbarPanel",
+  "r": [
+   900,
+   41,
+   172,
+   41
+  ],
+  "d": 3
+ }
+]

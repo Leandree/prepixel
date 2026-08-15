@@ -1,0 +1,170 @@
+{
+ "map": [
+  {
+   "z": 0,
+   "title": "Gestionnaire des tâches",
+   "rect": [
+    0,
+    0,
+    1940,
+    1100
+   ],
+   "process": "Taskmgr.exe",
+   "elevated": true,
+   "foreground": true,
+   "channel": "pixels-crop (UIA blocked by integrity boundary — Win32 map still sees it)",
+   "content_extracted": false
+  },
+  {
+   "z": 1,
+   "title": "Orders — Acme Console - Google Chrome",
+   "rect": [
+    100,
+    100,
+    900,
+    700
+   ],
+   "process": "chrome.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "cdp (:9235 answers)",
+   "content_extracted": true
+  },
+  {
+   "z": 2,
+   "title": "Date et heure",
+   "rect": [
+    234,
+    234,
+    463,
+    483
+   ],
+   "process": "rundll32.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "uia (native tree on first walk)",
+   "content_extracted": true
+  },
+  {
+   "z": 3,
+   "title": "wlicense.txt.txt – Bloc-notes",
+   "rect": [
+    104,
+    9,
+    1287,
+    1023
+   ],
+   "process": "Notepad.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "uia (native tree on first walk)",
+   "content_extracted": false
+  },
+  {
+   "z": 4,
+   "title": "◐ Analyser en profondeur un repository Windows",
+   "rect": [
+    953,
+    0,
+    974,
+    1039
+   ],
+   "process": "WindowsTerminal.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "uia (native tree on first walk)",
+   "content_extracted": false
+  },
+  {
+   "z": 5,
+   "title": "Sign in successful | Claude Platform - Google Chrome",
+   "rect": [
+    -7,
+    0,
+    974,
+    1039
+   ],
+   "process": "chrome.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "uia-latch (Chromium/Electron/CEF: content appears on walk 2)",
+   "content_extracted": false
+  },
+  {
+   "z": 6,
+   "title": "@frenchpapa - Discord",
+   "rect": [
+    -8,
+    0,
+    1296,
+    680
+   ],
+   "process": "Discord.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "uia-latch (Chromium/Electron/CEF: content appears on walk 2)",
+   "content_extracted": false
+  },
+  {
+   "z": 7,
+   "title": "Spotify Premium",
+   "rect": [
+    -32000,
+    -32000,
+    160,
+    28
+   ],
+   "process": "Spotify.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "uia-latch (Chromium/Electron/CEF: content appears on walk 2)",
+   "content_extracted": false
+  },
+  {
+   "z": 8,
+   "title": "LibreOffice 26.2.5.2 demande votre autorisation",
+   "rect": [
+    -32000,
+    -32000,
+    160,
+    28
+   ],
+   "process": null,
+   "elevated": null,
+   "foreground": false,
+   "channel": "uia (probe shape first — FL-class apps yield region maps only)",
+   "content_extracted": false
+  },
+  {
+   "z": 9,
+   "title": "Program Manager",
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "process": "explorer.exe",
+   "elevated": false,
+   "foreground": false,
+   "channel": "uia (native tree on first walk)",
+   "content_extracted": false
+  }
+ ],
+ "content": {
+  "timedate_via_uia": {
+   "tokens": 280,
+   "sample": [
+    "pane 264,313,142,144 \"14:35:51\"",
+    "text 413,332,250,15 \"Date :\"",
+    "edit 411,350,252,38 \"Date :\" value=\"‎samedi ‎15 ‎août ‎2026\"",
+    "text 413,388,250,15 \"Heure :\"",
+    "edit 411,407,252,19 \"Heure :\" value=\"14:35:51\""
+   ]
+  },
+  "chrome_via_cdp": {
+   "target": "testapp.html",
+   "note": "full distilled extraction proven in windows-chrome-cdp (273 tok)"
+  }
+ }
+}

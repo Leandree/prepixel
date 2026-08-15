@@ -1,0 +1,57 @@
+text 20,41,101,43 "Orders"
+text 20,106,99,21 "8 open orders"
+text 30,149,43,21 "Order"
+text 214,149,72,21 "Customer"
+text 549,149,37,21 "Total"
+text 790,149,46,21 "Status"
+text 30,188,44,21 "#4200"
+text 214,188,80,21 "Rofaso SAS"
+text 549,188,64,21 "€1388.09"
+text 798,188,58,21 "Pending"
+button 1067,183,51,31
+text 1079,191,27,15 "Ship"
+text 30,232,44,21 "#4201"
+text 214,232,78,21 "Romisa Ltd"
+text 549,232,64,21 "€2917.08"
+text 798,232,58,21 "Pending"
+button 1067,227,51,31
+text 1079,235,27,15 "Ship"
+text 30,276,44,21 "#4202"
+text 214,276,76,21 "Duluve Ltd"
+text 549,276,64,21 "€4335.69"
+text 798,276,61,21 "Overdue"
+button 1067,271,51,31
+text 1079,279,27,15 "Ship"
+text 30,320,44,21 "#4203"
+text 214,320,90,21 "Robafa & Co"
+text 549,320,64,21 "€2744.03"
+text 798,320,61,21 "Overdue"
+button 1067,315,51,31
+text 1079,323,27,15 "Ship"
+text 30,364,44,21 "#4204"
+text 214,364,89,21 "Mipiso & Co"
+text 549,364,64,21 "€3826.38"
+text 798,364,58,21 "Pending"
+button 1067,359,51,31
+text 1079,367,27,15 "Ship"
+text 30,408,44,21 "#4205"
+text 214,408,76,21 "Sobare Ltd"
+text 549,408,64,21 "€1608.55"
+text 798,408,30,21 "Paid"
+button 1067,403,51,31
+text 1079,411,27,15 "Ship"
+text 30,452,44,21 "#4206"
+text 214,452,97,21 "Mosoka & Co"
+text 549,452,64,21 "€2113.85"
+text 798,452,61,21 "Overdue"
+button 1067,447,51,31
+text 1079,455,27,15 "Ship"
+text 30,496,44,21 "#4207"
+text 214,496,95,21 "Mifamo & Co"
+text 549,496,55,21 "€451.79"
+text 798,496,35,21 "Draft"
+button 1067,491,51,31
+text 1079,499,27,15 "Ship"
+input 20,534,177,21 id=cust
+button 197,529,83,31 id=add
+text 209,537,59,15 "Add order"

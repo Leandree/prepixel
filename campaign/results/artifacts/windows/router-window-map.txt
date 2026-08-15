@@ -1,0 +1,10 @@
+0 [0, 0, 1940, 1100] [elev][fg] Taskmgr.exe: "Gestionnaire des tâches" -> pixels-crop
+1 [100, 100, 900, 700]  chrome.exe: "Orders — Acme Console - Google Chrome" -> cdp
+2 [234, 234, 463, 483]  rundll32.exe: "Date et heure" -> uia
+3 [104, 9, 1287, 1023]  Notepad.exe: "wlicense.txt.txt – Bloc-notes" -> uia
+4 [953, 0, 974, 1039]  WindowsTerminal.exe: "◐ Analyser en profondeur un repository Windows" -> uia
+5 [-7, 0, 974, 1039]  chrome.exe: "Sign in successful | Claude Platform - Google Chro" -> uia-latch
+6 [-8, 0, 1296, 680]  Discord.exe: "@frenchpapa - Discord" -> uia-latch
+7 [-32000, -32000, 160, 28]  Spotify.exe: "Spotify Premium" -> uia-latch
+8 [-32000, -32000, 160, 28]  None: "LibreOffice 26.2.5.2 demande votre autorisation" -> uia
+9 [0, 0, 1920, 1080]  explorer.exe: "Program Manager" -> uia

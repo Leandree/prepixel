@@ -1,0 +1,43 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "File Explorer (Win11, CabinetWClass shell window: Win32 list view + XAML islands toolbar/breadcrumb)",
+  "stack": "win32-gdi",
+  "stack_detection": {
+    "method": "window class",
+    "signature": "CabinetWClass; UIA responds with a full 188-node tree on first query",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation`. Throwaway folder %TEMP%/pipeline-tap-explorer with 3 probe files; folder deleted after.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "All shell text readable: file rows WITH their detail columns as values (Modifié le, Type, Taille), full breadcrumb path (Léandre>AppData>Local>Temp>...), status bar '3 élément(s)'." },
+    "t2_enumerate": { "pass": true, "detail": "3/3 files present as listitems with per-column edit values; toolbar (Nouveau/Couper/Copier/...), nav tree incl. the user's quick-access pins, tabs, search box — all with boxes matching the screenshot. HARNESS LESSON kept as data: the probe first scored 1/3 because it matched filesystem names ('alpha.txt') — Explorer hides known extensions, so the accessible names are 'alpha'/'gamma' exactly as PAINTED. The channel is faithful to the screen, not to the filesystem — which is precisely the property the thesis asks of it (the Type column 'Document texte'/'Fichier PNG' still discloses the kind)." },
+    "t3_live_value": { "pass": null, "detail": "Not run (typing in Explorer means rename/search — outside the throwaway perimeter for a shell showing the user's tree). Proven on Notepad/Calculator." },
+    "t4_living_screen": { "pass": null, "detail": "Static folder; idle re-distill diff = 0 bytes. Living screen covered by windows-timedate-uia." },
+    "t5_blind_action": { "pass": true, "detail": "Blind click at the center of 'listitem beta.md' from the published view line (guarded by ControlFromPoint top-level check); verified IN CHANNEL: [selected=False] flipped to [selected=True] on exactly that item, no other item selected. Screenshot confirms the blue highlight. Mirror of the macOS Finder AXSelected cell." },
+    "t6_pictorial": { "pass": true, "detail": "Toolbar icons and file-type glyphs declared as [pixels] image 16x16 rects (explicit); no thumbnail content fabricated. In details view no pictorial region exists beyond icons." }
+  },
+  "measurements": {
+    "view_bytes": 6011,
+    "view_tokens_est": 1470,
+    "screenshot_tokens_est": 974,
+    "diff_bytes_per_interaction": 877,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 186,
+    "notes": "Cost inversion again, by density: 188 nodes -> 1470 tok vs 974 for the window screenshot (1139x641). The view carries MORE than the pixels though (full path, column values, pin list, selection states). Diff per interaction 877 B; idle 0. Capture 186-222 ms — the slowest UIA app so far (deep shell tree, XAML islands). Breadcrumb/address-bar elements appear twice (XAML dual-role duplicates), inflating cost ~10%; a smarter distiller could dedupe."
+  },
+  "runtime_verification": {
+    "method": "screenshot after the blind click compared against the post-click channel state",
+    "agreement": "full agreement: names without extensions exactly as painted, beta.md highlighted+selected, status bar counts match"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/explorer-uia-view.txt",
+    "campaign/results/artifacts/windows/explorer-uia-shot.png"
+  ]
+}

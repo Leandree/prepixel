@@ -1,0 +1,43 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "Paint (Win11 WinUI rewrite) — blank throwaway canvas",
+  "stack": "winui-xaml",
+  "stack_detection": {
+    "method": "process + UIA response",
+    "signature": "Win11 Paint (Microsoft.Paint store app); UIA answers with a 232-node tree on first query",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation`. Blank canvas only; app closed without saving.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "All chrome text readable: menus, tool group labels, canvas dimensions in the status bar ('1152 x 648px'), zoom level." },
+    "t2_enumerate": { "pass": true, "detail": "232 nodes: every tool, brush, shape, color swatch (named), sliders, Copilot/Calques buttons — enumerated with boxes; screenshot cross-check matches." },
+    "t3_live_value": { "pass": null, "detail": "Not run (no text field; proven elsewhere)." },
+    "t4_living_screen": { "pass": null, "detail": "Static app; idle re-distill diff = 0 bytes." },
+    "t5_blind_action": { "pass": true, "detail": "Blind click on the 'Pinceaux' group from its view line (guarded); effect verified IN CHANNEL: the brushes flyout appeared with 'Pinceau' [toggle=1]." },
+    "t6_pictorial": { "pass": true, "detail": "THE TEST THIS CELL EXISTS FOR: the drawing canvas is DECLARED — a bounded, named UIA group ('Utilisation de l’outil Pinceau sur la zone de dessin', rect 383,288,1152,637) exactly matching the painted canvas area (status bar dims 1152x648 minus scroll edges). The channel never fabricates canvas CONTENT (pixel data stays pixels) but the region and its role are explicit -> a router knows precisely which rect to crop for vision. Explicit perimeter, not silence." }
+  },
+  "measurements": {
+    "view_bytes": 7692,
+    "view_tokens_est": 1901,
+    "screenshot_tokens_est": 1770,
+    "diff_bytes_per_interaction": 1304,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 240,
+    "notes": "Near break-even on cost (1901 vs 1770 tok — dense toolbar, big window), consistent with the density law. Capture 240-249 ms (largest XAML tree so far). The pictorial verdict is the payload: Windows' flagship drawing app declares its opaque region with name+rect, mirroring the browser distiller's [pixels] canvas line and macOS Safari's honest empty AXWebArea — three stacks, same explicit-perimeter behaviour."
+  },
+  "runtime_verification": {
+    "method": "screenshot compared against view: canvas rect vs painted canvas, toolbar enumeration vs visible tools",
+    "agreement": "full agreement; declared canvas rect coincides with the white drawing area on screen"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/paint-uia-view.txt",
+    "campaign/results/artifacts/windows/paint-uia-shot.png"
+  ]
+}

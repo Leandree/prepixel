@@ -1,0 +1,22 @@
+window 156,156,463,483 "Date et heure"
+pane 174,216,427,375 "Date et heure"
+pane 186,235,142,144 "14:07:08"
+text 335,254,250,15 "Date :"
+edit 333,272,252,38 "Date :" value="‎samedi ‎15 ‎août ‎2026"
+text 335,310,250,15 "Heure :"
+edit 333,329,252,19 "Heure :" value="14:07:08"
+button 398,351,189,23 "Changer la date et l’heure..."
+text 192,387,105,15 "Fuseau horaire"
+edit 188,413,399,19 "Fuseau horaire" value="(UTC+01:00) Bruxelles, Copenhague, Madrid, Paris"
+button 398,435,189,23 "Changer de fuseau horaire..."
+text 192,477,396,47 "Le passage à l'heure d'été se terminera le ‎dimanche ‎25 ‎octobre ‎2026 à 03:00. L'horloge est configurée pour reculer d'une heure à cette date."
+checkbox 192,524,396,23 "M’avertir lorsque l’horloge est modifiée" [toggle=1]
+button 368,601,75,23 "OK"
+button 449,601,75,23 "Annuler"
+button 530,601,75,23 "Appliquer"
+tabitem 172,196,79,18 "Date et heure" [selected=True]
+tabitem 251,196,135,18 "Horloges supplémentaires" [selected=False]
+tabitem 386,196,86,18 "Temps Internet" [selected=False]
+menubar 164,164,22,22 "Système"
+menuitem 164,164,22,22 "Système"
+button 578,157,34,30 "Fermer"

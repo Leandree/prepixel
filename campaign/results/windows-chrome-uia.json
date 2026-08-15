@@ -1,0 +1,44 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), live in-use machine",
+  "app": "Google Chrome 151.0.7922.138 (isolated instance, temp profile) — DUAL channel of windows-chrome-cdp, same page",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "UIA probe with latch protocol (probe -> poke -> re-probe)",
+    "signature": "first UIA walk returns 257 nodes of browser chrome WITHOUT page content (the stub); the walk itself is the assistive-client signal — 328 nodes WITH full page content by the second walk, t+1.4 s. No --force-renderer-accessibility needed",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation` against a normally-launched Chrome (no accessibility flags). Chromium enables renderer accessibility on detecting the UIA client (WM_GETOBJECT traffic).",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "After the latch: full page text ('Dupont SARL', '3 open orders' …) plus browser chrome the CDP channel cannot see (tabs, toolbar, status bubble)." },
+    "t2_enumerate": { "pass": true, "detail": "37 interactive lines = page's 10 + browser chrome (tab strip, toolbar, bookmarks bar). Frames are physical screen pixels, directly clickable — no CSS-frame conversion needed (the macOS DPR trap does not exist via UIA)." },
+    "t3_live_value": { "pass": true, "detail": "Focused the field via UIA, typed; value=\"UIA-DUAL-42q\" visible in the re-walked view. Diff 975 B (UIA diffs are heavier than CDP's 56 B for the same edit — coarser tree granularity)." },
+    "t4_living_screen": { "pass": null, "detail": "Living screen measured on the CDP twin cell (120-239 B/tick); not repeated here." },
+    "t5_blind_action": { "pass": null, "detail": "Blind click already proven both via CDP (same page) and via UIA (Calculator/Explorer); not repeated." },
+    "t6_pictorial": { "pass": true, "detail": "allcanvas.html via UIA: document node + '[pixels] image 48,127,1280,800' — the canvas declared with its exact rect, zero fabricated text inside it. (One text line below the content area is Chrome's own 'fichier local ou partagé' status bubble — really on screen, correctly reported.)" }
+  },
+  "measurements": {
+    "view_bytes": 3913,
+    "view_tokens_est": 969,
+    "screenshot_tokens_est": 1560,
+    "diff_bytes_per_interaction": 975,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 200,
+    "notes": "THE WINDOWS AT-LATCH, quantified: stub (257 nodes, no content) -> latched (328 nodes, full content) in ONE extra walk ~1.2 s later; faster and more automatic than macOS (no AXEnhancedUserInterface incantation, no error codes — the UIA query IS the trigger). Channel comparison on the identical screen: UIA 969 tok / ~200 ms vs CDP 273 tok / 8 ms (3.5x lighter, 25x faster) — but UIA sees browser chrome and speaks screen-global coordinates. Same pairing conclusion as macOS: CDP for the page, accessibility for the window; a router should hold both. Router rule confirmed for Windows: NEVER classify a Chromium app from the first UIA read."
+  },
+  "runtime_verification": {
+    "method": "window screenshot artifact vs latched view; canvas-page view cross-checked against the known all-canvas page",
+    "agreement": "full agreement; no divergence, canvas declared"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/chrome-uia-view-testapp.txt",
+    "campaign/results/artifacts/windows/chrome-uia-view-allcanvas.txt",
+    "campaign/results/artifacts/windows/chrome-uia-shot.png"
+  ]
+}

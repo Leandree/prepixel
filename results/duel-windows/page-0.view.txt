@@ -1,0 +1,63 @@
+text 20,41,101,43 "Orders"
+text 20,106,99,21 "9 open orders"
+text 30,149,43,21 "Order"
+text 212,149,72,21 "Customer"
+text 557,149,37,21 "Total"
+text 795,149,46,21 "Status"
+text 30,188,44,21 "#3000"
+text 212,188,81,21 "Pifasa SARL"
+text 557,188,64,21 "€2145.51"
+text 803,188,58,21 "Pending"
+button 1069,183,51,31
+text 1081,191,27,15 "Ship"
+text 30,232,44,21 "#3001"
+text 212,232,77,21 "Rerofa SAS"
+text 557,232,55,21 "€940.59"
+text 803,232,35,21 "Draft"
+button 1069,227,51,31
+text 1081,235,27,15 "Ship"
+text 30,276,44,21 "#3002"
+text 212,276,72,21 "Soniba SA"
+text 557,276,64,21 "€1657.18"
+text 803,276,61,21 "Overdue"
+button 1069,271,51,31
+text 1081,279,27,15 "Ship"
+text 30,320,44,21 "#3003"
+text 212,320,92,21 "Piluka GmbH"
+text 557,320,64,21 "€1540.20"
+text 803,320,30,21 "Paid"
+button 1069,315,51,31
+text 1081,323,27,15 "Ship"
+text 30,364,44,21 "#3004"
+text 212,364,87,21 "Momopi Ltd"
+text 557,364,64,21 "€3568.43"
+text 803,364,58,21 "Pending"
+button 1069,359,51,31
+text 1081,367,27,15 "Ship"
+text 30,408,44,21 "#3005"
+text 212,408,102,21 "Mivemi GmbH"
+text 557,408,55,21 "€693.56"
+text 803,408,58,21 "Pending"
+button 1069,403,51,31
+text 1081,411,27,15 "Ship"
+text 30,452,44,21 "#3006"
+text 212,452,87,21 "Sokalu SARL"
+text 557,452,55,21 "€180.44"
+text 803,452,61,21 "Overdue"
+button 1069,447,51,31
+text 1081,455,27,15 "Ship"
+text 30,496,44,21 "#3007"
+text 212,496,82,21 "Fapifa SARL"
+text 557,496,64,21 "€4094.22"
+text 803,496,35,21 "Draft"
+button 1069,491,51,31
+text 1081,499,27,15 "Ship"
+text 30,540,44,21 "#3008"
+text 212,540,81,21 "Mobani Ltd"
+text 557,540,64,21 "€2711.48"
+text 803,540,58,21 "Pending"
+button 1069,535,51,31
+text 1081,543,27,15 "Ship"
+input 20,578,177,21 id=cust
+button 197,573,83,31 id=add
+text 209,581,59,15 "Add order"

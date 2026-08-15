@@ -1,0 +1,216 @@
+window 191,107,1536,864 "Sans titre - Paint"
+menuitem 203,142,61,32 "Fichier"
+button 203,142,61,32 "Fichier"
+text 213,149,41,19 "Fichier"
+menuitem 272,142,73,32 "Modifier"
+button 272,142,73,32 "Modifier"
+text 282,149,53,19 "Modifier"
+menuitem 353,142,79,32 "Affichage"
+button 353,142,79,32 "Affichage"
+text 363,149,59,19 "Affichage"
+button 445,142,32,32 "Enregistrer"
+text 452,149,18,15 ""
+button 490,142,32,32 "Partager"
+text 497,149,18,15 ""
+button 535,142,32,32 "Annuler"
+text 542,149,18,15 ""
+button 575,142,32,32 "Répéter"
+text 582,149,18,15 ""
+button 1615,142,32,32 "Nouveautés"
+text 1622,149,18,15 ""
+button 1651,142,32,32 "Se connecter"
+text 1655,146,24,24 "Personne"
+text 1662,153,11,11 ""
+button 1683,142,32,32 "Ouvrir les paramètres"
+text 1690,149,18,15 ""
+group 199,183,75,100 "Sélection"
+radiobutton 216,196,40,54 "Sélectionner" [selected=False]
+button 217,197,38,35
+[pixels] image 224,203,24,24
+button 217,233,38,16 "Plus d'options"
+text 211,263,50,16 "Sélection"
+group 274,183,159,100 "Image"
+button 286,187,32,32 "Rogner"
+text 294,195,16,16 ""
+button 286,227,32,32 "Supprimer l’arrière-plan"
+[pixels] image 290,231,24,24
+button 326,187,54,32 "Faire pivoter"
+[pixels] image 335,195,16,16
+button 326,227,54,32 "Retourner"
+[pixels] image 335,235,16,16
+button 388,207,32,32 "Redimensionner et incliner"
+[pixels] image 392,211,24,24
+text 336,263,34,16 "Image"
+group 433,183,137,100 "Outils"
+button 445,187,32,32 "Crayon" [toggle=0]
+[pixels] image 453,195,16,16
+button 485,187,32,32 "Remplissage" [toggle=0]
+[pixels] image 493,195,16,16
+button 525,187,32,32 "Texte" [toggle=0]
+[pixels] image 533,195,16,16
+button 445,227,32,32 "Gomme" [toggle=0]
+[pixels] image 453,235,16,16
+button 485,227,32,32 "Sélecteur de couleurs" [toggle=0]
+[pixels] image 493,235,16,16
+button 525,227,32,32 "Loupe" [toggle=0]
+[pixels] image 533,235,16,16
+text 485,263,32,16 "Outils"
+group 570,183,73,100 "Pinceaux"
+radiobutton 586,196,40,54 "Pinceaux" [selected=True]
+button 587,197,38,35
+[pixels] image 594,203,24,24
+button 587,233,38,16 "Plus d'options"
+text 582,263,48,16 "Pinceaux"
+group 643,183,289,100 "Formes"
+listitem 656,188,22,22 "Trait"
+button 657,189,20,20 "Trait" [toggle=0]
+[pixels] image 658,190,18,18
+listitem 678,188,22,22 "Courbe"
+button 679,189,20,20 "Courbe" [toggle=0]
+[pixels] image 680,190,18,18
+listitem 700,188,22,22 "Ovale"
+button 701,189,20,20 "Ovale" [toggle=0]
+[pixels] image 702,190,18,18
+listitem 722,188,22,22 "Rectangle"
+button 723,189,20,20 "Rectangle" [toggle=0]
+[pixels] image 724,190,18,18
+listitem 744,188,22,22 "Rectangle arrondi"
+button 745,189,20,20 "Rectangle arrondi" [toggle=0]
+[pixels] image 746,190,18,18
+listitem 766,188,22,22 "Polygone"
+button 767,189,20,20 "Polygone" [toggle=0]
+[pixels] image 768,190,18,18
+listitem 788,188,22,22 "Triangle"
+button 789,189,20,20 "Triangle" [toggle=0]
+[pixels] image 790,190,18,18
+listitem 656,210,22,22 "Triangle rectangle"
+button 657,211,20,20 "Triangle rectangle" [toggle=0]
+[pixels] image 658,212,18,18
+listitem 678,210,22,22 "Losange"
+button 679,211,20,20 "Losange" [toggle=0]
+[pixels] image 680,212,18,18
+listitem 700,210,22,22 "Pentagone"
+button 701,211,20,20 "Pentagone" [toggle=0]
+[pixels] image 702,212,18,18
+listitem 722,210,22,22 "Hexagone"
+button 723,211,20,20 "Hexagone" [toggle=0]
+[pixels] image 724,212,18,18
+listitem 744,210,22,22 "Flèche droite"
+button 745,211,20,20 "Flèche droite" [toggle=0]
+[pixels] image 746,212,18,18
+listitem 766,210,22,22 "Flèche gauche"
+button 767,211,20,20 "Flèche gauche" [toggle=0]
+[pixels] image 768,212,18,18
+listitem 788,210,22,22 "Flèche Haut"
+button 789,211,20,20 "Flèche Haut" [toggle=0]
+[pixels] image 790,212,18,18
+listitem 656,232,22,22 "Flèche Bas"
+button 657,233,20,20 "Flèche Bas" [toggle=0]
+[pixels] image 658,234,18,18
+listitem 678,232,22,22 "Étoile à 4 branches"
+button 679,233,20,20 "Étoile à 4 branches" [toggle=0]
+[pixels] image 680,234,18,18
+listitem 700,232,22,22 "Étoile à 5 branches"
+button 701,233,20,20 "Étoile à 5 branches" [toggle=0]
+[pixels] image 702,234,18,18
+listitem 722,232,22,22 "Étoile à 6 branches"
+button 723,233,20,20 "Étoile à 6 branches" [toggle=0]
+[pixels] image 724,234,18,18
+listitem 744,232,22,22 "Bulle rectangulaire à coins arrondis"
+button 745,233,20,20 "Bulle rectangulaire à coins arrondis" [toggle=0]
+[pixels] image 746,234,18,18
+listitem 766,232,22,22 "Légende ovale"
+button 767,233,20,20 "Légende ovale" [toggle=0]
+[pixels] image 768,234,18,18
+listitem 788,232,22,22 "Pensées"
+button 789,233,20,20 "Pensées" [toggle=0]
+[pixels] image 790,234,18,18
+listitem 656,254,22,8 "Cœur"
+button 657,255,20,7 "Cœur" [toggle=0]
+[pixels] image 658,256,18,6
+listitem 678,254,22,8 "Éclair"
+button 679,255,20,7 "Éclair" [toggle=0]
+[pixels] image 680,256,18,6
+button 827,187,54,32 "Contour de la forme"
+button 827,227,54,32 "Remplissage de la forme"
+button 881,198,38,50 "Taille"
+[pixels] image 888,205,24,24
+text 884,237,32,8 ""
+text 767,263,40,16 "Formes"
+group 942,186,330,93 "Couleurs"
+radiobutton 942,186,36,36 "Couleur 1 : Noir" [selected=True]
+radiobutton 942,224,36,36 "Couleur 2 : Blanc" [selected=False]
+listitem 984,187,24,24 "Noir"
+listitem 1008,187,24,24 "Gris"
+listitem 1032,187,24,24 "Rouge foncé"
+listitem 1056,187,24,24 "Rouge"
+listitem 1080,187,24,24 "Orange"
+listitem 1104,187,24,24 "Jaune"
+listitem 1128,187,24,24 "Vert"
+listitem 1152,187,24,24 "Turquoise"
+listitem 1176,187,24,24 "Bleu indigo"
+listitem 1200,187,24,24 "Violet"
+listitem 984,211,24,24 "Blanc"
+listitem 1008,211,24,24 "Gris clair"
+listitem 1032,211,24,24 "Brun"
+listitem 1056,211,24,24 "Rose saumon"
+listitem 1080,211,24,24 "Or"
+listitem 1104,211,24,24 "Jaune clair"
+listitem 1128,211,24,24 "Vert clair"
+listitem 1152,211,24,24 "Turquoise clair"
+listitem 1176,211,24,24 "Bleu gris"
+listitem 1200,211,24,24 "Lavande"
+listitem 984,235,24,24 "Vide"
+listitem 1008,235,24,24 "Vide"
+listitem 1032,235,24,24 "Vide"
+listitem 1056,235,24,24 "Vide"
+listitem 1080,235,24,24 "Vide"
+listitem 1104,235,24,24 "Vide"
+listitem 1128,235,24,24 "Vide"
+listitem 1152,235,24,24 "Vide"
+listitem 1176,235,24,24 "Vide"
+listitem 1200,235,24,24 "Vide"
+button 1232,203,40,40 "Modifier les couleurs"
+[pixels] image 1238,209,28,28
+text 1084,263,48,16 "Couleurs"
+group 1284,183,65,100 "Copilot"
+button 1300,200,34,46 "Copilot"
+[pixels] image 1305,205,24,24
+text 1305,233,24,8 ""
+text 1297,263,40,16 "Copilot"
+group 1349,183,68,100 "Calques"
+button 1364,203,40,40 [toggle=0]
+[pixels] image 1372,211,24,24
+text 1362,263,43,16 "Calques"
+button 1693,261,22,22 "Options de barre d’outils"
+text 1698,266,12,12 ""
+group 383,288,1152,637 "Utilisation de l’outil Pinceau sur la zone de dessin"
+scrollbar 1707,288,12,637 "Vertical"
+button 1707,288,12,12 "Légère diminution verticale"
+text 1707,292,12,8 ""
+button 1707,300,12,28 "Diminution verticale importante"
+thumb 1707,328,12,548 "Curseur vertical"
+button 1707,876,12,37 "Augmentation verticale importante"
+button 1707,913,12,12 "Légère augmentation verticale"
+text 1707,913,12,8 ""
+[pixels] image 223,323,16,16
+slider 215,351,32,239 "Taille"
+[pixels] image 223,624,16,16
+slider 215,650,32,240 "Opacité"
+[pixels] image 211,939,12,12
+[pixels] image 343,939,12,12
+[pixels] image 475,939,12,12
+text 495,937,92,16 "1152 × 648px"
+button 1367,932,38,26 "Ajuster à la fenêtre"
+text 1376,935,20,20 ""
+combobox 1409,926,100,37 "Zoom"
+button 1513,935,32,20 "Zoom arrière"
+[pixels] image 1522,938,14,14
+slider 1549,929,130,32 "Zoom"
+button 1683,935,32,20 "Zoom avant"
+[pixels] image 1692,938,14,14
+menubar 199,115,22,22 "Système"
+menuitem 199,115,22,22 "Système"
+button 1580,108,47,30 "Réduire"
+button 1627,108,46,30 "Agrandir"
+button 1673,108,47,30 "Fermer"

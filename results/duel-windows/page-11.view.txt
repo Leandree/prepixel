@@ -1,0 +1,51 @@
+text 20,41,101,43 "Orders"
+text 20,106,99,21 "7 open orders"
+text 30,149,43,21 "Order"
+text 211,149,72,21 "Customer"
+text 558,149,37,21 "Total"
+text 796,149,46,21 "Status"
+text 30,188,44,21 "#4100"
+text 211,188,87,21 "Dupini & Co"
+text 558,188,55,21 "€310.03"
+text 804,188,61,21 "Overdue"
+button 1069,183,51,31
+text 1081,191,27,15 "Ship"
+text 30,232,44,21 "#4101"
+text 211,232,102,21 "Dudumo SARL"
+text 558,232,64,21 "€4258.99"
+text 804,232,58,21 "Pending"
+button 1069,227,51,31
+text 1081,235,27,15 "Ship"
+text 30,276,44,21 "#4102"
+text 211,276,95,21 "Vesafa GmbH"
+text 558,276,64,21 "€4231.64"
+text 804,276,30,21 "Paid"
+button 1069,271,51,31
+text 1081,279,27,15 "Ship"
+text 30,320,44,21 "#4103"
+text 211,320,75,21 "Karoso Ltd"
+text 558,320,64,21 "€3973.27"
+text 804,320,30,21 "Paid"
+button 1069,315,51,31
+text 1081,323,27,15 "Ship"
+text 30,364,44,21 "#4104"
+text 211,364,74,21 "Savemi SA"
+text 558,364,64,21 "€1033.60"
+text 804,364,35,21 "Draft"
+button 1069,359,51,31
+text 1081,367,27,15 "Ship"
+text 30,408,44,21 "#4105"
+text 211,408,81,21 "Vekave SAS"
+text 558,408,64,21 "€2340.11"
+text 804,408,30,21 "Paid"
+button 1069,403,51,31
+text 1081,411,27,15 "Ship"
+text 30,452,44,21 "#4106"
+text 211,452,73,21 "Pimive Ltd"
+text 558,452,64,21 "€1330.92"
+text 804,452,61,21 "Overdue"
+button 1069,447,51,31
+text 1081,455,27,15 "Ship"
+input 20,490,177,21 id=cust
+button 197,485,83,31 id=add
+text 209,493,59,15 "Add order"

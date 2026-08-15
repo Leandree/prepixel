@@ -1,0 +1,56 @@
+window 104,9,1287,1023 "pipeline-tap-probe.txt – Bloc-notes"
+document 110,84,1275,910 "Éditeur de texte" value="PIPELINE-TAP-SENTINEL The quick brown fox 12345 café naïve élève 日本語 🚀 END"
+tabitem 158,19,239,32 "wlicense.txt.txt. Non modifié." [selected=False]
+text 167,27,79,15 "wlicense.txt.txt"
+tabitem 393,19,247,32 "pipeline-tap-probe.txt. Non modifié." [selected=True]
+text 406,27,123,15 "pipeline-tap-probe.txt"
+button 599,23,32,24 "Fermer l’onglet"
+text 609,29,12,12 ""
+button 643,25,32,24 "Ajouter un nouvel onglet"
+text 653,31,12,12 ""
+menuitem 114,51,61,32 "Fichier"
+button 114,51,61,32 "Fichier"
+text 124,58,41,19 "Fichier"
+menuitem 183,51,73,32 "Modifier"
+button 183,51,73,32 "Modifier"
+text 193,58,53,19 "Modifier"
+menuitem 264,51,79,32 "Affichage"
+button 264,51,79,32 "Affichage"
+text 274,58,59,19 "Affichage"
+button 584,51,56,32 "Titres"
+text 595,60,14,14 ""
+button 640,51,56,32 "Listes"
+text 651,60,14,14 ""
+button 696,51,32,32 "Gras (Ctrl+B)" [toggle=0]
+text 705,60,14,14 ""
+button 728,51,32,32 "Italique (Ctrl+I)" [toggle=0]
+text 737,60,14,14 ""
+button 760,51,32,32 "Texte barré (Ctrl+Maj+X)" [toggle=0]
+text 769,60,14,14 ""
+button 792,51,32,32 "Lier (Ctrl+K)" [toggle=0]
+text 801,60,14,14 ""
+button 824,51,56,32 "Tableau"
+text 835,60,14,14 ""
+button 880,51,32,32 "Effacer la mise en forme (Ctrl+Espace)" [toggle=0]
+text 889,60,14,14 ""
+button 1219,51,56,32 "Outils d’écriture"
+text 1230,60,14,14 ""
+button 1279,52,30,30 "Nouveautés"
+text 1287,60,14,14 ""
+button 1313,51,30,32 "Avatar de l'utilisateur"
+text 1318,57,20,20 "Personne"
+text 1324,63,9,9 ""
+[pixels] image 1318,57,20,20
+button 1347,51,30,32 "Paramètres"
+text 126,1002,59,16 "Ligne 1, colonne
+1"
+text 215,1002,72,16 "76 caractères"
+text 417,994,67,32 "Texte brut"
+text 1014,1002,32,16 "Zoom"
+text 1082,1002,91,16 "Windows (CRLF)"
+text 1250,1002,36,16 "UTF-8"
+menubar 112,17,22,22 "Système"
+menuitem 112,17,22,22 "Système"
+button 1246,10,47,30 "Réduire"
+button 1293,10,46,30 "Agrandir"
+button 1339,10,47,30 "Fermer"

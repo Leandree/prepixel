@@ -1,0 +1,148 @@
+window 400,205,1139,641 "pipeline-tap-explorer : Explorateur de fichiers"
+pane 408,341,1123,497 "pipeline-tap-explorer"
+pane 408,341,1123,497 "Volet de l’Explorateur"
+pane 408,341,1123,497 "Volet de présentation des dossiers"
+statusbar 408,814,1123,24 "Barre d’état"
+group 415,814,79,24 "Champ de propriété"
+text 420,814,69,24 "3 élément(s)"
+group 1479,814,48,24 "Modes d’affichage"
+radiobutton 1479,814,24,24 "Détails" [selected=True]
+radiobutton 1503,814,24,24 "Grandes icônes" [selected=False]
+pane 410,341,304,473 "Hôte de contrôle"
+tree 410,341,304,473 "Volet de navigation"
+scrollbar 697,341,17,473 "Vertical"
+button 697,341,17,17 "Ligne vers le haut"
+button 697,358,17,98 "Page précédente"
+thumb 697,456,17,317 "Position"
+button 697,773,17,24 "Page suivante"
+button 697,797,17,17 "Ligne vers le bas"
+treeitem 461,341,94,32 "Téléchargements (épinglé)" [selected=False]
+treeitem 461,373,65,32 "Documents (épinglé)" [selected=False]
+treeitem 461,405,42,32 "Images (épinglé)" [selected=False]
+treeitem 461,437,50,32 "Musique (épinglé)" [selected=False]
+treeitem 461,469,39,32 "Vidéos (épinglé)" [selected=False]
+treeitem 461,501,96,32 "avatar generation" [selected=False]
+treeitem 461,533,60,32 "Fin de l’accès rapide – workspace" [selected=False]
+treeitem 461,597,36,32 "Ce PC" [selected=False]
+treeitem 469,629,90,32 "Disque local (C:)" [selected=True]
+treeitem 461,661,41,32 "Réseau" [selected=False]
+treeitem 461,693,32,32 "Linux" [selected=False]
+treeitem 469,725,87,32 "docker-desktop" [selected=False]
+pane 718,341,813,473 "Affichage Dossier Bureau"
+list 718,341,813,473 "Vue d’éléments"
+header 718,341,813,25 "En-tête"
+splitbutton 718,341,272,25 "Nom"
+button 974,341,15,25 "Filtrer liste déroulante"
+splitbutton 990,341,144,25 "Modifié le"
+button 1118,341,15,25 "Filtrer liste déroulante"
+splitbutton 1134,341,120,25 "Type"
+button 1238,341,15,25 "Filtrer liste déroulante"
+splitbutton 1254,341,80,25 "Taille"
+button 1318,341,15,25 "Filtrer liste déroulante"
+listitem 732,372,598,24 "alpha" [selected=False]
+edit 754,375,236,19 "Nom" value="alpha"
+edit 990,375,144,19 "Modifié le" value="‎15/‎08/‎2026 ‏‎14:08"
+edit 1134,375,120,19 "Type" value="Document texte"
+edit 1254,375,80,19 "Taille" value="1 Ko"
+listitem 732,400,598,24 "beta.md" [selected=False]
+edit 754,403,236,19 "Nom" value="beta.md"
+edit 990,403,144,19 "Modifié le" value="‎15/‎08/‎2026 ‏‎14:08"
+edit 1134,403,120,19 "Type" value="Fichier MD"
+edit 1254,403,80,19 "Taille" value="1 Ko"
+listitem 732,428,598,24 "gamma" [selected=False]
+edit 754,431,236,19 "Nom" value="gamma"
+edit 990,431,144,19 "Modifié le" value="‎15/‎08/‎2026 ‏‎14:08"
+edit 1134,431,120,19 "Type" value="Fichier PNG"
+edit 1254,431,80,19 "Taille" value="1 Ko"
+tabitem 412,213,248,32 "pipeline-tap-explorer" [selected=True]
+[pixels] image 425,221,16,16
+text 451,221,116,15 "pipeline-tap-explorer"
+button 619,217,32,24 "Fermer l’onglet"
+text 629,223,12,12 ""
+button 663,218,32,24 "Ajouter un nouvel onglet"
+text 673,224,12,12 ""
+button 419,253,32,32 "Précédent"
+text 429,263,12,12 ""
+button 467,253,32,32 "Suivant"
+text 477,263,12,12 ""
+button 515,253,32,32 "Jusqu’à « Temp » (Alt + Haut)"
+text 525,263,12,12 ""
+button 563,253,32,32 "Actualiser « pipeline-tap-explorer » (F5)"
+text 573,263,12,12 ""
+edit 609,253,643,32 "Barre d’adresses"
+edit 609,253,643,32 "Barre d’adresses"
+splitbutton 622,257,51,24 "Ce PC"
+button 622,261,16,16
+[pixels] image 622,261,16,16
+button 647,257,26,24 [toggle=0]
+text 652,258,16,22 "ChevronTextBlock"
+splitbutton 673,257,31,24 "Plus"
+button 673,257,31,24 "BreadcrumbBarItemButton"
+group 682,261,14,14 "BreadcrumbBarItemGrid"
+text 682,261,14,14 "BreadcrumbBarEllipsisTextBlock"
+splitbutton 704,257,91,24 "Léandre"
+button 704,257,67,24 "BreadcrumbBarItemButton"
+group 713,259,50,19 "BreadcrumbBarItemGrid"
+text 713,259,50,19 "Léandre"
+button 771,257,24,24
+text 775,258,16,22 "ChevronTextBlock"
+splitbutton 795,257,96,24 "AppData"
+button 795,257,72,24 "BreadcrumbBarItemButton"
+group 804,259,55,19 "BreadcrumbBarItemGrid"
+text 804,259,55,19 "AppData"
+button 867,257,24,24
+text 871,258,16,22 "ChevronTextBlock"
+splitbutton 891,257,73,24 "Local"
+button 891,257,49,24 "BreadcrumbBarItemButton"
+group 900,259,32,19 "BreadcrumbBarItemGrid"
+text 900,259,32,19 "Local"
+button 940,257,24,24
+text 944,258,16,22 "ChevronTextBlock"
+splitbutton 964,257,75,24 "Temp"
+button 964,257,51,24 "BreadcrumbBarItemButton"
+group 973,259,34,19 "BreadcrumbBarItemGrid"
+text 973,259,34,19 "Temp"
+button 1015,257,24,24
+text 1019,258,16,22 "ChevronTextBlock"
+splitbutton 1039,257,150,24 "pipeline-tap-explorer"
+button 1039,257,150,24
+text 1048,259,132,19 "pipeline-tap-explorer"
+edit 1260,253,260,32 "Rechercher dans : pipeline-tap-explorer"
+edit 1260,253,260,32 "Rechercher dans : pipeline-tap-explorer"
+text 1271,259,204,19 "Rechercher dans : pipeline-tap-explorer"
+button 1485,258,30,22 "Rechercher"
+text 1495,263,12,12 ""
+button 414,294,109,46 "Nouveau"
+[pixels] image 426,310,16,16
+text 450,310,48,16 "Nouveau"
+text 503,314,8,8 ""
+button 534,294,40,46 "Couper"
+[pixels] image 546,310,16,16
+button 582,294,40,46 "Copier"
+[pixels] image 594,310,16,16
+button 630,294,40,46 "Coller"
+[pixels] image 642,310,16,16
+button 678,294,40,46 "Renommer"
+[pixels] image 690,310,16,16
+button 726,294,40,46 "Partager"
+[pixels] image 738,310,16,16
+button 774,294,40,46 "Supprimer"
+[pixels] image 786,310,16,16
+button 825,294,84,46 "Trier"
+[pixels] image 837,310,16,16
+text 861,310,23,16 "Trier"
+text 889,314,8,8 ""
+button 913,294,102,46 "Afficher"
+[pixels] image 925,310,16,16
+text 949,310,41,16 "Afficher"
+text 995,314,8,8 ""
+button 1022,294,48,46 "Autres options"
+text 1034,317,20,3 ""
+button 1437,294,84,46 "Détails"
+[pixels] image 1449,310,16,16
+text 1473,310,36,16 "Détails"
+menubar 408,213,22,22 "Système"
+menuitem 408,213,22,22 "Système"
+button 1392,206,47,30 "Réduire"
+button 1439,206,46,30 "Agrandir"
+button 1485,206,47,30 "Fermer"

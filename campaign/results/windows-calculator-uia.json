@@ -1,0 +1,44 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), French locale, live in-use machine",
+  "app": "Calculator (Microsoft.WindowsCalculator, WinUI/XAML UWP)",
+  "stack": "winui-xaml",
+  "stack_detection": {
+    "method": "process identity + UIA response",
+    "signature": "UWP package Microsoft.WindowsCalculator; UIA answers with a full 92-node tree on first query (no latch). NOTE the frame/content process split: the top-level WindowControl belongs to ApplicationFrameHost.exe, every content element to CalculatorApp.exe",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "UI Automation via Python `uiautomation`. No flags, no permissions.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Display read in-channel: 'L’affichage est 0' then 'L’affichage est 5' after the computation. XAML puts the semantic sentence in the accessible Name — richer than the painted glyph ('5')." },
+    "t2_enumerate": { "pass": true, "detail": "36 interactive lines: 10 digits (named in words: 'Deux', 'Trois'… with the painted glyph in a child text node), 4 operators, memory row, CE/C/backspace, history/nav buttons. Screenshot cross-check: every visible control present, positions match." },
+    "t3_live_value": { "pass": true, "detail": "Merged with T5: after each blind click the view updates (display line + expression line '2 + 3 =' appear); per-interaction unified diffs 266-736 bytes." },
+    "t4_living_screen": { "pass": null, "detail": "No self-updating region in standard mode; living-screen cell run on Task Manager (windows-taskmgr-uia)." },
+    "t5_blind_action": { "pass": true, "detail": "Full blind computation: clicked Deux, Plus, Trois, 'Est égal à' at view-line box centers via raw SendInput; result '5' verified IN CHANNEL, then confirmed by screenshot. Round 1 of this cell FAILED for a harness reason kept as data (see notes): the foreground lock silently denied SetForegroundWindow and all clicks landed on the window covering Calculator." },
+    "t6_pictorial": { "pass": null, "detail": "No pictorial content (one 20x20 app icon, declared as [pixels] image line). Pictorial battery on Paint (windows-paint-uia)." }
+  },
+  "measurements": {
+    "view_bytes": 2733,
+    "view_tokens_est": 666,
+    "screenshot_tokens_est": 243,
+    "diff_bytes_per_interaction": 502,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 87,
+    "notes": "HONEST COST INVERSION: the window screenshot (336x541 px = 243 tok) is 2.7x CHEAPER than the structured view (666 tok) — a small, control-dense panel is the native mirror of the Hacker News result: structured cost scales with information density, screenshot cost with area. Structure still wins on diffs (266-736 B/interaction vs 243 tok/re-shot) and idle (0). ROUND-1 INCIDENT (recorded, not hidden): (1) SetForegroundWindow was silently denied by the Windows foreground lock -> Calculator stayed behind Notepad -> 3 blind clicks landed in the user's Notepad text area (caret move only, document verified unmodified; screenshot artifacts that accidentally captured the user's file content were purged). (2) The first hit-test guard compared PIDs and FALSE-BLOCKED because of the UWP frame(ApplicationFrameHost)/content(CalculatorApp) process split — the working guard compares the top-level window handle of ControlFromPoint(x,y). Both are router lessons: verify foreground after asking for it, and guard every blind click with a system-wide hit-test (Windows analog of the macOS AXUIElementCopyElementAtPosition mitigation)."
+  },
+  "runtime_verification": {
+    "method": "final screenshot compared against final channel state after the blind computation",
+    "agreement": "display shows '5' and expression '2 + 3 =' exactly as the channel reported before the screenshot was taken"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/calculator-uia-view.txt",
+    "campaign/results/artifacts/windows/calculator-uia-final-view.txt",
+    "campaign/results/artifacts/windows/calculator-uia-final-shot.png"
+  ]
+}
