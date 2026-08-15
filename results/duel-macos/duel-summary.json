@@ -17,6 +17,5 @@
   "ratio_tokens": 3.49,
   "ratio_bytes": 39.4,
   "ratio_tokens_retina": 12.24,
-  "ratio_tokens_retina_legacy": 3.92,
-  "note": "image tokens computed after the API downscale (see src/image-tokens.mjs); naive w*h/750 would overstate the Retina figure as 5462"
+  "ratio_tokens_retina_legacy": 3.92
 }

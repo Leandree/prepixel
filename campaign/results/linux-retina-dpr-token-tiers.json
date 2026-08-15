@@ -1,0 +1,60 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium headless, deviceScaleFactor emulation",
+  "app": "Retina/DPR image-token two-tier replication (mirror of macOS finding)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "n/a (controlled)",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Same duel page captured at DPR=1 and DPR=2; src/image-tokens.mjs (API downscale tiers) vs structured view.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": {
+      "pass": true,
+      "detail": "DPR=1 (1280x800): 1366 img tok both tiers vs 438 structured (3.12x). DPR=2 (2560x1600): high-res tier 4784 tok (10.92x), legacy tier 1534 tok (3.50x) — EXACT replication of the macOS numbers on Linux via DPR emulation. Confirms the pixel cost of a screen is set by an API-side downscale rule, not by the harness."
+    },
+    "t2_enumerate": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t5_blind_action": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t6_pictorial": {
+      "pass": null,
+      "detail": "n/a"
+    }
+  },
+  "measurements": {
+    "view_bytes": 1752,
+    "view_tokens_est": 438,
+    "screenshot_tokens_est": 4784,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Structured cost is DPR-invariant (438 tok at both DPRs); pixel cost is not. High-DPI is where the structured channel's advantage is largest on high-res models (10.9x) and where a legacy-tier model silently discards the resolution paid for."
+  },
+  "runtime_verification": {
+    "method": "PNG header dims read back; helper formulas vs macOS cell",
+    "agreement": "4784/1534 match macOS exactly"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "src/image-tokens.mjs"
+  ]
+}

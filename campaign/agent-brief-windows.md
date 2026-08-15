@@ -5,6 +5,54 @@ right — it has the richest set of structured channels and a decade of commerci
 precedent (RPA tools hook GDI to read text). Aim for broad coverage across the
 stack tiers below.
 
+## Lessons the Linux + macOS campaigns paid for — apply them from step 1
+
+These cost the other two agents real failures. Encode them; do not rediscover them.
+
+- **Probe → poke → re-probe before concluding "unavailable" (the "AT-latch").** On
+  macOS, Chrome/Safari/Pages returned an honest *stub* (window chrome, no content) on
+  the first accessibility query and only populated after sustained AT traffic. UIA has
+  analogous laziness (virtualized lists, apps that build their tree on first client
+  attach). Never classify a channel "unavailable" from the first read.
+- **Coordinate frames bite.** macOS lost a blind click because DOMSnapshot boxes were
+  device pixels while input took CSS pixels (Retina DPR=2). The Windows analogue is
+  **display scaling (125/150/175%) and per-monitor DPI awareness**: UIA
+  `BoundingRectangle` is physical pixels; make sure your click API and your capture
+  agree on the same frame, and test on a scaled display, not just 100%.
+- **Action allowlists are mandatory.** An exploratory `AXPress` on macOS paused the
+  user's 174-hour stopwatch. Semantic channels put destructive-adjacent controls one
+  call away. On Windows a stray `Invoke()` can send mail, delete, or submit. Only
+  actuate controls on an allowlist; never "click to see what it does" on the user's
+  live machine.
+- **Re-read immediately before acting; verify after (TOCTOU).** The human moved a
+  window between frame-read and click on macOS; the click hit another app. Re-resolve
+  element handles before every read/act (stale UIA handles read empty *without
+  erroring*), and confirm the intended effect after.
+- **Cycle-guard every tree walk.** A mid-launch Safari exposed a cyclic
+  AXApplication-in-AXApplication tree that exploded a naive walker to 13k nodes. UIA
+  trees can self-reference too — hash element runtime-IDs, cap depth, re-query after
+  settle.
+- **The distiller's completeness is only as good as its content-class enumeration.**
+  Across campaigns we found silent blind spots one at a time: opaque pictorial
+  regions, then shadow DOM, iframes, CSS background-image, and color-only semantics.
+  Your UIA/CDP distiller must **declare** what it cannot read (custom-drawn regions →
+  opaque rect; images → rect) and mark occluded elements — an empty/omitted region is
+  the disqualifying *silent* failure. When in doubt, the durable guarantee is the
+  runtime spot-check vs a screenshot, not trust in the distiller.
+- **Re-render / cross-check before believing a capture.** A Linux probe silently
+  grabbed stale frames of the wrong app; only re-rendering the captured tree to pixels
+  caught it. Verify every capture against a screenshot at least once per app.
+- **Fresh-port / fresh-profile retry.** Chromium's DevTools port and LibreOffice's UNO
+  socket both wedged after repeated relaunches; a retry on a new port/profile fixed
+  it. Treat local endpoints as retry-with-fresh, not fixed.
+
+## The high-DPI point is a *result*, not just a caveat
+
+Capture the screenshot token cost at the machine's real scaling. The pixel side is
+punished hardest on high-DPI (a 2× capture costs ~4784 image-tokens on a high-res
+model vs ~1366 at CSS resolution; the structured view is DPI-invariant). Windows
+laptops routinely run 150% — measure it, it is one of the strongest cost cells.
+
 ## Environment prep
 
 - Run in a normal user session with a real display (structured channels often need a

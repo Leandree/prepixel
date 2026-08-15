@@ -8,7 +8,8 @@
     "pixels": {
       "png_bytes": 69383,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1766,
@@ -31,7 +32,8 @@
     "pixels": {
       "png_bytes": 75484,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1939,
@@ -54,7 +56,8 @@
     "pixels": {
       "png_bytes": 75318,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1933,
@@ -77,7 +80,8 @@
     "pixels": {
       "png_bytes": 50537,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1248,
@@ -100,7 +104,8 @@
     "pixels": {
       "png_bytes": 51053,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1260,
@@ -123,7 +128,8 @@
     "pixels": {
       "png_bytes": 48488,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1253,
@@ -146,7 +152,8 @@
     "pixels": {
       "png_bytes": 62062,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1586,
@@ -169,7 +176,8 @@
     "pixels": {
       "png_bytes": 54931,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1422,
@@ -192,7 +200,8 @@
     "pixels": {
       "png_bytes": 76213,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1934,
@@ -215,7 +224,8 @@
     "pixels": {
       "png_bytes": 63659,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1595,
@@ -238,7 +248,8 @@
     "pixels": {
       "png_bytes": 63386,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1592,
@@ -261,7 +272,8 @@
     "pixels": {
       "png_bytes": 56200,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1426,
@@ -284,7 +296,8 @@
     "pixels": {
       "png_bytes": 64734,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1601,
@@ -307,7 +320,8 @@
     "pixels": {
       "png_bytes": 62930,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1596,
@@ -330,7 +344,8 @@
     "pixels": {
       "png_bytes": 44337,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1096,
@@ -353,7 +368,8 @@
     "pixels": {
       "png_bytes": 44829,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1095,
@@ -376,7 +392,8 @@
     "pixels": {
       "png_bytes": 74960,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1934,
@@ -399,7 +416,8 @@
     "pixels": {
       "png_bytes": 73040,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1932,
@@ -422,7 +440,8 @@
     "pixels": {
       "png_bytes": 67968,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1761,
@@ -445,7 +464,8 @@
     "pixels": {
       "png_bytes": 62691,
       "img_tokens": 1366,
-      "img_tokens_retina": 5462
+      "img_tokens_retina": 4784,
+      "img_tokens_retina_legacy": 1534
     },
     "structured": {
       "view_bytes": 1592,

@@ -1,0 +1,60 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, LibreOffice headless",
+  "app": "LibreOffice Writer — object-model WRITE path (mirror of macOS Pages read+write)",
+  "stack": "office-native",
+  "stack_detection": {
+    "method": "UNO socket accepts",
+    "signature": "soffice.bin + socket,port=2003 up",
+    "detected_before_use": true
+  },
+  "channel": "object-model",
+  "channel_setup": "pyuno: loadComponentFromURL(private:factory/swriter, Hidden) then insertString at text end; read back getString().",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": {
+      "pass": true,
+      "detail": "Round-trip exact including accents AND emoji: 'INSERE-PAR-UNO éàü 😀 12345' written then read back identical."
+    },
+    "t2_enumerate": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t3_live_value": {
+      "pass": true,
+      "detail": "Writes 9.4-109 ms, read 0.9 ms — same class as macOS Pages (73-158 ms). Actuation through the model needs no coordinates at all."
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t5_blind_action": {
+      "pass": true,
+      "detail": "Semantic actuation (insertString) verified in-channel — the strongest form of blind action."
+    },
+    "t6_pictorial": {
+      "pass": null,
+      "detail": "n/a"
+    }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 1,
+    "notes": "Ops note mirroring macOS session-lock lesson: after many soffice restarts the default port 2002 stopped binding (env wedging, like Chromium DevTools earlier); port 2003 fine. Router lesson: treat socket bring-up as retry-with-fresh-port, not fixed endpoint."
+  },
+  "runtime_verification": {
+    "method": "in-channel read-back of written sentinel",
+    "agreement": "exact"
+  },
+  "permissions_required": [
+    "local UNO socket"
+  ],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": []
+}

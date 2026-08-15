@@ -1,0 +1,60 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium/CDP",
+  "app": "Hard-text battery via the CDP structured channel (mirror of macOS AX hard-text)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "n/a (controlled)",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "pages/hardtext.html: presentation-form ligatures, COMBINING accents, Arabic+Hebrew logical order, bidi-mixed line, ZWJ family emoji + skin tone, CJK. distillHardened extraction vs ground truth.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": {
+      "pass": true,
+      "detail": "7/7 character-exact: ligatures preserved as authored, combining accents NOT folded, RTL scripts in logical order, ZWJ emoji sequence intact, CJK exact. As on macOS via AX: at the DOM/semantic level the glyph problem simply does not arise — it exists only at the render-tree level (GTK glyph IDs) and below. Same mirror-image caveat: the channel reports the text the page HOLDS, not the glyphs painted; a font-fallback failure would be invisible."
+    },
+    "t2_enumerate": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t5_blind_action": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t6_pictorial": {
+      "pass": null,
+      "detail": "n/a"
+    }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": ""
+  },
+  "runtime_verification": {
+    "method": "string equality vs generator ground truth",
+    "agreement": "7/7"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "pages/hardtext.html"
+  ]
+}

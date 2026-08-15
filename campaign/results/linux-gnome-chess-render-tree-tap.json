@@ -1,0 +1,60 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, GTK4, gnome-chess 46 (no engine installed)",
+  "app": "GNOME Chess — annotated-game boundary at the RENDER-TREE level (counterpart of macOS Chess via AX)",
+  "stack": "gtk4",
+  "stack_detection": {
+    "method": "linked libs",
+    "signature": "libgtk-4.so; gsk_renderer_render",
+    "detected_before_use": true
+  },
+  "channel": "render-tree-tap",
+  "channel_setup": "gdb tap on /usr/games/gnome-chess under broadway; frame re-rendered to PNG for verification.",
+  "verdict": "partial",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": {
+      "pass": true,
+      "detail": "Chrome text readable (3 nodes: 'White to Move', engine banner, 'Game Start')."
+    },
+    "t2_enumerate": {
+      "pass": false,
+      "detail": "The BOARD renders as ~10 texture nodes (pieces/squares rasterized from SVG into textures) — no per-piece structure at the render level. Contrast with macOS Chess where the SEMANTIC channel (AX) exposed each piece as an annotated button. Two-part boundary confirmed: (a) which CHANNEL you read (semantic vs render), and (b) developer annotation. The render tree declares the board as textures (croppable, explicit), it does not fabricate structure. gnome-chess's AT-SPI annotations untestable headless (a11y bus blocked) — expected to be the semantic mirror, to verify on a real Linux desktop."
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t5_blind_action": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t6_pictorial": {
+      "pass": true,
+      "detail": "Board textures are declared opaque payloads with rects — explicit, croppable; re-rendered PNG matches the app window exactly (artifact)."
+    }
+  },
+  "measurements": {
+    "view_bytes": 83208,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Probe-hygiene lesson recorded on ourselves: first run captured STALE frames of widget-factory (gnome-chess lives in /usr/games, `which` failed silently, rm never ran) and the census looked plausible. Caught because we re-render every captured tree to pixels before believing it — runtime verification catching our own harness, again."
+  },
+  "runtime_verification": {
+    "method": "gtk4-rendernode-tool re-render vs app window",
+    "agreement": "exact (chess board with initial position, engine-missing banner)"
+  },
+  "permissions_required": [
+    "ptrace own child"
+  ],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": []
+}

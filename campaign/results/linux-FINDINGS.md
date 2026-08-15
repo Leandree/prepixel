@@ -103,3 +103,35 @@ Same 20 randomized pages, both conditions, same model, mechanical verification.
 - **Infra hardening:** added `campaign/validate.py` (schema-checks every result JSON
   before aggregation) and froze the canonical T1–T6 battery in `campaign/README.md`,
   so the Windows/macOS agents produce directly-comparable, aggregatable data.
+
+---
+
+## Round 3 — porting the macOS-added cell types back to Linux (and a deeper leak audit)
+
+- **Leak audit of our own hardened distiller — FOUR more silent classes found and
+  closed**: shadow-DOM text (walker didn't descend), iframes (neither walked nor
+  declared — the worst case), CSS background-image content, and color-only
+  semantics (status dots). Patched: shadow recursion, same-origin iframe recursion
+  with coordinate translation + own-document hit-testing (first patch emitted
+  frame-local coords — caught), cross-origin `[pixels] iframe`, `[pixels] bg`, and
+  `mark x,y,w,h color` lines. Refined claim for the paper: completeness is a
+  *coverage accounting* whose guarantee is only as good as the distiller's
+  enumeration of content classes — each campaign round found one the previous
+  missed — so the durable guarantee is the runtime spot-check, not distiller trust.
+- **Retina/DPR two-tier replication**: DPR=2 capture of the same page = 4784 tok
+  (high-res tier) / 1534 (legacy) vs 438 structured — exact match with macOS.
+  Structured cost is DPR-invariant; pixel cost is an API-side downscale rule.
+- **UNO write path**: insertString round-trip exact incl. accents+emoji,
+  9–109 ms writes — the Linux mirror of Pages read+write. (Ops: port 2002 wedged
+  after many restarts; fresh-port retry is a router lesson.)
+- **Hard text via CDP**: 7/7 exact (combining accents, ZWJ family emoji, RTL
+  logical order). The glyph problem is a render-level artifact; semantic channels
+  don't have it — same mirror-caveat as macOS (text held ≠ glyphs painted).
+- **gnome-chess at the render level**: the board is ~10 texture nodes (explicit,
+  croppable), chrome text readable — the render-tree counterpart of macOS's
+  AX-annotated Chess. Boundary = channel level × developer annotation. Probe
+  hygiene: first run silently captured stale widget-factory frames (binary in
+  /usr/games, `which` failed); caught only because we re-render every captured
+  tree before believing it.
+- **Real-web battery/navigation**: `blocked` in this sandbox (egress filter) —
+  one confirmation run on the real Linux desktop recommended, scripts exist.

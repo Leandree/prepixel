@@ -1,0 +1,60 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04 sandbox (egress-filtered network)",
+  "app": "Real-web battery + blind navigation (macOS cells) — Linux replication attempt",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "n/a",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Would mirror campaign/macos/web-battery.mjs + web-navigate.mjs on the same 16 sites.",
+  "verdict": "blocked",
+  "failure_class": "blocked",
+  "tests": {
+    "t1_read_text": {
+      "pass": null,
+      "detail": "Sandbox egress proxy refuses arbitrary sites (ERR_TUNNEL_CONNECTION_FAILED) — live-web cells cannot run here. Since both OSes drive the same Chromium/CDP engine, the macOS real-web numbers are expected to transfer; still worth one confirmation run on Léandre's real Linux desktop using the existing scripts."
+    },
+    "t2_enumerate": {
+      "pass": null,
+      "detail": "blocked"
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "blocked"
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "blocked"
+    },
+    "t5_blind_action": {
+      "pass": null,
+      "detail": "blocked"
+    },
+    "t6_pictorial": {
+      "pass": null,
+      "detail": "blocked"
+    }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": null,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Environmental block, recorded for matrix completeness."
+  },
+  "runtime_verification": {
+    "method": "n/a",
+    "agreement": "n/a"
+  },
+  "permissions_required": [
+    "unfiltered egress"
+  ],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": []
+}

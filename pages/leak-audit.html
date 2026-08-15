@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Leak audit</title>
+<style>#bglogo{width:140px;height:40px;background-image:linear-gradient(90deg,#e63946,#457b9d);background-size:cover}
+.status{width:14px;height:14px;border-radius:7px;display:inline-block}
+</style></head><body style="font-family:sans-serif;margin:16px">
+  <p>Texte normal visible</p>
+  <div id="bglogo" role="img" aria-label=""></div>
+  <p>Statut serveur: <span class="status" style="background:#d00"></span> (couleur seule = signification)</p>
+  <div id="host"></div>
+  <iframe src="about:blank" width="300" height="80" title="widget externe"></iframe>
+  <script>
+    const root=document.getElementById('host').attachShadow({mode:'open'});
+    root.innerHTML='<p>SHADOW-SECRET-42 (texte dans un web component)</p>';
+    const idoc=document.querySelector('iframe').contentDocument;
+    idoc.body.innerHTML='<b>IFRAME-SECRET-77</b>';
+  </script>
+</body></html>

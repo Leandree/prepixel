@@ -311,6 +311,66 @@
     },
     {
       "os": "linux",
+      "os_version": "Ubuntu 24.04, GTK4, gnome-chess 46 (no engine installed)",
+      "app": "GNOME Chess \u2014 annotated-game boundary at the RENDER-TREE level (counterpart of macOS Chess via AX)",
+      "stack": "gtk4",
+      "stack_detection": {
+        "method": "linked libs",
+        "signature": "libgtk-4.so; gsk_renderer_render",
+        "detected_before_use": true
+      },
+      "channel": "render-tree-tap",
+      "channel_setup": "gdb tap on /usr/games/gnome-chess under broadway; frame re-rendered to PNG for verification.",
+      "verdict": "partial",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Chrome text readable (3 nodes: 'White to Move', engine banner, 'Game Start')."
+        },
+        "t2_enumerate": {
+          "pass": false,
+          "detail": "The BOARD renders as ~10 texture nodes (pieces/squares rasterized from SVG into textures) \u2014 no per-piece structure at the render level. Contrast with macOS Chess where the SEMANTIC channel (AX) exposed each piece as an annotated button. Two-part boundary confirmed: (a) which CHANNEL you read (semantic vs render), and (b) developer annotation. The render tree declares the board as textures (croppable, explicit), it does not fabricate structure. gnome-chess's AT-SPI annotations untestable headless (a11y bus blocked) \u2014 expected to be the semantic mirror, to verify on a real Linux desktop."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Board textures are declared opaque payloads with rects \u2014 explicit, croppable; re-rendered PNG matches the app window exactly (artifact)."
+        }
+      },
+      "measurements": {
+        "view_bytes": 83208,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Probe-hygiene lesson recorded on ourselves: first run captured STALE frames of widget-factory (gnome-chess lives in /usr/games, `which` failed silently, rm never ran) and the census looked plausible. Caught because we re-render every captured tree to pixels before believing it \u2014 runtime verification catching our own harness, again."
+      },
+      "runtime_verification": {
+        "method": "gtk4-rendernode-tool re-render vs app window",
+        "agreement": "exact (chess board with initial position, engine-missing banner)"
+      },
+      "permissions_required": [
+        "ptrace own child"
+      ],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": []
+    },
+    {
+      "os": "linux",
       "os_version": "Ubuntu 24.04 (noble), GTK 4.14.5, Wayland/broadway headless",
       "app": "GNOME Text Editor 46.3",
       "stack": "gtk4",
@@ -429,6 +489,187 @@
       ],
       "agent": "claude (sandbox Linux, reference cell)",
       "date": "2026-08-14",
+      "raw_artifacts": []
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium/CDP",
+      "app": "Hard-text battery via the CDP structured channel (mirror of macOS AX hard-text)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (controlled)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "pages/hardtext.html: presentation-form ligatures, COMBINING accents, Arabic+Hebrew logical order, bidi-mixed line, ZWJ family emoji + skin tone, CJK. distillHardened extraction vs ground truth.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "7/7 character-exact: ligatures preserved as authored, combining accents NOT folded, RTL scripts in logical order, ZWJ emoji sequence intact, CJK exact. As on macOS via AX: at the DOM/semantic level the glyph problem simply does not arise \u2014 it exists only at the render-tree level (GTK glyph IDs) and below. Same mirror-image caveat: the channel reports the text the page HOLDS, not the glyphs painted; a font-fallback failure would be invisible."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "n/a"
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": ""
+      },
+      "runtime_verification": {
+        "method": "string equality vs generator ground truth",
+        "agreement": "7/7"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "pages/hardtext.html"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium/CDP",
+      "app": "Adversarial round 2: leak audit of our own hardened distiller (mirror+extension of the macOS self-audit)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (self-audit)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "pages/leak-audit.html: bg-image logo, color-only status dot, shadow-DOM text, same-origin iframe. Naive hardened view vs patched distiller.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "FOUR silent-leak classes found in our hardened distiller (after macOS found one): (1) shadow-DOM text invisible (TreeWalker doesn't descend); (2) iframes neither walked nor declared \u2014 worst case, invisible AND unsignalled; (3) CSS background-image content absent (a bg logo is neither text nor <img>); (4) color-only semantics dropped (a red status dot). All four closed: shadow roots recursed; same-origin iframes recursed WITH coordinate translation + own-document hit-testing (first patch emitted frame-local coords and false [occluded] \u2014 caught and fixed), cross-origin declared as [pixels] iframe; bg-image elements declared as [pixels] bg; small colored no-text elements emitted as `mark x,y,w,h color`. General styling semantics beyond marks remains a DOCUMENTED loss."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Post-patch view: text+[pixels] bg+mark+shadow text+iframe text at main-page coords. Non-regressions green: occlusion page ([occluded] intact, no offscreen leak) and all-canvas ([pixels] canvas 0,0,1280,800)."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "bg-image + iframe now declared; blind-spot accounting extended to non-element pictorial content."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Key claim for the paper, refined: the completeness guarantee is a COVERAGE ACCOUNTING (every region readable, declared-opaque, or tagged-occluded), and it holds only as far as the distiller's enumeration of content classes. Each campaign found a class the previous one missed (macOS: opaque set; this round: shadow DOM, iframes, bg-image, color-only). The durable guarantee is therefore the runtime spot-check vs screenshot (safety property 3), not trust in any given distiller version."
+      },
+      "runtime_verification": {
+        "method": "known sentinel strings/regions per class, before/after patch",
+        "agreement": "post-patch: all four classes visible or declared; zero silent survivors"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "pages/leak-audit.html",
+        "src/distill-hardened.mjs"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, LibreOffice headless",
+      "app": "LibreOffice Writer \u2014 object-model WRITE path (mirror of macOS Pages read+write)",
+      "stack": "office-native",
+      "stack_detection": {
+        "method": "UNO socket accepts",
+        "signature": "soffice.bin + socket,port=2003 up",
+        "detected_before_use": true
+      },
+      "channel": "object-model",
+      "channel_setup": "pyuno: loadComponentFromURL(private:factory/swriter, Hidden) then insertString at text end; read back getString().",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Round-trip exact including accents AND emoji: 'INSERE-PAR-UNO \u00e9\u00e0\u00fc \ud83d\ude00 12345' written then read back identical."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "Writes 9.4-109 ms, read 0.9 ms \u2014 same class as macOS Pages (73-158 ms). Actuation through the model needs no coordinates at all."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Semantic actuation (insertString) verified in-channel \u2014 the strongest form of blind action."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "n/a"
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 1,
+        "notes": "Ops note mirroring macOS session-lock lesson: after many soffice restarts the default port 2002 stopped binding (env wedging, like Chromium DevTools earlier); port 2003 fine. Router lesson: treat socket bring-up as retry-with-fresh-port, not fixed endpoint."
+      },
+      "runtime_verification": {
+        "method": "in-channel read-back of written sentinel",
+        "agreement": "exact"
+      },
+      "permissions_required": [
+        "local UNO socket"
+      ],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
       "raw_artifacts": []
     },
     {
@@ -679,6 +920,66 @@
     },
     {
       "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium headless, deviceScaleFactor emulation",
+      "app": "Retina/DPR image-token two-tier replication (mirror of macOS finding)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (controlled)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Same duel page captured at DPR=1 and DPR=2; src/image-tokens.mjs (API downscale tiers) vs structured view.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "DPR=1 (1280x800): 1366 img tok both tiers vs 438 structured (3.12x). DPR=2 (2560x1600): high-res tier 4784 tok (10.92x), legacy tier 1534 tok (3.50x) \u2014 EXACT replication of the macOS numbers on Linux via DPR emulation. Confirms the pixel cost of a screen is set by an API-side downscale rule, not by the harness."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "n/a"
+        }
+      },
+      "measurements": {
+        "view_bytes": 1752,
+        "view_tokens_est": 438,
+        "screenshot_tokens_est": 4784,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Structured cost is DPR-invariant (438 tok at both DPRs); pixel cost is not. High-DPI is where the structured channel's advantage is largest on high-res models (10.9x) and where a legacy-tier model silently discards the resolution paid for."
+      },
+      "runtime_verification": {
+        "method": "PNG header dims read back; helper formulas vs macOS cell",
+        "agreement": "4784/1534 match macOS exactly"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "src/image-tokens.mjs"
+      ]
+    },
+    {
+      "os": "linux",
       "os_version": "Ubuntu 24.04, Chromium/CDP + Xvfb/openbox",
       "app": "Adversarial: occlusion & visibility tricks (the safety-claim stress test)",
       "stack": "chromium",
@@ -737,6 +1038,66 @@
         "pages/occlusion.html",
         "src/distill-hardened.mjs"
       ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04 sandbox (egress-filtered network)",
+      "app": "Real-web battery + blind navigation (macOS cells) \u2014 Linux replication attempt",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Would mirror campaign/macos/web-battery.mjs + web-navigate.mjs on the same 16 sites.",
+      "verdict": "blocked",
+      "failure_class": "blocked",
+      "tests": {
+        "t1_read_text": {
+          "pass": null,
+          "detail": "Sandbox egress proxy refuses arbitrary sites (ERR_TUNNEL_CONNECTION_FAILED) \u2014 live-web cells cannot run here. Since both OSes drive the same Chromium/CDP engine, the macOS real-web numbers are expected to transfer; still worth one confirmation run on L\u00e9andre's real Linux desktop using the existing scripts."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "blocked"
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "blocked"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "blocked"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "blocked"
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "blocked"
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": null,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Environmental block, recorded for matrix completeness."
+      },
+      "runtime_verification": {
+        "method": "n/a",
+        "agreement": "n/a"
+      },
+      "permissions_required": [
+        "unfiltered egress"
+      ],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": []
     },
     {
       "os": "macos",

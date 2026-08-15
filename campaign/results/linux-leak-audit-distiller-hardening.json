@@ -1,0 +1,61 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium/CDP",
+  "app": "Adversarial round 2: leak audit of our own hardened distiller (mirror+extension of the macOS self-audit)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "n/a (self-audit)",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "pages/leak-audit.html: bg-image logo, color-only status dot, shadow-DOM text, same-origin iframe. Naive hardened view vs patched distiller.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": {
+      "pass": true,
+      "detail": "FOUR silent-leak classes found in our hardened distiller (after macOS found one): (1) shadow-DOM text invisible (TreeWalker doesn't descend); (2) iframes neither walked nor declared — worst case, invisible AND unsignalled; (3) CSS background-image content absent (a bg logo is neither text nor <img>); (4) color-only semantics dropped (a red status dot). All four closed: shadow roots recursed; same-origin iframes recursed WITH coordinate translation + own-document hit-testing (first patch emitted frame-local coords and false [occluded] — caught and fixed), cross-origin declared as [pixels] iframe; bg-image elements declared as [pixels] bg; small colored no-text elements emitted as `mark x,y,w,h color`. General styling semantics beyond marks remains a DOCUMENTED loss."
+    },
+    "t2_enumerate": {
+      "pass": true,
+      "detail": "Post-patch view: text+[pixels] bg+mark+shadow text+iframe text at main-page coords. Non-regressions green: occlusion page ([occluded] intact, no offscreen leak) and all-canvas ([pixels] canvas 0,0,1280,800)."
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t5_blind_action": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t6_pictorial": {
+      "pass": true,
+      "detail": "bg-image + iframe now declared; blind-spot accounting extended to non-element pictorial content."
+    }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Key claim for the paper, refined: the completeness guarantee is a COVERAGE ACCOUNTING (every region readable, declared-opaque, or tagged-occluded), and it holds only as far as the distiller's enumeration of content classes. Each campaign found a class the previous one missed (macOS: opaque set; this round: shadow DOM, iframes, bg-image, color-only). The durable guarantee is therefore the runtime spot-check vs screenshot (safety property 3), not trust in any given distiller version."
+  },
+  "runtime_verification": {
+    "method": "known sentinel strings/regions per class, before/after patch",
+    "agreement": "post-patch: all four classes visible or declared; zero silent survivors"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "pages/leak-audit.html",
+    "src/distill-hardened.mjs"
+  ]
+}
