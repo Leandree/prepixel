@@ -1,0 +1,101 @@
+a 10,104,99,40
+[pixels] svg 18,112,83,24
+button 212,106,88,37
+text 224,115,45,20 "HTML"
+button 300,106,75,37
+text 312,115,32,20 "CSS"
+button 374,106,122,37
+text 387,115,80,20 "JavaScript"
+button 496,106,117,37
+text 509,115,75,20 "Web APIs"
+button 613,106,62,37
+text 626,115,20,20 "All"
+button 675,106,107,37
+text 710,115,43,20 "Learn"
+button 783,106,105,37
+text 817,115,41,20 "Tools"
+button 888,106,87,37
+text 900,115,45,20 "About"
+a 975,106,56,36
+text 986,114,34,20 "Blog"
+a 18,161,34,24
+text 18,163,34,20 "Web"
+a 80,161,75,24
+text 80,163,75,20 "Web APIs"
+a 183,161,88,24
+text 183,163,88,20 "Canvas API"
+text 288,206,204,49 "Canvas API"
+summary 349,271,643,68
+text 349,295,70,20 "Baseline"
+text 419,295,122,20 "Widely available"
+text 349,341,574,44 "This feature is well established and works across many devices and browser versions. It’s been available across browsers since July 2015." [occluded]
+a 349,405,86,20 [occluded]
+text 349,405,86,20 "Learn more" [occluded]
+a 459,405,160,20 [occluded]
+text 459,405,160,20 "See full compatibility" [occluded]
+text 288,359,33,20 "The"
+text 321,359,92,20 "Canvas API"
+text 413,359,327,20 "provides a means for drawing graphics via"
+a 740,359,80,20
+text 740,359,80,20 "JavaScript"
+text 819,359,65,20 "and the"
+a 884,359,45,20
+text 884,359,45,20 "HTML"
+a 288,387,81,20
+text 292,387,73,20 "<canvas>"
+text 288,387,681,48 "element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing."
+text 288,459,401,20 "The Canvas API largely focuses on 2D graphics. The"
+a 689,459,87,20
+text 689,459,87,20 "WebGL API"
+text 776,459,157,20 ", which also uses the"
+text 292,487,73,20 "<canvas>"
+text 369,487,448,20 "element, draws hardware-accelerated 2D and 3D graphics."
+text 1040,210,141,30 "In this article"
+a 1042,261,185,32
+text 1050,267,169,20 "Accessibility concerns"
+a 1042,293,124,32
+text 1050,299,108,20 "Basic example"
+a 1042,325,92,32
+text 1050,331,76,20 "Reference"
+a 1042,357,166,32
+text 1050,363,150,20 "Guides and tutorials"
+a 1042,389,81,32
+text 1050,395,65,20 "Libraries"
+a 1042,421,122,32
+text 1050,427,106,20 "Specifications"
+a 1042,453,179,32
+text 1050,459,163,20 "Browser compatibility"
+a 1042,485,80,32
+text 1050,491,64,20 "See also"
+a 288,544,311,39
+text 288,544,311,39 "Accessibility concerns"
+text 288,603,33,20 "The"
+text 325,603,73,20 "<canvas>"
+text 288,603,683,132 "element is just a bitmap and does not provide information about any drawn objects. Text written on canvas can cause legibility issues with users relying on screen magnification. The pixels within a canvas element do not scale and can become blurry with magnification. This is because they are not a vector but letter-shaped collection of pixels. When zooming in on it, the pixels become bigger."
+text 288,759,686,76 "Canvas content is not exposed to accessibility tools like semantic HTML is. In general, you should use canvases like images and avoid using them to render significant content without accessible backing markup."
+a 16,265,90,32
+text 16,271,90,20 "Canvas API"
+summary 16,305,224,32
+text 32,311,52,20 "Guides"
+a 40,345,200,56
+text 40,351,188,44 "Manipulating video using canvas"
+summary 16,409,224,32
+text 32,415,56,20 "Tutorial"
+a 40,449,112,32
+text 40,455,112,20 "Canvas tutorial"
+a 40,489,168,32
+text 40,495,168,20 "Basic usage of canvas"
+a 40,529,200,56
+text 40,535,156,44 "Drawing shapes with canvas"
+a 40,593,199,32
+text 40,599,199,20 "Applying styles and colors"
+a 40,633,95,32
+text 40,639,95,20 "Drawing text"
+a 40,673,102,32
+text 40,679,102,20 "Using images"
+a 40,713,122,32
+text 40,719,122,20 "Transformations"
+a 40,753,191,32
+text 40,759,191,20 "Compositing and clipping"
+a 40,793,126,32
+text 40,799,126,20 "Basic animations"

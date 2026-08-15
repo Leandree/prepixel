@@ -7,6 +7,7 @@
 // otherwise quadruple it — reported separately in the cell notes).
 import { chromium } from 'playwright-core';
 import { distillHardened } from '/Users/leandre/dev/prepixel/src/distill-hardened.mjs';
+import { imageTokens } from '/Users/leandre/dev/prepixel/src/image-tokens.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -43,7 +44,6 @@ function genPage(i){
   }};
 }
 
-const imgTokensAnthropic=(w,h)=>Math.ceil((w*h)/750);
 const textTokEst=s=>Math.ceil(s.length/4);
 
 const N=20, VW=1280, VH=800;
@@ -68,8 +68,9 @@ for(let i=0;i<N;i++){
   fs.writeFileSync(path.join(OUT,`page-${i}.view.txt`),view);
   rows.push({
     i, viewport:{width:VW,height:VH},
-    pixels:{ png_bytes:png.length, img_tokens:imgTokensAnthropic(VW,VH),
-             img_tokens_retina:imgTokensAnthropic(VW*2,VH*2) },
+    pixels:{ png_bytes:png.length, img_tokens:imageTokens(VW,VH),
+             img_tokens_retina:imageTokens(VW*2,VH*2),
+             img_tokens_retina_legacy:imageTokens(VW*2,VH*2,'legacy') },
     structured:{ view_bytes:Buffer.byteLength(view), view_tokens_est:textTokEst(view) },
     truth,
   });
@@ -83,9 +84,10 @@ const bX=avg(r=>r.structured.view_bytes), bP=avg(r=>r.pixels.png_bytes);
 const summary={
   n:N, viewport:{width:VW,height:VH},
   structured:{avg_bytes:+bX.toFixed(0), avg_tokens_est:+sX.toFixed(0)},
-  pixels:{avg_png_bytes:+bP.toFixed(0), img_tokens:sP, img_tokens_retina:avg(r=>r.pixels.img_tokens_retina)},
+  pixels:{avg_png_bytes:+bP.toFixed(0), img_tokens:sP, img_tokens_retina:avg(r=>r.pixels.img_tokens_retina), img_tokens_retina_legacy:avg(r=>r.pixels.img_tokens_retina_legacy)},
   ratio_tokens:+(sP/sX).toFixed(2), ratio_bytes:+(bP/bX).toFixed(1),
   ratio_tokens_retina:+(avg(r=>r.pixels.img_tokens_retina)/sX).toFixed(2),
+  ratio_tokens_retina_legacy:+(avg(r=>r.pixels.img_tokens_retina_legacy)/sX).toFixed(2),
 };
 fs.writeFileSync(path.join(OUT,'duel-summary.json'),JSON.stringify(summary,null,2));
 console.log(JSON.stringify(summary,null,1));

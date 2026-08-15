@@ -1,0 +1,649 @@
+a 210,20,40,40 href=https://news.ycombinator.com
+[pixels] img 210,20,40,40 src=y18.svg
+a 260,23,196,33 href=news
+text 260,23,196,33 "Hacker News"
+a 466,23,55,33 href=newest
+text 466,23,55,33 "new"
+text 520,23,31,33 "|"
+a 551,23,57,33 href=front
+text 551,23,57,33 "past"
+text 608,23,31,33 "|"
+a 639,23,139,33 href=newcomments
+text 639,23,139,33 "comments"
+text 778,23,31,33 "|"
+a 809,23,46,33 href=ask
+text 809,23,46,33 "ask"
+text 855,23,31,33 "|"
+a 885,23,69,33 href=show
+text 885,23,69,33 "show"
+text 954,23,31,33 "|"
+a 985,23,56,33 href=jobs
+text 985,23,56,33 "jobs"
+text 1041,23,31,33 "|"
+a 1072,23,91,33 href=submit
+text 1072,23,91,33 "submit"
+a 2278,23,64,33 href=login?goto=news
+text 2278,23,64,33 "login"
+text 223,84,27,33 "1."
+a 249,90,28,20 id=up_49307592 href=vote?id=49307592&how=up&goto=news
+a 277,87,473,33 href=https://conic.al/writing/the-other-sean-byrne-doesnt-exist/
+text 277,87,473,33 "The other Sean Byrne doesn't exist"
+text 750,93,17,25 "("
+a 767,93,81,25 href=from?site=conic.al
+text 767,93,81,25 "conic.al"
+text 848,93,10,25 ")"
+text 277,122,99,23 "146 points"
+text 376,122,36,23 "by"
+a 412,122,25,23 href=user?id=rdl
+text 412,122,25,23 "rdl"
+a 443,122,112,23 href=item?id=49307592
+text 443,122,112,23 "5 hours ago"
+text 562,122,15,23 "|"
+a 577,122,40,23 href=hide?id=49307592&goto=news
+text 577,122,40,23 "hide"
+text 616,122,22,23 "|"
+a 638,122,128,23 href=item?id=49307592
+text 638,122,128,23 "72 comments"
+text 223,155,27,33 "2."
+a 249,161,28,20 id=up_49299605 href=vote?id=49299605&how=up&goto=news
+a 277,158,190,33 href=https://huggingface.co/Qwen/Qwen3.8-27B-FP8
+text 277,158,190,33 "Qwen 3.8 27B"
+text 467,164,17,25 "("
+a 484,164,162,25 href=from?site=huggingface.co
+text 484,164,162,25 "huggingface.co"
+text 647,164,10,25 ")"
+text 277,193,111,23 "1140 points"
+text 388,193,36,23 "by"
+a 424,193,107,23 href=user?id=erdaltoprak
+text 424,193,107,23 "erdaltoprak"
+a 538,193,124,23 href=item?id=49299605
+text 538,193,124,23 "18 hours ago"
+text 668,193,15,23 "|"
+a 683,193,40,23 href=hide?id=49299605&goto=news
+text 683,193,40,23 "hide"
+text 723,193,22,23 "|"
+a 744,193,140,23 href=item?id=49299605
+text 744,193,140,23 "696 comments"
+text 223,226,27,33 "3."
+a 249,232,28,20 id=up_49304447 href=vote?id=49304447&how=up&goto=news
+a 277,229,704,33 href=https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/
+text 277,229,704,33 "Going Dark, and the era of law enforcement hacking"
+text 981,235,17,25 "("
+a 999,235,320,25 href=from?site=cryptographyengineering.com
+text 999,235,320,25 "cryptographyengineering.com"
+text 1318,235,10,25 ")"
+text 277,264,99,23 "343 points"
+text 376,264,36,23 "by"
+a 412,264,50,23 href=user?id=vslira
+text 412,264,50,23 "vslira"
+a 468,264,124,23 href=item?id=49304447
+text 468,264,124,23 "13 hours ago"
+text 599,264,15,23 "|"
+a 614,264,40,23 href=hide?id=49304447&goto=news
+text 614,264,40,23 "hide"
+text 653,264,22,23 "|"
+a 675,264,140,23 href=item?id=49304447
+text 675,264,140,23 "150 comments"
+text 223,297,27,33 "4."
+a 249,303,28,20 id=up_49271382 href=vote?id=49271382&how=up&goto=news
+a 277,300,953,33 href=https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/
+text 277,300,953,33 "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace"
+text 1230,306,17,25 "("
+a 1247,306,246,25 href=from?site=popularmechanics.com
+text 1247,306,246,25 "popularmechanics.com"
+text 1493,306,10,25 ")"
+text 277,335,87,23 "37 points"
+text 364,335,36,23 "by"
+a 400,335,92,23 href=user?id=bookofjoe
+text 400,335,92,23 "bookofjoe"
+a 499,335,112,23 href=item?id=49271382
+text 499,335,112,23 "5 hours ago"
+text 617,335,15,23 "|"
+a 632,335,40,23 href=hide?id=49271382&goto=news
+text 632,335,40,23 "hide"
+text 672,335,22,23 "|"
+a 693,335,128,23 href=item?id=49271382
+text 693,335,128,23 "10 comments"
+text 223,368,27,33 "5."
+a 249,374,28,20 id=up_49282951 href=vote?id=49282951&how=up&goto=news
+a 277,371,548,33 href=https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/
+text 277,371,548,33 "Coin-sized device can hack a Boeing 737"
+text 825,377,17,25 "("
+a 842,377,111,25 href=from?site=wired.com
+text 842,377,111,25 "wired.com"
+text 953,377,10,25 ")"
+text 277,406,87,23 "75 points"
+text 364,406,36,23 "by"
+a 400,406,42,23 href=user?id=_tk_
+text 400,406,42,23 "_tk_"
+a 449,406,112,23 href=item?id=49282951
+text 449,406,112,23 "5 hours ago"
+text 567,406,15,23 "|"
+a 582,406,40,23 href=hide?id=49282951&goto=news
+text 582,406,40,23 "hide"
+text 622,406,22,23 "|"
+a 644,406,128,23 href=item?id=49282951
+text 644,406,128,23 "47 comments"
+text 223,439,27,33 "6."
+a 249,445,28,20 id=up_49271442 href=vote?id=49271442&how=up&goto=news
+a 277,442,575,33 href=https://doeken.org/wcag-ebook
+text 277,442,575,33 "Understanding WCAG 2.2 as ePub and PDF"
+text 853,448,17,25 "("
+a 870,448,121,25 href=from?site=doeken.org
+text 870,448,121,25 "doeken.org"
+text 990,448,10,25 ")"
+text 277,477,87,23 "14 points"
+text 364,477,36,23 "by"
+a 400,477,99,23 href=user?id=doekenorg
+text 400,477,99,23 "doekenorg"
+a 506,477,112,23 href=item?id=49271442
+text 506,477,112,23 "2 hours ago"
+text 624,477,15,23 "|"
+a 639,477,40,23 href=hide?id=49271442&goto=news
+text 639,477,40,23 "hide"
+text 679,477,22,23 "|"
+a 700,477,116,23 href=item?id=49271442
+text 700,477,116,23 "2 comments"
+text 223,510,27,33 "7."
+a 249,516,28,20 id=up_49300314 href=vote?id=49300314&how=up&goto=news
+a 277,513,904,33 href=https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/
+text 277,513,904,33 "Google is making private AI practical with homomorphic encryption"
+text 1181,519,17,25 "("
+a 1198,519,124,25 href=from?site=blog.google
+text 1198,519,124,25 "blog.google"
+text 1322,519,10,25 ")"
+text 277,548,99,23 "389 points"
+text 376,548,36,23 "by"
+a 412,548,95,23 href=user?id=u1hcw9nx
+text 412,548,95,23 "u1hcw9nx"
+a 514,548,124,23 href=item?id=49300314
+text 514,548,124,23 "18 hours ago"
+text 644,548,15,23 "|"
+a 659,548,40,23 href=hide?id=49300314&goto=news
+text 659,548,40,23 "hide"
+text 699,548,22,23 "|"
+a 720,548,140,23 href=item?id=49300314
+text 720,548,140,23 "233 comments"
+text 223,581,27,33 "8."
+a 249,587,28,20 id=up_49306577 href=vote?id=49306577&how=up&goto=news
+a 277,584,811,33 href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive
+text 277,584,811,33 "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia"
+text 1088,590,17,25 "("
+a 1105,590,95,25 href=from?site=usgs.gov
+text 1105,590,95,25 "usgs.gov"
+text 1201,590,10,25 ")"
+text 277,619,99,23 "195 points"
+text 376,619,36,23 "by"
+a 412,619,66,23 href=user?id=Bender
+text 412,619,66,23 "Bender"
+a 485,619,112,23 href=item?id=49306577
+text 485,619,112,23 "8 hours ago"
+text 603,619,15,23 "|"
+a 618,619,40,23 href=hide?id=49306577&goto=news
+text 618,619,40,23 "hide"
+text 658,619,22,23 "|"
+a 680,619,128,23 href=item?id=49306577
+text 680,619,128,23 "46 comments"
+text 223,652,27,33 "9."
+a 249,658,28,20 id=up_49305250 href=vote?id=49305250&how=up&goto=news
+a 277,655,143,33 href=https://eigendrum.com/#p=circle
+text 277,655,143,33 "eigendrum"
+text 421,661,17,25 "("
+a 438,661,167,25 href=from?site=eigendrum.com
+text 438,661,167,25 "eigendrum.com"
+text 605,661,10,25 ")"
+text 277,690,99,23 "157 points"
+text 376,690,36,23 "by"
+a 412,690,92,23 href=user?id=bookofjoe
+text 412,690,92,23 "bookofjoe"
+a 511,690,124,23 href=item?id=49305250
+text 511,690,124,23 "11 hours ago"
+text 641,690,15,23 "|"
+a 656,690,40,23 href=hide?id=49305250&goto=news
+text 656,690,40,23 "hide"
+text 695,690,22,23 "|"
+a 717,690,128,23 href=item?id=49305250
+text 717,690,128,23 "38 comments"
+text 206,723,44,33 "10."
+a 249,729,28,20 id=up_49300759 href=vote?id=49300759&how=up&goto=news
+a 277,726,908,33 href=https://rustdesk.com/blog/unattended-remote-access-wayland/
+text 277,726,908,33 "RustDesk now supports true unattended remote access on Wayland"
+text 1186,732,17,25 "("
+a 1203,732,144,25 href=from?site=rustdesk.com
+text 1203,732,144,25 "rustdesk.com"
+text 1347,732,10,25 ")"
+text 277,761,99,23 "295 points"
+text 376,761,36,23 "by"
+a 412,761,80,23 href=user?id=rustdesk
+text 412,761,80,23 "rustdesk"
+a 499,761,124,23 href=item?id=49300759
+text 499,761,124,23 "17 hours ago"
+text 629,761,15,23 "|"
+a 644,761,40,23 href=hide?id=49300759&goto=news
+text 644,761,40,23 "hide"
+text 684,761,22,23 "|"
+a 706,761,140,23 href=item?id=49300759
+text 706,761,140,23 "122 comments"
+text 206,794,44,33 "11."
+a 249,800,28,20 id=up_49303202 href=vote?id=49303202&how=up&goto=news
+a 277,797,932,33 href=https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html
+text 277,797,932,33 "Firefox is now the last major browser that still supports uBlock Origin"
+text 1209,803,17,25 "("
+a 1226,803,136,25 href=from?site=pcworld.com
+text 1226,803,136,25 "pcworld.com"
+text 1362,803,10,25 ")"
+text 277,832,111,23 "1021 points"
+text 388,832,36,23 "by"
+a 424,832,95,23 href=user?id=DemiGuru
+text 424,832,95,23 "DemiGuru"
+a 525,832,124,23 href=item?id=49303202
+text 525,832,124,23 "14 hours ago"
+text 656,832,15,23 "|"
+a 671,832,40,23 href=hide?id=49303202&goto=news
+text 671,832,40,23 "hide"
+text 710,832,22,23 "|"
+a 732,832,140,23 href=item?id=49303202
+text 732,832,140,23 "387 comments"
+text 206,865,44,33 "12."
+a 249,871,28,20 id=up_49307700 href=vote?id=49307700&how=up&goto=news
+a 277,868,997,33 href=https://chenxiachan.github.io/thoughtdag/
+text 277,868,997,33 "Show HN: ThoughtDAG – An editable context graph for LLM conversations"
+text 1274,874,17,25 "("
+a 1291,874,235,25 href=from?site=chenxiachan.github.io
+text 1291,874,235,25 "chenxiachan.github.io"
+text 1526,874,10,25 ")"
+text 277,903,87,23 "30 points"
+text 364,903,36,23 "by"
+a 400,903,85,23 href=user?id=chatchan
+text 400,903,85,23 "chatchan"
+a 491,903,112,23 href=item?id=49307700
+text 491,903,112,23 "5 hours ago"
+text 610,903,15,23 "|"
+a 625,903,40,23 href=hide?id=49307700&goto=news
+text 625,903,40,23 "hide"
+text 664,903,22,23 "|"
+a 686,903,116,23 href=item?id=49307700
+text 686,903,116,23 "4 comments"
+text 206,936,44,33 "13."
+a 249,942,28,20 id=up_49246366 href=vote?id=49246366&how=up&goto=news
+a 277,939,1069,33 href=https://baselashraf81.github.io/eigendrum/
+text 277,939,1069,33 "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum"
+text 1346,945,17,25 "("
+a 1363,945,251,25 href=from?site=baselashraf81.github.io
+text 1363,945,251,25 "baselashraf81.github.io"
+text 1614,945,10,25 ")"
+text 277,974,75,23 "5 points"
+text 353,974,36,23 "by"
+a 388,974,133,23 href=user?id=BaselAshraf81
+text 388,974,133,23 "BaselAshraf81"
+a 528,974,112,23 href=item?id=49246366
+text 528,974,112,23 "2 hours ago"
+text 647,974,15,23 "|"
+a 662,974,40,23 href=hide?id=49246366&goto=news
+text 662,974,40,23 "hide"
+text 701,974,22,23 "|"
+a 723,974,67,23 href=item?id=49246366
+text 723,974,67,23 "discuss"
+text 206,1007,44,33 "14."
+a 249,1013,28,20 id=up_49277535 href=vote?id=49277535&how=up&goto=news
+a 277,1010,889,33 href=https://silentshark.app/
+text 277,1010,889,33 "Show HN: Silent Shark – tactical map-based WWII submarine sim"
+text 1166,1016,17,25 "("
+a 1183,1016,164,25 href=from?site=silentshark.app
+text 1183,1016,164,25 "silentshark.app"
+text 1347,1016,10,25 ")"
+text 277,1045,87,23 "26 points"
+text 364,1045,36,23 "by"
+a 400,1045,57,23 href=user?id=epaga
+text 400,1045,57,23 "epaga"
+a 464,1045,112,23 href=item?id=49277535
+text 464,1045,112,23 "4 hours ago"
+text 582,1045,15,23 "|"
+a 597,1045,40,23 href=hide?id=49277535&goto=news
+text 597,1045,40,23 "hide"
+text 637,1045,22,23 "|"
+a 658,1045,116,23 href=item?id=49277535
+text 658,1045,116,23 "5 comments"
+text 206,1078,44,33 "15."
+a 249,1084,28,20 id=up_49300568 href=vote?id=49300568&how=up&goto=news
+a 277,1081,150,33 href=https://www.byhand.ai/
+text 277,1081,150,33 "AI by Hand"
+text 427,1087,17,25 "("
+a 444,1087,105,25 href=from?site=byhand.ai
+text 444,1087,105,25 "byhand.ai"
+text 550,1087,10,25 ")"
+text 277,1116,99,23 "305 points"
+text 376,1116,36,23 "by"
+a 412,1116,108,23 href=user?id=sans_souse
+text 412,1116,108,23 "sans_souse"
+a 527,1116,124,23 href=item?id=49300568
+text 527,1116,124,23 "17 hours ago"
+text 657,1116,15,23 "|"
+a 672,1116,40,23 href=hide?id=49300568&goto=news
+text 672,1116,40,23 "hide"
+text 712,1116,22,23 "|"
+a 733,1116,128,23 href=item?id=49300568
+text 733,1116,128,23 "23 comments"
+text 206,1149,44,33 "16."
+a 249,1155,28,20 id=up_49306443 href=vote?id=49306443&how=up&goto=news
+a 277,1152,430,33 href=https://blog.ploopy.co/the-aplus-is-finally-here-499
+text 277,1152,430,33 "The Ploopy A+ Trackball Is Here"
+text 707,1158,17,25 "("
+a 725,1158,101,25 href=from?site=ploopy.co
+text 725,1158,101,25 "ploopy.co"
+text 825,1158,10,25 ")"
+text 277,1187,99,23 "104 points"
+text 376,1187,36,23 "by"
+a 412,1187,87,23 href=user?id=big_toast
+text 412,1187,87,23 "big_toast"
+a 506,1187,112,23 href=item?id=49306443
+text 506,1187,112,23 "8 hours ago"
+text 624,1187,15,23 "|"
+a 639,1187,40,23 href=hide?id=49306443&goto=news
+text 639,1187,40,23 "hide"
+text 679,1187,22,23 "|"
+a 701,1187,128,23 href=item?id=49306443
+text 701,1187,128,23 "49 comments"
+text 206,1220,44,33 "17."
+a 249,1226,28,20 id=up_49306196 href=vote?id=49306196&how=up&goto=news
+a 277,1223,767,33 href=https://arxiv.org/abs/1811.03459
+text 277,1223,767,33 "Simplifying and Refactoring Introductory Calculus (2018)"
+text 1044,1229,17,25 "("
+a 1061,1229,94,25 href=from?site=arxiv.org
+text 1061,1229,94,25 "arxiv.org"
+text 1156,1229,10,25 ")"
+text 277,1258,87,23 "89 points"
+text 364,1258,36,23 "by"
+a 400,1258,117,23 href=user?id=E-Reverance
+text 400,1258,117,23 "E-Reverance"
+a 524,1258,112,23 href=item?id=49306196
+text 524,1258,112,23 "9 hours ago"
+text 643,1258,15,23 "|"
+a 658,1258,40,23 href=hide?id=49306196&goto=news
+text 658,1258,40,23 "hide"
+text 697,1258,22,23 "|"
+a 719,1258,128,23 href=item?id=49306196
+text 719,1258,128,23 "41 comments"
+text 206,1291,44,33 "18."
+a 249,1297,28,20 id=up_49272784 href=vote?id=49272784&how=up&goto=news
+a 277,1294,754,33 href=https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c
+text 277,1294,754,33 "Unearthing a 31 year old Easter egg in Ecco the Dolphin"
+text 1031,1300,17,25 "("
+a 1048,1300,220,25 href=from?site=32bits.substack.com
+text 1048,1300,220,25 "32bits.substack.com"
+text 1268,1300,10,25 ")"
+text 277,1329,87,23 "83 points"
+text 364,1329,36,23 "by"
+a 400,1329,71,23 href=user?id=bbayles
+text 400,1329,71,23 "bbayles"
+a 478,1329,124,23 href=item?id=49272784
+text 478,1329,124,23 "12 hours ago"
+text 608,1329,15,23 "|"
+a 623,1329,40,23 href=hide?id=49272784&goto=news
+text 623,1329,40,23 "hide"
+text 663,1329,22,23 "|"
+a 685,1329,128,23 href=item?id=49272784
+text 685,1329,128,23 "18 comments"
+text 206,1362,44,33 "19."
+a 249,1368,28,20 id=up_49300800 href=vote?id=49300800&how=up&goto=news
+a 277,1365,686,33 href=https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions
+text 277,1365,686,33 "Maximizing the value of your Claude Code sessions"
+text 963,1371,17,25 "("
+a 980,1371,122,25 href=from?site=claude.com
+text 980,1371,122,25 "claude.com"
+text 1102,1371,10,25 ")"
+text 277,1400,99,23 "223 points"
+text 376,1400,36,23 "by"
+a 412,1400,50,23 href=user?id=twapi
+text 412,1400,50,23 "twapi"
+a 469,1400,124,23 href=item?id=49300800
+text 469,1400,124,23 "17 hours ago"
+text 599,1400,15,23 "|"
+a 614,1400,40,23 href=hide?id=49300800&goto=news
+text 614,1400,40,23 "hide"
+text 654,1400,22,23 "|"
+a 676,1400,140,23 href=item?id=49300800
+text 676,1400,140,23 "125 comments"
+text 206,1433,44,33 "20."
+a 249,1439,28,20 id=up_49308059 href=vote?id=49308059&how=up&goto=news
+a 277,1436,677,33 href=item?id=49308059
+text 277,1436,677,33 "Ask HN: How do you keep up with HN these days?"
+text 277,1471,87,23 "32 points"
+text 364,1471,36,23 "by"
+a 400,1471,147,23 href=user?id=simonebrunozzi
+text 400,1471,147,23 "simonebrunozzi"
+a 553,1471,112,23 href=item?id=49308059
+text 553,1471,112,23 "3 hours ago"
+text 672,1471,15,23 "|"
+a 687,1471,40,23 href=hide?id=49308059&goto=news
+text 687,1471,40,23 "hide"
+text 726,1471,22,23 "|"
+a 748,1471,128,23 href=item?id=49308059
+text 748,1471,128,23 "56 comments"
+text 206,1504,44,33 "21."
+a 249,1510,28,20 id=up_49263186 href=vote?id=49263186&how=up&goto=news
+a 277,1507,646,33 href=https://spectrum.ieee.org/magnetophon-laugh-track
+text 277,1507,646,33 "This Hi-Fi Tape Recorder Changed Radio Forever"
+text 923,1513,17,25 "("
+a 941,1513,87,25 href=from?site=ieee.org
+text 941,1513,87,25 "ieee.org"
+text 1028,1513,10,25 ")"
+text 277,1542,87,23 "46 points"
+text 364,1542,36,23 "by"
+a 400,1542,95,23 href=user?id=Jimmc414
+text 400,1542,95,23 "Jimmc414"
+a 502,1542,112,23 href=item?id=49263186
+text 502,1542,112,23 "9 hours ago"
+text 620,1542,15,23 "|"
+a 635,1542,40,23 href=hide?id=49263186&goto=news
+text 635,1542,40,23 "hide"
+text 675,1542,22,23 "|"
+a 697,1542,128,23 href=item?id=49263186
+text 697,1542,128,23 "11 comments"
+text 206,1575,44,33 "22."
+a 249,1581,28,20 id=up_49299746 href=vote?id=49299746&how=up&goto=news
+a 277,1578,260,33 href=https://www.mixedbread.com/blog/toast-1
+text 277,1578,260,33 "Introducing Toast 1"
+text 537,1584,17,25 "("
+a 555,1584,179,25 href=from?site=mixedbread.com
+text 555,1584,179,25 "mixedbread.com"
+text 733,1584,10,25 ")"
+text 277,1613,99,23 "206 points"
+text 376,1613,36,23 "by"
+a 412,1613,96,23 href=user?id=mplappert
+text 412,1613,96,23 "mplappert"
+a 514,1613,124,23 href=item?id=49299746
+text 514,1613,124,23 "18 hours ago"
+text 645,1613,15,23 "|"
+a 660,1613,40,23 href=hide?id=49299746&goto=news
+text 660,1613,40,23 "hide"
+text 699,1613,22,23 "|"
+a 721,1613,128,23 href=item?id=49299746
+text 721,1613,128,23 "61 comments"
+text 206,1646,44,33 "23."
+a 249,1652,28,20 id=up_49299081 href=vote?id=49299081&how=up&goto=news
+a 277,1649,1036,33 href=https://heyjonny.dev/posts/rss-to-eink-newspaper/
+text 277,1649,1036,33 "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone"
+text 1314,1655,17,25 "("
+a 1331,1655,143,25 href=from?site=heyjonny.dev
+text 1331,1655,143,25 "heyjonny.dev"
+text 1474,1655,10,25 ")"
+text 277,1684,99,23 "187 points"
+text 376,1684,36,23 "by"
+a 412,1684,64,23 href=user?id=speckx
+text 412,1684,64,23 "speckx"
+a 483,1684,124,23 href=item?id=49299081
+text 483,1684,124,23 "19 hours ago"
+text 613,1684,15,23 "|"
+a 628,1684,40,23 href=hide?id=49299081&goto=news
+text 628,1684,40,23 "hide"
+text 668,1684,22,23 "|"
+a 689,1684,128,23 href=item?id=49299081
+text 689,1684,128,23 "73 comments"
+text 206,1717,44,33 "24."
+a 249,1723,28,20 id=up_49215682 href=vote?id=49215682&how=up&goto=news
+a 277,1720,322,33 href=https://fzakaria.com/2026/08/05/super-mario-derivations
+text 277,1720,322,33 "Super Mario Derivations"
+text 599,1726,17,25 "("
+a 617,1726,137,25 href=from?site=fzakaria.com
+text 617,1726,137,25 "fzakaria.com"
+text 754,1726,10,25 ")"
+text 277,1755,99,23 "103 points"
+text 376,1755,36,23 "by"
+a 412,1755,115,23 href=user?id=domenkozar
+text 412,1755,115,23 "domenkozar"
+a 534,1755,124,23 href=item?id=49215682
+text 534,1755,124,23 "12 hours ago"
+text 664,1755,15,23 "|"
+a 679,1755,40,23 href=hide?id=49215682&goto=news
+text 679,1755,40,23 "hide"
+text 719,1755,22,23 "|"
+a 740,1755,128,23 href=item?id=49215682
+text 740,1755,128,23 "14 comments"
+text 206,1788,44,33 "25."
+a 249,1794,28,20 id=up_49308553 href=vote?id=49308553&how=up&goto=news
+a 277,1791,1059,33 href=https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/
+text 277,1791,1059,33 "Suspecting court of using AI, man injected prompts in filings to try to win case"
+text 1336,1797,17,25 "("
+a 1353,1797,175,25 href=from?site=arstechnica.com
+text 1353,1797,175,25 "arstechnica.com"
+text 1528,1797,10,25 ")"
+text 277,1826,87,23 "20 points"
+text 364,1826,36,23 "by"
+a 400,1826,49,23 href=user?id=jnord
+text 400,1826,49,23 "jnord"
+a 456,1826,112,23 href=item?id=49308553
+text 456,1826,112,23 "2 hours ago"
+text 574,1826,15,23 "|"
+a 589,1826,40,23 href=hide?id=49308553&goto=news
+text 589,1826,40,23 "hide"
+text 629,1826,22,23 "|"
+a 651,1826,128,23 href=item?id=49308553
+text 651,1826,128,23 "10 comments"
+text 206,1859,44,33 "26."
+a 249,1865,28,20 id=up_49302562 href=vote?id=49302562&how=up&goto=news
+a 277,1862,159,33 href=https://blog.racket-lang.org/2026/08/racket-v9-3.html
+text 277,1862,159,33 "Racket v9.3"
+text 436,1868,17,25 "("
+a 453,1868,164,25 href=from?site=racket-lang.org
+text 453,1868,164,25 "racket-lang.org"
+text 617,1868,10,25 ")"
+text 277,1897,87,23 "88 points"
+text 364,1897,36,23 "by"
+a 400,1897,70,23 href=user?id=privong
+text 400,1897,70,23 "privong"
+a 477,1897,124,23 href=item?id=49302562
+text 477,1897,124,23 "15 hours ago"
+text 607,1897,15,23 "|"
+a 622,1897,40,23 href=hide?id=49302562&goto=news
+text 622,1897,40,23 "hide"
+text 662,1897,22,23 "|"
+a 684,1897,116,23 href=item?id=49302562
+text 684,1897,116,23 "6 comments"
+text 206,1930,44,33 "27."
+a 249,1936,28,20 id=up_49294997 href=vote?id=49294997&how=up&goto=news
+a 277,1933,782,33 href=https://z.ai/blog/glm-5.3
+text 277,1933,782,33 "GLM-5.3: Frontier coding with emergent cyber capabilities"
+text 1059,1939,17,25 "("
+a 1076,1939,38,25 href=from?site=z.ai
+text 1076,1939,38,25 "z.ai"
+text 1114,1939,10,25 ")"
+text 277,1968,111,23 "1092 points"
+text 388,1968,36,23 "by"
+a 424,1968,44,23 href=user?id=pella
+text 424,1968,44,23 "pella"
+a 475,1968,93,23 href=item?id=49294997
+text 475,1968,93,23 "1 day ago"
+text 574,1968,15,23 "|"
+a 589,1968,40,23 href=hide?id=49294997&goto=news
+text 589,1968,40,23 "hide"
+text 629,1968,22,23 "|"
+a 650,1968,140,23 href=item?id=49294997
+text 650,1968,140,23 "537 comments"
+text 206,2001,44,33 "28."
+a 249,2007,28,20 id=up_49211375 href=vote?id=49211375&how=up&goto=news
+a 277,2004,378,33 href=https://uvbirds.com/
+text 277,2004,378,33 "Ultraviolet Bird Photography"
+text 655,2010,17,25 "("
+a 672,2010,131,25 href=from?site=uvbirds.com
+text 672,2010,131,25 "uvbirds.com"
+text 803,2010,10,25 ")"
+text 277,2039,99,23 "147 points"
+text 376,2039,36,23 "by"
+a 412,2039,61,23 href=user?id=EndXA
+text 412,2039,61,23 "EndXA"
+a 479,2039,124,23 href=item?id=49211375
+text 479,2039,124,23 "18 hours ago"
+text 610,2039,15,23 "|"
+a 625,2039,40,23 href=hide?id=49211375&goto=news
+text 625,2039,40,23 "hide"
+text 664,2039,22,23 "|"
+a 686,2039,128,23 href=item?id=49211375
+text 686,2039,128,23 "24 comments"
+text 206,2072,44,33 "29."
+a 249,2078,28,20 id=up_49307099 href=vote?id=49307099&how=up&goto=news
+a 277,2075,487,33 href=https://app.deltix.ai
+text 277,2075,487,33 "Show HN: Deltix – AI Driven Testing"
+text 765,2081,17,25 "("
+a 782,2081,85,25 href=from?site=deltix.ai
+text 782,2081,85,25 "deltix.ai"
+text 867,2081,10,25 ")"
+text 277,2110,87,23 "31 points"
+text 364,2110,36,23 "by"
+a 400,2110,131,23 href=user?id=oneounceman
+text 400,2110,131,23 "oneounceman"
+a 538,2110,112,23 href=item?id=49307099
+text 538,2110,112,23 "7 hours ago"
+text 656,2110,15,23 "|"
+a 671,2110,40,23 href=hide?id=49307099&goto=news
+text 671,2110,40,23 "hide"
+text 711,2110,22,23 "|"
+a 733,2110,116,23 href=item?id=49307099
+text 733,2110,116,23 "9 comments"
+text 206,2143,44,33 "30."
+a 249,2149,28,20 id=up_49296740 href=vote?id=49296740&how=up&goto=news
+a 277,2146,572,33 href=https://mun-logadan.github.io/why-does-opus-5-feel-worse/
+text 277,2146,572,33 "Why does Opus 5 feel worse to work with?"
+text 849,2152,17,25 "("
+a 866,2152,244,25 href=from?site=mun-logadan.github.io
+text 866,2152,244,25 "mun-logadan.github.io"
+text 1110,2152,10,25 ")"
+text 277,2181,99,23 "870 points"
+text 376,2181,36,23 "by"
+a 412,2181,66,23 href=user?id=numeri
+text 412,2181,66,23 "numeri"
+a 485,2181,124,23 href=item?id=49296740
+text 485,2181,124,23 "23 hours ago"
+text 615,2181,15,23 "|"
+a 630,2181,40,23 href=hide?id=49296740&goto=news
+text 630,2181,40,23 "hide"
+text 670,2181,22,23 "|"
+a 691,2181,140,23 href=item?id=49296740
+text 691,2181,140,23 "792 comments"
+a 277,2234,66,33 href=?p=2
+text 277,2234,66,33 "More"
+a 899,2324,111,25 href=newsguidelines.html
+text 899,2324,111,25 "Guidelines"
+text 1010,2324,25,25 "|"
+a 1035,2324,43,25 href=newsfaq.html
+text 1035,2324,43,25 "FAQ"
+text 1077,2324,25,25 "|"
+a 1102,2324,48,25 href=lists
+text 1102,2324,48,25 "Lists"
+text 1150,2324,25,25 "|"
+a 1175,2324,36,25 href=https://github.com/HackerNews/API
+text 1175,2324,36,25 "API"
+text 1212,2324,25,25 "|"
+a 1236,2324,88,25 href=security.html
+text 1236,2324,88,25 "Security"
+text 1324,2324,25,25 "|"
+a 1349,2324,57,25 href=https://www.ycombinator.com/legal/
+text 1349,2324,57,25 "Legal"
+text 1405,2324,25,25 "|"
+a 1430,2324,124,25 href=https://www.ycombinator.com/apply/
+text 1430,2324,124,25 "Apply to YC"
+text 1554,2324,25,25 "|"
+a 1579,2324,82,25 href=mailto:hn@ycombinator.com
+text 1579,2324,82,25 "Contact"
+text 1074,2386,114,33 "Search:"
+input 1188,2382,298,43 type=text name=q value=""

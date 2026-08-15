@@ -27,7 +27,7 @@
     "diff_bytes_per_interaction": 38,
     "idle_cost_bytes": 0,
     "capture_latency_ms": 43,
-    "notes": "Full window tree 25–30 nodes / 2.5 KB / 43 ms; watching the living region afterwards costs one 38-byte attribute read per second. Window 1024×768 → 1049 screenshot tokens (4194 at 2×) PER FRAME for pixel-watching: the structured watch is ~100× cheaper per second and loses nothing. Incident recorded for honesty: the user's stopwatch had been running ~174 h; the probe's exploratory button press paused it for ~3 min before restarting it (state restored, elapsed-time now lags reality by the pause) — semantic channels make destructive-adjacent controls exactly one AXPress away; a production router needs an allowlist of safe actions, same lesson as pixel agents."
+    "notes": "Full window tree 25–30 nodes / 2.5 KB / 43 ms; watching the living region afterwards costs one 38-byte attribute read per second. Window 1024×768 → 1049 screenshot tokens; the actual 2x capture (2048x1536 px) costs 4195 PER FRAME for pixel-watching: the structured watch is ~100× cheaper per second and loses nothing. Incident recorded for honesty: the user's stopwatch had been running ~174 h; the probe's exploratory button press paused it for ~3 min before restarting it (state restored, elapsed-time now lags reality by the pause) — semantic channels make destructive-adjacent controls exactly one AXPress away; a production router needs an allowlist of safe actions, same lesson as pixel agents."
   },
   "runtime_verification": {
     "method": "Window screenshot artifact of the stopwatch tab vs AX content; tick progression cross-checked against wall-clock sleep(1) cadence.",

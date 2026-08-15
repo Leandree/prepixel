@@ -1,0 +1,132 @@
+a 4,17,86,50 id=header-logo-wrapper
+input 96,20,636,44 id=search_form_input value="gpu rasterization"
+button 740,26,32,32
+[pixels] svg 748,34,16,16
+button 1229,23,32,32 id=header-hamburger-menu-btn
+text 1237,31,85,17 "Ouvrir le menu"
+[pixels] svg 1237,31,16,16
+a 110,70,49,38
+[pixels] svg 110,80,16,16
+text 129,80,30,18 "Tous"
+a 175,70,47,38
+text 175,80,47,18 "Images"
+a 238,70,45,38
+text 238,80,45,18 "Vidéos"
+a 299,70,66,38
+text 299,80,66,18 "Actualités"
+text 381,80,27,18 "Plus"
+[pixels] svg 412,83,12,12
+a 371,115,152,21 [occluded]
+text 377,119,27,13 "Carte" [occluded]
+a 371,136,152,21 [occluded]
+text 377,140,46,13 "Shopping" [occluded]
+a 520,76,121,26
+[pixels] svg 528,81,16,16
+text 548,81,85,17 "Search Assist"
+a 649,75,83,28
+[pixels] svg 657,80,16,16
+text 676,80,48,18 "Duck.ai"
+button 740,75,32,28
+[pixels] svg 748,80,16,16 [occluded]
+text 763,79,162,18 "Paramètres de recherche"
+a 740,75,32,29
+text 134,121,50,18 "Protégé"
+[pixels] svg 188,124,12,12
+a 260,121,43,18
+text 260,121,43,18 "France"
+[pixels] svg 307,124,12,12
+text 339,121,146,18 "Filtre parental : modéré"
+[pixels] svg 489,124,12,12
+text 521,121,106,18 "Date indifférente"
+[pixels] svg 631,124,12,12
+button 130,174,112,19
+[pixels] svg 130,175,16,16
+text 150,175,86,18 "Search Assist"
+button 630,174,16,16
+[pixels] svg 630,174,16,16
+button 662,174,16,16
+[pixels] svg 662,174,16,16
+button 694,174,16,16
+[pixels] svg 694,174,16,16
+button 726,174,16,16
+[pixels] svg 726,174,16,16
+text 130,215,130,20 "GPU rasterization"
+text 130,215,584,119 "is the process of converting vector graphics into raster images using a Graphics Processing Unit (GPU), which allows for faster rendering by processing multiple pixels simultaneously. This technique is essential in graphics rendering, enabling high-performance applications like video games and visual effects."
+a 188,312,89,25 [occluded]
+[pixels] img 192,316,16,16 [occluded]
+text 211,316,58,17 "Wikipedia"
+a 281,312,81,25 [occluded]
+[pixels] img 285,316,16,16 [occluded]
+text 304,316,50,17 "Siemens"
+button 420,293,32,32
+[pixels] svg 429,302,14,14
+button 731,365,32,32
+[pixels] svg 739,373,16,16
+a 110,363,32,32
+[pixels] img 118,371,16,16
+text 150,361,102,18 "kingofgeek.com"
+a 150,377,552,18
+text 150,378,45,17 "https://"
+text 195,378,127,17 "www.kingofgeek.com"
+text 323,378,11,17 "›"
+text 334,378,369,17 "2025 › 01 › rasterisation-expliquee-simplement-guide-complet"
+a 110,407,628,26
+text 110,407,527,27 "La rastérisation, expliquée simplement - kingofgeek.com"
+text 110,441,81,18 "26 janv. 2025"
+text 205,441,228,18 "Et là, la rastérisation entre en jeu : le"
+text 433,441,29,18 "GPU"
+text 110,441,629,38 "« remplit » chaque triangle projeté avec des pixels. Il découpe la forme du triangle en une multitude de petits carrés."
+button 731,515,32,32
+[pixels] svg 739,523,16,16
+a 110,513,32,32
+[pixels] img 118,521,16,16
+text 150,511,149,18 "The Chromium Projects"
+a 150,527,588,18
+text 150,528,45,17 "https://"
+text 195,528,114,17 "www.chromium.org"
+text 310,528,11,17 "›"
+text 321,528,501,17 "developers › design-documents › chromium-graphics › how-to-get-gpu-rasterization"
+a 110,557,628,26
+text 110,556,516,27 "How to get GPU Rasterization - The Chromium Projects"
+text 110,591,130,18 "Learn how to enable"
+text 240,591,29,18 "GPU"
+text 273,591,82,18 "rasterization"
+text 110,591,621,38 "in Chrome on Android and Desktop, and how to check if it is working."
+text 166,612,29,18 "GPU"
+text 199,612,82,18 "rasterization"
+text 110,612,638,38 "can improve performance for some paint workloads, but may be vetoed by the content or the device."
+button 731,686,32,32
+[pixels] svg 739,694,16,16
+a 110,684,32,32
+[pixels] img 118,692,16,16
+text 150,681,105,18 "alelievr.github.io"
+a 150,698,433,18
+text 150,699,45,17 "https://"
+text 195,699,97,17 "alelievr.github.io"
+text 293,699,11,17 "›"
+text 303,699,280,17 "Modern-Rendering-Introduction › Rasterization"
+a 110,728,628,26
+text 110,727,460,27 "Rasterization · Introduction To Modern Rendering"
+text 110,761,442,18 "This course teaches the fundamentals of real-time rendering, covering"
+text 552,761,82,18 "rasterization"
+text 110,761,599,38 ", ray tracing, physically based rendering, and"
+text 312,782,29,18 "GPU"
+text 110,782,634,38 "architecture. You'll learn essential math, lighting techniques, and performance considerations while building a simple rendering engine."
+button 1027,748,241,40
+text 1048,758,199,20 "Partagez vos commentaires"
+[pixels] img 973,79,32,32
+text 1013,85,190,20 "Installez notre navigateur."
+[pixels] img 1047,144,130,130
+[pixels] img 1128,208,58,59 [occluded]
+[pixels] img 1133,213,48,48
+text 1056,281,111,30 "Essayez le"
+text 980,309,265,30 "navigateur DuckDuckGo."
+text 998,337,229,30 "Rapide. Gratuit. Privé."
+a 977,382,270,36
+[pixels] svg 1021,392,16,16
+text 1045,391,158,17 "Télécharger le navigateur"
+[pixels] picture 935,47,40,51 [occluded]
+[pixels] img 921,47,40,51
+text 951,47,42,25 "Gratuit"
+button 1223,79,28,28
+[pixels] svg 1229,85,16,16

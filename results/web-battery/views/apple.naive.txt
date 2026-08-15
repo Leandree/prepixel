@@ -1,0 +1,432 @@
+text 300,39,845,61 "Choisissez un pays ou une région pour afficher le contenu spécifique à votre localisation et acheter en ligne."
+text 1379,50,109,40 "France"
+a 2011,34,189,72 href=https://www.apple.com/fr/ id=ac-ls-continue role=button
+text 2043,53,125,34 "Continuer"
+button 2228,52,36,36 id=ac-ls-close aria-label=Fermer le sélecteur de pays ou zone géographique
+text 0,9,190,81 "Apple"
+a 284,140,60,88 href=/ aria-label=Apple
+text 317,164,93,40 "Apple"
+a 382,140,92,88 href=/us/shop/goto/store aria-label=Store
+text 398,169,59,29 "Store"
+button 444,140,44,88 id=globalnav-menubutton-link-store aria-label=Store menu
+a 513,140,78,88 href=/mac/ aria-label=Mac
+text 529,169,47,29 "Mac"
+button 561,140,44,88 id=globalnav-menubutton-link-mac aria-label=Mac menu
+a 629,140,80,88 href=/ipad/ aria-label=iPad
+text 645,169,48,29 "iPad"
+button 679,140,44,88 id=globalnav-menubutton-link-ipad aria-label=iPad menu
+a 747,140,108,88 href=/iphone/ aria-label=iPhone
+text 763,169,76,29 "iPhone"
+button 825,140,44,88 id=globalnav-menubutton-link-iphone aria-label=iPhone menu
+a 894,140,102,88 href=/watch/ aria-label=Watch
+text 910,169,70,29 "Watch"
+button 966,140,44,88 id=globalnav-menubutton-link-watch aria-label=Watch menu
+a 1034,140,100,88 href=/apple-vision-pro/ aria-label=Vision
+text 1050,169,67,29 "Vision"
+button 1104,140,44,88 id=globalnav-menubutton-link-vision aria-label=Vision menu
+a 1172,140,118,88 href=/airpods/ aria-label=AirPods
+text 1188,169,86,29 "AirPods"
+button 1260,140,44,88 id=globalnav-menubutton-link-airpods aria-label=AirPods menu
+a 1328,140,162,88 href=/tv-home/ aria-label=TV and Home
+text 1344,169,126,29 "TV & Home"
+button 1460,140,44,88 id=globalnav-menubutton-link-tv-home aria-label=TV and Home menu
+a 1529,140,186,88 href=/entertainment/ aria-label=Entertainment
+text 1545,169,156,29 "Entertainment"
+button 1685,140,44,88 id=globalnav-menubutton-link-entertainment aria-label=Entertainment menu
+a 1753,140,166,88 href=/us/shop/goto/buy_accessories aria-label=Accessories
+text 1769,169,134,29 "Accessories"
+button 1889,140,44,88 id=globalnav-menubutton-link-accessories aria-label=Accessories menu
+a 1957,140,120,88 href=https://support.apple.com/?cid=gn-ols-home-hp-tab aria-label=Support
+text 1973,169,89,29 "Support"
+button 2047,140,44,88 id=globalnav-menubutton-link-support aria-label=Support menu
+a 2116,140,62,88 role=button id=globalnav-menubutton-link-search href=/us/search aria-label=Search apple.com
+a 2216,140,60,88 id=globalnav-menubutton-link-bag href=/us/shop/goto/bag aria-label=Shopping Bag role=button
+a 0,228,2560,1384 href=/us/shop/goto/edu_store
+text 901,333,758,134 "College, sorted."
+text 753,470,791,67 "Get a gift card from $100 to $150"
+text 1544,470,23,67 "*"
+text 808,470,999,131 "when you buy Mac or iPad with education savings."
+a 1196,634,168,88 href=/us/shop/goto/edu_store aria-label=Shop, Education Store
+text 1240,658,80,40 "Shop"
+[pixels] img 58,692,2444,920 src=/v/home/images/back-to-school-2026/a/hero_back_to_school_startframe__cd4vg5frm39e_large.png alt=
+[pixels] video 58,692,2444,920 aria-label=Animated cutouts of smiling students each carrying various MacBook and iPad models, and assorted dorm room supplies src=/105/media/us/home/2026/0728f380-24a1-41b4-8575-8f63d7f3afb9/anim/hero/largetall.webm
+[pixels] video 58,692,968,920 src=/105/media/us/home/2026/0728f380-24a1-41b4-8575-8f63d7f3afb9/anim/solo-2/largetall.webm
+[pixels] video 780,692,1000,920 src=/105/media/us/home/2026/0728f380-24a1-41b4-8575-8f63d7f3afb9/anim/solo-1/largetall.webm
+[pixels] video 1536,692,964,920 src=/105/media/us/home/2026/0728f380-24a1-41b4-8575-8f63d7f3afb9/anim/solo-3/largetall.webm
+a 0,1636,2560,1384 href=/iphone/
+text 1111,1741,339,134 "iPhone"
+text 932,1878,695,67 "Meet the latest iPhone lineup."
+a 992,1978,261,88 href=/iphone/ aria-label=Learn more, iPhone
+text 1036,2002,173,40 "Learn more"
+a 1287,1978,281,88 href=/us/shop/goto/buy_iphone aria-label=Shop iPhone
+text 1331,2002,193,40 "Shop iPhone"
+[pixels] picture 0,1636,2560,1384
+[pixels] img -1728,1636,6016,1384 src=/v/home/images/iphone-family/a/hero_iphone_family__be5jkzxszb1e_large.jpg alt=iPhone 17 Pro, back exterior, deep blue color, Pro Fusion camera system in top left corner, Apple logo in center, iPhone 17, back exterior, white color, Dual Fusion camera system in top left corner, Apple logo in center, iPhone 17e, back exterior, soft pink color, Fusion camera system in top left corner, Apple logo in center, iPhone Air, side, titanium frame profile, Fusion camera system in top left corner
+a 0,3044,2560,1384 href=/macbook-air/
+text 969,3149,621,134 "MacBook Air"
+text 968,3286,624,67 "Now supercharged by M5."
+a 1059,3386,261,88 href=/macbook-air/ aria-label=Learn more, MacBook Air with M5
+text 1103,3410,173,40 "Learn more"
+a 1355,3386,146,88 href=/us/shop/goto/buy_mac/macbook_air aria-label=Buy, MacBook Air with M5
+text 1399,3410,58,40 "Buy"
+[pixels] picture 0,3044,2560,1384
+[pixels] img -1728,3044,6016,1384 src=/v/home/images/macbook-air-m5/a/hero_macbook_air_m5__eb1idggd120y_large.jpg alt=Two open MacBook Air laptops in sky blue color forming arrow shape, emphasizing narrow profile
+a 24,4452,1244,1160 href=/ipad-air/
+[pixels] picture 409,4566,473,2
+[pixels] img 645,4566,2,2 src=/v/home/images/logos/ipad-air-m4/a/promo_logo_ipad_air__dqdj4ni03quu_large.png alt=
+text 646,4564,152,183 "iPad Air"
+text 409,4654,473,50 "Now supercharged by M4."
+a 468,4728,209,72 href=/ipad-air/ aria-label=Learn more, iPad Air
+text 500,4747,145,34 "Learn more"
+a 704,4728,120,72 href=/us/shop/goto/buy_ipad/ipad_air aria-label=Buy, iPad Air
+text 740,4747,49,34 "Buy"
+[pixels] picture 24,4452,1244,1160
+[pixels] img 66,4452,1160,1160 src=/v/home/images/ipad-air-m4/a/promo_ipad_air_m4__bgcv7t286k8y_large.jpg alt=iPad Air models floating, back exterior, single-lens camera, front exterior, rounded corners, black display bezel
+a 1292,4452,1244,1160 href=/macbook-pro/
+text 1680,4554,467,95 "MacBook Pro"
+text 1599,4652,631,50 "Now with M5, M5 Pro, and M5 Max."
+a 1736,4726,209,72 href=/macbook-pro/ aria-label=Learn more, MacBook Pro
+text 1768,4745,145,34 "Learn more"
+a 1972,4726,120,72 href=/us/shop/goto/buy_mac/macbook_pro aria-label=Buy, MacBook Pro
+text 2008,4745,49,34 "Buy"
+[pixels] picture 1292,4452,1244,1160
+[pixels] img 1334,4452,1160,1160 src=/v/home/images/macbook-pro/a/promo_macbook_pro__c9td9w1mc8ia_large.jpg alt=MacBook Pro positioned into the shape of a V, referencing the M5 chip family
+a 24,5636,1244,1160 href=/apple-watch-series-11/
+[pixels] picture 303,5750,685,2
+[pixels] img 645,5750,2,2 src=/v/home/images/logos/apple-watch-series-11/a/promo_logo_apple_watch_series_11__5r9c4l119tuy_large.png alt=
+text 646,5748,227,359 "Apple Watch Series 11"
+text 303,5838,685,50 "The ultimate way to watch your health."
+a 468,5912,209,72 href=/apple-watch-series-11/ aria-label=Learn more, Apple Watch Series 11
+text 500,5931,145,34 "Learn more"
+a 704,5912,120,72 href=/us/shop/goto/buy_watch/apple_watch_series_11 aria-label=Buy, Apple Watch Series 11
+text 740,5931,49,34 "Buy"
+[pixels] picture 24,5636,1244,1160
+[pixels] img 66,5636,1160,1160 src=/v/home/images/apple-watch-series-11/a/promo_apple_watch_series_11__gnlwqxe1jlu2_large.jpg alt=Apple Watch Series 11, rose gold color, aluminum case, sleep score, right side exterior, Digital Crown, microphone, side button, starlight Sport Band
+a 1292,5636,1244,1160 href=/ipad-pro/
+text 1770,5738,287,95 "iPad Pro"
+text 1621,5836,586,100 "Advanced AI performance and game-changing capabilities."
+a 1736,5960,209,72 href=/ipad-pro/ aria-label=Learn more, iPad Pro
+text 1768,5979,145,34 "Learn more"
+a 1972,5960,120,72 href=/us/shop/goto/ipad_pro/select aria-label=Buy, iPad Pro
+text 2008,5979,49,34 "Buy"
+[pixels] picture 1292,5636,1244,1160
+[pixels] img 1334,5636,1160,1160 src=/v/home/images/ipad-pro/a/promo_ipad_pro__emtduc920o02_large.jpg alt=Two iPad Pro devices, front exterior, portrait orientation, black display bezel, display showing multicolored, curved line art, side exterior, thin profile, volume-up button, volume-down button, raised Pro Camera System
+a 24,6820,1244,1160 href=/us/shop/goto/trade_in
+[pixels] picture 381,6934,530,2
+[pixels] img 645,6934,2,2 src=/v/home/images/logos/iphone-tradein/a/promo_logo_iphone_tradein__bb7assu7ubo2_large.png alt=
+text 646,6932,208,271 "Apple Trade In"
+text 412,7022,468,150 "Get up to $205–$720 in credit when you trade in iPhone 13 or higher."
+text 818,7122,10,50 "1"
+a 501,7196,291,72 href=/us/shop/goto/trade_in aria-label=Get your estimate
+text 533,7215,227,34 "Get your estimate"
+[pixels] picture 24,6820,1244,1160
+[pixels] img 66,6820,1160,1160 src=/v/home/images/iphone-tradein/a/promo_iphone_tradein__e4hrjxmgmf0i_large.jpg alt=Side-by-side, hand holding iPhone 13 in silicon case with stickers on back exterior, trade-in with hand holding new iPhone box for iPhone 17 Pro
+a 1292,6820,1244,1160 href=/apple-card/
+[pixels] picture 1624,6934,580,2
+[pixels] img 1913,6934,2,2 src=/v/home/images/logos/apple-card/a/promo_logo_apple_card__28vxrcexz0ia_large.png alt=
+text 1914,6932,208,183 "Apple Card"
+text 1648,7022,532,100 "Get up to 3% Daily Cash back with every purchase."
+a 1697,7146,209,72 href=/apple-card/ aria-label=Learn more, Apple Card
+text 1729,7165,145,34 "Learn more"
+a 1934,7146,197,72 href=https://card.apple.com/apply/application?referrer=cid%3Dapy-200-10000036&start=false aria-label=Apply now, Apple Card
+text 1966,7165,133,34 "Apply now"
+[pixels] picture 1292,6820,1244,1160
+[pixels] img 1334,6820,1160,1160 src=/v/home/images/apple-card/a/promo_apple_card__d8xz4kd4evwy_large.jpg alt=Apple Card, front, Apple logo in top left, cardholder name in middle left Marisa Robertson, card chip in middle right.
+text 718,8103,1124,134 "Endless entertainment."
+a 1088,9846,96,48 href=#endless-entertainment-gallery-item-1 id=endless-entertainment-gallery-item-1-trigger role=tab
+text 1104,9867,67,90 "Item 1"
+a 1184,9846,48,48 href=#endless-entertainment-gallery-item-2 id=endless-entertainment-gallery-item-2-trigger role=tab
+text 1200,9867,67,90 "Item 2"
+a 1232,9846,48,48 href=#endless-entertainment-gallery-item-3 id=endless-entertainment-gallery-item-3-trigger role=tab
+text 1248,9867,67,90 "Item 3"
+a 1280,9846,48,48 href=#endless-entertainment-gallery-item-4 id=endless-entertainment-gallery-item-4-trigger role=tab
+text 1296,9867,67,90 "Item 4"
+a 1328,9846,48,48 href=#endless-entertainment-gallery-item-5 id=endless-entertainment-gallery-item-5-trigger role=tab
+text 1344,9867,67,90 "Item 5"
+a 1376,9846,48,48 href=#endless-entertainment-gallery-item-6 id=endless-entertainment-gallery-item-6-trigger role=tab
+text 1392,9867,67,90 "Item 6"
+a 1424,9846,48,48 href=#endless-entertainment-gallery-item-7 id=endless-entertainment-gallery-item-7-trigger role=tab
+text 1440,9867,67,90 "Item 7"
+a 1056,9814,2,2 href=#endless-entertainment-gallery-item-8 id=endless-entertainment-gallery-item-8-trigger role=tab
+text 1056,9819,67,90 "Item 8"
+a 1056,9814,2,2 href=#endless-entertainment-gallery-item-9 id=endless-entertainment-gallery-item-9-trigger role=tab
+text 1056,9819,67,90 "Item 9"
+button 2488,9846,48,48 aria-label=Play endless entertainment gallery
+a 350,8282,1860,1046 id=media-gallery-item-1-link href=https://tv.apple.com/us/channel/mls/tvs.sbd.7000?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=MLS on Apple TV, MLS -  - Watch every club, every match, live—all season long.
+[pixels] picture 350,8282,1860,1860
+[pixels] img 350,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/Features/v4/78/57/f6/7857f6ec-a4ed-87dc-dea9-a6ed02888722/ebd59c17-8e95-49b1-aec0-44aec57388ee.png/1250x668sr.jpg alt=
+text 490,9998,265,40 "MLS on Apple TV"
+text 835,9993,929,50 "Watch every club, every match, live—all season long."
+a 2236,8282,1860,1046 id=media-gallery-item-2-link href=https://tv.apple.com/us/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy?l=en-US?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=Stream now, Ted Lasso - Comedy - New season.
+[pixels] picture 2236,8282,1860,1860
+[pixels] img 2236,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/eD8DZGJ170t3MyFhlWOkdw/1250x668sr.jpg alt=
+text 2376,9998,182,40 "Stream now"
+text 2638,9993,164,50 "Comedy"
+text 2842,9993,230,50 "New season."
+a 4122,8282,1860,1046 id=media-gallery-item-3-link href=https://tv.apple.com/us/room/formula-1/uts.room.formula-1?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=F1 on Apple TV, Formula 1 -  - Every Grand Prix™, live and on demand—all in one place, all year long.
+[pixels] picture 4122,8282,1860,1860
+[pixels] img 4122,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/Features/v4/11/cd/47/11cd47ca-af61-71a8-6b02-4a0af9d55077/a54b4338-9340-422f-b5c6-1420bf850b01.png/1250x668sr.jpg alt=
+text 4262,9998,230,40 "F1 on Apple TV"
+text 4572,9993,1230,50 "Every Grand Prix™, live and on demand—all in one place, all year long."
+a 6008,8282,1860,1046 id=media-gallery-item-4-link href=https://tv.apple.com/us/show/lucky/umc.cmc.5qo7t3nngb2vj0m9dxkwebw1o?l=en-US?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=Stream now, Lucky - Action - Anya Taylor-Joy is a grifter running for her life after a heist goes sideways.
+[pixels] picture 6008,8282,1860,1860
+[pixels] img 6008,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/3aJOoInTKLjwSg8kv-ifDg/1250x668sr.jpg alt=
+text 6148,9992,182,40 "Stream now"
+text 6410,9962,127,50 "Action"
+text 6410,9962,1288,100 "Anya Taylor-Joy is a grifter running for her life after a heist goes sideways."
+a 7894,8282,1860,1046 id=media-gallery-item-5-link href=https://tv.apple.com/us/show/silo/umc.cmc.3yksgc857px0k0rqe5zd4jice?l=en-US?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=Stream now, Silo - Sci-Fi - The truth lies in the past.
+[pixels] picture 7894,8282,1860,1860
+[pixels] img 7894,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/hRaOrIKahRFcNlKt6UV4Ow/1250x668sr.jpg alt=
+text 8034,9998,182,40 "Stream now"
+text 8296,9993,114,50 "Sci-Fi"
+text 8450,9993,438,50 "The truth lies in the past."
+a 9780,8282,1860,1046 id=media-gallery-item-6-link href=https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39?l=en-US?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=Stream now, Women in Blue - Crime - New season.
+[pixels] picture 9780,8282,1860,1860
+[pixels] img 9780,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/VTJS0AvkoVbbysGmgQfubQ/1250x668sr.jpg alt=
+text 9920,9998,182,40 "Stream now"
+text 10182,9993,117,50 "Crime"
+text 10339,9993,230,50 "New season."
+a 11666,8282,1860,1046 id=media-gallery-item-7-link href=https://tv.apple.com/us/room/friday-night-baseball/edt.item.62327df1-6874-470e-98b2-a5bbeac509a2?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=See the schedule, Friday Night Baseball -  - Live MLB games, every Friday.
+[pixels] picture 11666,8282,1860,1860
+[pixels] img 11666,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/Features/v4/33/9e/cf/339ecfe7-f515-8594-2e48-d991803409ea/5a944fdc-acd7-47a8-89e7-274d84cf4276.png/1250x668sr.jpg alt=
+text 11806,9998,264,40 "See the schedule"
+text 12150,9993,538,50 "Live MLB games, every Friday."
+a 13552,8282,1860,1046 id=media-gallery-item-8-link href=https://tv.apple.com/us/movie/the-dink/umc.cmc.5tugaz9vt498ajn7q64ypaqxn?l=en-US?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=Stream now, The Dink - Comedy - It’s pickleball vs. tennis in the hilarious new movie.
+[pixels] picture 13552,8282,1860,1860
+[pixels] img 13552,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/koGPFMce0cxPTuuHdx325g/1250x668sr.jpg alt=
+text 13692,9998,182,40 "Stream now"
+text 13954,9993,164,50 "Comedy"
+text 14158,9993,881,50 "It’s pickleball vs. tennis in the hilarious new movie."
+a -1536,8282,1860,1046 id=media-gallery-item-9-link href=https://tv.apple.com/us/show/widows-bay/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2?l=en-US?itscg=10000&itsct=atv-apl_hp-stream_now--220622 aria-label=Stream now, Widow’s Bay - Mystery - 19 Emmy® Nominations Including Best Comedy
+[pixels] picture -1536,8282,1860,1860
+[pixels] img -1536,8282,1860,1860 src=https://is1-ssl.mzstatic.com/image/thumb/CqMFl0CvUAUE1axxV4k-ew/1250x668sr.jpg alt=
+text -1396,9998,182,40 "Stream now"
+text -1134,9993,160,50 "Mystery"
+text -934,9993,856,50 "19 Emmy® Nominations Including Best Comedy"
+a 863,9354,834,468 id=media-gallery-item-1 href=https://music.apple.com/us/station/sabrina-carpenter-the-zane-lowe-interview/ra.1837392419?itscg=10000&itsct=am-apl_hp-listen_now--240326 aria-label=Listen now, Sabrina Carpenter: The Zane Lowe Interview
+[pixels] picture 901,9587,2,2
+[pixels] img 901,9587,2,2 src=https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/55/2b/5f/552b5f86-46e6-d848-ee06-5395bf09c206/83e0ed3d-c824-4ed9-9572-ae9e784568cb.png/226x226sr.jpg alt=
+text 941,9571,591,34 "Sabrina Carpenter: The Zane Lowe Interview"
+text 1498,9739,137,34 "Listen now"
+a 1723,9354,834,468 id=media-gallery-item-2 href=https://apps.apple.com/us/app/hello-kitty-island-adventure/id1553505132?itscg=10000&itsct=aa-apl_hp-play_now--240326 aria-label=Play now, Hello Kitty Island Adventure
+[pixels] picture 1723,9354,834,834
+[pixels] img 1723,9354,834,834 src=https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/5b/b3/4a/5bb34a60-695c-a96f-75ec-8a957fc2a20b/45899847-e52c-44a1-9ce5-09aedebb7a78.png/470x264.jpg alt=
+text 2382,10105,113,34 "Play now"
+text 1761,10105,370,34 "Hello Kitty Island Adventure"
+a 2583,9354,834,468 id=media-gallery-item-3 href=https://fitness.apple.com/us/studio-collection/david-bowie/1896935217?itscg=10000&itsct=afp-apl_hp-watch_now--240326 aria-label=Watch now, David Bowie
+[pixels] picture 2583,9354,834,834
+[pixels] img 2583,9354,834,834 src=https://is1-ssl.mzstatic.com/image/thumb/Features221/v4/c1/e6/09/c1e609c8-914d-6037-cda2-4cfdaf87a263/07eaa70a-574b-4abe-aea4-bcb530d837e3.png/470x264.jpg alt=
+text 3214,10105,141,34 "Watch now"
+text 2621,10105,163,34 "David Bowie"
+a 3443,9354,834,468 id=media-gallery-item-4 href=https://music.apple.com/us/playlist/a-list-pop/pl.5ee8333dbe944d9f9151e97d92d1ead9?itscg=10000&itsct=am-apl_hp-listen_now--240326 aria-label=Listen now, A-List Pop
+[pixels] picture 3481,9587,2,2
+[pixels] img 3481,9587,2,2 src=https://is1-ssl.mzstatic.com/image/thumb/Features/v4/d2/c0/34/d2c034a9-4c6f-c97f-2cc8-85b056699f62/a6b27345-5c84-471f-99aa-c84fc695814e.png/226x226SC.DN01.jpg?l=en-US alt=
+text 3521,9571,139,34 "A-List Pop"
+text 4078,9739,137,34 "Listen now"
+a 4303,9354,834,468 id=media-gallery-item-5 href=https://apps.apple.com/us/app/powerwash-simulator/id6477445344?itscg=10000&itsct=aa-apl_hp-play_now--240326 aria-label=Play now, PowerWash Simulator
+[pixels] picture 4303,9354,834,834
+[pixels] img 4303,9354,834,834 src=https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/53/55/d7/5355d758-e5b7-b406-f004-bb98d03ecb38/9388d284-2a0b-43e8-86e0-5852e8559d18.png/470x264.jpg alt=
+text 4962,10105,113,34 "Play now"
+text 4341,10105,291,34 "PowerWash Simulator"
+a 5163,9354,834,468 id=media-gallery-item-6 href=https://fitness.apple.com/us/workout/hiit-with-bakari/6783451184?itscg=10000&itsct=afp-apl_hp-watch_now--240326 aria-label=Watch now, HIIT with Bakari
+[pixels] picture 5163,9354,834,834
+[pixels] img 5163,9354,834,834 src=https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/24/25/85/2425854a-14c7-fb09-533b-110aaf585363/HI_BW_0217_artwork_en_ID336111_0.png/470x264.jpg alt=
+text 5794,10105,141,34 "Watch now"
+text 5201,10105,209,34 "HIIT with Bakari"
+a -1717,9354,834,468 id=media-gallery-item-7 href=https://music.apple.com/us/playlist/new-music-daily/pl.2b0e6e332fdf4b7a91164da3162127b5?itscg=10000&itsct=am-apl_hp-listen_now--240326 aria-label=Listen now, New Music Daily
+[pixels] picture -1679,9587,2,2
+[pixels] img -1679,9587,2,2 src=https://is1-ssl.mzstatic.com/image/thumb/Features/v4/da/39/f5/da39f55d-14f1-68df-21a7-c1fdd4de5303/f1a2cd59-4a5e-43c2-bb87-d3f4e1210317.png/226x226SC.DN01.jpg?l=en-US alt=
+text -1639,9571,219,34 "New Music Daily"
+text -1082,9739,137,34 "Listen now"
+a -857,9354,834,468 id=media-gallery-item-8 href=https://apps.apple.com/us/app/balatro/id6502451661?itscg=10000&itsct=aa-apl_hp-play_now--240326 aria-label=Play now, Balatro+
+[pixels] picture -857,9354,834,834
+[pixels] img -857,9354,834,834 src=https://is1-ssl.mzstatic.com/image/thumb/Features221/v4/89/07/9c/89079c5b-29da-cd1f-4ce3-ad68f3d28a68/f0346506-4c9f-4be1-b275-11fa4004b103.png/470x264.jpg alt=
+text -198,10105,113,34 "Play now"
+text -819,10105,113,34 "Balatro+"
+a 3,9354,834,468 id=media-gallery-item-9 href=https://fitness.apple.com/us/studio-collection/programs/1896349052?itscg=10000&itsct=afp-apl_hp-watch_now--240326 aria-label=Watch now, Programs
+[pixels] picture 3,9354,834,834
+[pixels] img 3,9354,834,834 src=https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/2a/75/df/2a75df27-703b-4712-6d95-9c9e29ca1dc6/fa77ffdb-61aa-47e7-920a-7da1876f3929.png/470x264.jpg alt=
+text 634,10105,141,34 "Watch now"
+text 41,10105,129,34 "Programs"
+text 300,9919,72,61 "Apple Footer"
+text 300,9953,11,29 "*"
+text 300,9953,1952,125 "Available for Qualified Purchasers only. Qualified Purchasers receive an Apple Gift Card when they purchase an eligible Mac or iPad (“Eligible Product”) at a Qualifying Location through September 24, 2026. Gift card values may vary by Eligible Product. Customers will receive a discount equal to the value of the Apple Gift Card off the price of the Eligible Product, but will be charged for all items in their cart, including the Apple Gift Card. Only one Apple Gift Card per Eligible Product per Qualified Purchaser. Offer subject to availability. While supplies last. Additional restrictions apply. View full offer terms"
+a 1226,10049,49,29 href=/us-edu/shop/goto/browse/home/back_to_school/terms_conditions
+text 1226,10049,49,29 "here"
+text 1276,10049,7,29 "."
+text 334,10100,1884,221 "Trade‑in values will vary based on the condition, year, and configuration of your eligible trade‑in device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to trade in for credit or for an Apple Gift Card. Trade‑in value may be applied toward qualifying new device purchase, or added to an Apple Gift Card. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In‑store trade‑in requires presentation of a valid photo ID (local law may require saving this information). Offer may not be available in all stores and may vary between in‑store and online trade‑in. Some stores may have additional requirements. Apple or its trade‑in partners reserve the right to refuse, cancel, or limit quantity of any trade‑in transaction for any reason. More details are available from Apple’s trade-in partner for trade‑in and recycling of eligible devices. Restrictions and limitations may apply."
+text 300,10343,1920,93 "To access and use all Apple Card features and products available only to Apple Card users, you must add Apple Card to Wallet on an iPhone or iPad that supports and has the latest version of iOS or iPadOS. Apple Card is subject to credit approval, available only for qualifying applicants in the United States, and issued by Goldman Sachs Bank USA, Salt Lake City Branch."
+text 300,10459,1854,61 "Apple Payments Services LLC, a subsidiary of Apple Inc., is a service provider of Goldman Sachs Bank USA for Apple Card and Savings accounts. Neither Apple Inc. nor Apple Payments Services LLC is a bank."
+text 300,10542,1920,93 "All communications from Apple and Goldman Sachs Bank USA about Apple Card (including transactional and marketing communications) and customer service support are available in English. Certain communications about Apple Card can be viewed in another language depending on your device language settings. If you reside in the U.S. Virgin Islands, American Samoa, Guam, Northern Mariana Islands, or U.S. Minor Outlying Islands, please call Goldman Sachs at 877-255-5923 with questions about Apple Card."
+text 300,10657,708,29 "Learn more about how Apple Card applications are evaluated at"
+a 1008,10657,366,29 href=https://support.apple.com/kb/HT209218
+text 1008,10657,366,29 "support.apple.com/kb/HT209218"
+text 1374,10657,7,29 "."
+text 300,10708,971,29 "A subscription is required for Apple Arcade, Apple Fitness+, Apple Music, and Apple TV."
+text 300,10759,1384,29 "Features are subject to change. Some features, applications, and services may not be available in all regions or all languages."
+text 300,10875,180,29 "Shop and Learn"
+a 300,10917,99,48 href=/us/shop/goto/store
+text 300,10926,59,29 "Store"
+a 300,10968,87,48 href=/mac/
+text 300,10977,47,29 "Mac"
+a 300,11019,88,48 href=/ipad/
+text 300,11028,48,29 "iPad"
+a 300,11070,116,48 href=/iphone/
+text 300,11079,76,29 "iPhone"
+a 300,11121,110,48 href=/watch/
+text 300,11130,70,29 "Watch"
+a 300,11173,107,48 href=/apple-vision-pro/
+text 300,11182,67,29 "Vision"
+a 300,11224,126,48 href=/airpods/
+text 300,11233,86,29 "AirPods"
+a 300,11275,166,48 href=/tv-home/
+text 300,11284,126,29 "TV & Home"
+a 300,11326,109,48 href=/airtag/
+text 300,11335,69,29 "AirTag"
+a 300,11377,174,48 href=/us/shop/goto/buy_accessories
+text 300,11386,134,29 "Accessories"
+a 300,11429,152,48 href=/us/shop/goto/giftcards
+text 300,11438,112,29 "Gift Cards"
+text 300,11518,145,29 "Apple Wallet"
+a 300,11560,108,48 href=/wallet/
+text 300,11569,68,29 "Wallet"
+a 300,11611,164,48 href=/apple-card/
+text 300,11620,124,29 "Apple Card"
+a 300,11662,150,48 href=/apple-pay/
+text 300,11671,110,29 "Apple Pay"
+a 300,11713,167,48 href=/apple-cash/
+text 300,11722,127,29 "Apple Cash"
+text 692,10875,96,29 "Account"
+a 692,10917,354,48 href=https://account.apple.com/
+text 692,10926,314,29 "Manage Your Apple Account"
+a 692,10968,268,48 href=/us/shop/goto/account
+text 692,10977,228,29 "Apple Store Account"
+a 692,11019,165,48 href=https://www.icloud.com
+text 692,11028,125,29 "iCloud.com"
+text 692,11108,165,29 "Entertainment"
+a 692,11150,156,48 href=/apple-one/
+text 692,11159,116,29 "Apple One"
+a 692,11201,141,48 href=/apple-tv/
+text 692,11210,101,29 "Apple TV"
+a 692,11253,176,48 href=/apple-music/
+text 692,11262,136,29 "Apple Music"
+a 692,11304,189,48 href=/apple-arcade/
+text 692,11313,149,29 "Apple Arcade"
+a 692,11355,205,48 href=/apple-fitness-plus/
+text 692,11364,165,29 "Apple Fitness+"
+a 692,11406,187,48 href=/apple-news/
+text 692,11415,147,29 "Apple News+"
+a 692,11457,213,48 href=/apple-podcasts/
+text 692,11466,173,29 "Apple Podcasts"
+a 692,11509,179,48 href=/apple-books/
+text 692,11518,139,29 "Apple Books"
+a 692,11560,151,48 href=/app-store/
+text 692,11569,111,29 "App Store"
+text 1084,10875,136,29 "Apple Store"
+a 1084,10917,173,48 href=/retail/
+text 1084,10926,133,29 "Find a Store"
+a 1084,10968,161,48 href=/retail/geniusbar/
+text 1084,10977,121,29 "Genius Bar"
+a 1084,11019,205,48 href=/today/
+text 1084,11028,165,29 "Today at Apple"
+a 1084,11070,258,48 href=/today/groups/
+text 1084,11079,218,29 "Group Reservations"
+a 1084,11121,176,48 href=/today/camp/
+text 1084,11130,136,29 "Apple Camp"
+a 1084,11173,221,48 href=https://apps.apple.com/us/app/apple-store/id375380948
+text 1084,11182,181,29 "Apple Store App"
+a 1084,11224,276,48 href=/us/shop/goto/special_deals
+text 1084,11233,236,29 "Certified Refurbished"
+a 1084,11275,207,48 href=/us/shop/goto/apple_upgrade
+text 1084,11284,167,29 "Apple Upgrade"
+a 1084,11326,200,48 href=/us/shop/goto/trade_in
+text 1084,11335,160,29 "Apple Trade In"
+a 1084,11377,147,48 href=/us/shop/goto/payment_plan
+text 1084,11386,107,29 "Financing"
+a 1084,11429,283,48 href=/us/shop/goto/buy_iphone/carrier_offers
+text 1084,11438,243,29 "Carrier Deals at Apple"
+a 1084,11480,181,48 href=/us/shop/goto/order/list
+text 1084,11489,141,29 "Order Status"
+a 1084,11531,203,48 href=/us/shop/goto/help
+text 1084,11540,163,29 "Shopping Help"
+text 1476,10875,148,29 "For Business"
+a 1476,10917,257,48 href=/business/
+text 1476,10926,217,29 "Apple and Business"
+a 1476,10968,240,48 href=/retail/business/
+text 1476,10977,200,29 "Shop for Business"
+text 1476,11057,160,29 "For Education"
+a 1476,11099,269,48 href=/education/
+text 1476,11108,229,29 "Apple and Education"
+a 1476,11150,190,48 href=/education/k12/how-to-buy/
+text 1476,11159,150,29 "Shop for K-12"
+a 1476,11201,225,48 href=/us/shop/goto/educationrouting
+text 1476,11210,185,29 "Shop for College"
+text 1476,11290,171,29 "For Healthcare"
+a 1476,11333,279,48 href=/healthcare/
+text 1476,11342,239,29 "Apple and Healthcare"
+text 1476,11422,186,29 "For Government"
+a 1476,11464,295,48 href=/government/
+text 1476,11473,255,29 "Apple and Government"
+a 1476,11515,375,48 href=/us/shop/goto/eppstore/veteransandmilitary
+text 1476,11524,335,29 "Shop for Veterans and Military"
+a 1476,11566,392,80 href=/us_epp_67909/store
+text 1476,11575,272,61 "Shop for State and Local Employees"
+a 1476,11649,350,48 href=/us_epp_55499/store
+text 1476,11658,310,29 "Shop for Federal Employees"
+text 1868,10875,150,29 "Apple Values"
+a 1868,10917,178,48 href=/accessibility/
+text 1868,10926,138,29 "Accessibility"
+a 1868,10968,150,48 href=/education-initiative/
+text 1868,10977,110,29 "Education"
+a 1868,11019,178,48 href=/environment/
+text 1868,11028,138,29 "Environment"
+a 1868,11070,289,48 href=/diversity/
+text 1868,11079,249,29 "Inclusion and Diversity"
+a 1868,11121,121,48 href=/privacy/
+text 1868,11130,81,29 "Privacy"
+a 1868,11173,316,48 href=/racial-equity-justice-initiative/
+text 1868,11182,276,29 "Racial Equity and Justice"
+a 1868,11224,307,48 href=/supply-chain/
+text 1868,11233,267,29 "Supply Chain Innovation"
+text 1868,11313,143,29 "About Apple"
+a 1868,11355,158,48 href=/newsroom/
+text 1868,11364,118,29 "Newsroom"
+a 1868,11406,233,48 href=/leadership/
+text 1868,11415,193,29 "Apple Leadership"
+a 1868,11457,273,48 href=/careers/us/
+text 1868,11466,233,29 "Career Opportunities"
+a 1868,11509,141,48 href=https://investor.apple.com/
+text 1868,11518,101,29 "Investors"
+a 1868,11560,268,48 href=/compliance/
+text 1868,11569,228,29 "Ethics & Compliance"
+a 1868,11611,114,48 href=/apple-events/
+text 1868,11620,74,29 "Events"
+a 1868,11662,199,48 href=/contact/
+text 1868,11671,159,29 "Contact Apple"
+text 300,11828,222,29 "More ways to shop:"
+a 522,11828,217,29 href=/retail/
+text 522,11828,217,29 "Find an Apple Store"
+text 739,11828,36,29 "or"
+a 775,11828,143,29 href=https://locate.apple.com/
+text 775,11828,143,29 "other retailer"
+text 917,11828,116,29 "near you."
+text 1033,11828,78,29 "Or call"
+a 1111,11828,196,29 href=tel:1-800-692-7753
+text 1111,11828,196,29 "1-800-MY-APPLE"
+text 1307,11828,221,29 "(1-800-692-7753)."
+text 300,11936,533,29 "Copyright ©
+				
+				2026
+				 Apple Inc. All rights reserved."
+a 875,11927,189,48 href=/legal/privacy/
+text 893,11936,153,29 "Privacy Policy"
+a 1065,11927,183,48 href=/legal/internet-services/terms/site.html
+text 1083,11936,147,29 "Terms of Use"
+a 1249,11927,241,48 href=/us/shop/goto/help/sales_refunds
+text 1267,11936,205,29 "Sales and Refunds"
+a 1490,11927,96,48 href=/legal/
+text 1508,11936,60,29 "Legal"
+a 1586,11927,133,48 href=/sitemap/
+text 1604,11936,97,29 "Site Map"
+a 2110,11927,150,48 href=/choose-country-region/ aria-label=United States. Choose your country or region
+text 2110,11936,150,29 "United States"

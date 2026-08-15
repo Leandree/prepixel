@@ -1,0 +1,593 @@
+a 4,-640,2552,99 href=#content
+text 1123,-610,314,39 "Skip to main content"
+a 4,-640,2552,99 href=#search
+text 1171,-610,218,39 "Skip to search"
+[pixels] img 36,4,100,100 src=/pimg/aHR0cHM6Ly9zdGF0aWM0LmJ1eXNlbGxhZHMubmV0L3V1LzIvMTc2NDc2LzE3ODM2MTI1NDEtb3RhcmktdG9wLWJhci1sb2dvLTEucG5n.%2BcniFZmdtAKYaUnGyWpE3VuPBMJeXeT%2FQsNbLnzixoM%3D alt=Otari
+text 168,39,1095,29 "Meet Otari, the open source LLM Control Plane that helps developers control LLM infrastructure."
+text 1331,38,172,31 "Discover Otari"
+a 2472,16,48,34 href=/en-US/advertising
+text 2482,21,28,24 "AD"
+a 2321,80,207,24 href=/en-US/plus?ref=nope
+text 2321,80,207,24 "Don't want to see ads?"
+a 20,208,198,80 href=/en-US/
+button 424,211,176,74 type=button
+text 449,229,91,39 "HTML"
+button 600,211,149,74 type=button
+text 624,229,64,39 "CSS"
+button 749,211,244,74 type=button
+text 773,229,159,39 "JavaScript"
+button 993,211,234,74 type=button
+text 1017,229,149,39 "Web APIs"
+button 1227,211,124,74 type=button
+text 1251,229,39,39 "All"
+button 1351,211,214,74 type=button
+text 1419,229,86,39 "Learn"
+button 1565,211,210,74 type=button
+text 1634,229,81,39 "Tools"
+button 1775,211,174,74 type=button
+text 1800,229,90,39 "About"
+a 1950,212,112,71 href=/en-US/blog/
+text 1972,228,68,39 "Blog"
+button 2268,214,160,68
+a 2460,214,68,68 href=https://developer.mozilla.org/users/fxa/login/authenticate/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API
+text 2494,245,17,146 "Log in"
+a 36,322,68,48 href=/en-US/docs/Web
+text 36,326,68,39 "Web"
+a 160,322,149,48 href=/en-US/docs/Web/API
+text 160,326,149,39 "Web APIs"
+a 365,322,176,48 href=/en-US/docs/Web/API/Canvas_API
+text 365,326,176,39 "Canvas API"
+button 2047,316,184,60 type=button aria-label=Switch color theme
+text 2111,326,104,39 "Theme"
+button 2263,316,265,60 type=button
+text 2327,326,185,39 "English (US)"
+text 576,411,408,97 "Canvas API"
+summary 698,542,1286,136
+text 698,590,139,39 "Baseline"
+text 837,590,245,39 "Widely available"
+text 698,682,1148,87 "This feature is well established and works across many devices and browser versions. It’s been available across browsers since July 2015."
+a 698,810,173,39 href=/en-US/docs/Glossary/Baseline/Compatibility
+text 698,810,173,39 "Learn more"
+a 919,810,321,39 href=#browser_compatibility
+text 919,810,321,39 "See full compatibility"
+text 576,718,67,39 "The"
+text 643,718,183,39 "Canvas API"
+text 826,718,653,39 "provides a means for drawing graphics via"
+a 1479,718,159,39 href=/en-US/docs/Web/JavaScript
+text 1479,718,159,39 "JavaScript"
+text 1638,718,130,39 "and the"
+a 1769,718,91,39 href=/en-US/docs/Web/HTML
+text 1769,718,91,39 "HTML"
+a 576,774,162,39 href=/en-US/docs/Web/HTML/Reference/Elements/canvas
+text 584,774,146,40 "<canvas>"
+text 576,774,1362,95 "element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing."
+text 576,918,802,39 "The Canvas API largely focuses on 2D graphics. The"
+a 1378,918,174,39 href=/en-US/docs/Web/API/WebGL_API
+text 1378,918,174,39 "WebGL API"
+text 1552,918,314,39 ", which also uses the"
+text 584,974,146,40 "<canvas>"
+text 738,974,896,39 "element, draws hardware-accelerated 2D and 3D graphics."
+text 2080,420,281,59 "In this article"
+a 2084,522,371,64 href=#accessibility_concerns
+text 2100,534,339,39 "Accessibility concerns"
+a 2084,586,249,64 href=#basic_example
+text 2100,598,217,39 "Basic example"
+a 2084,650,185,64 href=#reference
+text 2100,662,153,39 "Reference"
+a 2084,714,332,64 href=#guides_and_tutorials
+text 2100,726,300,39 "Guides and tutorials"
+a 2084,778,162,64 href=#libraries
+text 2100,790,130,39 "Libraries"
+a 2084,842,244,64 href=#specifications
+text 2100,854,212,39 "Specifications"
+a 2084,906,357,64 href=#browser_compatibility
+text 2100,918,325,39 "Browser compatibility"
+a 2084,970,160,64 href=#see_also
+text 2100,982,128,39 "See also"
+a 2082,1084,352,365 href=/pong/click?code=aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2NsaWNrL3gvR1RORDQyN1lDWUFEQzIzTENZQkxZS1FVRlRTSVZLM0xDQTdEVlozSkNBQUQ1MlFNRlRBRFAySktDV1NENUszTUNBN0Q2S1FOQ0VZRDVLUUVGVFNEVks3S0M2U0lFMkpVRlRCRFZLM0VISk5DTFNJWg%3D%3D.GNDFxcRsGMRQwtcXYLNU6p4tnW0z3iaAxRJ33KV6S34%3D&version=2
+[pixels] img 2082,1084,352,352 src=/pimg/aHR0cHM6Ly9zdGF0aWM0LmJ1eXNlbGxhZHMubmV0L3V1LzIvMTc2NDc2LzE3ODM2MTIyMzUtb3Rhcmktc2lkZWJhci5wbmc%3D.9LtXOhZk35YI%2BduXCnCdWycPjP9iHXSpt6Y1BTDwOF4%3D alt=Otari
+text 2114,1437,240,71 "Control Your LLM Infrastructure"
+text 2114,1516,282,89 "Meet Otari, the open source LLM Control Plane built by Mozilla AI."
+text 2142,1646,165,29 "Discover Otari"
+a 2378,1092,48,34 href=/en-US/advertising
+text 2388,1097,28,24 "AD"
+a 2080,1734,207,24 href=/en-US/plus?ref=nope
+text 2080,1734,207,24 "Don't want to see ads?"
+a 576,1087,622,77 href=#accessibility_concerns
+text 576,1087,622,77 "Accessibility concerns"
+text 576,1206,67,39 "The"
+text 651,1206,146,40 "<canvas>"
+text 576,1206,1366,263 "element is just a bitmap and does not provide information about any drawn objects. Text written on canvas can cause legibility issues with users relying on screen magnification. The pixels within a canvas element do not scale and can become blurry with magnification. This is because they are not a vector but letter-shaped collection of pixels. When zooming in on it, the pixels become bigger."
+text 576,1518,1372,151 "Canvas content is not exposed to accessibility tools like semantic HTML is. In general, you should use canvases like images and avoid using them to render significant content without accessible backing markup."
+a 576,1711,403,77 href=#basic_example
+text 576,1711,403,77 "Basic example"
+text 576,1830,906,39 "This simple example draws a green rectangle onto a canvas."
+a 576,1910,133,59 href=#html
+text 576,1910,133,59 "HTML"
+text 610,2034,91,39 "HTML"
+button 1752,2020,105,67
+text 1770,2037,70,34 "Copy"
+a 1873,2020,93,67 href=https://developer.mozilla.org/en-US/play?uuid=3c7a88defea11bf737feccafed4675fa437ec672&state=RYzBCsIwEER%2FJcypQqhV8NKaHhQPXvWaS0nWtpKmYFZpEf9d0hZ6GPbBzpsvGu4cchxN5T9VEK1VGjNrlMftjKX2kDAhIAcknvGa3gcWi6aE7c27I89pTXxxFPE0Xm2yrm0K7ReJB6EWNfbPvWcaONHY27mnveEhfbTO3Xl0JJTQqF9EXqNYfzcynOwyKaYcJsiiDgluqCPkcG3dMH5%2F&srcPrefix=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API%2F
+text 1891,2037,57,34 "Play"
+text 610,2145,18,40 "<"
+text 628,2145,109,40 "canvas"
+text 756,2145,36,40 "id"
+text 792,2145,18,40 "="
+text 811,2145,18,40 """
+text 829,2145,109,40 "canvas"
+text 938,2145,18,40 """
+text 957,2145,18,40 ">"
+text 975,2145,36,40 "</"
+text 1011,2145,109,40 "canvas"
+text 1121,2145,18,40 ">"
+a 576,2259,229,59 href=#javascript
+text 576,2259,229,59 "JavaScript"
+text 576,2359,67,39 "The"
+a 643,2359,472,39 href=/en-US/docs/Web/API/Document/getElementById
+text 651,2359,456,40 "Document.getElementById()"
+text 1115,2359,580,39 "method gets a reference to the HTML"
+text 1702,2359,146,40 "<canvas>"
+text 576,2415,283,39 "element. Next, the"
+a 859,2415,563,39 href=/en-US/docs/Web/API/HTMLCanvasElement/getContext
+text 867,2415,547,40 "HTMLCanvasElement.getContext()"
+text 576,2415,1386,95 "method gets that element's context—the thing onto which the drawing will be rendered."
+text 576,2559,561,39 "The actual drawing is done using the"
+a 1137,2559,454,39 href=/en-US/docs/Web/API/CanvasRenderingContext2D
+text 1145,2559,438,40 "CanvasRenderingContext2D"
+text 1591,2559,217,39 "interface. The"
+a 576,2615,180,39 href=/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle
+text 584,2615,164,40 "fillStyle"
+text 756,2615,631,39 "property makes the rectangle green. The"
+a 1387,2615,198,39 href=/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect
+text 1395,2615,182,40 "fillRect()"
+text 576,2615,1404,95 "method places its top-left corner at (10, 10), and gives it a size of 150 units wide by 100 tall."
+text 610,2783,39,39 "JS"
+button 1752,2769,105,67
+text 1770,2786,70,34 "Copy"
+a 1873,2769,93,67 href=https://developer.mozilla.org/en-US/play?uuid=3c7a88defea11bf737feccafed4675fa437ec672&state=RYzBCsIwEER%2FJcypQqhV8NKaHhQPXvWaS0nWtpKmYFZpEf9d0hZ6GPbBzpsvGu4cchxN5T9VEK1VGjNrlMftjKX2kDAhIAcknvGa3gcWi6aE7c27I89pTXxxFPE0Xm2yrm0K7ReJB6EWNfbPvWcaONHY27mnveEhfbTO3Xl0JJTQqF9EXqNYfzcynOwyKaYcJsiiDgluqCPkcG3dMH5%2F&srcPrefix=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API%2F
+text 1891,2786,57,34 "Play"
+text 610,2894,91,40 "const"
+text 701,2894,146,40 "canvas"
+text 847,2894,18,40 "="
+text 865,2894,164,40 "document"
+text 1030,2894,18,40 "."
+text 1048,2894,255,40 "getElementById"
+text 1303,2894,18,40 "("
+text 1321,2894,146,40 ""canvas""
+text 1467,2894,18,40 ")"
+text 1486,2894,18,40 ";"
+text 610,2950,91,40 "const"
+text 701,2950,91,40 "ctx"
+text 792,2950,18,40 "="
+text 811,2950,128,40 "canvas"
+text 938,2950,18,40 "."
+text 957,2950,182,40 "getContext"
+text 1139,2950,18,40 "("
+text 1157,2950,73,40 ""2d""
+text 1230,2950,18,40 ")"
+text 1248,2950,18,40 ";"
+text 610,3062,55,40 "ctx"
+text 665,3062,18,40 "."
+text 683,3062,182,40 "fillStyle"
+text 865,3062,18,40 "="
+text 902,3062,128,40 ""green""
+text 1030,3062,18,40 ";"
+text 610,3118,55,40 "ctx"
+text 665,3118,18,40 "."
+text 683,3118,146,40 "fillRect"
+text 829,3118,18,40 "("
+text 847,3118,36,40 "10"
+text 884,3118,18,40 ","
+text 920,3118,36,40 "10"
+text 957,3118,18,40 ","
+text 993,3118,55,40 "150"
+text 1048,3118,18,40 ","
+text 1084,3118,55,40 "100"
+text 1139,3118,18,40 ")"
+text 1157,3118,18,40 ";"
+a 576,3232,134,59 href=#result
+text 576,3232,134,59 "Result"
+a 1873,3342,93,67 href=https://developer.mozilla.org/en-US/play?uuid=3c7a88defea11bf737feccafed4675fa437ec672&state=RYzBCsIwEER%2FJcypQqhV8NKaHhQPXvWaS0nWtpKmYFZpEf9d0hZ6GPbBzpsvGu4cchxN5T9VEK1VGjNrlMftjKX2kDAhIAcknvGa3gcWi6aE7c27I89pTXxxFPE0Xm2yrm0K7ReJB6EWNfbPvWcaONHY27mnveEhfbTO3Xl0JJTQqF9EXqNYfzcynOwyKaYcJsiiDgluqCPkcG3dMH5%2F&srcPrefix=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API%2F
+text 1891,3359,57,34 "Play"
+a 576,3886,284,77 href=#reference
+text 576,3886,284,77 "Reference"
+a 656,4005,326,39 href=/en-US/docs/Web/API/HTMLCanvasElement
+text 664,4005,310,40 "HTMLCanvasElement"
+a 656,4061,454,39 href=/en-US/docs/Web/API/CanvasRenderingContext2D
+text 664,4061,438,40 "CanvasRenderingContext2D"
+a 656,4117,271,39 href=/en-US/docs/Web/API/CanvasGradient
+text 664,4117,255,40 "CanvasGradient"
+a 656,4173,253,39 href=/en-US/docs/Web/API/CanvasPattern
+text 664,4173,237,40 "CanvasPattern"
+a 656,4229,217,39 href=/en-US/docs/Web/API/ImageBitmap
+text 664,4229,201,40 "ImageBitmap"
+a 656,4285,180,39 href=/en-US/docs/Web/API/ImageData
+text 664,4285,164,40 "ImageData"
+a 656,4341,217,39 href=/en-US/docs/Web/API/TextMetrics
+text 664,4341,201,40 "TextMetrics"
+a 656,4397,290,39 href=/en-US/docs/Web/API/OffscreenCanvas
+text 664,4397,274,40 "OffscreenCanvas"
+a 656,4453,125,39 href=/en-US/docs/Web/API/Path2D
+text 664,4453,109,40 "Path2D"
+a 656,4509,508,39 href=/en-US/docs/Web/API/ImageBitmapRenderingContext
+text 664,4509,492,40 "ImageBitmapRenderingContext"
+text 676,4631,85,39 "Note:"
+text 761,4631,442,39 "The interfaces related to the"
+text 1210,4631,383,40 "WebGLRenderingContext"
+text 1601,4631,325,39 "are referenced under"
+a 676,4687,110,39 href=/en-US/docs/Web/API/WebGL_API
+text 676,4687,110,39 "WebGL"
+text 786,4687,9,39 "."
+text 676,4843,85,39 "Note:"
+a 769,4843,290,39 href=/en-US/docs/Web/API/OffscreenCanvas
+text 777,4843,274,40 "OffscreenCanvas"
+text 1059,4843,492,39 "is also available in web workers."
+a 576,4965,545,39 href=/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack
+text 584,4965,529,40 "CanvasCaptureMediaStreamTrack"
+text 1121,4965,324,39 "is a related interface."
+a 576,5046,553,77 href=#guides_and_tutorials
+text 576,5046,553,77 "Guides and tutorials"
+a 576,5165,225,39 href=/en-US/docs/Web/API/Canvas_API/Tutorial
+text 576,5165,225,39 "Canvas tutorial"
+text 608,5237,1225,95 "A comprehensive tutorial covering both the basic usage of the Canvas API and its advanced features."
+a 576,5381,430,39 href=https://joshondesign.com/p/books/canvasdeepdive/title.html
+text 576,5381,394,39 "HTML5 Canvas Deep Dive"
+text 608,5453,1035,39 "A hands-on, book-length introduction to the Canvas API and WebGL."
+a 576,5541,311,39 href=https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html
+text 576,5541,275,39 "Canvas Handbook"
+text 608,5613,578,39 "A handy reference for the Canvas API."
+a 576,5701,491,39 href=/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
+text 576,5701,491,39 "Manipulating video using canvas"
+text 608,5773,171,39 "Combining"
+a 779,5773,144,39 href=/en-US/docs/Web/HTML/Reference/Elements/video
+text 787,5773,128,40 "<video>"
+text 922,5773,74,39 "and"
+a 996,5773,162,39 href=/en-US/docs/Web/HTML/Reference/Elements/canvas
+text 1004,5773,146,40 "<canvas>"
+text 1158,5773,561,39 "to manipulate video data in real time."
+a 576,5854,235,77 href=#libraries
+text 576,5854,235,77 "Libraries"
+text 576,5973,1314,95 "The Canvas API is extremely powerful, but not always simple to use. The libraries listed below can make the creation of canvas-based projects faster and easier."
+a 656,6117,155,39 href=https://createjs.com/easeljs
+text 656,6117,119,39 "EaselJS"
+text 656,6117,1303,95 "is an open-source canvas library that makes creating games, generative art, and other highly graphical experiences easy."
+a 656,6229,162,39 href=https://fabricjs.com/
+text 656,6229,126,39 "Fabric.js"
+text 818,6229,955,39 "is an open-source canvas library with SVG parsing capabilities."
+a 656,6285,200,39 href=https://www.patrick-wied.at/static/heatmapjs/
+text 656,6285,164,39 "heatmap.js"
+text 856,6285,1037,39 "is an open-source library for creating canvas-based data heat maps."
+a 656,6341,420,39 href=https://philogb.github.io/jit/
+text 656,6341,384,39 "JavaScript InfoVis Toolkit"
+text 1076,6341,581,39 "creates interactive data visualizations."
+a 656,6397,162,39 href=https://konvajs.org/
+text 656,6397,126,39 "Konva.js"
+text 818,6397,885,39 "is a 2D canvas library for desktop and mobile applications."
+a 656,6453,107,39 href=https://p5js.org/
+text 656,6453,71,39 "p5.js"
+text 656,6453,1280,95 "has a full set of canvas drawing functionality for artists, designers, educators, and beginners."
+a 656,6565,140,39 href=https://phaser.io/
+text 656,6565,104,39 "Phaser"
+text 656,6565,1325,95 "is a fast, free and fun open source framework for Canvas and WebGL powered browser games."
+a 656,6677,116,39 href=https://ptsjs.org/
+text 656,6677,80,39 "Pts.js"
+text 772,6677,1013,39 "is a library for creative coding and visualization in canvas and SVG."
+a 656,6733,137,39 href=https://github.com/jeremyckahn/rekapi
+text 656,6733,101,39 "Rekapi"
+text 793,6733,668,39 "is an animation key-framing API for Canvas."
+a 656,6789,259,39 href=https://scrawl.rikweb.org.uk/
+text 656,6789,223,39 "Scrawl-canvas"
+text 656,6789,1311,95 "is an open-source JavaScript library for creating and manipulating 2D canvas elements."
+text 656,6901,67,39 "The"
+a 723,6901,99,39 href=https://zimjs.com/
+text 723,6901,63,39 "ZIM"
+text 656,6901,1261,95 "framework provides conveniences, components, and controls for coding creativity on the canvas — includes accessibility and hundreds of colorful tutorials."
+a 656,7013,115,39 href=https://github.com/hackclub/sprig
+text 656,7013,79,39 "Sprig"
+text 656,7013,1290,95 "is a beginner-friendly, open-source, tile-based game development library that uses Canvas."
+text 676,7191,85,39 "Note:"
+text 761,7191,132,39 "See the"
+a 892,7191,174,39 href=/en-US/docs/Web/API/WebGL_API
+text 892,7191,174,39 "WebGL API"
+text 1067,7191,604,39 "for 2D and 3D libraries that use WebGL."
+a 576,7306,390,77 href=#specifications
+text 576,7306,390,77 "Specifications"
+text 602,7411,202,39 "Specification"
+a 602,7501,369,95 href=https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element
+text 602,7501,91,39 "HTML"
+text 602,7557,333,39 "# the-canvas-element"
+a 576,7656,602,77 href=#browser_compatibility
+text 576,7656,602,77 "Browser compatibility"
+a 1117,7741,561,31 href=https://github.com/mdn/browser-compat-data/issues/new?mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EMDN+page+report+details%3C%2Fsummary%3E%0A%0A*+Query%3A+%60html.elements.canvas%60%0A*+Report+started%3A+2026-08-15T09%3A56%3A10.234Z%0A%0A%3C%2Fdetails%3E&title=html.elements.canvas+-+%3CSUMMARIZE+THE+PROBLEM%3E&template=data-problem.yml
+text 1117,7741,532,31 "Report problems with this compatibility data"
+text 1679,7741,29,31 "•"
+a 1707,7741,277,31 href=https://github.com/mdn/browser-compat-data/tree/main/html/elements/canvas.json
+text 1707,7741,248,31 "View data on GitHub"
+text 1237,7803,99,31 "desktop"
+text 1708,7803,82,31 "mobile"
+text 1066,7974,31,97 "Chrome"
+text 1144,8008,31,62 "Edge"
+text 1222,7986,31,84 "Firefox"
+text 1301,7996,31,75 "Opera"
+text 1379,7999,31,71 "Safari"
+text 1458,7870,31,200 "Chrome Android"
+text 1536,7842,31,229 "Firefox for Android"
+text 1614,7892,31,178 "Opera Android"
+text 1693,7912,31,159 "Safari on iOS"
+text 1771,7848,31,222 "Samsung Browser"
+text 1849,7853,31,218 "WebView Android"
+text 1928,7869,31,201 "WebView on iOS"
+text 600,8189,92,30 "canvas"
+button 1041,8123,78,163 type=button
+text 1074,8189,15,30 "1"
+button 1120,8123,78,163 type=button
+text 1145,8189,30,30 "12"
+button 1198,8123,78,163 type=button
+text 1220,8189,37,30 "1.5"
+text 1219,8234,96,30 "footnote"
+button 1276,8123,78,163 type=button
+text 1309,8189,15,30 "9"
+button 1355,8123,78,163 type=button
+text 1388,8189,15,30 "2"
+text 1376,8234,96,30 "footnote"
+button 1433,8123,78,163 type=button
+text 1459,8189,30,30 "18"
+button 1512,8123,78,163 type=button
+text 1544,8189,15,30 "4"
+text 1533,8234,96,30 "footnote"
+button 1590,8123,78,163 type=button
+text 1604,8189,52,30 "10.1"
+button 1668,8123,78,163 type=button
+text 1701,8189,15,30 "1"
+button 1747,8123,78,163 type=button
+text 1779,8189,15,30 "1"
+button 1825,8123,78,163 type=button
+text 1850,8189,30,30 "37"
+button 1903,8123,78,163 type=button
+text 1936,8189,15,30 "1"
+text 600,8354,92,30 "height"
+button 1041,8286,78,165 type=button
+text 1074,8354,15,30 "1"
+button 1120,8286,78,165 type=button
+text 1145,8354,30,30 "12"
+button 1198,8286,78,165 type=button
+text 1220,8354,37,30 "1.5"
+text 1219,8399,96,30 "footnote"
+button 1276,8286,78,165 type=button
+text 1309,8354,15,30 "9"
+button 1355,8286,78,165 type=button
+text 1388,8354,15,30 "2"
+text 1376,8399,96,30 "footnote"
+button 1433,8286,78,165 type=button
+text 1459,8354,30,30 "18"
+button 1512,8286,78,165 type=button
+text 1544,8354,15,30 "4"
+text 1533,8399,96,30 "footnote"
+button 1590,8286,78,165 type=button
+text 1604,8354,52,30 "10.1"
+button 1668,8286,78,165 type=button
+text 1701,8354,15,30 "1"
+button 1747,8286,78,165 type=button
+text 1779,8354,15,30 "1"
+button 1825,8286,78,165 type=button
+text 1850,8354,30,30 "37"
+button 1903,8286,78,165 type=button
+text 1936,8354,15,30 "1"
+text 600,8494,154,30 "moz-opaque"
+text 769,8497,143,31 "Deprecated"
+text 811,8497,170,31 "Non-standard"
+button 1041,8451,78,115 type=button
+text 1064,8519,34,30 "No"
+button 1120,8451,78,115 type=button
+text 1143,8519,34,30 "No"
+button 1198,8451,78,115 type=button
+text 1220,8519,37,30 "3.5"
+button 1276,8451,78,115 type=button
+text 1300,8519,34,30 "No"
+button 1355,8451,78,115 type=button
+text 1378,8519,34,30 "No"
+button 1433,8451,78,115 type=button
+text 1456,8519,34,30 "No"
+button 1512,8451,78,115 type=button
+text 1544,8519,15,30 "4"
+button 1590,8451,78,115 type=button
+text 1613,8519,34,30 "No"
+button 1668,8451,78,115 type=button
+text 1691,8519,34,30 "No"
+button 1747,8451,78,115 type=button
+text 1770,8519,34,30 "No"
+button 1825,8451,78,115 type=button
+text 1848,8519,34,30 "No"
+button 1903,8451,78,115 type=button
+text 1927,8519,34,30 "No"
+text 600,8634,77,30 "width"
+button 1041,8566,78,165 type=button
+text 1074,8634,15,30 "1"
+button 1120,8566,78,165 type=button
+text 1145,8634,30,30 "12"
+button 1198,8566,78,165 type=button
+text 1220,8634,37,30 "1.5"
+text 1219,8679,96,30 "footnote"
+button 1276,8566,78,165 type=button
+text 1309,8634,15,30 "9"
+button 1355,8566,78,165 type=button
+text 1388,8634,15,30 "2"
+text 1376,8679,96,30 "footnote"
+button 1433,8566,78,165 type=button
+text 1459,8634,30,30 "18"
+button 1512,8566,78,165 type=button
+text 1544,8634,15,30 "4"
+text 1533,8679,96,30 "footnote"
+button 1590,8566,78,165 type=button
+text 1604,8634,52,30 "10.1"
+button 1668,8566,78,165 type=button
+text 1701,8634,15,30 "1"
+button 1747,8566,78,165 type=button
+text 1779,8634,15,30 "1"
+button 1825,8566,78,165 type=button
+text 1850,8634,30,30 "37"
+button 1903,8566,78,165 type=button
+text 1936,8634,15,30 "1"
+text 574,8741,135,45 "Legend"
+text 576,8739,637,31 "Tip: you can click/tap on a cell for more information."
+text 574,8821,144,31 "Full support"
+text 626,8816,144,31 "Full support"
+text 816,8821,136,31 "No support"
+text 868,8816,136,31 "No support"
+text 1102,8816,711,31 "Non-standard. Check cross-browser support before using."
+text 626,8909,499,31 "Deprecated. Not for use in new websites."
+text 1223,8909,321,31 "See implementation notes."
+a 576,9013,237,77 href=#see_also
+text 576,9013,237,77 "See also"
+a 656,9132,110,39 href=/en-US/docs/Web/API/WebGL_API
+text 656,9132,110,39 "WebGL"
+text 610,9279,530,77 "Help improve MDN"
+label 610,9374,1340,56
+text 610,9382,443,39 "Was this page helpful to you?"
+button 610,9446,122,67
+text 669,9462,48,34 "Yes"
+button 756,9446,122,67
+text 820,9462,38,34 "No"
+a 610,9537,357,39 href=/en-US/docs/MDN/Community/Getting_started
+text 610,9537,357,39 "Learn how to contribute"
+text 610,9657,475,39 "This page was last modified on"
+text 1085,9657,198,39 "Aug 12, 2026"
+text 1283,9657,54,39 "by"
+a 1337,9657,266,39 href=/en-US/docs/Web/API/Canvas_API/contributors.txt
+text 1337,9657,266,39 "MDN contributors"
+text 1604,9657,9,39 "."
+a 610,9713,415,39 href=https://github.com/mdn/content/blob/main/files/en-us/web/api/canvas_api/index.md?plain=1
+text 610,9713,379,39 "View this page on GitHub"
+text 1025,9713,36,39 "•"
+a 1061,9713,552,39 href=https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fcanvas_api%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fcanvas_api%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F8a10694edf44bde124fa8f18af65651855f632dc%0A*+Document+last+modified%3A+2026-08-12T23%3A13%3A00.000Z%0A%0A%3C%2Fdetails%3E
+text 1061,9713,516,39 "Report a problem with this content"
+label 54,410,40,40
+text 52,412,195,39 "Filter sidebar"
+input 32,394,432,71 id=input type=text placeholder=Filter value= value=""
+a 32,529,181,64 href=/en-US/docs/Web/API/Canvas_API
+text 32,541,181,39 "Canvas API"
+summary 32,609,448,64
+text 64,621,105,39 "Guides"
+a 80,689,400,112 href=/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
+text 80,701,375,87 "Manipulating video using canvas"
+summary 32,817,448,64
+text 64,829,112,39 "Tutorial"
+a 80,897,225,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial
+text 80,909,225,39 "Canvas tutorial"
+a 80,977,336,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
+text 80,989,336,39 "Basic usage of canvas"
+a 80,1057,400,112 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+text 80,1069,313,87 "Drawing shapes with canvas"
+a 80,1185,397,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
+text 80,1197,397,39 "Applying styles and colors"
+a 80,1265,189,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
+text 80,1277,189,39 "Drawing text"
+a 80,1345,203,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
+text 80,1357,203,39 "Using images"
+a 80,1425,244,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
+text 80,1437,244,39 "Transformations"
+a 80,1505,382,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing
+text 80,1517,382,39 "Compositing and clipping"
+a 80,1585,252,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
+text 80,1597,252,39 "Basic animations"
+a 80,1665,323,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
+text 80,1677,323,39 "Advanced animations"
+a 80,1745,400,112 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+text 80,1757,345,87 "Pixel manipulation with canvas"
+a 80,1873,276,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
+text 80,1885,276,39 "Optimizing canvas"
+a 80,1953,90,64 href=/en-US/docs/Web/API/Canvas_API/Tutorial/Finale
+text 80,1965,90,39 "Finale"
+summary 32,2033,448,64
+text 64,2045,156,39 "Interfaces"
+a 80,2113,255,64 href=/en-US/docs/Web/API/CanvasGradient
+text 80,2125,255,40 "CanvasGradient"
+a 80,2193,237,64 href=/en-US/docs/Web/API/CanvasPattern
+text 80,2205,237,40 "CanvasPattern"
+a 80,2273,400,112 href=/en-US/docs/Web/API/CanvasRenderingContext2D
+text 80,2285,383,88 "CanvasRenderingContext2D"
+a 80,2401,310,64 href=/en-US/docs/Web/API/HTMLCanvasElement
+text 80,2413,310,40 "HTMLCanvasElement"
+a 80,2481,201,64 href=/en-US/docs/Web/API/ImageBitmap
+text 80,2493,201,40 "ImageBitmap"
+a 80,2561,400,112 href=/en-US/docs/Web/API/ImageBitmapRenderingContext
+text 80,2573,383,88 "ImageBitmapRenderingContext"
+a 80,2689,164,64 href=/en-US/docs/Web/API/ImageData
+text 80,2701,164,40 "ImageData"
+a 80,2769,274,64 href=/en-US/docs/Web/API/OffscreenCanvas
+text 80,2781,274,40 "OffscreenCanvas"
+a 80,2849,400,112 href=/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D
+text 80,2861,383,88 "OffscreenCanvasRenderingContext2D"
+a 80,2977,109,64 href=/en-US/docs/Web/API/Path2D
+text 80,2989,109,40 "Path2D"
+a 80,3057,201,64 href=/en-US/docs/Web/API/TextMetrics
+text 80,3069,201,40 "TextMetrics"
+summary 32,3137,448,64
+text 64,3149,132,39 "Methods"
+a 80,3217,400,112 href=/en-US/docs/Web/API/Window/createImageBitmap
+text 80,3229,109,40 "Window"
+text 80,3277,365,40 ".createImageBitmap()"
+a 80,3345,400,112 href=/en-US/docs/Web/API/WorkerGlobalScope/createImageBitmap
+text 80,3357,310,40 "WorkerGlobalScope"
+text 80,3405,365,40 ".createImageBitmap()"
+a 64,9955,2272,180 href=/pong/click?code=aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2NsaWNrL3gvR1RORDQyN1lDWUFEQ0tRTUM2U0xZS1FVRlRTSVZLUUpDVEFJTFozSkNBQUQ1MlFNRjZBRDRLN0tGNllJVjI3V0NLQUlDNVFOQ0FTSTUyNzdGNjdERTIzS0M2U0lFMkpVRlRCRFZLM0VISk5DTFNJWg%3D%3D.slcOFm4EWKiBO7YC8JHG1gftRWmiNUEsLCN%2FyJQpYww%3D&version=2
+[pixels] img 472,9955,1456,180 src=/pimg/aHR0cHM6Ly9zdGF0aWM0LmJ1eXNlbGxhZHMubmV0L3V1LzIvMTc2NDc2LzE3ODUzNjIzMTUtTUROXy1fQUlSZXZvbHV0aW9uLUxpZ2h0LTE0NTZ4MTgwLnBuZw%3D%3D.BK%2FIL%2FaUclOOUVEuMFFgrNIkWicohSbhuOs3Exz6de4%3D alt=MongoDB
+a 2440,9963,48,34 href=/en-US/advertising
+text 2450,9968,28,24 "AD"
+a 32,10201,166,48 href=/ aria-label=MDN logo
+text 32,10285,519,39 "Your blueprint for a better internet."
+a 32,10519,48,48 href=https://github.com/mdn/ aria-label=MDN on GitHub
+a 104,10519,48,48 href=https://bsky.app/profile/developer.mozilla.org aria-label=MDN on Bluesky
+a 176,10519,48,48 href=https://x.com/mozdevnet aria-label=MDN on X
+a 248,10519,48,48 href=https://mastodon.social/@mdn aria-label=MDN on Mastodon
+a 320,10519,48,48 href=/en-US/blog/rss.xml aria-label=MDN blog RSS feed
+text 1024,10206,94,49 "MDN"
+a 1024,10289,90,39 href=/en-US/about
+text 1024,10289,90,39 "About"
+a 1024,10361,68,39 href=/en-US/blog/
+text 1024,10361,68,39 "Blog"
+a 1024,10433,265,39 href=https://www.mozilla.org/en-US/careers/listings/
+text 1024,10433,229,39 "Mozilla careers"
+a 1024,10505,259,39 href=/en-US/advertising
+text 1024,10505,259,39 "Advertise with us"
+a 1024,10577,149,39 href=/en-US/plus
+text 1024,10577,149,39 "MDN Plus"
+a 1024,10649,228,39 href=https://support.mozilla.org/products/mdn-plus
+text 1024,10649,192,39 "Product help"
+text 1536,10206,194,49 "Contribute"
+a 1536,10289,257,39 href=/en-US/community
+text 1536,10289,257,39 "MDN Community"
+a 1536,10361,330,39 href=/en-US/docs/MDN/Community
+text 1536,10361,330,39 "Community resources"
+a 1536,10433,269,39 href=/en-US/docs/MDN/Writing_guidelines
+text 1536,10433,269,39 "Writing guidelines"
+a 1536,10505,236,39 href=/discord
+text 1536,10505,200,39 "MDN Discord"
+a 1536,10577,271,39 href=https://github.com/mdn
+text 1536,10577,235,39 "MDN on GitHub"
+text 2048,10206,209,49 "Developers"
+a 2048,10289,269,39 href=/en-US/docs/Web
+text 2048,10289,269,39 "Web technologies"
+a 2048,10361,362,39 href=/en-US/docs/Learn_web_development
+text 2048,10361,362,39 "Learn web development"
+a 2048,10433,105,39 href=/en-US/docs/MDN/Guides
+text 2048,10433,105,39 "Guides"
+a 2048,10505,129,39 href=/en-US/docs/MDN/Tutorials
+text 2048,10505,129,39 "Tutorials"
+a 2048,10577,132,39 href=/en-US/docs/Glossary
+text 2048,10577,132,39 "Glossary"
+a 2048,10649,205,39 href=https://hacks.mozilla.org/
+text 2048,10649,169,39 "Hacks blog"
+a 32,10791,256,60 href=https://www.mozilla.org/ aria-label=Mozilla logo
+a 336,10803,383,39 href=https://www.mozilla.org/privacy/websites/
+text 336,10803,347,39 "Website Privacy Notice"
+a 751,10803,317,39 href=https://www.mozilla.org/en-US/privacy/websites/data-preferences/
+text 751,10803,281,39 "Telemetry Settings"
+a 1100,10803,118,39 href=https://www.mozilla.org/about/legal/terms/mozilla
+text 1100,10803,82,39 "Legal"
+a 1250,10803,572,39 href=https://www.mozilla.org/about/governance/policies/participation/
+text 1250,10803,536,39 "Community Participation Guidelines"
+text 32,10891,1556,39 "Portions of this content are ©1998–2026 by individual mozilla.org contributors. Content available under"
+a 1588,10891,429,39 href=/docs/MDN/Writing_guidelines/Attrib_copyright_license
+text 1588,10891,429,39 "a Creative Commons license"
+text 2017,10891,9,39 "."

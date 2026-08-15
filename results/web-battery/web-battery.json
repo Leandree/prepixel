@@ -1,0 +1,626 @@
+[
+  {
+    "id": "wikipedia",
+    "cat": "reference",
+    "url": "https://en.wikipedia.org/wiki/Graphics_pipeline",
+    "nav_ms": 3777,
+    "final_url": "https://en.wikipedia.org/wiki/Graphics_pipeline",
+    "title": "Graphics pipeline - Wikipedia",
+    "view_ms": 10,
+    "naive_ms": 25,
+    "structured": {
+      "hardened_bytes": 7062,
+      "hardened_tokens": 1766,
+      "hardened_lines": 222,
+      "naive_bytes": 50577,
+      "naive_tokens": 12637,
+      "opaque_declared": 3,
+      "occluded_tagged": 12
+    },
+    "pixels": {
+      "png_bytes": 292847,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 9,
+      "fullpage_tokens": 12294,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 6498,
+      "nText": 14958,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 13,
+      "nIframe": 0
+    },
+    "consent_banner": false,
+    "ratio_viewport": 0.77,
+    "ratio_fullpage": 0.97,
+    "ok": true
+  },
+  {
+    "id": "mdn",
+    "cat": "reference",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+    "nav_ms": 3658,
+    "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+    "title": "Canvas API - Web APIs | MDN",
+    "view_ms": 6,
+    "naive_ms": 14,
+    "structured": {
+      "hardened_bytes": 3756,
+      "hardened_tokens": 939,
+      "hardened_lines": 101,
+      "naive_bytes": 29579,
+      "naive_tokens": 7392,
+      "opaque_declared": 1,
+      "occluded_tagged": 5
+    },
+    "pixels": {
+      "png_bytes": 187795,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 7,
+      "fullpage_tokens": 9562,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 5491,
+      "nText": 5328,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 0,
+      "nIframe": 0
+    },
+    "consent_banner": false,
+    "ratio_viewport": 1.45,
+    "ratio_fullpage": 1.29,
+    "ok": true
+  },
+  {
+    "id": "hackernews",
+    "cat": "webapp",
+    "url": "https://news.ycombinator.com/",
+    "nav_ms": 4140,
+    "final_url": "https://news.ycombinator.com/",
+    "title": "Hacker News",
+    "view_ms": 8,
+    "naive_ms": 9,
+    "structured": {
+      "hardened_bytes": 11692,
+      "hardened_tokens": 2917,
+      "hardened_lines": 450,
+      "naive_bytes": 24675,
+      "naive_tokens": 6160,
+      "opaque_declared": 1,
+      "occluded_tagged": 0
+    },
+    "pixels": {
+      "png_bytes": 200725,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 2,
+      "fullpage_tokens": 2732,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 1234,
+      "nText": 3939,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 2,
+      "nIframe": 0
+    },
+    "consent_banner": false,
+    "ratio_viewport": 0.47,
+    "ratio_fullpage": 0.44,
+    "ok": true
+  },
+  {
+    "id": "github",
+    "cat": "webapp",
+    "url": "https://github.com/torvalds/linux",
+    "nav_ms": 4345,
+    "final_url": "https://github.com/torvalds/linux",
+    "title": "GitHub - torvalds/linux: Linux kernel source tree \u00b7 GitHub",
+    "view_ms": 17,
+    "naive_ms": 21,
+    "structured": {
+      "hardened_bytes": 7017,
+      "hardened_tokens": 1748,
+      "hardened_lines": 233,
+      "naive_bytes": 29388,
+      "naive_tokens": 7335,
+      "opaque_declared": 60,
+      "occluded_tagged": 20
+    },
+    "pixels": {
+      "png_bytes": 188735,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 7,
+      "fullpage_tokens": 9562,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 5337,
+      "nText": 10059,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 15,
+      "nIframe": 0
+    },
+    "consent_banner": false,
+    "ratio_viewport": 0.78,
+    "ratio_fullpage": 1.3,
+    "ok": true
+  },
+  {
+    "id": "duckduckgo",
+    "cat": "webapp",
+    "url": "https://duckduckgo.com/?q=graphics+pipeline",
+    "nav_ms": 3977,
+    "final_url": "https://duckduckgo.com/?q=graphics+pipeline&ia=web",
+    "title": "graphics pipeline at DuckDuckGo",
+    "view_ms": 12,
+    "naive_ms": 15,
+    "structured": {
+      "hardened_bytes": 4784,
+      "hardened_tokens": 1185,
+      "hardened_lines": 124,
+      "naive_bytes": 24514,
+      "naive_tokens": 6091,
+      "opaque_declared": 27,
+      "occluded_tagged": 13
+    },
+    "pixels": {
+      "png_bytes": 213579,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 5,
+      "fullpage_tokens": 6830,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 3540,
+      "nText": 6849,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 25,
+      "nIframe": 1
+    },
+    "consent_banner": false,
+    "ratio_viewport": 1.15,
+    "ratio_fullpage": 1.12,
+    "ok": true
+  },
+  {
+    "id": "openstreetmap",
+    "cat": "webapp-canvas",
+    "url": "https://www.openstreetmap.org/#map=13/48.8566/2.3522",
+    "nav_ms": 3760,
+    "final_url": "https://www.openstreetmap.org/#map=13/48.85660/2.35220",
+    "title": "OpenStreetMap",
+    "view_ms": 9,
+    "naive_ms": 7,
+    "structured": {
+      "hardened_bytes": 3307,
+      "hardened_tokens": 819,
+      "hardened_lines": 101,
+      "naive_bytes": 5915,
+      "naive_tokens": 1470,
+      "opaque_declared": 28,
+      "occluded_tagged": 28
+    },
+    "pixels": {
+      "png_bytes": 1307848,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 1,
+      "fullpage_tokens": 1366,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 800,
+      "nText": 693,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 26,
+      "nIframe": 0
+    },
+    "consent_banner": false,
+    "ratio_viewport": 1.67,
+    "ratio_fullpage": 0.93,
+    "ok": true
+  },
+  {
+    "id": "excalidraw",
+    "cat": "webapp-canvas",
+    "url": "https://excalidraw.com/",
+    "nav_ms": 3708,
+    "final_url": "https://excalidraw.com/",
+    "title": "Excalidraw Whiteboard",
+    "view_ms": 4,
+    "naive_ms": 5,
+    "structured": {
+      "hardened_bytes": 2987,
+      "hardened_tokens": 744,
+      "hardened_lines": 95,
+      "naive_bytes": 3103,
+      "naive_tokens": 770,
+      "opaque_declared": 34,
+      "occluded_tagged": 22
+    },
+    "pixels": {
+      "png_bytes": 62601,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 1,
+      "fullpage_tokens": 1366,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 800,
+      "nText": 564,
+      "nCanvas": 2,
+      "nVideo": 0,
+      "nImg": 0,
+      "nIframe": 0
+    },
+    "consent_banner": false,
+    "ratio_viewport": 1.84,
+    "ratio_fullpage": 1.77,
+    "ok": true
+  },
+  {
+    "id": "apple",
+    "cat": "vitrine",
+    "url": "https://www.apple.com/",
+    "nav_ms": 3746,
+    "final_url": "https://www.apple.com/",
+    "title": "Apple",
+    "view_ms": 8,
+    "naive_ms": 18,
+    "structured": {
+      "hardened_bytes": 3242,
+      "hardened_tokens": 810,
+      "hardened_lines": 81,
+      "naive_bytes": 31304,
+      "naive_tokens": 7800,
+      "opaque_declared": 31,
+      "occluded_tagged": 47
+    },
+    "pixels": {
+      "png_bytes": 591130,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 8,
+      "fullpage_tokens": 10928,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 6002,
+      "nText": 6219,
+      "nCanvas": 0,
+      "nVideo": 4,
+      "nImg": 50,
+      "nIframe": 0
+    },
+    "consent_banner": false,
+    "ratio_viewport": 1.69,
+    "ratio_fullpage": 1.4,
+    "ok": true
+  },
+  {
+    "id": "stripe",
+    "cat": "vitrine",
+    "url": "https://stripe.com/",
+    "nav_ms": 4024,
+    "final_url": "https://stripe.com/fr",
+    "title": "Stripe | Plateforme et solution de paiement en ligne",
+    "view_ms": 10,
+    "naive_ms": 39,
+    "structured": {
+      "hardened_bytes": 3047,
+      "hardened_tokens": 759,
+      "hardened_lines": 85,
+      "naive_bytes": 40317,
+      "naive_tokens": 9875,
+      "opaque_declared": 20,
+      "occluded_tagged": 17
+    },
+    "pixels": {
+      "png_bytes": 487171,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 19,
+      "fullpage_tokens": 25954,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 14961,
+      "nText": 14754,
+      "nCanvas": 2,
+      "nVideo": 0,
+      "nImg": 34,
+      "nIframe": 2
+    },
+    "consent_banner": true,
+    "ratio_viewport": 1.8,
+    "ratio_fullpage": 2.63,
+    "ok": true
+  },
+  {
+    "id": "vercel",
+    "cat": "vitrine",
+    "url": "https://vercel.com/",
+    "nav_ms": 3688,
+    "final_url": "https://vercel.com/",
+    "title": "Agentic Infrastructure - Vercel",
+    "view_ms": 35,
+    "naive_ms": 21,
+    "structured": {
+      "hardened_bytes": 1753,
+      "hardened_tokens": 439,
+      "hardened_lines": 48,
+      "naive_bytes": 11838,
+      "naive_tokens": 2955,
+      "opaque_declared": 14,
+      "occluded_tagged": 12
+    },
+    "pixels": {
+      "png_bytes": 81019,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 7,
+      "fullpage_tokens": 9562,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 5126,
+      "nText": 1015,
+      "nCanvas": 1,
+      "nVideo": 0,
+      "nImg": 19,
+      "nIframe": 0
+    },
+    "consent_banner": true,
+    "ratio_viewport": 3.11,
+    "ratio_fullpage": 3.24,
+    "ok": true
+  },
+  {
+    "id": "youtube-home",
+    "cat": "media",
+    "url": "https://www.youtube.com/",
+    "nav_ms": 4173,
+    "final_url": "https://www.youtube.com/",
+    "title": "YouTube",
+    "view_ms": 12,
+    "naive_ms": 49,
+    "structured": {
+      "hardened_bytes": 4378,
+      "hardened_tokens": 1080,
+      "hardened_lines": 71,
+      "naive_bytes": 5348,
+      "naive_tokens": 1319,
+      "opaque_declared": 19,
+      "occluded_tagged": 47
+    },
+    "pixels": {
+      "png_bytes": 135216,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 1,
+      "fullpage_tokens": 1366,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 800,
+      "nText": 2324,
+      "nCanvas": 0,
+      "nVideo": 1,
+      "nImg": 7,
+      "nIframe": 2
+    },
+    "consent_banner": true,
+    "ratio_viewport": 1.26,
+    "ratio_fullpage": 1.04,
+    "ok": true
+  },
+  {
+    "id": "youtube-watch",
+    "cat": "media",
+    "url": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    "nav_ms": 4567,
+    "final_url": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    "title": "Me at the zoo - YouTube",
+    "view_ms": 21,
+    "naive_ms": 69,
+    "structured": {
+      "hardened_bytes": 8031,
+      "hardened_tokens": 1991,
+      "hardened_lines": 164,
+      "naive_bytes": 17897,
+      "naive_tokens": 4426,
+      "opaque_declared": 55,
+      "occluded_tagged": 142
+    },
+    "pixels": {
+      "png_bytes": 544980,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 4,
+      "fullpage_tokens": 5464,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 2788,
+      "nText": 4386,
+      "nCanvas": 0,
+      "nVideo": 1,
+      "nImg": 66,
+      "nIframe": 2
+    },
+    "consent_banner": false,
+    "ratio_viewport": 0.69,
+    "ratio_fullpage": 1.23,
+    "ok": true
+  },
+  {
+    "id": "bbc-news",
+    "cat": "presse",
+    "url": "https://www.bbc.com/news",
+    "nav_ms": 3746,
+    "final_url": "https://www.bbc.com/news",
+    "title": "BBC News - Breaking news, video and the latest top stories from the U.S. and around the world",
+    "view_ms": 6,
+    "naive_ms": 20,
+    "structured": {
+      "hardened_bytes": 3387,
+      "hardened_tokens": 847,
+      "hardened_lines": 79,
+      "naive_bytes": 27496,
+      "naive_tokens": 6871,
+      "opaque_declared": 5,
+      "occluded_tagged": 79
+    },
+    "pixels": {
+      "png_bytes": 183022,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 9,
+      "fullpage_tokens": 12294,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 6554,
+      "nText": 8487,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 33,
+      "nIframe": 4
+    },
+    "consent_banner": true,
+    "ratio_viewport": 1.61,
+    "ratio_fullpage": 1.79,
+    "ok": true
+  },
+  {
+    "id": "lemonde",
+    "cat": "presse",
+    "url": "https://www.lemonde.fr/",
+    "nav_ms": 3627,
+    "final_url": "https://www.lemonde.fr/",
+    "title": "Le Monde.fr - Actualit\u00e9s et Infos en France et dans le monde",
+    "view_ms": 19,
+    "naive_ms": 33,
+    "structured": {
+      "hardened_bytes": 7003,
+      "hardened_tokens": 1714,
+      "hardened_lines": 126,
+      "naive_bytes": 103703,
+      "naive_tokens": 25452,
+      "opaque_declared": 13,
+      "occluded_tagged": 105
+    },
+    "pixels": {
+      "png_bytes": 179637,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 15,
+      "fullpage_tokens": 20490,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 11270,
+      "nText": 20634,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 173,
+      "nIframe": 3
+    },
+    "consent_banner": false,
+    "ratio_viewport": 0.8,
+    "ratio_fullpage": 0.81,
+    "ok": true
+  },
+  {
+    "id": "amazon-fr",
+    "cat": "commerce",
+    "url": "https://www.amazon.fr/s?k=clavier+mecanique",
+    "nav_ms": 3687,
+    "final_url": "https://www.amazon.fr/s?k=clavier+mecanique",
+    "title": "Amazon.fr : clavier mecanique",
+    "view_ms": 49,
+    "naive_ms": 90,
+    "structured": {
+      "hardened_bytes": 11467,
+      "hardened_tokens": 2834,
+      "hardened_lines": 250,
+      "naive_bytes": 462473,
+      "naive_tokens": 114990,
+      "opaque_declared": 9,
+      "occluded_tagged": 114
+    },
+    "pixels": {
+      "png_bytes": 264794,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 19,
+      "fullpage_tokens": 25954,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 14490,
+      "nText": 42797,
+      "nCanvas": 0,
+      "nVideo": 1,
+      "nImg": 109,
+      "nIframe": 6
+    },
+    "consent_banner": true,
+    "ratio_viewport": 0.48,
+    "ratio_fullpage": 0.23,
+    "ok": true
+  },
+  {
+    "id": "leboncoin",
+    "cat": "commerce",
+    "url": "https://www.leboncoin.fr/",
+    "nav_ms": 3825,
+    "final_url": "https://www.leboncoin.fr/",
+    "title": "leboncoin, site de petites annonces gratuites",
+    "view_ms": 27,
+    "naive_ms": 31,
+    "structured": {
+      "hardened_bytes": 4749,
+      "hardened_tokens": 1174,
+      "hardened_lines": 90,
+      "naive_bytes": 63918,
+      "naive_tokens": 15701,
+      "opaque_declared": 16,
+      "occluded_tagged": 70
+    },
+    "pixels": {
+      "png_bytes": 438365,
+      "viewport_tokens": 1366,
+      "viewport_tokens_retina": 4784,
+      "screens_to_cover_page": 8,
+      "fullpage_tokens": 10928,
+      "viewport_tokens_retina_legacy": 1534
+    },
+    "page": {
+      "scrollH": 6306,
+      "nText": 7311,
+      "nCanvas": 0,
+      "nVideo": 0,
+      "nImg": 87,
+      "nIframe": 2
+    },
+    "consent_banner": true,
+    "ratio_viewport": 1.16,
+    "ratio_fullpage": 0.7,
+    "ok": true
+  }
+]

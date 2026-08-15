@@ -1,0 +1,63 @@
+text 0,43,313,74 "Excalidraw"
+text 688,598,1183,45 "Vos dessins sont enregistrés dans le stockage de votre navigateur."
+text 692,641,1176,45 "Le stockage du navigateur peut être effacé de manière inattendue."
+text 590,684,1380,45 "Enregistrez régulièrement votre travail dans un fichier pour éviter de le perdre."
+button 980,792,600,84 type=button
+text 1054,818,76,31 "Ouvrir"
+text 1471,820,83,27 "Cmd+O"
+button 980,880,600,84 type=button
+text 1054,906,56,31 "Aide"
+text 1541,908,13,27 "?"
+button 980,968,600,84 type=button
+text 1054,994,304,31 "Collaboration en direct..."
+a 980,1056,600,89 href=https://plus.excalidraw.com/plus?utm_source=excalidraw&utm_medium=app&utm_content=welcomeScreenGuest
+text 1054,1082,88,37 "Sign up"
+button 32,32,72,72 type=button id=radix-:r2:
+text 146,220,530,80 "Exportation, préférences, langues, ..."
+text 1122,312,208,160 "Choisissez un outil et commencez à dessiner !"
+text 782,144,367,32 "Pour déplacer le canevas, maintenez"
+text 1159,150,145,24 "Clic molette"
+text 1314,144,36,32 "ou"
+text 1359,150,72,24 "Espace"
+text 1186,144,591,66 "enfoncé tout en faisant glisser, ou utilisez l'outil main"
+text 1279,80,156,63 "Formes"
+button 746,40,72,72 type=button aria-label=Garder l'outil sélectionné actif après le dessin
+button 844,40,72,72 type=button aria-label=Mains (outil de déplacement de la vue)
+button 924,40,72,72 type=button aria-label=Sélection
+text 979,78,9,26 "1"
+button 1004,40,72,72 type=button aria-label=Rectangle
+text 1058,78,10,26 "2"
+button 1084,40,72,72 type=button aria-label=Losange
+text 1138,78,10,26 "3"
+button 1164,40,72,72 type=button aria-label=Ellipse
+text 1218,78,10,26 "4"
+button 1244,40,72,72 type=button aria-label=Flèche
+text 1298,78,10,26 "5"
+button 1324,40,72,72 type=button aria-label=Ligne
+text 1378,78,10,26 "6"
+button 1404,40,72,72 type=button aria-label=Dessiner
+text 1458,78,10,26 "7"
+button 1484,40,72,72 type=button aria-label=Texte
+text 1538,78,10,26 "8"
+button 1564,40,72,72 type=button aria-label=Insérer une image
+text 1618,78,10,26 "9"
+button 1644,40,72,72 type=button aria-label=Gomme
+text 1698,78,10,26 "0"
+button 1742,40,72,72 type=button id=radix-:r0:
+a 2155,32,189,72 href=https://plus.excalidraw.com/plus?utm_source=excalidraw&utm_medium=app&utm_content=guestBanner#excalidraw-redirect
+text 2183,51,133,35 "Excalidraw+"
+button 2360,32,72,72 type=button
+button 2456,32,72,72 type=button aria-label=Bibliothèque
+text 32,1536,398,63 "Actions du canevas"
+button 32,1496,72,72 aria-label=Dézoomer type=button
+button 104,1496,120,72 aria-label=Réinitialiser le zoom type=button
+text 132,1514,40,37 "100"
+text 173,1514,23,37 "%"
+button 224,1496,72,72 aria-label=Zoomer type=button
+button 315,1496,72,72 aria-label=Annuler type=button
+button 387,1496,72,72 aria-label=Rétablir type=button
+a 2379,1513,38,38 href=https://plus.excalidraw.com/blog/end-to-end-encryption aria-label=Article de blog sur le chiffrement de bout en bout dans Excalidraw
+text 2193,1338,165,80 "Raccourcis et aide"
+button 2456,1496,72,72 type=button aria-label=Aide
+[pixels] canvas 0,0,2560,1600
+[pixels] canvas 0,0,2560,1600

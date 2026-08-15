@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-27 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+29 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -19,7 +19,7 @@
 | linux | Whole desktop — 4 concurrent windows, 4 toolkits (Chromium, GTK4, Qt, LibreOffice) | other | render-tree-tap | ✅ works | explicit | 30 | 3,110 | ✅ |
 | linux | Qt Widgets (examples/widgets/calculator) — representative Qt app | qt | render-tree-tap | ⬜ unavailable | explicit |  | 1,366 | ✅ |
 | macos | Finder (system file manager), probe folder with 3 throwaway files | appkit | accessibility-api | ✅ works | — | 4,345 | 1,049 | ✅ |
-| macos | TextEdit — hard-text stress (ligatures, combining accents, CJK, RTL Arabic/Hebrew, bidi, ZWJ emoji) | appkit | accessibility-api | ✅ works | — | 35 | 1,281 | ✅ |
+| macos | TextEdit — hard-text stress (ligatures, combining accents, CJK, RTL Arabic/Hebrew, bidi, ZWJ emoji) | appkit | accessibility-api | ✅ works | — | 35 | 1,477 | ✅ |
 | macos | Pages 14.x (iWork word processor) | appkit | object-model | ✅ works | — | 21 | 1,285 | ✅ |
 | macos | Safari (system WebKit browser), pages/testapp.html + allcanvas.html | appkit | accessibility-api | ✅ works | explicit | 2,957 | 1,914 | ✅ |
 | macos | TextEdit (com.apple.TextEdit) | appkit | accessibility-api | ✅ works | explicit | 1,760 | 1,526 | ✅ |
@@ -27,6 +27,8 @@
 | macos | Google Chrome 151.0.7922.138 (isolated instance, temp profile) | chromium | cdp | ✅ works | explicit | 315 | 880 | ✅ |
 | macos | Precision-vs-pixels duel (20 randomized order-console pages) — macOS replication of the Linux cell | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
 | macos | Adversarial: occlusion, visibility tricks & undeclared blind spots (the safety-claim stress test) | chromium | cdp | ✅ works | explicit | 57 | 1,366 | ✅ |
+| macos | 16 live public websites in Chrome 151 (6 categories: vitrine, presse, commerce, media, reference, webapp, webapp-canvas) | chromium | cdp | ✅ works | explicit | 1,360 | 1,366 | ✅ |
+| macos | Blind navigation on 5 live sites in Chrome 151 (Hacker News, Wikipedia, GitHub, MDN, DuckDuckGo) | chromium | cdp | ✅ works | explicit | 16,826 | 12,294 | ✅ |
 | macos | All-canvas 'game' page + mixed opaque page (perimeter-law control) | custom-canvas | pixels-baseline | ⬜ unavailable | explicit | 7 | 1,366 | ✅ |
 | macos | Cursor 2.x (VS Code fork, Electron/Chromium 144) — isolated instance, temp profile | electron | cdp | ✅ works | explicit | 647 | 1,366 | ✅ |
 | macos | Chess/Échecs (com.apple.Chess) — Apple's 3D-rendered chess game | game | accessibility-api | ✅ works | — | 3,050 | 921 | ✅ |
@@ -66,8 +68,8 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 20/27.
-- **Silent divergences** (disqualifying): 0/27 ✅ none found
-- Cells **not** predictable in advance: 0/27 ✅ none
+- Cells where structure **works**: 22/29.
+- **Silent divergences** (disqualifying): 0/29 ✅ none found
+- Cells **not** predictable in advance: 0/29 ✅ none
 
 Reading: every failure so far is either **explicit** (opaque rect / honest empty tree) or **blocked** (OS/env), and every channel was detectable from a stack signature before use. That is the pattern a production router needs. The open risk to hunt on the other OSes is any **silent** cell — a channel that returns a view disagreeing with the screen without declaring it.

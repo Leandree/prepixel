@@ -27,7 +27,7 @@
     "diff_bytes_per_interaction": 150,
     "idle_cost_bytes": 0,
     "capture_latency_ms": 2,
-    "notes": "view = distilled DOMSnapshot of testapp.html (same distiller as the Linux cell: visible text + interactive elements + declared opaque rects). Screenshot side = 980×672 CSS viewport → 880 tokens (w·h/750); at device pixels (Retina 2×) it would be 3512 tokens. diff_bytes_per_interaction = mean per-tick feed diff (58–231 B). Latencies: DOMSnapshot capture 1–2 ms on this page — indistinguishable from the Linux cell. Browser-chrome overlays (e.g. a Google Translate popup that appeared over the page) are OUTSIDE this channel's scope: CDP reads the page, not the browser window — the AX channel (see macos-chrome-accessibility-api) does see them; a desktop router should pair the two."
+    "notes": "view = distilled DOMSnapshot of testapp.html (same distiller as the Linux cell: visible text + interactive elements + declared opaque rects). Screenshot side = 980×672 CSS viewport → 880 tokens (w·h/750); the actual 2x capture (1960x1346 px) costs 3518 tokens. diff_bytes_per_interaction = mean per-tick feed diff (58–231 B). Latencies: DOMSnapshot capture 1–2 ms on this page — indistinguishable from the Linux cell. Browser-chrome overlays (e.g. a Google Translate popup that appeared over the page) are OUTSIDE this channel's scope: CDP reads the page, not the browser window — the AX channel (see macos-chrome-accessibility-api) does see them; a desktop router should pair the two."
   },
   "runtime_verification": {
     "method": "Native compositor screenshot (screencapture -l on the Chrome window) compared to the distilled view: orders table content, buttons, input placeholder; plus in-page state check after blind click.",

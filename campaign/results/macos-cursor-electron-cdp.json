@@ -27,7 +27,7 @@
     "diff_bytes_per_interaction": null,
     "idle_cost_bytes": 0,
     "capture_latency_ms": 15,
-    "notes": "Logged-in 'Cursor Agents' window, 1280×800-CSS-ish viewport (dpr 2 → screenshot at device px would be 5464 tokens). The distilled view (56 lines) is 2.1× cheaper than one CSS-resolution screenshot and self-labels every control via aria-label — no vision pass needed to name buttons. Login-gated content is an honest boundary: pre-login view was 218 B with exactly the two buttons that existed."
+    "notes": "Logged-in 'Cursor Agents' window, 1280×800-CSS-ish viewport; the captured 2× screenshot (2560×1600 px) costs 4784 tokens after the API's automatic downscale, not the 5464 a naive w·h/750 implies. The distilled view (56 lines) is 2.1× cheaper than one CSS-resolution screenshot and self-labels every control via aria-label — no vision pass needed to name buttons. Login-gated content is an honest boundary: pre-login view was 218 B with exactly the two buttons that existed."
   },
   "runtime_verification": {
     "method": "CDP screenshot of the same instant kept as artifact; text/controls compared against the distilled view.",

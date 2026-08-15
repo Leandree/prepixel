@@ -1,0 +1,819 @@
+a -2,-2,2,2 href=#bodyContent
+text -2,-2,105,111 "Jump to content"
+label 76,34,64,64 id=vector-main-menu-dropdown-label
+text 107,65,146,32 "Main menu"
+a 168,28,280,76 href=/wiki/Main_Page
+[pixels] img 168,28,280,44 alt=Wikipedia src=/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg
+[pixels] img 168,82,280,22 alt=The Free Encyclopedia src=/static/images/mobile/copyright/wikipedia-tagline-en-25.svg
+input 532,34,809,64 type=search name=search placeholder=Search Wikipedia aria-label=Search Wikipedia id=searchInput value=""
+button 1339,34,141,64
+text 1363,50,93,32 "Search"
+a 2076,50,90,32 href=https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en
+text 2076,50,90,32 "Donate"
+a 2182,50,190,32 href=https://en.wikipedia.org/w/index.php?title=Special%3ACreateAccount&returnto=Graphics+pipeline&experiments%5B0%5D=we-1-8-account-creation-no-desktop-benefits%3Aunsampled
+text 2182,50,190,32 "Create account"
+a 2388,50,76,32 href=https://en.wikipedia.org/w/index.php?title=Special%3AUserLogin&returnto=Graphics+pipeline&experiments%5B0%5D=we-1-8-account-creation-no-desktop-benefits%3Aunsampled
+text 2388,50,76,32 "Log in"
+text 120,280,121,32 "Contents"
+button 265,274,77,44 aria-label=Hide Contents
+text 281,282,45,27 "hide"
+a 120,345,328,56 href=#
+text 120,357,68,32 "(Top)"
+a 120,401,328,56 href=#Concept
+text 120,413,104,32 "Concept"
+a 120,457,328,56 href=#Structure
+text 120,469,114,32 "Structure"
+button 74,459,44,44
+text 74,491,302,25 "Toggle Structure subsection"
+a 144,513,304,56 href=#Application
+text 144,525,137,32 "Application"
+a 144,569,304,56 href=#Geometry
+text 144,581,123,32 "Geometry"
+a 168,625,280,88 href=#World_Coordinate_System
+text 168,637,217,64 "World Coordinate System"
+a 168,713,280,88 href=#Camera_Transformation
+text 168,725,187,64 "Camera Transformation"
+a 168,801,280,56 href=#Projection
+text 168,813,125,32 "Projection"
+a 168,857,280,56 href=#Lighting
+text 168,869,98,32 "Lighting"
+a 168,913,280,56 href=#Clipping
+text 168,925,101,32 "Clipping"
+a 168,969,280,88 href=#Window-Viewport_transformation
+text 168,981,217,64 "Window-Viewport transformation"
+a 144,1057,304,56 href=#Rasterization
+text 144,1069,163,32 "Rasterization"
+a 144,1113,304,56 href=#Inverse
+text 144,1125,92,32 "Inverse"
+a 120,1169,328,56 href=#See_also
+text 120,1181,109,32 "See also"
+a 120,1225,328,56 href=#Sources
+text 120,1237,103,32 "Sources"
+a 120,1281,328,56 href=#References
+text 120,1293,143,32 "References"
+a 120,1337,328,56 href=#External_links
+text 120,1349,167,32 "External links"
+text 528,186,448,66 "Graphics pipeline"
+label 1743,188,313,64 id=p-lang-btn-label
+text 1819,204,177,32 "15 languages"
+a 528,259,78,64 href=/wiki/Graphics_pipeline
+text 528,275,78,32 "Article"
+a 638,259,50,64 href=/wiki/Talk:Graphics_pipeline
+text 638,275,50,32 "Talk"
+a 1638,259,67,64 href=/wiki/Graphics_pipeline
+text 1638,275,67,32 "Read"
+a 1737,259,48,64 href=/w/index.php?title=Graphics_pipeline&action=edit
+text 1737,275,48,32 "Edit"
+a 1818,259,150,64 href=/w/index.php?title=Graphics_pipeline&action=history
+text 1818,275,150,32 "View history"
+label 1984,259,64,64 id=vector-page-tools-dropdown-label
+text 2015,290,65,32 "Tools"
+text 2112,280,160,32 "Appearance"
+button 2296,274,77,44 aria-label=Hide Appearance
+text 2312,282,45,27 "hide"
+text 2112,357,51,32 "Text"
+label 2112,427,328,52
+text 2160,433,70,32 "Small"
+label 2112,491,328,52
+text 2160,497,114,32 "Standard"
+label 2112,555,328,52
+text 2160,561,72,32 "Large"
+text 2112,643,72,32 "Width"
+label 2112,713,328,52
+text 2160,719,114,32 "Standard"
+label 2112,777,328,52
+text 2160,783,64,32 "Wide"
+text 2112,865,67,32 "Color"
+label 2112,935,328,52
+text 2160,941,125,32 "Automatic"
+label 2112,999,328,52
+text 2160,1005,61,32 "Light"
+label 2112,1063,328,52
+text 2160,1069,59,32 "Dark"
+text 528,347,476,32 "From Wikipedia, the free encyclopedia"
+a 1495,444,454,95 href=https://en.wikipedia.org/wiki/3D_computer_graphics
+text 1495,444,454,46 "Three-dimensional (3D)"
+text 1538,493,368,46 "computer graphics"
+a 1472,714,500,32 href=https://en.wikipedia.org/wiki/File:Activemarker2.PNG
+[pixels] img 1472,555,500,356 src=//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Activemarker2.PNG/250px-Activemarker2.PNG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 1627,928,191,32 "Fundamentals"
+a 1458,970,114,32 href=https://en.wikipedia.org/wiki/3D_modeling
+text 1458,970,114,32 "Modeling"
+a 1596,970,117,32 href=https://en.wikipedia.org/wiki/3D_scanning
+text 1596,970,117,32 "Scanning"
+a 1737,970,130,32 href=https://en.wikipedia.org/wiki/Rendering_(computer_graphics)
+text 1737,970,130,32 "Rendering"
+a 1891,970,95,32 href=https://en.wikipedia.org/wiki/3D_printing
+text 1891,970,95,32 "Printing"
+text 1634,1024,177,32 "Primary uses"
+a 1489,1066,135,32 href=https://en.wikipedia.org/wiki/3D_model
+text 1489,1066,135,32 "3D models"
+a 1647,1066,293,32 href=https://en.wikipedia.org/wiki/Computer-aided_design
+text 1647,1066,293,32 "Computer-aided design"
+a 1431,1105,189,32 href=https://en.wikipedia.org/wiki/Graphic_design
+text 1431,1105,189,32 "Graphic design"
+a 1644,1105,164,32 href=https://en.wikipedia.org/wiki/Video_game
+text 1644,1105,164,32 "Video games"
+a 1831,1105,167,32 href=https://en.wikipedia.org/wiki/Visual_effects
+text 1831,1105,167,32 "Visual effects"
+a 1507,1145,158,32 href=https://en.wikipedia.org/wiki/Visualization_(graphic)
+text 1507,1145,158,32 "Visualization"
+a 1688,1145,234,32 href=https://en.wikipedia.org/wiki/Virtual_engineering
+text 1688,1145,234,32 "Virtual engineering"
+a 1486,1184,162,32 href=https://en.wikipedia.org/wiki/Virtual_reality
+text 1486,1184,162,32 "Virtual reality"
+a 1671,1184,288,32 href=https://en.wikipedia.org/wiki/Virtual_cinematography
+text 1671,1184,288,32 "Virtual cinematography"
+text 1626,1238,192,32 "Related topics"
+a 1431,1280,434,32 href=https://en.wikipedia.org/wiki/Computer-generated_imagery
+text 1431,1280,376,32 "Computer-generated imagery"
+text 1806,1284,58,28 "(CGI)"
+a 1888,1280,125,32 href=https://en.wikipedia.org/wiki/Animation
+text 1888,1280,125,32 "Animation"
+a 1519,1321,117,32 href=https://en.wikipedia.org/wiki/Computer_animation
+text 1519,1321,117,32 "computer"
+a 1660,1321,95,32 href=https://en.wikipedia.org/wiki/Skeletal_animation
+text 1660,1321,95,32 "skeletal"
+a 1788,1321,131,32 href=https://en.wikipedia.org/wiki/3D_display
+text 1788,1321,131,32 "3D display"
+a 1487,1361,224,32 href=https://en.wikipedia.org/wiki/Wire-frame_model
+text 1487,1361,224,32 "Wire-frame model"
+a 1734,1361,208,32 href=https://en.wikipedia.org/wiki/Texture_mapping
+text 1734,1361,208,32 "Texture mapping"
+a 1502,1400,186,32 href=https://en.wikipedia.org/wiki/Motion_capture
+text 1502,1400,186,32 "Motion capture"
+a 1711,1400,216,32 href=https://en.wikipedia.org/wiki/Crowd_simulation
+text 1711,1400,216,32 "Crowd simulation"
+a 1485,1439,230,32 href=https://en.wikipedia.org/wiki/Global_illumination
+text 1485,1439,230,32 "Global illumination"
+a 1739,1439,221,32 href=https://en.wikipedia.org/wiki/Volume_rendering
+text 1739,1439,221,32 "Volume rendering"
+a 1945,1492,13,33 href=https://en.wikipedia.org/wiki/Template:3D_computer_graphics
+text 1945,1492,13,33 "v"
+a 1975,1492,12,33 href=https://en.wikipedia.org/wiki/Template_talk:3D_computer_graphics
+text 1975,1492,12,33 "t"
+a 2004,1492,13,33 href=https://en.wikipedia.org/wiki/Special:EditPage/Template:3D_computer_graphics
+text 2004,1492,13,33 "e"
+text 528,426,64,37 "The"
+text 592,426,418,37 "computer graphics pipeline"
+text 1010,426,155,37 ", or simply"
+text 528,426,770,89 "graphics pipeline"
+text 649,478,283,37 ", also known as the"
+text 932,478,277,37 "rendering pipeline"
+text 528,478,843,89 ", is a series of procedures for transforming a"
+a 528,530,790,89 href=https://en.wikipedia.org/wiki/3D_computer_graphics id=mwCQ
+text 528,530,790,89 "three-dimensional (3D) scene"
+text 613,582,96,37 "into a"
+a 709,582,516,37 href=https://en.wikipedia.org/wiki/2D_computer_graphics id=mwCg
+text 709,582,516,37 "two-dimensional (2D) representation"
+text 528,582,768,89 "on a screen."
+a 633,628,29,30 href=#cite_note-1 id=mwCw
+text 633,628,7,30 "["
+text 640,628,14,30 "1"
+text 654,628,7,30 "]"
+text 661,634,121,37 "Once a"
+a 782,634,137,37 href=https://en.wikipedia.org/wiki/3D_model id=mwDw
+text 782,634,137,37 "3D model"
+text 919,634,256,37 "is generated, the"
+a 528,634,831,89 href=https://en.wikipedia.org/wiki/3D_computer_graphics id=mwEA
+text 528,634,831,89 "3D computer graphics"
+text 528,686,720,89 "pipeline converts the model into a visually perceivable format on the computer display."
+a 1146,732,29,30 href=#cite_note-2 id=mwEQ
+text 1146,732,7,30 "["
+text 1154,732,14,30 "2"
+text 1168,732,7,30 "]"
+text 528,822,502,37 "Due to the dependence on specific"
+a 1030,822,121,37 href=https://en.wikipedia.org/wiki/Software id=mwFg
+text 1030,822,121,37 "software"
+text 1151,822,71,37 "and"
+a 1222,822,133,37 href=https://en.wikipedia.org/wiki/Computer_hardware id=mwFw
+text 1222,822,133,37 "hardware"
+text 528,874,820,141 "configurations and desired display attributes, a universally applicable graphics pipeline does not exist. Nevertheless, graphics"
+a 658,978,498,37 href=https://en.wikipedia.org/wiki/API id=mwGA
+text 658,978,498,37 "application programming interfaces"
+text 1156,978,226,37 "(APIs), such as"
+a 528,1030,124,37 href=https://en.wikipedia.org/wiki/Direct3D id=mwGQ
+text 528,1030,124,37 "Direct3D"
+text 652,1030,18,37 ","
+a 670,1030,120,37 href=https://en.wikipedia.org/wiki/OpenGL id=mwGg
+text 670,1030,120,37 "OpenGL"
+text 791,1030,71,37 "and"
+a 861,1030,97,37 href=https://en.wikipedia.org/wiki/Vulkan id=mwGw
+text 861,1030,97,37 "Vulkan"
+text 528,1030,834,245 "were developed to standardize common procedures and oversee the graphics pipeline of a given hardware accelerator. These APIs provide an abstraction layer over the underlying hardware, relieving"
+a 656,1238,190,37 href=https://en.wikipedia.org/wiki/Programmer id=mwHA
+text 656,1238,190,37 "programmers"
+text 528,1238,845,89 "from the need to write code explicitly targeting various graphics hardware accelerators like"
+a 1285,1290,70,37 href=https://en.wikipedia.org/wiki/AMD id=mwHQ
+text 1285,1290,70,37 "AMD"
+text 1355,1290,9,37 ","
+a 528,1342,60,37 href=https://en.wikipedia.org/wiki/Intel id=mwHg
+text 528,1342,60,37 "Intel"
+text 588,1342,18,37 ","
+a 606,1342,89,37 href=https://en.wikipedia.org/wiki/Nvidia id=mwHw
+text 606,1342,89,37 "Nvidia"
+text 695,1342,178,37 ", and others."
+text 528,1426,815,141 "The model of the graphics pipeline is usually used in real-time rendering. Often, most of the pipeline steps are implemented in hardware, which allows for special"
+a 528,1582,187,37 href=https://en.wikipedia.org/wiki/Program_optimization id=mwIQ
+text 528,1582,187,37 "optimizations"
+text 715,1582,915,37 ". The term "pipeline" is used in a similar sense for the pipeline in"
+a 1630,1582,157,37 href=https://en.wikipedia.org/wiki/Central_processing_unit id=mwIg
+text 1630,1582,157,37 "processors"
+text 528,1582,1463,89 ": the individual steps of the pipeline often run in parallel when a given stage has enough data."
+text 528,1740,174,55 "Concept"
+text 742,1760,42,30 "edit"
+text 528,1834,1426,37 "The 3D pipeline usually refers to the most common form of computer 3-dimensional rendering called"
+a 528,1834,1467,89 href=https://en.wikipedia.org/wiki/Polygonal_modeling id=mwJg
+text 528,1834,1467,89 "3D polygon rendering"
+text 784,1880,7,30 "["
+a 791,1880,174,30 href=https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+text 791,1880,174,30 "citation needed"
+text 965,1880,7,30 "]"
+text 972,1886,199,37 ", distinct from"
+a 1171,1886,141,37 href=https://en.wikipedia.org/wiki/Ray_tracing_(graphics) id=mwKQ
+text 1171,1886,141,37 "raytracing"
+text 1312,1886,71,37 "and"
+a 1383,1886,146,37 href=https://en.wikipedia.org/wiki/Raycasting id=mwKg
+text 1383,1886,146,37 "raycasting"
+text 528,1886,1472,89 ". In raycasting, a ray originates at the point where the camera resides, and if that ray hits a surface, the color and"
+a 1650,1938,101,37 href=https://en.wikipedia.org/wiki/Computer_graphics_lighting id=mwKw
+text 1650,1938,101,37 "lighting"
+text 528,1938,1489,193 "of the point on the surface where the ray hit is calculated.  In 3D polygon rendering the reverse happens – the area that is given the camera is calculated and then rays are created from every part of every surface given the camera and traced back to the camera."
+a 1085,2088,29,30 href=#cite_note-prince12-3 id=mwLA
+text 1085,2088,7,30 "["
+text 1092,2088,14,30 "3"
+text 1106,2088,7,30 "]"
+text 528,2200,200,55 "Structure"
+text 767,2220,42,30 "edit"
+text 528,2294,1389,37 "A graphics pipeline can be divided into three main parts: Application, Geometry, and Rasterization."
+a 1917,2288,29,30 href=#cite_note-4 id=mwMg
+text 1917,2288,7,30 "["
+text 1924,2288,14,30 "4"
+text 1938,2288,7,30 "]"
+a 528,2445,1100,37 href=https://en.wikipedia.org/wiki/File:Graphics_pipeline_2_en.svg id=mwOA
+[pixels] img 528,2371,1100,192 src=//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Graphics_pipeline_2_en.svg/960px-Graphics_pipeline_2_en.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 528,2622,209,45 "Application"
+text 777,2634,42,30 "edit"
+text 528,2699,1224,37 "The application step is executed by the software or hardware on the main processors ("
+a 1752,2699,68,37 href=https://en.wikipedia.org/wiki/CPU id=mwPA
+text 1752,2699,68,37 "CPU"
+text 1819,2699,18,37 ","
+a 1837,2699,69,37 href=https://en.wikipedia.org/wiki/GPU id=mwPQ
+text 1837,2699,69,37 "GPU"
+text 528,2699,1501,89 "). During the application step, changes are made to the scene as required, for example, by user interaction using"
+a 528,2803,187,37 href=https://en.wikipedia.org/wiki/Input_device id=mwPg
+text 528,2803,187,37 "input devices"
+text 715,2803,819,37 "or during an animation. The new scene with the modified"
+a 1534,2803,135,37 href=https://en.wikipedia.org/wiki/Geometric_primitive id=mwPw
+text 1534,2803,135,37 "primitives"
+text 528,2803,1478,89 "(points, lines, triangles, etc.) is then passed on to the next step in the pipeline."
+text 528,2939,471,37 "Examples of application step are"
+a 999,2939,253,37 href=https://en.wikipedia.org/wiki/Collision_detection id=mwQQ
+text 999,2939,253,37 "collision detection"
+text 528,2939,1448,89 ", animation, morphing, and acceleration techniques using spatial subdivision schemes such as"
+a 1138,2991,142,37 href=https://en.wikipedia.org/wiki/Quadtree id=mwQg
+text 1138,2991,142,37 "quadtrees"
+text 1280,2991,46,37 "or"
+a 1327,2991,105,37 href=https://en.wikipedia.org/wiki/Octree id=mwQw
+text 1327,2991,105,37 "octrees"
+text 528,2991,1420,141 ". These are also used to reduce the amount of main memory required at a given time. The "world" of a modern computer game is usually larger than available onboard memory."
+text 528,3199,179,45 "Geometry"
+text 747,3211,42,30 "edit"
+text 528,3275,64,37 "The"
+a 592,3275,253,37 href=https://en.wikipedia.org/wiki/Geometry_pipeline id=mwRg
+text 592,3275,253,37 "geometry pipeline"
+text 845,3275,125,37 "and the"
+a 969,3275,206,37 href=https://en.wikipedia.org/wiki/Vertex_pipeline id=mwRw
+text 969,3275,206,37 "vertex pipeline"
+text 1176,3275,674,37 "are responsible for most of the operations with"
+a 1850,3275,128,37 href=https://en.wikipedia.org/wiki/Polygon id=mwSA
+text 1850,3275,128,37 "polygons"
+text 528,3275,1487,141 ". These can be further divided into the five tasks. How these tasks are organized as actual parallel pipeline steps is implementation specific."
+a 528,3525,1100,37 href=https://en.wikipedia.org/wiki/File:Geometry_pipeline_en.svg id=mwSw
+[pixels] img 528,3456,1100,180 src=//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Geometry_pipeline_en.svg/960px-Geometry_pipeline_en.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 579,3659,494,37 "Model and camera transformations"
+text 579,3715,112,37 "Lighting"
+text 579,3770,162,37 "Projection ("
+a 741,3770,154,37 href=https://en.wikipedia.org/wiki/Z-buffering id=mwUQ
+text 741,3770,154,37 "Z-buffering"
+text 895,3770,11,37 ")"
+text 579,3825,116,37 "Clipping"
+text 579,3880,124,37 "Viewport"
+text 528,3956,391,37 "World Coordinate System"
+text 958,3962,42,30 "edit"
+text 528,4023,149,37 "The world"
+a 677,4023,260,37 href=https://en.wikipedia.org/wiki/3d_world_coordinate_system id=mwVg
+text 677,4023,260,37 "coordinate system"
+text 528,4023,1498,297 "is the coordinate system in which the virtual world is created. The objects contained within the scene (houses, trees, cars) are often designed in their object coordinate system (also called model coordinate system or local coordinate system) for reasons of simpler modelling. To assign these objects to coordinates in the world coordinate system or global coordinate system of the entire scene, the object coordinates are transformed using translation, rotation, or scaling. This is done by multiplying the corresponding"
+a 953,4283,334,37 href=https://en.wikipedia.org/wiki/Transformation_matrix id=mwVw
+text 953,4283,334,37 "transformation matrices"
+text 528,4283,1474,89 ". In addition, several differently transformed copies can be formed from one object, for example, a forest from a tree. This is called"
+a 1646,4335,144,37 href=https://en.wikipedia.org/wiki/Geometry_instancing id=mwWA
+text 1646,4335,144,37 "instancing"
+text 1790,4335,9,37 "."
+text 528,4435,359,37 "Camera Transformation"
+text 927,4441,42,30 "edit"
+a 1254,4505,776,381 href=https://en.wikipedia.org/wiki/File:View_transform.svg id=mwWw
+[pixels] img 1260,4511,764,369 src=//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/View_transform.svg/500px-View_transform.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 1266,4889,743,152 "Left: Position and direction of the virtual viewer (camera), as defined by the user. Right: Positioning the objects after the camera transformation. The light gray area is the visible volume."
+text 528,4502,676,453 "In addition to the objects, the scene also defines a virtual camera or viewer that indicates the position and direction of view relative to which the scene is rendered. The scene is transformed so that the camera is at the origin looking along the Z-axis. The resulting coordinate system is called the camera coordinate system and the transformation is called"
+text 621,4918,320,37 "camera transformation"
+text 941,4918,46,37 "or"
+text 528,4918,528,89 "View Transformation"
+text 742,4970,9,37 "."
+text 528,5070,156,37 "Projection"
+text 724,5076,42,30 "edit"
+text 528,5138,64,37 "The"
+a 592,5138,189,37 href=https://en.wikipedia.org/wiki/3D_projection id=mwYw
+text 592,5138,189,37 "3D projection"
+text 528,5138,1476,89 "step transforms the view volume into a cube with the corner point coordinates (−1, −1, 0) and (1, 1, 1); Occasionally other target volumes are also used. This step is called"
+text 1719,5190,139,37 "projection"
+text 528,5190,1483,141 ", even though it transforms a volume into another volume, since the resulting Z coordinates are not stored in the image, but are only used in"
+a 921,5294,154,37 href=https://en.wikipedia.org/wiki/Z-buffering id=mwZQ
+text 921,5294,154,37 "Z-buffering"
+text 1075,5294,441,37 "in the later rastering step. In a"
+a 1516,5294,317,37 href=https://en.wikipedia.org/wiki/Perspective_(visual) id=mwZg
+text 1516,5294,317,37 "perspective illustration"
+text 1833,5294,44,37 ", a"
+a 528,5294,1446,89 href=https://en.wikipedia.org/wiki/Central_projection id=mwZw
+text 528,5294,1446,89 "central projection"
+text 667,5346,119,37 "is used."
+text 528,5430,1435,89 "To limit the number of displayed objects, two additional clipping planes are used; The visual volume is therefore a truncated pyramid ("
+a 967,5482,107,37 href=https://en.wikipedia.org/wiki/Frustum id=mwaQ
+text 967,5482,107,37 "frustum"
+text 1074,5482,241,37 "). The parallel or"
+a 1315,5482,299,37 href=https://en.wikipedia.org/wiki/Orthogonal_projection id=mwag
+text 1315,5482,299,37 "orthogonal projection"
+text 528,5482,1462,193 "is used, for example, for technical representations because it has the advantage that all parallels in the object space are also parallel in the image space, and the surfaces and volumes are the same size regardless of the distance from the viewer. Maps use, for example, an orthogonal projection (so-called"
+a 1604,5638,153,37 href=https://en.wikipedia.org/wiki/Orthophoto id=mwaw
+text 1604,5638,153,37 "orthophoto"
+text 528,5638,1500,141 "), but oblique images of a landscape cannot be used in this way – although they can technically be rendered, they seem so distorted that we cannot make any use of them.#"
+text 528,5826,1485,245 "For reasons of efficiency, the camera and projection matrix are usually combined into a transformation matrix so that the camera coordinate system is omitted. The resulting matrix is usually the same for a single image, while the world matrix looks different for each object. In practice, therefore, view and projection are pre-calculated so that only the world matrix has to be adapted during the display. However, more complex transformations such as vertex blending are possible. Freely programmable"
+a 528,6034,1421,89 href=https://en.wikipedia.org/wiki/Geometry_shader id=mwbQ
+text 528,6034,1421,89 "geometry shaders"
+text 642,6086,681,37 "that modify the geometry can also be executed."
+text 528,6170,1448,193 "In the actual rendering step, the world matrix * camera matrix * projection matrix is calculated and then finally applied to every single point. Thus, the points of all objects are transferred directly to the screen coordinate system (at least almost, the value range of the axes is still −1..1 for the visible range, see section "Window-Viewport-Transformation")."
+text 528,6426,126,37 "Lighting"
+text 694,6432,42,30 "edit"
+text 528,6493,1490,401 "Often a scene contains light sources placed at different positions to make the lighting of the objects appear more realistic. In this case, a gain factor for the texture is calculated for each vertex based on the light sources and the material properties associated with the corresponding triangle. In the later rasterization step, the vertex values of a triangle are interpolated over its surface. A general lighting (ambient light) is applied to all surfaces. It is the diffuse and thus direction-independent brightness of the scene. The sun is a directed light source, which can be assumed to be infinitely far away. The illumination effected by the sun on a surface is determined by forming the scalar product of the directional vector from the sun and the normal vector of the surface. If the value is negative, the surface is facing the sun."
+text 528,6957,128,37 "Clipping"
+text 696,6963,42,30 "edit"
+a 1514,7027,516,212 href=https://en.wikipedia.org/wiki/File:Cube_clipping.svg id=mwcw
+[pixels] img 1520,7033,504,200 src=//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cube_clipping.svg/250px-Cube_clipping.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 1526,7242,446,152 "Clipping of primitives against the cube. The blue triangle is discarded while the orange triangle is clipped, creating two new vertices."
+a 1514,7471,516,406 href=https://en.wikipedia.org/wiki/File:Frustum.png id=mwdw
+[pixels] img 1520,7477,504,394 src=//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Frustum.png/250px-Frustum.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 1526,7880,104,33 "Frustum"
+text 528,7024,888,37 "Only the primitives that are within the visual volume need to be"
+a 528,7076,117,37 href=https://en.wikipedia.org/wiki/Rasterization id=mwew
+text 528,7076,117,37 "rastered"
+text 645,7076,794,37 "(drawn). This visual volume is defined as the inside of a"
+a 528,7128,107,37 href=https://en.wikipedia.org/wiki/Frustum id=mwfA
+text 528,7128,107,37 "frustum"
+text 528,7128,841,141 ", a shape in the form of a pyramid with a cut-off top. Primitives that are completely outside the visual volume are discarded; This is called"
+a 878,7232,206,37 href=https://en.wikipedia.org/wiki/Frustum_culling id=mwfQ
+text 878,7232,206,37 "frustum culling"
+text 528,7232,930,245 ". Further culling methods such as back-face culling, which reduces the number of primitives to be considered, can theoretically be executed in any step of the graphics pipeline. Primitives that are only partially inside the cube must be"
+a 651,7440,101,37 href=https://en.wikipedia.org/wiki/Clipping_(computer_graphics) id=mwfg
+text 651,7440,101,37 "clipped"
+text 528,7440,917,193 "against the cube. The advantage of the previous projection step is that the clipping always takes place against the same cube. Only the – possibly clipped – primitives, which are within the visual volume, are forwarded to the final step."
+text 528,7696,502,37 "Window-Viewport transformation"
+text 1070,7702,42,30 "edit"
+a 1514,7990,516,220 href=https://en.wikipedia.org/wiki/File:Screen_Mapping.svg id=mwgQ
+[pixels] img 1520,7996,504,208 src=//upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Screen_Mapping.svg/250px-Screen_Mapping.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 1526,8213,418,33 "Window-Viewport-Transformation"
+text 528,7763,893,89 "To output the image to any target area (viewport) of the screen, another transformation, the"
+text 921,7815,462,37 "Window-Viewport transformation"
+text 528,7815,864,141 ", must be applied. The resulting coordinates are the device coordinates of the output device."
+text 528,8003,889,89 "On modern hardware, most of the geometry computation steps are performed in the"
+a 825,8055,193,37 href=https://en.wikipedia.org/wiki/Vertex_shader id=mwhw
+text 825,8055,193,37 "vertex shader"
+text 528,8055,921,297 ". This is, in principle, freely programmable, but generally performs at least the transformation of the points and the illumination calculation. For the DirectX programming interface, the use of a custom vertex shader is necessary from version 10, while older versions still have a standard shader."
+text 528,8419,241,45 "Rasterization"
+text 809,8431,42,30 "edit"
+text 579,8489,181,37 "Main article:"
+a 761,8489,187,37 href=https://en.wikipedia.org/wiki/Rasterisation
+text 761,8489,187,37 "Rasterisation"
+text 528,8557,1355,37 "The rasterization step is the final step before the fragment shader pipeline that all primitives are"
+a 1883,8557,141,37 href=https://en.wikipedia.org/wiki/Rasterization id=mwjA
+text 1883,8557,141,37 "rasterized"
+text 528,8609,1249,37 "with. In the rasterization step, discrete fragments are created from continuous primitives."
+text 528,8693,1463,245 "In this stage of the graphics pipeline, the grid points are also called fragments, for the sake of greater distinctiveness. Each fragment corresponds to one pixel in the frame buffer and this corresponds to one pixel of the screen. These can be colored (and possibly illuminated). Furthermore, it is necessary to determine the visible, closer to the observer fragment, in the case of overlapping polygons. A Z-buffer is usually used for this so-called"
+a 957,8901,413,37 href=https://en.wikipedia.org/wiki/Hidden_surface_determination id=mwjg
+text 957,8901,413,37 "hidden surface determination"
+text 528,8901,1453,141 ". The color of a fragment depends on the illumination, texture, and other material properties of the visible primitive and is often interpolated using the triangle vertex properties. Where available, a"
+a 1225,9005,233,37 href=https://en.wikipedia.org/wiki/Fragment_shader id=mwjw
+text 1225,9005,233,37 "fragment shader"
+text 1458,9005,180,37 "(also called"
+a 1638,9005,181,37 href=https://en.wikipedia.org/wiki/Pixel_Shader id=mwkA
+text 1638,9005,181,37 "Pixel Shader"
+text 528,9005,1476,193 ") is run in the rastering step for each fragment of the object. If a fragment is visible, it can now be mixed with already existing color values in the image if transparency or multi-sampling is used. In this step, one or more fragments become a pixel."
+text 528,9245,1501,141 "To prevent the user from seeing the gradual rasterization of the primitives, double buffering takes place. The rasterization is carried out in a special memory area. Once the image has been completely rasterized, it is copied to the visible area of the image memory."
+text 528,9454,135,45 "Inverse"
+text 702,9466,42,30 "edit"
+text 528,9530,308,37 "All matrices used are"
+a 836,9530,165,37 href=https://en.wikipedia.org/wiki/Invertible_matrix id=mwlA
+text 836,9530,165,37 "nonsingular"
+text 528,9530,1485,297 "and thus invertible. Since the multiplication of two nonsingular matrices creates another nonsingular matrix, the entire transformation matrix is also invertible. The inverse is required to recalculate world coordinates from screen coordinates – for example, to determine from the mouse pointer position the clicked object. However, since the screen and the mouse have only two dimensions, the third is unknown. Therefore, a ray is projected at the cursor position into the world and then the intersection of this ray with the polygons in the world is determined."
+text 528,9896,169,55 "See also"
+text 737,9916,42,30 "edit"
+a 579,9986,292,37 href=https://en.wikipedia.org/wiki/Pipeline_(computing) id=mwmA
+text 579,9986,292,37 "Pipeline (computing)"
+a 630,10048,292,37 href=https://en.wikipedia.org/wiki/Instruction_pipelining id=mwmw
+text 630,10048,292,37 "Instruction pipelining"
+a 579,10103,320,37 href=https://en.wikipedia.org/wiki/Hardware_acceleration id=mwnQ
+text 579,10103,320,37 "Hardware acceleration"
+a 579,10158,103,37 href=https://en.wikipedia.org/wiki/Shader id=mwnw
+text 579,10158,103,37 "Shader"
+text 528,10244,166,55 "Sources"
+text 734,10264,42,30 "edit"
+text 579,10334,952,37 "Akenine-Möller, Tomas; Haines, Eric; Hoffman, Naty (2019) [2008]."
+text 1531,10334,303,37 "Real-Time Rendering"
+text 1834,10334,187,37 ". CRC Press."
+a 579,10386,75,37 href=https://en.wikipedia.org/wiki/ISBN_(identifier)
+text 579,10386,75,37 "ISBN"
+a 663,10386,231,37 href=https://en.wikipedia.org/wiki/Special:BookSources/9781315362007
+text 663,10386,231,37 "9781315362007"
+text 894,10386,9,37 "."
+text 579,10442,555,37 "Bender, Michael; Brill, Manfred (2006)."
+text 1134,10442,770,37 "Computergrafik: ein anwendungsorientiertes Lehrbuch"
+text 579,10442,1334,89 ". München: Hanser."
+a 848,10494,75,37 href=https://en.wikipedia.org/wiki/ISBN_(identifier)
+text 848,10494,75,37 "ISBN"
+a 931,10494,210,37 href=https://en.wikipedia.org/wiki/Special:BookSources/3-446-40434-1
+text 931,10494,210,37 "3-446-40434-1"
+text 1141,10494,9,37 "."
+text 579,10549,419,37 "Fischer, Martin (2011-07-04)."
+text 998,10549,950,37 "Pixel-Fabrik. Wie Grafikchips Spielewelten auf den Schirm zaubern"
+text 579,10549,1418,89 ". c't Magazin für Computer Technik. Heise Zeitschriften Verlag. p."
+text 1448,10601,71,37 "180."
+a 1520,10601,75,37 href=https://en.wikipedia.org/wiki/ISSN_(identifier)
+text 1520,10601,75,37 "ISSN"
+a 1603,10601,185,37 href=https://search.worldcat.org/issn/0724-8679
+text 1603,10601,153,37 "0724-8679"
+text 1788,10601,9,37 "."
+text 528,10687,233,55 "References"
+text 800,10707,42,30 "edit"
+a 620,10776,17,33 href=#cite_ref-1 id=mwrw aria-label=Jump up
+a 645,10776,275,33 href=https://msdn.microsoft.com/en-us/library/windows/desktop/ff476882%28v=vs.85%29.aspx id=mwsw
+text 645,10776,246,33 ""Graphics Pipeline""
+text 920,10776,16,33 "."
+a 936,10776,117,33 href=https://en.wikipedia.org/wiki/Microsoft id=mwtA
+text 936,10776,117,33 "Microsoft"
+text 1053,10776,191,33 ". May 30, 2018"
+text 1243,10776,147,33 ". Retrieved"
+text 1391,10776,103,33 "15 June"
+text 1493,10776,72,33 "2015"
+text 1565,10776,8,33 "."
+a 620,10826,17,33 href=#cite_ref-2 id=mwuQ aria-label=Jump up
+a 645,10826,573,33 href=https://web.archive.org/web/20171207095603/http://goanna.cs.rmit.edu.au/~gl/teaching/rtr%263dgp/notes/pipeline.html id=mwvQ
+text 645,10826,544,33 ""Lecture: Graphics pipeline and animation""
+text 1218,10826,200,33 ". Archived from"
+a 1418,10826,170,33 href=http://goanna.cs.rmit.edu.au/~gl/teaching/rtr&3dgp/notes/pipeline.html id=mwvg
+text 1418,10826,141,33 "the original"
+text 1588,10826,277,33 "on 7 December 2017"
+text 1865,10826,139,33 ". Retrieved"
+text 620,10872,103,33 "15 June"
+text 723,10872,72,33 "2015"
+text 795,10872,8,33 "."
+a 620,10922,17,33 href=#cite_ref-prince12_3-0 id=mwww aria-label=Jump up
+text 645,10922,483,33 "Lawrence, Jason (October 22, 2012)."
+a 1128,10906,457,65 href=http://www.connellybarnes.com/work/class/2016/intro_gfx/lectures/13-Pipeline.pdf id=mwxg
+text 1128,10922,421,33 ""3D Polygon Rendering Pipeline""
+text 1593,10923,73,31 "(PDF)"
+text 1666,10922,15,33 "."
+a 1681,10906,147,65 href=https://web.archive.org/web/20161229102150/http://www.cs.virginia.edu/~gfx/Courses/2012/IntroGraphics/lectures/13-Pipeline.pdf id=mwyA
+text 1681,10922,111,33 "Archived"
+text 1837,10923,73,31 "(PDF)"
+text 620,10922,1403,80 "from the original on December 29, 2016"
+text 1014,10969,147,33 ". Retrieved"
+text 1161,10969,147,33 "2019-09-19"
+text 1309,10969,8,33 "."
+a 620,11018,17,33 href=#cite_ref-4 id=mwzg aria-label=Jump up
+a 644,11018,511,33 href=#CITEREFAkenine-MöllerHainesHoffman2019 id=mw0A
+text 644,11018,303,33 "Akenine-Möller, Haines"
+text 948,11018,19,33 "&"
+text 967,11018,188,33 "Hoffman 2019"
+text 1155,11018,40,33 ", p."
+text 1203,11018,40,33 "13"
+a 1243,11018,367,33 href=https://books.google.com/books?id=Y-KEDwAAQBAJ&pg=PA13 id=mw1Q
+text 1243,11018,338,33 "2.1 Architecture Figure 2.2"
+text 528,11103,296,55 "External links"
+text 863,11123,42,30 "edit"
+a 1583,11237,60,32 href=https://en.wikipedia.org/wiki/File:Commons-logo.svg
+[pixels] img 1583,11216,60,80 alt=Wikimedia Commons logo src=//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail
+text 1669,11204,319,67 "Wikimedia Commons has media related to"
+a 1669,11239,332,67 href=https://commons.wikimedia.org/wiki/Category:Graphics%20pipeline
+text 1669,11239,332,67 "Graphics pipeline"
+text 1775,11274,8,32 "."
+text 579,11187,7,30 "["
+a 586,11187,102,30 href=https://en.wikipedia.org/wiki/Wikipedia:Link_rot
+text 586,11187,102,30 "dead link"
+text 689,11187,7,30 "]"
+button 1916,11340,80,42 type=button
+text 1929,11345,53,32 "hide"
+a 564,11345,13,32 href=https://en.wikipedia.org/wiki/Template:Graphics_Processing_Unit
+text 564,11345,13,32 "v"
+a 594,11345,12,32 href=https://en.wikipedia.org/wiki/Template_talk:Graphics_Processing_Unit
+text 594,11345,12,32 "t"
+a 623,11345,13,32 href=https://en.wikipedia.org/wiki/Special:EditPage/Template:Graphics_Processing_Unit
+text 623,11345,13,32 "e"
+a 1086,11342,387,37 href=https://en.wikipedia.org/wiki/Graphics_processing_unit
+text 1086,11342,387,37 "Graphics processing unit"
+text 675,11475,61,32 "GPU"
+text 797,11444,111,32 "Desktop"
+a 947,11402,53,32 href=https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units
+text 947,11402,53,32 "Intel"
+a 1017,11402,39,32 href=https://en.wikipedia.org/wiki/Intel_Graphics_Technology
+text 1017,11402,39,32 "GT"
+a 1080,11402,34,32 href=https://en.wikipedia.org/wiki/Intel_Xe
+text 1080,11402,34,32 "Xe"
+a 1138,11402,42,32 href=https://en.wikipedia.org/wiki/Intel_Arc
+text 1138,11402,42,32 "Arc"
+a 1213,11402,78,32 href=https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units
+text 1213,11402,78,32 "Nvidia"
+a 1309,11402,110,32 href=https://en.wikipedia.org/wiki/GeForce
+text 1309,11402,110,32 "GeForce"
+a 1442,11402,94,32 href=https://en.wikipedia.org/wiki/Quadro
+text 1442,11402,94,32 "Quadro"
+a 1559,11402,66,32 href=https://en.wikipedia.org/wiki/Nvidia_Tesla
+text 1559,11402,66,32 "Tesla"
+a 1648,11402,70,32 href=https://en.wikipedia.org/wiki/Nvidia_Tegra
+text 1648,11402,70,32 "Tegra"
+a 1752,11402,63,32 href=https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units
+text 1752,11402,63,32 "AMD"
+a 1831,11402,99,32 href=https://en.wikipedia.org/wiki/Radeon
+text 1831,11402,99,32 "Radeon"
+a 947,11444,150,32 href=https://en.wikipedia.org/wiki/Radeon_Pro
+text 947,11444,150,32 "Radeon Pro"
+a 1121,11444,89,32 href=https://en.wikipedia.org/wiki/AMD_Instinct
+text 1121,11444,89,32 "Instinct"
+a 1243,11444,86,32 href=https://en.wikipedia.org/wiki/Matrox
+text 1243,11444,86,32 "Matrox"
+a 1352,11444,169,32 href=https://en.wikipedia.org/wiki/InfiniteReality
+text 1352,11444,169,32 "InfiniteReality"
+a 1545,11444,185,32 href=https://en.wikipedia.org/wiki/NEC_µPD7220
+text 1545,11444,185,32 "NEC µPD7220"
+a 1754,11444,157,32 href=https://en.wikipedia.org/wiki/Comparison_of_3dfx_graphics_processing_units
+text 1754,11444,157,32 "3dfx Voodoo"
+a 1934,11444,34,32 href=https://en.wikipedia.org/wiki/S3_Graphics
+text 1934,11444,34,32 "S3"
+a 947,11487,110,32 href=https://en.wikipedia.org/wiki/Glaze3D
+text 947,11487,110,32 "Glaze3D"
+a 1080,11487,158,32 href=https://en.wikipedia.org/wiki/Apple_silicon
+text 1080,11487,158,32 "Apple silicon"
+a 1262,11487,157,32 href=https://en.wikipedia.org/wiki/Jingjia_Micro
+text 1262,11487,157,32 "Jingjia Micro"
+a 1442,11487,144,32 href=https://en.wikipedia.org/wiki/Tseng_Labs
+text 1442,11487,144,32 "Tseng Labs"
+a 1609,11487,44,32 href=https://en.wikipedia.org/wiki/Silicon_Integrated_Systems#Graphics_chipsets
+text 1609,11487,44,32 "SiS"
+text 819,11543,89,32 "Mobile"
+a 947,11543,91,32 href=https://en.wikipedia.org/wiki/Adreno
+text 947,11543,91,32 "Adreno"
+a 1061,11543,158,32 href=https://en.wikipedia.org/wiki/Apple_silicon
+text 1061,11543,158,32 "Apple silicon"
+a 1243,11543,52,32 href=https://en.wikipedia.org/wiki/Mali_(GPU)
+text 1243,11543,52,32 "Mali"
+a 1318,11543,119,32 href=https://en.wikipedia.org/wiki/PowerVR
+text 1318,11543,119,32 "PowerVR"
+a 1460,11543,133,32 href=https://en.wikipedia.org/wiki/VideoCore
+text 1460,11543,133,32 "VideoCore"
+a 1616,11543,93,32 href=https://en.wikipedia.org/wiki/Vivante_Corporation
+text 1616,11543,93,32 "Vivante"
+a 1733,11543,110,32 href=https://en.wikipedia.org/wiki/Imageon
+text 1733,11543,110,32 "Imageon"
+a 1866,11543,146,32 href=https://en.wikipedia.org/wiki/Intel_2700G
+text 1866,11543,146,32 "Intel 2700G"
+text 570,11642,166,32 "Architecture"
+a 776,11600,199,32 href=https://en.wikipedia.org/wiki/Compute_kernel
+text 776,11600,199,32 "Compute kernel"
+a 998,11600,139,32 href=https://en.wikipedia.org/wiki/Semiconductor_device_fabrication
+text 998,11600,139,32 "Fabrication"
+a 1154,11600,84,32 href=https://en.wikipedia.org/wiki/CMOS
+text 1154,11600,84,32 "CMOS"
+a 1262,11600,92,32 href=https://en.wikipedia.org/wiki/FinFET
+text 1262,11600,92,32 "FinFET"
+a 1378,11600,117,32 href=https://en.wikipedia.org/wiki/MOSFET
+text 1378,11600,117,32 "MOSFET"
+a 1528,11600,236,32 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+text 1528,11600,236,32 "Graphics pipeline"
+a 1782,11600,124,32 href=https://en.wikipedia.org/wiki/Geometry_pipelines
+text 1782,11600,124,32 "Geometry"
+a 776,11642,80,32 href=https://en.wikipedia.org/wiki/Vertex_pipeline
+text 776,11642,80,32 "Vertex"
+a 888,11642,188,32 href=https://en.wikipedia.org/wiki/High-dynamic-range_rendering
+text 888,11642,188,32 "HDR rendering"
+a 1100,11642,63,32 href=https://en.wikipedia.org/wiki/Multiply–accumulate_operation
+text 1100,11642,63,32 "MAC"
+a 1186,11642,164,32 href=https://en.wikipedia.org/wiki/Rasterisation
+text 1186,11642,164,32 "Rasterisation"
+a 1367,11642,103,32 href=https://en.wikipedia.org/wiki/Shading
+text 1367,11642,103,32 "Shading"
+a 1503,11642,144,32 href=https://en.wikipedia.org/wiki/Ray-tracing_hardware
+text 1503,11642,144,32 "Ray-tracing"
+a 1671,11642,70,32 href=https://en.wikipedia.org/wiki/Single_instruction,_multiple_data
+text 1671,11642,70,32 "SIMD"
+a 1759,11642,67,32 href=https://en.wikipedia.org/wiki/Single_instruction,_multiple_threads
+text 1759,11642,67,32 "SIMT"
+a 776,11685,147,32 href=https://en.wikipedia.org/wiki/Tessellation_(computer_graphics)
+text 776,11685,147,32 "Tessellation"
+a 946,11685,52,32 href=https://en.wikipedia.org/wiki/Transform,_clipping,_and_lighting
+text 946,11685,52,32 "T&L"
+a 1021,11685,187,32 href=https://en.wikipedia.org/wiki/Tiled_rendering
+text 1021,11685,187,32 "Tiled rendering"
+a 1232,11685,266,32 href=https://en.wikipedia.org/wiki/Unified_shader_model
+text 1232,11685,266,32 "Unified shader model"
+text 564,11780,172,32 "Components"
+a 776,11738,72,32 href=https://en.wikipedia.org/wiki/Blitter
+text 776,11738,72,32 "Blitter"
+a 871,11738,255,32 href=https://en.wikipedia.org/wiki/Geometry_processing
+text 871,11738,255,32 "Geometry processor"
+a 1150,11738,492,32 href=https://en.wikipedia.org/wiki/Input–output_memory_management_unit
+text 1150,11738,492,32 "Input–output memory management unit"
+a 1665,11738,232,32 href=https://en.wikipedia.org/wiki/Render_output_unit
+text 1665,11738,232,32 "Render output unit"
+a 776,11780,144,32 href=https://en.wikipedia.org/wiki/Shader
+text 776,11780,144,32 "Shader unit"
+a 943,11780,222,32 href=https://en.wikipedia.org/wiki/Stream_processing
+text 943,11780,222,32 "Stream processor"
+a 1189,11780,138,32 href=https://en.wikipedia.org/wiki/Tensor
+text 1189,11780,138,32 "Tensor unit"
+a 1350,11780,261,32 href=https://en.wikipedia.org/wiki/Texture_mapping_unit
+text 1350,11780,261,32 "Texture mapping unit"
+a 1635,11780,291,32 href=https://en.wikipedia.org/wiki/Video_display_controller
+text 1635,11780,291,32 "Video display controller"
+a 776,11822,269,32 href=https://en.wikipedia.org/wiki/Video_processing_unit
+text 776,11822,269,32 "Video processing unit"
+text 628,11918,108,32 "Memory"
+a 776,11876,63,32 href=https://en.wikipedia.org/wiki/Direct_memory_access
+text 776,11876,63,32 "DMA"
+a 862,11876,153,32 href=https://en.wikipedia.org/wiki/Framebuffer
+text 862,11876,153,32 "Framebuffer"
+a 1038,11876,103,32 href=https://en.wikipedia.org/wiki/SGRAM
+text 1038,11876,103,32 "SGRAM"
+a 1158,11876,83,32 href=https://en.wikipedia.org/wiki/GDDR_SDRAM
+text 1158,11876,83,32 "GDDR"
+a 1265,11876,99,32 href=https://en.wikipedia.org/wiki/GDDR2
+text 1265,11876,99,32 "GDDR2"
+a 1387,11876,99,32 href=https://en.wikipedia.org/wiki/GDDR3
+text 1387,11876,99,32 "GDDR3"
+a 1509,11876,99,32 href=https://en.wikipedia.org/wiki/GDDR4
+text 1509,11876,99,32 "GDDR4"
+a 1631,11876,99,32 href=https://en.wikipedia.org/wiki/GDDR5
+text 1631,11876,99,32 "GDDR5"
+a 1753,11876,99,32 href=https://en.wikipedia.org/wiki/GDDR6
+text 1753,11876,99,32 "GDDR6"
+a 1875,11876,99,32 href=https://en.wikipedia.org/wiki/GDDR7
+text 1875,11876,99,32 "GDDR7"
+a 776,11918,63,32 href=https://en.wikipedia.org/wiki/High_Bandwidth_Memory
+text 776,11918,63,32 "HBM"
+a 855,11918,78,32 href=https://en.wikipedia.org/wiki/HBM2
+text 855,11918,78,32 "HBM2"
+a 957,11918,97,32 href=https://en.wikipedia.org/wiki/HBM2E
+text 957,11918,97,32 "HBM2E"
+a 1078,11918,78,32 href=https://en.wikipedia.org/wiki/HBM3
+text 1078,11918,78,32 "HBM3"
+a 1179,11918,122,32 href=https://en.wikipedia.org/wiki/HBM-PIM
+text 1179,11918,122,32 "HBM-PIM"
+a 1325,11918,97,32 href=https://en.wikipedia.org/wiki/HBM3E
+text 1325,11918,97,32 "HBM3E"
+a 1455,11918,238,32 href=https://en.wikipedia.org/wiki/Memory_bandwidth
+text 1455,11918,238,32 "Memory bandwidth"
+a 1716,11918,225,32 href=https://en.wikipedia.org/wiki/Memory_controller
+text 1716,11918,225,32 "Memory controller"
+a 776,11960,315,32 href=https://en.wikipedia.org/wiki/Shared_graphics_memory
+text 776,11960,315,32 "Shared graphics memory"
+a 1114,11960,202,32 href=https://en.wikipedia.org/wiki/Texture_memory
+text 1114,11960,202,32 "Texture memory"
+a 1339,11960,81,32 href=https://en.wikipedia.org/wiki/Video_RAM_(dual-ported_DRAM)
+text 1339,11960,81,32 "VRAM"
+text 580,12035,156,32 "Form factor"
+a 776,12013,89,32 href=https://en.wikipedia.org/wiki/Semiconductor_intellectual_property_core
+text 776,12013,89,32 "IP core"
+a 888,12013,218,32 href=https://en.wikipedia.org/wiki/Video_card
+text 888,12013,218,32 "Discrete graphics"
+a 1122,12013,127,32 href=https://en.wikipedia.org/wiki/GPU_cluster
+text 1122,12013,127,32 "Clustering"
+a 1273,12013,121,32 href=https://en.wikipedia.org/wiki/GPU_switching
+text 1273,12013,121,32 "Switching"
+a 1426,12013,218,32 href=https://en.wikipedia.org/wiki/External_GPU
+text 1426,12013,218,32 "External graphics"
+a 1667,12013,241,32 href=https://en.wikipedia.org/wiki/Integrated_graphics
+text 1667,12013,241,32 "Integrated graphics"
+a 776,12056,216,32 href=https://en.wikipedia.org/wiki/System_on_a_chip
+text 776,12056,216,32 "System on a chip"
+text 564,12130,172,32 "Performance"
+a 776,12109,127,32 href=https://en.wikipedia.org/wiki/Clock_rate
+text 776,12109,127,32 "Clock rate"
+a 926,12109,222,32 href=https://en.wikipedia.org/wiki/Computer_display_standard
+text 926,12109,222,32 "Display resolution"
+a 1172,12109,85,32 href=https://en.wikipedia.org/wiki/Fillrate
+text 1172,12109,85,32 "Fillrate"
+a 1273,12109,83,32 href=https://en.wikipedia.org/wiki/Gigapixel_image
+text 1273,12109,83,32 "Pixel/s"
+a 1380,12109,88,32 href=https://en.wikipedia.org/wiki/Texel_(graphics)
+text 1380,12109,88,32 "Texel/s"
+a 1500,12109,95,32 href=https://en.wikipedia.org/wiki/FLOPS
+text 1500,12109,95,32 "FLOP/s"
+a 1619,12109,138,32 href=https://en.wikipedia.org/wiki/Frame_rate
+text 1619,12109,138,32 "Frame rate"
+a 776,12151,269,32 href=https://en.wikipedia.org/wiki/Performance_per_watt
+text 776,12151,269,32 "Performance per watt"
+a 1068,12151,201,32 href=https://en.wikipedia.org/wiki/Transistor_count
+text 1068,12151,201,32 "Transistor count"
+text 674,12247,63,32 "Misc"
+a 776,12204,36,32 href=https://en.wikipedia.org/wiki/2D_computer_graphics
+text 776,12204,36,32 "2D"
+a 829,12204,108,32 href=https://en.wikipedia.org/wiki/Scrolling
+text 829,12204,108,32 "Scrolling"
+a 960,12204,74,32 href=https://en.wikipedia.org/wiki/Sprite_(computer_graphics)
+text 960,12204,74,32 "Sprite"
+a 1057,12204,44,32 href=https://en.wikipedia.org/wiki/Tile-based_video_game
+text 1057,12204,44,32 "Tile"
+a 1134,12204,36,32 href=https://en.wikipedia.org/wiki/3D_computer_graphics
+text 1134,12204,36,32 "3D"
+a 1188,12204,30,32 href=https://en.wikipedia.org/wiki/Global_illumination
+text 1188,12204,30,32 "GI"
+a 1241,12204,92,32 href=https://en.wikipedia.org/wiki/Texture_mapping
+text 1241,12204,92,32 "Texture"
+a 1357,12204,136,32 href=https://en.wikipedia.org/wiki/Z-buffering
+text 1357,12204,136,32 "Z-buffering"
+a 1525,12204,66,32 href=https://en.wikipedia.org/wiki/Application-specific_integrated_circuit
+text 1525,12204,66,32 "ASIC"
+a 1615,12204,102,32 href=https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units
+text 1615,12204,102,32 "GPGPU"
+a 1740,12204,197,32 href=https://en.wikipedia.org/wiki/Graphics_library
+text 1740,12204,197,32 "Graphics library"
+a 776,12247,282,32 href=https://en.wikipedia.org/wiki/Hardware_acceleration
+text 776,12247,282,32 "Hardware acceleration"
+a 1081,12247,222,32 href=https://en.wikipedia.org/wiki/Digital_image_processing
+text 1081,12247,222,32 "Image processing"
+a 1320,12247,166,32 href=https://en.wikipedia.org/wiki/Image_compression
+text 1320,12247,166,32 "Compression"
+a 1519,12247,232,32 href=https://en.wikipedia.org/wiki/Parallel_computing
+text 1519,12247,232,32 "Parallel computing"
+a 1774,12247,67,32 href=https://en.wikipedia.org/wiki/Single_instruction,_multiple_threads
+text 1774,12247,67,32 "SIMT"
+a 776,12289,211,32 href=https://en.wikipedia.org/wiki/Vector_processor
+text 776,12289,211,32 "Vector processor"
+a 1010,12289,162,32 href=https://en.wikipedia.org/wiki/Video_coding_format
+text 1010,12289,162,32 "Video coding"
+a 1190,12289,81,32 href=https://en.wikipedia.org/wiki/Video_codec
+text 1190,12289,81,32 "Codec"
+a 1304,12289,69,32 href=https://en.wikipedia.org/wiki/Very_long_instruction_word
+text 1304,12289,69,32 "VLIW"
+a 540,12389,155,37 href=/wiki/Help:Category
+text 540,12389,155,37 "Categories"
+text 695,12389,18,37 ":"
+a 721,12389,185,37 href=/wiki/Category:3D_rendering
+text 721,12389,185,37 "3D rendering"
+a 940,12389,270,37 href=/wiki/Category:Graphics_hardware
+text 940,12389,270,37 "Graphics hardware"
+text 88,12586,536,28 "This page was last edited on 9 May 2026, at 07:01"
+text 624,12586,72,28 "(UTC)"
+text 696,12586,7,28 "."
+text 712,12586,264,28 "Page was rendered with"
+a 976,12586,81,28 href=https://www.mediawiki.org/wiki/Special:MyLanguage/Parsoid
+text 976,12586,81,28 "Parsoid"
+text 1057,12586,7,28 "."
+text 88,12643,284,28 "Text is available under the"
+a 372,12643,572,28 href=/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License
+text 372,12643,572,28 "Creative Commons Attribution-ShareAlike 4.0 License"
+text 944,12643,684,28 ";
+additional terms may apply. By using this site, you agree to the"
+a 1628,12643,141,28 href=https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+text 1628,12643,141,28 "Terms of Use"
+text 1769,12643,53,28 "and"
+a 1823,12643,148,28 href=https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+text 1823,12643,148,28 "Privacy Policy"
+text 1971,12643,473,28 ". Wikipedia® is a registered trademark of the"
+a 88,12677,289,28 href=https://wikimediafoundation.org/
+text 88,12677,289,28 "Wikimedia Foundation, Inc."
+text 377,12677,279,28 ", a non-profit organization."
+a 88,12742,147,28 href=https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+text 88,12742,147,28 "Privacy policy"
+a 259,12742,173,28 href=/wiki/Wikipedia:About
+text 259,12742,173,28 "About Wikipedia"
+a 456,12742,124,28 href=/wiki/Wikipedia:General_disclaimer
+text 456,12742,124,28 "Disclaimers"
+a 604,12742,193,28 href=//en.wikipedia.org/wiki/Wikipedia:Contact_us
+text 604,12742,193,28 "Contact Wikipedia"
+a 822,12742,248,28 href=https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information
+text 822,12742,248,28 "Legal & safety contacts"
+a 1094,12742,180,28 href=https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+text 1094,12742,180,28 "Code of Conduct"
+a 1298,12742,121,28 href=https://developer.wikimedia.org
+text 1298,12742,121,28 "Developers"
+a 1443,12742,96,28 href=https://stats.wikimedia.org/#/en.wikipedia.org
+text 1443,12742,96,28 "Statistics"
+a 1563,12742,187,28 href=https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+text 1563,12742,187,28 "Cookie statement"
+a 1774,12742,125,28 href=//en.wikipedia.org/w/index.php?title=Graphics_pipeline&mobileaction=toggle_view_mobile
+text 1774,12742,125,28 "Mobile view"
+a 2044,12732,204,88 href=https://www.wikimedia.org/
+[pixels] picture 2062,12744,168,64
+[pixels] img 2062,12750,168,58 src=/static/images/footer/wikimedia.svg alt=Wikimedia Foundation
+a 2260,12732,212,88 href=https://www.mediawiki.org/
+[pixels] picture 2278,12744,176,66
+[pixels] img 2278,12747,176,62 src=/w/resources/assets/mediawiki_compact.svg alt=Powered by MediaWiki

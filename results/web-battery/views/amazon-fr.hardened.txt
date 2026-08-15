@@ -1,0 +1,250 @@
+text 65,511,254,21 "Cookies et choix publicitaires"
+text 65,547,570,16 "Si vous y consentez, nous pourrons utiliser vos informations personnelles provenant de ces"
+a 635,547,112,16
+text 635,547,112,16 "Services Amazon"
+text 65,547,1126,56 "pour personnaliser les publicités que nous vous proposons sur d''autres services et sur les sites tiers. Par exemple, nous pourrons utiliser votre historique des vidéos regardées sur Prime Video pour personnaliser les publicités que nous affichons sur nos Boutiques ou sur Fire TV. Nous pouvons également utiliser les informations personnelles que nous recevons de tiers."
+text 65,617,1037,16 "De plus, si vous y consentez, nous utiliserons également des cookies pour compléter votre expérience d''achat dans les boutiques Amazon, comme indiqué dans notre"
+a 65,617,1140,36 [occluded]
+text 65,617,1140,36 "Politique relative aux cookies"
+text 65,637,1132,36 ". Votre choix s''applique à l''utilisation des cookies publicitaires internes et tiers sur ce service. Les cookies stockent des informations standard relatives à un appareil, telles qu''un identifiant unique, ou y accèdent. Les"
+a 340,657,54,16
+text 340,657,54,16 "129 tiers"
+text 65,657,1127,36 "qui utilisent des cookies sur ce service le font dans le but d''afficher et de mesurer des publicités personnalisées, de générer des informations sur l''audience, et de développer et d''améliorer des produits."
+text 65,707,1146,36 "Dans tous les cas, nous utilisons des cookies et des outils similaires, qui sont nécessaires pour vous permettre d''effectuer des achats, d''améliorer votre expérience d''achat et de fournir nos services, comme indiqué dans notre"
+a 319,727,181,16 [occluded]
+text 319,727,181,16 "Politique relative aux cookies" [occluded]
+text 65,727,1136,56 ". Nous utilisons également ces cookies pour comprendre comment les clients utilisent nos services (par exemple, en mesurant les visites de sites) afin de pouvoir apporter des améliorations. Cliquez sur « Refuser » pour refuser, ou sur « Personnaliser » pour effectuer des choix publicitaires plus détaillés ou pour en savoir plus. Vous pouvez modifier vos choix à tout moment en accédant à la section" [occluded]
+a 714,767,274,16 [occluded]
+text 714,767,274,16 "Choix en matière de cookies et de publicités"
+text 65,767,1143,56 ". Pour en savoir plus sur la manière dont Amazon utilise les cookies, les publicités personnalisées et les informations personnelles, telles que l''historique des commandes sur la boutique ou l''historique des vidéos regardées sur Prime Video, et à quelles fins, consultez notre"
+input 66,738,77,30 id=sp-cc-accept value="Accepter "
+text 77,745,55,16 "Accepter" [occluded]
+input 151,738,71,30 id=sp-cc-rejectall-link value="Refuser"
+text 162,745,49,16 "Refuser" [occluded]
+a 228,746,86,16 id=sp-cc-customize
+text 228,746,86,16 "Personnaliser"
+a 12,5,127,50 id=nav-logo-sprites
+text 117,22,12,15 ".fr"
+a 140,5,221,50 id=nav-global-location-popover-link
+text 167,15,119,14 "Livraison à 59000 Lille"
+text 167,29,185,16 "Mettre à jour l’emplacement"
+text 383,24,117,14 "Toutes nos catégories" [occluded]
+input 522,11,257,38 id=twotabsearchtextbox value="clavier mecanique"
+input 779,10,45,40 id=nav-search-submit-button value="Go"
+a 843,6,46,50
+text 870,28,19,16 "FR"
+button 890,36,8,4
+a 908,5,138,50
+text 917,16,125,14 "Bonjour, Identifiez-vous"
+text 917,30,108,16 "Compte et listes"
+button 1047,37,8,4
+a 1066,5,102,50 id=nav-orders
+text 1075,29,84,16 "Commandes"
+a 1170,5,99,50 id=nav-cart
+text 1197,12,9,18 "0"
+text 1217,29,43,16 "Panier"
+a 11,60,85,39 id=nav-hamburger-menu
+text 42,72,45,16 "Toutes"
+a 101,65,94,28
+text 106,71,84,16 "Amazon Haul"
+a 205,65,142,28
+text 210,71,132,16 "Courses alimentaires"
+button 346,78,8,4
+a 364,65,119,28
+text 369,71,109,16 "Meilleures ventes"
+a 493,65,91,28
+text 498,71,81,16 "Ventes Flash"
+a 594,65,149,28
+text 599,71,139,16 "Dernières Nouveautés"
+a 101,104,132,28 [occluded]
+text 106,110,122,16 "Vendre
+sur Amazon" [occluded]
+a 243,104,47,28 [occluded]
+text 248,110,37,16 "Prime" [occluded]
+button 290,117,8,4 [occluded]
+a 308,104,131,28 [occluded]
+text 313,110,121,16 "Guide de l’acheteur" [occluded]
+a 449,104,108,28 [occluded]
+text 454,110,98,16 "Cartes cadeaux" [occluded]
+button 557,117,8,4 [occluded]
+a 575,104,121,28 [occluded]
+text 580,110,111,16 "Cuisine et maison" [occluded]
+a 706,104,73,28 [occluded]
+text 711,110,63,16 "High-Tech" [occluded]
+a 101,143,100,28 [occluded]
+text 106,149,90,16 "Jeux et Jouets" [occluded]
+a 211,143,77,28 [occluded]
+text 216,149,67,16 "Jeux vidéo" [occluded]
+a 298,143,43,28 [occluded]
+text 303,149,33,16 "Bébé" [occluded]
+a 351,143,180,28 [occluded]
+text 356,149,170,16 "Santé et produits d’hygiène" [occluded]
+a 540,143,88,28 [occluded]
+text 545,149,78,16 "Informatique" [occluded]
+a 638,143,192,28 [occluded]
+text 643,149,182,16 "Sports & Activités en plein-air" [occluded]
+a 101,182,54,28 [occluded]
+text 106,188,44,16 "Beauté" [occluded]
+a 165,182,89,28 [occluded]
+text 170,188,79,16 "Auto et moto" [occluded]
+a 265,182,45,28 [occluded]
+text 270,188,35,16 "Mode" [occluded]
+a 320,182,152,28 [occluded]
+text 325,188,142,16 "Produits personnalisés" [occluded]
+a 481,182,145,28 [occluded]
+text 486,188,135,16 "Produits du Quotidien" [occluded]
+a 636,182,117,28 [occluded]
+text 641,188,107,16 "Livraison gratuite" [occluded]
+a 101,221,164,28 [occluded]
+text 106,227,154,16 "Prévoyez et Économisez" [occluded]
+a 275,221,86,28 [occluded]
+text 280,227,76,16 "Prime Video" [occluded]
+a 371,221,100,28 [occluded]
+text 376,227,90,16 "Ebooks Kindle" [occluded]
+a 480,221,124,28 [occluded]
+text 485,227,114,16 "Marques Premium" [occluded]
+a 615,221,47,28 [occluded]
+text 620,227,37,16 "Livres" [occluded]
+a 672,221,96,28 [occluded]
+text 677,227,86,16 "Service Client" [occluded]
+a 880,60,400,39
+[pixels] img 880,60,400,39 alt=Prime
+a 19,100,73,31
+text 26,110,59,14 "Amazon.fr"
+a 100,100,170,31
+text 107,110,156,14 "Points de retrait Amazon Hub"
+a 278,100,83,31
+text 285,110,69,14 "Ventes Flash"
+button 358,114,6,3
+a 380,100,46,31
+text 387,110,32,14 "Outlet"
+a 434,100,62,31
+text 441,110,48,14 "Coupons"
+a 504,100,107,31
+text 511,110,93,14 "Meilleures ventes"
+button 609,114,6,3
+a 631,100,138,31
+text 638,110,124,14 "Amazon Seconde main"
+a 777,100,116,31
+text 784,110,102,14 "Nos idées cadeaux"
+button 890,114,6,3
+a 912,100,107,31
+text 919,110,93,14 "Services Amazon"
+button 1015,114,6,3
+text 16,145,242,16 "1-48 sur plus de 100 000 résultats pour"
+text 262,145,135,16 ""clavier mecanique""
+label 1104,141,63,22 [occluded]
+text 1106,143,61,16 "Trier par:" [occluded]
+select 1104,141,156,20 id=s-result-sort-select value="relevanceblender" [occluded]
+text 1116,146,48,14 "Trier par:"
+text 1170,146,68,14 "Mis en avant"
+a 270,196,994,332 [occluded]
+a 274,200,103,52
+[pixels] img 274,210,103,32 alt=affiché en texte noir sur fond vert
+a 402,201,425,23
+text 402,202,425,21 "Découvrez nos claviers équipés pour votre travail"
+text 402,232,54,13 "Sponsorisé"
+text 479,231,3,14 "|"
+text 487,231,252,14 "Les 10 marques les plus vendues dans claviers"
+text 744,231,3,14 "|"
+a 752,230,258,16
+text 752,231,234,14 "En savoir plus sur Logitech Direct Business"
+text 986,231,19,14 "FR"
+[pixels] svg 1005,235,5,7
+a 271,265,489,254 [occluded]
+a 271,265,244,254
+[pixels] img 290,346,208,92 alt=Logitech Signature Slim Solar+ clavier sans fil | Alimenté par lumière solaire/artificielle, batterie jusqu'à 10 ans, touches personnalisables, Bluetooth, AZERTY - Graphite
+a 271,265,489,254
+a 524,336,228,42
+text 524,337,226,39 "Logitech Signature Slim Solar+ clavier sans fil | Alimenté par l…"
+a 524,382,228,16
+text 524,383,17,14 "4.1" [occluded]
+text 607,383,21,14 "(33)"
+a 524,402,49,20
+text 524,402,19,19 "89"
+text 543,402,5,19 ","
+text 547,402,19,19 "99"
+text 569,404,6,13 "€"
+a 770,265,489,254 [occluded]
+a 770,265,244,254
+[pixels] img 788,337,208,110 alt=Logitech ERGO K860 Clavier Ergonomique Sans Fil - En Deux Parties | Repose Poignet, Frappe Naturelle, Bluetooth et Connectivité USB, Compatible avec PC & Mac
+a 770,265,489,254
+a 1023,336,228,42
+text 1023,337,223,39 "Logitech ERGO K860 Clavier Ergonomique Sans Fil - En D…"
+a 1023,382,228,16
+text 1023,383,17,14 "4.4" [occluded]
+text 1106,383,28,14 "(549)"
+a 1023,402,58,20
+text 1023,402,28,19 "109"
+text 1051,402,5,19 ","
+text 1056,402,19,19 "90"
+text 1077,404,6,13 "€"
+text 1023,425,56,14 "Conseillé :" [occluded]
+text 1083,425,46,14 "119,99 €" [occluded]
+a 1269,265,489,254 [occluded]
+a 1269,265,244,254 [occluded]
+a 1269,265,489,254 [occluded]
+a 1216,366,48,48 id=a-autoid-2
+text 1235,388,64,16 "Next page" [occluded]
+text 270,531,90,22 "Résultats" [occluded]
+a 270,558,224,16 [occluded]
+text 270,558,224,16 "En apprendre plus sur ces résultats." [occluded]
+text 498,558,488,16 "Consultez la page de chaque produit pour connaître les autres options d'achat." [occluded]
+a 279,581,224,224 [occluded]
+[pixels] img 279,619,224,149 alt=Publicité sponsorisée - Dierya DK61SE Clavier Gamer 60% Filaire, QWERTY US, Switchs Rouges, Blanc | Clavier Mécanique 60% ... [occluded]
+a 530,581,224,224 [occluded]
+[pixels] img 530,587,224,213 alt=Publicité sponsorisée - Keychron C3 Pro QMK/Via Clavier Mécanique Filaire, TKL 87 Touches Clavier de Jeu Commutateur Mécan... [occluded]
+a 780,581,224,224 [occluded]
+[pixels] img 780,616,224,155 alt=Publicité sponsorisée - Keychron V1 Max 75% Mise en Page Clavier Mécanique sans Fil Personnalisé, 2.4GHz Bluetooth Cable C... [occluded]
+a 1031,581,224,224 [occluded]
+[pixels] img 1031,626,224,135 alt=Publicité sponsorisée - Dierya Clavier Gamer Mécanique 60% Câblé avec Interrupteur Rouge,T68SE Clavier Gaming LED Rétroécl... [occluded]
+text 20,198,194,16 "Éligible à la livraison gratuite"
+a 20,226,230,62
+label 20,222,24,24
+text 44,226,107,16 "Livraison gratuite"
+text 20,250,216,36 "Livraison gratuite par Amazon vers les destinations éligibles"
+text 20,306,26,16 "Prix"
+label 20,332,41,20
+text 20,334,41,16 "1 EUR"
+text 65,334,8,16 "–"
+label 77,332,116,20
+text 77,334,116,16 "9 000 EUR et plus"
+input 20,380,230,4 id=p_36/range-slider_slider-item_lower-bound-slider value="0" [occluded]
+input 20,380,230,4 id=p_36/range-slider_slider-item_upper-bound-slider value="172" [occluded]
+a 44,422,101,16
+label 20,418,24,24
+text 44,422,101,16 "Jusqu’à 20 EUR"
+a 44,446,100,16
+label 20,442,24,24
+text 44,446,100,16 "de 20 à 35 EUR"
+a 44,470,100,16
+label 20,466,24,24
+text 44,470,100,16 "de 35 à 60 EUR"
+a 44,494,94,16 [occluded]
+label 20,490,24,24 [occluded]
+text 44,494,94,16 "60 EUR et plus" [occluded]
+text 20,530,201,16 "Promotions et bonnes affaires" [occluded]
+a 20,558,192,16 [occluded]
+text 20,558,192,16 "Achetez plus, économisez plus" [occluded]
+a 20,582,56,16 [occluded]
+text 20,582,56,16 "Coupons" [occluded]
+a 20,606,93,16 [occluded]
+text 20,606,93,16 "Tous les rabais" [occluded]
+a 20,630,81,16 [occluded]
+text 20,630,81,16 "Ventes Flash" [occluded]
+text 20,666,58,16 "Marques" [occluded]
+a 44,694,67,16 [occluded]
+label 20,690,24,24 [occluded]
+text 44,694,67,16 "The G-Lab" [occluded]
+a 44,718,68,16 [occluded]
+label 20,714,24,24 [occluded]
+text 44,718,68,16 "Logitech G" [occluded]
+a 44,742,131,16 [occluded]
+label 20,738,24,24 [occluded]
+text 44,742,131,16 "RK ROYAL KLUDGE" [occluded]
+a 44,766,61,16 [occluded]
+label 20,762,24,24 [occluded]
+text 44,766,61,16 "Redragon" [occluded]
+a 44,790,59,16 [occluded]
+label 20,786,24,24 [occluded]
+text 44,790,59,16 "Keychron" [occluded]

@@ -19,11 +19,11 @@
   "measurements": {
     "view_bytes": 139,
     "view_tokens_est": 35,
-    "screenshot_tokens_est": 1281,
+    "screenshot_tokens_est": 1477,
     "diff_bytes_per_interaction": null,
     "idle_cost_bytes": 0,
     "capture_latency_ms": 0.03,
-    "notes": "The whole hard-text document is 139 code points; the window it fills is 656x440 logical = 1281 image tokens (5126 at Retina 2x). RANGE-ARITHMETIC TRAP, measured: AX ranges are in UTF-16 units while Python/JS string indices are code points, and the gap is large exactly where it hurts — '🦊 🎯' is 3 code points but 5 UTF-16 units, '👨‍👩‍👧‍👦 👩🏽‍💻' is 12 code points but 19 units. Worse for layout reasoning: the family emoji occupies ELEVEN UTF-16 units and renders as ONE 15x18 px cell, so string length is not a proxy for visual extent in either direction. Any harness doing offset math must convert explicitly."
+    "notes": "The whole hard-text document is 139 code points; the window it fills is 656x422 logical; its actual 2x capture (1312x844 px, the artifact) costs 1477 image tokens — 42x the structured view of the same content. RANGE-ARITHMETIC TRAP, measured: AX ranges are in UTF-16 units while Python/JS string indices are code points, and the gap is large exactly where it hurts — '🦊 🎯' is 3 code points but 5 UTF-16 units, '👨‍👩‍👧‍👦 👩🏽‍💻' is 12 code points but 19 units. Worse for layout reasoning: the family emoji occupies ELEVEN UTF-16 units and renders as ONE 15x18 px cell, so string length is not a proxy for visual extent in either direction. Any harness doing offset math must convert explicitly."
   },
   "runtime_verification": {
     "method": "decoded strings compared byte-for-byte to the source file; geometry cross-checked against a window screenshot (right-aligned RTL lines, single-cell family emoji), and the point->character inverse verified on three runs of the bidi line",

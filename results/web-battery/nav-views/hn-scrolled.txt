@@ -1,0 +1,403 @@
+text 103,-1,22,17 "12."
+a 125,2,14,10 id=up_49300759
+a 139,0,454,17
+text 139,0,454,17 "RustDesk now supports true unattended remote access on Wayland"
+text 593,3,9,13 "("
+a 601,3,72,13
+text 601,3,72,13 "rustdesk.com"
+text 674,3,5,13 ")"
+text 139,18,50,12 "295 points"
+text 188,18,18,12 "by"
+a 206,18,40,12
+text 206,18,40,12 "rustdesk"
+a 249,18,62,12
+text 249,18,62,12 "17 hours ago"
+text 315,18,8,12 "|"
+a 322,18,20,12
+text 322,18,20,12 "hide"
+text 342,18,11,12 "|"
+a 353,18,70,12
+text 353,18,70,12 "124 comments"
+text 103,34,22,17 "13."
+a 125,37,14,10 id=up_49303202
+a 139,35,466,17
+text 139,35,466,17 "Firefox is now the last major browser that still supports uBlock Origin"
+text 605,38,9,13 "("
+a 613,38,68,13
+text 613,38,68,13 "pcworld.com"
+text 681,38,5,13 ")"
+text 139,53,55,12 "1033 points"
+text 194,53,18,12 "by"
+a 212,53,47,12
+text 212,53,47,12 "DemiGuru"
+a 263,53,62,12
+text 263,53,62,12 "15 hours ago"
+text 328,53,8,12 "|"
+a 335,53,20,12
+text 335,53,20,12 "hide"
+text 355,53,11,12 "|"
+a 366,53,70,12
+text 366,53,70,12 "390 comments"
+text 103,70,22,17 "14."
+a 125,73,14,10 id=up_49300568
+a 139,71,75,17
+text 139,71,75,17 "AI by Hand"
+text 214,74,9,13 "("
+a 222,74,53,13
+text 222,74,53,13 "byhand.ai"
+text 275,74,5,13 ")"
+text 139,89,50,12 "305 points"
+text 188,89,18,12 "by"
+a 206,89,54,12
+text 206,89,54,12 "sans_souse"
+a 263,89,62,12
+text 263,89,62,12 "18 hours ago"
+text 328,89,8,12 "|"
+a 336,89,20,12
+text 336,89,20,12 "hide"
+text 356,89,11,12 "|"
+a 367,89,64,12
+text 367,89,64,12 "23 comments"
+text 103,105,22,17 "15."
+a 125,108,14,10 id=up_49277535
+a 139,106,445,17
+text 139,106,445,17 "Show HN: Silent Shark – tactical map-based WWII submarine sim"
+text 583,109,9,13 "("
+a 592,109,82,13
+text 592,109,82,13 "silentshark.app"
+text 674,109,5,13 ")"
+text 139,124,44,12 "28 points"
+text 182,124,18,12 "by"
+a 200,124,28,12
+text 200,124,28,12 "epaga"
+a 232,124,56,12
+text 232,124,56,12 "5 hours ago"
+text 291,124,8,12 "|"
+a 298,124,20,12
+text 298,124,20,12 "hide"
+text 318,124,11,12 "|"
+a 329,124,58,12
+text 329,124,58,12 "6 comments"
+text 103,141,22,17 "16."
+a 125,144,14,10 id=up_49306443
+a 139,142,215,17
+text 139,142,215,17 "The Ploopy A+ Trackball Is Here"
+text 354,145,9,13 "("
+a 362,145,50,13
+text 362,145,50,13 "ploopy.co"
+text 413,145,5,13 ")"
+text 139,160,50,12 "104 points"
+text 188,160,18,12 "by"
+a 206,160,44,12
+text 206,160,44,12 "big_toast"
+a 253,160,56,12
+text 253,160,56,12 "9 hours ago"
+text 312,160,8,12 "|"
+a 320,160,20,12
+text 320,160,20,12 "hide"
+text 339,160,11,12 "|"
+a 350,160,64,12
+text 350,160,64,12 "49 comments"
+text 103,176,22,17 "17."
+a 125,179,14,10 id=up_49306196
+a 139,177,383,17
+text 139,177,383,17 "Simplifying and Refactoring Introductory Calculus (2018)"
+text 522,180,9,13 "("
+a 531,180,47,13
+text 531,180,47,13 "arxiv.org"
+text 578,180,5,13 ")"
+text 139,195,44,12 "89 points"
+text 182,195,18,12 "by"
+a 200,195,59,12
+text 200,195,59,12 "E-Reverance"
+a 262,195,56,12
+text 262,195,56,12 "9 hours ago"
+text 321,195,8,12 "|"
+a 329,195,20,12
+text 329,195,20,12 "hide"
+text 349,195,11,12 "|"
+a 359,195,64,12
+text 359,195,64,12 "41 comments"
+text 103,212,22,17 "18."
+a 125,215,14,10 id=up_49300800
+a 139,213,343,17
+text 139,213,343,17 "Maximizing the value of your Claude Code sessions"
+text 481,216,9,13 "("
+a 490,216,61,13
+text 490,216,61,13 "claude.com"
+text 551,216,5,13 ")"
+text 139,231,50,12 "225 points"
+text 188,231,18,12 "by"
+a 206,231,25,12
+text 206,231,25,12 "twapi"
+a 235,231,62,12
+text 235,231,62,12 "17 hours ago"
+text 300,231,8,12 "|"
+a 307,231,20,12
+text 307,231,20,12 "hide"
+text 327,231,11,12 "|"
+a 338,231,70,12
+text 338,231,70,12 "126 comments"
+text 103,247,22,17 "19."
+a 125,250,14,10 id=up_49272784
+a 139,248,377,17
+text 139,248,377,17 "Unearthing a 31 year old Easter egg in Ecco the Dolphin"
+text 516,251,9,13 "("
+a 524,251,110,13
+text 524,251,110,13 "32bits.substack.com"
+text 634,251,5,13 ")"
+text 139,266,44,12 "83 points"
+text 182,266,18,12 "by"
+a 200,266,36,12
+text 200,266,36,12 "bbayles"
+a 239,266,62,12
+text 239,266,62,12 "12 hours ago"
+text 304,266,8,12 "|"
+a 312,266,20,12
+text 312,266,20,12 "hide"
+text 332,266,11,12 "|"
+a 342,266,64,12
+text 342,266,64,12 "18 comments"
+text 103,283,22,17 "20."
+a 125,286,14,10 id=up_49308685
+a 139,284,483,17
+text 139,284,483,17 "Using GCC's Nested Functions with Wide Pointers and No Trampolines II"
+text 622,287,9,13 "("
+a 630,287,79,13
+text 630,287,79,13 "codeberg.page"
+text 709,287,5,13 ")"
+text 139,302,38,12 "3 points"
+text 176,302,18,12 "by"
+a 194,302,31,12
+text 194,302,31,12 "uecker"
+a 229,302,56,12
+text 229,302,56,12 "2 hours ago"
+text 288,302,8,12 "|"
+a 295,302,20,12
+text 295,302,20,12 "hide"
+text 315,302,11,12 "|"
+a 326,302,34,12
+text 326,302,34,12 "discuss"
+text 103,318,22,17 "21."
+a 125,321,14,10 id=up_49263186
+a 139,319,323,17
+text 139,319,323,17 "This Hi-Fi Tape Recorder Changed Radio Forever"
+text 462,322,9,13 "("
+a 470,322,44,13
+text 470,322,44,13 "ieee.org"
+text 514,322,5,13 ")"
+text 139,337,44,12 "46 points"
+text 182,337,18,12 "by"
+a 200,337,48,12
+text 200,337,48,12 "Jimmc414"
+a 251,337,56,12
+text 251,337,56,12 "9 hours ago"
+text 310,337,8,12 "|"
+a 318,337,20,12
+text 318,337,20,12 "hide"
+text 338,337,11,12 "|"
+a 348,337,64,12
+text 348,337,64,12 "12 comments"
+text 103,354,22,17 "22."
+a 125,357,14,10 id=up_49308059
+a 139,355,338,17
+text 139,355,338,17 "Ask HN: How do you keep up with HN these days?"
+text 139,373,44,12 "34 points"
+text 182,373,18,12 "by"
+a 200,373,73,12
+text 200,373,73,12 "simonebrunozzi"
+a 277,373,56,12
+text 277,373,56,12 "4 hours ago"
+text 336,373,8,12 "|"
+a 343,373,20,12
+text 343,373,20,12 "hide"
+text 363,373,11,12 "|"
+a 374,373,64,12
+text 374,373,64,12 "59 comments"
+text 103,389,22,17 "23."
+a 125,392,14,10 id=up_49299081
+a 139,390,518,17
+text 139,390,518,17 "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone"
+text 657,393,9,13 "("
+a 665,393,71,13
+text 665,393,71,13 "heyjonny.dev"
+text 737,393,5,13 ")"
+text 139,408,50,12 "187 points"
+text 188,408,18,12 "by"
+a 206,408,32,12
+text 206,408,32,12 "speckx"
+a 241,408,62,12
+text 241,408,62,12 "19 hours ago"
+text 307,408,8,12 "|"
+a 314,408,20,12
+text 314,408,20,12 "hide"
+text 334,408,11,12 "|"
+a 345,408,64,12
+text 345,408,64,12 "73 comments"
+text 103,425,22,17 "24."
+a 125,428,14,10 id=up_49299746
+a 139,426,130,17
+text 139,426,130,17 "Introducing Toast 1"
+text 269,429,9,13 "("
+a 277,429,89,13
+text 277,429,89,13 "mixedbread.com"
+text 367,429,5,13 ")"
+text 139,444,50,12 "206 points"
+text 188,444,18,12 "by"
+a 206,444,48,12
+text 206,444,48,12 "mplappert"
+a 257,444,62,12
+text 257,444,62,12 "18 hours ago"
+text 322,444,8,12 "|"
+a 330,444,20,12
+text 330,444,20,12 "hide"
+text 350,444,11,12 "|"
+a 360,444,64,12
+text 360,444,64,12 "62 comments"
+text 103,460,22,17 "25."
+a 125,463,14,10 id=up_49215682
+a 139,461,161,17
+text 139,461,161,17 "Super Mario Derivations"
+text 300,464,9,13 "("
+a 308,464,69,13
+text 308,464,69,13 "fzakaria.com"
+text 377,464,5,13 ")"
+text 139,479,50,12 "104 points"
+text 188,479,18,12 "by"
+a 206,479,58,12
+text 206,479,58,12 "domenkozar"
+a 267,479,62,12
+text 267,479,62,12 "12 hours ago"
+text 332,479,8,12 "|"
+a 340,479,20,12
+text 340,479,20,12 "hide"
+text 359,479,11,12 "|"
+a 370,479,64,12
+text 370,479,64,12 "14 comments"
+text 103,496,22,17 "26."
+a 125,499,14,10 id=up_49294997
+a 139,497,391,17
+text 139,497,391,17 "GLM-5.3: Frontier coding with emergent cyber capabilities"
+text 530,500,9,13 "("
+a 538,500,19,13
+text 538,500,19,13 "z.ai"
+text 557,500,5,13 ")"
+text 139,515,55,12 "1093 points"
+text 194,515,18,12 "by"
+a 212,515,22,12
+text 212,515,22,12 "pella"
+a 237,515,46,12
+text 237,515,46,12 "1 day ago"
+text 287,515,8,12 "|"
+a 295,515,20,12
+text 295,515,20,12 "hide"
+text 314,515,11,12 "|"
+a 325,515,70,12
+text 325,515,70,12 "538 comments"
+text 103,531,22,17 "27."
+a 125,534,14,10 id=up_49302562
+a 139,532,79,17
+text 139,532,79,17 "Racket v9.3"
+text 218,535,9,13 "("
+a 226,535,82,13
+text 226,535,82,13 "racket-lang.org"
+text 308,535,5,13 ")"
+text 139,550,44,12 "88 points"
+text 182,550,18,12 "by"
+a 200,550,35,12
+text 200,550,35,12 "privong"
+a 239,550,62,12
+text 239,550,62,12 "15 hours ago"
+text 304,550,8,12 "|"
+a 311,550,20,12
+text 311,550,20,12 "hide"
+text 331,550,11,12 "|"
+a 342,550,58,12
+text 342,550,58,12 "6 comments"
+text 103,567,22,17 "28."
+a 125,570,14,10 id=up_49308553
+a 139,568,529,17
+text 139,568,529,17 "Suspecting court of using AI, man injected prompts in filings to try to win case"
+text 668,571,9,13 "("
+a 677,571,87,13
+text 677,571,87,13 "arstechnica.com"
+text 764,571,5,13 ")"
+text 139,586,44,12 "21 points"
+text 182,586,18,12 "by"
+a 200,586,25,12
+text 200,586,25,12 "jnord"
+a 228,586,56,12
+text 228,586,56,12 "2 hours ago"
+text 287,586,8,12 "|"
+a 295,586,20,12
+text 295,586,20,12 "hide"
+text 314,586,11,12 "|"
+a 325,586,64,12
+text 325,586,64,12 "12 comments"
+text 103,602,22,17 "29."
+a 125,605,14,10 id=up_49211375
+a 139,603,189,17
+text 139,603,189,17 "Ultraviolet Bird Photography"
+text 327,606,9,13 "("
+a 336,606,66,13
+text 336,606,66,13 "uvbirds.com"
+text 402,606,5,13 ")"
+text 139,621,50,12 "147 points"
+text 188,621,18,12 "by"
+a 206,621,30,12
+text 206,621,30,12 "EndXA"
+a 240,621,62,12
+text 240,621,62,12 "18 hours ago"
+text 305,621,8,12 "|"
+a 312,621,20,12
+text 312,621,20,12 "hide"
+text 332,621,11,12 "|"
+a 343,621,64,12
+text 343,621,64,12 "24 comments"
+text 103,638,22,17 "30."
+a 125,641,14,10 id=up_49296740
+a 139,639,286,17
+text 139,639,286,17 "Why does Opus 5 feel worse to work with?"
+text 425,642,9,13 "("
+a 433,642,122,13
+text 433,642,122,13 "mun-logadan.github.io"
+text 555,642,5,13 ")"
+text 139,657,50,12 "871 points"
+text 188,657,18,12 "by"
+a 206,657,33,12
+text 206,657,33,12 "numeri"
+a 242,657,62,12
+text 242,657,62,12 "23 hours ago"
+text 307,657,8,12 "|"
+a 315,657,20,12
+text 315,657,20,12 "hide"
+text 335,657,11,12 "|"
+a 346,657,70,12
+text 346,657,70,12 "793 comments"
+a 139,683,33,17
+text 139,683,33,17 "More"
+a 450,728,55,13
+text 450,728,55,13 "Guidelines"
+text 505,728,12,13 "|"
+a 517,728,21,13
+text 517,728,21,13 "FAQ"
+text 539,728,12,13 "|"
+a 551,728,24,13
+text 551,728,24,13 "Lists"
+text 575,728,12,13 "|"
+a 588,728,18,13
+text 588,728,18,13 "API"
+text 606,728,12,13 "|"
+a 618,728,44,13
+text 618,728,44,13 "Security"
+text 662,728,12,13 "|"
+a 674,728,28,13
+text 674,728,28,13 "Legal"
+text 703,728,12,13 "|"
+a 715,728,62,13
+text 715,728,62,13 "Apply to YC"
+text 777,728,12,13 "|"
+a 789,728,41,13
+text 789,728,41,13 "Contact"
+text 537,759,57,17 "Search:"
+input 594,757,149,22

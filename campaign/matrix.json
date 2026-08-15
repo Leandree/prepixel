@@ -975,7 +975,7 @@
         "diff_bytes_per_interaction": 150,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 2,
-        "notes": "view = distilled DOMSnapshot of testapp.html (same distiller as the Linux cell: visible text + interactive elements + declared opaque rects). Screenshot side = 980\u00d7672 CSS viewport \u2192 880 tokens (w\u00b7h/750); at device pixels (Retina 2\u00d7) it would be 3512 tokens. diff_bytes_per_interaction = mean per-tick feed diff (58\u2013231 B). Latencies: DOMSnapshot capture 1\u20132 ms on this page \u2014 indistinguishable from the Linux cell. Browser-chrome overlays (e.g. a Google Translate popup that appeared over the page) are OUTSIDE this channel's scope: CDP reads the page, not the browser window \u2014 the AX channel (see macos-chrome-accessibility-api) does see them; a desktop router should pair the two."
+        "notes": "view = distilled DOMSnapshot of testapp.html (same distiller as the Linux cell: visible text + interactive elements + declared opaque rects). Screenshot side = 980\u00d7672 CSS viewport \u2192 880 tokens (w\u00b7h/750); the actual 2x capture (1960x1346 px) costs 3518 tokens. diff_bytes_per_interaction = mean per-tick feed diff (58\u2013231 B). Latencies: DOMSnapshot capture 1\u20132 ms on this page \u2014 indistinguishable from the Linux cell. Browser-chrome overlays (e.g. a Google Translate popup that appeared over the page) are OUTSIDE this channel's scope: CDP reads the page, not the browser window \u2014 the AX channel (see macos-chrome-accessibility-api) does see them; a desktop router should pair the two."
       },
       "runtime_verification": {
         "method": "Native compositor screenshot (screencapture -l on the Chrome window) compared to the distilled view: orders table content, buttons, input placeholder; plus in-page state check after blind click.",
@@ -1042,7 +1042,7 @@
         "diff_bytes_per_interaction": 38,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 43,
-        "notes": "Full window tree 25\u201330 nodes / 2.5 KB / 43 ms; watching the living region afterwards costs one 38-byte attribute read per second. Window 1024\u00d7768 \u2192 1049 screenshot tokens (4194 at 2\u00d7) PER FRAME for pixel-watching: the structured watch is ~100\u00d7 cheaper per second and loses nothing. Incident recorded for honesty: the user's stopwatch had been running ~174 h; the probe's exploratory button press paused it for ~3 min before restarting it (state restored, elapsed-time now lags reality by the pause) \u2014 semantic channels make destructive-adjacent controls exactly one AXPress away; a production router needs an allowlist of safe actions, same lesson as pixel agents."
+        "notes": "Full window tree 25\u201330 nodes / 2.5 KB / 43 ms; watching the living region afterwards costs one 38-byte attribute read per second. Window 1024\u00d7768 \u2192 1049 screenshot tokens; the actual 2x capture (2048x1536 px) costs 4195 PER FRAME for pixel-watching: the structured watch is ~100\u00d7 cheaper per second and loses nothing. Incident recorded for honesty: the user's stopwatch had been running ~174 h; the probe's exploratory button press paused it for ~3 min before restarting it (state restored, elapsed-time now lags reality by the pause) \u2014 semantic channels make destructive-adjacent controls exactly one AXPress away; a production router needs an allowlist of safe actions, same lesson as pixel agents."
       },
       "runtime_verification": {
         "method": "Window screenshot artifact of the stopwatch tab vs AX content; tick progression cross-checked against wall-clock sleep(1) cadence.",
@@ -1106,7 +1106,7 @@
         "diff_bytes_per_interaction": null,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 15,
-        "notes": "Logged-in 'Cursor Agents' window, 1280\u00d7800-CSS-ish viewport (dpr 2 \u2192 screenshot at device px would be 5464 tokens). The distilled view (56 lines) is 2.1\u00d7 cheaper than one CSS-resolution screenshot and self-labels every control via aria-label \u2014 no vision pass needed to name buttons. Login-gated content is an honest boundary: pre-login view was 218 B with exactly the two buttons that existed."
+        "notes": "Logged-in 'Cursor Agents' window, 1280\u00d7800-CSS-ish viewport; the captured 2\u00d7 screenshot (2560\u00d71600 px) costs 4784 tokens after the API's automatic downscale, not the 5464 a naive w\u00b7h/750 implies. The distilled view (56 lines) is 2.1\u00d7 cheaper than one CSS-resolution screenshot and self-labels every control via aria-label \u2014 no vision pass needed to name buttons. Login-gated content is an honest boundary: pre-login view was 218 B with exactly the two buttons that existed."
       },
       "runtime_verification": {
         "method": "CDP screenshot of the same instant kept as artifact; text/controls compared against the distilled view.",
@@ -1227,11 +1227,11 @@
       "measurements": {
         "view_bytes": 139,
         "view_tokens_est": 35,
-        "screenshot_tokens_est": 1281,
+        "screenshot_tokens_est": 1477,
         "diff_bytes_per_interaction": null,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 0.03,
-        "notes": "The whole hard-text document is 139 code points; the window it fills is 656x440 logical = 1281 image tokens (5126 at Retina 2x). RANGE-ARITHMETIC TRAP, measured: AX ranges are in UTF-16 units while Python/JS string indices are code points, and the gap is large exactly where it hurts \u2014 '\ud83e\udd8a \ud83c\udfaf' is 3 code points but 5 UTF-16 units, '\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 \ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb' is 12 code points but 19 units. Worse for layout reasoning: the family emoji occupies ELEVEN UTF-16 units and renders as ONE 15x18 px cell, so string length is not a proxy for visual extent in either direction. Any harness doing offset math must convert explicitly."
+        "notes": "The whole hard-text document is 139 code points; the window it fills is 656x422 logical; its actual 2x capture (1312x844 px, the artifact) costs 1477 image tokens \u2014 42x the structured view of the same content. RANGE-ARITHMETIC TRAP, measured: AX ranges are in UTF-16 units while Python/JS string indices are code points, and the gap is large exactly where it hurts \u2014 '\ud83e\udd8a \ud83c\udfaf' is 3 code points but 5 UTF-16 units, '\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 \ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb' is 12 code points but 19 units. Worse for layout reasoning: the family emoji occupies ELEVEN UTF-16 units and renders as ONE 15x18 px cell, so string length is not a proxy for visual extent in either direction. Any harness doing offset math must convert explicitly."
       },
       "runtime_verification": {
         "method": "decoded strings compared byte-for-byte to the source file; geometry cross-checked against a window screenshot (right-aligned RTL lines, single-cell family emoji), and the point->character inverse verified on three runs of the bidi line",
@@ -1298,7 +1298,7 @@
         "diff_bytes_per_interaction": 10,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 73,
-        "notes": "view = the document body itself (82 bytes for the probe sentence) \u2014 the object model returns EXACTLY the semantic content, zero UI noise; contrast with the AX view of the same window: 93 nodes / 11.2 KB (and see below). Window 1016\u00d7949 logical \u2192 1285 screenshot tokens (5142 at 2\u00d7). Latency: 73\u2013158 ms per AppleScript round-trip (osascript process spawn included) \u2014 30\u201370\u00d7 slower than an in-process AX attribute read, but each call replaces an entire screenshot+OCR pass. AX-side contrast for the same app: the document body was ABSENT from AX (explicit \u2014 no AXLayoutArea at all) until the same AT-latch poke as Safari/Chrome flipped it (AXEnhancedUserInterface set \u2192 error -25208 \u2192 content appears anyway a beat later): THREE engines (Chromium, WebKit, iWork) gate their AX behind assistive-client detection. Under session lock, AXWindows returned the app's menu tree instead of windows (833-node degenerate view) while the object model was unaffected."
+        "notes": "view = the document body itself (82 bytes for the probe sentence) \u2014 the object model returns EXACTLY the semantic content, zero UI noise; contrast with the AX view of the same window: 93 nodes / 11.2 KB (and see below). Window 1016\u00d7949 logical \u2192 1285 screenshot tokens; the actual 2\u00d7 capture (2032\u00d71898 px) costs 4784 after the API's automatic downscale, not 5142. Latency: 73\u2013158 ms per AppleScript round-trip (osascript process spawn included) \u2014 30\u201370\u00d7 slower than an in-process AX attribute read, but each call replaces an entire screenshot+OCR pass. AX-side contrast for the same app: the document body was ABSENT from AX (explicit \u2014 no AXLayoutArea at all) until the same AT-latch poke as Safari/Chrome flipped it (AXEnhancedUserInterface set \u2192 error -25208 \u2192 content appears anyway a beat later): THREE engines (Chromium, WebKit, iWork) gate their AX behind assistive-client detection. Under session lock, AXWindows returned the app's menu tree instead of windows (833-node degenerate view) while the object model was unaffected."
       },
       "runtime_verification": {
         "method": "Dual-channel agreement: object-model body text vs AX AXTextArea value (after AT-latch), vs native window screenshot artifact.",
@@ -1362,7 +1362,7 @@
         "diff_bytes_per_interaction": null,
         "idle_cost_bytes": 0,
         "capture_latency_ms": null,
-        "notes": "n=20 for cost, n=6 (x3 tasks) for paired accuracy. Structured avg 1578 bytes / 391 est-tokens vs screenshot 62110 png bytes / 1366 image-tokens (exact public formula) => 3.49x fewer tokens, 39.4x fewer bytes. Cross-OS replication is essentially exact: Linux measured 1580 bytes / 391 tokens / 3.5x / 36.4x on the same pages \u2014 the 2-byte delta comes from macOS system-ui font metrics changing one text wrap. RETINA ADDENDUM (macOS-specific, absent from the Linux cell): if the screenshot is taken at native device resolution instead of CSS resolution, the pixel side costs 5462 tokens, making the ratio 13.97x. Which number applies depends on whether the harness downscales before sending \u2014 a decision that quadruples the pixel bill and that no API forces you to get right."
+        "notes": "n=20 for cost, n=6 (x3 tasks) for paired accuracy. Structured avg 1578 bytes / 391 est-tokens vs screenshot 62110 png bytes / 1366 image-tokens (exact public formula) => 3.49x fewer tokens, 39.4x fewer bytes. Cross-OS replication is essentially exact: Linux measured 1580 bytes / 391 tokens / 3.5x / 36.4x on the same pages \u2014 the 2-byte delta comes from macOS system-ui font metrics changing one text wrap. RETINA ADDENDUM (macOS-specific, absent from the Linux cell) \u2014 and it does NOT behave the way a naive w*h/750 suggests. Image tokens are charged AFTER the API's automatic downscale (long edge <=2576 px and <=3.588 MP on Opus 4.7+/Sonnet 5/Fable 5/Opus 5; <=1568 px and <=1.15 MP on Opus 4.6/Sonnet 4.6 and earlier). So the SAME 2x Retina capture of this viewport costs 4784 tokens on a high-res model (ratio 12.24x) but only 1534 on a legacy one (ratio 3.92x) \u2014 barely more than the 1366 a CSS-resolution shot costs, because the API scales it back down anyway. Sending Retina pixels to a legacy-tier model buys resolution the model never sees and is the one case where the pixel side is NOT punished. Naive w*h/750 would have reported 5462 here; that figure is wrong and was corrected. Helper: src/image-tokens.mjs."
       },
       "runtime_verification": {
         "method": "mechanical scoring of both conditions' answers against held-out truth generated by the page generator (never shown to either agent)",
@@ -1486,7 +1486,7 @@
         "diff_bytes_per_interaction": null,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 50,
-        "notes": "Populated testapp window = 109 nodes / 11.8 KB (raw serialization; a distilled subset would be ~3\u20134\u00d7 smaller). Screenshot side: the window Safari opened is 1512\u00d7949 logical \u2192 1914 tokens (7656 at Retina 2\u00d7). TWO startup hazards worth a router's attention: (1) during app launch the AX tree passed through a DEGENERATE state \u2014 AXWindows[0] titled 'Safari' with frame=None whose children cycled back to AXApplication, exploding a naive walker into 13k menu-item nodes (2.3 MB) \u2014 cycle-guard your walks and re-query after settle; (2) the AT-latch means the first probe of a WebKit/Chromium app may honestly under-report \u2014 probe, poke, re-probe before concluding 'unavailable'."
+        "notes": "Populated testapp window = 109 nodes / 11.8 KB (raw serialization; a distilled subset would be ~3\u20134\u00d7 smaller). Screenshot side: the window Safari opened is 1512\u00d7949 logical \u2192 1914 tokens; the actual 2\u00d7 capture (3024\u00d71898 px, kept as an artifact) costs 4784 tokens after the API's automatic downscale, not the 7656 a naive w\u00b7h/750 would suggest (helper: src/image-tokens.mjs). TWO startup hazards worth a router's attention: (1) during app launch the AX tree passed through a DEGENERATE state \u2014 AXWindows[0] titled 'Safari' with frame=None whose children cycled back to AXApplication, exploding a naive walker into 13k menu-item nodes (2.3 MB) \u2014 cycle-guard your walks and re-query after settle; (2) the AT-latch means the first probe of a WebKit/Chromium app may honestly under-report \u2014 probe, poke, re-probe before concluding 'unavailable'."
       },
       "runtime_verification": {
         "method": "String probes against the populated tree + native compositor screenshot of the window; canvas page checked for fabricated text.",
@@ -1634,6 +1634,138 @@
         "campaign/results/artifacts/macos/textedit-ax-tree.json",
         "campaign/results/artifacts/macos/textedit-window-t2.png",
         "campaign/results/artifacts/macos/textedit-t6-image-rtfd-sheet.png"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "16 live public websites in Chrome 151 (6 categories: vitrine, presse, commerce, media, reference, webapp, webapp-canvas)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "open debug port answers /json/version; the sites themselves need no detection \u2014 the stack is the browser, not the page",
+        "signature": "http://127.0.0.1:9223/json/version \u2192 Chrome/151.0.7922.138, Protocol 1.3",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Chrome launched detached with --remote-debugging-port=9223 --user-data-dir=<short path>, viewport normalised to 1280x800 CSS via Emulation.setDeviceMetricsOverride{deviceScaleFactor:1} so the pixel side is charged at CSS resolution \u2014 the CHEAPEST honest baseline for the screenshot condition. Structured side = the hardened in-page distiller (visible text + interactive elements + declared opaque regions + occlusion tagging). No login anywhere: every site is reachable logged-out.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "16/16 sites yielded a readable structured view on the first try, no site defeated the channel. Latency 6-46 ms per view (mean 16 ms) \u2014 two to three orders of magnitude below a screenshot round-trip. Nothing here is a lab page: Amazon.fr, Le Monde, YouTube watch, GitHub, Stripe, Excalidraw, OpenStreetMap all render through their real production stacks."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Interactive elements come with boxes on every site; the number of nodes the distiller had to TAG as occluded is itself the interesting signal, because it maps onto how visually layered a site is: 0 on Hacker News (flat 1990s table layout), 5 on MDN, 12 on Wikipedia and Vercel, 47 on Apple and YouTube home, 70 on leboncoin, 79 on BBC News, 105 on Le Monde, 114 on Amazon, 142 on YouTube watch. Modern commercial pages are heavily layered and a naive DOM reader would publish ~100 clickable targets per page that are not actually hittable."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Not exercised here \u2014 no form was filled on third-party sites (read-only discipline). Covered by macos-chrome-cdp."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not measured per-site; the YouTube watch page is the only continuously-animating surface and it is covered by t6 as a declared opaque region."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Covered in depth by the companion cell macos-web-navigation-blind-cdp (8/8 on live sites, structured view only)."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "7/16 sites carry canvas or video: Excalidraw (2 canvas), OpenStreetMap (its map is NOT canvas \u2014 it is tiled <img>, so the structured view declares each tile rather than one opaque block), Apple (4 video), Stripe (2 canvas), Vercel (1 canvas), YouTube home and watch (1 video each), Amazon (1 video). Every one is emitted as a '[pixels] <tag> x,y,w,h' declaration with alt/aria-label when present. This is the fix found earlier in the campaign paying off on real pages: before it, an all-pictorial region distilled to nothing and looked like an EMPTY screen instead of an opaque one."
+        }
+      },
+      "measurements": {
+        "view_bytes": 5442,
+        "view_tokens_est": 1360,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 16,
+        "notes": "THE HEADLINE, AND IT DEFLATES THE SYNTHETIC RESULT: averaged over 16 real sites the structured view costs 1360 tokens against 1366 for one CSS-resolution viewport screenshot \u2014 a ratio of 1.30x, not the 3.49x measured on the synthetic duel pages. The reason is structural and worth stating plainly in any paper: a screenshot has a FLAT cost that depends only on the viewport, while a structured view scales with information density. So the ratio is not a property of the method, it is a property of the page. Range 0.47x (Hacker News: 2917 tokens of pure text, the structured view costs TWICE a screenshot) to 3.11x (Vercel: 439 tokens, a sparse marketing page). By category: vitrine 2.20x, webapp-canvas 1.75x, presse 1.21x, reference 1.11x, media 0.97x, commerce 0.82x, webapp 0.80x. Structure wins on visually rich / semantically sparse pages and LOSES on text-dense ones \u2014 which is the opposite of the intuition that 'text is cheap'. Two corrections in favour of the structured side, both real: (a) a viewport screenshot only shows one screen, and covering a whole page took 7.6 screens on average (19 on Stripe and Amazon), so the whole-page comparison is 1.31x with the naive whole-document view and much better if the router only ever needs one screen; (b) at Retina 2x the screenshot costs 4784 tokens on a high-res model, moving the average ratio to 4.54x \u2014 but only 1534 on a legacy-tier model (1.46x), because the API downscales before charging. 6/16 sites raised a consent banner (Stripe, Vercel, YouTube, BBC, Amazon.fr, leboncoin), which a router must dismiss before the view means anything \u2014 it is the single most common real-web obstacle we hit, ahead of any rendering issue."
+      },
+      "runtime_verification": {
+        "method": "Per-site viewport screenshot kept alongside the structured view; spot-checked visually on GitHub, DuckDuckGo and MDN against the emitted lines, plus the page-level counters (nText/nCanvas/nVideo/nImg/scrollH) read from the same DOM the distiller walked.",
+        "agreement": "No site produced content in the view that was absent from the screen. The declared gaps were honest ones: opaque media regions, occluded overlays, and off-viewport content dropped by design. One scope reminder carried over from macos-chrome-cdp: browser chrome (Chrome's own UI) is outside CDP's page scope and never appears in these views."
+      },
+      "permissions_required": [
+        "None (loopback CDP socket). No account, no login, no cookie import on any of the 16 sites."
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "results/web-battery/web-battery.json",
+        "results/web-battery/web-battery-summary.json",
+        "results/web-battery/views/",
+        "results/web-battery/shots/",
+        "campaign/macos/web-battery.mjs",
+        "src/image-tokens.mjs"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Blind navigation on 5 live sites in Chrome 151 (Hacker News, Wikipedia, GitHub, MDN, DuckDuckGo)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "open debug port answers /json/version",
+        "signature": "http://127.0.0.1:9223/json/version \u2192 Chrome/151.0.7922.138, Protocol 1.3",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Same detached Chrome + hardened distiller as macos-web-battery-cdp, viewport 1280x800 CSS. The discipline that makes this a real test: EVERY decision \u2014 which line to target, where to click, whether to refuse \u2014 is taken from the published view lines alone. No screenshot is read anywhere in the loop; screenshots are taken after each step only as evidence for a human.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Targets located by text in the structured view on all steps that had one."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "The step that mattered: the distiller emits text lines and interactive lines SEPARATELY, so a text line carries no href and no tag. The router must join them geometrically \u2014 take the matched text's centre and pick the SMALLEST interactive box containing it. That join is done purely on published coordinates, needing no extra access to the page, and it is exactly the same operation a native AX router must perform on an AXStaticText inside an AXButton."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "No form filled on third-party sites (read-only discipline)."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not applicable to a navigation probe."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "8/8 steps: 6/6 navigate, 1/1 toggle, 1/1 correct refusal. Navigations: Hacker News 'new' \u2192 /newest; Wikipedia in-article 'Rasterisation' \u2192 the #Rasterization anchor, picked among competing occurrences of the word; GitHub 'Insights' tab on a heavily hydrated app shell \u2192 /pulse; MDN sidebar 'Canvas tutorial' \u2192 /Canvas_API/Tutorial; DuckDuckGo 'Images' filter \u2192 &ia=images, verified visually (Images tab active, image results rendered); Hacker News 'More' \u2192 /?p=2, which required SCROLLING because the target sits below the fold. Every click landed on the intended control on the first attempt."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "No pictorial target was aimed at."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": 16826,
+        "screenshot_tokens_est": 12294,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 16,
+        "notes": "COST OF THE WHOLE SESSION: 16826 structured tokens across 9 view reads vs 12294 tokens if the same 9 looks had been screenshots at CSS resolution \u2014 the structured route is 1.37x MORE expensive here, and that is the honest number to publish. It flips to 3.5x cheaper if the screenshots are Retina 2x on a high-res model (4784 each). SCROLL-AND-SEARCH, measured: the 'More' link on Hacker News is below the fold, so the router read the view, failed to find the target, scrolled 90% of a viewport, and read again \u2014 2 views for 1 target. Both channels pay this equally (a screenshot shows one screen too), so scrolling does not favour either side; what it does is make the AVERAGE cost of finding a target a function of where the target sits, which no single-screenshot benchmark captures. FIRST ROUND SCORED 3/6 AND ALL THREE FAILURES WERE THE ROUTER'S, NOT THE CHANNEL'S \u2014 this is the most useful result in the cell, so it is recorded rather than quietly fixed. (i) The router matched text lines and ignored the interactive line whose box contained them, so it aimed at MDN's 'Tutorial' assuming a link; the view had already published 'summary 16,409,224,32' on the line immediately above. The click was CORRECT \u2014 it toggled the disclosure widget, screenshot-confirmed collapsed \u2014 only the expectation was wrong. Reading the affordance off the joined control fixed it. (ii) The router expected a 'Pull requests' tab on torvalds/linux, a repo that has PRs disabled. The view did not offer one, and the screenshot confirms the tab genuinely does not exist. That is the desired failure mode \u2014 an explicit 'not found' rather than a plausible-looking click \u2014 so it is now a first-class negative-control step. (iii) A wrong URL regex. The lesson generalises past this probe: when a semantic router misfires, the first hypothesis should be that it under-used the view, not that the view lied. Here the view was complete in all three cases."
+      },
+      "runtime_verification": {
+        "method": "Outcome judged by the browser's own resulting URL and title (not by the view that chose the click), plus a post-click screenshot per step. Two steps verified by eye: DuckDuckGo (Images tab active with image results) and MDN (Tutorial section collapsed, chevron rotated, URL unchanged).",
+        "agreement": "8/8. The toggle step is the strongest evidence that the channel is self-sufficient: its effect is invisible in the URL but plainly visible IN the structured view (the view changed by +16 lines as the collapsed section let lower sidebar entries into the viewport), so the router could confirm its own action without ever taking a picture. One observation worth recording for a production router: DuckDuckGo raised a promotional overlay AFTER the click that the next view would have to declare as occluding \u2014 overlays appear as a consequence of navigation, not only on load."
+      },
+      "permissions_required": [
+        "None (loopback CDP socket). No login on any site."
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "results/web-battery/web-navigation.json",
+        "results/web-battery/nav-views/",
+        "results/web-battery/nav-shots/",
+        "campaign/macos/web-navigate.mjs"
       ]
     },
     {

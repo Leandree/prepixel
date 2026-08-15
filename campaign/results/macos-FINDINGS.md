@@ -143,9 +143,20 @@ both conditions** — parity, replicated. Methodology tightened over the Linux c
 two *independent subagents*, one shown only the structured views, the other only
 the screenshots, neither able to see the other's evidence.
 
-Retina addendum, macOS-only: screenshot the same page at native device resolution
-and the pixel side costs **5462 tokens — a 13.97x ratio**. Whether the harness
-downscales before sending quadruples the pixel bill, and no API forces the choice.
+Retina addendum, macOS-only — and the arithmetic is not the one you would guess.
+Image tokens are `w·h/750` **after** the API's own automatic downscale, and that
+downscale has two tiers: long edge ≤2576 px and ≤3.588 MP on the high-res models
+(Opus 4.7/4.8/5, Sonnet 5, Fable 5), ≤1568 px and ≤1.15 MP on the older ones.
+So the *same* 2× capture of this viewport (2560×1600 px) costs **4784 tokens on a
+high-res model (12.24x ratio) but only 1534 on a legacy one (3.92x)** — barely
+above the 1366 of a CSS-resolution shot, because the API scales it back down
+regardless. Two consequences for anyone budgeting a pixel agent: sending Retina
+pixels to a legacy-tier model buys resolution the model never receives (the one
+case where the pixel side is *not* punished), and on high-res models the same
+harness decision quietly quadruples the bill. We got this wrong first — a naive
+`w·h/750` on the raw capture reported 5462/13.97x — which is itself the finding:
+the pixel cost of a screen depends on a downscale rule that lives in the API, not
+in the harness. Helper implementing both tiers: `src/image-tokens.mjs`.
 
 ## Hard text: the glyph problem simply does not arise here
 
@@ -183,6 +194,96 @@ left enabled throughout and nothing was worked around — the refusal is the res
 That is why macOS is the OS where *"only the platform vendor can provide this
 channel"* is an observation rather than an argument, and why the AT-latch,
 thin-tree risk and annotation quality dominate every other macOS cell.
+
+## The real web deflates the synthetic result, and that is the finding
+
+Sixteen live public sites across six categories (vitrine, presse, commerce, media,
+reference, webapp, webapp-canvas), logged out, no lab pages: Amazon.fr, Le Monde,
+BBC, YouTube home and watch, GitHub, Wikipedia, MDN, Stripe, Vercel, Apple,
+leboncoin, DuckDuckGo, Hacker News, Excalidraw, OpenStreetMap.
+
+Averaged over the sixteen, the structured view costs **1360 tokens against 1366 for
+one CSS-resolution viewport screenshot — a ratio of 1.30x, not the 3.49x of the
+synthetic duel.** The mechanism is simple and should be stated plainly rather than
+buried: a screenshot has a **flat** cost set by the viewport, while a structured
+view scales with **information density**. The ratio is therefore a property of the
+page, not of the method — and the spread is enormous:
+
+| | ratio | reading |
+|---|---|---|
+| Vercel (vitrine) | **3.11x** | sparse marketing page, 439 tokens of structure |
+| Excalidraw, Stripe, Apple, OpenStreetMap | 1.7–1.8x | visually rich, semantically thin |
+| BBC, MDN, YouTube home | 1.3–1.6x | mixed |
+| Le Monde, GitHub, Wikipedia | 0.7–0.8x | text-dense: structure *loses* |
+| Amazon.fr (commerce) | 0.48x | 2834 tokens of structure |
+| Hacker News (webapp) | **0.47x** | pure text; structure costs **twice** a screenshot |
+
+By category: vitrine 2.20x, webapp-canvas 1.75x, presse 1.21x, reference 1.11x,
+media 0.97x, commerce 0.82x, webapp 0.80x. Note that this inverts the intuition
+that "text is cheap": the pages where structure loses are exactly the text-heavy
+ones, because that is where there is the most to say.
+
+Three corrections push back in the structured view's favour, and all three are
+real. A viewport screenshot shows **one screen**, and covering a full page took
+**7.6 screens on average** (19 on Stripe and on Amazon) — so the honest whole-page
+comparison is not one screenshot. At Retina 2x on a high-res model the screenshot
+costs 4784 tokens, moving the average to **4.54x** — but only 1534 on a legacy-tier
+model (**1.46x**), for the downscale reason above. And the structured view is
+**16 ms** to capture against a screenshot round-trip two to three orders of
+magnitude slower.
+
+The obstacle that actually bit was not rendering: **6/16 sites raised a consent
+banner**, and 7/16 carry canvas or video (all declared as `[pixels]` rects — the
+distiller fix earning its keep on production pages). The occlusion counts are a
+good density index in themselves: 0 on Hacker News's flat 1990s table, 12 on
+Wikipedia, 79 on BBC, 105 on Le Monde, 114 on Amazon, 142 on the YouTube watch
+page. A naive DOM reader would publish roughly a hundred clickable targets per
+commercial page that are not, in fact, hittable.
+
+## Can you actually browse this way? 8/8 — and the failures were mine, not the channel's
+
+Eight blind steps on five live sites, with the rule that *every* decision comes
+from the published view lines alone — no screenshot is read anywhere in the loop.
+**6/6 navigations, 1/1 toggle, 1/1 correct refusal.** Hacker News `new` → `/newest`;
+Wikipedia's in-article "Rasterisation" → the right anchor among competing
+occurrences; GitHub's `Insights` tab on a fully hydrated app shell → `/pulse`;
+MDN's sidebar link → `/Canvas_API/Tutorial`; DuckDuckGo's `Images` filter, verified
+by eye; and Hacker News `More` → `?p=2`, which sits **below the fold** and forced a
+scroll-and-search (2 views for 1 target — a cost both channels pay equally).
+
+Session cost, stated honestly: **16 826 structured tokens across 9 view reads vs
+12 294** for the same nine looks as CSS-resolution screenshots. The structured
+route was **1.37x more expensive**. It flips to ~3.5x cheaper only against Retina
+screenshots on a high-res model.
+
+The first round scored 3/8-equivalent, and **all three failures were the router's,
+not the channel's** — which is why they are recorded rather than quietly fixed:
+
+- It matched *text* lines and ignored the *interactive* line whose box contained
+  them, so it aimed at MDN's "Tutorial" believing it was a link. The view had
+  already published `summary 16,409,224,32` one line above. The click was
+  **correct** — screenshot-confirmed, it collapsed the disclosure widget — only the
+  expectation was wrong. Joining text to its innermost enclosing control (pure
+  coordinate arithmetic on already-published lines) fixed it, and that join is the
+  same operation a native router must perform on an `AXStaticText` inside an
+  `AXButton`.
+- It expected a "Pull requests" tab on `torvalds/linux`, a repo with PRs disabled.
+  The view **did not offer one**, and the screenshot confirms the tab does not
+  exist. That is the desired failure mode — explicit "not found" instead of a
+  plausible-looking click — so it is now a first-class negative control.
+- A wrong URL regex.
+
+The generalisation is worth more than the score: **when a semantic router misfires,
+the first hypothesis should be that it under-used the view, not that the view
+lied.** In all three cases the view was complete.
+
+The toggle step is the strongest single piece of evidence that the channel is
+self-sufficient. Its effect is invisible in the URL, but plainly visible *in the
+structured view* (+16 lines as the collapsed section let lower sidebar entries into
+the viewport), so the router confirmed its own action without ever taking a
+picture. One production note: DuckDuckGo raised a promotional overlay **after** the
+click — overlays arrive as a consequence of navigation, not only on load, so a
+router must re-read occlusion after every action.
 
 ## What's still open
 

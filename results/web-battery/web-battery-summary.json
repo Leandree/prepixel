@@ -1,0 +1,76 @@
+{
+  "n_sites": 16,
+  "n_ok": 16,
+  "avg_hardened_tokens": 1360,
+  "avg_naive_tokens": 14453,
+  "viewport_shot_tokens": 1366,
+  "viewport_shot_tokens_retina_highres": 4784,
+  "viewport_shot_tokens_retina_legacy": 1534,
+  "avg_ratio_viewport": 1.3,
+  "avg_ratio_viewport_retina_highres": 4.54,
+  "avg_ratio_viewport_retina_legacy": 1.46,
+  "avg_ratio_fullpage": 1.31,
+  "avg_screens_to_cover": 7.62,
+  "best_for_structure": "vercel",
+  "worst_for_structure": "hackernews",
+  "ratio_range_viewport": [
+    0.47,
+    3.11
+  ],
+  "by_category": {
+    "commerce": {
+      "n": 2,
+      "avg_ratio_viewport": 0.82,
+      "avg_hardened_tokens": 2004
+    },
+    "media": {
+      "n": 2,
+      "avg_ratio_viewport": 0.97,
+      "avg_hardened_tokens": 1536
+    },
+    "presse": {
+      "n": 2,
+      "avg_ratio_viewport": 1.21,
+      "avg_hardened_tokens": 1280
+    },
+    "reference": {
+      "n": 2,
+      "avg_ratio_viewport": 1.11,
+      "avg_hardened_tokens": 1352
+    },
+    "vitrine": {
+      "n": 3,
+      "avg_ratio_viewport": 2.2,
+      "avg_hardened_tokens": 669
+    },
+    "webapp": {
+      "n": 3,
+      "avg_ratio_viewport": 0.8,
+      "avg_hardened_tokens": 1950
+    },
+    "webapp-canvas": {
+      "n": 2,
+      "avg_ratio_viewport": 1.75,
+      "avg_hardened_tokens": 782
+    }
+  },
+  "sites_with_consent_banner": [
+    "stripe",
+    "vercel",
+    "youtube-home",
+    "bbc-news",
+    "amazon-fr",
+    "leboncoin"
+  ],
+  "sites_with_canvas_or_video": [
+    "excalidraw",
+    "apple",
+    "stripe",
+    "vercel",
+    "youtube-home",
+    "youtube-watch",
+    "amazon-fr"
+  ],
+  "avg_view_ms": 15.81,
+  "note": "ratio_viewport = viewport screenshot tokens / hardened structured-view tokens (>1 = structure cheaper). Retina variants use src/image-tokens.mjs (post-downscale, two tiers)."
+}

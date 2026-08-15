@@ -1,0 +1,286 @@
+a 32,30,74,68 id=marketing-header-logo aria-label=Vercel href=/home
+button 130,32,189,64 type=button
+text 154,46,115,36 "Products"
+button 319,32,209,64 type=button
+text 343,46,135,36 "Resources"
+a 527,32,178,64 href=/enterprise
+text 551,46,130,36 "Enterprise"
+a 705,32,137,64 href=/pricing
+text 729,46,89,36 "Pricing"
+a 1985,32,201,64 role=link type=submit href=/contact/sales
+text 2009,46,153,36 "Get a Demo"
+a 2210,32,128,64 role=link href=/login type=submit
+text 2234,46,80,36 "Log In"
+a 2362,32,150,64 role=link href=/signup type=submit
+text 2386,46,102,36 "Sign Up"
+text 959,174,304,36 "Ship 26 is coming to SF"
+a 1295,160,307,64 role=link href=https://vercel.fyi/qqAGIC2 type=submit
+text 1331,174,195,36 "Get your ticket"
+text 1131,1088,299,62 "Drop to deploy"
+[pixels] canvas 338,168,1884,1256
+text 48,536,694,295 "Agentic Infrastructure"
+a 48,876,247,80 role=link href=/new type=submit
+text 84,895,175,41 "Deploy now"
+a 319,876,260,80 role=link type=submit href=/contact/sales
+text 355,895,188,41 "Talk to sales"
+text 1800,671,255,41 "For coding agents"
+text 1800,735,342,41 "To ship apps and agents"
+text 1800,799,304,41 "Automated by agents"
+text 48,1999,1338,258 "Build agents on infrastructure that thinks like them"
+[pixels] img 48,2328,1629,859 alt=Build agents on infrastructure that thinks like them src=https://lishhsx6kmthaacj.public.blob.vercel-storage.com/notion-desktop-light.webp
+text 1926,2476,462,62 "Notion powers millions"
+text 1926,2540,463,126 "of agent conversations daily on Vercel."
+text 1926,2749,112,36 "Features"
+text 1926,2801,289,36 "Durable Orchestration"
+text 1926,2853,333,36 "Sandboxed Environments"
+text 1926,2905,241,36 "AI Model Gateway"
+text 1926,2957,190,36 "Fluid Compute"
+text 883,3638,1159,258 "Ship apps that scale from zero to millions instantly"
+[pixels] img 883,3967,1629,913 alt=Ship apps that scale from zero to millions instantly src=https://lishhsx6kmthaacj.public.blob.vercel-storage.com/zapier-desktop-light.webp
+text 48,4115,370,126 "Zapier serves over 100 million"
+text 48,4179,485,126 "monthly website visits on Vercel."
+text 48,4388,112,36 "Features"
+text 48,4440,198,36 "Global Delivery"
+text 48,4492,344,36 "Deployment Environments"
+text 48,4544,275,36 "Serverless Functions"
+text 48,4596,323,36 "Web Application Firewall"
+text 48,5276,978,258 "Host platforms that serve every customer"
+[pixels] img 48,5605,1629,913 alt=Host platforms that serve every customer src=https://lishhsx6kmthaacj.public.blob.vercel-storage.com/mintlify-desktop-light.webp
+text 1926,5722,324,190 "Mintlify powers documentation for over 20,000"
+text 1926,5914,434,62 "companies on Vercel."
+text 1926,6059,112,36 "Features"
+text 1926,6111,207,36 "Tenant Isolation"
+text 1926,6163,279,36 "Domain Management"
+text 1926,6215,320,36 "Custom SSL Certificates"
+text 1926,6267,180,36 "Preview URLs"
+text 48,6928,790,146 "Recently shipped"
+a 50,7219,1210,1160 href=/eve
+[pixels] img 90,8223,154,48 alt=Eve src=/vc-ap-vercel-marketing/_next/static/immutable/media/eve-light.1e3bxs4ejw62x.svg
+text 90,8301,519,36 "A framework for building durable agents."
+a 1300,7219,1210,560 href=/passport
+text 2049,7357,101,36 "VERCEL"
+text 2190,7357,134,36 "PASSPORT"
+text 2190,7405,151,36 "PASAPORTE"
+text 2190,7453,168,36 "PASSAPORTO"
+text 2190,7501,139,36 "パスポート"
+text 2252,8021,106,28 "ISS 2026"
+text 1340,7590,179,62 "Passport"
+text 1340,7661,495,76 "Secure every internal agent, app, and deployment with your identity provider."
+a 1300,7819,1210,560 href=https://vercel.com/blog/dockerfile-on-vercel
+text 1822,7931,14,31 "▲"
+text 1851,7931,187,31 "vercel deploy"
+text 1822,7979,144,31 "Vercel CLI"
+text 1822,8027,14,31 "✓"
+text 1851,8027,533,31 "Building image from Dockerfile.vercel"
+text 1822,8067,14,31 "✓"
+text 1851,8067,562,31 "Stored image in your project's registry"
+text 1822,8107,14,31 "✓"
+text 1851,8107,360,31 "Deployed to Fluid compute"
+text 1822,8155,158,31 "Production:"
+text 1995,8155,403,31 "https://my-server.vercel.app"
+text 1340,8190,217,62 "Containers"
+text 1340,8261,375,76 "Run production workloads in isolated containers on Vercel."
+text 674,8608,1213,146 "Built by you, or your agents"
+a 877,8817,247,80 role=link href=/new type=submit
+text 913,8836,175,41 "Deploy now"
+button 1149,8817,534,80 type=submit aria-label=Onboard your agent
+text 1297,8836,298,41 "Onboard your agent"
+text 48,9139,162,36 "Agent Stack"
+a 44,9205,101,48 href=/ai-sdk
+text 48,9211,93,36 "AI SDK"
+a 44,9261,157,48 href=/ai-gateway
+text 48,9267,149,36 "AI Gateway"
+a 44,9317,121,48 href=/sandbox
+text 48,9323,113,36 "Sandbox"
+a 44,9373,144,48 href=/workflows
+text 48,9379,136,36 "Workflows"
+a 44,9429,207,48 href=/connect
+text 48,9435,108,36 "Connect"
+text 184,9439,48,28 "New"
+a 44,9485,213,48 href=/passport
+text 48,9491,114,36 "Passport"
+text 190,9495,48,28 "New"
+a 44,9541,145,48 href=/eve
+text 48,9547,45,36 "eve"
+text 121,9551,48,28 "New"
+text 467,9139,182,36 "Core Platform"
+a 463,9205,87,48 href=/products/previews
+text 467,9211,79,36 "CI/CD"
+a 463,9261,221,48 href=/cdn
+text 467,9267,213,36 "Content Delivery"
+a 463,9317,194,48 href=/fluid
+text 467,9323,186,36 "Fluid Compute"
+a 463,9373,176,48 href=/products/observability
+text 467,9379,168,36 "Observability"
+text 885,9139,109,36 "Security"
+a 881,9205,230,48 href=/security
+text 885,9211,222,36 "Platform Security"
+a 881,9261,66,48 href=/security/web-application-firewall
+text 885,9267,58,36 "WAF"
+a 881,9317,229,48 href=/security/bot-management
+text 885,9323,221,36 "Bot Management"
+a 881,9373,87,48 href=/botid
+text 885,9379,79,36 "Bot ID"
+text 1304,9139,69,36 "Tools"
+a 1300,9205,249,48 href=/drop
+text 1304,9211,149,36 "Vercel Drop"
+text 1481,9215,48,28 "New"
+a 1300,9261,172,48 href=/agent
+text 1304,9267,164,36 "Vercel Agent"
+a 1300,9317,268,48 href=/plugin
+text 1304,9323,168,36 "Vercel Plugin"
+text 1500,9327,48,28 "New"
+a 1300,9373,160,48 href=https://skills.sh
+text 1304,9379,152,36 "Agent Skills"
+a 1300,9429,97,48 href=/frameworks/nextjs
+text 1304,9435,89,36 "Next.js"
+a 1300,9485,121,48 href=/domains
+text 1304,9491,113,36 "Domains"
+a 1300,9541,42,48 href=https://v0.app
+text 1304,9547,34,36 "v0"
+text 1723,9139,161,36 "Frameworks"
+a 1719,9205,145,48 href=https://eve.dev/
+text 1723,9211,45,36 "eve"
+text 1796,9215,48,28 "New"
+a 1719,9261,70,48 href=/docs/frameworks/full-stack/nuxt
+text 1723,9267,62,36 "Nuxt"
+a 1719,9317,122,48 href=/docs/frameworks/full-stack/sveltekit
+text 1723,9323,114,36 "SvelteKit"
+a 1719,9373,71,48 href=/docs/frameworks/backend/nitro
+text 1723,9379,63,36 "Nitro"
+a 1719,9429,137,48 href=/solutions/turborepo
+text 1723,9435,129,36 "Turborepo"
+a 1719,9485,194,48 href=/docs/frameworks/full-stack/tanstack-start
+text 1723,9491,186,36 "Tanstack Start"
+a 1719,9541,108,48 href=/docs/frameworks/backend/fastapi
+text 1723,9547,100,36 "FastAPI"
+a 1719,9597,79,48 href=/docs/frameworks/backend/xmcp
+text 1723,9603,71,36 "xmcp"
+a 1719,9653,200,48 href=/docs/frameworks
+text 1723,9659,192,36 "All frameworks"
+text 2141,9139,70,36 "SDKs"
+a 2137,9205,151,48 href=/docs/rest-api/sdk
+text 2141,9211,143,36 "Vercel SDK"
+a 2137,9261,284,48 href=/workflows
+text 2141,9267,184,36 "Workflow SDK"
+text 2353,9271,48,28 "New"
+a 2137,9317,140,48 href=/docs/flags/flags-sdk-reference
+text 2141,9323,132,36 "Flags SDK"
+a 2137,9373,223,48 href=/chat
+text 2141,9379,123,36 "Chat SDK"
+text 2292,9383,48,28 "New"
+a 2137,9429,260,48 href=/docs/queues/sdk
+text 2141,9435,160,36 "Queues SDK"
+text 2329,9439,48,28 "New"
+a 2137,9485,171,48 href=https://streamdown.ai
+text 2141,9491,163,36 "Streamdown"
+text 48,9779,67,36 "Build"
+a 44,9845,111,48 href=/solutions/ai-apps
+text 48,9851,103,36 "AI Apps"
+a 44,9901,138,48 href=/solutions/web-apps
+text 48,9907,130,36 "Web Apps"
+a 44,9957,209,48 href=/solutions/marketing-sites
+text 48,9963,201,36 "Marketing Sites"
+a 44,10013,132,48 href=/solutions/multi-tenant-saas
+text 48,10019,124,36 "Platforms"
+a 44,10069,147,48 href=/solutions/composable-commerce
+text 48,10075,139,36 "Commerce"
+a 44,10125,251,48 href=/solutions/platform-engineering
+text 48,10131,243,36 "Platform Engineers"
+a 44,10181,231,48 href=/solutions/design-engineering
+text 48,10187,223,36 "Design Engineers"
+text 467,9779,74,36 "Learn"
+a 463,9845,73,48 href=/docs
+text 467,9851,65,36 "Docs"
+a 463,9901,66,48 href=/blog
+text 467,9907,58,36 "Blog"
+a 463,9957,147,48 href=/changelog
+text 467,9963,139,36 "Changelog"
+a 463,10013,222,48 href=/kb
+text 467,10019,214,36 "Knowledge Base"
+a 463,10069,127,48 href=/academy
+text 467,10075,119,36 "Academy"
+a 463,10125,105,48 href=/i
+text 467,10131,97,36 "Articles"
+a 463,10181,155,48 href=https://community.vercel.com
+text 467,10187,147,36 "Community"
+text 885,9779,99,36 "Explore"
+a 881,9845,147,48 href=/customers
+text 885,9851,139,36 "Customers"
+a 881,9901,168,48 href=/marketplace
+text 885,9907,160,36 "Marketplace"
+a 881,9957,139,48 href=/templates
+text 885,9963,131,36 "Templates"
+a 881,10013,192,48 href=/partners/solution-partners
+text 885,10019,184,36 "Partner Finder"
+a 881,10069,177,48 href=/partners/aws
+text 885,10075,169,36 "Vercel + AWS"
+text 1304,9779,124,36 "Company"
+a 1300,9845,85,48 href=/about
+text 1304,9851,77,36 "About"
+a 1300,9901,107,48 href=/careers
+text 1304,9907,99,36 "Careers"
+a 1300,9957,80,48 href=/press
+text 1304,9963,72,36 "Press"
+a 1300,10013,94,48 href=/events
+text 1304,10019,86,36 "Events"
+a 1300,10069,118,48 href=/startups
+text 1304,10075,110,36 "Startups"
+a 1300,10125,241,48 href=/shipped
+text 1304,10131,233,36 "Shipped on Vercel"
+a 1300,10181,290,48 href=/open-source-program
+text 1304,10187,282,36 "Open Source Program"
+a 1300,10237,138,48 href=/enterprise
+text 1304,10243,130,36 "Enterprise"
+a 1300,10293,97,48 href=/pricing
+text 1304,10299,89,36 "Pricing"
+a 1300,10349,67,48 href=/help
+text 1304,10355,59,36 "Help"
+text 1723,9779,170,36 "Legal & Trust"
+a 1719,9845,185,48 href=/legal/privacy-policy
+text 1723,9851,177,36 "Privacy Policy"
+a 1719,9901,221,48 href=/legal/terms
+text 1723,9907,213,36 "Terms of Service"
+a 1719,9957,180,48 href=/legal/cookie-policy
+text 1723,9963,172,36 "Cookie Policy"
+a 1719,10013,63,48 href=/legal/dpa
+text 1723,10019,55,36 "DPA"
+a 1719,10069,293,48 href=/legal/acceptable-use-policy
+text 1723,10075,285,36 "Acceptable Use Policy"
+a 1719,10125,280,48 href=/legal
+text 1723,10131,272,36 "Legal (all documents)"
+a 1719,10181,166,48 href=https://security.vercel.com
+text 1723,10187,158,36 "Trust Center"
+a 1719,10237,91,48 href=https://vercel-status.com
+text 1723,10243,83,36 "Status"
+button 1719,10293,257,48 id=fides-modal-link type=button
+text 1723,10299,249,36 "Cookie Preferences"
+text 2141,9779,81,36 "Social"
+a 2137,9845,96,48 href=https://github.com/vercel
+text 2141,9851,88,36 "GitHub"
+a 2137,9901,25,48 href=https://x.com/vercel
+text 2141,9907,17,36 "X"
+a 2137,9957,117,48 href=https://linkedin.com/company/vercel
+text 2141,9963,109,36 "LinkedIn"
+a 2137,10013,114,48 href=https://youtube.com/@VercelHQ
+text 2141,10019,106,36 "YouTube"
+a 2137,10069,137,48 href=https://www.instagram.com/vercel/
+text 2141,10075,129,36 "Instagram"
+a 48,10449,371,64 href=/home
+[pixels] img 48,10467,32,28 alt=Vercel src=/vc-ap-vercel-marketing/_next/static/immutable/media/vercel-light.3_gxxexgi1nmy.svg
+a 8,10577,312,68 href=https://vercel-status.com
+text 80,10595,216,31 "LOADING STATUS…"
+text 2366,10588,299,36 "Select a display theme:"
+label 2368,10587,48,48
+text 2391,10613,92,36 "system"
+label 2416,10587,48,48
+text 2439,10613,56,36 "light"
+label 2464,10587,48,48
+text 2487,10613,58,36 "dark"
+text 64,1367,739,78 "This site uses tracking technologies. You may opt in or opt out of the use of these technologies."
+button 64,1472,119,64 type=button id=fides-reject-all-button
+text 90,1486,67,36 "Deny"
+button 207,1472,183,64 type=button id=fides-accept-all-button
+text 233,1486,131,36 "Accept all"
+button 566,1472,274,64 type=button id=fides-manage-preferences-button
+text 590,1486,226,36 "Consent Settings"

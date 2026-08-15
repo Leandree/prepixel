@@ -1,0 +1,397 @@
+a 7,34,172,100 id=header-logo-wrapper href=/ aria-label=DuckDuckGo home
+input 192,40,1272,88 id=search_form_input name=q role=combobox placeholder=Faites une recherche privée value=graphics pipeline value="graphics pipeline"
+button 1480,52,64,64 type=submit aria-label=search
+button 2458,46,64,64 id=header-hamburger-menu-btn
+text 2474,62,169,33 "Ouvrir le menu"
+a 220,140,98,76 href=/?q=graphics+pipeline&ia=web
+text 258,160,60,35 "Tous"
+a 350,140,94,76 href=/?q=graphics+pipeline&ia=images&iax=images
+text 350,160,94,35 "Images"
+a 476,140,90,76 href=/?q=graphics+pipeline&ia=videos&iax=videos
+text 476,160,90,35 "Vidéos"
+a 598,140,131,76 href=/?q=graphics+pipeline&ia=news&iar=news
+text 598,160,131,35 "Actualités"
+text 761,160,55,35 "Plus"
+a 743,230,303,42 href=/?q=graphics+pipeline&iaxm=maps
+text 755,237,54,26 "Carte"
+a 743,272,303,42 href=/?q=graphics+pipeline&ia=shopping&iax=shopping
+text 755,279,93,26 "Shopping"
+a 1039,152,242,52 href=/?q=graphics+pipeline&ia=web&assist=true
+text 1095,161,170,34 "Search Assist"
+a 1297,150,167,56 href=/?q=graphics+pipeline&ia=chat
+text 1352,160,96,35 "Duck.ai"
+button 1480,150,64,56
+text 1526,158,324,35 "Paramètres de recherche"
+a 1480,150,64,58
+text 268,243,100,35 "Protégé"
+a 520,243,86,35
+text 520,243,86,35 "France"
+text 678,243,292,35 "Filtre parental : modéré"
+text 1042,243,212,35 "Date indifférente"
+a 260,350,1224,43 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+text 260,345,326,53 "Graphics pipeline"
+text 260,428,1223,119 "The computer graphics pipeline, or simply graphics pipeline, also known as the rendering pipeline, is a series of procedures for transforming a three-dimensional scene into a two-dimensional representation on a screen."
+text 260,512,1175,77 "Once a 3D model is generated, the 3D computer graphics pipeline converts the model into a visually perceivable format on the computer display."
+text 260,553,1194,119 "Due to the dependence on specific software and hardware configurations and desired display attributes, a universally applicable graphics pipeline does not exist"
+a 962,637,271,35 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+text 962,637,271,35 "Suite dans Wikipedia"
+text 866,792,101,33 "Source :"
+a 967,792,116,33 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+text 967,792,116,33 "Wikipedia"
+text 1105,792,293,33 "Cela vous a-t-il été utile ?"
+button 1406,786,48,48 type=button aria-label=Positive feedback
+button 1462,786,48,48 type=button aria-label=Negative feedback
+button 1462,887,64,64 type=button
+a 220,883,64,64 href=/?q=graphics%20pipeline+site:en.wikipedia.org
+[pixels] img 236,899,32,32 src=/assets/icons/favicons/wikipedia.png
+text 300,879,127,35 "Wikipedia"
+a 300,911,588,36 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+text 300,913,90,33 "https://"
+text 390,913,194,33 "en.wikipedia.org"
+text 584,913,21,33 "›"
+text 605,913,283,33 "wiki › Graphics_pipeline"
+a 220,971,1256,53 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+text 220,970,551,53 "Graphics pipeline - Wikipedia"
+text 220,1038,158,35 "Learn how a"
+text 378,1038,112,35 "graphics"
+text 497,1038,103,35 "pipeline"
+text 220,1038,1289,119 "transforms a 3D scene into a 2D representation on a screen. The article explains the concepts, structure, and tasks of the application, geometry, and rasterization steps, as well as the world coordinate system and the vertex"
+text 805,1122,103,35 "pipeline"
+text 908,1122,7,35 "."
+button 1462,1228,64,64 type=button
+a 220,1224,64,64 href=/?q=graphics%20pipeline+site:learn.microsoft.com
+[pixels] img 236,1240,32,32 src=//external-content.duckduckgo.com/ip3/learn.microsoft.com.ico
+text 300,1220,201,35 "Microsoft Learn"
+a 300,1253,1071,36 href=https://learn.microsoft.com/fr-fr/windows/uwp/graphics-concepts/graphics-pipeline
+text 300,1255,92,33 "https://"
+text 392,1255,237,33 "learn.microsoft.com"
+text 629,1255,22,33 "›"
+text 651,1255,720,33 "fr-fr › windows › uwp › graphics-concepts › graphics-pipeline"
+a 220,1312,1256,53 href=https://learn.microsoft.com/fr-fr/windows/uwp/graphics-concepts/graphics-pipeline
+text 220,1311,1047,53 "Pipeline graphique - UWP applications | Microsoft Learn"
+text 220,1380,37,35 "Le"
+text 257,1380,103,35 "pipeline"
+text 220,1380,1278,119 "graphique Direct3D est conçu pour la génération de graphismes destinés aux applications de jeu en temps réel. Les données circulent de l'entrée vers la sortie en transitant par chacune des phases configurables ou programmables de ce"
+text 815,1463,103,35 "pipeline"
+text 918,1463,7,35 "."
+button 220,1518,1304,101 type=button
+text 220,1551,204,35 "Vue d’ensemble"
+button 220,1621,1304,101 type=button
+text 220,1654,344,35 "Étape assembleur d’entrée"
+button 220,1724,1304,101 type=button
+text 220,1757,368,35 "Étape du nuanceur de vertex"
+a 220,1859,1304,37 href=https://learn.microsoft.com/fr-fr/windows/uwp/graphics-concepts/graphics-pipeline
+text 220,1860,410,35 "Voir plus sur learn.microsoft.com"
+button 1462,1964,64,64 type=button
+a 220,1960,64,64 href=/?q=graphics%20pipeline+site:graphics.stanford.edu
+[pixels] img 236,1976,32,32 src=//external-content.duckduckgo.com/ip3/graphics.stanford.edu.ico
+text 300,1955,536,35 "Computer Graphics at Stanford University"
+a 300,1988,1124,36 href=https://graphics.stanford.edu/courses/cs448a-01-fall/lectures/lecture2/gpipeline.2up.pdf
+text 300,1990,90,33 "https://"
+text 390,1990,261,33 "graphics.stanford.edu"
+text 651,1990,22,33 "›"
+text 673,1990,751,33 "courses › cs448a-01-fall › lectures › lecture2 › gpipeline.2up.pdf"
+a 220,2048,1256,53 href=https://graphics.stanford.edu/courses/cs448a-01-fall/lectures/lecture2/gpipeline.2up.pdf
+text 228,2058,44,29 "PDF"
+text 281,2047,816,53 "The Graphics Pipeline - Stanford University"
+text 220,2115,205,35 "Learn about the"
+text 425,2115,112,35 "graphics"
+text 544,2115,103,35 "pipeline"
+text 220,2115,1295,77 ", from application commands to display pixels, and the computational and communication requirements for each stage. Explore the history, evolution and design of"
+text 1387,2157,112,35 "graphics"
+text 220,2199,290,35 "architectures and APIs."
+a 220,2294,527,49 href=/?q=graphics+pipeline&ia=images&iax=images
+text 268,2294,191,48 "Images de :"
+text 459,2294,288,48 "graphics pipeline"
+text 1059,2301,425,35 "Images générées par l'IA : afficher"
+a 220,2374,714,360 href=/?q=graphics+pipeline&ia=images&iax=images&iai=https%3A%2F%2Fleeyngdo.github.io%2Fassets%2Fimages%2Fcomputer-graphics%2Frendering-pipeline%2Fgraphics-pipeline.png aria-label=Bringing it back to basics
+[pixels] img 220,2374,714,360 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.BWYPNxoN6QlXc-_FiAID1gHaCm%3Fpid%3DApi&f=1&ipt=c2078bb64e542c2d2b6cf20824a4436fc1b0064da61237e071a6ace2049a0598&ipo=images alt=Bringing it back to basics
+a 220,2750,714,83 href=https://yonnis.dev/bringing-it-back-to-basics
+text 220,2749,294,33 "Bringing it back to basics"
+[pixels] img 220,2793,32,32 src=//external-content.duckduckgo.com/ip3/yonnis.dev.ico alt=
+text 260,2793,116,30 "yonnis.dev"
+button 886,2785,48,48 type=button aria-label=menu
+a 958,2374,566,360 href=/?q=graphics+pipeline&ia=images&iax=images&iai=https%3A%2F%2Fimage1.slideserve.com%2F2359598%2Fslide1-n.jpg aria-label=PPT - 3D Graphics Rendering Pipeline PowerPoint Presentation, free ...
+[pixels] img 958,2374,566,360 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.kL8OUCk346CcQjBLt2ctFQHaFj%3Fpid%3DApi&f=1&ipt=8c5245a401080db5d57d75683220c77225364c0c3041a2d5d1c9c664245290d5&ipo=images alt=PPT - 3D Graphics Rendering Pipeline PowerPoint Presentation, free ...
+a 958,2750,566,83 href=https://www.slideserve.com/jasper/3d-graphics-rendering-pipeline
+text 958,2749,817,33 "PPT - 3D Graphics Rendering Pipeline PowerPoint Presentation, free ..."
+[pixels] img 958,2793,32,32 src=//external-content.duckduckgo.com/ip3/www.slideserve.com.ico alt=
+text 998,2793,162,30 "slideserve.com"
+button 1476,2785,48,48 type=button aria-label=menu
+a 220,2865,592,360 href=/?q=graphics+pipeline&ia=images&iax=images&iai=https%3A%2F%2Fwww.gamersnexus.net%2Fimages%2Fmedia%2F2016%2Fgpu%2Fpipeline%2Fgpu-render-pipeline.jpg aria-label=A question about the Graphics pipeline, ROPs, TMUs, SPs (or CUDA Cores ...
+[pixels] img 220,2865,592,360 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.qAXsFYqWf-crR_hzg_nNfAHaFA%3Fpid%3DApi&f=1&ipt=d58292ccada96f153fdf887c09238d919ccd0d33cfca139b70acba9e37b5a83c&ipo=images alt=A question about the Graphics pipeline, ROPs, TMUs, SPs (or CUDA Cores ...
+a 220,3241,592,83 href=https://www.reddit.com/r/Amd/comments/dgdczj/a_question_about_the_graphics_pipeline_rops_tmus/
+text 220,3240,879,33 "A question about the Graphics pipeline, ROPs, TMUs, SPs (or CUDA Cores ..."
+[pixels] img 220,3284,32,32 src=//external-content.duckduckgo.com/ip3/www.reddit.com.ico alt=
+text 260,3284,117,30 "reddit.com"
+button 764,3276,48,48 type=button aria-label=menu
+a 836,2865,686,360 href=/?q=graphics+pipeline&ia=images&iax=images&iai=https%3A%2F%2Falchetron.com%2Fcdn%2Fgraphics-pipeline-bfa25159-5f3b-44c9-b98d-d31c5d8741b-resize-750.jpg aria-label=Graphics pipeline - Alchetron, The Free Social Encyclopedia
+[pixels] img 836,2865,686,360 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.tw-HZM2aWwUpHFdc7q94rAHaDg%3Fpid%3DApi&f=1&ipt=7442ac278d28c83a6e9c522568f14b4c31d5d258c3eb18148fe206954f596856&ipo=images alt=Graphics pipeline - Alchetron, The Free Social Encyclopedia
+a 836,3241,686,83 href=https://alchetron.com/Graphics-pipeline
+text 836,3240,695,33 "Graphics pipeline - Alchetron, The Free Social Encyclopedia"
+[pixels] img 836,3284,32,32 src=//external-content.duckduckgo.com/ip3/alchetron.com.ico alt=
+text 876,3284,154,30 "alchetron.com"
+button 1474,3276,48,48 type=button aria-label=menu
+a 697,3348,350,68 href=/?q=graphics+pipeline&ia=images&iax=images
+text 763,3364,178,35 "Plus d'images"
+text 1103,3439,293,33 "Cela vous a-t-il été utile ?"
+button 1404,3432,48,48 type=button aria-label=Positive feedback
+button 1460,3432,48,48 type=button aria-label=Negative feedback
+button 1462,3533,64,64 type=button
+a 220,3529,64,64 href=/?q=graphics%20pipeline+site:learn.microsoft.com
+[pixels] img 236,3545,32,32 src=//external-content.duckduckgo.com/ip3/learn.microsoft.com.ico
+text 300,3525,201,35 "Microsoft Learn"
+a 300,3558,1176,36 href=https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-graphics-pipeline
+text 300,3560,92,33 "https://"
+text 392,3560,237,33 "learn.microsoft.com"
+text 629,3560,22,33 "›"
+text 651,3560,923,33 "en-us › windows › win32 › direct3d11 › overviews-direct3d-11-graphics-pipeline"
+a 220,3617,1256,53 href=https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-graphics-pipeline
+text 220,3616,911,53 "Graphics pipeline - Win32 apps | Microsoft Learn"
+text 220,3685,390,35 "The Direct3D 11 programmable"
+text 610,3685,103,35 "pipeline"
+text 713,3685,342,35 "is designed for generating"
+text 1055,3685,112,35 "graphics"
+text 220,3685,1197,77 "for realtime gaming applications. This section describes the Direct3D 11 programmable"
+text 1058,3727,103,35 "pipeline"
+text 220,3727,1231,77 ". The following diagram shows the data flow from input to output through each of the programmable stages."
+button 1462,3875,64,64 type=button
+a 220,3871,64,64 href=/?q=graphics%20pipeline+site:fr.wikipedia.org
+[pixels] img 236,3887,32,32 src=/assets/icons/favicons/wikipedia.png
+text 300,3866,127,35 "Wikipédia"
+a 300,3899,504,36 href=https://fr.wikipedia.org/wiki/Pipeline_3D
+text 300,3901,91,33 "https://"
+text 391,3901,181,33 "fr.wikipedia.org"
+text 572,3901,21,33 "›"
+text 594,3901,210,33 "wiki › Pipeline_3D"
+a 220,3959,1256,53 href=https://fr.wikipedia.org/wiki/Pipeline_3D
+text 220,3958,454,53 "Pipeline 3D — Wikipédia"
+text 220,4026,143,35 "On appelle"
+text 363,4026,103,35 "pipeline"
+text 220,4026,1266,119 "3D la succession des opérations généralement réalisées par une carte graphique nécessaires au rendu d'un lot de données (maillages et textures principalement) sur un tampon chromatique, la plupart du temps ce dernier est ensuite affiché à l'écran."
+button 1462,4216,64,64 type=button
+a 220,4212,64,64 href=/?q=graphics%20pipeline+site:pcpartsgeek.com
+[pixels] img 236,4228,32,32 src=//external-content.duckduckgo.com/ip3/pcpartsgeek.com.ico
+text 300,4208,224,35 "pcpartsgeek.com"
+a 300,4240,529,36 href=https://pcpartsgeek.com/graphics-pipeline/
+text 300,4242,91,33 "https://"
+text 391,4242,208,33 "pcpartsgeek.com"
+text 599,4242,22,33 "›"
+text 620,4242,208,33 "graphics-pipeline"
+a 220,4300,1256,53 href=https://pcpartsgeek.com/graphics-pipeline/
+text 220,4299,1245,53 "Graphics Pipeline - Definition & Detailed Explanation - Computer ..."
+text 220,4367,146,35 "14 avr. 2026"
+text 393,4367,167,35 "Learn what a"
+text 560,4367,112,35 "graphics"
+text 679,4367,103,35 "pipeline"
+text 220,4367,1296,77 "is, how it works, and what stages and shaders are involved in rendering images. Also, explore some common"
+text 839,4409,112,35 "graphics"
+text 951,4409,254,35 "APIs that utilize the"
+text 1206,4409,112,35 "graphics"
+text 1324,4409,103,35 "pipeline"
+text 220,4409,1291,77 "for 2D and 3D"
+text 317,4451,112,35 "graphics"
+text 429,4451,7,35 "."
+button 1462,4557,64,64 type=button
+a 220,4553,64,64 href=/?q=graphics%20pipeline+site:leeyngdo.github.io
+[pixels] img 236,4569,32,32 src=//external-content.duckduckgo.com/ip3/leeyngdo.github.io.ico
+text 300,4549,238,35 "leeyngdo.github.io"
+a 300,4582,1016,36 href=https://leeyngdo.github.io/blog/computer-graphics/2024-02-29-graphics-pipeline/
+text 300,4584,92,33 "https://"
+text 392,4584,221,33 "leeyngdo.github.io"
+text 613,4584,22,33 "›"
+text 634,4584,682,33 "blog › computer-graphics › 2024-02-29-graphics-pipeline"
+a 220,4641,1256,53 href=https://leeyngdo.github.io/blog/computer-graphics/2024-02-29-graphics-pipeline/
+text 220,4640,559,53 "[Graphics] Rendering Pipeline"
+text 220,4709,343,35 "At the most basic level, the"
+text 563,4709,112,35 "graphics"
+text 682,4709,103,35 "pipeline"
+text 785,4709,173,35 ", or rendering"
+text 959,4709,103,35 "pipeline"
+text 220,4709,1256,77 "delineates a series of operations facilitating the transformation of a 3D object into a 2D pixel coordinate on the screen."
+button 1462,4857,64,64 type=button
+a 220,4853,64,64 href=/?q=graphics%20pipeline+site:www.geeksforgeeks.org
+[pixels] img 236,4869,32,32 src=//external-content.duckduckgo.com/ip3/www.geeksforgeeks.org.ico
+text 300,4849,203,35 "GeeksForGeeks"
+a 300,4881,917,36 href=https://www.geeksforgeeks.org/blogs/opengl-rendering-pipeline-overview/
+text 300,4883,91,33 "https://"
+text 391,4883,285,33 "www.geeksforgeeks.org"
+text 676,4883,22,33 "›"
+text 698,4883,519,33 "blogs › opengl-rendering-pipeline-overview"
+a 220,4941,1256,53 href=https://www.geeksforgeeks.org/blogs/opengl-rendering-pipeline-overview/
+text 220,4940,1114,53 "OpenGL Rendering Pipeline | An Overview - GeeksforGeeks"
+text 220,5008,147,35 "10 juin 2025"
+text 394,5008,302,35 "The OpenGL Rendering"
+text 696,5008,104,35 "Pipeline"
+text 800,5008,305,35 "is the magic behind the"
+text 1105,5008,112,35 "graphics"
+text 220,5008,1273,119 "in games, apps, and animations. Its nine steps, starting with vertex data and ending with a finished image, work together to create what you see on your screen."
+button 1462,5198,64,64 type=button
+a 220,5194,64,64 href=/?q=graphics%20pipeline+site:pipeline.graphics
+[pixels] img 236,5210,32,32 src=//external-content.duckduckgo.com/ip3/pipeline.graphics.ico
+text 300,5190,219,35 "pipeline.graphics"
+a 300,5223,219,36 href=http://pipeline.graphics/
+text 300,5225,204,33 "pipeline.graphics"
+a 220,5282,1256,53 href=http://pipeline.graphics/
+text 220,5281,150,53 "Pipeline"
+text 220,5350,531,35 "Create and edit all possible shaders in the"
+text 751,5350,112,35 "graphics"
+text 870,5350,103,35 "pipeline"
+text 220,5350,1281,119 ". This includes vertex, pixel, geometry, hull, domain, compute, amplification, and mesh shaders. There is also preliminary support for raytracing shaders. A powerful buffer editor allows you to easily see and edit all types of buffers."
+button 1462,5540,64,64 type=button
+a 220,5536,64,64 href=/?q=graphics%20pipeline+site:www.cs.cornell.edu
+[pixels] img 236,5552,32,32 src=//external-content.duckduckgo.com/ip3/www.cs.cornell.edu.ico
+text 300,5531,431,35 "Department of Computer Science"
+a 300,5564,927,36 href=https://www.cs.cornell.edu/courses/cs4620/2020fa/slides/11pipeline.pdf
+text 300,5566,91,33 "https://"
+text 391,5566,231,33 "www.cs.cornell.edu"
+text 622,5566,22,33 "›"
+text 643,5566,584,33 "courses › cs4620 › 2020fa › slides › 11pipeline.pdf"
+a 220,5623,1256,53 href=https://www.cs.cornell.edu/courses/cs4620/2020fa/slides/11pipeline.pdf
+text 228,5634,44,29 "PDF"
+text 281,5622,1088,53 "The Graphics Pipeline - Department of Computer Science"
+text 220,5691,635,35 "Learn how to render 3D scenes using object-order"
+text 855,5691,112,35 "graphics"
+text 220,5691,1287,119 ", a standard sequence of transformations, rasterization, and hidden surface removal. See examples, algorithms, and code for perspective viewing, triangle rasterization, and clipping."
+button 260,5902,225,37
+text 300,5903,173,35 "Search Assist"
+button 1260,5902,32,32 aria-label=Copy
+button 1324,5902,32,32 aria-label=Share
+button 1388,5902,32,32 type=button aria-label=Learn More About Assist
+button 1452,5902,32,32 aria-label=Paramètres d'Assist
+text 260,5983,62,40 "The"
+text 322,5983,253,40 "graphics pipeline"
+text 260,5983,1198,188 "is a series of procedures that transforms a three-dimensional (3D) scene into a two-dimensional (2D) image for display on a screen. It typically includes stages such as application, geometry processing, and rasterization, which work together to render images efficiently."
+a 873,6128,178,49 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+[pixels] img 881,6137,32,32 src=/assets/icons/favicons/wikipedia.png
+text 919,6136,116,33 "Wikipedia"
+a 1059,6128,373,49 href=https://graphicscompendium.com/intro/01-graphics-pipeline
+[pixels] img 1067,6137,32,32 src=//external-content.duckduckgo.com/ip3/graphicscompendium.com.ico
+text 1105,6136,311,33 "graphicscompendium.com"
+button 672,6201,311,72 aria-label=Plus
+text 779,6219,55,35 "Plus"
+button 1000,6201,72,72 aria-label=Expand Duck.ai chat input
+text 236,6328,732,66 "Généré automatiquement sur la base des sources répertoriées. Peut contenir des inexactitudes."
+text 1103,6327,293,33 "Cela vous a-t-il été utile ?"
+button 1404,6321,48,48 type=button aria-label=Positive feedback
+button 1460,6321,48,48 type=button aria-label=Negative feedback
+button 220,6481,1304,88 type=button id=more-results
+text 747,6505,251,39 "Plus De Résultats"
+text 1662,327,399,48 "Recherches associées à"
+text 2061,327,288,48 "graphics pipeline"
+a 1664,406,852,80 href=?q=graphics%20pipeline%20windows%2011&origin=related
+text 1744,429,222,35 "graphics pipeline"
+text 1966,429,114,35 "windows"
+text 2087,429,21,35 "11"
+a 1664,514,852,80 href=?q=graphics%20pipeline&origin=related
+text 1744,537,216,35 "graphics pipeline​"
+a 1664,622,852,80 href=?q=direct3d%20pipeline&origin=related
+text 1744,645,110,35 "direct3d"
+text 1854,645,107,35 "pipeline​"
+button 2982,40,64,64
+text 2998,56,180,33 "Fermer le menu"
+text 2610,61,136,26 "RECHERCHER"
+a 2610,107,475,46 href=https://start.duckduckgo.com/
+text 2610,112,183,35 "Page d'accueil"
+a 2610,153,475,46 href=/settings#appearance
+text 2610,158,100,35 "Thèmes"
+a 2610,199,475,46 href=/settings
+text 2610,204,151,35 "Préférences"
+text 2610,319,315,26 "PARTAGEZ VOS COMMENTAIRES"
+button 2610,364,80,80 type=button aria-label=Positive feedback
+button 2698,364,80,80 type=button aria-label=Negative feedback
+text 2610,495,202,26 "TÉLÉCHARGEMENTS"
+a 2610,540,475,46 href=https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+text 2610,545,189,35 "Navigateur iOS"
+a 2610,586,475,46 href=https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+text 2610,591,244,35 "Navigateur Android"
+a 2610,632,475,46 href=/mac?origin=funnel_browser_searchresults
+text 2610,637,197,35 "Navigateur Mac"
+a 2610,678,475,46 href=/windows?origin=funnel_browser_searchresults
+text 2610,683,260,35 "Navigateur Windows"
+text 2610,729,317,35 "Extensions de navigateur"
+text 2610,844,352,26 "PLUS DE LA PART DE DUCKDUCKGO"
+button 3004,876,56,56 type=button aria-label=Ignorer la promotion
+text 2722,929,226,78 "Passez à notre navigateur privé"
+text 2702,1017,248,35 "Rapide. Sûr. Gratuit."
+a 2617,1085,418,64 href=/mac
+text 2722,1086,270,62 "Installer le navigateur Mac"
+a 2610,1191,336,46 href=/pro?origin=funnel_pro_searchresults
+text 2610,1196,336,35 "Abonnement DuckDuckGo"
+a 2610,1237,93,46 href=https://duck.ai
+text 2610,1242,93,35 "Duck.ai"
+a 2610,1283,475,46 href=/email
+text 2610,1288,282,35 "Protection des e-mails"
+a 2610,1329,475,46 href=/newsletter
+text 2610,1334,137,35 "Newsletter"
+a 2610,1375,475,46 href=/blog
+text 2610,1380,58,35 "Blog"
+a 2610,1421,475,46 href=https://insideduckduckgo.substack.com/?showWelcome=true
+text 2610,1426,104,35 "Podcast"
+a 2610,1467,475,46 href=/collaborations
+text 2610,1472,184,35 "Collaborations"
+text 2610,1588,162,26 "EN SAVOIR PLUS"
+a 2610,1633,475,46 href=/updates
+text 2610,1638,151,35 "Nouveautés"
+a 2610,1679,475,46 href=/compare-privacy
+text 2610,1684,341,35 "Comparer la confidentialité"
+a 2610,1725,475,46 href=/app
+text 2610,1730,366,35 "À propos de notre navigateur"
+a 2610,1771,475,46 href=/about
+text 2610,1776,326,35 "À propos de DuckDuckGo"
+text 2610,1891,220,26 "AUTRES RESSOURCES"
+a 2610,1937,475,46 href=/duckduckgo-help-pages
+text 2610,1942,58,35 "Aide"
+a 2610,1983,475,46 href=https://www.reddit.com/r/duckduckgo/
+text 2610,1988,169,35 "Communauté"
+a 2610,2029,475,46 href=/careers
+text 2610,2034,115,35 "Carrières"
+a 2610,2075,475,46 href=/privacy
+text 2610,2080,338,35 "Politique de confidentialité"
+a 2610,2121,475,46 href=/terms
+text 2610,2126,289,35 "Conditions d'utilisation"
+a 2610,2167,475,46 href=/press
+text 2610,2172,126,35 "Kit Presse"
+a 2610,2213,475,46 href=/duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+text 2610,2218,431,35 "Faire de la publicité sur Recherche"
+text 414,6728,432,40 "Installer notre navigateur Mac"
+text 414,6775,685,72 "Protégez vos données lors de vos recherches, de votre navigation et de votre utilisation de l'IA."
+a 1214,6756,244,64 href=https://duckduckgo.com/mac?origin=funnel_browser_searchresults__footercard
+text 1286,6771,148,34 "Télécharger"
+text 1700,6704,177,35 "En savoir plus"
+a 1700,6757,151,35 href=https://duckduckgo.com/updates
+text 1700,6757,151,35 "Nouveautés"
+a 1700,6798,293,35 href=https://duckduckgo.com/app
+text 1700,6798,293,35 "À propos du navigateur"
+a 1700,6839,341,35 href=https://duckduckgo.com/compare-privacy
+text 1700,6839,341,35 "Comparer la confidentialité"
+a 1700,6880,161,35 href=https://duckduckgo.com/duckduckgo-help-pages/
+text 1700,6880,161,35 "Pages d'aide"
+text 2153,6704,177,35 "En savoir plus"
+a 2153,6757,162,35 href=https://duckduckgo.com/pro
+text 2153,6757,162,35 "Abonnement"
+a 2153,6798,282,35 href=https://duckduckgo.com/email
+text 2153,6798,282,35 "Protection des e-mails"
+a 2153,6839,104,35 href=https://insideduckduckgo.substack.com/?showWelcome=true
+text 2153,6839,104,35 "Podcast"
+text 2257,6839,30,35 "&"
+a 2287,6839,137,35 href=https://duckduckgo.com/newsletter
+text 2287,6839,137,35 "Newsletter"
+a 2153,6880,184,35 href=https://duckduckgo.com/collaborations
+text 2153,6880,184,35 "Collaborations"
+button 2054,1496,482,80 type=button
+text 2096,1516,398,39 "Partagez vos commentaires"
+[pixels] img 1946,158,64,64 src=<data-url>
+text 2026,170,380,40 "Installez notre navigateur."
+[pixels] img 2094,288,260,260 src=/dist/react-assets/96adebdbdbc5d4e75d7f.png
+[pixels] img 2256,416,116,118 src=<data-url>
+[pixels] img 2266,426,96,96 src=<data-url>
+text 2113,561,222,60 "Essayez le"
+text 1959,617,530,60 "navigateur DuckDuckGo."
+text 1995,673,458,60 "Rapide. Gratuit. Privé."
+a 1954,763,540,72 href=https://duckduckgo.com/mac?origin=funnel_browser_searchresults__popover
+text 2090,782,317,34 "Télécharger le navigateur"
+[pixels] picture 1871,94,79,102
+[pixels] img 1842,93,79,102 src=/dist/react-assets/1600f109ce3c4b73fd9c.png alt=
+text 1901,94,83,49 "Gratuit"
+button 2446,158,56,56

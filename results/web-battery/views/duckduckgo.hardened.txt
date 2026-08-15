@@ -1,0 +1,124 @@
+a 4,17,86,50 id=header-logo-wrapper
+input 96,20,636,44 id=search_form_input value="graphics pipeline"
+button 740,26,32,32
+[pixels] svg 748,34,16,16
+button 1229,23,32,32 id=header-hamburger-menu-btn
+text 1237,31,85,17 "Ouvrir le menu"
+[pixels] svg 1237,31,16,16
+a 110,70,49,38
+[pixels] svg 110,80,16,16
+text 129,80,30,18 "Tous"
+a 175,70,47,38
+text 175,80,47,18 "Images"
+a 238,70,45,38
+text 238,80,45,18 "Vidéos"
+a 299,70,66,38
+text 299,80,66,18 "Actualités"
+text 381,80,27,18 "Plus"
+[pixels] svg 412,83,12,12
+a 371,115,152,21 [occluded]
+text 377,119,27,13 "Carte" [occluded]
+a 371,136,152,21 [occluded]
+text 377,140,46,13 "Shopping" [occluded]
+a 520,76,121,26
+[pixels] svg 528,81,16,16
+text 548,81,85,17 "Search Assist"
+a 649,75,83,28
+[pixels] svg 657,80,16,16
+text 676,80,48,18 "Duck.ai"
+button 740,75,32,28
+[pixels] svg 748,80,16,16 [occluded]
+text 763,79,162,18 "Paramètres de recherche"
+a 740,75,32,29
+text 134,121,50,18 "Protégé"
+[pixels] svg 188,124,12,12
+a 260,121,43,18
+text 260,121,43,18 "France"
+[pixels] svg 307,124,12,12
+text 339,121,146,18 "Filtre parental : modéré"
+[pixels] svg 489,124,12,12
+text 521,121,106,18 "Date indifférente"
+[pixels] svg 631,124,12,12
+a 130,175,612,22
+text 130,173,163,27 "Graphics pipeline"
+text 130,214,611,59 "The computer graphics pipeline, or simply graphics pipeline, also known as the rendering pipeline, is a series of procedures for transforming a three-dimensional scene into a two-dimensional representation on a screen."
+text 130,256,588,38 "Once a 3D model is generated, the 3D computer graphics pipeline converts the model into a visually perceivable format on the computer display."
+text 130,277,597,59 "Due to the dependence on specific software and hardware configurations and desired display attributes, a universally applicable graphics pipeline does not exist"
+a 481,318,135,18
+text 481,318,135,18 "Suite dans Wikipedia"
+[pixels] svg 425,357,22,22
+text 433,396,51,17 "Source :"
+a 483,396,58,17
+text 483,396,58,17 "Wikipedia"
+text 552,396,147,17 "Cela vous a-t-il été utile ?"
+button 703,393,24,24
+[pixels] svg 703,393,24,24
+button 731,393,24,24
+[pixels] svg 731,393,24,24
+button 731,444,32,32
+[pixels] svg 739,452,16,16
+a 110,442,32,32
+[pixels] img 118,450,16,16
+text 150,439,64,18 "Wikipedia"
+a 150,456,294,18
+text 150,457,45,17 "https://"
+text 195,457,97,17 "en.wikipedia.org"
+text 292,457,11,17 "›"
+text 303,457,141,17 "wiki › Graphics_pipeline"
+a 110,485,628,26
+text 110,485,275,27 "Graphics pipeline - Wikipedia"
+text 110,519,79,18 "Learn how a"
+text 189,519,56,18 "graphics"
+text 249,519,52,18 "pipeline"
+text 110,519,645,59 "transforms a 3D scene into a 2D representation on a screen. The article explains the concepts, structure, and tasks of the application, geometry, and rasterization steps, as well as the world coordinate system and the vertex"
+text 402,561,52,18 "pipeline"
+text 454,561,3,18 "."
+button 731,614,32,32
+[pixels] svg 739,622,16,16
+a 110,612,32,32
+[pixels] img 118,620,16,16
+text 150,610,100,18 "Microsoft Learn"
+a 150,626,535,18
+text 150,627,46,17 "https://"
+text 196,627,119,17 "learn.microsoft.com"
+text 315,627,11,17 "›"
+text 325,627,360,17 "fr-fr › windows › uwp › graphics-concepts › graphics-pipeline"
+a 110,656,628,26
+text 110,656,523,27 "Pipeline graphique - UWP applications | Microsoft Learn"
+text 110,690,18,18 "Le"
+text 128,690,52,18 "pipeline"
+text 110,690,639,59 "graphique Direct3D est conçu pour la génération de graphismes destinés aux applications de jeu en temps réel. Les données circulent de l'entrée vers la sortie en transitant par chacune des phases configurables ou programmables de ce"
+text 407,732,52,18 "pipeline"
+text 459,732,3,18 "."
+button 110,759,652,51
+text 110,775,102,18 "Vue d’ensemble"
+[pixels] svg 740,776,16,16
+text 831,163,199,24 "Recherches associées à"
+text 1030,163,144,24 "graphics pipeline" [occluded]
+a 832,203,426,40 [occluded]
+text 872,214,111,18 "graphics pipeline"
+text 983,214,57,18 "windows" [occluded]
+text 1043,214,10,18 "11" [occluded]
+a 832,257,426,40 [occluded]
+text 872,268,108,18 "graphics pipeline​"
+a 832,311,426,40 [occluded]
+text 872,322,55,18 "direct3d"
+text 927,322,53,18 "pipeline​"
+button 1027,748,241,40
+text 1048,758,199,20 "Partagez vos commentaires"
+[pixels] img 973,79,32,32
+text 1013,85,190,20 "Installez notre navigateur."
+[pixels] img 1047,144,130,130
+[pixels] img 1128,208,58,59 [occluded]
+[pixels] img 1133,213,48,48
+text 1056,281,111,30 "Essayez le"
+text 980,309,265,30 "navigateur DuckDuckGo."
+text 998,337,229,30 "Rapide. Gratuit. Privé."
+a 977,382,270,36
+[pixels] svg 1021,392,16,16
+text 1045,391,158,17 "Télécharger le navigateur"
+[pixels] picture 935,47,40,51 [occluded]
+[pixels] img 921,47,40,51
+text 951,47,42,25 "Gratuit"
+button 1223,79,28,28
+[pixels] svg 1229,85,16,16

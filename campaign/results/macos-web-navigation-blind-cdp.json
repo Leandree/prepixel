@@ -1,0 +1,47 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Blind navigation on 5 live sites in Chrome 151 (Hacker News, Wikipedia, GitHub, MDN, DuckDuckGo)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "open debug port answers /json/version",
+    "signature": "http://127.0.0.1:9223/json/version → Chrome/151.0.7922.138, Protocol 1.3",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Same detached Chrome + hardened distiller as macos-web-battery-cdp, viewport 1280x800 CSS. The discipline that makes this a real test: EVERY decision — which line to target, where to click, whether to refuse — is taken from the published view lines alone. No screenshot is read anywhere in the loop; screenshots are taken after each step only as evidence for a human.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Targets located by text in the structured view on all steps that had one."},
+    "t2_enumerate": { "pass": true, "detail": "The step that mattered: the distiller emits text lines and interactive lines SEPARATELY, so a text line carries no href and no tag. The router must join them geometrically — take the matched text's centre and pick the SMALLEST interactive box containing it. That join is done purely on published coordinates, needing no extra access to the page, and it is exactly the same operation a native AX router must perform on an AXStaticText inside an AXButton."},
+    "t3_live_value": { "pass": null, "detail": "No form filled on third-party sites (read-only discipline)."},
+    "t4_living_screen": { "pass": null, "detail": "Not applicable to a navigation probe."},
+    "t5_blind_action": { "pass": true, "detail": "8/8 steps: 6/6 navigate, 1/1 toggle, 1/1 correct refusal. Navigations: Hacker News 'new' → /newest; Wikipedia in-article 'Rasterisation' → the #Rasterization anchor, picked among competing occurrences of the word; GitHub 'Insights' tab on a heavily hydrated app shell → /pulse; MDN sidebar 'Canvas tutorial' → /Canvas_API/Tutorial; DuckDuckGo 'Images' filter → &ia=images, verified visually (Images tab active, image results rendered); Hacker News 'More' → /?p=2, which required SCROLLING because the target sits below the fold. Every click landed on the intended control on the first attempt."},
+    "t6_pictorial": { "pass": null, "detail": "No pictorial target was aimed at."}
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": 16826,
+    "screenshot_tokens_est": 12294,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 16,
+    "notes": "COST OF THE WHOLE SESSION: 16826 structured tokens across 9 view reads vs 12294 tokens if the same 9 looks had been screenshots at CSS resolution — the structured route is 1.37x MORE expensive here, and that is the honest number to publish. It flips to 3.5x cheaper if the screenshots are Retina 2x on a high-res model (4784 each). SCROLL-AND-SEARCH, measured: the 'More' link on Hacker News is below the fold, so the router read the view, failed to find the target, scrolled 90% of a viewport, and read again — 2 views for 1 target. Both channels pay this equally (a screenshot shows one screen too), so scrolling does not favour either side; what it does is make the AVERAGE cost of finding a target a function of where the target sits, which no single-screenshot benchmark captures. FIRST ROUND SCORED 3/6 AND ALL THREE FAILURES WERE THE ROUTER'S, NOT THE CHANNEL'S — this is the most useful result in the cell, so it is recorded rather than quietly fixed. (i) The router matched text lines and ignored the interactive line whose box contained them, so it aimed at MDN's 'Tutorial' assuming a link; the view had already published 'summary 16,409,224,32' on the line immediately above. The click was CORRECT — it toggled the disclosure widget, screenshot-confirmed collapsed — only the expectation was wrong. Reading the affordance off the joined control fixed it. (ii) The router expected a 'Pull requests' tab on torvalds/linux, a repo that has PRs disabled. The view did not offer one, and the screenshot confirms the tab genuinely does not exist. That is the desired failure mode — an explicit 'not found' rather than a plausible-looking click — so it is now a first-class negative-control step. (iii) A wrong URL regex. The lesson generalises past this probe: when a semantic router misfires, the first hypothesis should be that it under-used the view, not that the view lied. Here the view was complete in all three cases."
+  },
+  "runtime_verification": {
+    "method": "Outcome judged by the browser's own resulting URL and title (not by the view that chose the click), plus a post-click screenshot per step. Two steps verified by eye: DuckDuckGo (Images tab active with image results) and MDN (Tutorial section collapsed, chevron rotated, URL unchanged).",
+    "agreement": "8/8. The toggle step is the strongest evidence that the channel is self-sufficient: its effect is invisible in the URL but plainly visible IN the structured view (the view changed by +16 lines as the collapsed section let lower sidebar entries into the viewport), so the router could confirm its own action without ever taking a picture. One observation worth recording for a production router: DuckDuckGo raised a promotional overlay AFTER the click that the next view would have to declare as occluding — overlays appear as a consequence of navigation, not only on load."
+  },
+  "permissions_required": [
+    "None (loopback CDP socket). No login on any site."
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "results/web-battery/web-navigation.json",
+    "results/web-battery/nav-views/",
+    "results/web-battery/nav-shots/",
+    "campaign/macos/web-navigate.mjs"
+  ]
+}

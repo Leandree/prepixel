@@ -1,0 +1,233 @@
+a 0,0,1,1 [occluded]
+text 0,2,9,269 "Skip to content" [occluded]
+text 0,20,184,28 "Navigation Menu" [occluded]
+a 32,20,32,32
+[pixels] svg 32,20,32,32
+button 80,16,101,40
+text 88,27,65,19 "Platform"
+[pixels] svg 157,28,16,16
+button 181,16,107,40
+text 189,27,71,19 "Solutions"
+[pixels] svg 265,28,16,16
+button 289,16,116,40
+text 297,27,80,19 "Resources"
+[pixels] svg 381,28,16,16
+button 405,16,135,40
+text 413,27,99,19 "Open Source"
+[pixels] svg 515,28,16,16
+button 539,16,115,40
+text 547,27,79,19 "Enterprise"
+[pixels] svg 630,28,16,16
+a 654,16,69,40
+text 662,27,53,19 "Pricing"
+button 1001,20,42,32
+[pixels] svg 1014,28,16,16
+a 1051,20,72,32
+text 1064,28,46,17 "Sign in"
+a 1131,20,77,32
+text 1144,28,51,17 "Sign up"
+button 1216,20,32,32
+[pixels] svg 1224,28,16,16
+[pixels] svg 32,95,16,16
+a 56,91,70,24
+text 56,91,70,24 "torvalds"
+text 130,91,6,24 "/"
+a 140,91,43,24
+text 140,91,43,24 "linux"
+text 198,96,36,14 "Public"
+a 854,88,124,28 id=repository-details-watch-button
+[pixels] svg 867,95,16,16
+text 891,95,74,14 "Notifications"
+a 986,88,128,28 id=fork-button
+[pixels] svg 999,95,16,16
+text 1023,95,29,14 "Fork"
+text 1061,95,33,14 "63.9k"
+a 1122,88,126,28
+[pixels] svg 1135,93,16,16
+text 1159,95,30,14 "Star"
+text 1198,95,30,14 "243k"
+a 32,143,75,30 id=code-tab
+[pixels] svg 40,150,16,16
+text 64,150,35,17 "Code"
+a 115,143,91,30 id=actions-tab
+[pixels] svg 123,150,16,16
+text 149,150,48,17 "Actions"
+a 214,143,96,30 id=projects-tab
+[pixels] svg 222,150,16,16
+text 248,150,53,17 "Projects"
+a 318,143,175,30 id=security-and-quality-tab
+[pixels] svg 326,150,16,16
+text 353,150,128,17 "Security and quality"
+a 501,143,94,30 id=insights-tab
+[pixels] svg 509,150,16,16
+text 534,150,51,17 "Insights"
+button 32,206,119,32 id=ref-picker-repos-header-ref-selector
+[pixels] svg 45,214,16,16 [occluded]
+text 69,214,45,17 "master"
+[pixels] svg 122,214,16,16 [occluded]
+a 159,206,91,32
+[pixels] svg 164,214,16,16 [occluded]
+text 188,214,7,17 "1"
+text 198,214,47,17 "Branch"
+a 250,206,96,32
+[pixels] svg 255,214,16,16 [occluded]
+text 279,214,27,17 "942"
+text 309,214,31,17 "Tags"
+[pixels] svg 623,214,16,16
+input 647,207,156,30
+button 828,206,108,32 id=_R_3idahl6k5_
+[pixels] svg 841,214,16,16 [occluded]
+text 865,214,34,17 "Code"
+[pixels] svg 907,214,16,16 [occluded]
+text 32,259,108,134 "Folders and files" [occluded]
+text 45,286,109,86 "Latest commit" [occluded]
+a 45,270,29,21
+[pixels] img 46,272,20,20 alt=torvalds
+a 74,271,55,21
+text 74,273,55,17 "torvalds"
+a 137,273,436,17
+text 137,273,436,17 "Merge tag 'input-for-v7.2-rc7' of git://git.kernel.org/pub/scm/linux/…"
+button 581,267,28,28
+[pixels] svg 587,273,16,16
+a 646,272,43,18
+text 646,274,43,14 "15ef2f7"
+text 689,274,10,14 "·"
+text 774,272,106,38 "History" [occluded]
+a 774,267,149,28
+[pixels] svg 783,273,16,16 [occluded]
+text 803,274,111,14 "1,465,132 Commits"
+[pixels] svg 49,320,16,16
+a 75,320,99,17
+text 75,320,99,17 "Documentation"
+a 410,320,432,17
+text 410,320,432,17 "Merge tag 'clk-fixes-for-linus' of git://git.kernel.org/pub/scm/linux…"
+[pixels] svg 49,361,16,16
+a 75,361,65,17
+text 75,361,65,17 "LICENSES"
+a 410,361,483,17
+text 410,361,483,17 "LICENSES: Add modern form of the LGPL-2.1 tags to the usage guide sec…"
+[pixels] svg 49,402,16,16
+a 75,402,28,17
+text 75,402,28,17 "arch"
+a 410,402,438,17
+text 410,402,438,17 "Merge tag 'riscv-for-linus-v7.2-rc8' of git://git.kernel.org/pub/scm/…"
+[pixels] svg 49,443,16,16
+a 75,443,35,17
+text 75,443,35,17 "block"
+a 410,443,413,17
+text 410,443,413,17 "block: stop the timeout timer when releasing a never added disk"
+[pixels] svg 49,484,16,16
+a 75,484,33,17
+text 75,484,33,17 "certs"
+a 410,484,359,17
+text 410,484,359,17 "treewide: fix indentation and whitespace in Kconfig files"
+[pixels] svg 49,525,16,16
+a 75,525,42,17
+text 75,525,42,17 "crypto"
+a 410,525,435,17
+text 410,525,435,17 "Merge tag 'v7.2-p3' of git://git.kernel.org/pub/scm/linux/kernel/git/…"
+[pixels] svg 49,566,16,16
+a 75,566,44,17
+text 75,566,44,17 "drivers"
+a 410,566,436,17
+text 410,566,436,17 "Merge tag 'input-for-v7.2-rc7' of git://git.kernel.org/pub/scm/linux/…"
+[pixels] svg 49,607,16,16
+a 75,607,12,17
+text 75,607,12,17 "fs"
+a 410,607,203,17
+text 410,607,203,17 "Merge tag 'ceph-for-7.2-rc8' of"
+a 616,607,232,17
+text 616,607,232,17 "https://github.com/ceph/ceph-client"
+[pixels] svg 49,648,16,16
+a 75,648,47,17
+text 75,648,47,17 "include"
+a 410,648,242,17
+text 410,648,242,17 "Merge tag 'drm-fixes-2026-08-15' of"
+a 656,648,216,17
+text 656,648,216,17 "https://gitlab.freedesktop.org/dr…"
+[pixels] svg 49,689,16,16
+a 75,689,20,17
+text 75,689,20,17 "init"
+a 410,689,451,17
+text 410,689,70,17 "rust: allow"
+text 480,691,267,14 "suspicious_runtime_symbol_definitions"
+text 747,689,114,17 "lint for Rust >= …" [occluded]
+[pixels] svg 49,730,16,16
+a 75,730,52,17
+text 75,730,52,17 "io_uring"
+a 410,730,304,17
+text 410,730,304,17 "io_uring: preserve task restrictions across exec"
+[pixels] svg 49,771,16,16
+a 75,771,19,17
+text 75,771,19,17 "ipc"
+a 410,771,441,17
+text 410,771,441,17 "Merge tag 'kernel-7.2-rc1.misc' of git://git.kernel.org/pub/scm/linux…"
+text 976,209,46,19 "About"
+text 976,245,173,19 "Linux kernel source tree"
+text 976,283,153,38 "Resources"
+a 976,280,77,17
+[pixels] svg 976,281,16,16
+text 1000,280,53,17 "Readme"
+a 976,309,74,17
+[pixels] svg 976,310,16,16
+text 1000,309,50,17 "License"
+a 976,338,72,17
+[pixels] svg 976,339,16,16
+text 1000,338,48,17 "Activity"
+text 976,362,76,38 "Stars" [occluded]
+[pixels] svg 976,368,16,16
+text 1000,367,47,17 "242.9k"
+text 1047,367,36,17 "stars"
+text 976,391,139,38 "Watchers" [occluded]
+[pixels] svg 976,397,16,16
+text 1000,396,30,17 "8.4k"
+text 1030,396,62,17 "watching"
+text 976,420,80,38 "Forks" [occluded]
+a 976,425,99,17
+[pixels] svg 976,426,16,16
+text 1000,425,39,17 "63.9k"
+text 1039,425,36,17 "forks"
+a 976,454,113,17
+text 976,454,113,17 "Report repository"
+a 976,506,68,24
+text 976,509,68,19 "Releases"
+a 976,544,79,17
+[pixels] svg 976,545,16,16
+text 996,544,27,17 "942"
+text 1027,544,28,17 "tags"
+a 976,596,96,24
+text 976,599,96,19 "Contributors"
+text 1083,601,39,14 "18 786"
+text 976,610,10,19 "(" [occluded]
+text 986,610,50,19 "18 786" [occluded]
+text 1036,610,6,19 ")" [occluded]
+a 976,638,32,17
+[pixels] img 976,632,32,32 alt=@torvalds
+a 1016,638,32,17
+[pixels] img 1016,632,32,32 alt=@davem330
+a 1056,638,32,17
+[pixels] img 1056,632,32,32 alt=@arndb
+a 1096,638,32,17
+[pixels] img 1096,632,32,32 alt=@broonie
+a 1136,638,32,17
+[pixels] img 1136,632,32,32 alt=@tiwai
+a 1176,638,32,17
+[pixels] img 1176,632,32,32 alt=@krzk
+a 976,678,32,17
+[pixels] img 976,672,32,32 alt=@gregkh
+a 1016,678,32,17
+[pixels] img 1016,672,32,32 alt=@KAGA-KOKO
+a 1056,678,32,17
+[pixels] img 1056,672,32,32 alt=@geertu
+a 1096,678,32,17
+[pixels] img 1096,672,32,32 alt=@kuba-moo
+a 1136,678,32,17
+[pixels] img 1136,672,32,32 alt=@mchehab
+a 1176,678,32,17
+[pixels] img 1176,672,32,32 alt=@ickle
+a 976,718,32,17
+[pixels] img 976,712,32,32 alt=@andy-shev
+a 1016,718,32,17
+[pixels] img 1016,712,32,32 alt=@vsyrjala
+a 976,760,120,14
+text 976,760,120,14 "+ 18 772 contributors"
