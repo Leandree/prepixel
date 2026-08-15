@@ -89,9 +89,10 @@ a 137,273,436,17
 text 137,273,436,17 "Merge tag 'input-for-v7.2-rc7' of git://git.kernel.org/pub/scm/linux/…"
 button 581,267,28,28
 [pixels] svg 587,273,16,16
-a 646,272,43,18
-text 646,274,43,14 "15ef2f7"
-text 689,274,10,14 "·"
+a 647,272,43,18
+text 647,274,43,14 "15ef2f7"
+text 690,274,10,14 "·"
+text 700,274,66,14 "7 hours ago"
 text 774,272,106,38 "History" [occluded]
 a 774,267,149,28
 [pixels] svg 783,273,16,16 [occluded]
@@ -101,36 +102,43 @@ a 75,320,99,17
 text 75,320,99,17 "Documentation"
 a 410,320,432,17
 text 410,320,432,17 "Merge tag 'clk-fixes-for-linus' of git://git.kernel.org/pub/scm/linux…"
+text 836,320,83,17 "13 hours ago"
 [pixels] svg 49,361,16,16
 a 75,361,65,17
 text 75,361,65,17 "LICENSES"
 a 410,361,483,17
 text 410,361,483,17 "LICENSES: Add modern form of the LGPL-2.1 tags to the usage guide sec…"
+text 824,361,95,17 "10 months ago"
 [pixels] svg 49,402,16,16
 a 75,402,28,17
 text 75,402,28,17 "arch"
 a 410,402,438,17
 text 410,402,438,17 "Merge tag 'riscv-for-linus-v7.2-rc8' of git://git.kernel.org/pub/scm/…"
+text 856,402,63,17 "yesterday"
 [pixels] svg 49,443,16,16
 a 75,443,35,17
 text 75,443,35,17 "block"
 a 410,443,413,17
 text 410,443,413,17 "block: stop the timeout timer when releasing a never added disk"
+text 839,443,80,17 "2 weeks ago"
 [pixels] svg 49,484,16,16
 a 75,484,33,17
 text 75,484,33,17 "certs"
 a 410,484,359,17
 text 410,484,359,17 "treewide: fix indentation and whitespace in Kconfig files"
+text 830,484,89,17 "3 months ago"
 [pixels] svg 49,525,16,16
 a 75,525,42,17
 text 75,525,42,17 "crypto"
 a 410,525,435,17
 text 410,525,435,17 "Merge tag 'v7.2-p3' of git://git.kernel.org/pub/scm/linux/kernel/git/…"
+text 849,525,70,17 "5 days ago"
 [pixels] svg 49,566,16,16
 a 75,566,44,17
 text 75,566,44,17 "drivers"
 a 410,566,436,17
 text 410,566,436,17 "Merge tag 'input-for-v7.2-rc7' of git://git.kernel.org/pub/scm/linux/…"
+text 843,566,76,17 "7 hours ago"
 [pixels] svg 49,607,16,16
 a 75,607,12,17
 text 75,607,12,17 "fs"
@@ -138,6 +146,7 @@ a 410,607,203,17
 text 410,607,203,17 "Merge tag 'ceph-for-7.2-rc8' of"
 a 616,607,232,17
 text 616,607,232,17 "https://github.com/ceph/ceph-client"
+text 836,607,83,17 "18 hours ago"
 [pixels] svg 49,648,16,16
 a 75,648,47,17
 text 75,648,47,17 "include"
@@ -145,6 +154,7 @@ a 410,648,242,17
 text 410,648,242,17 "Merge tag 'drm-fixes-2026-08-15' of"
 a 656,648,216,17
 text 656,648,216,17 "https://gitlab.freedesktop.org/dr…"
+text 836,648,83,17 "13 hours ago"
 [pixels] svg 49,689,16,16
 a 75,689,20,17
 text 75,689,20,17 "init"
@@ -152,16 +162,19 @@ a 410,689,451,17
 text 410,689,70,17 "rust: allow"
 text 480,691,267,14 "suspicious_runtime_symbol_definitions"
 text 747,689,114,17 "lint for Rust >= …" [occluded]
+text 831,689,88,17 "2 months ago"
 [pixels] svg 49,730,16,16
 a 75,730,52,17
 text 75,730,52,17 "io_uring"
 a 410,730,304,17
 text 410,730,304,17 "io_uring: preserve task restrictions across exec"
+text 839,730,80,17 "2 weeks ago"
 [pixels] svg 49,771,16,16
 a 75,771,19,17
 text 75,771,19,17 "ipc"
 a 410,771,441,17
 text 410,771,441,17 "Merge tag 'kernel-7.2-rc1.misc' of git://git.kernel.org/pub/scm/linux…"
+text 831,771,88,17 "2 months ago"
 text 976,209,46,19 "About"
 text 976,245,173,19 "Linux kernel source tree"
 text 976,283,153,38 "Resources"

@@ -32,6 +32,7 @@ text 593,72,296,33 "enfoncé tout en faisant glisser, ou utilisez l'outil main" 
 text 640,40,78,32 "Formes" [occluded]
 button 373,20,36,36
 [pixels] svg 383,30,16,16
+mark 413,26,1,24 rgb(241, 240, 255)
 button 422,20,36,36
 [pixels] svg 432,30,16,16
 button 462,20,36,36
@@ -64,6 +65,7 @@ text 809,39,5,13 "9"
 button 822,20,36,36
 [pixels] svg 832,30,16,16
 text 849,39,5,13 "0"
+mark 866,26,1,24 rgb(241, 240, 255)
 button 871,20,36,36 id=radix-:r0:
 [pixels] svg 881,30,16,16
 a 1077,16,95,36

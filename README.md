@@ -24,8 +24,8 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 - **Cost — and the honest caveat, which is the more interesting half.** On synthetic
   app UIs the structured view is **3.5× fewer tokens and 36× fewer bytes** than a
   screenshot (n=20 pages, exact image-token formula). But on **16 live public
-  websites it collapses to break-even**: 1.00× on the ratio of totals, 1.21× median
-  per page, ranging from **0.47× on Hacker News** (structure costs *twice* a
+  websites it collapses to break-even**: 0.98× on the ratio of totals, 1.15× median
+  per page, ranging from **0.46× on Hacker News** (structure costs *twice* a
   screenshot) to **3.11× on Vercel**, ahead on 10/16 sites. The mechanism:
   a screenshot has a **flat** cost set by the viewport, while a structured view
   scales with **information density** — so the ratio is a property of the *page*,
@@ -36,6 +36,10 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   Retina cuts both ways: image tokens are charged *after* the API's automatic
   downscale, so a 2× capture costs 4,784 tokens on a high-res model (ratio 12.2×)
   but only 1,534 on a legacy-tier one (3.9×).
+- **Completeness is nearly free.** Closing four more silent-leak classes (shadow DOM,
+  iframes, CSS background-image, colour-only semantics) cost **~2%** on the same 16
+  sites — four of which came back byte-identical, as a determinism control. The
+  safety machinery is not what makes a structured view expensive; text density is.
 - **You can actually browse this way.** **8/8** blind steps on 5 live sites with
   every decision taken from the structured view alone — 6/6 navigations, 1/1
   disclosure toggle confirmed *in the channel* without a screenshot, and 1/1

@@ -64,179 +64,186 @@ a 1910,1591,384,480 href=/recherche?category=20&shippable=1&home_appliance_produ
 [pixels] img 1910,1591,384,480 alt= src=/_next/image?url=%2Fassets%2Fimages%2Ftrending_topic_5.webp&w=384&q=75
 text 1942,1990,137,49 "De l‘air !"
 text 246,2152,522,54 "En ce moment sur leboncoin"
-text 246,2256,447,54 "Instruments de musique"
-a 246,2255,2068,56 href=/recherche?category=30
+text 246,2256,320,54 "Montres & Bijoux"
+a 246,2255,2068,56 href=/recherche?category=42
 text 1997,2263,269,38 "Voir plus d’annonces"
-text 244,2343,475,35 "Orgue électronique vintage Yamaha fe40"
-a 246,2343,380,827 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250397308
-[pixels] img 246,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/8fcf4172-6227-5316-a775-c9343fbd203d?rule=pp-small
-text 302,2347,88,38 "jeremy"
-text 438,2347,17,38 "5"
-text 462,2347,9,38 "("
-text 471,2347,17,38 "1"
-text 488,2347,9,38 ")"
-[pixels] img 246,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/60/2a/2f/602a2f4c742a5bb6c5784becb8d4a0f73e24f0ae.jpg?rule=ad-image
+text 244,2343,76,35 "Collier"
+a 246,2343,380,747 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250466097
+[pixels] img 246,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/783e2203-0c44-594f-9450-c92fa169ff70?rule=pp-small
+text 302,2347,76,38 "Cathy"
+text 426,2347,17,38 "5"
+text 450,2347,9,38 "("
+text 459,2347,34,38 "65"
+text 493,2347,9,38 ")"
+[pixels] img 246,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/a0/f3/ed/a0f3ed377d19df2b7ed65ec4feaa561d3894ef2c.jpg?rule=ad-image
 button 546,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 246,2900,311,91 "Orgue électronique vintage Yamaha fe40"
-text 246,3000,85,43 "450 €"
-text 244,3023,133,35 "Prix: 450 €."
-text 286,3058,192,32 "Livraison possible"
-text 246,3106,168,32 "Cambrai 59400"
-text 244,3104,266,32 "Située à Cambrai 59400."
-text 246,3138,207,32 "aujourd’hui à 11:56"
-text 244,3104,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 656,2343,333,35 "Corps stratocaster candy red"
-a 658,2343,380,827 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250397254
-[pixels] img 658,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/5def9c52-262a-5987-b974-323fb29ddaa4?rule=pp-small
-text 714,2347,85,38 "Michel"
-text 847,2347,17,38 "5"
-text 872,2347,9,38 "("
-text 881,2347,50,38 "112"
-text 931,2347,9,38 ")"
-[pixels] img 658,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/7f/5f/3b/7f5f3b0ac357ddfe0d0344c128a9ba1efaf9c0d4.jpg?rule=ad-image
+text 246,2900,98,43 "Collier"
+text 246,2952,47,43 "2 €"
+text 244,2975,102,35 "Prix: 2 €."
+text 286,3010,192,32 "Livraison possible"
+text 246,3058,148,32 "Tavers 45190"
+text 244,3056,247,32 "Située à Tavers 45190."
+text 418,3058,207,32 "aujourd’hui à 13:47"
+text 244,3056,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 656,2343,245,35 "Collier chaîne femme"
+a 658,2343,380,779 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465803
+[pixels] img 658,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/5ee1ec47-288a-572c-9247-a742f22f78d4?rule=pp-small
+text 714,2347,97,38 "mimi72"
+[pixels] img 658,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/56/d6/dd/56d6dd07e54c9eacc870f6c96ea8aa7319510ca7.jpg?rule=ad-image
 button 958,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 658,2900,378,91 "Corps stratocaster candy red"
-text 658,3000,85,43 "230 €"
-text 656,3023,133,35 "Prix: 230 €."
-text 698,3058,192,32 "Livraison possible"
-text 658,3106,330,32 "Saint-Maur-des-Fossés 94100"
-text 656,3104,429,32 "Située à Saint-Maur-des-Fossés 94100."
-text 658,3138,207,32 "aujourd’hui à 11:56"
-text 656,3104,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 1068,2343,97,35 "Mpc live"
-a 1070,2343,380,731 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3236081595
-[pixels] img 1070,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/fca0bf4e-9754-5463-a898-f2f36cc1fcee?rule=pp-small
-text 1126,2347,196,38 "Mark Apeupret"
-[pixels] img 1070,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/ea/ab/82/eaab828d9f0ece7ad3d10668006d9df98d176d6d.jpg?rule=ad-image
+text 658,2900,312,43 "Collier chaîne femme"
+text 658,2952,47,43 "5 €"
+text 656,2975,102,35 "Prix: 5 €."
+text 698,3010,192,32 "Livraison possible"
+text 658,3058,217,32 "Le Mans 72100 Sud"
+text 656,3056,315,32 "Située à Le Mans 72100 Sud."
+text 658,3090,207,32 "aujourd’hui à 13:46"
+text 656,3056,384,32 "Date de dépôt : aujourd’hui à 13:46."
+text 1068,2343,176,35 "Montre vintage"
+a 1070,2343,380,779 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465689
+[pixels] img 1070,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/ce226fd0-47c2-56f8-a4ab-2f039be6ef62?rule=pp-small
+text 1126,2347,82,38 "croqfa"
+text 1256,2347,41,38 "4,9"
+text 1305,2347,9,38 "("
+text 1314,2347,17,38 "2"
+text 1331,2347,9,38 ")"
+[pixels] img 1070,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/f2/4f/de/f24fde70f0258b0a460617db7a97cd6fa4974098.jpg?rule=ad-image
 button 1370,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1070,2900,123,43 "Mpc live"
-text 1070,2952,85,43 "700 €"
-text 1068,2975,133,35 "Prix: 700 €."
-text 1070,3010,314,32 "Saint-Pierre-de-Mons 33210"
-text 1068,3008,412,32 "Située à Saint-Pierre-de-Mons 33210."
-text 1070,3042,207,32 "aujourd’hui à 11:56"
-text 1068,3008,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 1480,2343,128,35 "Flûte à bec"
-a 1482,2343,380,779 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250396939
-[pixels] img 1482,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/4433c2c4-2c8b-587a-a904-28ed7f6f3a86?rule=pp-small
-text 1538,2347,184,38 "Noisette 2006"
-text 1770,2347,17,38 "5"
-text 1794,2347,9,38 "("
-text 1803,2347,34,38 "55"
-text 1837,2347,9,38 ")"
-[pixels] img 1482,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/d2/78/ba/d278ba016e950245ebfbfa44aea80635292a7815.jpg?rule=ad-image
+text 1070,2900,226,43 "Montre vintage"
+text 1070,2952,66,43 "25 €"
+text 1068,2975,117,35 "Prix: 25 €."
+text 1110,3010,192,32 "Livraison possible"
+text 1070,3058,155,32 "Cierrey 27930"
+text 1068,3056,253,32 "Située à Cierrey 27930."
+text 1070,3090,207,32 "aujourd’hui à 13:46"
+text 1068,3056,384,32 "Date de dépôt : aujourd’hui à 13:46."
+text 1480,2343,76,35 "Collier"
+a 1482,2343,380,747 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465423
+[pixels] img 1482,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/783e2203-0c44-594f-9450-c92fa169ff70?rule=pp-small
+text 1538,2347,76,38 "Cathy"
+text 1662,2347,17,38 "5"
+text 1686,2347,9,38 "("
+text 1695,2347,34,38 "65"
+text 1729,2347,9,38 ")"
+[pixels] img 1482,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/47/eb/40/47eb40be02503d662bfdbd0e07555ffcdcd4eaa4.jpg?rule=ad-image
 button 1782,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1482,2900,163,43 "Flûte à bec"
-text 1482,2952,47,43 "7 €"
-text 1480,2975,102,35 "Prix: 7 €."
+text 1482,2900,98,43 "Collier"
+text 1482,2952,47,43 "2 €"
+text 1480,2975,102,35 "Prix: 2 €."
 text 1522,3010,192,32 "Livraison possible"
-text 1482,3058,160,32 "Genech 59242"
-text 1480,3056,258,32 "Située à Genech 59242."
-text 1482,3090,207,32 "aujourd’hui à 11:56"
-text 1480,3056,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 1892,2343,196,35 "Arturia minilab 3"
-a 1894,2343,380,779 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250396588
-[pixels] img 1894,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/f3114b9a-24bf-5303-bf7e-ea72bebf6e7b?rule=pp-small
-text 1950,2347,62,38 "A.29"
-[pixels] img 1894,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/ca/69/3a/ca693a6b2c1212420e1119526a3eb5678de8b6e1.jpg?rule=ad-image
+text 1482,3058,148,32 "Tavers 45190"
+text 1480,3056,247,32 "Située à Tavers 45190."
+text 1654,3058,207,32 "aujourd’hui à 13:45"
+text 1480,3056,384,32 "Date de dépôt : aujourd’hui à 13:45."
+text 1892,2343,465,35 "Chaîne avec montre de chaîne plaqué or"
+a 1894,2343,380,827 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465397
+[pixels] img 1894,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/4a531564-70ec-59b8-90eb-21fb00e61568?rule=pp-small
+text 1950,2347,41,38 "Mn"
+text 2039,2347,41,38 "4,8"
+text 2087,2347,9,38 "("
+text 2096,2347,34,38 "56"
+text 2130,2347,9,38 ")"
+[pixels] img 1894,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/26/2f/46/262f46e4782264fadbe10bcff33d0777fad6a0e8.jpg?rule=ad-image
 button 2194,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1894,2900,253,43 "Arturia minilab 3"
-text 1894,2952,66,43 "75 €"
-text 1892,2975,117,35 "Prix: 75 €."
-text 1934,3010,192,32 "Livraison possible"
-text 1894,3058,212,32 "Saint-Renan 29290"
-text 1892,3056,310,32 "Située à Saint-Renan 29290."
-text 1894,3090,207,32 "aujourd’hui à 11:55"
-text 1892,3056,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 2304,2343,280,35 "Stairville dmx controller"
-a 2306,2343,380,779 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250396531
-[pixels] img 2306,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/eb29a4d4-1770-5ff6-9897-bc88446769ad?rule=pp-small
-text 2362,2347,46,38 "rick"
-text 2456,2347,17,38 "5"
-text 2481,2347,9,38 "("
-text 2490,2347,34,38 "73"
-text 2524,2347,9,38 ")"
-[pixels] img 2306,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/80/9a/3f/809a3f8788bb00d097417e498f7b00e79e024e28.jpg?rule=ad-image
+text 1894,2900,347,91 "Chaîne avec montre de chaîne plaqué or"
+text 1894,3000,66,43 "95 €"
+text 1892,3023,117,35 "Prix: 95 €."
+text 1934,3058,192,32 "Livraison possible"
+text 1894,3106,259,32 "Aix-en-Provence 13100"
+text 1892,3104,357,32 "Située à Aix-en-Provence 13100."
+text 1894,3138,207,32 "aujourd’hui à 13:45"
+text 1892,3104,384,32 "Date de dépôt : aujourd’hui à 13:45."
+text 2304,2343,259,35 "Montre Shivas vintage"
+a 2306,2343,380,811 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465226
+[pixels] img 2306,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/09e78e73-4451-5f76-82f7-74addbb1b071?rule=pp-small
+text 2362,2347,156,38 "Mamiechats"
+text 2566,2347,17,38 "5"
+text 2591,2347,9,38 "("
+text 2600,2347,34,38 "54"
+text 2633,2347,9,38 ")"
+[pixels] img 2306,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/59/e6/93/59e6933057b5d577ea39f397aaa43589669381d6.jpg?rule=ad-image
 button 2606,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2306,2900,361,43 "Stairville dmx controller"
-text 2306,2952,66,43 "15 €"
-text 2304,2975,117,35 "Prix: 15 €."
+text 2306,2900,331,43 "Montre Shivas vintage"
+text 2306,2952,66,43 "10 €"
+text 2304,2975,117,35 "Prix: 10 €."
 text 2346,3010,192,32 "Livraison possible"
-text 2306,3058,327,32 "Metz 57050 Devant-les-Ponts"
-text 2304,3056,426,32 "Située à Metz 57050 Devant-les-Ponts."
-text 2306,3090,207,32 "aujourd’hui à 11:55"
-text 2304,3056,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 2716,2343,200,35 "Ukulele (enfants)"
-a 2718,2343,380,779 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250396196
-[pixels] img 2718,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/a34b2437-e628-580d-88ec-90b8e0b35f56?rule=pp-small
-text 2774,2347,202,78 "Guillaume CHEVALLIER"
-text 3039,2347,17,38 "5"
-text 3063,2347,9,38 "("
-text 3072,2347,17,38 "7"
-text 3089,2347,9,38 ")"
-[pixels] img 2718,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/a8/36/60/a83660d02a7012720ae620a4e9da27da778054c9.jpg?rule=ad-image
+text 2306,3058,291,64 "Saint-Nicolas-de-la-Grave 82210"
+text 2304,3056,462,32 "Située à Saint-Nicolas-de-la-Grave 82210."
+text 2306,3122,207,32 "aujourd’hui à 13:45"
+text 2304,3056,384,32 "Date de dépôt : aujourd’hui à 13:45."
+text 2716,2343,233,35 "Bracelet argent 925"
+a 2718,2343,380,811 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465192
+[pixels] img 2718,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/2993c1da-7f3b-5f77-a9eb-9b81abc55c21?rule=pp-small
+text 2774,2347,73,38 "Joly h"
+text 2895,2347,17,38 "5"
+text 2920,2347,9,38 "("
+text 2929,2347,17,38 "1"
+text 2946,2347,9,38 ")"
+[pixels] img 2718,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/1e/31/17/1e311709696d02c5183695cb7b6989caaf6fa1a3.jpg?rule=ad-image
 button 3018,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2718,2900,257,43 "Ukulele (enfants)"
-text 2718,2952,66,43 "10 €"
-text 2716,2975,117,35 "Prix: 10 €."
+text 2718,2900,296,43 "Bracelet argent 925"
+text 2718,2952,66,43 "30 €"
+text 2716,2975,117,35 "Prix: 30 €."
 text 2758,3010,192,32 "Livraison possible"
-text 2718,3058,246,32 "Jardin 38200 Bérardier"
-text 2716,3056,344,32 "Située à Jardin 38200 Bérardier."
-text 2718,3090,207,32 "aujourd’hui à 11:55"
-text 2716,3056,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 3128,2343,224,35 "Guitare Folk Ibanez"
-a 3130,2343,380,699 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250396153
-[pixels] img 3130,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/c625ce9d-6cdb-5826-9caf-5db9058c169b?rule=pp-small
-text 3186,2347,93,38 "lescure"
-text 3327,2347,17,38 "5"
-text 3352,2347,9,38 "("
-text 3361,2347,50,38 "108"
-text 3411,2347,9,38 ")"
-[pixels] img 3130,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/08/00/cd/0800cdc0d4d60bc56044dbf1d1cc59f7b85dfc7d.jpg?rule=ad-image
+text 2718,3058,309,64 "Les Sables-d'Olonne 85180 Château-d'Olonne"
+text 2716,3056,606,32 "Située à Les Sables-d'Olonne 85180 Château-d'Olonne."
+text 2718,3122,207,32 "aujourd’hui à 13:45"
+text 2716,3056,384,32 "Date de dépôt : aujourd’hui à 13:45."
+text 3128,2343,310,35 "Montre cluse rectangulaire"
+a 3130,2343,380,827 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465099
+[pixels] img 3130,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/42c552ac-0724-5589-9149-5d231450a45d?rule=pp-small
+text 3186,2347,213,78 "IZOURAR Merzouk"
+text 3451,2347,17,38 "5"
+text 3475,2347,9,38 "("
+text 3484,2347,17,38 "1"
+text 3501,2347,9,38 ")"
+[pixels] img 3130,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/a6/e8/9c/a6e89c544eb7aede2373ce1217fa2aeb7d9e2273.jpg?rule=ad-image
 button 3430,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3130,2900,287,43 "Guitare Folk Ibanez"
-text 3130,2952,85,43 "100 €"
-text 3128,2975,133,35 "Prix: 100 €."
-text 3130,3010,146,32 "Nancy 54000"
-text 3128,3008,244,32 "Située à Nancy 54000."
-text 3300,3010,207,32 "aujourd’hui à 11:55"
-text 3128,3008,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 3540,2343,199,35 "Cort Earth 70 NS"
-a 3542,2343,380,699 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250395952
-[pixels] img 3542,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/558aa7b2-fd65-5629-906d-ab3b440d5539?rule=pp-small
-text 3598,2347,81,38 "Cédric"
-text 3727,2347,41,38 "4,8"
-text 3776,2347,9,38 "("
-text 3785,2347,17,38 "5"
-text 3802,2347,9,38 ")"
-[pixels] img 3542,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/aa/3f/9d/aa3f9d9b382f0f5e5aff8af71467a5e2eb3cc92c.jpg?rule=ad-image
+text 3130,2900,201,91 "Montre cluse rectangulaire"
+text 3130,3000,66,43 "59 €"
+text 3128,3023,117,35 "Prix: 59 €."
+text 3170,3058,192,32 "Livraison possible"
+text 3130,3106,276,32 "Brétigny-sur-Orge 91220"
+text 3128,3104,374,32 "Située à Brétigny-sur-Orge 91220."
+text 3130,3138,207,32 "aujourd’hui à 13:45"
+text 3128,3104,384,32 "Date de dépôt : aujourd’hui à 13:45."
+text 3540,2343,785,35 "Boutons de manchettes vintage fix plaqué or géométrique Art Déco"
+a 3542,2343,380,827 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465102
+[pixels] img 3542,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/d61b1307-756d-557c-bfd9-174ebcba3501?rule=pp-small
+text 3598,2347,78,38 "Sylvie"
+text 3724,2347,41,38 "4,5"
+text 3772,2347,9,38 "("
+text 3781,2347,17,38 "2"
+text 3798,2347,9,38 ")"
+[pixels] img 3542,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/c0/6a/c2/c06ac2d9bffd7633593ca894b84ad463489fc540.jpg?rule=ad-image
 button 3842,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3542,2900,254,43 "Cort Earth 70 NS"
-text 3542,2952,85,43 "110 €"
-text 3540,2975,133,35 "Prix: 110 €."
-text 3542,3010,125,32 "Nice 06000"
-text 3540,3008,223,32 "Située à Nice 06000."
-text 3691,3010,207,32 "aujourd’hui à 11:54"
-text 3540,3008,384,32 "Date de dépôt : aujourd’hui à 11:54."
-text 3952,2343,373,35 "Bec Selmer Saxo ténor S90 190"
-a 3954,2343,380,827 aria-label=Voir l’annonce href=/ad/instruments_de_musique/3250395425
-[pixels] img 3954,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/c985d065-0bd4-54d2-af5c-d76c1712a4a7?rule=pp-small
-text 4010,2347,164,38 "GONSOMAT"
-text 4222,2347,17,38 "5"
-text 4246,2347,9,38 "("
-text 4255,2347,34,38 "43"
-text 4289,2347,9,38 ")"
-[pixels] img 3954,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/58/fc/8f/58fc8fbadc95fe51b73a30db2ec43f414628abcb.jpg?rule=ad-image
+text 3542,2900,358,139 "Boutons de manchettes vintage fix plaqué or géométrique Art Déco"
+text 3542,3000,66,43 "25 €"
+text 3540,3023,117,35 "Prix: 25 €."
+text 3582,3058,192,32 "Livraison possible"
+text 3542,3106,185,32 "Saint-Avé 56890"
+text 3540,3104,283,32 "Située à Saint-Avé 56890."
+text 3542,3138,207,32 "aujourd’hui à 13:45"
+text 3540,3104,384,32 "Date de dépôt : aujourd’hui à 13:45."
+text 3952,2343,413,35 "Lot de 10 piles SONY pour montres"
+a 3954,2343,380,827 aria-label=Voir l’annonce href=/ad/montres_bijoux/3250465085
+[pixels] img 3954,2343,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/ed65939f-f7cd-5600-b5b6-8544748f8ccc?rule=pp-small
+text 4010,2347,80,38 "Andre"
+text 4138,2347,17,38 "5"
+text 4163,2347,9,38 "("
+text 4172,2347,50,38 "598"
+text 4222,2347,9,38 ")"
+[pixels] img 3954,2407,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/79/06/44/79064435ab3e78aedc35de43a18214afaba4736c.jpg?rule=ad-image
 button 4254,2423,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3954,2900,347,91 "Bec Selmer Saxo ténor S90 190"
-text 3954,3000,66,43 "95 €"
-text 3952,3023,117,35 "Prix: 95 €."
+text 3954,2900,326,91 "Lot de 10 piles SONY pour montres"
+text 3954,3000,47,43 "8 €"
+text 3952,3023,102,35 "Prix: 8 €."
 text 3994,3058,192,32 "Livraison possible"
-text 3954,3106,254,32 "Cagnes-sur-Mer 06800"
-text 3952,3104,352,32 "Située à Cagnes-sur-Mer 06800."
-text 3954,3138,207,32 "aujourd’hui à 11:54"
-text 3952,3104,384,32 "Date de dépôt : aujourd’hui à 11:54."
-a 4366,2343,288,827 href=/recherche?category=30
+text 3954,3106,194,32 "Salleboeuf 33370"
+text 3952,3104,292,32 "Située à Salleboeuf 33370."
+text 3954,3138,207,32 "aujourd’hui à 13:45"
+text 3952,3104,384,32 "Date de dépôt : aujourd’hui à 13:45."
+a 4366,2343,288,827 href=/recherche?category=42
 [pixels] img 4405,2606,210,162 alt= src=<data-url>
 [pixels] img 4405,2606,210,162 alt= src=<data-url>
 text 4427,2813,167,91 "Voir plus d’annonces"
@@ -244,867 +251,854 @@ button 2234,2724,64,64 type=button aria-label=Suivant
 text 246,3251,377,54 "Ventes immobilières"
 a 246,3250,2068,56 href=/recherche?category=9
 text 1997,3258,269,38 "Voir plus d’annonces"
-text 244,3338,306,35 "🏠 Grande propriété rurale"
-a 246,3338,380,715 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3205248000
-[pixels] img 246,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/8e/77/f6/8e77f6cc5c595722e955144ce1db76b5a5cc4669.jpg?rule=ad-image
-text 278,3358,78,32 "Urgent"
-text 260,3354,206,35 "Annonce urgente."
+text 244,3338,302,35 "Maison à vendre de 130m"
+a 246,3338,380,715 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3214499383
+[pixels] img 246,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/66/0a/49/660a493bb50b208635aaf4066cdf1c2473d6f71e.jpg?rule=ad-image
 button 546,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 246,3831,303,91 "🏠 Grande propriété rurale"
-text 246,3931,147,43 "395 000 €"
-text 244,3954,183,35 "Prix: 395 000 €."
-text 246,3989,175,32 "Aiguillon 47190"
-text 244,3987,274,32 "Située à Aiguillon 47190."
-text 246,4021,207,32 "aujourd’hui à 11:55"
-text 244,3987,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 656,3338,440,35 "Maison en pierre entièrement rénovée"
-a 658,3338,380,683 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3200663152
-[pixels] img 658,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/a1/33/63/a13363925f7e3d7b1db0c261d50ad95c88e2d551.jpg?rule=ad-image
+text 246,3831,296,91 "Maison à vendre de 130m"
+text 246,3931,147,43 "170 000 €"
+text 244,3954,183,35 "Prix: 170 000 €."
+text 246,3989,285,32 "Neuilly-Saint-Front 02470"
+text 244,3987,383,32 "Située à Neuilly-Saint-Front 02470."
+text 246,4021,207,32 "aujourd’hui à 13:47"
+text 244,3987,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 656,3338,788,35 "Bungalow 30 m² sur 220 m² de terrain Domaine du château Arribas"
+a 658,3338,380,715 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250466077
+[pixels] img 658,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/62/04/89/620489feb434c9e993b3b81f800af0e220c9fdbc.jpg?rule=ad-image
 button 958,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 658,3831,306,91 "Maison en pierre entièrement rénovée"
-text 658,3931,147,43 "329 000 €"
-text 656,3954,358,35 "Prix: 329 000 €.. Baisse de prix"
-text 658,3989,147,32 "Villars 42390"
-text 656,3987,245,32 "Située à Villars 42390."
-text 829,3989,207,32 "aujourd’hui à 11:55"
-text 656,3987,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 1068,3338,177,35 "Studio Paris 16"
-a 1070,3338,380,667 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250395940
-[pixels] img 1070,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/f4/82/c6/f482c6bc69868be55ec613d63d12b3c6140321ac.jpg?rule=ad-image
+text 658,3831,378,139 "Bungalow 30 m² sur 220 m² de terrain Domaine du château Arribas"
+text 658,3931,128,43 "27 000 €"
+text 656,3954,167,35 "Prix: 27 000 €."
+text 658,3989,313,32 "Condé-Sainte-Libiaire 77450"
+text 656,3987,411,32 "Située à Condé-Sainte-Libiaire 77450."
+text 658,4021,207,32 "aujourd’hui à 13:47"
+text 656,3987,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 1068,3338,277,35 "Maison 5 pièces 155m2"
+a 1070,3338,380,667 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250466100
+[pixels] img 1070,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/69/e9/cb/69e9cbe66ac5c58505cdb26d0738b020f2da32f3.jpg?rule=ad-image
 button 1370,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1070,3831,226,43 "Studio Paris 16"
-text 1070,3883,147,43 "190 000 €"
-text 1068,3906,183,35 "Prix: 190 000 €."
-text 1070,3941,320,32 "Paris 75116 Rue de la Pompe"
-text 1068,3939,418,32 "Située à Paris 75116 Rue de la Pompe."
-text 1070,3973,207,32 "aujourd’hui à 11:55"
-text 1068,3939,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 1480,3338,266,35 "Terrain de construction"
-a 1482,3338,380,667 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250396101
-[pixels] img 1482,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/40/fb/44/40fb4470192dcc49e2e3dc51c4666fb34d5e5192.jpg?rule=ad-image
+text 1070,3831,349,43 "Maison 5 pièces 155m2"
+text 1070,3883,147,43 "249 000 €"
+text 1068,3906,183,35 "Prix: 249 000 €."
+text 1070,3941,234,32 "Champdeniers 79220"
+text 1068,3939,332,32 "Située à Champdeniers 79220."
+text 1070,3973,207,32 "aujourd’hui à 13:47"
+text 1068,3939,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 1480,3338,398,35 "Maison de village 7 pièces 195 m²"
+a 1482,3338,380,803 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3022002357
+[pixels] img 1482,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/34/a4/aa/34a4aa708a935a43e67038de4d7d0501a9c7fd74.jpg?rule=ad-image
 button 1782,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1482,3831,341,43 "Terrain de construction"
-text 1482,3883,147,43 "135 150 €"
-text 1480,3906,183,35 "Prix: 135 150 €."
-text 1482,3941,196,32 "Herbsheim 67230"
-text 1480,3939,294,32 "Située à Herbsheim 67230."
-text 1482,3973,207,32 "aujourd’hui à 11:55"
-text 1480,3939,384,32 "Date de dépôt : aujourd’hui à 11:55."
-text 1892,3338,806,35 "Logement T2 avec place en sous sol et balcon, à 5 minutes de la gare"
-a 1894,3338,380,771 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3233824146
-[pixels] img 1894,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/cc/fb/b5/ccfbb5a37db40f0cb51bb4511b727e759716bc7e.jpg?rule=ad-image
+text 1482,3831,296,91 "Maison de village 7 pièces 195 m²"
+text 1482,3931,147,43 "197 000 €"
+text 1480,3954,358,35 "Prix: 197 000 €.. Baisse de prix"
+text 1500,3993,38,32 "Pro"
+text 1480,4010,268,35 "Vendeur professionnel."
+text 1482,4045,360,64 "Val de Louyre et Caudeau 24510 Sainte-Alvère"
+text 1480,4043,606,32 "Située à Val de Louyre et Caudeau 24510 Sainte-Alvère."
+text 1482,4109,207,32 "aujourd’hui à 13:46"
+text 1480,4043,384,32 "Date de dépôt : aujourd’hui à 13:46."
+text 1892,3338,326,35 "Vend Maison neuve 110 m2"
+a 1894,3338,380,771 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3249947270
+[pixels] img 1894,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/53/ff/6e/53ff6e53f75eab19b7af4b0cfdfa94d65651683a.jpg?rule=ad-image
 button 2194,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-a 1910,3733,64,64 href=/ad/ventes_immobilieres/3233824146
-text 1924,3781,331,35 "Annonce possédant un plan."
-text 1894,3831,382,139 "Logement T2 avec place en sous sol et balcon, à 5 minutes de la gare"
-text 1894,3931,147,43 "215 000 €"
-text 1892,3954,183,35 "Prix: 215 000 €."
+text 1894,3831,363,91 "Vend Maison neuve 110 m2"
+text 1894,3931,147,43 "317 000 €"
+text 1892,3954,183,35 "Prix: 317 000 €."
 text 1912,3993,38,32 "Pro"
 text 1892,4010,268,35 "Vendeur professionnel."
-text 2000,3993,54,32 "Neuf"
-text 1892,4010,111,35 "Bien neuf"
-text 1894,4045,213,32 "Metz 57000 Sablon"
-text 1892,4043,311,32 "Située à Metz 57000 Sablon."
-text 1894,4077,207,32 "aujourd’hui à 11:54"
-text 1892,4043,384,32 "Date de dépôt : aujourd’hui à 11:54."
-text 2304,3338,335,35 "Appartement 4 pièces 85 m²"
-a 2306,3338,380,803 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3123260164
-[pixels] img 2306,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/df/20/32/df2032057217340b94ecf1836e3433c194239c87.jpg?rule=ad-image
+text 1894,4045,300,32 "Courtenay 38510 Chanizieu"
+text 1892,4043,398,32 "Située à Courtenay 38510 Chanizieu."
+text 1894,4077,207,32 "aujourd’hui à 13:46"
+text 1892,4043,384,32 "Date de dépôt : aujourd’hui à 13:46."
+text 2304,3338,386,35 "Villa 130 m² Saint-Cyprien Plage"
+a 2306,3338,380,771 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250465657
+[pixels] img 2306,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/76/86/3d/76863d239e36a057b0ef6857294c64930a01727b.jpg?rule=ad-image
 button 2606,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2306,3831,384,91 "Appartement 4 pièces 85 m²"
-text 2306,3931,147,43 "249 000 €"
-text 2304,3954,358,35 "Prix: 249 000 €.. Baisse de prix"
+text 2306,3831,283,91 "Villa 130 m² Saint-Cyprien Plage"
+text 2306,3931,147,43 "499 000 €"
+text 2304,3954,183,35 "Prix: 499 000 €."
 text 2324,3993,38,32 "Pro"
 text 2304,4010,268,35 "Vendeur professionnel."
-text 2306,4045,321,64 "Balma 31130 Vidailhan - Domaine de Balma - La Fount"
-text 2304,4043,697,32 "Située à Balma 31130 Vidailhan - Domaine de Balma - La Fount."
-text 2306,4109,207,32 "aujourd’hui à 11:54"
-text 2304,4043,384,32 "Date de dépôt : aujourd’hui à 11:54."
-text 2716,3338,335,35 "Appartement 3 pièces 64 m²"
-a 2718,3338,380,771 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3163333029
-[pixels] img 2718,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/7b/b8/dd/7bb8ddda2920a79aa2a41b35a00376940e71aa3f.jpg?rule=ad-image
+text 2306,4045,304,32 "Saint-Cyprien 66750 -Plage"
+text 2304,4043,402,32 "Située à Saint-Cyprien 66750 -Plage."
+text 2306,4077,207,32 "aujourd’hui à 13:46"
+text 2304,4043,384,32 "Date de dépôt : aujourd’hui à 13:46."
+text 2716,3338,301,35 "Propriété 5 pièces 117 m²"
+a 2718,3338,380,771 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3194018695
+[pixels] img 2718,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/a4/82/1c/a4821c6f813fccce752d9fdb71a445598374e4f8.jpg?rule=ad-image
 button 3018,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2718,3831,384,91 "Appartement 3 pièces 64 m²"
-text 2718,3931,147,43 "194 750 €"
-text 2716,3954,358,35 "Prix: 194 750 €.. Baisse de prix"
+text 2718,3831,342,91 "Propriété 5 pièces 117 m²"
+text 2718,3931,147,43 "252 000 €"
+text 2716,3954,183,35 "Prix: 252 000 €."
 text 2736,3993,38,32 "Pro"
 text 2716,4010,268,35 "Vendeur professionnel."
-text 2718,4045,267,32 "Castanet-Tolosan 31320"
-text 2716,4043,365,32 "Située à Castanet-Tolosan 31320."
-text 2718,4077,207,32 "aujourd’hui à 11:54"
-text 2716,4043,384,32 "Date de dépôt : aujourd’hui à 11:54."
-text 3128,3338,307,35 "Studio/appartement 32m2"
-a 3130,3338,380,747 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250395385
-[pixels] img 3130,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/5a/82/21/5a8221427c9149c0d489a20334b94483afc18c91.jpg?rule=ad-image
+text 2718,4045,325,32 "Saint-Brice-sur-Vienne 87200"
+text 2716,4043,423,32 "Située à Saint-Brice-sur-Vienne 87200."
+text 2718,4077,207,32 "aujourd’hui à 13:46"
+text 2716,4043,384,32 "Date de dépôt : aujourd’hui à 13:46."
+text 3128,3338,1210,35 "TRES BELLE MAISON MODERNE 170m2 AVEC JARDIN ET STUDIO INDEPENDANT, PROCHE GENEVE"
+a 3130,3338,380,715 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3220112041
+[pixels] img 3130,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/1c/92/8b/1c928bb1c285f42bcbd4a3438b09eb062a980b7f.jpg?rule=ad-image
 button 3430,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3130,3831,306,91 "Studio/appartement 32m2"
-text 3130,3931,128,43 "73 000 €"
-text 3128,3954,167,35 "Prix: 73 000 €."
-text 3130,3989,278,64 "Clermont-Ferrand 63000 Oradou"
-text 3128,3987,456,32 "Située à Clermont-Ferrand 63000 Oradou."
-text 3130,4053,207,32 "aujourd’hui à 11:54"
-text 3128,3987,384,32 "Date de dépôt : aujourd’hui à 11:54."
-text 3540,3338,232,35 "Villa 4 pièces 95 m²"
-a 3542,3338,380,723 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3170942185
-[pixels] img 3542,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/10/c7/ac/10c7aca36fc9bfb365ec4cf88830f7d2dd92a928.jpg?rule=ad-image
+text 3130,3831,388,235 "TRES BELLE MAISON MODERNE 170m2 AVEC JARDIN ET STUDIO INDEPENDANT, PROCHE GENEVE"
+text 3130,3931,147,43 "750 000 €"
+text 3128,3954,358,35 "Prix: 750 000 €.. Baisse de prix"
+text 3130,3989,212,32 "Péron 01630 Greny"
+text 3128,3987,309,32 "Située à Péron 01630 Greny."
+text 3130,4021,207,32 "aujourd’hui à 13:46"
+text 3128,3987,384,32 "Date de dépôt : aujourd’hui à 13:46."
+text 3540,3338,335,35 "Appartement 2 pièces 45 m²"
+a 3542,3338,380,771 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250465221
+[pixels] img 3542,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/37/8b/ea/378bea00e9b65f2d81d50fe2cbfe4e1231906cbe.jpg?rule=ad-image
 button 3842,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3542,3831,294,43 "Villa 4 pièces 95 m²"
-text 3542,3883,147,43 "278 000 €"
-text 3540,3906,358,35 "Prix: 278 000 €.. Baisse de prix"
-text 3560,3945,38,32 "Pro"
-text 3540,3962,268,35 "Vendeur professionnel."
-text 3542,3997,292,32 "Plaisance-du-Touch 31830"
-text 3540,3995,390,32 "Située à Plaisance-du-Touch 31830."
-text 3542,4029,207,32 "aujourd’hui à 11:54"
-text 3540,3995,384,32 "Date de dépôt : aujourd’hui à 11:54."
-text 3952,3338,242,35 "T3 Université Moufia"
-a 3954,3338,380,723 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3240723029
-[pixels] img 3954,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/06/be/19/06be198fa337571e8820889b732be4743b8cb6b9.jpg?rule=ad-image
+text 3542,3831,384,91 "Appartement 2 pièces 45 m²"
+text 3542,3931,147,43 "170 000 €"
+text 3540,3954,183,35 "Prix: 170 000 €."
+text 3560,3993,38,32 "Pro"
+text 3540,4010,268,35 "Vendeur professionnel."
+text 3542,4045,206,32 "Istres 13800 Etang"
+text 3540,4043,304,32 "Située à Istres 13800 Etang."
+text 3542,4077,207,32 "aujourd’hui à 13:45"
+text 3540,4043,384,32 "Date de dépôt : aujourd’hui à 13:45."
+text 3952,3338,306,35 "Terrain 1044 m² POTIGNY"
+a 3954,3338,380,771 aria-label=Voir l’annonce href=/ad/ventes_immobilieres/3250465202
+[pixels] img 3954,3338,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/a7/2e/74/a72e74043f94456dacb3a6efe33e85b7918897db.jpg?rule=ad-image
 button 4254,3354,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3954,3831,308,43 "T3 Université Moufia"
-text 3954,3883,147,43 "139 000 €"
-text 3952,3906,183,35 "Prix: 139 000 €."
-text 3972,3945,38,32 "Pro"
-text 3952,3962,268,35 "Vendeur professionnel."
-text 3954,3997,316,32 "Saint-Denis 97490 Le Moufia"
-text 3952,3995,414,32 "Située à Saint-Denis 97490 Le Moufia."
-text 3954,4029,207,32 "aujourd’hui à 11:53"
-text 3952,3995,384,32 "Date de dépôt : aujourd’hui à 11:53."
+text 3954,3831,247,91 "Terrain 1044 m² POTIGNY"
+text 3954,3931,128,43 "60 400 €"
+text 3952,3954,167,35 "Prix: 60 400 €."
+text 3972,3993,38,32 "Pro"
+text 3952,4010,268,35 "Vendeur professionnel."
+text 3954,4045,160,32 "Potigny 14420"
+text 3952,4043,258,32 "Située à Potigny 14420."
+text 3954,4077,207,32 "aujourd’hui à 13:45"
+text 3952,4043,384,32 "Date de dépôt : aujourd’hui à 13:45."
 a 4366,3338,288,803 href=/recherche?category=9
 [pixels] img 4405,3589,210,162 alt= src=<data-url>
 [pixels] img 4405,3589,210,162 alt= src=<data-url>
 text 4427,3796,167,91 "Voir plus d’annonces"
 button 2234,3707,64,64 type=button aria-label=Suivant
-text 246,4222,187,54 "Collection"
-a 246,4221,2068,56 href=/recherche?category=40
+text 246,4222,263,54 "Ameublement"
+a 246,4221,2068,56 href=/recherche?category=19
 text 1997,4229,269,38 "Voir plus d’annonces"
-text 244,4309,818,35 "Lot De 100 Cartes Disney Lorcana Françaises Sans Doubles Officielles"
-a 246,4309,380,827 aria-label=Voir l’annonce href=/ad/collection/3250397705
-[pixels] img 246,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/82293ccd-2a25-5ccd-abd8-3d3283571981?rule=pp-small
-text 302,4313,159,38 "Amnezzia54"
-text 509,4313,41,38 "4,9"
-text 558,4313,9,38 "("
-text 567,4313,34,38 "30"
-text 600,4313,9,38 ")"
-[pixels] img 246,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/9c/fb/b0/9cfbb04851da52069b498a08dd907e06b8613aa6.jpg?rule=ad-image
+text 244,4309,408,35 "Bibliothèque bois (EPURE, miliboo)"
+a 246,4309,380,779 aria-label=Voir l’annonce href=/ad/ameublement/3250466635
+[pixels] img 246,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/8fb12e30-f98a-5910-ba90-6c58daf9bacc?rule=pp-small
+text 302,4313,108,38 "Valentin"
+text 458,4313,17,38 "5"
+text 483,4313,9,38 "("
+text 492,4313,17,38 "1"
+text 509,4313,9,38 ")"
+[pixels] img 246,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/6f/2c/76/6f2c7604cef8fb67a9d8b846580244e5d69168ed.jpg?rule=ad-image
 button 546,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 246,4866,377,187 "Lot De 100 Cartes Disney Lorcana Françaises Sans Doubles Officielles"
-text 246,4966,47,43 "6 €"
-text 244,4989,102,35 "Prix: 6 €."
-text 286,5024,192,32 "Livraison possible"
-text 246,5072,190,32 "Rodemack 57570"
-text 244,5070,289,32 "Située à Rodemack 57570."
-text 246,5104,207,32 "aujourd’hui à 11:57"
-text 244,5070,384,32 "Date de dépôt : aujourd’hui à 11:57."
-text 656,4309,371,35 "Lot pin's Moto Grande Bretagne"
-a 658,4309,380,827 aria-label=Voir l’annonce href=/ad/collection/3250397604
-[pixels] img 658,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/e10095db-eaeb-57ea-ad86-f71e304f8e60?rule=pp-small
-text 714,4313,102,38 "Chantal"
-text 864,4313,17,38 "5"
-text 889,4313,9,38 "("
-text 898,4313,50,38 "113"
-text 948,4313,9,38 ")"
-[pixels] img 658,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/6b/fb/52/6bfb52b3da02898b7743214ccfb21d0d86621678.jpg?rule=ad-image
+text 246,4866,268,91 "Bibliothèque bois (EPURE, miliboo)"
+text 246,4966,85,43 "150 €"
+text 244,4989,133,35 "Prix: 150 €."
+text 246,5024,197,32 "Strasbourg 67000"
+text 244,5022,296,32 "Située à Strasbourg 67000."
+text 246,5056,207,32 "aujourd’hui à 13:48"
+text 244,5022,384,32 "Date de dépôt : aujourd’hui à 13:48."
+text 656,4309,281,35 "Étagère murale réglable"
+a 658,4309,380,779 aria-label=Voir l’annonce href=/ad/ameublement/3250466623
+[pixels] img 658,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/fde5b772-7a29-52aa-aa99-7a365e838bda?rule=pp-small
+text 714,4313,24,38 "cr"
+text 786,4313,17,38 "5"
+text 811,4313,9,38 "("
+text 820,4313,34,38 "38"
+text 854,4313,9,38 ")"
+[pixels] img 658,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/7b/b2/92/7bb292d5472db348c00514746d3d2597195a6a89.jpg?rule=ad-image
 button 958,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 658,4866,338,91 "Lot pin's Moto Grande Bretagne"
-text 658,4966,47,43 "9 €"
-text 656,4989,102,35 "Prix: 9 €."
-text 698,5024,192,32 "Livraison possible"
-text 658,5072,188,32 "Perpignan 66000"
-text 656,5070,286,32 "Située à Perpignan 66000."
-text 658,5104,207,32 "aujourd’hui à 11:56"
-text 656,5070,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 1068,4309,626,35 "Felix Stray kids pc PVC d'Icon dfesta (Mini photobook)"
-a 1070,4309,380,827 aria-label=Voir l’annonce href=/ad/collection/3250397676
-[pixels] img 1070,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/ac9e2ada-9c93-5193-8040-3f1a7d27c2a8?rule=pp-small
-text 1126,4313,182,38 "didi34michele"
-text 1356,4313,17,38 "5"
-text 1381,4313,9,38 "("
-text 1390,4313,34,38 "28"
-text 1423,4313,9,38 ")"
-[pixels] img 1070,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/df/cf/cb/dfcfcb37e42ad4090add987e8e410fb7f89fa371.jpg?rule=ad-image
+text 658,4866,359,43 "Étagère murale réglable"
+text 658,4918,47,43 "5 €"
+text 656,4941,102,35 "Prix: 5 €."
+text 698,4976,192,32 "Livraison possible"
+text 658,5024,300,32 "Le Loroux-Bottereau 44430"
+text 656,5022,398,32 "Située à Le Loroux-Bottereau 44430."
+text 658,5056,207,32 "aujourd’hui à 13:48"
+text 656,5022,384,32 "Date de dépôt : aujourd’hui à 13:48."
+text 1068,4309,430,35 "Canapé 3 grandes places VIMLE Ikéa"
+a 1070,4309,380,779 aria-label=Voir l’annonce href=/ad/ameublement/3250466611
+[pixels] img 1070,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/142c0633-70f9-5ce5-95da-e0954158f686?rule=pp-small
+text 1126,4313,73,38 "Marie"
+text 1247,4313,17,38 "5"
+text 1272,4313,9,38 "("
+text 1281,4313,17,38 "1"
+text 1297,4313,9,38 ")"
+[pixels] img 1070,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/28/db/98/28db98816970fab8967df6c75e5751536c80fe97.jpg?rule=ad-image
 button 1370,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1070,4866,352,139 "Felix Stray kids pc PVC d'Icon dfesta (Mini photobook)"
-text 1070,4966,47,43 "8 €"
-text 1068,4989,102,35 "Prix: 8 €."
-text 1110,5024,192,32 "Livraison possible"
-text 1070,5072,182,32 "Florensac 34510"
-text 1068,5070,280,32 "Située à Florensac 34510."
-text 1070,5104,207,32 "aujourd’hui à 11:56"
-text 1068,5070,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 1480,4309,636,35 "GRECE ANTIQUE : Tétradrachme Royaume de PEONIE"
-a 1482,4309,380,827 aria-label=Voir l’annonce href=/ad/collection/3250397511
-[pixels] img 1482,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/fceb2fb4-8d32-5f83-9b6f-5d29a8c9a79b?rule=pp-small
-text 1538,4313,94,38 "Thierry"
-text 1680,4313,17,38 "5"
-text 1704,4313,9,38 "("
-text 1713,4313,17,38 "9"
-text 1730,4313,9,38 ")"
-[pixels] img 1482,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/e4/9c/6c/e49c6c16b9287fc0cda235b5ccd2128237058f1c.jpg?rule=ad-image
+text 1070,4866,380,91 "Canapé 3 grandes places VIMLE Ikéa"
+text 1070,4966,85,43 "350 €"
+text 1068,4989,133,35 "Prix: 350 €."
+text 1070,5024,162,32 "Raizeux 78125"
+text 1068,5022,260,32 "Située à Raizeux 78125."
+text 1070,5056,207,32 "aujourd’hui à 13:48"
+text 1068,5022,384,32 "Date de dépôt : aujourd’hui à 13:48."
+text 1480,4309,521,35 "Cadre de lit Neiden IKEA, pin/luroy, 140x200"
+a 1482,4309,380,747 aria-label=Voir l’annonce href=/ad/ameublement/3250466567
+[pixels] img 1482,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/3720913d-998d-5a17-8d72-4c9bfa4ab01a?rule=pp-small
+text 1538,4313,74,38 "Snow"
+text 1660,4313,17,38 "5"
+text 1685,4313,9,38 "("
+text 1693,4313,34,38 "10"
+text 1727,4313,9,38 ")"
+[pixels] img 1482,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/5b/31/97/5b3197e2912c93e66e691e96fdaa84666916236e.jpg?rule=ad-image
 button 1782,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1482,4866,375,139 "GRECE ANTIQUE : Tétradrachme Royaume de PEONIE"
-text 1482,4966,85,43 "480 €"
-text 1480,4989,133,35 "Prix: 480 €."
-text 1522,5024,192,32 "Livraison possible"
-text 1482,5072,178,32 "Grenoble 38000"
-text 1480,5070,276,32 "Située à Grenoble 38000."
-text 1482,5104,207,32 "aujourd’hui à 11:56"
-text 1480,5070,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 1892,4309,841,35 "Médaille du Travail en argent 1977 République Française - Très bon état"
-a 1894,4309,380,915 aria-label=Voir l’annonce href=/ad/collection/3250397333
-text 1950,4313,155,78 "REVENDRAPIDEMENT"
-text 2157,4313,41,38 "4,9"
-text 2206,4313,9,38 "("
-text 2215,4313,50,38 "305"
-text 2265,4313,9,38 ")"
-[pixels] img 1894,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/2a/df/43/2adf4321f97d45a4760cf7218794e224542e3dd5.jpg?rule=ad-image
+text 1482,4866,384,91 "Cadre de lit Neiden IKEA, pin/luroy, 140x200"
+text 1482,4966,66,43 "55 €"
+text 1480,4989,117,35 "Prix: 55 €."
+text 1482,5024,131,32 "Paris 75014"
+text 1480,5022,229,32 "Située à Paris 75014."
+text 1637,5024,207,32 "aujourd’hui à 13:48"
+text 1480,5022,384,32 "Date de dépôt : aujourd’hui à 13:48."
+text 1892,4309,187,35 "Ensemble literie"
+a 1894,4309,380,779 aria-label=Voir l’annonce href=/ad/ameublement/3250466542
+[pixels] img 1894,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/82abe289-f9ea-54d8-8471-37939d7ba359?rule=pp-small
+text 1950,4313,138,38 "Mystere64"
+text 2136,4313,17,38 "5"
+text 2160,4313,9,38 "("
+text 2169,4313,17,38 "8"
+text 2186,4313,9,38 ")"
+[pixels] img 1894,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/19/9c/30/199c30f7f53cfe1cb86a3c1704038cf0e2c8c8bc.jpg?rule=ad-image
 button 2194,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1894,4866,369,139 "Médaille du Travail en argent 1977 République Française - Très bon état"
-text 1894,4966,66,43 "20 €"
-text 1892,4989,117,35 "Prix: 20 €."
-text 1912,5028,38,32 "Pro"
-text 1892,5045,268,35 "Vendeur professionnel."
-text 1934,5080,192,32 "Livraison possible"
-text 1894,5128,300,64 "Saint-Georges-de-Didonne 17110"
-text 1892,5126,470,32 "Située à Saint-Georges-de-Didonne 17110."
-text 1894,5192,207,32 "aujourd’hui à 11:56"
-text 1892,5126,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 2304,4309,98,35 "Briquets"
-a 2306,4309,380,779 aria-label=Voir l’annonce href=/ad/collection/3250397513
-[pixels] img 2306,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/1b1a9569-9b45-5c48-8a1c-9568db1dedb5?rule=pp-small
-text 2362,4313,71,38 "DIMY"
-text 2481,4313,17,38 "5"
-text 2506,4313,9,38 "("
-text 2515,4313,50,38 "110"
-text 2565,4313,9,38 ")"
-[pixels] img 2306,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/f1/36/1d/f1361df331730a46be3393400d7e498b92c6386a.jpg?rule=ad-image
+text 1894,4866,240,43 "Ensemble literie"
+text 1894,4918,85,43 "500 €"
+text 1892,4941,133,35 "Prix: 500 €."
+text 1934,4976,192,32 "Livraison possible"
+text 1894,5024,162,32 "Ustaritz 64480"
+text 1892,5022,260,32 "Située à Ustaritz 64480."
+text 1894,5056,207,32 "aujourd’hui à 13:47"
+text 1892,5022,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 2304,4309,117,35 "Secrétaire"
+a 2306,4309,380,779 aria-label=Voir l’annonce href=/ad/ameublement/3250466547
+[pixels] img 2306,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/840c6928-9cff-5074-a277-d1873f0d21b4?rule=pp-small
+text 2362,4313,134,38 "Alexandre"
+text 2544,4313,17,38 "5"
+text 2569,4313,9,38 "("
+text 2578,4313,17,38 "2"
+text 2595,4313,9,38 ")"
+[pixels] img 2306,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/3d/fe/3c/3dfe3cfb68797e1f2fbc60abde6a7925faa2b094.jpg?rule=ad-image
 button 2606,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2306,4866,126,43 "Briquets"
-text 2306,4918,66,43 "10 €"
-text 2304,4941,117,35 "Prix: 10 €."
+text 2306,4866,150,43 "Secrétaire"
+text 2306,4918,66,43 "70 €"
+text 2304,4941,117,35 "Prix: 70 €."
 text 2346,4976,192,32 "Livraison possible"
-text 2306,5024,214,32 "Paris 75013 Tolbiac"
-text 2304,5022,312,32 "Située à Paris 75013 Tolbiac."
-text 2306,5056,207,32 "aujourd’hui à 11:56"
-text 2304,5022,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 2716,4309,251,35 "Stand acrylique Jinshi"
-a 2718,4309,380,779 aria-label=Voir l’annonce href=/ad/collection/3250342369
-[pixels] img 2718,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/cd39a99d-2dfa-5685-b8e1-d40da3f0e57e?rule=pp-small
-text 2774,4313,136,38 "Kushinada"
-text 2958,4313,17,38 "5"
-text 2982,4313,9,38 "("
-text 2991,4313,34,38 "95"
-text 3025,4313,9,38 ")"
-[pixels] img 2718,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/b4/96/42/b49642b5458dae3af045b40974a5debedc379419.jpg?rule=ad-image
+text 2306,5024,262,32 "La Grande-Motte 34280"
+text 2304,5022,361,32 "Située à La Grande-Motte 34280."
+text 2306,5056,207,32 "aujourd’hui à 13:47"
+text 2304,5022,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 2716,4309,201,35 "Meuble télé IKEA"
+a 2718,4309,380,731 aria-label=Voir l’annonce href=/ad/ameublement/3250466504
+[pixels] img 2718,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/dd2cfa79-ed26-5b55-8799-3aa9771d3b65?rule=pp-small
+text 2774,4313,121,38 "Benjamin"
+text 2943,4313,41,38 "4,8"
+text 2992,4313,9,38 "("
+text 3001,4313,34,38 "17"
+text 3035,4313,9,38 ")"
+[pixels] img 2718,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/2e/0c/a5/2e0ca5f6b6fd5269e3f9e964c5f8b300ba126251.jpg?rule=ad-image
 button 3018,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2718,4866,322,43 "Stand acrylique Jinshi"
-text 2718,4918,66,43 "25 €"
-text 2716,4941,117,35 "Prix: 25 €."
-text 2758,4976,192,32 "Livraison possible"
-text 2718,5024,181,32 "Méricourt 62680"
-text 2716,5022,279,32 "Située à Méricourt 62680."
-text 2718,5056,207,32 "aujourd’hui à 11:56"
-text 2716,5022,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 3128,4309,253,35 "Collection égyptienne"
-a 3130,4309,380,779 aria-label=Voir l’annonce href=/ad/collection/3250397395
-[pixels] img 3130,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/e2b139a3-9c58-5539-bdd4-579bd4d31969?rule=pp-small
-text 3186,4313,68,38 "betty"
-text 3302,4313,17,38 "5"
-text 3326,4313,9,38 "("
-text 3335,4313,17,38 "1"
-text 3352,4313,9,38 ")"
-[pixels] img 3130,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/39/1c/99/391c990e1066a048060f8931ca18d25e840130ac.jpg?rule=ad-image
+text 2718,4866,257,43 "Meuble télé IKEA"
+text 2718,4918,66,43 "10 €"
+text 2716,4941,117,35 "Prix: 10 €."
+text 2718,4976,182,32 "Bordeaux 33000"
+text 2716,4974,280,32 "Située à Bordeaux 33000."
+text 2718,5008,207,32 "aujourd’hui à 13:47"
+text 2716,4974,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 3128,4309,253,35 "Table basse relevable"
+a 3130,4309,380,731 aria-label=Voir l’annonce href=/ad/ameublement/3250466501
+[pixels] img 3130,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/22c8d6d0-6963-5173-a06e-ba94b5fee10d?rule=pp-small
+text 3186,4313,74,38 "Nynyj"
+text 3308,4313,17,38 "5"
+text 3333,4313,9,38 "("
+text 3342,4313,17,38 "2"
+text 3358,4313,9,38 ")"
+[pixels] img 3130,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/51/ef/94/51ef94b2867d8ec47a077d54ce94dac9b9c83041.jpg?rule=ad-image
 button 3430,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3130,4866,323,43 "Collection égyptienne"
-text 3130,4918,85,43 "150 €"
-text 3128,4941,133,35 "Prix: 150 €."
-text 3170,4976,192,32 "Livraison possible"
-text 3130,5024,175,32 "Ménétrol 63200"
-text 3128,5022,273,32 "Située à Ménétrol 63200."
-text 3130,5056,207,32 "aujourd’hui à 11:56"
-text 3128,5022,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 3540,4309,634,35 "Voitures de Sport Miniature, 24H du Mans, en bon état"
-a 3542,4309,380,747 aria-label=Voir l’annonce href=/ad/collection/3250397250
-[pixels] img 3542,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/21d58736-85dd-526a-a558-22a63fa78a48?rule=pp-small
-text 3598,4313,204,38 "Anne-Charlotte"
-[pixels] img 3542,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/e7/b0/28/e7b028ecab161378c3318b98186067b2878fccc3.jpg?rule=ad-image
+text 3130,4866,321,43 "Table basse relevable"
+text 3130,4918,66,43 "20 €"
+text 3128,4941,117,35 "Prix: 20 €."
+text 3130,4976,204,32 "La Rochelle 17000"
+text 3128,4974,302,32 "Située à La Rochelle 17000."
+text 3130,5008,207,32 "aujourd’hui à 13:47"
+text 3128,4974,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 3540,4309,138,35 "Table basse"
+a 3542,4309,380,731 aria-label=Voir l’annonce href=/ad/ameublement/3250466483
+[pixels] img 3542,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/a7f7553e-5aa5-504d-b102-75092b71e72c?rule=pp-small
+text 3598,4313,122,38 "Berlingot"
+text 3768,4313,41,38 "4,9"
+text 3816,4313,9,38 "("
+text 3825,4313,34,38 "53"
+text 3859,4313,9,38 ")"
+[pixels] img 3542,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/a2/40/70/a24070502850d5dcd0d6372b2ab17437f683738a.jpg?rule=ad-image
 button 3842,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3542,4866,379,139 "Voitures de Sport Miniature, 24H du Mans, en bon état"
-text 3542,4966,66,43 "15 €"
-text 3540,4989,117,35 "Prix: 15 €."
-text 3542,5024,146,32 "Nancy 54000"
-text 3540,5022,244,32 "Située à Nancy 54000."
-text 3712,5024,207,32 "aujourd’hui à 11:56"
-text 3540,5022,384,32 "Date de dépôt : aujourd’hui à 11:56."
-text 3952,4309,372,35 "Maquette Solido RENAULT 4CV"
-a 3954,4309,380,827 aria-label=Voir l’annonce href=/ad/collection/3250397218
-[pixels] img 3954,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/fb13d739-2f00-5c31-b0da-93b2c4b2bf3c?rule=pp-small
-text 4010,4313,124,38 "Philippon"
-text 4182,4313,17,38 "5"
-text 4207,4313,9,38 "("
-text 4216,4313,50,38 "144"
-text 4266,4313,9,38 ")"
-[pixels] img 3954,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/67/7e/8a/677e8a7476ab4d8fa28bf4d9261512524ebeb5dc.jpg?rule=ad-image
+text 3542,4866,175,43 "Table basse"
+text 3542,4918,66,43 "50 €"
+text 3540,4941,117,35 "Prix: 50 €."
+text 3542,4976,162,32 "Châtres 10510"
+text 3540,4974,260,32 "Située à Châtres 10510."
+text 3542,5008,207,32 "aujourd’hui à 13:47"
+text 3540,4974,384,32 "Date de dépôt : aujourd’hui à 13:47."
+text 3952,4309,137,35 "Lampadaire"
+a 3954,4309,380,731 aria-label=Voir l’annonce href=/ad/ameublement/3250466481
+[pixels] img 3954,4309,48,48 alt= src=https://img.leboncoin.fr/api/v1/tenants/9a6387a1-6259-4f2c-a887-7e67f23dd4cb/domains/20bda58f-d650-462e-a72a-a5a7ecf2bf88/buckets/21d2b0bc-e54c-4b64-a30b-89127b18b785/images/profile/pictures/default/a961cf1e-276d-57a9-ade2-06ce33d5fdd1?rule=pp-small
+text 4010,4313,80,38 "Jennie"
+[pixels] img 3954,4373,380,475 alt= src=https://img.leboncoin.fr/api/v1/lbcpb1/images/d9/19/33/d91933f3ea086216f1417751f739cc9d7ac20c67.jpg?rule=ad-image
 button 4254,4389,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3954,4866,253,91 "Maquette Solido RENAULT 4CV"
-text 3954,4966,66,43 "65 €"
-text 3952,4989,117,35 "Prix: 65 €."
-text 3994,5024,192,32 "Livraison possible"
-text 3954,5072,154,32 "Crozon 29160"
-text 3952,5070,252,32 "Située à Crozon 29160."
-text 3954,5104,207,32 "aujourd’hui à 11:56"
-text 3952,5070,384,32 "Date de dépôt : aujourd’hui à 11:56."
-a 4366,4309,288,915 href=/recherche?category=40
-[pixels] img 4405,4616,210,162 alt= src=<data-url>
-[pixels] img 4405,4616,210,162 alt= src=<data-url>
-text 4427,4823,167,91 "Voir plus d’annonces"
-button 2234,4734,64,64 type=button aria-label=Suivant
-text 246,5305,287,54 "Offres d'emploi"
-a 246,5304,2068,56 href=/recherche?category=33
-text 1997,5312,269,38 "Voir plus d’annonces"
-text 244,5392,588,35 "Poste Mécanicien / Technicien Automobiles (H/F/X)"
-a 246,5392,470,460 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3250396572
-text 278,5426,386,139 "Poste Mécanicien / Technicien Automobiles (H/F/X)"
-text 278,5528,47,38 "CDI"
-text 326,5588,251,32 "Candidature simplifiée"
-text 278,5648,129,32 "Pacé 35740"
-text 276,5424,246,35 "Située à Pacé 35740."
-text 278,5688,119,32 "aujourd’hui"
-text 276,5688,320,35 "Date de dépôt : aujourd’hui."
-text 276,5688,343,35 "Nouveau - Nouvelle annonce."
-text 378,5758,252,38 "AJT AUTOMOBILES"
-text 276,5779,337,35 "Société: AJT AUTOMOBILES."
-button 620,5756,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 746,5392,326,35 "Recherche emploi vendeuse"
-a 748,5392,470,396 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3250395154
-text 780,5426,272,91 "Recherche emploi vendeuse"
-text 780,5528,47,38 "CDI"
-text 780,5584,248,32 "Rieux-Volvestre 31310"
-text 778,5424,375,35 "Située à Rieux-Volvestre 31310."
-text 780,5624,119,32 "aujourd’hui"
-text 778,5624,320,35 "Date de dépôt : aujourd’hui."
-text 778,5624,343,35 "Nouveau - Nouvelle annonce."
-text 880,5694,129,38 "Lilidusude"
-text 778,5715,223,35 "Société: Lilidusude."
-button 1122,5692,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1248,5392,335,35 "Conseiller immobilier (H/F/X)"
-a 1250,5392,470,396 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248586138
-text 1282,5426,325,91 "Conseiller immobilier (H/F/X)"
-text 1282,5528,287,38 "Indépendant/Franchise"
-text 1282,5584,193,32 "Vénissieux 69200"
-text 1280,5424,315,35 "Située à Vénissieux 69200."
-text 1282,5624,119,32 "aujourd’hui"
-text 1280,5624,320,35 "Date de dépôt : aujourd’hui."
-text 1280,5624,343,35 "Nouveau - Nouvelle annonce."
-text 1382,5694,210,38 "SAFTI RECRUTE"
-text 1280,5715,299,35 "Société: SAFTI RECRUTE."
-button 1624,5692,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 1750,5392,629,35 "Directeur d’agence de recrutement et d’interim (H/F/X)"
-a 1752,5392,470,399 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248503147
-text 1784,5426,393,139 "Directeur d’agence de recrutement et d’interim (H/F/X)"
-text 1784,5531,47,38 "CDI"
-text 1855,5526,128,43 "50 000 €"
-text 1982,5532,49,35 "/ an"
-text 1782,5526,326,38 "Prix: 50 000 € brut par an."
-text 1784,5587,197,32 "Bischwiller 67240"
-text 1782,5424,320,35 "Située à Bischwiller 67240."
-text 1784,5627,119,32 "aujourd’hui"
-text 1782,5627,320,35 "Date de dépôt : aujourd’hui."
-text 1782,5627,343,35 "Nouveau - Nouvelle annonce."
-text 1884,5697,264,38 "Agence Pilote Aquila"
-text 1782,5718,349,35 "Société: Agence Pilote Aquila."
-button 2126,5695,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2252,5392,264,35 "Electricien BTP (H/F/X)"
-a 2254,5392,470,351 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248460287
-text 2286,5426,341,43 "Electricien BTP (H/F/X)"
-text 2286,5483,88,38 "Intérim"
-text 2398,5478,66,43 "12 €"
-text 2464,5484,86,35 "/ heure"
-text 2284,5478,312,38 "Prix: 12 € brut par heure."
-text 2286,5539,246,32 "Aubigné-Racan 72800"
-text 2284,5424,373,35 "Située à Aubigné-Racan 72800."
-text 2286,5579,119,32 "aujourd’hui"
-text 2284,5579,320,35 "Date de dépôt : aujourd’hui."
-text 2284,5579,343,35 "Nouveau - Nouvelle annonce."
-text 2386,5649,304,38 "AQUILA RH LA FLECHE"
-text 2284,5670,386,35 "Société: AQUILA RH LA FLECHE."
-button 2628,5647,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 2754,5392,438,35 "Mécanicien monteur industriel (H/F/X)"
-a 2756,5392,470,399 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248460268
-text 2788,5426,307,91 "Mécanicien monteur industriel (H/F/X)"
-text 2788,5531,88,38 "Intérim"
-text 2900,5526,66,43 "13 €"
-text 2966,5532,86,35 "/ heure"
-text 2786,5526,312,38 "Prix: 13 € brut par heure."
-text 2788,5587,136,32 "Agen 47000"
-text 2786,5424,254,35 "Située à Agen 47000."
-text 2788,5627,119,32 "aujourd’hui"
-text 2786,5627,320,35 "Date de dépôt : aujourd’hui."
-text 2786,5627,343,35 "Nouveau - Nouvelle annonce."
-text 2888,5697,204,38 "Aquila RH Agen"
-text 2786,5718,293,35 "Société: Aquila RH Agen."
-button 3130,5695,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3256,5392,497,35 "Chargé d'affaires BTP reconversion (H/F/X)"
-a 3258,5392,470,431 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248418453
-text 3290,5426,333,91 "Chargé d'affaires BTP reconversion (H/F/X)"
-text 3290,5531,47,38 "CDI"
-text 3361,5526,128,43 "50 000 €"
-text 3488,5532,49,35 "/ an"
-text 3288,5526,326,38 "Prix: 50 000 € brut par an."
-text 3290,5587,312,64 "Brunstatt-Didenheim 68350 Brunstatt"
-text 3288,5424,554,35 "Située à Brunstatt-Didenheim 68350 Brunstatt."
-text 3290,5659,119,32 "aujourd’hui"
-text 3288,5659,320,35 "Date de dépôt : aujourd’hui."
-text 3288,5659,343,35 "Nouveau - Nouvelle annonce."
-text 3390,5729,264,38 "Agence Pilote Aquila"
-text 3288,5750,349,35 "Société: Agence Pilote Aquila."
-button 3632,5727,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 3758,5392,647,35 "Job étudiant / Prof à domicile de Mathématiques (H/F/X)"
-a 3760,5392,470,399 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248317278
-text 3792,5426,346,139 "Job étudiant / Prof à domicile de Mathématiques (H/F/X)"
-text 3792,5531,60,38 "CDD"
-text 3876,5526,66,43 "17 €"
-text 3942,5532,86,35 "/ heure"
-text 3790,5526,312,38 "Prix: 17 € brut par heure."
-text 3792,5587,144,32 "Reims 51100"
-text 3790,5424,263,35 "Située à Reims 51100."
-text 3792,5627,119,32 "aujourd’hui"
-text 3790,5627,320,35 "Date de dépôt : aujourd’hui."
-text 3790,5627,343,35 "Nouveau - Nouvelle annonce."
-text 3892,5697,187,38 "COMPLETUDE"
-text 3790,5718,278,35 "Société: COMPLETUDE."
-button 4134,5695,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 4260,5392,170,35 "Cariste (H/F/X)"
-a 4262,5392,470,412 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248312327
-text 4294,5426,220,43 "Cariste (H/F/X)"
-text 4294,5480,88,38 "Intérim"
-text 4342,5540,251,32 "Candidature simplifiée"
-text 4294,5600,132,32 "Roye 80700"
-text 4292,5424,250,35 "Située à Roye 80700."
-text 4294,5640,119,32 "aujourd’hui"
-text 4292,5640,320,35 "Date de dépôt : aujourd’hui."
-text 4292,5640,343,35 "Nouveau - Nouvelle annonce."
-text 4394,5710,169,38 "MANPOWER"
-text 4292,5731,261,35 "Société: MANPOWER."
-button 4636,5708,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-text 4762,5392,568,35 "Assembleur Monteur Secteur Dampierrre (H/F/X)"
-a 4764,5392,470,399 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248310156
-text 4796,5426,324,139 "Assembleur Monteur Secteur Dampierrre (H/F/X)"
-text 4796,5531,88,38 "Intérim"
-text 4908,5526,66,43 "13 €"
-text 4974,5532,86,35 "/ heure"
-text 4794,5526,312,38 "Prix: 13 € brut par heure."
-text 4796,5587,191,32 "Dampierre 10240"
-text 4794,5424,314,35 "Située à Dampierre 10240."
-text 4796,5627,119,32 "aujourd’hui"
-text 4794,5627,320,35 "Date de dépôt : aujourd’hui."
-text 4794,5627,343,35 "Nouveau - Nouvelle annonce."
-text 4896,5697,219,38 "Aquila RH Troyes"
-text 4794,5718,307,35 "Société: Aquila RH Troyes."
-button 5138,5695,64,64 type=button aria-label=Ajouter l’annonce aux favoris
-a 5266,5392,288,460 href=/recherche?category=33
-[pixels] img 5305,5471,210,162 alt= src=<data-url>
-[pixels] img 5305,5471,210,162 alt= src=<data-url>
-text 5327,5678,167,91 "Voir plus d’annonces"
-button 2234,5590,64,64 type=button aria-label=Suivant
-text 246,6408,2069,64 "Avec leboncoin, trouvez la bonne affaire sur le site référent de petites annonces de particulier à particulier et de professionnels. Avec des millions de petites annonces, trouvez la bonne occasion dans nos catégories"
-a 466,6440,87,32 href=/c/voitures
-text 466,6440,87,32 "voitures"
-text 552,6440,5,32 ","
-a 564,6440,115,32 href=/c/ventes_immobilieres
-text 564,6440,115,32 "immobilier"
-text 679,6440,5,32 ","
-a 690,6440,74,32 href=/c/offres_d_emploi
-text 690,6440,74,32 "emploi"
-text 764,6440,5,32 ","
-a 776,6440,223,32 href=/c/locations_saisonnieres
-text 776,6440,223,32 "location de vacances"
-text 999,6440,5,32 ","
-a 1011,6440,114,32 href=/c/vetements
-text 1011,6440,114,32 "vêtements"
-text 1124,6440,5,32 ","
-a 1136,6440,93,32 href=/c/ameublement
-text 1136,6440,93,32 "meubles"
-text 1229,6440,5,32 ","
-a 1240,6440,100,32 href=/c/bricolage
-text 1240,6440,100,32 "bricolage"
-text 1340,6440,5,32 ","
-a 1352,6440,115,32 href=/c/telephones_objets_connectes
-text 1352,6440,115,32 "téléphonie"
-text 1467,6440,5,32 ","
-a 1478,6440,110,32 href=/c/consoles
-text 1478,6440,110,32 "jeux vidéo"
-text 246,6440,2074,64 ", etc. Déposez une annonce gratuite en toute simplicité pour vendre, rechercher, donner vos biens de seconde main ou promouvoir vos services. Pour cet été, découvrez nos idées de destination avec notre"
-a 1688,6472,320,32 href=/guide/vacances
-text 1688,6472,320,32 "guide de vacances en France."
-text 246,6472,2047,64 "Achetez en toute sécurité avec notre système de paiement en ligne et de livraison pour les annonces éligibles."
-a 214,6636,87,32 href=/c/_emploi_
-text 214,6636,87,32 "EMPLOI"
-a 214,6691,165,32 href=/c/offres_d_emploi
-text 214,6691,165,32 "Offres d'emploi"
-a 214,6746,303,32 href=/c/formations_professionnelles
-text 214,6746,303,32 "Formations professionnelles"
-a 214,6851,131,32 href=/c/_vehicules_
-text 214,6851,131,32 "VÉHICULES"
-a 214,6906,89,32 href=/c/voitures
-text 214,6906,89,32 "Voitures"
-a 214,6961,67,32 href=/c/motos
-text 214,6961,67,32 "Motos"
-a 214,7016,121,32 href=/c/caravaning
-text 214,7016,121,32 "Caravaning"
-a 214,7071,104,32 href=/c/utilitaires
-text 214,7071,104,32 "Utilitaires"
-a 214,7126,93,32 href=https://www.truckscorner.fr/#at_medium=custom4&at_campaign=fr_tc_veh_mot_lbc_part_site-menu-autopromo-lbc_______
-text 214,7126,93,32 "Camions"
-a 214,7181,103,32 href=/c/nautisme
-text 214,7181,103,32 "Nautisme"
-a 214,7236,183,32 href=/c/equipement_auto
-text 214,7236,183,32 "Équipement auto"
-a 214,7291,191,32 href=/c/equipement_moto
-text 214,7291,191,32 "Équipement moto"
-a 214,7346,252,32 href=/c/equipement_caravaning
-text 214,7346,252,32 "Équipement caravaning"
-a 214,7401,234,32 href=/c/equipement_nautisme
-text 214,7401,234,32 "Équipement nautisme"
-a 214,7506,138,32 href=/plan-du-site/immobilier
-text 214,7506,138,32 "IMMOBILIER"
-a 214,7561,218,32 href=/c/ventes_immobilieres
-text 214,7561,218,32 "Ventes immobilières"
-a 214,7616,102,32 href=/c/locations
-text 214,7616,102,32 "Locations"
-a 214,7671,125,32 href=/c/colocations
-text 214,7671,125,32 "Colocations"
-a 214,7726,245,32 href=/c/bureaux_commerces
-text 214,7726,245,32 "Bureaux & Commerces"
-a 214,7831,71,32 href=/c/_mode_
-text 214,7831,71,32 "MODE"
-a 214,7886,116,32 href=/c/vetements
-text 214,7886,116,32 "Vêtements"
-a 214,7941,125,32 href=/c/chaussures
-text 214,7941,125,32 "Chaussures"
-a 214,7996,265,32 href=/c/accessoires_bagagerie
-text 214,7996,265,32 "Accessoires & Bagagerie"
-a 214,8051,185,32 href=/c/montres_bijoux
-text 214,8051,185,32 "Montres & Bijoux"
-a 759,6636,307,32 href=/c/_locations_de_vacances_
-text 759,6636,307,32 "LOCATIONS DE VACANCES"
-a 759,6691,242,32 href=/c/locations_saisonnieres
-text 759,6691,242,32 "Locations saisonnières"
-a 759,6796,89,32 href=/c/_loisirs_
-text 759,6796,89,32 "LOISIRS"
-a 759,6851,111,32 href=/c/antiquites
-text 759,6851,111,32 "Antiquités"
-a 759,6906,108,32 href=/c/collection
-text 759,6906,108,32 "Collection"
-a 759,6961,148,32 href=/c/cd_musique
-text 759,6961,148,32 "CD - Musique"
-a 759,7016,132,32 href=/c/dvd_films
-text 759,7016,132,32 "DVD - Films"
-a 759,7071,259,32 href=/c/instruments_de_musique
-text 759,7071,259,32 "Instruments de musique"
-a 759,7126,64,32 href=/c/livres
-text 759,7126,64,32 "Livres"
-a 759,7181,118,32 href=/c/modelisme
-text 759,7181,118,32 "Modélisme"
-a 759,7236,214,32 href=/c/vins_gastronomie
-text 759,7236,214,32 "Vins & Gastronomie"
-a 759,7291,143,32 href=/c/jeux_jouets
-text 759,7291,143,32 "Jeux & Jouets"
-a 759,7346,154,32 href=/c/loisirs_creatifs
-text 759,7346,154,32 "Loisirs créatifs"
-a 759,7401,176,32 href=/c/sport_plein_air
-text 759,7401,176,32 "Sport & Plein air"
-a 759,7456,60,32 href=/c/velos
-text 759,7456,60,32 "Vélos"
-a 759,7511,204,32 href=/c/equipements_velos
-text 759,7511,204,32 "Équipements vélos"
-a 759,7616,113,32 href=/c/_animaux_
-text 759,7616,113,32 "ANIMAUX"
-a 759,7671,96,32 href=/c/animaux
-text 759,7671,96,32 "Animaux"
-a 759,7726,224,32 href=/c/accessoires_animaux
-text 759,7726,224,32 "Accessoires animaux"
-a 759,7781,176,32 href=/c/animaux_perdus
-text 759,7781,176,32 "Animaux perdus"
-a 1304,6636,180,32 href=/c/_electronique_
-text 1304,6636,180,32 "ÉLECTRONIQUE"
-a 1304,6691,127,32 href=/c/ordinateurs
-text 1304,6691,127,32 "Ordinateurs"
-a 1304,6746,269,32 href=/c/accessoires_informatique
-text 1304,6746,269,32 "Accessoires informatique"
-a 1304,6801,221,32 href=/c/tablettes_liseuses
-text 1304,6801,221,32 "Tablettes & Liseuses"
-a 1304,6856,221,32 href=/c/photo_audio_video
-text 1304,6856,221,32 "Photo, audio & vidéo"
-a 1304,6911,338,32 href=/c/telephones_objets_connectes
-text 1304,6911,338,32 "Téléphones & Objets connectés"
-a 1304,6966,455,32 href=/c/accessoires_telephone_objets_connectes
-text 1304,6966,455,32 "Accessoires téléphone & Objets connectés"
-a 1304,7021,98,32 href=/c/consoles
-text 1304,7021,98,32 "Consoles"
-a 1304,7076,111,32 href=/c/jeux_video
-text 1304,7076,111,32 "Jeux vidéo"
-a 1304,7181,113,32 href=/c/_services_
-text 1304,7181,113,32 "SERVICES"
-a 1304,7236,219,32 href=/c/artistes_musiciens
-text 1304,7236,219,32 "Artistes & Musiciens"
-a 1304,7291,134,32 href=/c/baby_sitting
-text 1304,7291,134,32 "Baby-Sitting"
-a 1304,7346,105,32 href=/c/billetterie
-text 1304,7346,105,32 "Billetterie"
-a 1304,7401,129,32 href=/c/covoiturage
-text 1304,7401,129,32 "Covoiturage"
-a 1304,7456,188,32 href=/c/cours_particuliers
-text 1304,7456,188,32 "Cours particuliers"
-a 1304,7511,231,32 href=/c/entraide_entre_voisins
-text 1304,7511,231,32 "Entraide entre voisins"
-a 1304,7566,132,32 href=/c/evenements
-text 1304,7566,132,32 "Évènements"
-a 1304,7621,241,32 href=/c/services_a_la_personne
-text 1304,7621,241,32 "Services à la personne"
-a 1304,7676,232,32 href=/c/services_aux_animaux
-text 1304,7676,232,32 "Services aux animaux"
-a 1304,7731,298,32 href=/c/services_de_demenagement
-text 1304,7731,298,32 "Services de déménagement"
-a 1304,7786,402,32 href=/c/services_de_reparations_electroniques
-text 1304,7786,402,32 "Services de réparations électroniques"
-a 1304,7841,385,32 href=/c/services_de_reparations_mecaniques
-text 1304,7841,385,32 "Services de réparations mécaniques"
-a 1304,7896,357,32 href=/c/services_de_jardinerie_bricolage
-text 1304,7896,357,32 "Services de jardinerie & bricolage"
-a 1304,7951,252,32 href=/c/services_evenementiels
-text 1304,7951,252,32 "Services évènementiels"
-a 1304,8006,165,32 href=/c/autres_services
-text 1304,8006,165,32 "Autres services"
-a 1849,6636,97,32 href=/c/_famille_
-text 1849,6636,97,32 "FAMILLE"
-a 1849,6691,189,32 href=/c/equipement_bebe
-text 1849,6691,189,32 "Équipement bébé"
-a 1849,6746,163,32 href=/c/mobilier_enfant
-text 1849,6746,163,32 "Mobilier enfant"
-a 1849,6801,176,32 href=/c/vetements_bebe
-text 1849,6801,176,32 "Vêtements bébé"
-a 1849,6906,209,32 href=/c/_maison_jardin_
-text 1849,6906,209,32 "MAISON & JARDIN"
-a 1849,6961,153,32 href=/c/ameublement
-text 1849,6961,153,32 "Ameublement"
-a 1849,7016,353,32 href=/c/papeterie_fournitures_scolaires
-text 1849,7016,353,32 "Papeterie & Fournitures scolaires"
-a 1849,7071,170,32 href=/c/electromenager
-text 1849,7071,170,32 "Électroménager"
-a 1849,7126,167,32 href=/c/arts_de_la_table
-text 1849,7126,167,32 "Arts de la table"
-a 1849,7181,117,32 href=/c/decoration
-text 1849,7181,117,32 "Décoration"
-a 1849,7236,176,32 href=/c/linge_de_maison
-text 1849,7236,176,32 "Linge de maison"
-a 1849,7291,101,32 href=/c/bricolage
-text 1849,7291,101,32 "Bricolage"
-a 1849,7346,172,32 href=/c/jardin_plantes
-text 1849,7346,172,32 "Jardin & Plantes"
-a 1849,7451,315,32 href=/c/_materiel_professionnel_
-text 1849,7451,315,32 "MATÉRIEL PROFESSIONNEL"
-a 1849,7506,99,32 href=/c/tracteurs
-text 1849,7506,99,32 "Tracteurs"
-a 1849,7561,179,32 href=/c/materiel_agricole
-text 1849,7561,179,32 "Matériel agricole"
-a 1849,7616,297,32 href=/c/btp_chantier_gros_oeuvre
-text 1849,7616,297,32 "BTP - Chantier gros-oeuvre"
-a 1849,7671,133,32 href=/c/poids_lourds
-text 1849,7671,133,32 "Poids lourds"
-a 1849,7726,236,32 href=/c/manutention_levage
-text 1849,7726,236,32 "Manutention - Levage"
-a 1849,7781,259,32 href=/c/equipements_industriels
-text 1849,7781,259,32 "Équipements industriels"
-a 1849,7836,420,32 href=/c/equipements_pour_restaurants_hotels
-text 1849,7836,420,32 "Équipements pour restaurants & hôtels"
-a 1849,7891,405,32 href=/c/equipements_fournitures_de_bureau
-text 1849,7891,405,32 "Équipements & Fournitures de bureau"
-a 1849,7946,444,32 href=/c/equipements_pour_commerces_marches
-text 1849,7946,444,32 "Équipements pour commerces & marchés"
-a 1849,8001,178,32 href=/c/materiel_medical
-text 1849,8001,178,32 "Matériel médical"
-text 1849,8102,88,32 "DIVERS"
-a 1849,8154,72,32 href=/c/autres
-text 1849,8154,72,32 "Autres"
-text 214,8255,80,32 "OUEST"
-a 214,8307,194,32 href=/l/rp_basse-normandie
-text 214,8307,194,32 "Basse-Normandie"
-a 214,8362,99,32 href=/l/rp_bretagne
-text 214,8362,99,32 "Bretagne"
-a 214,8417,169,32 href=/l/rp_pays%20de%20la%20loire
-text 214,8417,169,32 "Pays de la Loire"
-a 214,8472,189,32 href=/l/rp_poitou-charentes
-text 214,8472,189,32 "Poitou-Charentes"
-text 214,8573,142,32 "SUD-OUEST"
-a 214,8625,104,32 href=/l/rp_aquitaine
-text 214,8625,104,32 "Aquitaine"
-a 214,8680,155,32 href=/l/rp_midi-pyr%C3%A9n%C3%A9es
-text 214,8680,155,32 "Midi-Pyrénées"
-text 759,8255,105,32 "SUD-EST"
-a 759,8307,61,32 href=/l/rp_corse
-text 759,8307,61,32 "Corse"
-a 759,8362,240,32 href=/l/rp_languedoc-roussillon
-text 759,8362,240,32 "Languedoc-Roussillon"
-a 759,8417,306,32 href=/l/rp_provence-alpes-c%C3%B4te%20d'azur
-text 759,8417,306,32 "Provence-Alpes-Côte d’Azur"
-a 759,8472,142,32 href=/l/rp_rhone-alpes
-text 759,8472,142,32 "Rhône-Alpes"
-text 759,8573,44,32 "EST"
-a 759,8625,72,32 href=/l/rp_alsace
-text 759,8625,72,32 "Alsace"
-a 759,8680,119,32 href=/l/rp_bourgogne
-text 759,8680,119,32 "Bourgogne"
-a 759,8735,233,32 href=/l/rp_champagne-ardenne
-text 759,8735,233,32 "Champagne-Ardenne"
-a 759,8790,166,32 href=/l/rp_franche-comt%C3%A9
-text 759,8790,166,32 "Franche-Comté"
-a 759,8845,88,32 href=/l/rp_lorraine
-text 759,8845,88,32 "Lorraine"
-text 1304,8255,72,32 "NORD"
-a 1304,8307,195,32 href=/l/rp_haute-normandie
-text 1304,8307,195,32 "Haute-Normandie"
-a 1304,8362,216,32 href=/l/rp_nord-pas-de-calais
-text 1304,8362,216,32 "Nord-Pas-de-Calais"
-a 1304,8417,85,32 href=/l/rp_picardie
-text 1304,8417,85,32 "Picardie"
-text 1304,8518,94,32 "CENTRE"
-a 1304,8570,105,32 href=/l/rp_auvergne
-text 1304,8570,105,32 "Auvergne"
-a 1304,8625,71,32 href=/l/rp_centre
-text 1304,8625,71,32 "Centre"
-a 1304,8680,145,32 href=/l/rp_ile-de-france
-text 1304,8680,145,32 "Ile-de-France"
-a 1304,8735,97,32 href=/l/rp_limousin
-text 1304,8735,97,32 "Limousin"
-text 1849,8255,74,32 "DROM"
-a 1849,8307,131,32 href=/l/rp_guadeloupe
-text 1849,8307,131,32 "Guadeloupe"
-a 1849,8362,116,32 href=/l/rp_martinique
-text 1849,8362,116,32 "Martinique"
-a 1849,8417,82,32 href=/l/rp_guyane
-text 1849,8417,82,32 "Guyane"
-a 1849,8472,88,32 href=/l/rp_reunion
-text 1849,8472,88,32 "Réunion"
-text 214,11130,382,43 "À PROPOS DU BONCOIN"
-a 214,11218,148,38 href=/plan-du-site
-text 214,11218,148,38 "Plan du site"
-a 214,11274,248,38 href=https://leboncoincorporate.com/
-text 214,11274,248,38 "Qui sommes-nous ?"
-a 214,11330,150,38 href=/evenement/nouveautes
-text 214,11330,150,38 "Nouveautés"
-a 214,11386,183,38 href=/boutique/11532/postulez_aux_offres_d_emploi_leboncoin.htm
-text 214,11386,183,38 "Nous rejoindre"
-a 214,11442,228,38 href=https://leboncoincorporate.com/nos-engagements/
-text 214,11442,228,38 "Nos engagements"
-a 214,11498,178,38 href=https://presse.leboncoincorporate.com/
-text 214,11498,178,38 "Espace presse"
-text 214,11588,311,43 "NOS APPLICATIONS"
-text 759,11130,395,43 "INFORMATIONS LÉGALES"
-a 759,11218,417,38 href=/dc/cgu
-text 759,11218,417,38 "Conditions générales d’utilisation"
-a 759,11274,423,78 href=/dc/rules
-text 759,11274,423,78 "Référencement et classement des annonces"
-a 759,11370,379,38 href=/dc/cgv
-text 759,11370,379,38 "Conditions générales de vente"
-a 759,11426,334,38 href=/dc/cookies
-text 759,11426,334,38 "Politique de confidentialité"
-button 759,11482,248,40 type=button
-text 759,11482,248,38 "Gestion des cookies"
-a 759,11538,304,38 href=/dc/vos_droits_et_obligations
-text 759,11538,304,38 "Vos droits et obligations"
-a 759,11594,200,38 href=/dc/avis_utilisateurs
-text 759,11594,200,38 "Avis utilisateurs"
-a 759,11650,260,38 href=/dc/charte_de_bonne_conduite
-text 759,11650,260,38 "Confiance et sécurité"
-a 759,11706,329,38 href=/dc/paiement_en_plusieurs_fois
-text 759,11706,329,38 "Paiement en plusieurs fois"
-text 759,11796,231,43 "ACCESSIBILITÉ"
-a 759,11884,471,38 href=/dc/accessibilite
-text 759,11884,471,38 "Accessibilité : partiellement conforme"
-button 759,11939,324,40 type=button id=base-ui-_R_3ba9jraqj6_
-text 759,11939,324,38 "Paramètres d’accessibilité"
-text 1304,11130,359,43 "NOS SOLUTIONS PROS"
-a 1304,11218,147,38 href=https://leboncoinsolutionspro.fr/automobile
-text 1304,11218,147,38 "Automobile"
-a 1304,11274,133,38 href=https://leboncoinsolutionspro.fr/immobilier
-text 1304,11274,133,38 "Immobilier"
-a 1304,11330,87,38 href=https://leboncoinsolutionspro.fr/emploi
-text 1304,11330,87,38 "Emploi"
-a 1304,11386,145,38 href=/solutions-emploi/offre-emploi-tpe
-text 1304,11386,145,38 "Emploi TPE"
-a 1304,11442,286,38 href=https://leboncoinsolutionspro.fr/commerces-services
-text 1304,11442,286,38 "Commerces & Services"
-a 1304,11498,108,38 href=https://leboncoinpublicite.fr/
-text 1304,11498,108,38 "Publicité"
-a 1304,11554,115,38 href=https://leboncoinsolutionspro.fr/location-de-vacances
-text 1304,11554,115,38 "Tourisme"
-a 1304,11610,229,38 href=/boutiques/tout_secteur_d_activite/toutes_categories
-text 1304,11610,229,38 "Annuaire des Pros"
-a 1304,11666,356,38 href=/evenement/nouveautes-leboncoin-immo-pro
-text 1304,11666,356,38 "Nouveautés leboncoin immo"
-a 1304,11722,402,38 href=/evenement/nouveautes-leboncoin-vehicules-pro
-text 1304,11722,402,38 "Nouveautés leboncoin véhicules"
-a 1304,11778,352,38 href=/solutions-pro/fournisseur-de-technologies
-text 1304,11778,352,38 "Fournisseur de technologies"
-text 1849,11130,281,43 "DES QUESTIONS ?"
-a 1849,11218,58,38 href=https://assistance.leboncoin.info/hc/fr
-text 1849,11218,58,38 "Aide"
-a 1849,11274,475,38 href=/service/paiement-securise
-text 1849,11274,475,38 "La transaction sécurisée et la livraison"
-a 1849,11330,224,38 href=/service/porte-monnaie
-text 1849,11330,224,38 "Le porte-monnaie"
-a 1849,11386,470,78 href=/reservation-de-vacances/hote
-text 1849,11386,470,78 "Le service de réservation de vacances en ligne pour les hôtes"
-a 1849,11482,417,38 href=/immo/profil-locataire
-text 1849,11482,417,38 "Votre dossier de location en ligne"
-a 1849,11538,268,38 href=/service/pass-locataire-plus-immo
-text 1849,11538,255,38 "Votre Pass Locataire"
-text 2104,11534,13,28 "+"
-a 1849,11594,264,38 href=/service/espace-bailleur
-text 1849,11594,264,38 "Votre espace bailleur"
-a 1849,11650,201,38 href=/service/cote-argus
-text 1849,11650,201,38 "La Cote Argus®"
-a 1849,11706,276,38 href=https://status.leboncoin.fr
-text 1849,11706,276,38 "Statut de nos services"
-a 1849,11762,102,38 href=https://app.yogosha.com/cvd/adevinta-france/1mvkLXr7RZpiecTIsWDqn5
-text 1849,11762,102,38 "Sécurité"
-a 1849,11817,315,38 href=/navigation-sans-pub
-text 1849,11817,315,38 "Navigation sans publicité"
-text 564,12436,163,43 "leboncoin :"
-a 726,12434,229,48 href=https://www.avendrealouer.fr
-text 726,12436,229,43 "AVendreALouer"
-a 979,12434,377,48 href=https://immobilierneuf.leboncoin.fr
-text 979,12436,377,43 "leboncoin Immobilier Neuf"
-a 1379,12434,166,48 href=https://www.agriaffaires.com#at_medium=custom4&at_campaign=fr_aa_veh_mot_lbc_part_site-footer-autopromo-lbc_______
-text 1379,12436,166,43 "Agriaffaires"
-a 1570,12434,220,48 href=https://www.machineryzone.fr#at_medium=custom4&at_campaign=fr_mz_veh_mot_lbc_part_site-footer-autopromo-lbc_______
-text 1570,12436,220,43 "MachineryZone"
-a 1814,12434,183,48 href=https://www.truckscorner.fr#at_medium=custom4&at_campaign=fr_tc_veh_mot_lbc_part_site-footer-autopromo-lbc_______
-text 1814,12436,183,43 "Truckscorner"
-text 214,12518,331,43 "leboncoin 2006 - 2026"
-a 925,12516,711,48 href=https://fr.trustpilot.com/review/www.leboncoin.fr
-text 918,12521,140,38 "Excellent"
-[pixels] img 1075,12522,30,30 alt= src=<data-url>
-[pixels] img 1075,12522,30,30 alt= src=<data-url>
-[pixels] img 1109,12522,30,30 alt= src=<data-url>
-[pixels] img 1109,12522,30,30 alt= src=<data-url>
-[pixels] img 1143,12522,30,30 alt= src=<data-url>
-[pixels] img 1143,12522,30,30 alt= src=<data-url>
-[pixels] img 1177,12522,30,30 alt= src=<data-url>
-[pixels] img 1177,12522,30,30 alt= src=<data-url>
-[pixels] img 1211,12522,30,30 alt= src=<data-url>
-[pixels] img 1211,12522,30,30 alt= src=<data-url>
-text 1260,12525,93,33 "295992"
-text 1354,12525,104,33 "avis sur"
-[pixels] img 1473,12516,36,36 alt= src=<data-url>
-[pixels] img 1473,12516,36,36 alt= src=<data-url>
-text 1521,12525,120,33 "Trustpilot"
-text 1811,12518,279,43 "Retrouvez-nous sur"
-a 2106,12516,64,48 href=https://www.linkedin.com/company/leboncoin aria-label=Lien vers notre page LinkedIn
-a 2170,12516,64,48 href=https://twitter.com/leboncoin/ aria-label=Lien vers notre page X (Twitter)
-a 2234,12516,64,48 href=https://www.instagram.com/leboncoin/ aria-label=Lien vers notre page Instagram
-a 2298,12516,48,48 href=https://www.pinterest.fr/leboncoin/ aria-label=Lien vers notre page Pinterest
+text 3954,4866,175,43 "Lampadaire"
+text 3954,4918,66,43 "20 €"
+text 3952,4941,117,35 "Prix: 20 €."
+text 3954,4976,184,32 "Veaugues 18300"
+text 3952,4974,282,32 "Située à Veaugues 18300."
+text 3954,5008,207,32 "aujourd’hui à 13:47"
+text 3952,4974,384,32 "Date de dépôt : aujourd’hui à 13:47."
+a 4366,4309,288,779 href=/recherche?category=19
+[pixels] img 4405,4548,210,162 alt= src=<data-url>
+[pixels] img 4405,4548,210,162 alt= src=<data-url>
+text 4427,4755,167,91 "Voir plus d’annonces"
+button 2234,4666,64,64 type=button aria-label=Suivant
+text 246,5169,287,54 "Offres d'emploi"
+a 246,5168,2068,56 href=/recherche?category=33
+text 1997,5176,269,38 "Voir plus d’annonces"
+text 244,5256,335,35 "Conseiller immobilier (H/F/X)"
+a 246,5256,470,396 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248586517
+text 278,5290,325,91 "Conseiller immobilier (H/F/X)"
+text 278,5392,287,38 "Indépendant/Franchise"
+text 278,5448,278,32 "Le Kremlin-Bicêtre 94270"
+text 276,5288,408,35 "Située à Le Kremlin-Bicêtre 94270."
+text 278,5488,119,32 "aujourd’hui"
+text 276,5488,320,35 "Date de dépôt : aujourd’hui."
+text 276,5488,343,35 "Nouveau - Nouvelle annonce."
+text 378,5558,210,38 "SAFTI RECRUTE"
+text 276,5579,299,35 "Société: SAFTI RECRUTE."
+button 620,5556,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 746,5256,625,35 "Ingénieur V&V Logiciel Embarqué - Ferroviaire (H/F/X)"
+a 748,5256,470,396 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248537602
+text 780,5290,373,139 "Ingénieur V&V Logiciel Embarqué - Ferroviaire (H/F/X)"
+text 780,5392,47,38 "CDI"
+text 780,5448,216,32 "Villeurbanne 69100"
+text 778,5288,340,35 "Située à Villeurbanne 69100."
+text 780,5488,119,32 "aujourd’hui"
+text 778,5488,320,35 "Date de dépôt : aujourd’hui."
+text 778,5488,343,35 "Nouveau - Nouvelle annonce."
+text 880,5558,299,38 "Free-Work / Turnover IT"
+text 778,5579,380,35 "Société: Free-Work / Turnover IT."
+button 1122,5556,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 1248,5256,305,35 "Commis de cuisine (H/F/X)"
+a 1250,5256,470,415 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248531292
+text 1282,5290,390,43 "Commis de cuisine (H/F/X)"
+text 1282,5347,88,38 "Intérim"
+text 1394,5342,66,43 "14 €"
+text 1460,5348,86,35 "/ heure"
+text 1280,5342,312,38 "Prix: 14 € brut par heure."
+text 1330,5407,251,32 "Candidature simplifiée"
+text 1282,5467,166,32 "Épernay 51200"
+text 1280,5288,286,35 "Située à Épernay 51200."
+text 1282,5507,119,32 "aujourd’hui"
+text 1280,5507,320,35 "Date de dépôt : aujourd’hui."
+text 1280,5507,343,35 "Nouveau - Nouvelle annonce."
+text 1382,5577,157,38 "DOMINO Rh"
+text 1280,5598,250,35 "Société: DOMINO Rh."
+button 1624,5575,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 1750,5256,350,35 "Architecte Collaboratif (H/F/X)"
+a 1752,5256,470,396 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248442907
+text 1784,5290,346,91 "Architecte Collaboratif (H/F/X)"
+text 1784,5392,47,38 "CDI"
+text 1784,5448,310,32 "Boulogne-Billancourt 92100"
+text 1782,5288,442,35 "Située à Boulogne-Billancourt 92100."
+text 1784,5488,119,32 "aujourd’hui"
+text 1782,5488,320,35 "Date de dépôt : aujourd’hui."
+text 1782,5488,343,35 "Nouveau - Nouvelle annonce."
+text 1884,5558,299,38 "Free-Work / Turnover IT"
+text 1782,5579,380,35 "Société: Free-Work / Turnover IT."
+button 2126,5556,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 2252,5256,238,35 "Appui POA - (H/F/X)"
+a 2254,5256,470,348 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248442905
+text 2286,5290,305,43 "Appui POA - (H/F/X)"
+text 2286,5344,47,38 "CDI"
+text 2286,5400,173,32 "Nanterre 92000"
+text 2284,5288,294,35 "Située à Nanterre 92000."
+text 2286,5440,119,32 "aujourd’hui"
+text 2284,5440,320,35 "Date de dépôt : aujourd’hui."
+text 2284,5440,343,35 "Nouveau - Nouvelle annonce."
+text 2386,5510,299,38 "Free-Work / Turnover IT"
+text 2284,5531,380,35 "Société: Free-Work / Turnover IT."
+button 2628,5508,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 2754,5256,523,35 "Ingénieur.e Infrastructure DevSecOps (H/F/X)"
+a 2756,5256,470,396 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248442898
+text 2788,5290,385,91 "Ingénieur.e Infrastructure DevSecOps (H/F/X)"
+text 2788,5392,47,38 "CDI"
+text 2788,5448,199,32 "Courbevoie 92400"
+text 2786,5288,322,35 "Située à Courbevoie 92400."
+text 2788,5488,119,32 "aujourd’hui"
+text 2786,5488,320,35 "Date de dépôt : aujourd’hui."
+text 2786,5488,343,35 "Nouveau - Nouvelle annonce."
+text 2888,5558,299,38 "Free-Work / Turnover IT"
+text 2786,5579,380,35 "Société: Free-Work / Turnover IT."
+button 3130,5556,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 3256,5256,629,35 "Directeur d'agence d'intérim et de recrutement (H/F/X)"
+a 3258,5256,470,399 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248310164
+text 3290,5290,414,139 "Directeur d'agence d'intérim et de recrutement (H/F/X)"
+text 3290,5395,47,38 "CDI"
+text 3361,5390,128,43 "50 000 €"
+text 3488,5396,49,35 "/ an"
+text 3288,5390,326,38 "Prix: 50 000 € brut par an."
+text 3290,5451,197,32 "Guebwiller 68500"
+text 3288,5288,320,35 "Située à Guebwiller 68500."
+text 3290,5491,119,32 "aujourd’hui"
+text 3288,5491,320,35 "Date de dépôt : aujourd’hui."
+text 3288,5491,343,35 "Nouveau - Nouvelle annonce."
+text 3390,5561,264,38 "Agence Pilote Aquila"
+text 3288,5582,349,35 "Société: Agence Pilote Aquila."
+button 3632,5559,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 3758,5256,273,35 "Jointeur silicone (H/F/X)"
+a 3760,5256,470,351 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248274746
+text 3792,5290,353,43 "Jointeur silicone (H/F/X)"
+text 3792,5347,88,38 "Intérim"
+text 3904,5342,66,43 "13 €"
+text 3970,5348,86,35 "/ heure"
+text 3790,5342,312,38 "Prix: 13 € brut par heure."
+text 3792,5403,152,32 "Jonage 69330"
+text 3790,5288,272,35 "Située à Jonage 69330."
+text 3792,5443,119,32 "aujourd’hui"
+text 3790,5443,320,35 "Date de dépôt : aujourd’hui."
+text 3790,5443,343,35 "Nouveau - Nouvelle annonce."
+text 3892,5513,227,38 "AQUILA RH JONS"
+text 3790,5534,314,35 "Société: AQUILA RH JONS."
+button 4134,5511,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 4260,5256,324,35 "Electricien industriel (H/F/X)"
+a 4262,5256,470,463 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248250069
+text 4294,5290,312,91 "Electricien industriel (H/F/X)"
+text 4294,5395,88,38 "Intérim"
+text 4406,5390,66,43 "13 €"
+text 4472,5396,86,35 "/ heure"
+text 4292,5390,312,38 "Prix: 13 € brut par heure."
+text 4342,5455,251,32 "Candidature simplifiée"
+text 4294,5515,200,32 "Compiègne 60200"
+text 4292,5288,323,35 "Située à Compiègne 60200."
+text 4294,5555,119,32 "aujourd’hui"
+text 4292,5555,320,35 "Date de dépôt : aujourd’hui."
+text 4292,5555,343,35 "Nouveau - Nouvelle annonce."
+text 4394,5625,60,38 "DLSI"
+text 4292,5646,159,35 "Société: DLSI."
+button 4636,5623,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+text 4762,5256,346,35 "Soudeur en tuyauterie (H/F/X)"
+a 4764,5256,470,463 aria-label=Voir l’annonce href=/ad/offres_d_emploi/3248216022
+text 4796,5290,338,91 "Soudeur en tuyauterie (H/F/X)"
+text 4796,5395,88,38 "Intérim"
+text 4908,5390,66,43 "13 €"
+text 4974,5396,86,35 "/ heure"
+text 4794,5390,312,38 "Prix: 13 € brut par heure."
+text 4844,5455,251,32 "Candidature simplifiée"
+text 4796,5515,178,32 "Pusignan 69330"
+text 4794,5288,299,35 "Située à Pusignan 69330."
+text 4796,5555,119,32 "aujourd’hui"
+text 4794,5555,320,35 "Date de dépôt : aujourd’hui."
+text 4794,5555,343,35 "Nouveau - Nouvelle annonce."
+text 4896,5625,60,38 "DLSI"
+text 4794,5646,159,35 "Société: DLSI."
+button 5138,5623,64,64 type=button aria-label=Ajouter l’annonce aux favoris
+a 5266,5256,288,463 href=/recherche?category=33
+[pixels] img 5305,5337,210,162 alt= src=<data-url>
+[pixels] img 5305,5337,210,162 alt= src=<data-url>
+text 5327,5544,167,91 "Voir plus d’annonces"
+button 2234,5455,64,64 type=button aria-label=Suivant
+text 246,6272,2069,64 "Avec leboncoin, trouvez la bonne affaire sur le site référent de petites annonces de particulier à particulier et de professionnels. Avec des millions de petites annonces, trouvez la bonne occasion dans nos catégories"
+a 466,6304,87,32 href=/c/voitures
+text 466,6304,87,32 "voitures"
+text 552,6304,5,32 ","
+a 564,6304,115,32 href=/c/ventes_immobilieres
+text 564,6304,115,32 "immobilier"
+text 679,6304,5,32 ","
+a 690,6304,74,32 href=/c/offres_d_emploi
+text 690,6304,74,32 "emploi"
+text 764,6304,5,32 ","
+a 776,6304,223,32 href=/c/locations_saisonnieres
+text 776,6304,223,32 "location de vacances"
+text 999,6304,5,32 ","
+a 1011,6304,114,32 href=/c/vetements
+text 1011,6304,114,32 "vêtements"
+text 1124,6304,5,32 ","
+a 1136,6304,93,32 href=/c/ameublement
+text 1136,6304,93,32 "meubles"
+text 1229,6304,5,32 ","
+a 1240,6304,100,32 href=/c/bricolage
+text 1240,6304,100,32 "bricolage"
+text 1340,6304,5,32 ","
+a 1352,6304,115,32 href=/c/telephones_objets_connectes
+text 1352,6304,115,32 "téléphonie"
+text 1467,6304,5,32 ","
+a 1478,6304,110,32 href=/c/consoles
+text 1478,6304,110,32 "jeux vidéo"
+text 246,6304,2074,64 ", etc. Déposez une annonce gratuite en toute simplicité pour vendre, rechercher, donner vos biens de seconde main ou promouvoir vos services. Pour cet été, découvrez nos idées de destination avec notre"
+a 1688,6336,320,32 href=/guide/vacances
+text 1688,6336,320,32 "guide de vacances en France."
+text 246,6336,2047,64 "Achetez en toute sécurité avec notre système de paiement en ligne et de livraison pour les annonces éligibles."
+a 214,6500,87,32 href=/c/_emploi_
+text 214,6500,87,32 "EMPLOI"
+a 214,6555,165,32 href=/c/offres_d_emploi
+text 214,6555,165,32 "Offres d'emploi"
+a 214,6610,303,32 href=/c/formations_professionnelles
+text 214,6610,303,32 "Formations professionnelles"
+a 214,6715,131,32 href=/c/_vehicules_
+text 214,6715,131,32 "VÉHICULES"
+a 214,6770,89,32 href=/c/voitures
+text 214,6770,89,32 "Voitures"
+a 214,6825,67,32 href=/c/motos
+text 214,6825,67,32 "Motos"
+a 214,6880,121,32 href=/c/caravaning
+text 214,6880,121,32 "Caravaning"
+a 214,6935,104,32 href=/c/utilitaires
+text 214,6935,104,32 "Utilitaires"
+a 214,6990,93,32 href=https://www.truckscorner.fr/#at_medium=custom4&at_campaign=fr_tc_veh_mot_lbc_part_site-menu-autopromo-lbc_______
+text 214,6990,93,32 "Camions"
+a 214,7045,103,32 href=/c/nautisme
+text 214,7045,103,32 "Nautisme"
+a 214,7100,183,32 href=/c/equipement_auto
+text 214,7100,183,32 "Équipement auto"
+a 214,7155,191,32 href=/c/equipement_moto
+text 214,7155,191,32 "Équipement moto"
+a 214,7210,252,32 href=/c/equipement_caravaning
+text 214,7210,252,32 "Équipement caravaning"
+a 214,7265,234,32 href=/c/equipement_nautisme
+text 214,7265,234,32 "Équipement nautisme"
+a 214,7370,138,32 href=/plan-du-site/immobilier
+text 214,7370,138,32 "IMMOBILIER"
+a 214,7425,218,32 href=/c/ventes_immobilieres
+text 214,7425,218,32 "Ventes immobilières"
+a 214,7480,102,32 href=/c/locations
+text 214,7480,102,32 "Locations"
+a 214,7535,125,32 href=/c/colocations
+text 214,7535,125,32 "Colocations"
+a 214,7590,245,32 href=/c/bureaux_commerces
+text 214,7590,245,32 "Bureaux & Commerces"
+a 214,7695,71,32 href=/c/_mode_
+text 214,7695,71,32 "MODE"
+a 214,7750,116,32 href=/c/vetements
+text 214,7750,116,32 "Vêtements"
+a 214,7805,125,32 href=/c/chaussures
+text 214,7805,125,32 "Chaussures"
+a 214,7860,265,32 href=/c/accessoires_bagagerie
+text 214,7860,265,32 "Accessoires & Bagagerie"
+a 214,7915,185,32 href=/c/montres_bijoux
+text 214,7915,185,32 "Montres & Bijoux"
+a 759,6500,307,32 href=/c/_locations_de_vacances_
+text 759,6500,307,32 "LOCATIONS DE VACANCES"
+a 759,6555,242,32 href=/c/locations_saisonnieres
+text 759,6555,242,32 "Locations saisonnières"
+a 759,6660,89,32 href=/c/_loisirs_
+text 759,6660,89,32 "LOISIRS"
+a 759,6715,111,32 href=/c/antiquites
+text 759,6715,111,32 "Antiquités"
+a 759,6770,108,32 href=/c/collection
+text 759,6770,108,32 "Collection"
+a 759,6825,148,32 href=/c/cd_musique
+text 759,6825,148,32 "CD - Musique"
+a 759,6880,132,32 href=/c/dvd_films
+text 759,6880,132,32 "DVD - Films"
+a 759,6935,259,32 href=/c/instruments_de_musique
+text 759,6935,259,32 "Instruments de musique"
+a 759,6990,64,32 href=/c/livres
+text 759,6990,64,32 "Livres"
+a 759,7045,118,32 href=/c/modelisme
+text 759,7045,118,32 "Modélisme"
+a 759,7100,214,32 href=/c/vins_gastronomie
+text 759,7100,214,32 "Vins & Gastronomie"
+a 759,7155,143,32 href=/c/jeux_jouets
+text 759,7155,143,32 "Jeux & Jouets"
+a 759,7210,154,32 href=/c/loisirs_creatifs
+text 759,7210,154,32 "Loisirs créatifs"
+a 759,7265,176,32 href=/c/sport_plein_air
+text 759,7265,176,32 "Sport & Plein air"
+a 759,7320,60,32 href=/c/velos
+text 759,7320,60,32 "Vélos"
+a 759,7375,204,32 href=/c/equipements_velos
+text 759,7375,204,32 "Équipements vélos"
+a 759,7480,113,32 href=/c/_animaux_
+text 759,7480,113,32 "ANIMAUX"
+a 759,7535,96,32 href=/c/animaux
+text 759,7535,96,32 "Animaux"
+a 759,7590,224,32 href=/c/accessoires_animaux
+text 759,7590,224,32 "Accessoires animaux"
+a 759,7645,176,32 href=/c/animaux_perdus
+text 759,7645,176,32 "Animaux perdus"
+a 1304,6500,180,32 href=/c/_electronique_
+text 1304,6500,180,32 "ÉLECTRONIQUE"
+a 1304,6555,127,32 href=/c/ordinateurs
+text 1304,6555,127,32 "Ordinateurs"
+a 1304,6610,269,32 href=/c/accessoires_informatique
+text 1304,6610,269,32 "Accessoires informatique"
+a 1304,6665,221,32 href=/c/tablettes_liseuses
+text 1304,6665,221,32 "Tablettes & Liseuses"
+a 1304,6720,221,32 href=/c/photo_audio_video
+text 1304,6720,221,32 "Photo, audio & vidéo"
+a 1304,6775,338,32 href=/c/telephones_objets_connectes
+text 1304,6775,338,32 "Téléphones & Objets connectés"
+a 1304,6830,455,32 href=/c/accessoires_telephone_objets_connectes
+text 1304,6830,455,32 "Accessoires téléphone & Objets connectés"
+a 1304,6885,98,32 href=/c/consoles
+text 1304,6885,98,32 "Consoles"
+a 1304,6940,111,32 href=/c/jeux_video
+text 1304,6940,111,32 "Jeux vidéo"
+a 1304,7045,113,32 href=/c/_services_
+text 1304,7045,113,32 "SERVICES"
+a 1304,7100,219,32 href=/c/artistes_musiciens
+text 1304,7100,219,32 "Artistes & Musiciens"
+a 1304,7155,134,32 href=/c/baby_sitting
+text 1304,7155,134,32 "Baby-Sitting"
+a 1304,7210,105,32 href=/c/billetterie
+text 1304,7210,105,32 "Billetterie"
+a 1304,7265,129,32 href=/c/covoiturage
+text 1304,7265,129,32 "Covoiturage"
+a 1304,7320,188,32 href=/c/cours_particuliers
+text 1304,7320,188,32 "Cours particuliers"
+a 1304,7375,231,32 href=/c/entraide_entre_voisins
+text 1304,7375,231,32 "Entraide entre voisins"
+a 1304,7430,132,32 href=/c/evenements
+text 1304,7430,132,32 "Évènements"
+a 1304,7485,241,32 href=/c/services_a_la_personne
+text 1304,7485,241,32 "Services à la personne"
+a 1304,7540,232,32 href=/c/services_aux_animaux
+text 1304,7540,232,32 "Services aux animaux"
+a 1304,7595,298,32 href=/c/services_de_demenagement
+text 1304,7595,298,32 "Services de déménagement"
+a 1304,7650,402,32 href=/c/services_de_reparations_electroniques
+text 1304,7650,402,32 "Services de réparations électroniques"
+a 1304,7705,385,32 href=/c/services_de_reparations_mecaniques
+text 1304,7705,385,32 "Services de réparations mécaniques"
+a 1304,7760,357,32 href=/c/services_de_jardinerie_bricolage
+text 1304,7760,357,32 "Services de jardinerie & bricolage"
+a 1304,7815,252,32 href=/c/services_evenementiels
+text 1304,7815,252,32 "Services évènementiels"
+a 1304,7870,165,32 href=/c/autres_services
+text 1304,7870,165,32 "Autres services"
+a 1849,6500,97,32 href=/c/_famille_
+text 1849,6500,97,32 "FAMILLE"
+a 1849,6555,189,32 href=/c/equipement_bebe
+text 1849,6555,189,32 "Équipement bébé"
+a 1849,6610,163,32 href=/c/mobilier_enfant
+text 1849,6610,163,32 "Mobilier enfant"
+a 1849,6665,176,32 href=/c/vetements_bebe
+text 1849,6665,176,32 "Vêtements bébé"
+a 1849,6770,209,32 href=/c/_maison_jardin_
+text 1849,6770,209,32 "MAISON & JARDIN"
+a 1849,6825,153,32 href=/c/ameublement
+text 1849,6825,153,32 "Ameublement"
+a 1849,6880,353,32 href=/c/papeterie_fournitures_scolaires
+text 1849,6880,353,32 "Papeterie & Fournitures scolaires"
+a 1849,6935,170,32 href=/c/electromenager
+text 1849,6935,170,32 "Électroménager"
+a 1849,6990,167,32 href=/c/arts_de_la_table
+text 1849,6990,167,32 "Arts de la table"
+a 1849,7045,117,32 href=/c/decoration
+text 1849,7045,117,32 "Décoration"
+a 1849,7100,176,32 href=/c/linge_de_maison
+text 1849,7100,176,32 "Linge de maison"
+a 1849,7155,101,32 href=/c/bricolage
+text 1849,7155,101,32 "Bricolage"
+a 1849,7210,172,32 href=/c/jardin_plantes
+text 1849,7210,172,32 "Jardin & Plantes"
+a 1849,7315,315,32 href=/c/_materiel_professionnel_
+text 1849,7315,315,32 "MATÉRIEL PROFESSIONNEL"
+a 1849,7370,99,32 href=/c/tracteurs
+text 1849,7370,99,32 "Tracteurs"
+a 1849,7425,179,32 href=/c/materiel_agricole
+text 1849,7425,179,32 "Matériel agricole"
+a 1849,7480,297,32 href=/c/btp_chantier_gros_oeuvre
+text 1849,7480,297,32 "BTP - Chantier gros-oeuvre"
+a 1849,7535,133,32 href=/c/poids_lourds
+text 1849,7535,133,32 "Poids lourds"
+a 1849,7590,236,32 href=/c/manutention_levage
+text 1849,7590,236,32 "Manutention - Levage"
+a 1849,7645,259,32 href=/c/equipements_industriels
+text 1849,7645,259,32 "Équipements industriels"
+a 1849,7700,420,32 href=/c/equipements_pour_restaurants_hotels
+text 1849,7700,420,32 "Équipements pour restaurants & hôtels"
+a 1849,7755,405,32 href=/c/equipements_fournitures_de_bureau
+text 1849,7755,405,32 "Équipements & Fournitures de bureau"
+a 1849,7810,444,32 href=/c/equipements_pour_commerces_marches
+text 1849,7810,444,32 "Équipements pour commerces & marchés"
+a 1849,7865,178,32 href=/c/materiel_medical
+text 1849,7865,178,32 "Matériel médical"
+text 1849,7966,88,32 "DIVERS"
+a 1849,8018,72,32 href=/c/autres
+text 1849,8018,72,32 "Autres"
+text 214,8119,80,32 "OUEST"
+a 214,8171,194,32 href=/l/rp_basse-normandie
+text 214,8171,194,32 "Basse-Normandie"
+a 214,8226,99,32 href=/l/rp_bretagne
+text 214,8226,99,32 "Bretagne"
+a 214,8281,169,32 href=/l/rp_pays%20de%20la%20loire
+text 214,8281,169,32 "Pays de la Loire"
+a 214,8336,189,32 href=/l/rp_poitou-charentes
+text 214,8336,189,32 "Poitou-Charentes"
+text 214,8437,142,32 "SUD-OUEST"
+a 214,8489,104,32 href=/l/rp_aquitaine
+text 214,8489,104,32 "Aquitaine"
+a 214,8544,155,32 href=/l/rp_midi-pyr%C3%A9n%C3%A9es
+text 214,8544,155,32 "Midi-Pyrénées"
+text 759,8119,105,32 "SUD-EST"
+a 759,8171,61,32 href=/l/rp_corse
+text 759,8171,61,32 "Corse"
+a 759,8226,240,32 href=/l/rp_languedoc-roussillon
+text 759,8226,240,32 "Languedoc-Roussillon"
+a 759,8281,306,32 href=/l/rp_provence-alpes-c%C3%B4te%20d'azur
+text 759,8281,306,32 "Provence-Alpes-Côte d’Azur"
+a 759,8336,142,32 href=/l/rp_rhone-alpes
+text 759,8336,142,32 "Rhône-Alpes"
+text 759,8437,44,32 "EST"
+a 759,8489,72,32 href=/l/rp_alsace
+text 759,8489,72,32 "Alsace"
+a 759,8544,119,32 href=/l/rp_bourgogne
+text 759,8544,119,32 "Bourgogne"
+a 759,8599,233,32 href=/l/rp_champagne-ardenne
+text 759,8599,233,32 "Champagne-Ardenne"
+a 759,8654,166,32 href=/l/rp_franche-comt%C3%A9
+text 759,8654,166,32 "Franche-Comté"
+a 759,8709,88,32 href=/l/rp_lorraine
+text 759,8709,88,32 "Lorraine"
+text 1304,8119,72,32 "NORD"
+a 1304,8171,195,32 href=/l/rp_haute-normandie
+text 1304,8171,195,32 "Haute-Normandie"
+a 1304,8226,216,32 href=/l/rp_nord-pas-de-calais
+text 1304,8226,216,32 "Nord-Pas-de-Calais"
+a 1304,8281,85,32 href=/l/rp_picardie
+text 1304,8281,85,32 "Picardie"
+text 1304,8382,94,32 "CENTRE"
+a 1304,8434,105,32 href=/l/rp_auvergne
+text 1304,8434,105,32 "Auvergne"
+a 1304,8489,71,32 href=/l/rp_centre
+text 1304,8489,71,32 "Centre"
+a 1304,8544,145,32 href=/l/rp_ile-de-france
+text 1304,8544,145,32 "Ile-de-France"
+a 1304,8599,97,32 href=/l/rp_limousin
+text 1304,8599,97,32 "Limousin"
+text 1849,8119,74,32 "DROM"
+a 1849,8171,131,32 href=/l/rp_guadeloupe
+text 1849,8171,131,32 "Guadeloupe"
+a 1849,8226,116,32 href=/l/rp_martinique
+text 1849,8226,116,32 "Martinique"
+a 1849,8281,82,32 href=/l/rp_guyane
+text 1849,8281,82,32 "Guyane"
+a 1849,8336,88,32 href=/l/rp_reunion
+text 1849,8336,88,32 "Réunion"
+text 214,10994,382,43 "À PROPOS DU BONCOIN"
+a 214,11082,148,38 href=/plan-du-site
+text 214,11082,148,38 "Plan du site"
+a 214,11138,248,38 href=https://leboncoincorporate.com/
+text 214,11138,248,38 "Qui sommes-nous ?"
+a 214,11194,150,38 href=/evenement/nouveautes
+text 214,11194,150,38 "Nouveautés"
+a 214,11250,183,38 href=/boutique/11532/postulez_aux_offres_d_emploi_leboncoin.htm
+text 214,11250,183,38 "Nous rejoindre"
+a 214,11306,228,38 href=https://leboncoincorporate.com/nos-engagements/
+text 214,11306,228,38 "Nos engagements"
+a 214,11362,178,38 href=https://presse.leboncoincorporate.com/
+text 214,11362,178,38 "Espace presse"
+text 214,11452,311,43 "NOS APPLICATIONS"
+text 759,10994,395,43 "INFORMATIONS LÉGALES"
+a 759,11082,417,38 href=/dc/cgu
+text 759,11082,417,38 "Conditions générales d’utilisation"
+a 759,11138,423,78 href=/dc/rules
+text 759,11138,423,78 "Référencement et classement des annonces"
+a 759,11234,379,38 href=/dc/cgv
+text 759,11234,379,38 "Conditions générales de vente"
+a 759,11290,334,38 href=/dc/cookies
+text 759,11290,334,38 "Politique de confidentialité"
+button 759,11346,248,40 type=button
+text 759,11346,248,38 "Gestion des cookies"
+a 759,11402,304,38 href=/dc/vos_droits_et_obligations
+text 759,11402,304,38 "Vos droits et obligations"
+a 759,11458,200,38 href=/dc/avis_utilisateurs
+text 759,11458,200,38 "Avis utilisateurs"
+a 759,11514,260,38 href=/dc/charte_de_bonne_conduite
+text 759,11514,260,38 "Confiance et sécurité"
+a 759,11570,329,38 href=/dc/paiement_en_plusieurs_fois
+text 759,11570,329,38 "Paiement en plusieurs fois"
+text 759,11660,231,43 "ACCESSIBILITÉ"
+a 759,11748,471,38 href=/dc/accessibilite
+text 759,11748,471,38 "Accessibilité : partiellement conforme"
+button 759,11804,324,40 type=button id=base-ui-_R_3ba9jraqj6_
+text 759,11804,324,38 "Paramètres d’accessibilité"
+text 1304,10994,359,43 "NOS SOLUTIONS PROS"
+a 1304,11082,147,38 href=https://leboncoinsolutionspro.fr/automobile
+text 1304,11082,147,38 "Automobile"
+a 1304,11138,133,38 href=https://leboncoinsolutionspro.fr/immobilier
+text 1304,11138,133,38 "Immobilier"
+a 1304,11194,87,38 href=https://leboncoinsolutionspro.fr/emploi
+text 1304,11194,87,38 "Emploi"
+a 1304,11250,145,38 href=/solutions-emploi/offre-emploi-tpe
+text 1304,11250,145,38 "Emploi TPE"
+a 1304,11306,286,38 href=https://leboncoinsolutionspro.fr/commerces-services
+text 1304,11306,286,38 "Commerces & Services"
+a 1304,11362,108,38 href=https://leboncoinpublicite.fr/
+text 1304,11362,108,38 "Publicité"
+a 1304,11418,115,38 href=https://leboncoinsolutionspro.fr/location-de-vacances
+text 1304,11418,115,38 "Tourisme"
+a 1304,11474,229,38 href=/boutiques/tout_secteur_d_activite/toutes_categories
+text 1304,11474,229,38 "Annuaire des Pros"
+a 1304,11530,356,38 href=/evenement/nouveautes-leboncoin-immo-pro
+text 1304,11530,356,38 "Nouveautés leboncoin immo"
+a 1304,11586,402,38 href=/evenement/nouveautes-leboncoin-vehicules-pro
+text 1304,11586,402,38 "Nouveautés leboncoin véhicules"
+a 1304,11642,352,38 href=/solutions-pro/fournisseur-de-technologies
+text 1304,11642,352,38 "Fournisseur de technologies"
+text 1849,10994,281,43 "DES QUESTIONS ?"
+a 1849,11082,58,38 href=https://assistance.leboncoin.info/hc/fr
+text 1849,11082,58,38 "Aide"
+a 1849,11138,475,38 href=/service/paiement-securise
+text 1849,11138,475,38 "La transaction sécurisée et la livraison"
+a 1849,11194,224,38 href=/service/porte-monnaie
+text 1849,11194,224,38 "Le porte-monnaie"
+a 1849,11250,470,78 href=/reservation-de-vacances/hote
+text 1849,11250,470,78 "Le service de réservation de vacances en ligne pour les hôtes"
+a 1849,11346,417,38 href=/immo/profil-locataire
+text 1849,11346,417,38 "Votre dossier de location en ligne"
+a 1849,11402,268,38 href=/service/pass-locataire-plus-immo
+text 1849,11402,255,38 "Votre Pass Locataire"
+text 2104,11398,13,28 "+"
+a 1849,11458,264,38 href=/service/espace-bailleur
+text 1849,11458,264,38 "Votre espace bailleur"
+a 1849,11514,201,38 href=/service/cote-argus
+text 1849,11514,201,38 "La Cote Argus®"
+a 1849,11570,276,38 href=https://status.leboncoin.fr
+text 1849,11570,276,38 "Statut de nos services"
+a 1849,11626,102,38 href=https://app.yogosha.com/cvd/adevinta-france/1mvkLXr7RZpiecTIsWDqn5
+text 1849,11626,102,38 "Sécurité"
+a 1849,11682,315,38 href=/navigation-sans-pub
+text 1849,11682,315,38 "Navigation sans publicité"
+text 564,12300,163,43 "leboncoin :"
+a 726,12298,229,48 href=https://www.avendrealouer.fr
+text 726,12300,229,43 "AVendreALouer"
+a 979,12298,377,48 href=https://immobilierneuf.leboncoin.fr
+text 979,12300,377,43 "leboncoin Immobilier Neuf"
+a 1379,12298,166,48 href=https://www.agriaffaires.com#at_medium=custom4&at_campaign=fr_aa_veh_mot_lbc_part_site-footer-autopromo-lbc_______
+text 1379,12300,166,43 "Agriaffaires"
+a 1570,12298,220,48 href=https://www.machineryzone.fr#at_medium=custom4&at_campaign=fr_mz_veh_mot_lbc_part_site-footer-autopromo-lbc_______
+text 1570,12300,220,43 "MachineryZone"
+a 1814,12298,183,48 href=https://www.truckscorner.fr#at_medium=custom4&at_campaign=fr_tc_veh_mot_lbc_part_site-footer-autopromo-lbc_______
+text 1814,12300,183,43 "Truckscorner"
+text 214,12382,331,43 "leboncoin 2006 - 2026"
+a 925,12380,711,48 href=https://fr.trustpilot.com/review/www.leboncoin.fr
+text 918,12385,140,38 "Excellent"
+[pixels] img 1075,12386,30,30 alt= src=<data-url>
+[pixels] img 1075,12386,30,30 alt= src=<data-url>
+[pixels] img 1109,12386,30,30 alt= src=<data-url>
+[pixels] img 1109,12386,30,30 alt= src=<data-url>
+[pixels] img 1143,12386,30,30 alt= src=<data-url>
+[pixels] img 1143,12386,30,30 alt= src=<data-url>
+[pixels] img 1177,12386,30,30 alt= src=<data-url>
+[pixels] img 1177,12386,30,30 alt= src=<data-url>
+[pixels] img 1211,12386,30,30 alt= src=<data-url>
+[pixels] img 1211,12386,30,30 alt= src=<data-url>
+text 1260,12389,93,33 "295992"
+text 1354,12389,104,33 "avis sur"
+[pixels] img 1473,12380,36,36 alt= src=<data-url>
+[pixels] img 1473,12380,36,36 alt= src=<data-url>
+text 1521,12389,120,33 "Trustpilot"
+text 1811,12382,279,43 "Retrouvez-nous sur"
+a 2106,12380,64,48 href=https://www.linkedin.com/company/leboncoin aria-label=Lien vers notre page LinkedIn
+a 2170,12380,64,48 href=https://twitter.com/leboncoin/ aria-label=Lien vers notre page X (Twitter)
+a 2234,12380,64,48 href=https://www.instagram.com/leboncoin/ aria-label=Lien vers notre page Instagram
+a 2298,12380,48,48 href=https://www.pinterest.fr/leboncoin/ aria-label=Lien vers notre page Pinterest
 text 278,126,459,35 "Contenu de la fenêtre de consentement"
 button 1459,266,343,48 aria-label=Continuer sans accepter
 text 1459,268,343,43 "Continuer sans accepter"

@@ -50,7 +50,7 @@ button 1144,1572,216,80 aria-label=Refuser l'utilisation de cookies et d'autres 
 text 1176,1595,152,33 "Tout refuser"
 button 1400,1572,236,80 aria-label=Accepter l'utilisation de cookies et d'autres données aux fins décrites
 text 1432,1595,172,33 "Tout accepter"
-a 1677,1572,239,80 href=https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=FR&m=0&pc=yt&uxe=bip&cm=2&hl=fr&src=2&escs=AZ-r6Z71PMOYEzGghMBI93rNODOkZxi69Iw5YqjnggbvF2i4z3lD_Yky5iiXMpzol5BOeUuimNTNheRgoXetyxntEY1GfDBzGrRY aria-label=Plus d'options
+a 1677,1572,239,80 href=https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=FR&m=0&pc=yt&uxe=bip&cm=2&hl=fr&src=2&escs=AZ-r6Z6u9k9rbPu38TeoYP6U5y-BQSkz1gBxKA5KN-LIckuR_Fx6ZgBnAQnDsO7Om3OJwZaz-AoAOs4_Xw_fMPxEd7yXdJc8MK_e aria-label=Plus d'options
 text 1709,1595,175,33 "Plus d'options"
 a 628,1708,305,40 href=https://policies.google.com/privacy?hl=fr
 text 628,1711,305,33 "Règles de confidentialité"

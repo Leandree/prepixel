@@ -33,7 +33,7 @@
 | macos | Google Chrome 151.0.7922.138 (isolated instance, temp profile) | chromium | cdp | ✅ works | explicit | 315 | 880 | ✅ |
 | macos | Precision-vs-pixels duel (20 randomized order-console pages) — macOS replication of the Linux cell | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
 | macos | Adversarial: occlusion, visibility tricks & undeclared blind spots (the safety-claim stress test) | chromium | cdp | ✅ works | explicit | 57 | 1,366 | ✅ |
-| macos | 16 live public websites in Chrome 151 (6 categories: vitrine, presse, commerce, media, reference, webapp, webapp-canvas) | chromium | cdp | ✅ works | explicit | 1,360 | 1,366 | ✅ |
+| macos | 16 live public websites in Chrome 151 (6 categories: vitrine, presse, commerce, media, reference, webapp, webapp-canvas) | chromium | cdp | ✅ works | explicit | 1,397 | 1,366 | ✅ |
 | macos | Blind navigation on 5 live sites in Chrome 151 (Hacker News, Wikipedia, GitHub, MDN, DuckDuckGo) | chromium | cdp | ✅ works | explicit | 16,826 | 12,294 | ✅ |
 | macos | All-canvas 'game' page + mixed opaque page (perimeter-law control) | custom-canvas | pixels-baseline | ⬜ unavailable | explicit | 7 | 1,366 | ✅ |
 | macos | Cursor 2.x (VS Code fork, Electron/Chromium 144) — isolated instance, temp profile | electron | cdp | ✅ works | explicit | 647 | 1,366 | ✅ |

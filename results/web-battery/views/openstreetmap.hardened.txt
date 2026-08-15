@@ -73,13 +73,13 @@ button 305,575,21,21 id=_osm_banner_sotm_2026
 [pixels] img 249,612,256,256 [occluded]
 [pixels] img 1017,612,256,256 [occluded]
 [pixels] img -7,100,256,256 [occluded]
-[pixels] img 1273,100,256,256 [occluded]
+[pixels] img 1273,100,256,256
 [pixels] img -7,356,256,256 [occluded]
-[pixels] img 1273,356,256,256 [occluded]
+[pixels] img 1273,356,256,256
 [pixels] img -7,-156,256,256 [occluded]
-[pixels] img 1273,-156,256,256 [occluded]
+[pixels] img 1273,-156,256,256
 [pixels] img -7,612,256,256 [occluded]
-[pixels] img 1273,612,256,256 [occluded]
+[pixels] img 1273,612,256,256
 a 1240,65,40,40
 a 1240,105,40,40
 a 1240,145,40,40

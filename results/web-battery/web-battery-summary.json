@@ -1,42 +1,46 @@
 {
   "n_sites": 16,
   "n_ok": 16,
-  "avg_hardened_tokens": 1360,
-  "avg_naive_tokens": 14453,
+  "distiller": "hardened v2 (shadow DOM + iframes + [pixels] bg + mark) — re-measured after the Linux round-3 hardening",
+  "avg_hardened_tokens": 1397,
+  "avg_naive_tokens": 14806,
   "viewport_shot_tokens": 1366,
   "viewport_shot_tokens_retina_highres": 4784,
   "viewport_shot_tokens_retina_legacy": 1534,
-  "avg_ratio_viewport": 1.3,
-  "avg_ratio_viewport_retina_highres": 4.54,
-  "avg_ratio_viewport_retina_legacy": 1.46,
-  "avg_ratio_fullpage": 1.31,
+  "aggregate_ratio_totals": 0.98,
+  "median_ratio_viewport": 1.15,
+  "avg_ratio_viewport": 1.27,
+  "sites_where_structure_wins": "10/16",
+  "avg_ratio_viewport_retina_highres": 4.44,
+  "avg_ratio_viewport_retina_legacy": 1.42,
+  "avg_ratio_fullpage": 1.29,
   "avg_screens_to_cover": 7.62,
-  "best_for_structure": "vercel",
-  "worst_for_structure": "hackernews",
   "ratio_range_viewport": [
-    0.47,
+    0.46,
     3.11
   ],
+  "best_for_structure": "vercel",
+  "worst_for_structure": "hackernews",
   "by_category": {
     "commerce": {
       "n": 2,
       "avg_ratio_viewport": 0.82,
-      "avg_hardened_tokens": 2004
+      "avg_hardened_tokens": 2002
     },
     "media": {
       "n": 2,
       "avg_ratio_viewport": 0.97,
-      "avg_hardened_tokens": 1536
+      "avg_hardened_tokens": 1548
     },
     "presse": {
       "n": 2,
       "avg_ratio_viewport": 1.21,
-      "avg_hardened_tokens": 1280
+      "avg_hardened_tokens": 1278
     },
     "reference": {
       "n": 2,
-      "avg_ratio_viewport": 1.11,
-      "avg_hardened_tokens": 1352
+      "avg_ratio_viewport": 0.92,
+      "avg_hardened_tokens": 1552
     },
     "vitrine": {
       "n": 3,
@@ -45,13 +49,13 @@
     },
     "webapp": {
       "n": 3,
-      "avg_ratio_viewport": 0.8,
-      "avg_hardened_tokens": 1950
+      "avg_ratio_viewport": 0.78,
+      "avg_hardened_tokens": 2005
     },
     "webapp-canvas": {
       "n": 2,
-      "avg_ratio_viewport": 1.75,
-      "avg_hardened_tokens": 782
+      "avg_ratio_viewport": 1.74,
+      "avg_hardened_tokens": 785
     }
   },
   "sites_with_consent_banner": [
@@ -71,9 +75,6 @@
     "youtube-watch",
     "amazon-fr"
   ],
-  "avg_view_ms": 15.81,
-  "note": "ratio_viewport = viewport screenshot tokens / hardened structured-view tokens (>1 = structure cheaper). Retina variants use src/image-tokens.mjs (post-downscale, two tiers). avg_ratio_viewport is the MEAN of per-site ratios (biased upward); aggregate_ratio_totals is the ratio of summed tokens and is the number to quote for session cost.",
-  "aggregate_ratio_totals": 1.0,
-  "median_ratio_viewport": 1.21,
-  "sites_where_structure_wins": "10/16"
+  "avg_view_ms": 20.81,
+  "note": "ratio_viewport = viewport screenshot tokens / hardened structured-view tokens (>1 = structure cheaper). aggregate_ratio_totals (ratio of summed tokens) is the number to quote for session cost; median for a typical page; avg_ratio_viewport is the mean of per-site ratios and is biased upward. Retina variants via src/image-tokens.mjs."
 }
