@@ -1,0 +1,51 @@
+text 20,41,103,38 "Orders"
+text 20,101,100,19 "7 open orders"
+text 30,142,45,19 "Order"
+text 219,142,76,19 "Customer"
+text 551,142,38,19 "Total"
+text 801,142,51,19 "Status"
+text 30,180,48,19 "#3700"
+text 219,180,84,19 "Tiduba SAS"
+text 551,180,67,19 "€4811.55"
+text 809,180,37,19 "Draft"
+button 1073,174,51,32
+text 1085,182,27,15 "Ship"
+text 30,225,45,19 "#3701"
+text 219,225,94,19 "Baromi SARL"
+text 551,225,68,19 "€4747.60"
+text 809,225,59,19 "Pending"
+button 1073,218,51,32
+text 1085,226,27,15 "Ship"
+text 30,269,47,19 "#3702"
+text 219,269,87,19 "Revemi SAS"
+text 551,269,66,19 "€1831.23"
+text 809,269,62,19 "Overdue"
+button 1073,263,51,32
+text 1085,271,27,15 "Ship"
+text 30,314,48,19 "#3703"
+text 219,314,94,19 "Dunimi SARL"
+text 551,314,60,19 "€397.83"
+text 809,314,37,19 "Draft"
+button 1073,307,51,32
+text 1085,315,27,15 "Ship"
+text 30,358,48,19 "#3704"
+text 219,358,70,19 "Sotimi SA"
+text 551,358,67,19 "€1074.58"
+text 809,358,31,19 "Paid"
+button 1073,352,51,32
+text 1085,360,27,15 "Ship"
+text 30,403,47,19 "#3705"
+text 219,403,99,19 "Relumi GmbH"
+text 551,403,67,19 "€2471.57"
+text 809,403,31,19 "Paid"
+button 1073,396,51,32
+text 1085,404,27,15 "Ship"
+text 30,447,48,19 "#3706"
+text 219,447,73,19 "Fapidu SA"
+text 551,447,70,19 "€2749.66"
+text 809,447,31,19 "Paid"
+button 1073,441,51,32
+text 1085,449,27,15 "Ship"
+input 20,484,147,22 id=cust
+button 167,479,83,32 id=add
+text 179,487,59,15 "Add order"

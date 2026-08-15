@@ -1,0 +1,12 @@
+{
+ "probe_point": [
+  560.0,
+  450.0
+ ],
+ "os_hit_test_returns": {
+  "role": "AXTextArea",
+  "pid": 65570,
+  "owner": "TextEdit"
+ },
+ "interpretation": "point lies inside the BACK window (Chrome) but the OS hit-test resolves to the FRONT window (TextEdit) — cross-window occlusion is resolvable with one system call"
+}

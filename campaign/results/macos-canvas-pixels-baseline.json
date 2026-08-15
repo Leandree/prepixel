@@ -1,0 +1,46 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, Chrome 151 via CDP",
+  "app": "All-canvas 'game' page + mixed opaque page (perimeter-law control)",
+  "stack": "custom-canvas",
+  "stack_detection": {
+    "method": "structured view composition",
+    "signature": "single CANVAS element covering the viewport; DOM has no text/interactive nodes inside it",
+    "detected_before_use": true
+  },
+  "channel": "pixels-baseline",
+  "channel_setup": "Chrome via CDP at 1280x800 @dsf=1; naive DOMSnapshot distiller and hardened in-page distiller compared on pages/allcanvas.html and pages/opaque.html.",
+  "verdict": "unavailable",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "Text painted into the canvas ('SCORE 7788  LEVEL 3') is invisible to structure — as designed. Critically it is NOT fabricated either: probing the view for SCORE/LEVEL/7788 returns nothing in either distiller. The view declares '[pixels] canvas 0,0,1280,800' and stops."},
+    "t2_enumerate": { "pass": false, "detail": "No enumerable elements — correctly reported as one opaque canvas, not an invented tree."},
+    "t3_live_value": { "pass": null, "detail": "N/A."},
+    "t4_living_screen": { "pass": null, "detail": "An animating game keeps declaring the same opaque rect: no free change signal, pixel diffing of the crop is the only route."},
+    "t5_blind_action": { "pass": false, "detail": "No coordinates derivable from structure; aiming needs vision on the crop."},
+    "t6_pictorial": { "pass": true, "detail": "The key safety result, and it had to be REPAIRED on this OS before it held (see macos-silent-divergence-hunt): the hardened distiller originally emitted 0 bytes for the all-canvas page — an undeclared blind spot. After the fix both distillers declare the opaque region with its exact rect, so a router can measure 'structure covers 0% of this screen' before acting and switch to pixels. On the mixed page the image region is likewise declared ('[pixels] img 8,191,300,120') while the surrounding HTML text stays structured — the boundary between the two paths is per-region and knowable."}
+  },
+  "measurements": {
+    "view_bytes": 28,
+    "view_tokens_est": 7,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": null,
+    "notes": "All-canvas page: hardened view 28 bytes / 7 tokens (one declared rect) vs 1366 image tokens for the frame it stands for — the cheapest possible honest answer, and a 0% coverage signal. Mixed page: hardened 350 bytes covering the HTML text and controls + one declared image rect; the canvas-painted 'Score: 4200 Vies: 3' is correctly absent (not fabricated). Reproduces the Linux control cell (26 bytes) to within formatting. macOS wrinkle: the NAIVE distiller reports the canvas rect in DEVICE pixels ('0,0,2560,1600') while the hardened one reports CSS pixels ('0,0,1280,800') — a crop request built from the naive rect would ask for a region 4x the viewport area."
+  },
+  "runtime_verification": {
+    "method": "compare structured view coverage to the screenshot; probe the view for text that exists only in painted pixels",
+    "agreement": "structured view explicitly covers 0% of the canvas content and declares it — consistent, not divergent; zero fabricated strings"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/allcanvas-view.txt",
+    "campaign/results/artifacts/macos/allcanvas.png",
+    "campaign/results/artifacts/macos/opaque-view.txt",
+    "campaign/results/artifacts/macos/opaque.png",
+    "campaign/macos/pixels-baseline-macos.mjs"
+  ]
+}

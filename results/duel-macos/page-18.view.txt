@@ -1,0 +1,63 @@
+text 20,41,103,38 "Orders"
+text 20,101,101,19 "9 open orders"
+text 30,142,45,19 "Order"
+text 224,142,76,19 "Customer"
+text 538,142,38,19 "Total"
+text 797,142,51,19 "Status"
+text 30,180,49,19 "#4800"
+text 224,180,78,19 "Niduve Ltd"
+text 538,180,64,19 "€3118.16"
+text 805,180,59,19 "Pending"
+button 1071,174,51,32
+text 1083,182,27,15 "Ship"
+text 30,225,46,19 "#4801"
+text 224,225,85,19 "Samove Ltd"
+text 538,225,72,19 "€3838.56"
+text 805,225,37,19 "Draft"
+button 1071,218,51,32
+text 1083,226,27,15 "Ship"
+text 30,269,49,19 "#4802"
+text 224,269,88,19 "Lumidu SAS"
+text 538,269,57,19 "€721.76"
+text 805,269,59,19 "Pending"
+button 1071,263,51,32
+text 1083,271,27,15 "Ship"
+text 30,314,49,19 "#4803"
+text 224,314,92,19 "Kaveve & Co"
+text 538,314,68,19 "€1268.67"
+text 805,314,31,19 "Paid"
+button 1071,307,51,32
+text 1083,315,27,15 "Ship"
+text 30,358,49,19 "#4804"
+text 224,358,79,19 "Nisalu SAS"
+text 538,358,72,19 "€3048.08"
+text 805,358,31,19 "Paid"
+button 1071,352,51,32
+text 1083,360,27,15 "Ship"
+text 30,403,49,19 "#4805"
+text 224,403,72,19 "Ninisa Ltd"
+text 538,403,68,19 "€4719.53"
+text 805,403,37,19 "Draft"
+button 1071,396,51,32
+text 1083,404,27,15 "Ship"
+text 30,447,49,19 "#4806"
+text 224,447,73,19 "Kalufa Ltd"
+text 538,447,66,19 "€1768.74"
+text 805,447,59,19 "Pending"
+button 1071,441,51,32
+text 1083,449,27,15 "Ship"
+text 30,492,48,19 "#4807"
+text 224,492,77,19 "Soduro SA"
+text 538,492,63,19 "€1777.41"
+text 805,492,59,19 "Pending"
+button 1071,485,51,32
+text 1083,493,27,15 "Ship"
+text 30,536,49,19 "#4808"
+text 224,536,90,19 "Veroka & Co"
+text 538,536,66,19 "€1796.16"
+text 805,536,62,19 "Overdue"
+button 1071,530,51,32
+text 1083,538,27,15 "Ship"
+input 20,573,147,22 id=cust
+button 167,568,83,32 id=add
+text 179,576,59,15 "Add order"

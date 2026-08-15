@@ -740,6 +740,70 @@
     },
     {
       "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, Chrome 151 via CDP",
+      "app": "All-canvas 'game' page + mixed opaque page (perimeter-law control)",
+      "stack": "custom-canvas",
+      "stack_detection": {
+        "method": "structured view composition",
+        "signature": "single CANVAS element covering the viewport; DOM has no text/interactive nodes inside it",
+        "detected_before_use": true
+      },
+      "channel": "pixels-baseline",
+      "channel_setup": "Chrome via CDP at 1280x800 @dsf=1; naive DOMSnapshot distiller and hardened in-page distiller compared on pages/allcanvas.html and pages/opaque.html.",
+      "verdict": "unavailable",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": false,
+          "detail": "Text painted into the canvas ('SCORE 7788  LEVEL 3') is invisible to structure \u2014 as designed. Critically it is NOT fabricated either: probing the view for SCORE/LEVEL/7788 returns nothing in either distiller. The view declares '[pixels] canvas 0,0,1280,800' and stops."
+        },
+        "t2_enumerate": {
+          "pass": false,
+          "detail": "No enumerable elements \u2014 correctly reported as one opaque canvas, not an invented tree."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "N/A."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "An animating game keeps declaring the same opaque rect: no free change signal, pixel diffing of the crop is the only route."
+        },
+        "t5_blind_action": {
+          "pass": false,
+          "detail": "No coordinates derivable from structure; aiming needs vision on the crop."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "The key safety result, and it had to be REPAIRED on this OS before it held (see macos-silent-divergence-hunt): the hardened distiller originally emitted 0 bytes for the all-canvas page \u2014 an undeclared blind spot. After the fix both distillers declare the opaque region with its exact rect, so a router can measure 'structure covers 0% of this screen' before acting and switch to pixels. On the mixed page the image region is likewise declared ('[pixels] img 8,191,300,120') while the surrounding HTML text stays structured \u2014 the boundary between the two paths is per-region and knowable."
+        }
+      },
+      "measurements": {
+        "view_bytes": 28,
+        "view_tokens_est": 7,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "All-canvas page: hardened view 28 bytes / 7 tokens (one declared rect) vs 1366 image tokens for the frame it stands for \u2014 the cheapest possible honest answer, and a 0% coverage signal. Mixed page: hardened 350 bytes covering the HTML text and controls + one declared image rect; the canvas-painted 'Score: 4200 Vies: 3' is correctly absent (not fabricated). Reproduces the Linux control cell (26 bytes) to within formatting. macOS wrinkle: the NAIVE distiller reports the canvas rect in DEVICE pixels ('0,0,2560,1600') while the hardened one reports CSS pixels ('0,0,1280,800') \u2014 a crop request built from the naive rect would ask for a region 4x the viewport area."
+      },
+      "runtime_verification": {
+        "method": "compare structured view coverage to the screenshot; probe the view for text that exists only in painted pixels",
+        "agreement": "structured view explicitly covers 0% of the canvas content and declares it \u2014 consistent, not divergent; zero fabricated strings"
+      },
+      "permissions_required": [],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/allcanvas-view.txt",
+        "campaign/results/artifacts/macos/allcanvas.png",
+        "campaign/results/artifacts/macos/opaque-view.txt",
+        "campaign/results/artifacts/macos/opaque.png",
+        "campaign/macos/pixels-baseline-macos.mjs"
+      ]
+    },
+    {
+      "os": "macos",
       "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
       "app": "Chess/\u00c9checs (com.apple.Chess) \u2014 Apple's 3D-rendered chess game",
       "stack": "game",
@@ -1122,6 +1186,73 @@
     },
     {
       "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live session",
+      "app": "TextEdit \u2014 hard-text stress (ligatures, combining accents, CJK, RTL Arabic/Hebrew, bidi, ZWJ emoji)",
+      "stack": "appkit",
+      "stack_detection": {
+        "method": "bundle id + AX text area exposes parameterized text attributes",
+        "signature": "com.apple.TextEdit; AXTextArea advertises AXBoundsForRange / AXRangeForPosition / AXStringForRange",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "A UTF-8 file written by the harness (10 hard cases, one per line) is the ground truth; opened in TextEdit and read back through AXValue plus parameterized text attributes. Direct counterpart to the Linux glyph-decode cell, which had to reconstruct text from glyph IDs.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "10/10 EXACT, byte-for-byte against the source file, with no normalisation applied by the channel: presentation-form ligatures (U+FB01/U+FB02 in '\ufb01che \ufb02ux \u0153uvre'), precomposed accents ('caf\u00e9 na\u00efve No\u00ebl'), COMBINING accents (e+U+0301, i+U+0308 \u2014 preserved as combining, not silently NFC-folded), CJK ('\u4f60\u597d\u4e16\u754c \u3053\u3093\u306b\u3061\u306f \ud55c\uad6d\uc5b4'), RTL Arabic and Hebrew, bidi-mixed ('Total: 42 \u0645\u0631\u062d\u0628\u0627 END') returned in LOGICAL order, simple emoji, and ZWJ sequences (\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 family, \ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb with skin-tone modifier). Read latency 0.03 ms. THE STRUCTURAL POINT: on macOS the sanctioned channel hands over the model string, so the entire glyph-decoding pipeline the Linux render-tap needed (reverse cmap + NFKC + BiDi reorder, with a lossy tail on custom ligatures) simply does not arise. The trade-off is the mirror image: AX reports the text the app HOLDS, not the glyphs it PAINTED \u2014 a font-fallback failure would be invisible to this channel, where the render tap would show it."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Text geometry is fully addressable: AXBoundsForRange returns the on-screen rect of any substring. Verified against the screenshot \u2014 the pure-RTL lines are right-aligned (Arabic at x=770 w=86, Hebrew at x=797 w=59, both ending at x=856 against a window right edge of 866) while Latin starts at x=220. In the bidi-mixed line the three runs resolve left-to-right as 'Total:' [220,40], '\u0645\u0631\u062d\u0628\u0627' [286,33], 'END' [326,20] \u2014 the Arabic word sits in the middle with its glyphs internally reversed, and the API resolves it correctly."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Covered by macos-textedit-accessibility-api."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Static document."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "The INVERSE mapping works too, which is what an agent needs to aim inside text: AXRangeForPosition at the centre of each run returns the exact character under that pixel \u2014 'a' for the centre of 'Total:', 'N' for the centre of 'END', and '\u062d' for the centre of the Arabic word (the correct middle letter of \u0645\u0631\u062d\u0628\u0627 despite right-to-left glyph order). Text\u2194geometry is a closed round-trip through the channel."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "No pictorial region in this document."
+        }
+      },
+      "measurements": {
+        "view_bytes": 139,
+        "view_tokens_est": 35,
+        "screenshot_tokens_est": 1281,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 0.03,
+        "notes": "The whole hard-text document is 139 code points; the window it fills is 656x440 logical = 1281 image tokens (5126 at Retina 2x). RANGE-ARITHMETIC TRAP, measured: AX ranges are in UTF-16 units while Python/JS string indices are code points, and the gap is large exactly where it hurts \u2014 '\ud83e\udd8a \ud83c\udfaf' is 3 code points but 5 UTF-16 units, '\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 \ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb' is 12 code points but 19 units. Worse for layout reasoning: the family emoji occupies ELEVEN UTF-16 units and renders as ONE 15x18 px cell, so string length is not a proxy for visual extent in either direction. Any harness doing offset math must convert explicitly."
+      },
+      "runtime_verification": {
+        "method": "decoded strings compared byte-for-byte to the source file; geometry cross-checked against a window screenshot (right-aligned RTL lines, single-cell family emoji), and the point->character inverse verified on three runs of the bidi line",
+        "agreement": "exact on all 10 cases; geometry and inverse mapping agree with the screenshot"
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for host process",
+        "Screen Recording for the verification screenshot"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/hardtext-ax-results.json",
+        "campaign/results/artifacts/macos/hardtext-ax-geometry.json",
+        "campaign/results/artifacts/macos/hardtext-bidi-geometry.json",
+        "campaign/results/artifacts/macos/hardtext-window.png",
+        "campaign/results/artifacts/macos/hardtext-emoji-zoom.png"
+      ]
+    },
+    {
+      "os": "macos",
       "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
       "app": "Pages 14.x (iWork word processor)",
       "stack": "appkit",
@@ -1186,6 +1317,130 @@
     },
     {
       "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, Chrome 151 via CDP",
+      "app": "Precision-vs-pixels duel (20 randomized order-console pages) \u2014 macOS replication of the Linux cell",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (controlled experiment)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "campaign/macos/duel-macos.mjs. SAME deterministic page generator and seeds as src/duel.mjs, so the 20 pages are byte-identical to the Linux cell's \u2014 this is a true cross-OS replication, not a re-measurement of different material. Viewport pinned to 1280x800 @ deviceScaleFactor=1 via Emulation.setDeviceMetricsOverride so the pixel condition matches Linux exactly.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Accuracy PARITY, replicated: 18/18 correct from the structured view AND 18/18 from screenshots (n=6 pages x 3 tasks: count-by-status, max-total customer, customer-for-given-order-id). Methodology improved over the Linux cell: the two conditions were answered by TWO INDEPENDENT SUBAGENTS with identical task text, one given ONLY the .view.txt files, the other ONLY the .png screenshots \u2014 neither could see the other's evidence, so the parity claim is not contaminated by shared context."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Hardened view enumerates every row and button with boxes; whole page, no scrolling."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "covered in macos-chrome-cdp"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "covered in macos-clock-accessibility-api and macos-chrome-cdp"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "covered in macos-chrome-cdp (incl. the Retina DPR trap)"
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "covered in macos-canvas-pixels-baseline"
+        }
+      },
+      "measurements": {
+        "view_bytes": 1578,
+        "view_tokens_est": 391,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "n=20 for cost, n=6 (x3 tasks) for paired accuracy. Structured avg 1578 bytes / 391 est-tokens vs screenshot 62110 png bytes / 1366 image-tokens (exact public formula) => 3.49x fewer tokens, 39.4x fewer bytes. Cross-OS replication is essentially exact: Linux measured 1580 bytes / 391 tokens / 3.5x / 36.4x on the same pages \u2014 the 2-byte delta comes from macOS system-ui font metrics changing one text wrap. RETINA ADDENDUM (macOS-specific, absent from the Linux cell): if the screenshot is taken at native device resolution instead of CSS resolution, the pixel side costs 5462 tokens, making the ratio 13.97x. Which number applies depends on whether the harness downscales before sending \u2014 a decision that quadruples the pixel bill and that no API forces you to get right."
+      },
+      "runtime_verification": {
+        "method": "mechanical scoring of both conditions' answers against held-out truth generated by the page generator (never shown to either agent)",
+        "agreement": "structured 18/18, pixels 18/18 \u2014 parity, replicating the Linux result"
+      },
+      "permissions_required": [],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "results/duel-macos/duel-cost.json",
+        "results/duel-macos/duel-summary.json",
+        "results/duel-macos/duel-accuracy.json",
+        "results/duel-macos/answers-structured.json",
+        "results/duel-macos/answers-pixels.json"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, SIP enabled",
+      "app": "Render-tap feasibility on macOS (targets: TextEdit as a system/platform binary, Google Chrome as a hardened third-party app)",
+      "stack": "other",
+      "stack_detection": {
+        "method": "system policy + code-signing flags read before attempting anything",
+        "signature": "csrutil status = enabled; Chrome CodeDirectory flags=0x12a00 (kill, restrict, library-validation, runtime); TextEdit is a platform binary under /System",
+        "detected_before_use": true
+      },
+      "channel": "render-tree-tap",
+      "channel_setup": "The Linux reference cell taps GTK4's render tree by injecting a shim (LD_PRELOAD) plus a gdb tap on gsk_renderer_render. The macOS equivalent would require loading code into a third-party process (DYLD_INSERT_LIBRARIES) or attaching a debugger to it. Tested with a NO-OP probe dylib whose only action is appending one line to a log file \u2014 it hooks nothing; the question asked is purely whether the OS lets an outside library load at all.",
+      "verdict": "blocked",
+      "failure_class": "blocked",
+      "tests": {
+        "t1_read_text": {
+          "pass": null,
+          "detail": "Unreachable: no code can be loaded into the target to observe its render tree."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "Blocked (same cause)."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Blocked."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Blocked."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Blocked."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "Blocked."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "MEASURED, with a positive control so the negative means something. (a) Control \u2014 the same probe dylib inserted into a locally compiled, unsigned binary: LOADS (1 log line). The mechanism works when nothing blocks it. (b) TextEdit (platform binary, /System, SIP-protected): 0 log lines \u2014 refused. (c) Google Chrome (hardened runtime + library-validation + restrict): 0 log lines \u2014 refused. So the exact policies that close this channel are: System Integrity Protection for Apple's own binaries, and the hardened runtime's library-validation flag (0x12a00) for third-party apps \u2014 the latter is chosen by the DEVELOPER, not by Apple, and is required for notarization in practice. No attempt was made to disable SIP or to work around either policy: the refusal IS the result. CONSEQUENCE FOR THE PAPER: the channel that on Linux gives the strongest guarantee (the render tree cannot lie \u2014 it is what will be drawn, by construction) is structurally unavailable on macOS for every app that matters. What remains is the OS-mediated view: the Accessibility API, which is a semantic tree the app CHOOSES to publish. That is why macOS is the OS where 'only the platform vendor can provide this channel' is not an argument but an observation \u2014 and it is also why the AT-latch, the thin-tree risk and the annotation-quality question dominate every other macOS cell."
+      },
+      "runtime_verification": {
+        "method": "positive control (unsigned local binary) vs two protected targets, identical probe dylib, marker-file presence as the discriminator",
+        "agreement": "n/a (blocked) \u2014 but the control proves the test itself is sound"
+      },
+      "permissions_required": [
+        "none attempted beyond a normal user session; SIP left enabled throughout"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": []
+    },
+    {
+      "os": "macos",
       "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
       "app": "Safari (system WebKit browser), pages/testapp.html + allcanvas.html",
       "stack": "appkit",
@@ -1246,6 +1501,73 @@
       "raw_artifacts": [
         "campaign/results/artifacts/macos/safari-ax-window.json",
         "campaign/results/artifacts/macos/safari-native-window.png"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, Chrome 151 + TextEdit, live session",
+      "app": "Adversarial: occlusion, visibility tricks & undeclared blind spots (the safety-claim stress test)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (adversarial probe)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Three layers probed: (1) in-window \u2014 naive DOMSnapshot distiller vs hardened in-page distiller on pages/occlusion.html, with the page's own click handlers as ground truth; (2) cross-window \u2014 TextEdit placed over a Chrome window, compositor map read from CGWindowListCopyWindowInfo (front-to-back order = z-order); (3) OS hit-test \u2014 AXUIElementCopyElementAtPosition on the system-wide element.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "CSS visibility tricks correctly filtered by BOTH distillers: opacity:0 and visibility:hidden secrets never leak. Positive control passes."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Off-viewport leak reproduced on macOS: the naive view leaks OFFSCREEN-SECRET (content at left:-9999px); the hardened view drops it. Same class as the Linux finding, confirmed on a second OS."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Occlusion divergence reproduced AND isolated with ground truth: clicking the button's TRUE css centre fires the OVERLAY's handler, not the button's (window.__hit === 'overlay'), while the naive view lists the button as plainly present. The hardened distiller marks it 'button 40,60,120,40 id=real [occluded]' so a router will not aim there. NOTE the macOS compounding factor: a first blind click using the naive view's raw coordinates missed by 2x because DOMSnapshot bounds are DEVICE pixels while Input.dispatchMouseEvent takes CSS pixels \u2014 and Emulation.setDeviceMetricsOverride{deviceScaleFactor:1} normalises the SCREENSHOT but NOT the DOMSnapshot bounds. Two independent traps stacked on the same click."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "NEW SILENT-DIVERGENCE CLASS FOUND \u2014 in the repo's own hardened distiller, and closed. distillHardened() emitted ONLY text and interactive elements: it had no OPAQUE set, so pictorial regions were dropped entirely. Consequence: pages/allcanvas.html (a screen that is 100% canvas) distilled to ZERO BYTES \u2014 a view that does not lie about content but never declares its own blind spot, so a consumer reads 'empty screen' instead of 'opaque region, fall back to pixels'. That is precisely the disqualifying failure mode the thesis rules out. Fixed in src/distill-hardened.mjs by declaring IMG/CANVAS/VIDEO/SVG/PICTURE/EMBED/OBJECT with their rects (hit-tested, so occluded images are tagged too): the all-canvas page now yields '[pixels] canvas 0,0,1280,800' and the mixed page declares '[pixels] img 8,191,300,120'. Verified the duel numbers are unaffected: 0/20 duel pages contain any opaque element, and the post-fix re-run reproduces 1578 bytes / 391 tokens exactly."
+        }
+      },
+      "measurements": {
+        "view_bytes": 226,
+        "view_tokens_est": 57,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "CROSS-WINDOW RESULT (the macOS analog of the Linux WM-map test, with a better ending): with TextEdit (z=12) over Chrome (z=14), the compositor map gives geometry + z-order, from which the back window computes as 25.3% covered. Per-window structure alone is blind to this \u2014 Chrome's own AX still reports the covered point as inside its frame. BUT macOS ships the mitigation as a first-class API: AXUIElementCopyElementAtPosition on the system-wide element, probed at a point inside the covered region, returns an AXTextArea belonging to pid 65570 = TextEdit \u2014 i.e. the FRONT window. So on macOS cross-window occlusion is resolved by ONE system call, with no rectangle math and no z-order bookkeeping, where the Linux cell had to compute overlap-vs-z-order by hand. Same primitive also solves in-window occlusion for native apps (no elementFromPoint equivalent needed)."
+      },
+      "runtime_verification": {
+        "method": "page's own click handlers as ground truth for in-window occlusion; elementFromPoint for the top element; CGWindowList z-order + rect overlap vs AXUIElementCopyElementAtPosition for cross-window; AXUIElementGetPid to confirm which app owns the hit element",
+        "agreement": "post-hardening the view matches what is visible, hittable AND pictorially opaque; every gap is now tagged ([occluded]) or declared ([pixels] rect). No silent case survived \u2014 but one had to be FOUND and FIXED first (t6)."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for the cross-window hit-test probe"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/occlusion-naive.txt",
+        "campaign/results/artifacts/macos/occlusion-hardened.txt",
+        "campaign/results/artifacts/macos/cross-window-occlusion.json",
+        "campaign/macos/silent-divergence-macos.mjs",
+        "campaign/macos/occlusion-isolate.mjs",
+        "campaign/macos/cross_window_occlusion.py"
       ]
     },
     {

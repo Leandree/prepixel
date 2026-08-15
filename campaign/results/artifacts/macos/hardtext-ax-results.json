@@ -1,0 +1,92 @@
+[
+ {
+  "case": "latin-basique",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "office finance flag",
+  "got": "office finance flag",
+  "utf16_len": 19,
+  "codepoints": 19
+ },
+ {
+  "case": "ligature-precomposee",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "ﬁche ﬂux œuvre",
+  "got": "ﬁche ﬂux œuvre",
+  "utf16_len": 14,
+  "codepoints": 14
+ },
+ {
+  "case": "accents-precomposes",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "café naïve Noël",
+  "got": "café naïve Noël",
+  "utf16_len": 15,
+  "codepoints": 15
+ },
+ {
+  "case": "accents-combinants",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "café naïve",
+  "got": "café naïve",
+  "utf16_len": 12,
+  "codepoints": 12
+ },
+ {
+  "case": "cjk",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "你好世界 こんにちは 한국어",
+  "got": "你好世界 こんにちは 한국어",
+  "utf16_len": 14,
+  "codepoints": 14
+ },
+ {
+  "case": "arabe-rtl",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "مرحبا بالعالم",
+  "got": "مرحبا بالعالم",
+  "utf16_len": 13,
+  "codepoints": 13
+ },
+ {
+  "case": "hebreu-rtl",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "שלום עולם",
+  "got": "שלום עולם",
+  "utf16_len": 9,
+  "codepoints": 9
+ },
+ {
+  "case": "bidi-mixte",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "Total: 42 مرحبا END",
+  "got": "Total: 42 مرحبا END",
+  "utf16_len": 19,
+  "codepoints": 19
+ },
+ {
+  "case": "emoji-simple",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "🦊 🎯",
+  "got": "🦊 🎯",
+  "utf16_len": 5,
+  "codepoints": 3
+ },
+ {
+  "case": "emoji-zwj-famille",
+  "exact": true,
+  "nfc_equal": true,
+  "expected": "👨‍👩‍👧‍👦 👩🏽‍💻",
+  "got": "👨‍👩‍👧‍👦 👩🏽‍💻",
+  "utf16_len": 19,
+  "codepoints": 12
+ }
+]

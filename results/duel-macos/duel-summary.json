@@ -1,0 +1,19 @@
+{
+  "n": 20,
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "structured": {
+    "avg_bytes": 1578,
+    "avg_tokens_est": 391
+  },
+  "pixels": {
+    "avg_png_bytes": 62110,
+    "img_tokens": 1366,
+    "img_tokens_retina": 5462
+  },
+  "ratio_tokens": 3.49,
+  "ratio_bytes": 39.4,
+  "ratio_tokens_retina": 13.97
+}

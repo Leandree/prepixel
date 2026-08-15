@@ -1,0 +1,40 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, SIP enabled",
+  "app": "Render-tap feasibility on macOS (targets: TextEdit as a system/platform binary, Google Chrome as a hardened third-party app)",
+  "stack": "other",
+  "stack_detection": {
+    "method": "system policy + code-signing flags read before attempting anything",
+    "signature": "csrutil status = enabled; Chrome CodeDirectory flags=0x12a00 (kill, restrict, library-validation, runtime); TextEdit is a platform binary under /System",
+    "detected_before_use": true
+  },
+  "channel": "render-tree-tap",
+  "channel_setup": "The Linux reference cell taps GTK4's render tree by injecting a shim (LD_PRELOAD) plus a gdb tap on gsk_renderer_render. The macOS equivalent would require loading code into a third-party process (DYLD_INSERT_LIBRARIES) or attaching a debugger to it. Tested with a NO-OP probe dylib whose only action is appending one line to a log file — it hooks nothing; the question asked is purely whether the OS lets an outside library load at all.",
+  "verdict": "blocked",
+  "failure_class": "blocked",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "Unreachable: no code can be loaded into the target to observe its render tree."},
+    "t2_enumerate": { "pass": null, "detail": "Blocked (same cause)."},
+    "t3_live_value": { "pass": null, "detail": "Blocked."},
+    "t4_living_screen": { "pass": null, "detail": "Blocked."},
+    "t5_blind_action": { "pass": null, "detail": "Blocked."},
+    "t6_pictorial": { "pass": null, "detail": "Blocked."}
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "MEASURED, with a positive control so the negative means something. (a) Control — the same probe dylib inserted into a locally compiled, unsigned binary: LOADS (1 log line). The mechanism works when nothing blocks it. (b) TextEdit (platform binary, /System, SIP-protected): 0 log lines — refused. (c) Google Chrome (hardened runtime + library-validation + restrict): 0 log lines — refused. So the exact policies that close this channel are: System Integrity Protection for Apple's own binaries, and the hardened runtime's library-validation flag (0x12a00) for third-party apps — the latter is chosen by the DEVELOPER, not by Apple, and is required for notarization in practice. No attempt was made to disable SIP or to work around either policy: the refusal IS the result. CONSEQUENCE FOR THE PAPER: the channel that on Linux gives the strongest guarantee (the render tree cannot lie — it is what will be drawn, by construction) is structurally unavailable on macOS for every app that matters. What remains is the OS-mediated view: the Accessibility API, which is a semantic tree the app CHOOSES to publish. That is why macOS is the OS where 'only the platform vendor can provide this channel' is not an argument but an observation — and it is also why the AT-latch, the thin-tree risk and the annotation-quality question dominate every other macOS cell."
+  },
+  "runtime_verification": {
+    "method": "positive control (unsigned local binary) vs two protected targets, identical probe dylib, marker-file presence as the discriminator",
+    "agreement": "n/a (blocked) — but the control proves the test itself is sound"
+  },
+  "permissions_required": ["none attempted beyond a normal user session; SIP left enabled throughout"],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": []
+}

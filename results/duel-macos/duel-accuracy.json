@@ -1,0 +1,9 @@
+{
+ "score": {
+  "structured": 18,
+  "pixels": 18,
+  "total": 18
+ },
+ "mismatches": [],
+ "method": "two independent subagents, one per condition, identical task text, held-out truth"
+}

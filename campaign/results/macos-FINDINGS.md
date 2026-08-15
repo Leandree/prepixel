@@ -97,9 +97,99 @@ nothing but only exists if you launched the app with the flag. No render-tap
 attempted: SIP makes injection a non-starter, by design — on macOS only the OS
 can provide this channel, which is the paper's point.
 
+---
+
+# Round 2 — the transversal cells (the ones the Linux reference had and macOS lacked)
+
+Five cell *types* were missing after round 1. All five are now run. One of them
+found a real silent divergence — in this repo's own tooling.
+
+## The one that matters: an undeclared blind spot in our own hardened distiller
+
+`distillHardened()` emitted only text and interactive elements. It had no OPAQUE
+set, so **pictorial regions were dropped entirely**. On `pages/allcanvas.html` — a
+screen that is 100% canvas — the hardened view was **zero bytes**. That view does
+not lie about content, but it never declares its own blind spot, so a consumer
+reads *"empty screen"* instead of *"opaque region, fall back to pixels"*. That is
+exactly the disqualifying failure mode the thesis rules out, sitting in the code
+path the duel and every safety claim run through.
+
+Fixed in `src/distill-hardened.mjs`: IMG/CANVAS/VIDEO/SVG/PICTURE/EMBED/OBJECT are
+now declared with their rects and hit-tested (so an occluded image is tagged too).
+All-canvas now yields `[pixels] canvas 0,0,1280,800`; the mixed page declares
+`[pixels] img 8,191,300,120`. **The duel numbers are unaffected** — 0/20 duel pages
+contain any opaque element, and the post-fix re-run reproduces 1578 bytes / 391
+tokens exactly. Worth stating plainly in the paper: the naive distiller had this
+property and the *hardened* one lost it, because the two safety properties
+(hit-testing vs blind-spot declaration) were implemented in different code paths.
+
+## Cross-window occlusion: macOS ships the mitigation as an API
+
+TextEdit over Chrome, 25.3% of the back window covered. Per-window structure is
+blind to it — Chrome's AX still calls the covered point its own. But
+`AXUIElementCopyElementAtPosition` on the system-wide element, probed at that
+point, returns an `AXTextArea` owned by pid 65570 = **TextEdit**, the front window.
+One system call, no rectangle math, no z-order bookkeeping — where the Linux cell
+had to compute overlap-vs-z-order by hand. The same primitive also covers
+in-window occlusion for native apps.
+
+## The duel replicates across OSes, and Retina doubles the stakes
+
+Same 20 pages (same generator, same seeds), so this is replication, not
+re-measurement: **1578 bytes / 391 tokens vs 1366 image-tokens = 3.49x fewer
+tokens, 39.4x fewer bytes** (Linux: 1580 B / 391 tok / 3.5x / 36.4x; the 2-byte
+delta is one text wrap moving under macOS system-ui metrics). Accuracy: **18/18
+both conditions** — parity, replicated. Methodology tightened over the Linux cell:
+two *independent subagents*, one shown only the structured views, the other only
+the screenshots, neither able to see the other's evidence.
+
+Retina addendum, macOS-only: screenshot the same page at native device resolution
+and the pixel side costs **5462 tokens — a 13.97x ratio**. Whether the harness
+downscales before sending quadruples the pixel bill, and no API forces the choice.
+
+## Hard text: the glyph problem simply does not arise here
+
+10/10 exact against a ground-truth file — presentation-form ligatures, *combining*
+accents (preserved, not silently NFC-folded), CJK, Arabic and Hebrew in logical
+order, bidi-mixed lines, ZWJ family emoji with skin-tone modifiers. Read latency
+0.03 ms. Where the Linux render-tap needed reverse-cmap + NFKC + BiDi reorder and
+still had a lossy tail, AX hands over the model string.
+
+The mirror-image limitation is the honest counterpart: **AX reports the text the
+app holds, not the glyphs it painted** — a font-fallback failure would be invisible
+here, where a render tap would show it.
+
+Geometry is a closed round-trip, verified against a screenshot: `AXBoundsForRange`
+puts the RTL lines right-aligned (Arabic x=770 w=86 and Hebrew x=797 w=59, both
+ending at 856 against a window edge of 866) and resolves the bidi line into
+`Total:`[220,40] `مرحبا`[286,33] `END`[326,20]; the inverse `AXRangeForPosition`
+returns the exact character under a pixel — including **ح**, the correct middle
+letter of the Arabic word, despite right-to-left glyph order.
+
+Range-arithmetic trap, measured: AX ranges are UTF-16 units, and the family emoji
+is **11 UTF-16 units rendered as one 15x18 px cell** — string length is not a proxy
+for visual extent in either direction.
+
+## Render-tap: blocked, with a positive control
+
+The Linux cell's strongest guarantee (the render tree cannot lie — it *is* what
+will be drawn) is structurally unavailable here. Measured with a no-op probe
+library: it **loads** into a locally compiled unsigned binary (control — so the
+test is sound), and is **refused** by both TextEdit (platform binary, SIP) and
+Chrome (hardened runtime, `library-validation`, flags 0x12a00). Note who chose
+what: SIP is Apple's, but library-validation is the *developer's* flag. SIP was
+left enabled throughout and nothing was worked around — the refusal is the result.
+
+That is why macOS is the OS where *"only the platform vendor can provide this
+channel"* is an observation rather than an argument, and why the AT-latch,
+thin-tree risk and annotation quality dominate every other macOS cell.
+
 ## What's still open
 
-VS Code AX (the user's instance closed mid-campaign; Electron-AX story sampled via
-Chrome/Cursor instead), Android Studio/Swing (not launched — time-boxed out),
-a true unannotated game, and Zoom in-meeting. None block the macOS verdict:
-**predictable, explicit, zero silent divergences observed.**
+The desktop **router / merged view** (the compositor-map cell — all the pieces now
+exist: CGWindowList z-order + `AXUIElementCopyElementAtPosition` + per-window
+channel), a **third-party SwiftUI** app (the README's prime thin-tree suspect —
+only Apple's well-annotated Clock was sampled), **Tier F** non-Cocoa toolkits
+(Qt/Java/Flutter), a genuinely unannotated GL/Metal game, and Zoom in-meeting.
+None of these block the macOS verdict: **predictable, explicit, and — after the
+distiller fix — zero surviving silent divergences.**

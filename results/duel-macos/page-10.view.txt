@@ -1,0 +1,57 @@
+text 20,41,103,38 "Orders"
+text 20,101,101,19 "8 open orders"
+text 30,142,45,19 "Order"
+text 221,142,76,19 "Customer"
+text 550,142,38,19 "Total"
+text 805,142,51,19 "Status"
+text 30,180,49,19 "#4000"
+text 221,180,93,19 "Saniba SARL"
+text 550,180,68,19 "€2023.19"
+text 813,180,62,19 "Overdue"
+button 1075,174,51,32
+text 1087,182,27,15 "Ship"
+text 30,225,46,19 "#4001"
+text 221,225,99,19 "Fatimo GmbH"
+text 550,225,66,19 "€3174.75"
+text 813,225,31,19 "Paid"
+button 1075,218,51,32
+text 1087,226,27,15 "Ship"
+text 30,269,48,19 "#4002"
+text 221,269,84,19 "Dukamo SA"
+text 550,269,71,19 "€2509.80"
+text 813,269,37,19 "Draft"
+button 1075,263,51,32
+text 1087,271,27,15 "Ship"
+text 30,314,49,19 "#4003"
+text 221,314,99,19 "Sasolu GmbH"
+text 550,314,65,19 "€3377.17"
+text 813,314,59,19 "Pending"
+button 1075,307,51,32
+text 1087,315,27,15 "Ship"
+text 30,358,49,19 "#4004"
+text 221,358,85,19 "Vebafa SAS"
+text 550,358,68,19 "€4018.75"
+text 813,358,37,19 "Draft"
+button 1075,352,51,32
+text 1087,360,27,15 "Ship"
+text 30,403,49,19 "#4005"
+text 221,403,75,19 "Ninipi SAS"
+text 550,403,72,19 "€4693.83"
+text 813,403,31,19 "Paid"
+button 1075,396,51,32
+text 1087,404,27,15 "Ship"
+text 30,447,49,19 "#4006"
+text 221,447,78,19 "Niduso Ltd"
+text 550,447,71,19 "€4388.37"
+text 813,447,31,19 "Paid"
+button 1075,441,51,32
+text 1087,449,27,15 "Ship"
+text 30,492,48,19 "#4007"
+text 221,492,82,19 "Robami Ltd"
+text 550,492,69,19 "€4193.89"
+text 813,492,62,19 "Overdue"
+button 1075,485,51,32
+text 1087,493,27,15 "Ship"
+input 20,529,147,22 id=cust
+button 167,524,83,32 id=add
+text 179,532,59,15 "Add order"

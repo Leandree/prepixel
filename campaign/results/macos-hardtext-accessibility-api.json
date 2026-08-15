@@ -1,0 +1,42 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live session",
+  "app": "TextEdit — hard-text stress (ligatures, combining accents, CJK, RTL Arabic/Hebrew, bidi, ZWJ emoji)",
+  "stack": "appkit",
+  "stack_detection": { "method": "bundle id + AX text area exposes parameterized text attributes", "signature": "com.apple.TextEdit; AXTextArea advertises AXBoundsForRange / AXRangeForPosition / AXStringForRange", "detected_before_use": true },
+  "channel": "accessibility-api",
+  "channel_setup": "A UTF-8 file written by the harness (10 hard cases, one per line) is the ground truth; opened in TextEdit and read back through AXValue plus parameterized text attributes. Direct counterpart to the Linux glyph-decode cell, which had to reconstruct text from glyph IDs.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "10/10 EXACT, byte-for-byte against the source file, with no normalisation applied by the channel: presentation-form ligatures (U+FB01/U+FB02 in 'ﬁche ﬂux œuvre'), precomposed accents ('café naïve Noël'), COMBINING accents (e+U+0301, i+U+0308 — preserved as combining, not silently NFC-folded), CJK ('你好世界 こんにちは 한국어'), RTL Arabic and Hebrew, bidi-mixed ('Total: 42 مرحبا END') returned in LOGICAL order, simple emoji, and ZWJ sequences (👨‍👩‍👧‍👦 family, 👩🏽‍💻 with skin-tone modifier). Read latency 0.03 ms. THE STRUCTURAL POINT: on macOS the sanctioned channel hands over the model string, so the entire glyph-decoding pipeline the Linux render-tap needed (reverse cmap + NFKC + BiDi reorder, with a lossy tail on custom ligatures) simply does not arise. The trade-off is the mirror image: AX reports the text the app HOLDS, not the glyphs it PAINTED — a font-fallback failure would be invisible to this channel, where the render tap would show it."},
+    "t2_enumerate": { "pass": true, "detail": "Text geometry is fully addressable: AXBoundsForRange returns the on-screen rect of any substring. Verified against the screenshot — the pure-RTL lines are right-aligned (Arabic at x=770 w=86, Hebrew at x=797 w=59, both ending at x=856 against a window right edge of 866) while Latin starts at x=220. In the bidi-mixed line the three runs resolve left-to-right as 'Total:' [220,40], 'مرحبا' [286,33], 'END' [326,20] — the Arabic word sits in the middle with its glyphs internally reversed, and the API resolves it correctly."},
+    "t3_live_value": { "pass": null, "detail": "Covered by macos-textedit-accessibility-api."},
+    "t4_living_screen": { "pass": null, "detail": "Static document."},
+    "t5_blind_action": { "pass": true, "detail": "The INVERSE mapping works too, which is what an agent needs to aim inside text: AXRangeForPosition at the centre of each run returns the exact character under that pixel — 'a' for the centre of 'Total:', 'N' for the centre of 'END', and 'ح' for the centre of the Arabic word (the correct middle letter of مرحبا despite right-to-left glyph order). Text↔geometry is a closed round-trip through the channel."},
+    "t6_pictorial": { "pass": null, "detail": "No pictorial region in this document."}
+  },
+  "measurements": {
+    "view_bytes": 139,
+    "view_tokens_est": 35,
+    "screenshot_tokens_est": 1281,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 0.03,
+    "notes": "The whole hard-text document is 139 code points; the window it fills is 656x440 logical = 1281 image tokens (5126 at Retina 2x). RANGE-ARITHMETIC TRAP, measured: AX ranges are in UTF-16 units while Python/JS string indices are code points, and the gap is large exactly where it hurts — '🦊 🎯' is 3 code points but 5 UTF-16 units, '👨‍👩‍👧‍👦 👩🏽‍💻' is 12 code points but 19 units. Worse for layout reasoning: the family emoji occupies ELEVEN UTF-16 units and renders as ONE 15x18 px cell, so string length is not a proxy for visual extent in either direction. Any harness doing offset math must convert explicitly."
+  },
+  "runtime_verification": {
+    "method": "decoded strings compared byte-for-byte to the source file; geometry cross-checked against a window screenshot (right-aligned RTL lines, single-cell family emoji), and the point->character inverse verified on three runs of the bidi line",
+    "agreement": "exact on all 10 cases; geometry and inverse mapping agree with the screenshot"
+  },
+  "permissions_required": ["Accessibility (TCC) for host process", "Screen Recording for the verification screenshot"],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/hardtext-ax-results.json",
+    "campaign/results/artifacts/macos/hardtext-ax-geometry.json",
+    "campaign/results/artifacts/macos/hardtext-bidi-geometry.json",
+    "campaign/results/artifacts/macos/hardtext-window.png",
+    "campaign/results/artifacts/macos/hardtext-emoji-zoom.png"
+  ]
+}

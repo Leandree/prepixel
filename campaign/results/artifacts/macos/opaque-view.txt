@@ -1,0 +1,9 @@
+text 8,20,330,28 "Zone 1 — texte HTML normal"
+text 8,67,133,19 "Solde du compte :"
+text 141,67,79,19 "1 234,56 €"
+button 8,102,51,22 id=pay
+text 16,105,35,15 "Payer"
+text 8,143,273,28 "Zone 2 — image (photo)"
+[pixels] img 8,191,300,120
+text 8,334,634,28 "Zone 3 — canvas (rendu "à la jeu vidéo" / Google Docs)"
+[pixels] canvas 8,381,400,120

@@ -1,0 +1,43 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, Chrome 151 + TextEdit, live session",
+  "app": "Adversarial: occlusion, visibility tricks & undeclared blind spots (the safety-claim stress test)",
+  "stack": "chromium",
+  "stack_detection": { "method": "n/a (adversarial probe)", "signature": "n/a", "detected_before_use": true },
+  "channel": "cdp",
+  "channel_setup": "Three layers probed: (1) in-window — naive DOMSnapshot distiller vs hardened in-page distiller on pages/occlusion.html, with the page's own click handlers as ground truth; (2) cross-window — TextEdit placed over a Chrome window, compositor map read from CGWindowListCopyWindowInfo (front-to-back order = z-order); (3) OS hit-test — AXUIElementCopyElementAtPosition on the system-wide element.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "CSS visibility tricks correctly filtered by BOTH distillers: opacity:0 and visibility:hidden secrets never leak. Positive control passes."},
+    "t2_enumerate": { "pass": true, "detail": "Off-viewport leak reproduced on macOS: the naive view leaks OFFSCREEN-SECRET (content at left:-9999px); the hardened view drops it. Same class as the Linux finding, confirmed on a second OS."},
+    "t3_live_value": { "pass": null, "detail": "n/a"},
+    "t4_living_screen": { "pass": null, "detail": "n/a"},
+    "t5_blind_action": { "pass": true, "detail": "Occlusion divergence reproduced AND isolated with ground truth: clicking the button's TRUE css centre fires the OVERLAY's handler, not the button's (window.__hit === 'overlay'), while the naive view lists the button as plainly present. The hardened distiller marks it 'button 40,60,120,40 id=real [occluded]' so a router will not aim there. NOTE the macOS compounding factor: a first blind click using the naive view's raw coordinates missed by 2x because DOMSnapshot bounds are DEVICE pixels while Input.dispatchMouseEvent takes CSS pixels — and Emulation.setDeviceMetricsOverride{deviceScaleFactor:1} normalises the SCREENSHOT but NOT the DOMSnapshot bounds. Two independent traps stacked on the same click."},
+    "t6_pictorial": { "pass": true, "detail": "NEW SILENT-DIVERGENCE CLASS FOUND — in the repo's own hardened distiller, and closed. distillHardened() emitted ONLY text and interactive elements: it had no OPAQUE set, so pictorial regions were dropped entirely. Consequence: pages/allcanvas.html (a screen that is 100% canvas) distilled to ZERO BYTES — a view that does not lie about content but never declares its own blind spot, so a consumer reads 'empty screen' instead of 'opaque region, fall back to pixels'. That is precisely the disqualifying failure mode the thesis rules out. Fixed in src/distill-hardened.mjs by declaring IMG/CANVAS/VIDEO/SVG/PICTURE/EMBED/OBJECT with their rects (hit-tested, so occluded images are tagged too): the all-canvas page now yields '[pixels] canvas 0,0,1280,800' and the mixed page declares '[pixels] img 8,191,300,120'. Verified the duel numbers are unaffected: 0/20 duel pages contain any opaque element, and the post-fix re-run reproduces 1578 bytes / 391 tokens exactly."}
+  },
+  "measurements": {
+    "view_bytes": 226,
+    "view_tokens_est": 57,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": null,
+    "notes": "CROSS-WINDOW RESULT (the macOS analog of the Linux WM-map test, with a better ending): with TextEdit (z=12) over Chrome (z=14), the compositor map gives geometry + z-order, from which the back window computes as 25.3% covered. Per-window structure alone is blind to this — Chrome's own AX still reports the covered point as inside its frame. BUT macOS ships the mitigation as a first-class API: AXUIElementCopyElementAtPosition on the system-wide element, probed at a point inside the covered region, returns an AXTextArea belonging to pid 65570 = TextEdit — i.e. the FRONT window. So on macOS cross-window occlusion is resolved by ONE system call, with no rectangle math and no z-order bookkeeping, where the Linux cell had to compute overlap-vs-z-order by hand. Same primitive also solves in-window occlusion for native apps (no elementFromPoint equivalent needed)."
+  },
+  "runtime_verification": {
+    "method": "page's own click handlers as ground truth for in-window occlusion; elementFromPoint for the top element; CGWindowList z-order + rect overlap vs AXUIElementCopyElementAtPosition for cross-window; AXUIElementGetPid to confirm which app owns the hit element",
+    "agreement": "post-hardening the view matches what is visible, hittable AND pictorially opaque; every gap is now tagged ([occluded]) or declared ([pixels] rect). No silent case survived — but one had to be FOUND and FIXED first (t6)."
+  },
+  "permissions_required": ["Accessibility (TCC) for the cross-window hit-test probe"],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/results/artifacts/macos/occlusion-naive.txt",
+    "campaign/results/artifacts/macos/occlusion-hardened.txt",
+    "campaign/results/artifacts/macos/cross-window-occlusion.json",
+    "campaign/macos/silent-divergence-macos.mjs",
+    "campaign/macos/occlusion-isolate.mjs",
+    "campaign/macos/cross_window_occlusion.py"
+  ]
+}

@@ -1,0 +1,8 @@
+button 80,120,240,80 id=real
+text 132,145,136,30 "Real button"
+text 136,152,208,37 "Overlay on top"
+text 40,320,80,37 "Also:"
+text 559,320,71,37 "and"
+text 893,320,71,37 "and"
+text -19998,320,338,37 "OFFSCREEN-SECRET"
+text 964,320,149,37 "visible-tail."

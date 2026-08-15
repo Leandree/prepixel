@@ -1,0 +1,75 @@
+{
+ "mixed_line_geometry": {
+  "Total:": {
+   "text": "Total:",
+   "box": {
+    "x": 220,
+    "y": 260,
+    "w": 40,
+    "h": 13
+   }
+  },
+  "arabic_word": {
+   "text": "مرحبا",
+   "box": {
+    "x": 286,
+    "y": 260,
+    "w": 33,
+    "h": 13
+   }
+  },
+  "END": {
+   "text": "END",
+   "box": {
+    "x": 326,
+    "y": 260,
+    "w": 20,
+    "h": 13
+   }
+  }
+ },
+ "point_to_text": {
+  "Total:": {
+   "probe_point": [
+    240,
+    266
+   ],
+   "resolved": {
+    "loc": 106,
+    "len": 1,
+    "text": "a"
+   }
+  },
+  "arabic_word": {
+   "probe_point": [
+    302,
+    266
+   ],
+   "resolved": {
+    "loc": 115,
+    "len": 1,
+    "text": "ح"
+   }
+  },
+  "END": {
+   "probe_point": [
+    336,
+    266
+   ],
+   "resolved": {
+    "loc": 120,
+    "len": 1,
+    "text": "N"
+   }
+  }
+ },
+ "family_emoji": {
+  "utf16_units": 11,
+  "box": {
+   "x": 220,
+   "y": 291,
+   "w": 15,
+   "h": 18
+  }
+ }
+}
