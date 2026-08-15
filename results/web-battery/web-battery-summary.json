@@ -72,5 +72,8 @@
     "amazon-fr"
   ],
   "avg_view_ms": 15.81,
-  "note": "ratio_viewport = viewport screenshot tokens / hardened structured-view tokens (>1 = structure cheaper). Retina variants use src/image-tokens.mjs (post-downscale, two tiers)."
+  "note": "ratio_viewport = viewport screenshot tokens / hardened structured-view tokens (>1 = structure cheaper). Retina variants use src/image-tokens.mjs (post-downscale, two tiers). avg_ratio_viewport is the MEAN of per-site ratios (biased upward); aggregate_ratio_totals is the ratio of summed tokens and is the number to quote for session cost.",
+  "aggregate_ratio_totals": 1.0,
+  "median_ratio_viewport": 1.21,
+  "sites_where_structure_wins": "10/16"
 }

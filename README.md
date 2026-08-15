@@ -24,8 +24,9 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 - **Cost — and the honest caveat, which is the more interesting half.** On synthetic
   app UIs the structured view is **3.5× fewer tokens and 36× fewer bytes** than a
   screenshot (n=20 pages, exact image-token formula). But on **16 live public
-  websites the average collapses to 1.30×**, ranging from **0.47× on Hacker News**
-  (structure costs *twice* a screenshot) to **3.11× on Vercel**. The mechanism:
+  websites it collapses to break-even**: 1.00× on the ratio of totals, 1.21× median
+  per page, ranging from **0.47× on Hacker News** (structure costs *twice* a
+  screenshot) to **3.11× on Vercel**, ahead on 10/16 sites. The mechanism:
   a screenshot has a **flat** cost set by the viewport, while a structured view
   scales with **information density** — so the ratio is a property of the *page*,
   not of the method, and structure loses on text-dense pages. Where structure wins

@@ -202,10 +202,19 @@ reference, webapp, webapp-canvas), logged out, no lab pages: Amazon.fr, Le Monde
 BBC, YouTube home and watch, GitHub, Wikipedia, MDN, Stripe, Vercel, Apple,
 leboncoin, DuckDuckGo, Hacker News, Excalidraw, OpenStreetMap.
 
-Averaged over the sixteen, the structured view costs **1360 tokens against 1366 for
-one CSS-resolution viewport screenshot — a ratio of 1.30x, not the 3.49x of the
-synthetic duel.** The mechanism is simple and should be stated plainly rather than
-buried: a screenshot has a **flat** cost set by the viewport, while a structured
+Averaged over the sixteen, the structured view costs **1360 tokens against 1366
+for one CSS-resolution viewport screenshot** — nowhere near the 3.49x of the
+synthetic duel. Which single number summarises that depends on the aggregation, and
+the two defensible answers disagree enough that the choice must be stated:
+
+| aggregation | value | answers the question |
+|---|---|---|
+| ratio of **totals** (21 766 tokens vs 16 x 1366) | **1.00x** | what does a whole browsing session cost? |
+| **median** of per-site ratios | **1.21x** | what does a typical page cost? |
+| **mean** of per-site ratios | 1.30x | biased upward — a 3x win counts as much as a 2x loss on a page costing a fraction of the tokens |
+
+Structure comes out ahead on **10 of 16 sites**, and at exact break-even overall.
+The mechanism is simple and should be stated plainly rather than buried: a screenshot has a **flat** cost set by the viewport, while a structured
 view scales with **information density**. The ratio is therefore a property of the
 page, not of the method — and the spread is enormous:
 
