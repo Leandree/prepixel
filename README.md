@@ -21,11 +21,24 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 
 ## TL;DR — what we found (all measured, in this repo)
 
-- **Cost.** On app UIs the structured view is **3.5× fewer tokens and 36× fewer
-  bytes** than a screenshot (n=20 pages, screenshot side uses the *exact* image-token
-  formula). Perceiving a *change* costs 14–205 tokens vs a flat 1,366 for a
-  re-screenshot; an idle frame costs **0**. Watching a self-updating screen for 6 s:
-  **14× less** than screenshots at 1 fps.
+- **Cost — and the honest caveat, which is the more interesting half.** On synthetic
+  app UIs the structured view is **3.5× fewer tokens and 36× fewer bytes** than a
+  screenshot (n=20 pages, exact image-token formula). But on **16 live public
+  websites the average collapses to 1.30×**, ranging from **0.47× on Hacker News**
+  (structure costs *twice* a screenshot) to **3.11× on Vercel**. The mechanism:
+  a screenshot has a **flat** cost set by the viewport, while a structured view
+  scales with **information density** — so the ratio is a property of the *page*,
+  not of the method, and structure loses on text-dense pages. Where structure wins
+  unambiguously is **change and idleness**: perceiving a *change* costs 14–205
+  tokens vs a flat 1,366 for a re-screenshot, an idle frame costs **0**, and
+  watching a self-updating screen for 6 s is **14× less** than screenshots at 1 fps.
+  Retina cuts both ways: image tokens are charged *after* the API's automatic
+  downscale, so a 2× capture costs 4,784 tokens on a high-res model (ratio 12.2×)
+  but only 1,534 on a legacy-tier one (3.9×).
+- **You can actually browse this way.** **8/8** blind steps on 5 live sites with
+  every decision taken from the structured view alone — 6/6 navigations, 1/1
+  disclosure toggle confirmed *in the channel* without a screenshot, and 1/1
+  correct refusal to click a control that does not exist.
 - **Accuracy.** On legible screens, **parity**: 18/18 correct from structure and
   18/18 from pixels. Structure's *accuracy advantage* appears only in degraded
   regimes (occlusion, off-viewport, tiny text) — stated honestly, not overclaimed.
