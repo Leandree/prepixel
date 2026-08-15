@@ -32,18 +32,18 @@ text 375,46,9,13 "("
 a 383,46,40,13
 text 383,46,40,13 "conic.al"
 text 424,46,5,13 ")"
-text 139,61,50,12 "146 points"
+text 139,61,50,12 "212 points"
 text 188,61,18,12 "by"
 a 206,61,12,12
 text 206,61,12,12 "rdl"
 a 222,61,56,12
-text 222,61,56,12 "5 hours ago"
+text 222,61,56,12 "7 hours ago"
 text 281,61,8,12 "|"
 a 288,61,20,12
 text 288,61,20,12 "hide"
 text 308,61,11,12 "|"
-a 319,61,64,12
-text 319,61,64,12 "72 comments"
+a 319,61,70,12
+text 319,61,70,12 "103 comments"
 text 111,78,13,17 "2."
 a 125,81,14,10 id=up_49299605
 a 139,79,95,17
@@ -52,374 +52,378 @@ text 234,82,9,13 "("
 a 242,82,81,13
 text 242,82,81,13 "huggingface.co"
 text 323,82,5,13 ")"
-text 139,97,55,12 "1140 points"
+text 139,97,55,12 "1184 points"
 text 194,97,18,12 "by"
 a 212,97,54,12
 text 212,97,54,12 "erdaltoprak"
 a 269,97,62,12
-text 269,97,62,12 "18 hours ago"
+text 269,97,62,12 "20 hours ago"
 text 334,97,8,12 "|"
 a 341,97,20,12
 text 341,97,20,12 "hide"
 text 361,97,11,12 "|"
 a 372,97,70,12
-text 372,97,70,12 "696 comments"
+text 372,97,70,12 "709 comments"
 text 111,113,13,17 "3."
-a 125,116,14,10 id=up_49304447
-a 139,114,352,17
-text 139,114,352,17 "Going Dark, and the era of law enforcement hacking"
-text 491,117,9,13 "("
-a 499,117,160,13
-text 499,117,160,13 "cryptographyengineering.com"
-text 659,117,5,13 ")"
-text 139,132,50,12 "343 points"
-text 188,132,18,12 "by"
-a 206,132,25,12
-text 206,132,25,12 "vslira"
-a 234,132,62,12
-text 234,132,62,12 "13 hours ago"
-text 299,132,8,12 "|"
-a 307,132,20,12
-text 307,132,20,12 "hide"
-text 327,132,11,12 "|"
-a 338,132,70,12
-text 338,132,70,12 "150 comments"
+a 125,116,14,10 id=up_49308685
+a 139,114,483,17
+text 139,114,483,17 "Using GCC's Nested Functions with Wide Pointers and No Trampolines II"
+text 622,117,9,13 "("
+a 630,117,79,13
+text 630,117,79,13 "codeberg.page"
+text 709,117,5,13 ")"
+text 139,132,44,12 "27 points"
+text 182,132,18,12 "by"
+a 200,132,31,12
+text 200,132,31,12 "uecker"
+a 235,132,56,12
+text 235,132,56,12 "3 hours ago"
+text 294,132,8,12 "|"
+a 301,132,20,12
+text 301,132,20,12 "hide"
+text 321,132,11,12 "|"
+a 332,132,58,12
+text 332,132,58,12 "3 comments"
 text 111,149,13,17 "4."
-a 125,152,14,10 id=up_49271382
-a 139,150,477,17
-text 139,150,477,17 "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace"
-text 615,153,9,13 "("
-a 624,153,123,13
-text 624,153,123,13 "popularmechanics.com"
-text 747,153,5,13 ")"
-text 139,168,44,12 "37 points"
-text 182,168,18,12 "by"
-a 200,168,46,12
-text 200,168,46,12 "bookofjoe"
-a 249,168,56,12
-text 249,168,56,12 "5 hours ago"
-text 309,168,8,12 "|"
-a 316,168,20,12
-text 316,168,20,12 "hide"
-text 336,168,11,12 "|"
-a 347,168,64,12
-text 347,168,64,12 "10 comments"
+a 125,152,14,10 id=up_49304447
+a 139,150,352,17
+text 139,150,352,17 "Going Dark, and the era of law enforcement hacking"
+text 491,153,9,13 "("
+a 499,153,160,13
+text 499,153,160,13 "cryptographyengineering.com"
+text 659,153,5,13 ")"
+text 139,168,50,12 "358 points"
+text 188,168,18,12 "by"
+a 206,168,25,12
+text 206,168,25,12 "vslira"
+a 234,168,62,12
+text 234,168,62,12 "14 hours ago"
+text 299,168,8,12 "|"
+a 307,168,20,12
+text 307,168,20,12 "hide"
+text 327,168,11,12 "|"
+a 338,168,70,12
+text 338,168,70,12 "163 comments"
 text 111,184,13,17 "5."
-a 125,187,14,10 id=up_49282951
-a 139,185,274,17
-text 139,185,274,17 "Coin-sized device can hack a Boeing 737"
-text 412,188,9,13 "("
-a 421,188,55,13
-text 421,188,55,13 "wired.com"
-text 476,188,5,13 ")"
-text 139,203,44,12 "75 points"
+a 125,187,14,10 id=up_49237183
+a 139,185,320,17
+text 139,185,320,17 "The mathematical beauty of hyperbezier curves"
+text 459,188,9,13 "("
+a 467,188,76,13
+text 467,188,76,13 "linebender.org"
+text 544,188,5,13 ")"
+text 139,203,44,12 "20 points"
 text 182,203,18,12 "by"
-a 200,203,21,12
-text 200,203,21,12 "_tk_"
-a 224,203,56,12
-text 224,203,56,12 "5 hours ago"
-text 284,203,8,12 "|"
-a 291,203,20,12
-text 291,203,20,12 "hide"
-text 311,203,11,12 "|"
-a 322,203,64,12
-text 322,203,64,12 "47 comments"
+a 200,203,43,12
+text 200,203,43,12 "raphlinus"
+a 246,203,56,12
+text 246,203,56,12 "3 hours ago"
+text 305,203,8,12 "|"
+a 313,203,20,12
+text 313,203,20,12 "hide"
+text 333,203,11,12 "|"
+a 344,203,34,12
+text 344,203,34,12 "discuss"
 text 111,220,13,17 "6."
-a 125,223,14,10 id=up_49271442
-a 139,221,288,17
-text 139,221,288,17 "Understanding WCAG 2.2 as ePub and PDF"
-text 426,224,9,13 "("
-a 435,224,60,13
-text 435,224,60,13 "doeken.org"
-text 495,224,5,13 ")"
-text 139,239,44,12 "14 points"
+a 125,223,14,10 id=up_49246366
+a 139,221,534,17
+text 139,221,534,17 "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum"
+text 673,224,9,13 "("
+a 682,224,126,13
+text 682,224,126,13 "baselashraf81.github.io"
+text 807,224,5,13 ")"
+text 139,239,44,12 "27 points"
 text 182,239,18,12 "by"
-a 200,239,49,12
-text 200,239,49,12 "doekenorg"
-a 253,239,56,12
-text 253,239,56,12 "2 hours ago"
-text 312,239,8,12 "|"
-a 319,239,20,12
-text 319,239,20,12 "hide"
-text 339,239,11,12 "|"
-a 350,239,58,12
-text 350,239,58,12 "2 comments"
+a 200,239,67,12
+text 200,239,67,12 "BaselAshraf81"
+a 270,239,56,12
+text 270,239,56,12 "4 hours ago"
+text 329,239,8,12 "|"
+a 337,239,20,12
+text 337,239,20,12 "hide"
+text 357,239,11,12 "|"
+a 367,239,58,12
+text 367,239,58,12 "6 comments"
 text 111,255,13,17 "7."
-a 125,258,14,10 id=up_49300314
-a 139,256,452,17
-text 139,256,452,17 "Google is making private AI practical with homomorphic encryption"
-text 590,259,9,13 "("
-a 599,259,62,13
-text 599,259,62,13 "blog.google"
-text 661,259,5,13 ")"
-text 139,274,50,12 "389 points"
-text 188,274,18,12 "by"
-a 206,274,48,12
-text 206,274,48,12 "u1hcw9nx"
-a 257,274,62,12
-text 257,274,62,12 "18 hours ago"
-text 322,274,8,12 "|"
-a 330,274,20,12
-text 330,274,20,12 "hide"
-text 349,274,11,12 "|"
-a 360,274,70,12
-text 360,274,70,12 "233 comments"
+a 125,258,14,10 id=up_49271382
+a 139,256,477,17
+text 139,256,477,17 "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace"
+text 615,259,9,13 "("
+a 624,259,123,13
+text 624,259,123,13 "popularmechanics.com"
+text 747,259,5,13 ")"
+text 139,274,44,12 "53 points"
+text 182,274,18,12 "by"
+a 200,274,46,12
+text 200,274,46,12 "bookofjoe"
+a 249,274,56,12
+text 249,274,56,12 "7 hours ago"
+text 309,274,8,12 "|"
+a 316,274,20,12
+text 316,274,20,12 "hide"
+text 336,274,11,12 "|"
+a 347,274,64,12
+text 347,274,64,12 "30 comments"
 text 111,291,13,17 "8."
-a 125,294,14,10 id=up_49306577
-a 139,292,405,17
-text 139,292,405,17 "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia"
-text 544,295,9,13 "("
-a 553,295,48,13
-text 553,295,48,13 "usgs.gov"
-text 600,295,5,13 ")"
-text 139,310,50,12 "195 points"
-text 188,310,18,12 "by"
-a 206,310,33,12
-text 206,310,33,12 "Bender"
-a 243,310,56,12
-text 243,310,56,12 "8 hours ago"
-text 302,310,8,12 "|"
-a 309,310,20,12
-text 309,310,20,12 "hide"
-text 329,310,11,12 "|"
-a 340,310,64,12
-text 340,310,64,12 "46 comments"
+a 125,294,14,10 id=up_49282951
+a 139,292,274,17
+text 139,292,274,17 "Coin-sized device can hack a Boeing 737"
+text 412,295,9,13 "("
+a 421,295,55,13
+text 421,295,55,13 "wired.com"
+text 476,295,5,13 ")"
+text 139,310,44,12 "92 points"
+text 182,310,18,12 "by"
+a 200,310,21,12
+text 200,310,21,12 "_tk_"
+a 224,310,56,12
+text 224,310,56,12 "7 hours ago"
+text 284,310,8,12 "|"
+a 291,310,20,12
+text 291,310,20,12 "hide"
+text 311,310,11,12 "|"
+a 322,310,64,12
+text 322,310,64,12 "62 comments"
 text 111,326,13,17 "9."
-a 125,329,14,10 id=up_49305250
-a 139,327,72,17
-text 139,327,72,17 "eigendrum"
-text 210,330,9,13 "("
-a 219,330,84,13
-text 219,330,84,13 "eigendrum.com"
-text 303,330,5,13 ")"
-text 139,345,50,12 "157 points"
+a 125,329,14,10 id=up_49300314
+a 139,327,452,17
+text 139,327,452,17 "Google is making private AI practical with homomorphic encryption"
+text 590,330,9,13 "("
+a 599,330,62,13
+text 599,330,62,13 "blog.google"
+text 661,330,5,13 ")"
+text 139,345,50,12 "416 points"
 text 188,345,18,12 "by"
-a 206,345,46,12
-text 206,345,46,12 "bookofjoe"
-a 255,345,62,12
-text 255,345,62,12 "11 hours ago"
-text 320,345,8,12 "|"
-a 328,345,20,12
-text 328,345,20,12 "hide"
-text 348,345,11,12 "|"
-a 359,345,64,12
-text 359,345,64,12 "38 comments"
+a 206,345,48,12
+text 206,345,48,12 "u1hcw9nx"
+a 257,345,62,12
+text 257,345,62,12 "20 hours ago"
+text 322,345,8,12 "|"
+a 330,345,20,12
+text 330,345,20,12 "hide"
+text 349,345,11,12 "|"
+a 360,345,70,12
+text 360,345,70,12 "252 comments"
 text 103,362,22,17 "10."
-a 125,365,14,10 id=up_49300759
-a 139,363,454,17
-text 139,363,454,17 "RustDesk now supports true unattended remote access on Wayland"
-text 593,366,9,13 "("
-a 601,366,72,13
-text 601,366,72,13 "rustdesk.com"
-text 674,366,5,13 ")"
-text 139,381,50,12 "295 points"
-text 188,381,18,12 "by"
-a 206,381,40,12
-text 206,381,40,12 "rustdesk"
-a 249,381,62,12
-text 249,381,62,12 "17 hours ago"
-text 315,381,8,12 "|"
-a 322,381,20,12
-text 322,381,20,12 "hide"
-text 342,381,11,12 "|"
-a 353,381,70,12
-text 353,381,70,12 "122 comments"
+a 125,365,14,10 id=up_49271442
+a 139,363,288,17
+text 139,363,288,17 "Understanding WCAG 2.2 as ePub and PDF"
+text 426,366,9,13 "("
+a 435,366,60,13
+text 435,366,60,13 "doeken.org"
+text 495,366,5,13 ")"
+text 139,381,44,12 "26 points"
+text 182,381,18,12 "by"
+a 200,381,49,12
+text 200,381,49,12 "doekenorg"
+a 253,381,56,12
+text 253,381,56,12 "4 hours ago"
+text 312,381,8,12 "|"
+a 319,381,20,12
+text 319,381,20,12 "hide"
+text 339,381,11,12 "|"
+a 350,381,58,12
+text 350,381,58,12 "2 comments"
 text 103,397,22,17 "11."
-a 125,400,14,10 id=up_49303202
-a 139,398,466,17
-text 139,398,466,17 "Firefox is now the last major browser that still supports uBlock Origin"
-text 605,401,9,13 "("
-a 613,401,68,13
-text 613,401,68,13 "pcworld.com"
-text 681,401,5,13 ")"
-text 139,416,55,12 "1021 points"
-text 194,416,18,12 "by"
-a 212,416,47,12
-text 212,416,47,12 "DemiGuru"
-a 263,416,62,12
-text 263,416,62,12 "14 hours ago"
-text 328,416,8,12 "|"
-a 335,416,20,12
-text 335,416,20,12 "hide"
-text 355,416,11,12 "|"
-a 366,416,70,12
-text 366,416,70,12 "387 comments"
+a 125,400,14,10 id=up_49307700
+a 139,398,498,17
+text 139,398,498,17 "Show HN: ThoughtDAG – An editable context graph for LLM conversations"
+text 637,401,9,13 "("
+a 646,401,117,13
+text 646,401,117,13 "chenxiachan.github.io"
+text 763,401,5,13 ")"
+text 139,416,44,12 "47 points"
+text 182,416,18,12 "by"
+a 200,416,42,12
+text 200,416,42,12 "chatchan"
+a 246,416,56,12
+text 246,416,56,12 "7 hours ago"
+text 305,416,8,12 "|"
+a 312,416,20,12
+text 312,416,20,12 "hide"
+text 332,416,11,12 "|"
+a 343,416,64,12
+text 343,416,64,12 "12 comments"
 text 103,433,22,17 "12."
-a 125,436,14,10 id=up_49307700
-a 139,434,498,17
-text 139,434,498,17 "Show HN: ThoughtDAG – An editable context graph for LLM conversations"
-text 637,437,9,13 "("
-a 646,437,117,13
-text 646,437,117,13 "chenxiachan.github.io"
-text 763,437,5,13 ")"
-text 139,452,44,12 "30 points"
-text 182,452,18,12 "by"
-a 200,452,42,12
-text 200,452,42,12 "chatchan"
-a 246,452,56,12
-text 246,452,56,12 "5 hours ago"
-text 305,452,8,12 "|"
-a 312,452,20,12
-text 312,452,20,12 "hide"
-text 332,452,11,12 "|"
-a 343,452,58,12
-text 343,452,58,12 "4 comments"
+a 125,436,14,10 id=up_49303202
+a 139,434,466,17
+text 139,434,466,17 "Firefox is now the last major browser that still supports uBlock Origin"
+text 605,437,9,13 "("
+a 613,437,68,13
+text 613,437,68,13 "pcworld.com"
+text 681,437,5,13 ")"
+text 139,452,55,12 "1157 points"
+text 194,452,18,12 "by"
+a 212,452,47,12
+text 212,452,47,12 "DemiGuru"
+a 263,452,62,12
+text 263,452,62,12 "16 hours ago"
+text 328,452,8,12 "|"
+a 335,452,20,12
+text 335,452,20,12 "hide"
+text 355,452,11,12 "|"
+a 366,452,70,12
+text 366,452,70,12 "428 comments"
 text 103,468,22,17 "13."
-a 125,471,14,10 id=up_49246366
-a 139,469,534,17
-text 139,469,534,17 "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum"
-text 673,472,9,13 "("
-a 682,472,126,13
-text 682,472,126,13 "baselashraf81.github.io"
-text 807,472,5,13 ")"
-text 139,487,38,12 "5 points"
-text 176,487,18,12 "by"
-a 194,487,67,12
-text 194,487,67,12 "BaselAshraf81"
-a 264,487,56,12
-text 264,487,56,12 "2 hours ago"
-text 323,487,8,12 "|"
-a 331,487,20,12
-text 331,487,20,12 "hide"
-text 351,487,11,12 "|"
-a 361,487,34,12
-text 361,487,34,12 "discuss"
+a 125,471,14,10 id=up_49306577
+a 139,469,405,17
+text 139,469,405,17 "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia"
+text 544,472,9,13 "("
+a 553,472,48,13
+text 553,472,48,13 "usgs.gov"
+text 600,472,5,13 ")"
+text 139,487,50,12 "202 points"
+text 188,487,18,12 "by"
+a 206,487,33,12
+text 206,487,33,12 "Bender"
+a 243,487,62,12
+text 243,487,62,12 "10 hours ago"
+text 308,487,8,12 "|"
+a 315,487,20,12
+text 315,487,20,12 "hide"
+text 335,487,11,12 "|"
+a 346,487,64,12
+text 346,487,64,12 "49 comments"
 text 103,504,22,17 "14."
-a 125,507,14,10 id=up_49277535
-a 139,505,445,17
-text 139,505,445,17 "Show HN: Silent Shark – tactical map-based WWII submarine sim"
-text 583,508,9,13 "("
-a 592,508,82,13
-text 592,508,82,13 "silentshark.app"
+a 125,507,14,10 id=up_49300759
+a 139,505,454,17
+text 139,505,454,17 "RustDesk now supports true unattended remote access on Wayland"
+text 593,508,9,13 "("
+a 601,508,72,13
+text 601,508,72,13 "rustdesk.com"
 text 674,508,5,13 ")"
-text 139,523,44,12 "26 points"
-text 182,523,18,12 "by"
-a 200,523,28,12
-text 200,523,28,12 "epaga"
-a 232,523,56,12
-text 232,523,56,12 "4 hours ago"
-text 291,523,8,12 "|"
-a 298,523,20,12
-text 298,523,20,12 "hide"
-text 318,523,11,12 "|"
-a 329,523,58,12
-text 329,523,58,12 "5 comments"
+text 139,523,50,12 "306 points"
+text 188,523,18,12 "by"
+a 206,523,40,12
+text 206,523,40,12 "rustdesk"
+a 249,523,62,12
+text 249,523,62,12 "19 hours ago"
+text 315,523,8,12 "|"
+a 322,523,20,12
+text 322,523,20,12 "hide"
+text 342,523,11,12 "|"
+a 353,523,70,12
+text 353,523,70,12 "129 comments"
 text 103,539,22,17 "15."
-a 125,542,14,10 id=up_49300568
-a 139,540,75,17
-text 139,540,75,17 "AI by Hand"
-text 214,543,9,13 "("
-a 222,543,53,13
-text 222,543,53,13 "byhand.ai"
-text 275,543,5,13 ")"
-text 139,558,50,12 "305 points"
-text 188,558,18,12 "by"
-a 206,558,54,12
-text 206,558,54,12 "sans_souse"
-a 263,558,62,12
-text 263,558,62,12 "17 hours ago"
-text 328,558,8,12 "|"
-a 336,558,20,12
-text 336,558,20,12 "hide"
-text 356,558,11,12 "|"
-a 367,558,64,12
-text 367,558,64,12 "23 comments"
+a 125,542,14,10 id=up_49277535
+a 139,540,445,17
+text 139,540,445,17 "Show HN: Silent Shark – tactical map-based WWII submarine sim"
+text 583,543,9,13 "("
+a 592,543,82,13
+text 592,543,82,13 "silentshark.app"
+text 674,543,5,13 ")"
+text 139,558,44,12 "38 points"
+text 182,558,18,12 "by"
+a 200,558,28,12
+text 200,558,28,12 "epaga"
+a 232,558,56,12
+text 232,558,56,12 "6 hours ago"
+text 291,558,8,12 "|"
+a 298,558,20,12
+text 298,558,20,12 "hide"
+text 318,558,11,12 "|"
+a 329,558,64,12
+text 329,558,64,12 "15 comments"
 text 103,575,22,17 "16."
-a 125,578,14,10 id=up_49306443
-a 139,576,215,17
-text 139,576,215,17 "The Ploopy A+ Trackball Is Here"
-text 354,579,9,13 "("
-a 362,579,50,13
-text 362,579,50,13 "ploopy.co"
-text 413,579,5,13 ")"
-text 139,594,50,12 "104 points"
+a 125,578,14,10 id=up_49300568
+a 139,576,75,17
+text 139,576,75,17 "AI by Hand"
+text 214,579,9,13 "("
+a 222,579,53,13
+text 222,579,53,13 "byhand.ai"
+text 275,579,5,13 ")"
+text 139,594,50,12 "319 points"
 text 188,594,18,12 "by"
-a 206,594,44,12
-text 206,594,44,12 "big_toast"
-a 253,594,56,12
-text 253,594,56,12 "8 hours ago"
-text 312,594,8,12 "|"
-a 320,594,20,12
-text 320,594,20,12 "hide"
-text 339,594,11,12 "|"
-a 350,594,64,12
-text 350,594,64,12 "49 comments"
+a 206,594,54,12
+text 206,594,54,12 "sans_souse"
+a 263,594,62,12
+text 263,594,62,12 "19 hours ago"
+text 328,594,8,12 "|"
+a 336,594,20,12
+text 336,594,20,12 "hide"
+text 356,594,11,12 "|"
+a 367,594,64,12
+text 367,594,64,12 "23 comments"
 text 103,610,22,17 "17."
-a 125,613,14,10 id=up_49306196
-a 139,611,383,17
-text 139,611,383,17 "Simplifying and Refactoring Introductory Calculus (2018)"
-text 522,614,9,13 "("
-a 531,614,47,13
-text 531,614,47,13 "arxiv.org"
-text 578,614,5,13 ")"
-text 139,629,44,12 "89 points"
-text 182,629,18,12 "by"
-a 200,629,59,12
-text 200,629,59,12 "E-Reverance"
-a 262,629,56,12
-text 262,629,56,12 "9 hours ago"
-text 321,629,8,12 "|"
-a 329,629,20,12
-text 329,629,20,12 "hide"
-text 349,629,11,12 "|"
+a 125,613,14,10 id=up_49305250
+a 139,611,72,17
+text 139,611,72,17 "eigendrum"
+text 210,614,9,13 "("
+a 219,614,84,13
+text 219,614,84,13 "eigendrum.com"
+text 303,614,5,13 ")"
+text 139,629,50,12 "174 points"
+text 188,629,18,12 "by"
+a 206,629,46,12
+text 206,629,46,12 "bookofjoe"
+a 255,629,62,12
+text 255,629,62,12 "13 hours ago"
+text 320,629,8,12 "|"
+a 328,629,20,12
+text 328,629,20,12 "hide"
+text 348,629,11,12 "|"
 a 359,629,64,12
-text 359,629,64,12 "41 comments"
+text 359,629,64,12 "45 comments"
 text 103,646,22,17 "18."
-a 125,649,14,10 id=up_49272784
-a 139,647,377,17
-text 139,647,377,17 "Unearthing a 31 year old Easter egg in Ecco the Dolphin"
-text 516,650,9,13 "("
-a 524,650,110,13
-text 524,650,110,13 "32bits.substack.com"
-text 634,650,5,13 ")"
-text 139,665,44,12 "83 points"
-text 182,665,18,12 "by"
-a 200,665,36,12
-text 200,665,36,12 "bbayles"
-a 239,665,62,12
-text 239,665,62,12 "12 hours ago"
-text 304,665,8,12 "|"
-a 312,665,20,12
-text 312,665,20,12 "hide"
-text 332,665,11,12 "|"
-a 342,665,64,12
-text 342,665,64,12 "18 comments"
+a 125,649,14,10 id=up_49300800
+a 139,647,343,17
+text 139,647,343,17 "Maximizing the value of your Claude Code sessions"
+text 481,650,9,13 "("
+a 490,650,61,13
+text 490,650,61,13 "claude.com"
+text 551,650,5,13 ")"
+text 139,665,50,12 "243 points"
+text 188,665,18,12 "by"
+a 206,665,25,12
+text 206,665,25,12 "twapi"
+a 235,665,62,12
+text 235,665,62,12 "19 hours ago"
+text 300,665,8,12 "|"
+a 307,665,20,12
+text 307,665,20,12 "hide"
+text 327,665,11,12 "|"
+a 338,665,70,12
+text 338,665,70,12 "131 comments"
 text 103,681,22,17 "19."
-a 125,684,14,10 id=up_49300800
-a 139,682,343,17
-text 139,682,343,17 "Maximizing the value of your Claude Code sessions"
-text 481,685,9,13 "("
-a 490,685,61,13
-text 490,685,61,13 "claude.com"
-text 551,685,5,13 ")"
-text 139,700,50,12 "223 points"
-text 188,700,18,12 "by"
-a 206,700,25,12
-text 206,700,25,12 "twapi"
-a 235,700,62,12
-text 235,700,62,12 "17 hours ago"
-text 300,700,8,12 "|"
-a 307,700,20,12
-text 307,700,20,12 "hide"
-text 327,700,11,12 "|"
-a 338,700,70,12
-text 338,700,70,12 "125 comments"
+a 125,684,14,10 id=up_49306196
+a 139,682,383,17
+text 139,682,383,17 "Simplifying and Refactoring Introductory Calculus (2018)"
+text 522,685,9,13 "("
+a 531,685,47,13
+text 531,685,47,13 "arxiv.org"
+text 578,685,5,13 ")"
+text 139,700,44,12 "99 points"
+text 182,700,18,12 "by"
+a 200,700,59,12
+text 200,700,59,12 "E-Reverance"
+a 262,700,62,12
+text 262,700,62,12 "11 hours ago"
+text 327,700,8,12 "|"
+a 335,700,20,12
+text 335,700,20,12 "hide"
+text 355,700,11,12 "|"
+a 365,700,64,12
+text 365,700,64,12 "51 comments"
 text 103,717,22,17 "20."
-a 125,720,14,10 id=up_49308059
-a 139,718,338,17
-text 139,718,338,17 "Ask HN: How do you keep up with HN these days?"
-text 139,736,44,12 "32 points"
+a 125,720,14,10 id=up_49272784
+a 139,718,377,17
+text 139,718,377,17 "Unearthing a 31 year old Easter egg in Ecco the Dolphin"
+text 516,721,9,13 "("
+a 524,721,110,13
+text 524,721,110,13 "32bits.substack.com"
+text 634,721,5,13 ")"
+text 139,736,44,12 "96 points"
 text 182,736,18,12 "by"
-a 200,736,73,12
-text 200,736,73,12 "simonebrunozzi"
-a 277,736,56,12
-text 277,736,56,12 "3 hours ago"
-text 336,736,8,12 "|"
-a 343,736,20,12
-text 343,736,20,12 "hide"
-text 363,736,11,12 "|"
-a 374,736,64,12
-text 374,736,64,12 "56 comments"
+a 200,736,36,12
+text 200,736,36,12 "bbayles"
+a 239,736,62,12
+text 239,736,62,12 "14 hours ago"
+text 304,736,8,12 "|"
+a 312,736,20,12
+text 312,736,20,12 "hide"
+text 332,736,11,12 "|"
+a 342,736,64,12
+text 342,736,64,12 "20 comments"
 text 103,752,22,17 "21."
 a 125,755,14,10 id=up_49263186
 a 139,753,323,17
@@ -428,23 +432,23 @@ text 462,756,9,13 "("
 a 470,756,44,13
 text 470,756,44,13 "ieee.org"
 text 514,756,5,13 ")"
-text 139,771,44,12 "46 points"
+text 139,771,44,12 "52 points"
 text 182,771,18,12 "by"
 a 200,771,48,12
 text 200,771,48,12 "Jimmc414"
-a 251,771,56,12
-text 251,771,56,12 "9 hours ago"
-text 310,771,8,12 "|"
-a 318,771,20,12
-text 318,771,20,12 "hide"
-text 338,771,11,12 "|"
-a 348,771,64,12
-text 348,771,64,12 "11 comments"
+a 251,771,62,12
+text 251,771,62,12 "11 hours ago"
+text 316,771,8,12 "|"
+a 324,771,20,12
+text 324,771,20,12 "hide"
+text 343,771,11,12 "|"
+a 354,771,64,12
+text 354,771,64,12 "15 comments"
 text 103,788,22,17 "22."
-a 125,791,14,10 id=up_49299746
-a 139,789,130,17
-text 139,789,130,17 "Introducing Toast 1"
-text 269,792,9,13 "("
-a 277,792,89,13
-text 277,792,89,13 "mixedbread.com"
-text 367,792,5,13 ")"
+a 125,791,14,10 id=up_49299081
+a 139,789,518,17
+text 139,789,518,17 "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone"
+text 657,792,9,13 "("
+a 665,792,71,13
+text 665,792,71,13 "heyjonny.dev"
+text 737,792,5,13 ")"

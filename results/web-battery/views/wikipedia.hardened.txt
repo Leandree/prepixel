@@ -1,11 +1,13 @@
 a -1,-1,1,1 [occluded]
 text -1,-1,52,56 "Jump to content" [occluded]
 label 38,17,32,32 id=vector-main-menu-dropdown-label [occluded]
+mark 44,23,20,20 rgb(64, 66, 68)
 text 54,33,73,16 "Main menu" [occluded]
 a 84,14,140,38
 [pixels] img 84,14,140,22 alt=Wikipedia
 [pixels] img 84,41,140,11 alt=The Free Encyclopedia
 input 266,17,404,32 id=searchInput
+mark 275,24,18,18 rgb(32, 33, 34)
 button 669,17,71,32
 text 681,25,47,16 "Search"
 a 1038,25,45,16
@@ -24,6 +26,7 @@ text 60,206,52,16 "Concept"
 a 60,228,164,28
 text 60,234,57,16 "Structure"
 button 37,229,22,22
+mark 42,235,12,12 rgb(32, 33, 34)
 text 37,246,151,13 "Toggle Structure subsection" [occluded]
 a 72,256,152,28
 text 72,262,68,16 "Application"
@@ -55,6 +58,7 @@ a 60,668,164,28
 text 60,674,83,16 "External links"
 text 264,93,224,33 "Graphics pipeline"
 label 871,94,157,32 id=p-lang-btn-label [occluded]
+mark 883,100,20,20 rgb(51, 102, 204)
 text 909,102,89,16 "15 languages" [occluded]
 a 264,130,39,32
 text 264,138,39,16 "Article"
@@ -67,27 +71,36 @@ text 869,138,24,16 "Edit"
 a 909,130,75,32
 text 909,138,75,16 "View history"
 label 992,130,32,32 id=vector-page-tools-dropdown-label [occluded]
+mark 998,136,20,20 rgb(64, 66, 68)
 text 1008,145,33,16 "Tools" [occluded]
 text 1056,140,80,16 "Appearance"
 button 1148,137,39,22
 text 1156,141,23,14 "hide"
 text 1056,178,26,16 "Text"
+mark 1056,214,18,18 rgb(255, 255, 255)
 label 1056,213,164,26
 text 1080,216,35,16 "Small"
+mark 1056,246,18,18 rgb(255, 255, 255)
 label 1056,245,164,26
 text 1080,248,57,16 "Standard"
+mark 1056,278,18,18 rgb(255, 255, 255)
 label 1056,277,164,26
 text 1080,280,36,16 "Large"
 text 1056,321,36,16 "Width"
+mark 1056,357,18,18 rgb(255, 255, 255)
 label 1056,356,164,26
 text 1080,359,57,16 "Standard"
+mark 1056,389,18,18 rgb(255, 255, 255)
 label 1056,388,164,26
 text 1080,391,32,16 "Wide"
 text 1056,432,33,16 "Color"
+mark 1056,468,18,18 rgb(255, 255, 255)
 label 1056,467,164,26
 text 1080,470,62,16 "Automatic"
+mark 1056,500,18,18 rgb(255, 255, 255)
 label 1056,499,164,26
 text 1080,502,30,16 "Light"
+mark 1056,532,18,18 rgb(255, 255, 255)
 label 1056,531,164,26
 text 1080,534,30,16 "Dark"
 text 264,174,238,16 "From Wikipedia, the free encyclopedia"
@@ -214,9 +227,9 @@ a 303,671,44,19 id=mwHw
 text 303,671,44,19 "Nvidia"
 text 348,671,89,19 ", and others."
 text 264,713,407,71 "The model of the graphics pipeline is usually used in real-time rendering. Often, most of the pipeline steps are implemented in hardware, which allows for special"
-a 264,791,93,19 id=mwIQ
+a 264,791,93,19 id=mwIQ [occluded]
 text 264,791,93,19 "optimizations"
 text 357,791,458,19 ". The term "pipeline" is used in a similar sense for the pipeline in"
-a 815,791,78,19 id=mwIg
+a 815,791,78,19 id=mwIg [occluded]
 text 815,791,78,19 "processors"
 text 264,791,731,45 ": the individual steps of the pipeline often run in parallel when a given stage has enough data."

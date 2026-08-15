@@ -10,7 +10,7 @@ button 2172,32,48,48 id=button aria-label=Paramètres
 a 2252,16,276,80 href=https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dfr%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DjNQXAC9IVRw&hl=fr&ec=65620 aria-label=Se connecter
 text 2332,39,164,33 "Se connecter"
 a 32,136,1760,1320 id=thumbnail
-[pixels] video 32,136,1760,1320 src=blob:https://www.youtube.com/1f731515-4da2-4368-bf2f-5493a1aff8e3
+[pixels] video 32,136,1760,1320 src=blob:https://www.youtube.com/20acdced-37f3-4494-a039-f7cee5dfadc9
 button 1688,1328,80,80
 [pixels] img 1688,1328,80,80 aria-label=Filigrane de chaîne src=https://i.ytimg.com/an/4QobU6STFB0P71PMvOGN5A/featured_channel.jpg?v=641dde46
 text 448,1362,929,68 "Also hier sind wir vor den Elefanten."
@@ -22,7 +22,7 @@ text 369,1383,54,33 "0:19"
 button 471,1360,158,80
 text 503,1385,54,30 "Intro"
 button 1280,1360,96,80 aria-label=Lecture automatique activée
-button 1376,1360,96,80 aria-label=Sous-titres (c)
+button 1376,1360,96,80 aria-label=Sous-titres non disponibles
 button 1472,1360,96,80 aria-label=Paramètres
 button 1568,1360,96,80 aria-label=Mode cinéma (t)
 button 1664,1360,96,80 aria-label=Plein écran (f)
@@ -34,7 +34,7 @@ text 136,1558,84,38 "jawed"
 text 136,1603,188,28 "6,41 M d’abonnés"
 button 380,1555,189,80 aria-label=S'abonner à jawed.
 text 412,1578,125,33 "S’abonner"
-button 907,1559,175,80 aria-label=J'aime cette vidéo, comme 19 363 900 autres personnes avant moi
+button 907,1559,175,80 aria-label=J'aime cette vidéo, comme 19 364 291 autres personnes avant moi
 text 987,1582,63,33 "19 M"
 button 1082,1559,112,80 aria-label=Je n'aime pas cette vidéo
 button 1210,1559,221,80 aria-label=Partager
@@ -52,182 +52,184 @@ text 98,1769,603,33 "• Microplastics are accumulating in human br..."
 text 63,1809,19,33 "…"
 text 62,1808,178,33 "...afficher plus"
 text 30,1919,264,47 "Commentaires"
-a 1824,136,456,248 href=/watch?v=vCndaQhuSFY
-[pixels] img 1824,136,440,248 alt= src=https://i.ytimg.com/vi/vCndaQhuSFY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAw977JQfxAeMg9WYN-8UkDh3USoQ
-text 2187,342,61,28 "21:47"
-a 2280,136,248,120 href=/watch?v=vCndaQhuSFY aria-label=Le vrai visage de Mitterrand que les socialistes tentent encore de réhabiliter 21 minutes
-text 2280,139,241,193 "Le vrai visage de Mitterrand que les socialistes tentent encore de réhabiliter"
-text 2280,264,100,28 "Triptyque"
-text 2312,304,59,28 "382 k"
-text 2387,304,86,28 "il y a 1 a"
+a 1824,136,456,248 href=/watch?v=pqyPog4CAsk&pp=ugUEEgJmcg%3D%3D
+[pixels] img 1824,136,440,248 alt= src=https://i.ytimg.com/vi/pqyPog4CAsk/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCqg8c57lfic9OfW6l9Z_Cn5u50FQ
+text 2187,342,61,28 "13:51"
+a 2280,136,248,120 href=/watch?v=pqyPog4CAsk&pp=ugUEEgJmcg%3D%3D aria-label=Les DESIGNS les plus DRÔLES au Monde 13 minutes et 51 secondes
+text 2280,139,217,113 "Les DESIGNS les plus DRÔLES au Monde"
+text 2280,264,138,28 "L'étoile Noire"
+text 2312,304,45,28 "74 k"
+text 2373,304,79,28 "il y a 2 j"
+text 2288,344,95,28 "Nouveau"
 button 2448,304,80,80 aria-label=Autres actions
-a 1824,400,456,248 href=/watch?v=idgtvU-amY0&pp=ugUEEgJmcg%3D%3D
-[pixels] img 1824,400,440,248 alt= src=https://i.ytimg.com/vi/idgtvU-amY0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDOg2PDJKK2PAKUovRxnUu4oGRURg
-text 2187,605,61,28 "28:30"
-a 2280,400,248,120 href=/watch?v=idgtvU-amY0&pp=ugUEEgJmcg%3D%3D aria-label=Notre fille de 6 ans a pris le pouvoir à la maison 28 minutes
-text 2280,403,242,113 "Notre fille de 6 ans a pris le pouvoir à la maison"
-text 2280,528,66,28 "La Vie"
-text 2312,568,54,28 "20 M"
-text 2382,568,86,28 "il y a 7 a"
+a 1824,400,456,248 href=/watch?v=vCndaQhuSFY
+[pixels] img 1824,400,440,248 alt= src=https://i.ytimg.com/vi/vCndaQhuSFY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAw977JQfxAeMg9WYN-8UkDh3USoQ
+text 2187,605,61,28 "21:47"
+a 2280,400,248,120 href=/watch?v=vCndaQhuSFY aria-label=Le vrai visage de Mitterrand que les socialistes tentent encore de réhabiliter 21 minutes
+text 2280,403,241,193 "Le vrai visage de Mitterrand que les socialistes tentent encore de réhabiliter"
+text 2280,528,100,28 "Triptyque"
+text 2312,568,59,28 "382 k"
+text 2387,568,86,28 "il y a 1 a"
 button 2448,567,80,80 aria-label=Autres actions
-a 1824,663,456,248 href=/watch?v=gJnEWXaOqUc
-[pixels] img 1824,663,440,248 alt= src=https://i.ytimg.com/vi/gJnEWXaOqUc/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDac51mzL2pc3x1J2eTZFhBPUdr3w
-text 2187,869,61,28 "35:00"
-a 2280,663,248,120 href=/watch?v=gJnEWXaOqUc aria-label=Ces 10 enfants ont choqué tout le monde avec leur voix | Chasseur de talents 35 minutes
-text 2280,666,243,193 "Ces 10 enfants ont choqué tout le monde avec leur voix | Chasseur de talents"
-text 2280,791,212,28 "Chasseur de talents"
-text 2312,831,59,28 "195 k"
-text 2387,831,126,28 "il y a 2 sem."
+a 1824,663,456,248 href=/watch?v=V4F6LyM38MI&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D
+[pixels] img 1824,663,440,248 alt= src=https://i.ytimg.com/vi/V4F6LyM38MI/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDpT3qFfCufv5ybdSGpRXPEhkKq7A
+text 2187,869,61,28 "31:13"
+a 2280,663,246,40 href=/watch?v=V4F6LyM38MI&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D aria-label=1 But = Gagne 100€ 31 minutes
+text 2280,666,246,33 "1 But = Gagne 100€"
+text 2280,711,113,28 "Unchained"
+text 2312,751,59,28 "753 k"
+text 2387,751,79,28 "il y a 7 j"
 button 2448,831,80,80 aria-label=Autres actions
-a 1824,927,456,248 href=/watch?v=nEXsrSbh33Y
-[pixels] img 1824,927,440,248 alt= src=https://i.ytimg.com/vi/nEXsrSbh33Y/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAmtKxt7CANEC387_aYs7yjhy2bMg
-text 2201,1132,47,28 "4:37"
-a 2280,927,248,120 href=/watch?v=nEXsrSbh33Y aria-label=Erling Haaland réagit : les memes les plus DRÔLES sur Haaland ! 4 minutes et 37 secondes
-text 2280,930,237,153 "Erling Haaland réagit : les memes les plus DRÔLES sur Haaland !"
-text 2280,1055,155,28 "Erling Haaland"
-text 2312,1095,54,28 "12 M"
-text 2382,1095,126,28 "il y a 2 sem."
-button 2448,1094,80,80 aria-label=Autres actions
-a 1824,1190,456,248 href=/watch?v=1T3XVlGnDzs&pp=0gcJCfkLAYcqIYzv
-[pixels] img 1824,1190,440,248 alt= src=https://i.ytimg.com/vi/1T3XVlGnDzs/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDQxxueR4na26cTwHpVDCG20tGC4Q
-text 2201,1396,47,28 "9:56"
-a 2280,1190,248,120 href=/watch?v=1T3XVlGnDzs&pp=0gcJCfkLAYcqIYzv aria-label=Les meilleurs scènes du Loup dans Le Chat Potté 2 (Le meilleur méchant animé de la décennie) 🌀 4K 9 minutes et 56 secondes
-text 2280,1193,244,233 "Les meilleurs scènes du Loup dans Le Chat Potté 2 (Le meilleur méchant animé de la décennie) 🌀 4K"
-text 2280,1318,387,28 "Boxoffice Animation | Film Complets"
-text 2312,1358,59,28 "580 k"
-text 2387,1358,86,28 "il y a 2 a"
-button 2448,1358,80,80 aria-label=Autres actions
-a 1824,1454,456,248 href=/watch?v=NxNlfjVeTas&pp=ugUEEgJlbg%3D%3D
-[pixels] img 1824,1454,440,248 alt= src=https://i.ytimg.com/vi/NxNlfjVeTas/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDcRCj-sIG2zsgjiGRw1gQVHMECUg
-text 2187,1659,61,28 "24:58"
-a 2280,1454,248,120 href=/watch?v=NxNlfjVeTas&pp=ugUEEgJlbg%3D%3D aria-label=Strong Women vs. Skinny Men - (Who’s Stronger?) 24 minutes
-text 2280,1457,235,113 "Strong Women vs. Skinny Men - (Who’s Stronger?)"
-text 2280,1582,202,28 "Jesse James West"
-text 2312,1622,59,28 "2,6 M"
-text 2387,1622,101,28 "il y a 2 m."
-button 2448,1621,80,80 aria-label=Autres actions
-a 1824,1717,456,248 href=/watch?v=SLxlCyCDsHo
-[pixels] img 1824,1717,440,248 alt= src=https://i.ytimg.com/vi/SLxlCyCDsHo/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAQ0bF8SUhlkjqnhRVQiZAIVCrRvg
-text 2187,1923,61,28 "13:19"
-a 2280,1717,248,120 href=/watch?v=SLxlCyCDsHo aria-label=Sacha 'Borat' Baron Cohen Asks Melanie "What Her Price Is" | Friday Night With Jonathan Ross 13 minutes et 19 secondes
-text 2280,1720,249,233 "Sacha 'Borat' Baron Cohen Asks Melanie "What Her Price Is" | Friday Night With Jonathan Ross"
-text 2280,1845,348,28 "Friday Night With Jonathan Ross"
-text 2312,1885,54,28 "15 M"
-text 2382,1885,86,28 "il y a 6 a"
-button 2448,1885,80,80 aria-label=Autres actions
-a 1824,1981,456,248 href=/watch?v=ElEVobtxBUk&pp=0gcJCfkLAYcqIYzv
-text 2187,2186,61,28 "34:40"
-a 2280,1981,248,120 href=/watch?v=ElEVobtxBUk&pp=0gcJCfkLAYcqIYzv aria-label=L'effondrement du mouvement LGBTQ+ (décryptage) 34 minutes
-text 2280,1984,235,153 "L'effondrement du mouvement LGBTQ+ (décryptage)"
-text 2280,2109,83,28 "VA Plus"
-text 2312,2149,59,28 "395 k"
-text 2387,2149,126,28 "il y a 3 sem."
-button 2448,2148,80,80 aria-label=Autres actions
-a 1824,2244,456,287 href=/watch?v=Af6i6ChAVTw&pp=ugUEEgJmcg%3D%3D
-text 2187,2450,61,28 "57:51"
-a 2280,2244,248,120 href=/watch?v=Af6i6ChAVTw&pp=ugUEEgJmcg%3D%3D aria-label=Le dernier à quitter cette villa peut la garder 57 minutes
-text 2280,2247,243,113 "Le dernier à quitter cette villa peut la garder"
-text 2280,2372,90,28 "MrBeast"
-text 2312,2412,54,28 "74 M"
-text 2382,2412,79,28 "il y a 6 j"
-text 2288,2452,95,28 "Nouveau"
-text 2324,2488,88,28 "Doublée"
-button 2448,2451,80,80 aria-label=Autres actions
-a 1824,2547,456,248 href=/watch?v=PkU8FTafNQU
-text 2187,2753,61,28 "33:14"
-a 2280,2547,248,120 href=/watch?v=PkU8FTafNQU aria-label=S'introduire en douce dans le temple d'Epstein 33 minutes
-text 2280,2550,207,113 "S'introduire en douce dans le temple d'Epstein"
-text 2280,2675,169,28 "SideQuest Drew"
-text 2312,2715,54,28 "24 M"
-text 2382,2715,101,28 "il y a 4 m."
-button 2448,2715,80,80 aria-label=Autres actions
-a 1824,2811,456,251 href=/watch?v=e3rbMh49x0c&pp=ugUHEgVmci1GUg%3D%3D
-text 2187,3016,61,28 "12:54"
-a 2280,2811,248,120 href=/watch?v=e3rbMh49x0c&pp=ugUHEgVmci1GUg%3D%3D aria-label=Zoo de San Diego ou parc safari ? Lequel est le meilleur pour vous ? 12 minutes et 54 secondes
-text 2280,2814,227,193 "Zoo de San Diego ou parc safari ? Lequel est le meilleur pour vous ?"
-text 2280,2939,87,28 "Voyager"
-text 2312,2979,59,28 "160 k"
-text 2387,2979,86,28 "il y a 2 a"
-text 2324,3019,284,28 "Doublée automatiquement"
-button 2448,2982,80,80 aria-label=Autres actions
-a 1824,3078,456,248 href=/watch?v=y6nn4p5JOBM&pp=ugUHEgVmci1GUg%3D%3D
-text 2187,3283,61,28 "10:32"
-a 2280,3078,248,80 href=/watch?v=y6nn4p5JOBM&pp=ugUHEgVmci1GUg%3D%3D aria-label=Les Avoongers contre Star Wars 10 minutes et 32 secondes
-text 2280,3081,209,73 "Les Avoongers contre Star Wars"
-text 2280,3166,166,28 "Laugh Over Life"
-text 2312,3206,54,28 "10 M"
-text 2382,3206,86,28 "il y a 1 a"
+a 1824,927,456,251 href=/watch?v=ExKFqOvs1Dw&pp=ugUHEgVmci1GUg%3D%3D
+[pixels] img 1824,927,440,248 alt= src=https://i.ytimg.com/vi/ExKFqOvs1Dw/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBMLyTtTGSBpJaFAaI_0qI-Yk2y1w
+text 2201,1132,47,28 "6:04"
+a 2280,927,248,120 href=/watch?v=ExKFqOvs1Dw&pp=ugUHEgVmci1GUg%3D%3D aria-label=Un agent du FBI prend à son propre piège un policier irrespectueux. 6 minutes et 4 secondes
+text 2280,930,242,153 "Un agent du FBI prend à son propre piège un policier irrespectueux."
+text 2280,1055,236,28 "Bodycam Declassified"
+text 2312,1095,54,28 "13 M"
+text 2382,1095,86,28 "il y a 1 a"
+text 2324,1135,284,28 "Doublée automatiquement"
+button 2448,1098,80,80 aria-label=Autres actions
+a 1824,1194,456,248 href=/watch?v=Whh-JpLiIuc
+[pixels] img 1824,1194,440,248 alt= src=https://i.ytimg.com/vi/Whh-JpLiIuc/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLC1EeDBPoVnHnqg_gmsOkwWie_sxA
+text 2167,1399,81,28 "4:08:40"
+a 2280,1194,248,120 href=/watch?v=Whh-JpLiIuc aria-label=I Built a Two Story Forest House in 15 Days with No Money: Solo Bushcraft Survival (Full) 4 heures et 8 minutes
+text 2280,1197,243,233 "I Built a Two Story Forest House in 15 Days with No Money: Solo Bushcraft Survival (Full)"
+text 2280,1322,300,28 "Minh Anh Survival Bushcraft"
+text 2312,1362,59,28 "421 k"
+text 2387,1362,101,28 "il y a 2 m."
+button 2448,1361,80,80 aria-label=Autres actions
+a 1824,1457,456,248 href=/watch?v=FsbmEeYihuw&pp=ugUEEgJmctIHCQn5CwGHKiGM7w%3D%3D
+[pixels] img 1824,1457,440,248 alt= src=https://i.ytimg.com/vi/FsbmEeYihuw/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAR_V_tzEUBc-NYsni6UteUL-lPlg
+text 2187,1663,61,28 "36:10"
+a 2280,1457,248,80 href=/watch?v=FsbmEeYihuw&pp=ugUEEgJmctIHCQn5CwGHKiGM7w%3D%3D aria-label=Le Film Qui Punit Son Audience 36 minutes
+text 2280,1460,220,73 "Le Film Qui Punit Son Audience"
+text 2280,1545,98,28 "Laganne"
+text 2420,1545,117,28 "et Lasagne"
+text 2312,1585,59,28 "341 k"
+text 2387,1585,101,28 "il y a 1 m."
+button 2448,1625,80,80 aria-label=Autres actions
+a 1824,1721,456,248 href=/watch?v=idgtvU-amY0&pp=ugUEEgJmcg%3D%3D
+[pixels] img 1824,1721,440,248 alt= src=https://i.ytimg.com/vi/idgtvU-amY0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDOg2PDJKK2PAKUovRxnUu4oGRURg
+text 2187,1926,61,28 "28:30"
+a 2280,1721,248,120 href=/watch?v=idgtvU-amY0&pp=ugUEEgJmcg%3D%3D aria-label=Notre fille de 6 ans a pris le pouvoir à la maison 28 minutes
+text 2280,1724,242,113 "Notre fille de 6 ans a pris le pouvoir à la maison"
+text 2280,1849,66,28 "La Vie"
+text 2312,1889,54,28 "20 M"
+text 2382,1889,86,28 "il y a 7 a"
+button 2448,1888,80,80 aria-label=Autres actions
+a 1824,1984,456,248 href=/watch?v=rmcZpV8AWbg
+text 2201,2190,47,28 "7:23"
+a 2280,1984,248,120 href=/watch?v=rmcZpV8AWbg aria-label=History of Europe (1792-2025) Countryballs 7 minutes et 23 secondes
+text 2280,1987,224,113 "History of Europe (1792-2025) Countryballs"
+text 2280,2112,147,28 "VeneMapping"
+text 2312,2152,59,28 "1,1 M"
+text 2387,2152,86,28 "il y a 1 a"
+button 2448,2152,80,80 aria-label=Autres actions
+a 1824,2248,456,248 href=/watch?v=nSS84ZL5LAc&pp=ugUEEgJmcg%3D%3D
+text 2187,2453,61,28 "20:35"
+a 2280,2248,248,120 href=/watch?v=nSS84ZL5LAc&pp=ugUEEgJmcg%3D%3D aria-label=J’ai Ouvert un Magasin ILLEGAL pour devenir Riche ! (Scan Or Scam) 20 minutes
+text 2280,2251,254,153 "J’ai Ouvert un Magasin ILLEGAL pour devenir Riche ! (Scan Or Scam)"
+text 2280,2376,147,28 "StundZow Off"
+text 2312,2416,59,28 "400 k"
+text 2387,2416,79,28 "il y a 4 j"
+text 2288,2456,95,28 "Nouveau"
+button 2448,2415,80,80 aria-label=Autres actions
+a 1824,2511,456,248 href=/watch?v=rDVXWbrbqHs&pp=ugUHEgVmci1GUg%3D%3D
+text 2187,2717,61,28 "27:04"
+a 2280,2511,248,120 href=/watch?v=rDVXWbrbqHs&pp=ugUHEgVmci1GUg%3D%3D aria-label=Je piège TOINELAG en Faisant Rentrer QUE des Anomalies ! (Animal Hospital) 27 minutes
+text 2280,2514,252,153 "Je piège TOINELAG en Faisant Rentrer QUE des Anomalies ! (Animal Hospital)"
+text 2280,2639,202,28 "Unchained Gaming"
+text 2312,2679,59,28 "535 k"
+text 2387,2679,79,28 "il y a 3 j"
+text 2288,2719,95,28 "Nouveau"
+button 2448,2679,80,80 aria-label=Autres actions
+a 1824,2775,456,248 href=/watch?v=5_Lgm8-lgb0&pp=ugUEEgJmcg%3D%3D
+text 2201,2980,47,28 "9:36"
+a 2280,2775,248,120 href=/watch?v=5_Lgm8-lgb0&pp=ugUEEgJmcg%3D%3D aria-label=SARAH KNAFO détruit SAINT-CRICQ sur le DEVOIR de NEUTRALITÉ 9 minutes et 36 secondes
+text 2280,2778,197,193 "SARAH KNAFO détruit SAINT-CRICQ sur le DEVOIR de NEUTRALITÉ"
+text 2280,2903,54,28 "L'IDR"
+text 2312,2943,45,28 "38 k"
+text 2373,2943,100,28 "il y a 19 h"
+text 2288,2983,95,28 "Nouveau"
+button 2448,2942,80,80 aria-label=Autres actions
+a 1824,3038,456,251 href=/watch?v=mdCQLrwRXrY&pp=ugUEEgJmcg%3D%3D
+text 2187,3244,61,28 "12:01"
+a 2280,3038,248,120 href=/watch?v=mdCQLrwRXrY&pp=ugUEEgJmcg%3D%3D aria-label=Un Drone Sous-Marin est Entré dans le Titanic — Les Images Sont Terrifiantes 12 minutes et 1 seconde
+text 2280,3041,238,193 "Un Drone Sous-Marin est Entré dans le Titanic — Les Images Sont Terrifiantes"
+text 2280,3166,180,28 "Fréquence Vérité"
+text 2312,3206,45,28 "62 k"
+text 2373,3206,101,28 "il y a 1 m."
 text 2324,3246,284,28 "Doublée automatiquement"
-button 2448,3245,80,80 aria-label=Autres actions
-a 1824,3341,456,251 href=/watch?v=BRESQ8NX-us&pp=ugUHEgVmci1GUg%3D%3D
-text 2187,3547,61,28 "16:52"
-a 2280,3341,248,120 href=/watch?v=BRESQ8NX-us&pp=ugUHEgVmci1GUg%3D%3D aria-label=L'IA vient-elle de changer le cinéma pour toujours ? 16 minutes
-text 2280,3344,237,113 "L'IA vient-elle de changer le cinéma pour toujours ?"
-text 2280,3469,138,28 "ErikDoesVFX"
-text 2312,3509,59,28 "4,1 M"
-text 2387,3509,79,28 "il y a 7 j"
-text 2324,3549,284,28 "Doublée automatiquement"
-button 2448,3512,80,80 aria-label=Autres actions
-a 1824,3608,456,248 href=/watch?v=j5g28rRQgiA&pp=ugUEEgJmcg%3D%3D
-text 2187,3814,61,28 "21:47"
-a 2280,3608,248,120 href=/watch?v=j5g28rRQgiA&pp=ugUEEgJmcg%3D%3D aria-label=J’ai Triché avec un AUTO-PAINT sur Meccha Chameleon ! 21 minutes
-text 2280,3611,238,153 "J’ai Triché avec un AUTO-PAINT sur Meccha Chameleon !"
-text 2280,3736,147,28 "StundZow Off"
-text 2469,3736,130,28 "et 4 autre(s)"
-text 2312,3776,59,28 "713 k"
-text 2387,3776,126,28 "il y a 2 sem."
-button 2448,3776,80,80 aria-label=Autres actions
-a 1824,3872,456,251 href=/watch?v=UdCaPwFJrO4&pp=ugUEEgJmcg%3D%3D
-text 2187,4077,61,28 "35:03"
-a 2280,3872,248,120 href=/watch?v=UdCaPwFJrO4&pp=ugUEEgJmcg%3D%3D aria-label=L'empire que Squeezie a monté dans l'ombre (et qui rapporte des millions) 35 minutes
-text 2280,3875,253,193 "L'empire que Squeezie a monté dans l'ombre (et qui rapporte des millions)"
-text 2280,4000,77,28 "L'agent"
-text 2312,4040,59,28 "140 k"
-text 2387,4040,101,28 "il y a 1 m."
-text 2324,4080,284,28 "Doublée automatiquement"
-button 2448,4043,80,80 aria-label=Autres actions
-a 1824,4139,456,248 href=/watch?v=X3716fs-VVw&pp=ugUEEgJmcg%3D%3D
-text 2167,4344,81,28 "1:32:08"
-a 2280,4139,248,120 href=/watch?v=X3716fs-VVw&pp=ugUEEgJmcg%3D%3D aria-label=Seule avec 5 enfants, elle n'arrive plus à se faire respecter 👀 1 heure et 32 minutes
-text 2280,4142,234,153 "Seule avec 5 enfants, elle n'arrive plus à se faire respecter 👀"
-text 2280,4267,223,28 "REPLAY TV GRATUIT"
-text 2312,4307,45,28 "59 k"
-text 2373,4307,100,28 "il y a 17 h"
-text 2288,4347,95,28 "Nouveau"
-button 2448,4306,80,80 aria-label=Autres actions
-a 1824,4402,456,248 href=/watch?v=OjFUJEoq8k0
-text 2201,4608,47,28 "3:43"
-a 2280,4402,248,120 href=/watch?v=OjFUJEoq8k0 aria-label=Trying Not to Laugh When Your Friend Is Crying - Key & Peele 3 minutes et 43 secondes
-text 2280,4405,254,153 "Trying Not to Laugh When Your Friend Is Crying - Key & Peele"
-text 2280,4530,125,28 "Key & Peele"
-text 2312,4570,54,28 "16 M"
-text 2382,4570,86,28 "il y a 6 a"
-button 2448,4570,80,80 aria-label=Autres actions
-a 1824,4666,456,248 href=/watch?v=pqyPog4CAsk&pp=ugUEEgJmcg%3D%3D
-text 2187,4871,61,28 "13:51"
-a 2280,4666,248,120 href=/watch?v=pqyPog4CAsk&pp=ugUEEgJmcg%3D%3D aria-label=Les DESIGNS les plus DRÔLES au Monde 13 minutes et 51 secondes
-text 2280,4669,217,113 "Les DESIGNS les plus DRÔLES au Monde"
-text 2280,4794,138,28 "L'étoile Noire"
-text 2312,4834,45,28 "73 k"
-text 2373,4834,79,28 "il y a 2 j"
-text 2288,4874,95,28 "Nouveau"
-button 2448,4833,80,80 aria-label=Autres actions
-a 1824,4929,456,248 href=/watch?v=QP2fmWB0zNg
-text 2187,5135,61,28 "47:56"
-a 2280,4929,248,120 href=/watch?v=QP2fmWB0zNg aria-label=Trahi par ma famille… Ce que mes parents n’ont PAS dit dans leur vidéo ! 47 minutes
-text 2280,4932,242,193 "Trahi par ma famille… Ce que mes parents n’ont PAS dit dans leur vidéo !"
-text 2280,5057,138,28 "Néo The One"
-text 2312,5097,59,28 "1,4 M"
-text 2387,5097,86,28 "il y a 1 a"
-button 2448,5097,80,80 aria-label=Autres actions
-a 1824,5193,456,248 href=/watch?v=C3GM18M3rss
-text 2201,5398,47,28 "4:29"
-a 2280,5193,248,120 href=/watch?v=C3GM18M3rss aria-label=UNCUT: Saddam Hussain's Live Reaction to His Death Sentence. 4 minutes et 29 secondes
-text 2280,5196,217,153 "UNCUT: Saddam Hussain's Live Reaction to His Death Sentence."
-text 2280,5321,157,28 "History City 4K"
-text 2312,5361,54,28 "12 M"
-text 2382,5361,86,28 "il y a 2 a"
-button 2448,5360,80,80 aria-label=Autres actions
+button 2448,3209,80,80 aria-label=Autres actions
+a 1824,3305,456,248 href=/watch?v=bRxjG0xyNmE
+text 2187,3511,61,28 "22:53"
+a 2280,3305,248,120 href=/watch?v=bRxjG0xyNmE aria-label=When Animals Think No One’s Watching 😂 Backyard Edition 22 minutes
+text 2280,3308,209,153 "When Animals Think No One’s Watching 😂 Backyard Edition"
+text 2280,3433,80,28 "Novella"
+text 2312,3473,59,28 "577 k"
+text 2387,3473,101,28 "il y a 4 m."
+button 2448,3473,80,80 aria-label=Autres actions
+a 1824,3569,456,248 href=/watch?v=KqswnbWDs_U
+text 2201,3774,47,28 "8:06"
+a 2280,3569,248,120 href=/watch?v=KqswnbWDs_U aria-label=Pato Donald | A Face do Führer [1943] 8 minutes et 6 secondes
+text 2280,3572,199,113 "Pato Donald | A Face do Führer [1943]"
+text 2280,3697,216,28 "PLAYTRONIC ® TV+"
+text 2312,3737,59,28 "498 k"
+text 2387,3737,101,28 "il y a 1 m."
+button 2448,3736,80,80 aria-label=Autres actions
+a 1824,3832,456,251 href=/watch?v=apQqpqi0Jh8&pp=ugUHEgVmci1GUg%3D%3D
+text 2187,4038,61,28 "20:36"
+a 2280,3832,248,120 href=/watch?v=apQqpqi0Jh8&pp=ugUHEgVmci1GUg%3D%3D aria-label=La police retrouve un enfant de 4 ans errant sans défense sur l'autoroute à 4 heures du matin. 20 minutes
+text 2280,3835,238,233 "La police retrouve un enfant de 4 ans errant sans défense sur l'autoroute à 4 heures du matin."
+text 2280,3960,110,28 "Unpopular"
+text 2312,4000,59,28 "1,7 M"
+text 2387,4000,101,28 "il y a 5 m."
+text 2324,4040,284,28 "Doublée automatiquement"
+button 2448,4003,80,80 aria-label=Autres actions
+a 1824,4099,456,248 href=/watch?v=7oju0o1ViJw&pp=ugUEEgJmcg%3D%3D
+text 2187,4305,61,28 "20:58"
+a 2280,4099,248,120 href=/watch?v=7oju0o1ViJw&pp=ugUEEgJmcg%3D%3D aria-label=Je COACH KEVKO sur DRESS TO IMPRESS ! 20 minutes
+text 2280,4102,233,113 "Je COACH KEVKO sur DRESS TO IMPRESS !"
+text 2280,4227,239,28 "ChocolatAndVanillah"
+text 2312,4267,59,28 "238 k"
+text 2387,4267,79,28 "il y a 3 j"
+text 2288,4307,95,28 "Nouveau"
+button 2448,4267,80,80 aria-label=Autres actions
+a 1824,4363,456,248 href=/watch?v=ePr-JNdUxbE
+text 2201,4568,47,28 "8:30"
+a 2280,4363,248,120 href=/watch?v=ePr-JNdUxbE aria-label=🤯 Mélanie Thierry très agacée par les questions de Yann Moix... 8 minutes et 30 secondes
+text 2280,4366,244,153 "🤯 Mélanie Thierry très agacée par les questions de Yann Moix..."
+text 2280,4491,229,28 "On n'est pas couché"
+text 2312,4531,59,28 "915 k"
+text 2387,4531,86,28 "il y a 1 a"
+button 2448,4530,80,80 aria-label=Autres actions
+a 1824,4626,456,251 href=/watch?v=8qqz1ejh3lI&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D
+text 2187,4832,61,28 "13:27"
+a 2280,4626,248,120 href=/watch?v=8qqz1ejh3lI&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D aria-label=7 sons de l'espace qui devraient vous terrifier. 13 minutes et 27 secondes
+text 2280,4629,236,113 "7 sons de l'espace qui devraient vous terrifier."
+text 2280,4754,182,28 "AlmondTheArtist"
+text 2312,4794,59,28 "1,9 M"
+text 2387,4794,101,28 "il y a 3 m."
+text 2324,4834,284,28 "Doublée automatiquement"
+button 2448,4797,80,80 aria-label=Autres actions
+a 1824,4893,456,248 href=/watch?v=QP2fmWB0zNg
+text 2187,5099,61,28 "47:56"
+a 2280,4893,248,120 href=/watch?v=QP2fmWB0zNg aria-label=Trahi par ma famille… Ce que mes parents n’ont PAS dit dans leur vidéo ! 47 minutes
+text 2280,4896,242,193 "Trahi par ma famille… Ce que mes parents n’ont PAS dit dans leur vidéo !"
+text 2280,5021,138,28 "Néo The One"
+text 2312,5061,59,28 "1,4 M"
+text 2387,5061,86,28 "il y a 1 a"
+button 2448,5061,80,80 aria-label=Autres actions
+a 1824,5157,456,248 href=/watch?v=hPMjkBDwh80&pp=0gcJCfkLAYcqIYzv
+text 2187,5362,61,28 "13:38"
+a 2280,5157,248,120 href=/watch?v=hPMjkBDwh80&pp=0gcJCfkLAYcqIYzv aria-label=J’AI TROUVÉ MA PROPRE ANOMALIE SUR ANIMAL HOSPITAL !! 13 minutes et 38 secondes
+text 2280,5160,250,193 "J’AI TROUVÉ MA PROPRE ANOMALIE SUR ANIMAL HOSPITAL !!"
+text 2280,5285,65,28 "Kevko"
+text 2312,5325,59,28 "157 k"
+text 2387,5325,79,28 "il y a 1 j"
+text 2288,5365,95,28 "Nouveau"
+button 2448,5324,80,80 aria-label=Autres actions
 text 830,71,254,33 "Une filiale de Google"
 button 1492,48,132,80 aria-label=Langue : French
 text 1572,71,20,33 "fr"
@@ -253,7 +255,7 @@ button 1144,1572,216,80 aria-label=Refuser l'utilisation de cookies et d'autres 
 text 1176,1595,152,33 "Tout refuser"
 button 1400,1572,236,80 aria-label=Accepter l'utilisation de cookies et d'autres données aux fins décrites
 text 1432,1595,172,33 "Tout accepter"
-a 1677,1572,239,80 href=https://consent.youtube.com/d?continue=https://www.youtube.com/watch%3Fv%3DjNQXAC9IVRw%26cbrd%3D1&gl=FR&m=0&pc=yt&uxe=bip&cm=2&hl=fr&src=2&escs=AZ-r6Z4j7NQjnIXpNabPkeuu4x7_cN8uOW1g1unF-Ve6aenLiWNmRygcLv4PdgOCBpeL0BmLyEVX-nOWEpCrCRjalNW4nGFUuj_J aria-label=Plus d'options
+a 1677,1572,239,80 href=https://consent.youtube.com/d?continue=https://www.youtube.com/watch%3Fv%3DjNQXAC9IVRw%26cbrd%3D1&gl=FR&m=0&pc=yt&uxe=bip&cm=2&hl=fr&src=2&escs=AZ-r6Z550ZJIXRZRRhY3bQPcuRusgqBAELuD6W2prFVbsflt_tAYlbkRVkDQox9dAUbMwh_CX02s2QVUFukXNZlVUCRzcnWwNCbO aria-label=Plus d'options
 text 1709,1595,175,33 "Plus d'options"
 a 628,1708,305,40 href=https://policies.google.com/privacy?hl=fr
 text 628,1711,305,33 "Règles de confidentialité"

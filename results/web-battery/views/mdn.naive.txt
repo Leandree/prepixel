@@ -84,7 +84,7 @@ a 2084,906,357,64 href=#browser_compatibility
 text 2100,918,325,39 "Browser compatibility"
 a 2084,970,160,64 href=#see_also
 text 2100,982,128,39 "See also"
-a 2082,1084,352,365 href=/pong/click?code=aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2NsaWNrL3gvR1RORDQyN1lDWUFEQzIzTENZQkxZS1FVRlRTSVZLM0xDQTdEVlozSkNBQUQ1MlFNRlRBRFAySktDV1NENUszTUNBN0Q2S1FOQ0VZRDVLUUVGVFNEVks3S0M2U0lFMkpVRlRCRFZLM0VISk5DTFNJWg%3D%3D.GNDFxcRsGMRQwtcXYLNU6p4tnW0z3iaAxRJ33KV6S34%3D&version=2
+a 2082,1084,352,365 href=/pong/click?code=aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2NsaWNrL3gvR1RORDQyN1lDWUFEVDJKTkNFQUxZS1FVRlRTSVZLSk5DVkJEVlozSkNBQUQ1MlFJQ0s3REU1M0tDNllJVjJKTkNLWUlLS0pVQ0FZSVBLUTdDV1lJNDJRTUhFWUk1NTNOQ0FBSTQySkVDVE5DWUJaNTJL.3tvaxqNGDfel17w7xoyPyfjqcicetPj0l8FLcBXoVB8%3D&version=2
 [pixels] img 2082,1084,352,352 src=/pimg/aHR0cHM6Ly9zdGF0aWM0LmJ1eXNlbGxhZHMubmV0L3V1LzIvMTc2NDc2LzE3ODM2MTIyMzUtb3Rhcmktc2lkZWJhci5wbmc%3D.9LtXOhZk35YI%2BduXCnCdWycPjP9iHXSpt6Y1BTDwOF4%3D alt=Otari
 text 2114,1437,240,71 "Control Your LLM Infrastructure"
 text 2114,1516,282,89 "Meet Otari, the open source LLM Control Plane built by Mozilla AI."
@@ -298,7 +298,7 @@ text 602,7501,91,39 "HTML"
 text 602,7557,333,39 "# the-canvas-element"
 a 576,7656,602,77 href=#browser_compatibility
 text 576,7656,602,77 "Browser compatibility"
-a 1117,7741,561,31 href=https://github.com/mdn/browser-compat-data/issues/new?mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EMDN+page+report+details%3C%2Fsummary%3E%0A%0A*+Query%3A+%60html.elements.canvas%60%0A*+Report+started%3A+2026-08-15T09%3A56%3A10.234Z%0A%0A%3C%2Fdetails%3E&title=html.elements.canvas+-+%3CSUMMARIZE+THE+PROBLEM%3E&template=data-problem.yml
+a 1117,7741,561,31 href=https://github.com/mdn/browser-compat-data/issues/new?mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EMDN+page+report+details%3C%2Fsummary%3E%0A%0A*+Query%3A+%60html.elements.canvas%60%0A*+Report+started%3A+2026-08-15T11%3A47%3A16.292Z%0A%0A%3C%2Fdetails%3E&title=html.elements.canvas+-+%3CSUMMARIZE+THE+PROBLEM%3E&template=data-problem.yml
 text 1117,7741,532,31 "Report problems with this compatibility data"
 text 1679,7741,29,31 "•"
 a 1707,7741,277,31 href=https://github.com/mdn/browser-compat-data/tree/main/html/elements/canvas.json
@@ -530,7 +530,7 @@ text 80,3277,365,40 ".createImageBitmap()"
 a 80,3345,400,112 href=/en-US/docs/Web/API/WorkerGlobalScope/createImageBitmap
 text 80,3357,310,40 "WorkerGlobalScope"
 text 80,3405,365,40 ".createImageBitmap()"
-a 64,9955,2272,180 href=/pong/click?code=aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2NsaWNrL3gvR1RORDQyN1lDWUFEQ0tRTUM2U0xZS1FVRlRTSVZLUUpDVEFJTFozSkNBQUQ1MlFNRjZBRDRLN0tGNllJVjI3V0NLQUlDNVFOQ0FTSTUyNzdGNjdERTIzS0M2U0lFMkpVRlRCRFZLM0VISk5DTFNJWg%3D%3D.slcOFm4EWKiBO7YC8JHG1gftRWmiNUEsLCN%2FyJQpYww%3D&version=2
+a 64,9955,2272,180 href=/pong/click?code=aHR0cHM6Ly9zcnYuYnV5c2VsbGFkcy5jb20vYWRzL2NsaWNrL3gvR1RORDQyN1lDWUFENEszRUNFQkxZS1FVRlRTSVZLUVlDVkFJTFozSkNBQUQ1MlFJQ1ZZSUwyN0tDNjdERUszTkNZWUlQSzc3QzZBSTU1UUxDVFNENTI3TkhFWUk1NTNOQ0FBSTQySkVDVE5DWUJaNTJL.MdqXrTjz2qC%2FkF6xdr9xRMSe5Rk8ot48BK3otsCXn4U%3D&version=2
 [pixels] img 472,9955,1456,180 src=/pimg/aHR0cHM6Ly9zdGF0aWM0LmJ1eXNlbGxhZHMubmV0L3V1LzIvMTc2NDc2LzE3ODUzNjIzMTUtTUROXy1fQUlSZXZvbHV0aW9uLUxpZ2h0LTE0NTZ4MTgwLnBuZw%3D%3D.BK%2FIL%2FaUclOOUVEuMFFgrNIkWicohSbhuOs3Exz6de4%3D alt=MongoDB
 a 2440,9963,48,34 href=/en-US/advertising
 text 2450,9968,28,24 "AD"

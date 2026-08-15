@@ -253,30 +253,131 @@ text 281,5622,1088,53 "The Graphics Pipeline - Department of Computer Science"
 text 220,5691,635,35 "Learn how to render 3D scenes using object-order"
 text 855,5691,112,35 "graphics"
 text 220,5691,1287,119 ", a standard sequence of transformations, rasterization, and hidden surface removal. See examples, algorithms, and code for perspective viewing, triangle rasterization, and clipping."
-button 260,5902,225,37
-text 300,5903,173,35 "Search Assist"
-button 1260,5902,32,32 aria-label=Copy
-button 1324,5902,32,32 aria-label=Share
-button 1388,5902,32,32 type=button aria-label=Learn More About Assist
-button 1452,5902,32,32 aria-label=Paramètres d'Assist
-text 260,5983,62,40 "The"
-text 322,5983,253,40 "graphics pipeline"
-text 260,5983,1198,188 "is a series of procedures that transforms a three-dimensional (3D) scene into a two-dimensional (2D) image for display on a screen. It typically includes stages such as application, geometry processing, and rasterization, which work together to render images efficiently."
-a 873,6128,178,49 href=https://en.wikipedia.org/wiki/Graphics_pipeline
-[pixels] img 881,6137,32,32 src=/assets/icons/favicons/wikipedia.png
-text 919,6136,116,33 "Wikipedia"
-a 1059,6128,373,49 href=https://graphicscompendium.com/intro/01-graphics-pipeline
-[pixels] img 1067,6137,32,32 src=//external-content.duckduckgo.com/ip3/graphicscompendium.com.ico
-text 1105,6136,311,33 "graphicscompendium.com"
-button 672,6201,311,72 aria-label=Plus
-text 779,6219,55,35 "Plus"
-button 1000,6201,72,72 aria-label=Expand Duck.ai chat input
-text 236,6328,732,66 "Généré automatiquement sur la base des sources répertoriées. Peut contenir des inexactitudes."
-text 1103,6327,293,33 "Cela vous a-t-il été utile ?"
-button 1404,6321,48,48 type=button aria-label=Positive feedback
-button 1460,6321,48,48 type=button aria-label=Negative feedback
-button 220,6481,1304,88 type=button id=more-results
-text 747,6505,251,39 "Plus De Résultats"
+a 220,5862,530,49 href=/?q=graphics+pipeline&ia=videos&iax=videos
+text 268,5862,195,48 "Vidéos sur :"
+text 463,5862,288,48 "graphics pipeline"
+a 222,5937,377,512 href=https://www.youtube.com/watch?v=QvcGeySBAVc
+[pixels] img 222,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOVP.-claYbrvsHYy5KaGqypcygEsDh%3Fpid%3DApi&f=1 alt=
+text 531,6129,44,30 "6:31"
+text 242,6201,325,163 "GPU Graphics Pipeline Explained with 3D Animation | Vertex to Fragment Shader"
+text 242,6363,48,30 "4mo"
+text 310,6363,78,30 "51 vues"
+[pixels] img 242,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 282,6400,104,35 "YouTube"
+button 543,6393,48,48 type=button aria-label=menu
+a 627,5937,377,512 href=https://www.youtube.com/watch?v=27Am6QaH_Hc
+[pixels] img 627,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOVP.L48H6fwkftiUvWvIBdPNzgEsDh%3Fpid%3DApi&f=1 alt=
+text 924,6129,57,30 "17:38"
+text 647,6201,321,163 "The Graphics Pipeline and Rendering Types - Game Optimization - Episode 2"
+text 647,6363,35,30 "1an"
+text 702,6363,93,30 "18K vues"
+[pixels] img 647,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 687,6400,104,35 "YouTube"
+button 949,6393,48,48 type=button aria-label=menu
+a 1033,5937,377,512 href=https://www.youtube.com/watch?v=QEiWsz7cmnw
+[pixels] img 1033,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOVP.0Lv07K79KkICRPk0dSMgpgEsDh%3Fpid%3DApi&f=1 alt=
+text 1321,6129,65,30 "48:06"
+text 1053,6201,329,163 "Module 3.1: The Graphics Pipeline (Part 1) | Graphics & Visual Computing (2026)"
+text 1053,6363,47,30 "5mo"
+text 1120,6363,93,30 "199 vues"
+[pixels] img 1053,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 1093,6400,104,35 "YouTube"
+button 1354,6393,48,48 type=button aria-label=menu
+a 1438,5937,377,512 href=https://www.youtube.com/watch?v=rRQiFwFzFJM
+[pixels] img 1438,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOVP.G_GQFiqMns72_ooXe7ybagEsDh%3Fpid%3DApi&f=1 alt=
+text 1729,6129,63,30 "53:59"
+text 1458,6201,329,163 "Module 3.2: The Graphics Pipeline (Part 2) | Graphics & Visual Computing (2026)"
+text 1458,6363,47,30 "5mo"
+text 1525,6363,96,30 "263 vues"
+[pixels] img 1458,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 1498,6400,104,35 "YouTube"
+button 1759,6393,48,48 type=button aria-label=menu
+a 1843,5937,377,512 href=https://www.youtube.com/watch?v=CiUfIMnWGX0
+[pixels] img 1843,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOVP.cl2RFZEtU1lg2EJF24DXFwEsDh%3Fpid%3DApi&f=1 alt=
+text 2146,6129,51,30 "11:22"
+text 1863,6201,333,163 "Every GPU Rendering Pipeline Explained — From Vertices to Pixels and Ray Traced Frames"
+text 1863,6363,47,30 "3mo"
+text 1931,6363,90,30 "132 vues"
+[pixels] img 1863,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 1903,6400,104,35 "YouTube"
+button 2165,6393,48,48 type=button aria-label=menu
+a 2249,5937,377,512 href=https://www.youtube.com/watch?v=bKG9B0Fj6ME
+[pixels] img 2249,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOVP.weg6QQHec3O6NX9fGCkziAHgFo%3Fpid%3DApi&f=1 alt=
+text 2545,6129,57,30 "15:32"
+text 2269,6201,302,122 "How GPUs Turn Math Into Pixels | Game Engine EP2"
+text 2269,6363,47,30 "5mo"
+text 2336,6363,85,30 "8K vues"
+[pixels] img 2269,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 2309,6400,104,35 "YouTube"
+button 2570,6393,48,48 type=button aria-label=menu
+a 2654,5937,377,512 href=https://www.youtube.com/watch?v=UK31AUxfBZ4
+[pixels] img 2654,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOVP.x9bv3v6GJ8SqD0TP7B0jtwHgFo%3Fpid%3DApi&f=1 alt=
+text 2928,6129,79,30 "1:03:32"
+text 2674,6201,335,205 "After the Tutorial: Where to Continue your Graphics Programming Journey - Mike Shah GPC 2025"
+text 2674,6363,42,30 "1mo"
+text 2736,6363,98,30 "304 vues"
+[pixels] img 2674,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 2714,6400,104,35 "YouTube"
+button 2975,6393,48,48 type=button aria-label=menu
+a 3059,5937,377,512 href=https://www.youtube.com/watch?v=CVZ6UZy074Y
+[pixels] img 3059,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOVP.kI0T4eXipCDpeMoo4TruyAHgFo%3Fpid%3DApi&f=1 alt=
+text 3349,6129,64,30 "33:05"
+text 3079,6201,316,81 "2D Viewing Pipeline in Computer Graphics"
+text 3079,6363,31,30 "27j"
+text 3130,6363,83,30 "29 vues"
+[pixels] img 3079,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 3119,6400,104,35 "YouTube"
+button 3381,6393,48,48 type=button aria-label=menu
+a 3465,5937,377,512 href=https://www.youtube.com/watch?v=DC9FBRQKNck
+[pixels] img 3465,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOVP.kdVZf4JISDLEZ3TYXcY8NwHgFo%3Fpid%3DApi&f=1 alt=
+text 3740,6129,78,30 "2:12:46"
+text 3485,6201,337,163 "Learn Modern Vulkan in 2 Hours (Dynamic Rendering, No Render Passes!)"
+text 3485,6363,47,30 "2mo"
+text 3551,6363,96,30 "37K vues"
+[pixels] img 3485,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 3525,6400,104,35 "YouTube"
+button 3786,6393,48,48 type=button aria-label=menu
+a 3870,5937,377,512 href=https://www.youtube.com/watch?v=soT9cMh4SfI
+[pixels] img 3870,5937,377,244 src=//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOVP.xWMVFqxkg_kycDlCu5nV_AEsDh%3Fpid%3DApi&f=1 alt=
+text 4174,6129,50,30 "8:38"
+text 3890,6201,316,122 "CG Pipeline: The Most Important Skill for 3D Artists"
+text 3890,6363,47,30 "2mo"
+text 3956,6363,91,30 "107 vues"
+[pixels] img 3890,6401,32,32 src=/assets/icons/favicons/youtube.png alt=
+text 3930,6400,104,35 "YouTube"
+button 4191,6393,48,48 type=button aria-label=menu
+a 4373,6241,182,37
+text 4373,6242,182,35 "Plus de vidéos"
+button 1488,6149,88,88 type=button aria-label=Next page
+a 693,6475,358,68 href=/?q=graphics+pipeline&ia=videos&iax=videos
+text 759,6492,186,35 "Plus de vidéos"
+text 1103,6566,293,33 "Cela vous a-t-il été utile ?"
+button 1404,6559,48,48 type=button aria-label=Positive feedback
+button 1460,6559,48,48 type=button aria-label=Negative feedback
+button 260,6682,225,37
+text 300,6683,173,35 "Search Assist"
+button 1260,6682,32,32 aria-label=Copy
+button 1324,6682,32,32 aria-label=Share
+button 1388,6682,32,32 type=button aria-label=Learn More About Assist
+button 1452,6682,32,32 aria-label=Paramètres d'Assist
+text 260,6763,62,40 "The"
+text 322,6763,253,40 "graphics pipeline"
+text 260,6763,1198,188 "is a series of procedures that transforms a three-dimensional (3D) scene into a two-dimensional (2D) image for display on a screen. It typically includes stages such as application, geometry processing, and rasterization, which work together to render images efficiently."
+a 873,6908,178,49 href=https://en.wikipedia.org/wiki/Graphics_pipeline
+[pixels] img 881,6917,32,32 src=/assets/icons/favicons/wikipedia.png
+text 919,6916,116,33 "Wikipedia"
+a 1059,6908,373,49 href=https://graphicscompendium.com/intro/01-graphics-pipeline
+[pixels] img 1067,6917,32,32 src=//external-content.duckduckgo.com/ip3/graphicscompendium.com.ico
+text 1105,6916,311,33 "graphicscompendium.com"
+button 672,6981,311,72 aria-label=Plus
+text 779,6999,55,35 "Plus"
+button 1000,6981,72,72 aria-label=Expand Duck.ai chat input
+text 236,7108,732,66 "Généré automatiquement sur la base des sources répertoriées. Peut contenir des inexactitudes."
+text 1103,7107,293,33 "Cela vous a-t-il été utile ?"
+button 1404,7101,48,48 type=button aria-label=Positive feedback
+button 1460,7101,48,48 type=button aria-label=Negative feedback
+button 220,7261,1304,88 type=button id=more-results
+text 747,7285,251,39 "Plus De Résultats"
 text 1662,327,399,48 "Recherches associées à"
 text 2061,327,288,48 "graphics pipeline"
 a 1664,406,852,80 href=?q=graphics%20pipeline%20windows%2011&origin=related
@@ -354,31 +455,31 @@ a 2610,2167,475,46 href=/press
 text 2610,2172,126,35 "Kit Presse"
 a 2610,2213,475,46 href=/duckduckgo-help-pages/company/advertise-on-duckduckgo-search
 text 2610,2218,431,35 "Faire de la publicité sur Recherche"
-text 414,6728,432,40 "Installer notre navigateur Mac"
-text 414,6775,685,72 "Protégez vos données lors de vos recherches, de votre navigation et de votre utilisation de l'IA."
-a 1214,6756,244,64 href=https://duckduckgo.com/mac?origin=funnel_browser_searchresults__footercard
-text 1286,6771,148,34 "Télécharger"
-text 1700,6704,177,35 "En savoir plus"
-a 1700,6757,151,35 href=https://duckduckgo.com/updates
-text 1700,6757,151,35 "Nouveautés"
-a 1700,6798,293,35 href=https://duckduckgo.com/app
-text 1700,6798,293,35 "À propos du navigateur"
-a 1700,6839,341,35 href=https://duckduckgo.com/compare-privacy
-text 1700,6839,341,35 "Comparer la confidentialité"
-a 1700,6880,161,35 href=https://duckduckgo.com/duckduckgo-help-pages/
-text 1700,6880,161,35 "Pages d'aide"
-text 2153,6704,177,35 "En savoir plus"
-a 2153,6757,162,35 href=https://duckduckgo.com/pro
-text 2153,6757,162,35 "Abonnement"
-a 2153,6798,282,35 href=https://duckduckgo.com/email
-text 2153,6798,282,35 "Protection des e-mails"
-a 2153,6839,104,35 href=https://insideduckduckgo.substack.com/?showWelcome=true
-text 2153,6839,104,35 "Podcast"
-text 2257,6839,30,35 "&"
-a 2287,6839,137,35 href=https://duckduckgo.com/newsletter
-text 2287,6839,137,35 "Newsletter"
-a 2153,6880,184,35 href=https://duckduckgo.com/collaborations
-text 2153,6880,184,35 "Collaborations"
+text 414,7509,653,40 "Présentation de DuckDuckGo Collaborations"
+text 414,7555,810,72 "Des produits conçus avec soin pour ceux qui tiennent vraiment à leur confidentialité."
+a 1298,7537,160,64 href=https://duckduckgo.com/collaborations
+text 1324,7552,108,34 "Voir plus"
+text 1700,7484,177,35 "En savoir plus"
+a 1700,7537,151,35 href=https://duckduckgo.com/updates
+text 1700,7537,151,35 "Nouveautés"
+a 1700,7578,293,35 href=https://duckduckgo.com/app
+text 1700,7578,293,35 "À propos du navigateur"
+a 1700,7619,341,35 href=https://duckduckgo.com/compare-privacy
+text 1700,7619,341,35 "Comparer la confidentialité"
+a 1700,7660,161,35 href=https://duckduckgo.com/duckduckgo-help-pages/
+text 1700,7660,161,35 "Pages d'aide"
+text 2153,7484,177,35 "En savoir plus"
+a 2153,7537,162,35 href=https://duckduckgo.com/pro
+text 2153,7537,162,35 "Abonnement"
+a 2153,7578,282,35 href=https://duckduckgo.com/email
+text 2153,7578,282,35 "Protection des e-mails"
+a 2153,7619,104,35 href=https://insideduckduckgo.substack.com/?showWelcome=true
+text 2153,7619,104,35 "Podcast"
+text 2257,7619,30,35 "&"
+a 2287,7619,137,35 href=https://duckduckgo.com/newsletter
+text 2287,7619,137,35 "Newsletter"
+a 2153,7660,184,35 href=https://duckduckgo.com/collaborations
+text 2153,7660,184,35 "Collaborations"
 button 2054,1496,482,80 type=button
 text 2096,1516,398,39 "Partagez vos commentaires"
 [pixels] img 1946,158,64,64 src=<data-url>

@@ -24,12 +24,14 @@ text 162,745,49,16 "Refuser" [occluded]
 a 228,746,86,16 id=sp-cc-customize
 text 228,746,86,16 "Personnaliser"
 a 12,5,127,50 id=nav-logo-sprites
+[pixels] bg 18,17,98,34 [occluded]
 text 117,22,12,15 ".fr"
 a 140,5,221,50 id=nav-global-location-popover-link
 text 167,15,119,14 "Livraison à 59000 Lille"
 text 167,29,185,16 "Mettre à jour l’emplacement"
 text 383,24,117,14 "Toutes nos catégories" [occluded]
 input 522,11,257,38 id=twotabsearchtextbox value="clavier mecanique"
+[pixels] bg 779,10,45,40 alt=Go
 input 779,10,45,40 id=nav-search-submit-button value="Go"
 a 843,6,46,50
 text 870,28,19,16 "FR"
@@ -42,6 +44,7 @@ a 1066,5,102,50 id=nav-orders
 text 1075,29,84,16 "Commandes"
 a 1170,5,99,50 id=nav-cart
 text 1197,12,9,18 "0"
+[pixels] bg 1179,17,38,26
 text 1217,29,43,16 "Panier"
 a 11,60,85,39 id=nav-hamburger-menu
 text 42,72,45,16 "Toutes"
@@ -139,48 +142,44 @@ select 1104,141,156,20 id=s-result-sort-select value="relevanceblender" [occlude
 text 1116,146,48,14 "Trier par:"
 text 1170,146,68,14 "Mis en avant"
 a 270,196,994,332 [occluded]
-a 274,200,103,52
-[pixels] img 274,210,103,32 alt=affiché en texte noir sur fond vert
-a 402,201,425,23
-text 402,202,425,21 "Découvrez nos claviers équipés pour votre travail"
-text 402,232,54,13 "Sponsorisé"
-text 479,231,3,14 "|"
-text 487,231,252,14 "Les 10 marques les plus vendues dans claviers"
-text 744,231,3,14 "|"
-a 752,230,258,16
-text 752,231,234,14 "En savoir plus sur Logitech Direct Business"
-text 986,231,19,14 "FR"
-[pixels] svg 1005,235,5,7
+a 274,200,52,52
+[pixels] img 274,200,52,52 alt=en noir et blanc avec un texte en gras et anguleux indiquant « EPOM MAKER » à l'intérieur d'un cadre carré avec un côté droit allongé
+a 351,201,487,23
+text 351,202,487,21 "EPOMAKER Clavier Mécanique-Précision & Performance"
+text 351,232,54,13 "Sponsorisé"
+text 428,231,3,14 "|"
+a 436,230,175,16
+text 436,231,99,14 "En savoir plus sur"
+text 534,231,71,14 "EPOMAKER"
+[pixels] svg 606,235,5,7
 a 271,265,489,254 [occluded]
 a 271,265,244,254
-[pixels] img 290,346,208,92 alt=Logitech Signature Slim Solar+ clavier sans fil | Alimenté par lumière solaire/artificielle, batterie jusqu'à 10 ans, touches personnalisables, Bluetooth, AZERTY - Graphite
+[pixels] img 290,349,208,87 alt=EPOMAKER Ajazz AK820 Pro 75% Gasket Clavier Mecanique sans Fil/BT/USB | RGB Rétro-Éclairé, TFT écran, Foam d'insonorisation pour PC/Mac/Win,QWERTY (Blanc Violet, Ajazz Flying Fish Switch)
 a 271,265,489,254
-a 524,336,228,42
-text 524,337,226,39 "Logitech Signature Slim Solar+ clavier sans fil | Alimenté par l…"
-a 524,382,228,16
-text 524,383,17,14 "4.1" [occluded]
-text 607,383,21,14 "(33)"
-a 524,402,49,20
-text 524,402,19,19 "89"
-text 543,402,5,19 ","
-text 547,402,19,19 "99"
-text 569,404,6,13 "€"
+a 524,321,228,42
+text 524,322,222,39 "EPOMAKER Ajazz AK820 Pro 75% Gasket Clavier Mecaniq…"
+a 524,367,228,16
+text 524,368,17,14 "4.5" [occluded]
+text 607,368,31,14 "(1.8k)"
+a 524,387,49,20
+text 524,387,19,19 "82"
+text 543,387,5,19 ","
+text 547,387,19,19 "99"
+text 569,389,6,13 "€"
 a 770,265,489,254 [occluded]
 a 770,265,244,254
-[pixels] img 788,337,208,110 alt=Logitech ERGO K860 Clavier Ergonomique Sans Fil - En Deux Parties | Repose Poignet, Frappe Naturelle, Bluetooth et Connectivité USB, Compatible avec PC & Mac
+[pixels] img 788,332,208,121 alt=EPOMAKER X Aula F75 Max Clavier Mécanique sans Fil avec Écran TFT et Bouton | Clavier Gamer à Joint 75%, Remplaçable à Chaud, RVB, QWERTY, pour PC/Mac/Linux (Noir, Reaper Switch)
 a 770,265,489,254
-a 1023,336,228,42
-text 1023,337,223,39 "Logitech ERGO K860 Clavier Ergonomique Sans Fil - En D…"
-a 1023,382,228,16
-text 1023,383,17,14 "4.4" [occluded]
-text 1106,383,28,14 "(549)"
-a 1023,402,58,20
-text 1023,402,28,19 "109"
-text 1051,402,5,19 ","
-text 1056,402,19,19 "90"
-text 1077,404,6,13 "€"
-text 1023,425,56,14 "Conseillé :" [occluded]
-text 1083,425,46,14 "119,99 €" [occluded]
+a 1023,321,228,42
+text 1023,322,221,39 "EPOMAKER X Aula F75 Max Clavier Mécanique sans Fil a…"
+a 1023,367,228,16
+text 1023,368,17,14 "4.7" [occluded]
+text 1106,368,31,14 "(1.7k)"
+a 1023,387,49,20
+text 1023,387,19,19 "99"
+text 1042,387,5,19 ","
+text 1046,387,19,19 "99"
+text 1067,389,6,13 "€"
 a 1269,265,489,254 [occluded]
 a 1269,265,244,254 [occluded]
 a 1269,265,489,254 [occluded]
@@ -197,7 +196,7 @@ a 530,581,224,224 [occluded]
 a 780,581,224,224 [occluded]
 [pixels] img 780,616,224,155 alt=Publicité sponsorisée - Keychron V1 Max 75% Mise en Page Clavier Mécanique sans Fil Personnalisé, 2.4GHz Bluetooth Cable C... [occluded]
 a 1031,581,224,224 [occluded]
-[pixels] img 1031,626,224,135 alt=Publicité sponsorisée - Dierya Clavier Gamer Mécanique 60% Câblé avec Interrupteur Rouge,T68SE Clavier Gaming LED Rétroécl... [occluded]
+[pixels] img 1031,597,224,191 alt=Publicité sponsorisée - RK ROYAL KLUDGE R75 Clavier Mécanique, Clavier Gamer Filaire 75% AZERTY avec Gasket Mount, Molette... [occluded]
 text 20,198,194,16 "Éligible à la livraison gratuite"
 a 20,226,230,62
 label 20,222,24,24
@@ -205,21 +204,21 @@ text 44,226,107,16 "Livraison gratuite"
 text 20,250,216,36 "Livraison gratuite par Amazon vers les destinations éligibles"
 text 20,306,26,16 "Prix"
 label 20,332,41,20
-text 20,334,41,16 "1 EUR"
+text 20,334,41,16 "0 EUR"
 text 65,334,8,16 "–"
-label 77,332,116,20
-text 77,334,116,16 "9 000 EUR et plus"
+label 77,332,106,20
+text 77,334,106,16 "900 EUR et plus"
 input 20,380,230,4 id=p_36/range-slider_slider-item_lower-bound-slider value="0" [occluded]
-input 20,380,230,4 id=p_36/range-slider_slider-item_upper-bound-slider value="172" [occluded]
+input 20,380,230,4 id=p_36/range-slider_slider-item_upper-bound-slider value="156" [occluded]
 a 44,422,101,16
 label 20,418,24,24
 text 44,422,101,16 "Jusqu’à 20 EUR"
 a 44,446,100,16
 label 20,442,24,24
-text 44,446,100,16 "de 20 à 35 EUR"
+text 44,446,100,16 "de 20 à 40 EUR"
 a 44,470,100,16
 label 20,466,24,24
-text 44,470,100,16 "de 35 à 60 EUR"
+text 44,470,100,16 "de 40 à 60 EUR"
 a 44,494,94,16 [occluded]
 label 20,490,24,24 [occluded]
 text 44,494,94,16 "60 EUR et plus" [occluded]

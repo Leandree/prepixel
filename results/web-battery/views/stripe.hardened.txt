@@ -27,10 +27,10 @@ text 382,184,8,18 "6"
 text 390,184,8,18 "9"
 text 398,184,8,18 "8"
 text 406,184,8,18 "5"
-text 414,184,8,18 "3"
-text 422,184,8,18 "3"
-text 430,184,8,18 "2"
-text 438,184,8,18 "5"
+text 414,184,8,18 "7"
+text 422,184,8,18 "6"
+text 430,184,8,18 "3"
+text 438,184,8,18 "4"
 text 449,184,8,18 "%"
 text 371,202,8,18 "1"
 text 379,202,3,18 ","
@@ -38,10 +38,10 @@ text 382,202,8,18 "6"
 text 390,202,8,18 "9"
 text 398,202,8,18 "8"
 text 406,202,8,18 "5"
-text 414,202,8,18 "3"
-text 422,202,8,18 "3"
-text 430,202,8,18 "2"
-text 438,202,8,18 "5"
+text 414,202,8,18 "7"
+text 422,202,8,18 "6"
+text 430,202,8,18 "3"
+text 438,202,8,18 "4"
 text 449,202,8,18 "%"
 text 136,240,966,51 "Une infrastructure financière qui booste votre croissance." [occluded]
 text 136,286,990,143 "Acceptez des paiements, proposez des services financiers et personnalisez votre modèle de revenus, quel que soit votre volume de transactions." [occluded]
@@ -56,21 +56,21 @@ text 403,480,157,20 "S'inscrire avec Google"
 [pixels] canvas 257,0,1393,693 [occluded]
 [pixels] picture 257,-141,1392,975 [occluded]
 [pixels] img 257,-141,1392,975 [occluded]
-a -69,640,142,34 [occluded]
-[pixels] svg -69,640,142,34 alt=OpenAI [occluded]
-a 103,640,142,34
-[pixels] svg 103,640,142,34 alt=LaRedoute
-a 275,640,142,34
-[pixels] svg 275,640,142,34 alt=Amazon
-[pixels] svg 447,640,142,34 alt=MistralAI
-a 619,640,142,34
-[pixels] svg 619,640,142,34 alt=Nvidia
-a 791,640,142,34
-[pixels] svg 791,640,142,34 alt=LeMonde
-a 963,640,142,34 [occluded]
-[pixels] svg 963,640,142,34 alt=Figma [occluded]
-a 1135,640,142,34 [occluded]
-[pixels] svg 1135,640,142,34 alt=Alma [occluded]
+a -70,640,142,34 [occluded]
+[pixels] svg -70,640,142,34 alt=OpenAI [occluded]
+a 102,640,142,34
+[pixels] svg 102,640,142,34 alt=LaRedoute
+a 274,640,142,34
+[pixels] svg 274,640,142,34 alt=Amazon
+[pixels] svg 446,640,142,34 alt=MistralAI
+a 618,640,142,34
+[pixels] svg 618,640,142,34 alt=Nvidia
+a 790,640,142,34
+[pixels] svg 790,640,142,34 alt=LeMonde
+a 962,640,142,34 [occluded]
+[pixels] svg 962,640,142,34 alt=Figma [occluded]
+a 1134,640,142,34 [occluded]
+[pixels] svg 1134,640,142,34 alt=Alma [occluded]
 text 33,786,707,41 "Des solutions flexibles pour chaque business model."
 text 902,633,323,57 "Nous utilisons des cookies pour améliorer votre expérience, ainsi qu'à des fins de marketing. Pour en savoir plus, consultez notre"
 a 902,672,286,38 [occluded]

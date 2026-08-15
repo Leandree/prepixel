@@ -58,16 +58,17 @@ text 148,618,356,25 "Et si vous lanciez une première recherche ?" [occluded]
 text 148,676,422,18 "Vos recherches s’afficheront ici pour y accéder facilement à tout moment." [occluded]
 text 123,752,224,27 "Tendance en ce moment" [occluded]
 a 123,795,192,240 [occluded]
-[pixels] img 123,795,192,240 [occluded]
+[pixels] img 123,795,192,240
 a 331,795,192,240 [occluded]
-[pixels] img 331,795,192,240 [occluded]
+[pixels] img 331,795,192,240
 a 539,795,192,240 [occluded]
-[pixels] img 539,795,192,240 [occluded]
+[pixels] img 539,795,192,240
 a 747,795,192,240 [occluded]
-[pixels] img 747,795,192,240 [occluded]
+[pixels] img 747,795,192,240
 a 955,795,192,240 [occluded]
-[pixels] img 955,795,192,240 [occluded]
+[pixels] img 955,795,192,240
 text 139,63,229,18 "Contenu de la fenêtre de consentement" [occluded]
+[pixels] bg 140,63,350,674
 [pixels] svg 711,87,208,38
 button 729,133,171,24
 text 729,134,171,22 "Continuer sans accepter"

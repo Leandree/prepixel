@@ -32,6 +32,7 @@ text 763,79,162,18 "Paramètres de recherche"
 a 740,75,32,29
 text 134,121,50,18 "Protégé"
 [pixels] svg 188,124,12,12
+mark 222,124,12,12 rgb(255, 255, 255)
 a 260,121,43,18
 text 260,121,43,18 "France"
 [pixels] svg 307,124,12,12

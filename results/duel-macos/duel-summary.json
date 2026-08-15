@@ -1,21 +1,22 @@
 {
-  "n": 20,
-  "viewport": {
-    "width": 1280,
-    "height": 800
-  },
-  "structured": {
-    "avg_bytes": 1578,
-    "avg_tokens_est": 391
-  },
-  "pixels": {
-    "avg_png_bytes": 62110,
-    "img_tokens": 1366,
-    "img_tokens_retina": 4784,
-    "img_tokens_retina_legacy": 1534
-  },
-  "ratio_tokens": 3.49,
-  "ratio_bytes": 39.4,
-  "ratio_tokens_retina": 12.24,
-  "ratio_tokens_retina_legacy": 3.92
+ "n": 20,
+ "viewport": {
+  "width": 1280,
+  "height": 800
+ },
+ "structured": {
+  "avg_bytes": 1578,
+  "avg_tokens_est": 391
+ },
+ "pixels": {
+  "avg_png_bytes": 62110,
+  "img_tokens": 1366,
+  "img_tokens_retina": 4784,
+  "img_tokens_retina_legacy": 1534
+ },
+ "ratio_tokens": 3.49,
+ "ratio_bytes": 39.4,
+ "ratio_tokens_retina": 12.24,
+ "ratio_tokens_retina_legacy": 3.92,
+ "note": "image tokens computed after the API downscale (see src/image-tokens.mjs); naive w*h/750 would overstate the Retina figure as 5462. Re-run under the hardened distiller (shadow DOM + iframes + bg + marks): byte-identical, 0/20 duel pages contain those content classes."
 }

@@ -209,11 +209,14 @@ the two defensible answers disagree enough that the choice must be stated:
 
 | aggregation | value | answers the question |
 |---|---|---|
-| ratio of **totals** (21 766 tokens vs 16 x 1366) | **1.00x** | what does a whole browsing session cost? |
-| **median** of per-site ratios | **1.21x** | what does a typical page cost? |
-| **mean** of per-site ratios | 1.30x | biased upward — a 3x win counts as much as a 2x loss on a page costing a fraction of the tokens |
+| ratio of **totals** (22 354 tokens vs 16 x 1366) | **0.98x** | what does a whole browsing session cost? |
+| **median** of per-site ratios | **1.15x** | what does a typical page cost? |
+| **mean** of per-site ratios | 1.27x | biased upward — a 3x win counts as much as a 2x loss on a page costing a fraction of the tokens |
 
-Structure comes out ahead on **10 of 16 sites**, and at exact break-even overall.
+Structure comes out ahead on **10 of 16 sites**, and marginally *behind* overall.
+(These are the post-hardening figures: the battery was re-measured under distiller
+v2, which additionally reads shadow DOM and same-origin iframes and declares
+background-images and colour-only marks. See the next section for what that cost.)
 The mechanism is simple and should be stated plainly rather than buried: a screenshot has a **flat** cost set by the viewport, while a structured
 view scales with **information density**. The ratio is therefore a property of the
 page, not of the method — and the spread is enormous:
@@ -248,6 +251,35 @@ good density index in themselves: 0 on Hacker News's flat 1990s table, 12 on
 Wikipedia, 79 on BBC, 105 on Le Monde, 114 on Amazon, 142 on the YouTube watch
 page. A naive DOM reader would publish roughly a hundred clickable targets per
 commercial page that are not, in fact, hittable.
+
+## What completeness costs on real pages: about 2%
+
+The Linux round-3 audit found four more silent-leak classes in our shared distiller
+(shadow DOM, iframes, CSS background-image, colour-only semantics) and closed them.
+That raises the obvious worry for the cost argument: if the view has to declare
+*more*, does the structured side stop being competitive? Re-running the whole
+16-site battery under the hardened distiller answers it.
+
+**Total structured tokens: 21 766 → 22 354, +2.7%** — and only part of that is the
+distiller. Four sites came back **byte-identical** across the two runs (Apple,
+Stripe, Vercel, YouTube home: zero token delta), which is the control showing the
+harness is deterministic. Of the movers, Wikipedia's +127 is explained by its 13 new
+`mark` lines and MDN's +273 by 1 mark + 2 `[pixels] bg` plus ad churn, while GitHub
+(+109) and Hacker News (+46) emitted **zero** new line kinds — their delta is live
+sites changing between runs, not the distiller. Attributed honestly, declaring four
+extra content classes costs roughly **1–2%** on real pages. Completeness is close to
+free; it is the text density that sets the cost, not the safety machinery.
+
+One prediction of ours was refuted in the process. YouTube is the archetypal Polymer
+app and we expected shadow-DOM recursion to blow its view up. It moved **0 tokens**.
+Probing directly: **533 custom elements, none with an open `shadowRoot`** — YouTube's
+components render into light DOM, so a plain TreeWalker already saw everything.
+
+That leaves a risk worth stating rather than a failure worth reporting: a **closed**
+shadow root (`{mode:'closed'}`) returns `null` from `element.shadowRoot`, so its
+content is neither read nor declared, and the distiller cannot even tell it is there.
+We did not encounter one in this battery, and a router has no way to detect them.
+It is the one blind-spot class we currently have no accounting for.
 
 ## Can you actually browse this way? 8/8 — and the failures were mine, not the channel's
 
