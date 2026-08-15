@@ -6,3 +6,4 @@ results/duel/page-[1-9]*.html
 results/duel/page-[1-9]*.view.txt
 results/duel/shots/page-[1-9]*.png
 results/*.paint.raw.json
+__pycache__/
