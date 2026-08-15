@@ -15,7 +15,10 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 > **The thesis is not "never use pixels."** It's *"stop doing image interpretation
 > you don't need."* Structure is the backbone; pixels are a targeted fallback for
 > the regions structure can't read (games, video, canvas). The whole point is that
-> the boundary between the two is **knowable in advance and never silent.**
+> the boundary between the two is **knowable in advance** — and the Windows campaign
+> showed that it is *not* automatically declared. Three apps returned a view that
+> disagreed with the screen without saying so. The boundary is predictable; making
+> it **explicit is the router's job, not the OS's.**
 
 ---
 
@@ -54,12 +57,20 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 - **The wrong level is the literal GPU stream.** By the Vulkan/Skia layer, text is
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
-- **Safety (the production question).** Across 12 stacks: **zero silent
-  divergences**, **100% predictable in advance** from a stack signature. We *found*
-  two silent-divergence classes (occlusion, off-viewport leak) and closed them with a
-  hit-test pass + the window-manager map. Failures are always **explicit** (declared
-  opaque rect / honest empty tree) or **blocked** (OS policy) — never a view that
-  lies about the screen.
+- **Safety (the production question) — and the campaign's most important negative
+  result.** Across 54 cells on three OSes, **100% of channels were predictable in
+  advance** from a stack signature. But "never silent" did **not** survive contact
+  with Windows: **3 silent divergences** (FL Studio/Delphi, OBS/Qt6,
+  rekordbox/JUCE), all the same mechanism — *disagreement by omission*. A container
+  node is present, its content is absent, and **nothing declares the region opaque**.
+  The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
+  a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
+  router computes 0% structural coverage in one walk), whereas named-but-empty panes
+  *look* like a valid answer. Both are predictable a priori and both are catchable at
+  runtime (per-window pixel spot-check via `PrintWindow`), but predictable-and-
+  catchable is not the same as declared. **The honest claim is therefore: the boundary
+  is knowable, and making it explicit is the router's responsibility — no OS
+  accessibility layer does it for you.**
 - **The merged desktop view.** No single OS channel is both whole-screen and
   semantic (the compositor has all windows but only pixels; each toolkit is semantic
   but per-window). A **router** assembles it: window-manager map (geometry, z-order,
@@ -177,10 +188,18 @@ valid channel among several the router chooses from.
 
 ## Status
 
-Linux reference cells complete (12, schema-valid, 0 silent, 100% predictable).
-Windows and macOS are open — that's the agent job above. After the matrix fills
-across all three OSes, the write-up is a position paper (arXiv cs.HC/cs.AI) + a blog
-post; project notes live in the attached Claude project.
+**All three OSes are covered: 54 cells, schema-valid, 100% predictable in advance,
+3 silent.** Linux 18, macOS 17, Windows 19. The three silent cells are all Windows
+custom-drawn apps (FL Studio, OBS, rekordbox) and are the campaign's headline
+negative result — see `campaign/MATRIX.md` and `campaign/results/windows-FINDINGS.md`.
+
+Still open, and all of it needs a physical desktop rather than more probing: a
+third-party SwiftUI app on macOS (the thin-tree suspect), Tier F toolkits
+(Java/Flutter) anywhere, an unannotated GL/Metal game, and one confirmation run of
+the real-web battery on a Linux desktop (it was egress-blocked in the sandbox).
+
+The write-up is a position paper (arXiv cs.HC/cs.AI) + a blog post; project notes
+live in the attached Claude project.
 
 ## License
 
