@@ -1,0 +1,1645 @@
+{
+ "n_windows": 37,
+ "map_latency_ms": 31.9,
+ "merged_map_bytes": 3351,
+ "merged_map_tokens": 838,
+ "screen": [
+  1512,
+  982
+ ],
+ "fullscreen_shot_tokens": 1980,
+ "fullscreen_shot_tokens_retina2x": 4784,
+ "channels": {
+  "pixels-baseline": 14,
+  "accessibility-api": 16,
+  "cdp": 1,
+  "accessibility-api+object-model": 6
+ },
+ "occlusion_probe": {
+  "points_probed": 40,
+  "zorder_wrong": 7,
+  "zorder_accuracy": 0.825,
+  "probes": [
+   {
+    "point": [
+     609,
+     183
+    ],
+    "zorder_predicts": {
+     "z": 1,
+     "owner": "Kestro",
+     "pid": 57957,
+     "layer": 1000,
+     "alpha": 1.0,
+     "rect": [
+      382,
+      0,
+      748,
+      264
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": false,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     560,
+     168
+    ],
+    "zorder_predicts": {
+     "z": 1,
+     "owner": "Kestro",
+     "pid": 57957,
+     "layer": 1000,
+     "alpha": 1.0,
+     "rect": [
+      382,
+      0,
+      748,
+      264
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": false,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     756,
+     148
+    ],
+    "zorder_predicts": {
+     "z": 1,
+     "owner": "Kestro",
+     "pid": 57957,
+     "layer": 1000,
+     "alpha": 1.0,
+     "rect": [
+      382,
+      0,
+      748,
+      264
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": false,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     583,
+     148
+    ],
+    "zorder_predicts": {
+     "z": 1,
+     "owner": "Kestro",
+     "pid": 57957,
+     "layer": 1000,
+     "alpha": 1.0,
+     "rect": [
+      382,
+      0,
+      748,
+      264
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": false,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     756,
+     217
+    ],
+    "zorder_predicts": {
+     "z": 1,
+     "owner": "Kestro",
+     "pid": 57957,
+     "layer": 1000,
+     "alpha": 1.0,
+     "rect": [
+      382,
+      0,
+      748,
+      264
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": false,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     943,
+     148
+    ],
+    "zorder_predicts": {
+     "z": 1,
+     "owner": "Kestro",
+     "pid": 57957,
+     "layer": 1000,
+     "alpha": 1.0,
+     "rect": [
+      382,
+      0,
+      748,
+      264
+     ]
+    },
+    "window_server_says_pid": 6731,
+    "window_server_role": "AXScrollArea",
+    "agrees": false,
+    "window_server_owner": "Code"
+   },
+   {
+    "point": [
+     576,
+     148
+    ],
+    "zorder_predicts": {
+     "z": 1,
+     "owner": "Kestro",
+     "pid": 57957,
+     "layer": 1000,
+     "alpha": 1.0,
+     "rect": [
+      382,
+      0,
+      748,
+      264
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": false,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     509,
+     412
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     445,
+     430
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     550,
+     600
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     442,
+     600
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     571,
+     595
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     878,
+     600
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     435,
+     600
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     234,
+     350
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     509,
+     313
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     483,
+     313
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXButton",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     509,
+     347
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     796,
+     313
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     475,
+     313
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXButton",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     274,
+     311
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     278,
+     161
+    ],
+    "zorder_predicts": {
+     "z": 16,
+     "owner": "TextEdit",
+     "pid": 51507,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      181,
+      102,
+      656,
+      422
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": true,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     445,
+     317
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     445,
+     366
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXTextField",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     260,
+     311
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     278,
+     147
+    ],
+    "zorder_predicts": {
+     "z": 16,
+     "owner": "TextEdit",
+     "pid": 51507,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      181,
+      102,
+      656,
+      422
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXTextArea",
+    "agrees": true,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     407,
+     507
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     756,
+     507
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     778,
+     531
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     1134,
+     507
+    ],
+    "zorder_predicts": {
+     "z": 18,
+     "owner": "Code",
+     "pid": 6731,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      0,
+      33,
+      1512,
+      949
+     ]
+    },
+    "window_server_says_pid": 6731,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Code"
+   },
+   {
+    "point": [
+     1133,
+     507
+    ],
+    "zorder_predicts": {
+     "z": 18,
+     "owner": "Code",
+     "pid": 6731,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      0,
+      33,
+      1512,
+      949
+     ]
+    },
+    "window_server_says_pid": 6731,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Code"
+   },
+   {
+    "point": [
+     392,
+     507
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     188,
+     311
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXGroup",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     278,
+     131
+    ],
+    "zorder_predicts": {
+     "z": 16,
+     "owner": "TextEdit",
+     "pid": 51507,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      181,
+      102,
+      656,
+      422
+     ]
+    },
+    "window_server_says_pid": 51507,
+    "window_server_role": "AXWindow",
+    "agrees": true,
+    "window_server_owner": "TextEdit"
+   },
+   {
+    "point": [
+     98,
+     131
+    ],
+    "zorder_predicts": {
+     "z": 18,
+     "owner": "Code",
+     "pid": 6731,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      0,
+      33,
+      1512,
+      949
+     ]
+    },
+    "window_server_says_pid": 6731,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Code"
+   },
+   {
+    "point": [
+     464,
+     531
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     198,
+     311
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXPopUpButton",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   },
+   {
+    "point": [
+     108,
+     131
+    ],
+    "zorder_predicts": {
+     "z": 18,
+     "owner": "Code",
+     "pid": 6731,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      0,
+      33,
+      1512,
+      949
+     ]
+    },
+    "window_server_says_pid": 6731,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Code"
+   },
+   {
+    "point": [
+     1084,
+     531
+    ],
+    "zorder_predicts": {
+     "z": 18,
+     "owner": "Code",
+     "pid": 6731,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      0,
+      33,
+      1512,
+      949
+     ]
+    },
+    "window_server_says_pid": 6731,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Code"
+   },
+   {
+    "point": [
+     456,
+     531
+    ],
+    "zorder_predicts": {
+     "z": 15,
+     "owner": "Google Chrome",
+     "pid": 51505,
+     "layer": 0,
+     "alpha": 1.0,
+     "rect": [
+      100,
+      300,
+      900,
+      600
+     ]
+    },
+    "window_server_says_pid": 51505,
+    "window_server_role": "AXScrollArea",
+    "agrees": true,
+    "window_server_owner": "Google Chrome"
+   }
+  ]
+ },
+ "content_extracted_from_owned_windows": [
+  {
+   "owner": "Google Chrome",
+   "channel": "cdp",
+   "ms": 0.7,
+   "view_bytes": 79,
+   "view_tokens": 20,
+   "shot_tokens_if_pixels": 720,
+   "note": "page-level channel; DOM distillation demonstrated in macos-chrome-cdp",
+   "sample": "tab Silent mimicry file:///Users/leandre/dev/prepixel/pages/silent-mimicry.html"
+  },
+  {
+   "owner": "TextEdit",
+   "channel": "accessibility-api+object-model",
+   "ms": 42.3,
+   "view_bytes": 222,
+   "view_tokens": 56,
+   "shot_tokens_if_pixels": 370,
+   "note": "AX walk of the focused window of a process we launched",
+   "sample": "title \"router-probe.txt\"\nvalue \"ROUTER PROBE — document jetable cree par l agent\nligne 2 : contenu connu pour la verification\"\ndescription \"actions relatives aux documents\"\ntitle \"router-probe.txt\"\nvalue \"router-probe.txt\""
+  },
+  {
+   "owner": "TextEdit",
+   "channel": "accessibility-api+object-model",
+   "ms": 6.1,
+   "view_bytes": 222,
+   "view_tokens": 56,
+   "shot_tokens_if_pixels": 382,
+   "note": "AX walk of the focused window of a process we launched",
+   "sample": "title \"router-probe.txt\"\nvalue \"ROUTER PROBE — document jetable cree par l agent\nligne 2 : contenu connu pour la verification\"\ndescription \"actions relatives aux documents\"\ntitle \"router-probe.txt\"\nvalue \"router-probe.txt\""
+  }
+ ],
+ "windows": [
+  {
+   "z": 0,
+   "wid": 4,
+   "pid": 402,
+   "owner": "Window Server",
+   "title": "Cursor",
+   "rect": [
+    661,
+    542,
+    28,
+    40
+   ],
+   "layer": 2147483630,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX refused for this pid (no TCC / not an AX client) -> pixels",
+   "predicted_before_read": true
+  },
+  {
+   "z": 1,
+   "wid": 345,
+   "pid": 57957,
+   "owner": "Kestro",
+   "title": "Kestro",
+   "rect": [
+    382,
+    0,
+    748,
+    264
+   ],
+   "layer": 1000,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(57957) answers 1 windows; bundle fr.kestro.app",
+   "predicted_before_read": true
+  },
+  {
+   "z": 2,
+   "wid": 4126,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Item-0",
+   "rect": [
+    949,
+    0,
+    40,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 3,
+   "wid": 3508,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Item-0",
+   "rect": [
+    989,
+    0,
+    45,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 4,
+   "wid": 346,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Item-0",
+   "rect": [
+    1034,
+    0,
+    32,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 5,
+   "wid": 87,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Item-0",
+   "rect": [
+    1066,
+    0,
+    32,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 6,
+   "wid": 2731,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Item-0",
+   "rect": [
+    1098,
+    0,
+    48,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 7,
+   "wid": 88,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Item-0",
+   "rect": [
+    1146,
+    0,
+    36,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 8,
+   "wid": 26,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Bluetooth",
+   "rect": [
+    1182,
+    0,
+    32,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 9,
+   "wid": 28,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "WiFi",
+   "rect": [
+    1214,
+    0,
+    38,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 10,
+   "wid": 25,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Battery",
+   "rect": [
+    1252,
+    0,
+    42,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 11,
+   "wid": 80,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Item-0",
+   "rect": [
+    1294,
+    0,
+    32,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 12,
+   "wid": 29,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "BentoBox-0",
+   "rect": [
+    1326,
+    0,
+    42,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 13,
+   "wid": 27,
+   "pid": 624,
+   "owner": "Centre de contrôle",
+   "title": "Clock",
+   "rect": [
+    1368,
+    0,
+    146,
+    33
+   ],
+   "layer": 25,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX answers but exposes 0 windows (frame-only) -> 0% structural coverage, crop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 14,
+   "wid": 39,
+   "pid": 402,
+   "owner": "Window Server",
+   "title": "Menubar",
+   "rect": [
+    0,
+    0,
+    1512,
+    33
+   ],
+   "layer": 24,
+   "alpha": 1.0,
+   "channel": "pixels-baseline",
+   "signature": "AX refused for this pid (no TCC / not an AX client) -> pixels",
+   "predicted_before_read": true
+  },
+  {
+   "z": 15,
+   "wid": 4154,
+   "pid": 51505,
+   "owner": "Google Chrome",
+   "title": "Silent mimicry",
+   "rect": [
+    100,
+    300,
+    900,
+    600
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "cdp",
+   "signature": "--remote-debugging-port=9223 answers /json/version -> Chrome/151.0.7922.138",
+   "predicted_before_read": true
+  },
+  {
+   "z": 16,
+   "wid": 4165,
+   "pid": 51507,
+   "owner": "TextEdit",
+   "title": "router-probe.txt",
+   "rect": [
+    181,
+    102,
+    656,
+    422
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api+object-model",
+   "signature": "bundle com.apple.TextEdit is AppleScript-scriptable; AX answers 2 windows",
+   "predicted_before_read": true
+  },
+  {
+   "z": 17,
+   "wid": 4155,
+   "pid": 51507,
+   "owner": "TextEdit",
+   "title": "Sans titre",
+   "rect": [
+    152,
+    73,
+    586,
+    488
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api+object-model",
+   "signature": "bundle com.apple.TextEdit is AppleScript-scriptable; AX answers 2 windows",
+   "predicted_before_read": true
+  },
+  {
+   "z": 18,
+   "wid": 923,
+   "pid": 6731,
+   "owner": "Code",
+   "title": "prepixel",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(6731) answers 4 windows; bundle com.microsoft.VSCode",
+   "predicted_before_read": true
+  },
+  {
+   "z": 19,
+   "wid": 858,
+   "pid": 6731,
+   "owner": "Code",
+   "title": "DOC PREPROD ALLIANCE 388ea8b6a98e8014aff9e338ee8e5c7b.md — fairwai [SSH: optiplex]",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(6731) answers 4 windows; bundle com.microsoft.VSCode",
+   "predicted_before_read": true
+  },
+  {
+   "z": 20,
+   "wid": 857,
+   "pid": 6731,
+   "owner": "Code",
+   "title": "reponse-helpline-servicenow.txt — fairwai",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(6731) answers 4 windows; bundle com.microsoft.VSCode",
+   "predicted_before_read": true
+  },
+  {
+   "z": 21,
+   "wid": 4001,
+   "pid": 632,
+   "owner": "Finder",
+   "title": "Téléchargements",
+   "rect": [
+    29,
+    33,
+    756,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api+object-model",
+   "signature": "bundle com.apple.finder is AppleScript-scriptable; AX answers 5 windows",
+   "predicted_before_read": true
+  },
+  {
+   "z": 22,
+   "wid": 3873,
+   "pid": 1136,
+   "owner": "Google Chrome",
+   "title": "zarza - Recherche Google",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(1136) answers 3 windows; bundle com.google.Chrome",
+   "predicted_before_read": true
+  },
+  {
+   "z": 23,
+   "wid": 147,
+   "pid": 1136,
+   "owner": "Google Chrome",
+   "title": "Sign in - Claude",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(1136) answers 3 windows; bundle com.google.Chrome",
+   "predicted_before_read": true
+  },
+  {
+   "z": 24,
+   "wid": 1534,
+   "pid": 69489,
+   "owner": "Signal",
+   "title": "Signal (5)",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(69489) answers 1 windows; bundle org.whispersystems.signal-desktop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 25,
+   "wid": 555,
+   "pid": 1136,
+   "owner": "Google Chrome",
+   "title": "Computer use GPU input interpretation - Claude",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(1136) answers 3 windows; bundle com.google.Chrome",
+   "predicted_before_read": true
+  },
+  {
+   "z": 26,
+   "wid": 3506,
+   "pid": 96026,
+   "owner": "Docker Desktop",
+   "title": "Containers - Docker Desktop",
+   "rect": [
+    143,
+    171,
+    1270,
+    720
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(96026) answers 1 windows; bundle com.electron.dockerdesktop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 27,
+   "wid": 866,
+   "pid": 6731,
+   "owner": "Code",
+   "title": "claude — kestro",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(6731) answers 4 windows; bundle com.microsoft.VSCode",
+   "predicted_before_read": true
+  },
+  {
+   "z": 28,
+   "wid": 1789,
+   "pid": 75252,
+   "owner": "‎WhatsApp",
+   "title": "‎WhatsApp",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(75252) answers 1 windows; bundle net.whatsapp.WhatsApp",
+   "predicted_before_read": true
+  },
+  {
+   "z": 29,
+   "wid": 1218,
+   "pid": 632,
+   "owner": "Finder",
+   "title": "Privé et partagé 4",
+   "rect": [
+    756,
+    33,
+    756,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api+object-model",
+   "signature": "bundle com.apple.finder is AppleScript-scriptable; AX answers 5 windows",
+   "predicted_before_read": true
+  },
+  {
+   "z": 30,
+   "wid": 161,
+   "pid": 1322,
+   "owner": "Terminal",
+   "title": "prepixel — claude — claude — claude — 105×60",
+   "rect": [
+    756,
+    33,
+    755,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(1322) answers 1 windows; bundle com.apple.Terminal",
+   "predicted_before_read": true
+  },
+  {
+   "z": 31,
+   "wid": 670,
+   "pid": 632,
+   "owner": "Finder",
+   "title": "dev",
+   "rect": [
+    14,
+    33,
+    756,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api+object-model",
+   "signature": "bundle com.apple.finder is AppleScript-scriptable; AX answers 5 windows",
+   "predicted_before_read": true
+  },
+  {
+   "z": 32,
+   "wid": 616,
+   "pid": 632,
+   "owner": "Finder",
+   "title": "dev",
+   "rect": [
+    756,
+    33,
+    756,
+    949
+   ],
+   "layer": 0,
+   "alpha": 1.0,
+   "channel": "accessibility-api+object-model",
+   "signature": "bundle com.apple.finder is AppleScript-scriptable; AX answers 5 windows",
+   "predicted_before_read": true
+  },
+  {
+   "z": 33,
+   "wid": 4125,
+   "pid": 33169,
+   "owner": "Claude",
+   "title": "Claude",
+   "rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "layer": -1,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(33169) answers 1 windows; bundle com.anthropic.claudefordesktop",
+   "predicted_before_read": true
+  },
+  {
+   "z": 34,
+   "wid": 32,
+   "pid": 730,
+   "owner": "Centre de notifications",
+   "title": "Recommandées",
+   "rect": [
+    8,
+    221,
+    360,
+    180
+   ],
+   "layer": -2147483601,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(730) answers 3 windows; bundle com.apple.notificationcenterui",
+   "predicted_before_read": true
+  },
+  {
+   "z": 35,
+   "wid": 31,
+   "pid": 730,
+   "owner": "Centre de notifications",
+   "title": "Prévisions",
+   "rect": [
+    188,
+    41,
+    180,
+    180
+   ],
+   "layer": -2147483601,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(730) answers 3 windows; bundle com.apple.notificationcenterui",
+   "predicted_before_read": true
+  },
+  {
+   "z": 36,
+   "wid": 30,
+   "pid": 730,
+   "owner": "Centre de notifications",
+   "title": "Mois",
+   "rect": [
+    8,
+    41,
+    180,
+    180
+   ],
+   "layer": -2147483601,
+   "alpha": 1.0,
+   "channel": "accessibility-api",
+   "signature": "AXUIElementCreateApplication(730) answers 3 windows; bundle com.apple.notificationcenterui",
+   "predicted_before_read": true
+  }
+ ]
+}
