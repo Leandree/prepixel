@@ -59,6 +59,7 @@ class Probe:
         open(shot, "wb").write(self.drv.ctrl.get_screenshot() or b"")
         view, registry, raw, ns, nh = self.drv.build_view(self.out, shot, mech)
         self.registry = registry
+        self.drv.prev_diff_base = raw     # baseline the keyboard guard uses
         open(os.path.join(self.out, f"probe-{self.n}.txt"), "w").write(view)
         return view, registry, mech
 
@@ -80,6 +81,14 @@ class Probe:
                 "mech": mech}
 
 
+def vm_python(drv, command):
+    """Run a python one-liner in the VM. NOT run_bash_script: the server
+    baked into the VM image answers /run_bash_script with
+    "name '_append_event' is not defined" (image/server version skew,
+    measured 2026-08-17); /execute is the endpoint OSWorld itself uses."""
+    return drv.ctrl.execute_python_command(command)
+
+
 def raw_evidence(tree_xml):
     """How many nodes the payload hides entirely (no coords at all) — decides
     whether §2.6 [offscreen] is even expressible from OSWorld's a11y dump."""
@@ -92,12 +101,22 @@ def raw_evidence(tree_xml):
 
 
 def scenario_os(env, drv, probe, rep):
-    ctrl = drv.ctrl
     # Open the exact dialog of the v1 failure, mechanically (no model).
-    ctrl.run_bash_script(
-        "nohup gnome-terminal --preferences >/dev/null 2>&1 &\nsleep 4\n")
-    time.sleep(3)
+    vm_python(drv, "import subprocess; "
+                   "subprocess.Popen(['gnome-terminal', '--preferences'])")
+    time.sleep(6)
     view, registry, _ = probe.refresh()
+
+    # the columns spin-button lives on the profile page, not on General:
+    # navigate there with a v2 action (this also exercises the ladder on a
+    # list-item)
+    eid, prof = probe.find(
+        lambda r: r["role"] == "list-item"
+        and r["label"] not in ("General", "Shortcuts") and r["label"])
+    if eid:
+        rep["nav_profile"] = probe.act({"action": "click", "target": eid})
+        time.sleep(1)
+        view, registry, _ = probe.refresh()
 
     # the columns spin-button = the spin-button just left of the "columns" text
     _, col_txt = probe.find(lambda r: r["kind"] == "text"
@@ -182,18 +201,34 @@ def scenario_os(env, drv, probe, rep):
                        "to": tog["states"]["checked"]})
 
 
+def navigate(probe, url):
+    """ctrl+l, type, kill the inline autocompletion, Enter.
+
+    The `delete` is not politeness: measured on this VM, typing
+    "chrome://settings/" leaves Chrome's inline completion pointing at
+    google.com/chrome, and Enter follows the completion instead of the typed
+    URL — in BOTH the v1 single-command shape and the v2 separate-action
+    shape (see acceptance-nav.json). Same UX trap in both conditions."""
+    probe.act({"action": "key", "keys": "ctrl+l"})
+    probe.act({"action": "type", "text": url})
+    probe.act({"action": "key", "keys": "delete"})
+    probe.act({"action": "key", "keys": "enter"})
+    time.sleep(3)
+
+
 def scenario_chrome(env, drv, probe, rep):
     # (d) settle vs lazy population: navigate to settings, search, and see
     # whether the SETTLED view already exposes the results.
-    probe.act({"action": "key", "keys": "ctrl+l"})
-    probe.act({"action": "type", "text": "chrome://settings/"})
-    probe.act({"action": "key", "keys": "enter"})
-    time.sleep(3)
+    navigate(probe, "chrome://settings/")
     view, registry, _ = probe.refresh()
     rep["settings_lines"] = len(view.split("\n"))
+    doc = next((r for r in registry.values()
+                if r["role"] in ("document-web", "document-frame")), None)
+    rep["settings_document"] = doc["label"] if doc else None
 
     eid, box = probe.find(lambda r: r["role"] in ("entry", "text", "searchbox")
-                          and "search" in (r["label"] or "").lower())
+                          and "search" in (r["label"] or "").lower()
+                          and "address" not in (r["label"] or "").lower())
     rep["d_searchbox"] = box["line"] if box else None
     if eid:
         rep["d_click"] = probe.act({"action": "click", "target": eid})
@@ -227,15 +262,11 @@ def scenario_chrome(env, drv, probe, rep):
                        "to": tog["states"].get("checked", False)})
 
     # (c) offscreen + scroll_to on a deliberately long local page
-    html = ("<html><body>" + "".join(
-        f"<p>filler paragraph {i}</p>" for i in range(400))
-        + "<a href='#' id='adv'>Advanced settings marker</a></body></html>")
-    drv.ctrl.run_bash_script(
-        "cat > /tmp/longpage.html <<'EOF'\n" + html + "\nEOF\n")
-    probe.act({"action": "key", "keys": "ctrl+l"})
-    probe.act({"action": "type", "text": "file:///tmp/longpage.html"})
-    probe.act({"action": "key", "keys": "enter"})
-    time.sleep(3)
+    vm_python(drv,
+              "open('/tmp/longpage.html', 'w').write('<html><body>' + "
+              "''.join('<p>filler paragraph %d</p>' % i for i in range(400))"
+              " + '<a href=#>Advanced settings marker</a></body></html>')")
+    navigate(probe, "file:///tmp/longpage.html")
     view, registry, _ = probe.refresh()
     off = [(e, r) for e, r in registry.items() if r["kind"] == "offscreen"]
     rep["c_offscreen_count"] = len(off)
@@ -255,9 +286,55 @@ def scenario_chrome(env, drv, probe, rep):
             "coordinates for showing+visible nodes)"
 
 
+def scenario_nav(env, drv, probe, rep):
+    """Does the settle between keystrokes break omnibox entry?
+
+    v1's model typed hotkey+write+press inside ONE pyautogui command and
+    navigated fine. v2's schema is one primitive per step, so ~4 s of a11y
+    polling now sits between the typing and the Enter. If that polling
+    perturbs Chrome's omnibox, condition B loses URL entry — a driver-level
+    problem, not a harness detail. Three variants, same target:
+      1. all three in one pyautogui command (the v1 shape)
+      2. separate driver actions WITH the settle between them (the v2 shape)
+      3. separate driver actions with NO settle between them
+    """
+    def page():
+        drv.cur_tree = drv.ctrl.get_accessibility_tree()
+        recs, _, _ = drv.distill(drv.cur_tree)
+        doc = next((r for r in recs if r["role"] in
+                    ("document-web", "document-frame")), None)
+        return doc["label"] if doc else "(no document node)"
+
+    url = "chrome://settings/"
+    rep["nav_start"] = page()
+
+    drv._pyautogui("import pyautogui, time; pyautogui.hotkey('ctrl', 'l'); "
+                   "time.sleep(0.3); "
+                   f"pyautogui.write({url!r}, interval=0.02); "
+                   "pyautogui.press('enter')")
+    time.sleep(4)
+    rep["nav_1_single_command"] = page()
+
+    probe.act({"action": "key", "keys": "ctrl+l"})       # settles internally
+    probe.act({"action": "type", "text": "chrome://version/"})
+    probe.act({"action": "key", "keys": "enter"})
+    time.sleep(4)
+    rep["nav_2_separate_with_settle"] = page()
+
+    drv._pyautogui("import pyautogui; pyautogui.hotkey('ctrl', 'l')")
+    time.sleep(0.3)
+    drv._pyautogui("import pyautogui; "
+                   "pyautogui.typewrite('chrome://history/', interval=0.02)")
+    time.sleep(0.3)
+    drv._pyautogui("import pyautogui; pyautogui.press('enter')")
+    time.sleep(4)
+    rep["nav_3_separate_no_settle"] = page()
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--scenario", required=True, choices=["os", "chrome"])
+    ap.add_argument("--scenario", required=True,
+                    choices=["os", "chrome", "nav"])
     ap.add_argument("--out", required=True)
     ap.add_argument("--osworld", default=os.path.expanduser("~/dev/OSWorld"))
     args = ap.parse_args()
@@ -287,6 +364,8 @@ def main():
     try:
         if args.scenario == "os":
             scenario_os(env, drv, probe, rep)
+        elif args.scenario == "nav":
+            scenario_nav(env, drv, probe, rep)
         else:
             scenario_chrome(env, drv, probe, rep)
     except Exception as e:

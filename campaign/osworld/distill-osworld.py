@@ -150,6 +150,7 @@ def distill(xml_string, vw=1920, vh=1080):
     records, suspects, inconsistents = [], [], []
     seen_lines = set()          # exact-duplicate suppression
     seen_suspect_rects = set()
+    seen_inconsistent = set()
     consumed = set()            # text nodes promoted into a parent's label
     offscreen_skipped = [0]
     BIG = 0.6 * vw * vh         # background layers: no text emission, no
@@ -196,13 +197,40 @@ def distill(xml_string, vw=1920, vh=1080):
         m = COUNT_RE.search(name) or COUNT_RE.search(text)
         if not m or int(m.group(1)) == 0:
             return
-        parent = parent_of.get(id(node))
-        scope = parent if parent is not None else node
-        exposed = sum(1 for n in scope.iter() if n.tag in ITEM_ROLES)
+        # Scope = the container the count is ABOUT, not the label's immediate
+        # parent (often a wrapper holding only the label and its twin): walk
+        # up until the ancestor is clearly bigger than the label itself.
+        nx, ny, nw, nh = _coords(node)
+        label_area = max(1, nw * nh)
+        scope = node
+        while True:
+            parent = parent_of.get(id(scope))
+            if parent is None:
+                break
+            scope = parent
+            px, py, pw, ph = _coords(scope)
+            if pw * ph >= 4 * label_area:
+                break
+        decl = m.group(0).strip().lower()
+        exposed = 0
+        for n in scope.iter():
+            if n is node:
+                continue
+            if n.tag in ITEM_ROLES:
+                exposed += 1
+                continue
+            t = ((n.get("name", "") or "").strip()
+                 or (n.text or "").strip()).lower()
+            if t and t != decl:          # the twin label is not a result row
+                exposed += 1
         if exposed == 0:
             x, y, w, h = _coords(scope)
             if w <= 0 or h <= 0:
                 x, y, w, h = _coords(node)
+            key = (x, y, w, h, decl)
+            if key in seen_inconsistent:
+                return              # label/static twins declare it twice
+            seen_inconsistent.add(key)
             inconsistents.append({
                 "declared": int(m.group(1)), "unit": m.group(2).lower(),
                 "declaring_text": m.group(0), "rect": [x, y, w, h]})

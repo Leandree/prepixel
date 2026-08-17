@@ -61,7 +61,13 @@ _state_str = distill_osworld._state_str
 
 TEMPLATE = open(os.path.join(HERE, "prompt-template.md")).read()
 
-SETTLE_BUDGET = 2.0     # s, fixed post-action delay, identical A and B (§2.5)
+# Fixed post-action budget, identical in both conditions (§2.5): A spends it
+# as env.step's pause, B as its settle deadline. Sized from measurement: one
+# a11y capture costs ~1.5 s on this host, so a 2 s budget would let B's second
+# capture overrun A's sleep. At 4 s, B's typical settle (2 captures, ~3 s)
+# stays UNDER A's fixed sleep, so B is never handed more stabilisation time
+# than A — the asymmetry, if any, is against the condition under test.
+SETTLE_BUDGET = 4.0
 TOPBAR_Y = 28           # px, system bar excluded from ALL diffs (§2.4)
 GUARD_MARGIN = 8        # px, act-guard match margin around the target (§2.4)
 WAIT_SLEEP = 5          # s, model-requested WAIT (unchanged from v1)
@@ -126,6 +132,7 @@ def _run():
     VERB = P["verb"]; VALUE = P["value"]
     T0 = time.time()
     best = [None, None]
+    near = []                   # diagnostics when the target is not found
     def extents(acc):
         # same call the OSWorld server uses to build cp:screencoord/cp:size,
         # so the rects we match against are the rects the view showed
@@ -139,7 +146,10 @@ def _run():
             return
         ext = extents(acc)
         try:
-            role = acc.getRoleName()
+            # the server builds XML tags as getRoleName().strip() with spaces
+            # turned into dashes ("spin button" -> "spin-button"); match the
+            # same normalisation or nothing is ever found
+            role = (acc.getRoleName().strip() or "unknown").replace(" ", "-")
         except Exception:
             return
         if ext is not None and role == ROLE:
@@ -147,10 +157,17 @@ def _run():
             d = abs(x - TX) + abs(y - TY) + abs(w - TW) + abs(h - TH)
             if d <= 24 and (best[1] is None or d < best[1]):
                 best[0], best[1] = acc, d
-        if ext is not None and ext[2] > 0 and ext[3] > 0:
+            elif len(near) < 5:
+                near.append({"rect": [x, y, w, h], "dist": d})
+        if ext is not None and ext[2] > 0 and ext[3] > 0 and depth <= 3:
+            # spatial pruning only near the top of the tree (other apps and
+            # other windows). Deeper containers are NOT pruned: measured on
+            # gnome-terminal's Preferences, a stack/viewport ancestor reports
+            # extents that do not cover the page it currently shows, and
+            # pruning on it made every widget of that page unreachable.
             x, y, w, h = ext
             if x > TX + TW or y > TY + TH or x + w < TX or y + h < TY:
-                return          # spatial pruning: subtree cannot contain it
+                return
         try:
             n = min(acc.childCount, 256)
         except Exception:
@@ -171,19 +188,34 @@ def _run():
         return {"ok": False, "err": "walk: %s" % e}
     acc = best[0]
     if acc is None:
-        return {"ok": False, "err": "node-not-found"}
+        return {"ok": False, "err": "node-not-found",
+                "walk_s": round(time.time() - T0, 2), "near": near}
     try:
         if VERB == "set_value":
-            try:
-                et = acc.queryEditableText()
-                et.setTextContents(str(VALUE))
-                return {"ok": True, "method": "EditableText.setTextContents"}
-            except Exception:
-                pass
+            # Value first: on a spin button / slider it is the semantic
+            # setter. Writing the entry text alone can leave the underlying
+            # adjustment on its old value until the widget is activated.
             try:
                 vi = acc.queryValue()
                 vi.currentValue = float(VALUE)
                 return {"ok": True, "method": "Value.currentValue"}
+            except Exception:
+                pass
+            try:
+                et = acc.queryEditableText()
+                et.setTextContents(str(VALUE))
+                committed = None
+                try:
+                    ai = acc.queryAction()
+                    names = [ai.getName(i).lower() for i in range(ai.nActions)]
+                    if "activate" in names:
+                        ai.doAction(names.index("activate"))
+                        committed = "Action.activate"
+                except Exception:
+                    pass
+                return {"ok": True,
+                        "method": "EditableText.setTextContents"
+                                  + ("+" + committed if committed else "")}
             except Exception as e:
                 return {"ok": False, "err": "no-settable-interface: %s" % e}
         if VERB in ("click", "toggle"):
@@ -223,6 +255,7 @@ class Driver:
         self.cur_tree = None
         self.cur_records = None
         self.prev_diff_base = []    # previous view minus system bar (kbd guard)
+        self.pending_expect = None  # (what, wanted) the last action asked for
         self.mech_total = {"platform_available": None, "rung1": 0, "rung2": 0,
                            "kbd": 0, "resolve_errors": 0, "noop_toggles": 0,
                            "rung1_fallbacks": 0, "settle_ms_total": 0,
@@ -351,6 +384,14 @@ class Driver:
         Returns (history_line, verdict_or_None, needs_settle, before_rec)."""
         kind = str(act.get("action", "")).lower()
         mech["action_kind"] = kind
+        # what the action ASKED for; the guard checks the ask, not just "did
+        # anything move" (§2.4: an unmet ask must come back as UNVERIFIED
+        # with the re-read state, e.g. still value="80")
+        self.pending_expect = None
+        if kind == "set_value":
+            self.pending_expect = ("value", str(act.get("value", "")))
+        elif kind == "toggle":
+            self.pending_expect = ("checked", bool(act.get("to", True)))
 
         if kind in ("wait", "done", "fail"):
             return kind, None, kind == "wait", None
@@ -556,6 +597,10 @@ class Driver:
                     if score > best:
                         cand, best = r, score
             if cand is None:
+                if getattr(self, "pending_expect", None):
+                    what, wanted = self.pending_expect
+                    return (f"UNVERIFIED (asked {what}={wanted}, but the "
+                            f"target element is no longer in the view)")
                 return "CONFIRMED (element no longer present — view changed)"
             changes = []
             if cand["value"] != before["value"]:
@@ -568,6 +613,24 @@ class Driver:
             if cand["label"] != before["label"]:
                 changes.append(f'label {_q(before["label"])}→'
                                f'{_q(cand["label"])}')
+            expect = getattr(self, "pending_expect", None)
+            if expect:
+                what, wanted = expect
+                if what == "value":
+                    got = cand["value"]
+                    ok = (got == wanted)
+                    try:
+                        ok = ok or float(got) == float(wanted)
+                    except (TypeError, ValueError):
+                        pass
+                    if not ok:
+                        return (f'UNVERIFIED (asked value={_q(wanted)}, '
+                                f'element re-read: {cand["line"]})')
+                elif what == "checked":
+                    if cand["states"].get("checked") is not wanted:
+                        return (f'UNVERIFIED (asked checked:'
+                                f'{str(wanted).lower()}, element re-read: '
+                                f'{cand["line"]})')
             if changes:
                 return "CONFIRMED (" + ", ".join(changes) + ")"
             return f"UNVERIFIED (element re-read unchanged: still {cand['line']})"
