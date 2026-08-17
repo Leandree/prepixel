@@ -1,0 +1,24 @@
+{
+ "window_probed": "Réunion",
+ "result": {
+  "axwindows_err": 0,
+  "n_windows": 3,
+  "n_nodes": 7,
+  "max_depth": 2,
+  "roles": {
+   "AXWindow": 1,
+   "AXTabGroup": 1,
+   "AXButton": 5
+  },
+  "text_categories": {
+   "ui-chrome": 1,
+   "possible-person-or-content": 3,
+   "none": 3
+  },
+  "ui_chrome_labels": [
+   "Réunion Zoom"
+  ],
+  "redacted_nodes": 3,
+  "nodes_with_geometry": 7
+ }
+}
