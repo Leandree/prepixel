@@ -1666,6 +1666,72 @@
     },
     {
       "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session, 37 windows on screen",
+      "app": "The whole desktop — semantic-compositor router (CGWindowList + per-window channel binding + system-wide hit test). Mirrors windows-desktop-router and linux-desktop-router-merged-view.",
+      "stack": "other",
+      "stack_detection": {
+        "method": "per-window: process args for a CDP port, then bundle id for AppleScript scriptability, then whether AXUIElementCreateApplication exposes windows",
+        "signature": "CGWindowListCopyWindowInfo returns 37 on-screen windows front-to-back with pid/owner/rect/layer/alpha; each pid then answers (or refuses) its channel probe",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "campaign/macos/router_mac.py. Accessibility TCC for the AX side; Screen Recording only for verification captures. Privacy rule carried over from the Windows cell: the user's own windows are mapped and channel-classified ONLY — no content walk, nothing of theirs in any artifact. Content extraction is demonstrated exclusively on two windows the agent launched itself (a Chrome with --remote-debugging-port and a throwaway TextEdit document).",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Content pulled live through the bound channel, for owned windows only. Chrome via CDP: 20 tokens, 0.7 ms, vs 720 for a screenshot of the same window. TextEdit via AX: 56 tokens, 6.1–42.3 ms, vs 370–382 in pixels — and the text came back char-exact against the file the harness had just written, including the em-dash. The router never needs the whole screen: it addresses one window through one channel."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "37 windows mapped in 31.9 ms into an 838-token merged view, against 1980 tokens for a single full-desktop screenshot (4784 at Retina 2x). Every window was bound to a channel from a signature BEFORE any content was read: 16 accessibility-api, 6 accessibility-api+object-model (TextEdit/Finder/Safari — scriptable bundle ids), 14 pixels-baseline, 1 cdp. The 14 pixel bindings are honest and explicit, not failures: 12 are Control Center menu-bar items that answer AX but expose ZERO windows (frame-only -> 0% structural coverage -> crop, the same shape Windows saw on Unigine Heaven), and 2 are Window Server surfaces where AX refuses outright."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Covered by macos-textedit-accessibility-api and macos-chrome-cdp."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not a living-screen probe; see macos-clock-accessibility-api."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "No action taken on the user's live desktop — read-only by design. Blind-click mechanics are proven in macos-textedit-accessibility-api and macos-chrome-cdp."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Windows with no structural coverage are declared as pixel regions with their rects rather than omitted, so the merged view never reads as an empty desktop."
+        }
+      },
+      "measurements": {
+        "view_bytes": 3351,
+        "view_tokens_est": 838,
+        "screenshot_tokens_est": 1980,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 31.9,
+        "notes": "THE MEASUREMENT THIS CELL EXISTS FOR — and it is a sharper result than the headline ratio. There are two ways to answer 'which window owns this pixel'. (1) RECONSTRUCT it from the z-order list and the declared rectangles: the first window, front to back, whose rect contains the point. That is the ONLY method available to a Linux or Windows router. (2) ASK THE COMPOSITOR: AXUIElementCopyElementAtPosition puts the question to the window server, which answers with the element actually hit. We ran both at 40 overlap points on a real cluttered desktop. Global agreement is 33/40 = 82.5%, but the aggregate hides the structure entirely, because the split by window LAYER is total: on ordinary windows (kCGWindowLayer == 0) reconstruction is 33/33 = 100% EXACT, and on the overlay layer (layer 1000) it is 0/7 = 0% WRONG, every single time. The mechanism, confirmed by screenshot: an overlay window declared a 748x264 rect while painting only a small opaque band inside it; the rest of its rectangle is transparent and the windows behind show through. A reconstruction router therefore marks 748x264 points' worth of fully visible content as hidden — a FALSE OCCLUSION, which is a silent divergence in the router layer rather than in any app's channel. macOS closes it with one call, and the a-priori signature is free: kCGWindowLayer > 0 means the declared rect is an upper bound on what is painted, never a statement of coverage. A Linux/Windows router cannot make that call and must fall back to a per-window pixel spot-check (exactly what src/coverage-guard.mjs does) on every layer>0 surface."
+      },
+      "runtime_verification": {
+        "method": "Screenshot of the disputed region (382,0,748,264) compared against both answers; TextEdit content compared byte-for-byte against the file the harness wrote; Chrome's CDP target list compared against the page the harness opened.",
+        "agreement": "The screenshot backs the window server and refutes the z-order reconstruction: the overlay paints a small black band in the menubar area and is transparent elsewhere, with VS Code plainly visible underneath. Owned-window content matched its ground truth exactly on both channels."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for the AX side and the system-wide hit test",
+        "Screen Recording only for the verification screenshot",
+        "None for the CDP-bound window (loopback socket)"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/macos/router_mac.py",
+        "campaign/results/artifacts/macos/router-window-map.json",
+        "campaign/results/artifacts/macos/router-merged-map.txt"
+      ]
+    },
+    {
+      "os": "macos",
       "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
       "app": "Finder (system file manager), probe folder with 3 throwaway files",
       "stack": "appkit",
@@ -2110,6 +2176,70 @@
         "campaign/macos/silent-divergence-macos.mjs",
         "campaign/macos/occlusion-isolate.mjs",
         "campaign/macos/cross_window_occlusion.py"
+      ]
+    },
+    {
+      "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Vibe Island (app.vibeisland.macos) — THIRD-PARTY SwiftUI notch-overlay app, the README's prime thin-tree suspect. Read-only probe, no input sent.",
+      "stack": "swiftui",
+      "stack_detection": {
+        "method": "linked frameworks of the app binary",
+        "signature": "otool -L links SwiftUI.framework + AppKit.framework; bundle app.vibeisland.macos; window is kCGWindowLayer 27 (overlay layer, not a normal document window)",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Accessibility TCC only. No AT-latch needed — the tree answered on the first query, like Apple's own SwiftUI apps.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "The tree is THREE nodes deep and three nodes total: AXWindow (subrole AXSystemDialog) -> AXGroup (AXHostingView, the SwiftUI bridge) -> AXStaticText with value '5'. That reads like the textbook thin tree the README warned about — and the screenshot says it is NOT one. This app is a notch widget: everything it actually paints is a small band containing one icon and the number 5. The channel reported the app's entire textual content, exactly and completely. A thin tree and a thin APP are indistinguishable by node count alone; only the pixel cross-check separates them, which is precisely why safety property 3 (verifiable at runtime) is not optional."
+        },
+        "t2_enumerate": {
+          "pass": false,
+          "detail": "No interactive element is exposed (no AXButton, no AXPress target) even though the widget responds to clicks, and the icon it paints — a small bar-chart glyph carrying state — has NO node of any kind, not even an undeclared-region marker. So the one real gap here is a pictorial element that is omitted rather than declared. It is a small omission, but it is the same class the campaign has been tracking: the router learns '5' and cannot learn that a status glyph sits next to it."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Not exercised — read-only probe on a user app."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not measured."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Deliberately not attempted: no allowlisted action on a third-party app on the user's live desktop."
+        },
+        "t6_pictorial": {
+          "pass": false,
+          "detail": "The icon is neither readable nor declared (see t2). Under the campaign's standard this is an omission the router cannot see from the channel — caught here only by the pixel cross-check."
+        }
+      },
+      "measurements": {
+        "view_bytes": 96,
+        "view_tokens_est": 24,
+        "screenshot_tokens_est": 526,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 4.0,
+        "notes": "THE OPERATIONALLY IMPORTANT RESULT IS ABOUT src/coverage-guard.mjs, and it changes how the guard must be wired on every OS. The window declares a 680x580 rect while painting only a narrow band; the rest is transparent and the windows behind show through. We ran the shipped contentEnergy() on the same region captured two ways. (a) As a SCREEN-REGION crop — what a naive router does — energy is 0.387, far above the 0.03 threshold, so the guard returns 'SILENT -> declare-opaque'. That verdict is WRONG: the energy belongs to Visual Studio Code sitting behind the transparent overlay, not to this app. (b) As the window's OWN SURFACE via CGWindowListCreateImage(kCGWindowListOptionIncludingWindow, windowID), energy is 0.003 and the guard correctly returns 'genuinely-empty'. A factor of 129 between the two, and it flips the verdict from false alarm to correct. THE RULE: the pixel spot-check must read a per-window surface, never a screen-region crop, or every transparent or partially-transparent window produces a false silent-divergence report. macOS provides CGWindowListCreateImage; Windows already uses PrintWindow(PW_RENDERFULLCONTENT) and arrived at the same requirement independently; an X11 router needs XCompositeNameWindowPixmap. SECOND, SMALLER CAVEAT, measured: energy is area-relative, so a small painted region inside a large declared rect is diluted — restricting the measurement to the painted band raised energy from 0.003 to 0.014, a factor of 4.7. Here both figures stay below threshold and the verdict is right either way, but the mechanism is real and a content-rich small region inside a mostly-transparent window could fall under the line. Record raw energy alongside the boolean, and consider normalising by painted area rather than declared area."
+      },
+      "runtime_verification": {
+        "method": "Window screenshot compared against the 3-node tree; then the same region captured as a screen crop and as the window's own surface, with contentEnergy run on both.",
+        "agreement": "Text: exact and complete ('5' is genuinely all the app writes). Pictorial: one icon on screen with no corresponding node — an omission, not a fabrication. The channel never reported anything that is not on screen."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for host process",
+        "Screen Recording for the verification captures"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "campaign/results/artifacts/macos/vibe-island-window-surface.png",
+        "campaign/results/artifacts/macos/vibe-island-screen-region.png"
       ]
     },
     {
