@@ -1,0 +1,61 @@
+{
+ "cell": "windows-obs-qt-uia",
+ "replication": true,
+ "window_title": "OBS 31.0.3 - Profil: Untitled - Scènes: Untitled",
+ "window_class": "OBSBasic",
+ "window_rect": [
+  417,
+  151,
+  1311,
+  729
+ ],
+ "nodes_walked": 185,
+ "structural_coverage_pct": 46.5,
+ "suspects_checked": 1,
+ "guard_a_regions": [
+  {
+   "label": "OBSBasicPreview",
+   "rect": [
+    421,
+    175,
+    522,
+    351
+   ],
+   "node_type": "GroupControl",
+   "energy": 0.245,
+   "edge_fraction": 0.0245,
+   "votes": {
+    "energy": true,
+    "edges": true
+   },
+   "verdict": "SILENT->declare-opaque",
+   "line": "[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]",
+   "crop_artifact": "obs-guard-region0-REPL.png"
+  }
+ ],
+ "guard_b_flags": [],
+ "preview_region": {
+  "label": "OBSBasicPreview",
+  "rect": [
+   421,
+   175,
+   522,
+   351
+  ],
+  "node_type": "GroupControl",
+  "energy": 0.245,
+  "edge_fraction": 0.0245,
+  "votes": {
+   "energy": true,
+   "edges": true
+  },
+  "verdict": "SILENT->declare-opaque",
+  "line": "[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]",
+  "crop_artifact": "obs-guard-region0-REPL.png"
+ },
+ "full_screenshot_tokens": 1275,
+ "explicit_lines": [
+  "[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]"
+ ],
+ "obs_closed": true
+}

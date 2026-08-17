@@ -1,0 +1,442 @@
+[
+  {
+    "i": 0,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 42026,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1765,
+      "view_tokens_est": 437
+    },
+    "truth": {
+      "nRows": 9,
+      "countPending": 4,
+      "maxCustomer": "Fapifa SARL",
+      "shipTargetId": 3004,
+      "shipTargetCustomer": "Momopi Ltd"
+    }
+  },
+  {
+    "i": 1,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 45339,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1938,
+      "view_tokens_est": 480
+    },
+    "truth": {
+      "nRows": 10,
+      "countPending": 4,
+      "maxCustomer": "Reveve GmbH",
+      "shipTargetId": 3108,
+      "shipTargetCustomer": "Pipidu SARL"
+    }
+  },
+  {
+    "i": 2,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 44751,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1933,
+      "view_tokens_est": 479
+    },
+    "truth": {
+      "nRows": 10,
+      "countPending": 2,
+      "maxCustomer": "Miduso Ltd",
+      "shipTargetId": 3203,
+      "shipTargetCustomer": "Saludu Ltd"
+    }
+  },
+  {
+    "i": 3,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 31789,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1247,
+      "view_tokens_est": 309
+    },
+    "truth": {
+      "nRows": 6,
+      "countPending": 0,
+      "maxCustomer": "Kamoso SA",
+      "shipTargetId": 3300,
+      "shipTargetCustomer": "Kamoso SA"
+    }
+  },
+  {
+    "i": 4,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 32153,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1259,
+      "view_tokens_est": 312
+    },
+    "truth": {
+      "nRows": 6,
+      "countPending": 2,
+      "maxCustomer": "Sobaka SARL",
+      "shipTargetId": 3402,
+      "shipTargetCustomer": "Tipimo & Co"
+    }
+  },
+  {
+    "i": 5,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 30874,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1252,
+      "view_tokens_est": 310
+    },
+    "truth": {
+      "nRows": 6,
+      "countPending": 2,
+      "maxCustomer": "Pisopi Ltd",
+      "shipTargetId": 3504,
+      "shipTargetCustomer": "Lusamo Ltd"
+    }
+  },
+  {
+    "i": 6,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 37156,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1585,
+      "view_tokens_est": 393
+    },
+    "truth": {
+      "nRows": 8,
+      "countPending": 0,
+      "maxCustomer": "Lubani SA",
+      "shipTargetId": 3601,
+      "shipTargetCustomer": "Nimiso & Co"
+    }
+  },
+  {
+    "i": 7,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 34010,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1421,
+      "view_tokens_est": 352
+    },
+    "truth": {
+      "nRows": 7,
+      "countPending": 1,
+      "maxCustomer": "Tiduba SAS",
+      "shipTargetId": 3700,
+      "shipTargetCustomer": "Tiduba SAS"
+    }
+  },
+  {
+    "i": 8,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 45807,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1934,
+      "view_tokens_est": 479
+    },
+    "truth": {
+      "nRows": 10,
+      "countPending": 2,
+      "maxCustomer": "Vetive SARL",
+      "shipTargetId": 3804,
+      "shipTargetCustomer": "Baromi GmbH"
+    }
+  },
+  {
+    "i": 9,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 38841,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1594,
+      "view_tokens_est": 395
+    },
+    "truth": {
+      "nRows": 8,
+      "countPending": 3,
+      "maxCustomer": "Lusaso SAS",
+      "shipTargetId": 3906,
+      "shipTargetCustomer": "Lusaso SAS"
+    }
+  },
+  {
+    "i": 10,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 37930,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1591,
+      "view_tokens_est": 394
+    },
+    "truth": {
+      "nRows": 8,
+      "countPending": 1,
+      "maxCustomer": "Ninipi SAS",
+      "shipTargetId": 4007,
+      "shipTargetCustomer": "Robami Ltd"
+    }
+  },
+  {
+    "i": 11,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 34810,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1425,
+      "view_tokens_est": 353
+    },
+    "truth": {
+      "nRows": 7,
+      "countPending": 1,
+      "maxCustomer": "Dudumo SARL",
+      "shipTargetId": 4101,
+      "shipTargetCustomer": "Dudumo SARL"
+    }
+  },
+  {
+    "i": 12,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 39069,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1600,
+      "view_tokens_est": 396
+    },
+    "truth": {
+      "nRows": 8,
+      "countPending": 3,
+      "maxCustomer": "Duluve Ltd",
+      "shipTargetId": 4205,
+      "shipTargetCustomer": "Sobare Ltd"
+    }
+  },
+  {
+    "i": 13,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 39009,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1595,
+      "view_tokens_est": 395
+    },
+    "truth": {
+      "nRows": 8,
+      "countPending": 2,
+      "maxCustomer": "Kadumo SAS",
+      "shipTargetId": 4307,
+      "shipTargetCustomer": "Rovepi SA"
+    }
+  },
+  {
+    "i": 14,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 29105,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1095,
+      "view_tokens_est": 272
+    },
+    "truth": {
+      "nRows": 5,
+      "countPending": 4,
+      "maxCustomer": "Tilufa SARL",
+      "shipTargetId": 4400,
+      "shipTargetCustomer": "Verofa SAS"
+    }
+  },
+  {
+    "i": 15,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 28401,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1093,
+      "view_tokens_est": 271
+    },
+    "truth": {
+      "nRows": 5,
+      "countPending": 1,
+      "maxCustomer": "Pibasa SAS",
+      "shipTargetId": 4500,
+      "shipTargetCustomer": "Bapiso GmbH"
+    }
+  },
+  {
+    "i": 16,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 45275,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1934,
+      "view_tokens_est": 479
+    },
+    "truth": {
+      "nRows": 10,
+      "countPending": 1,
+      "maxCustomer": "Vemodu Ltd",
+      "shipTargetId": 4601,
+      "shipTargetCustomer": "Kafalu Ltd"
+    }
+  },
+  {
+    "i": 17,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 44079,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1932,
+      "view_tokens_est": 478
+    },
+    "truth": {
+      "nRows": 10,
+      "countPending": 3,
+      "maxCustomer": "Nifalu GmbH",
+      "shipTargetId": 4706,
+      "shipTargetCustomer": "Minimo SA"
+    }
+  },
+  {
+    "i": 18,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 41472,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1760,
+      "view_tokens_est": 436
+    },
+    "truth": {
+      "nRows": 9,
+      "countPending": 4,
+      "maxCustomer": "Ninisa Ltd",
+      "shipTargetId": 4804,
+      "shipTargetCustomer": "Nisalu SAS"
+    }
+  },
+  {
+    "i": 19,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "pixels": {
+      "png_bytes": 38241,
+      "img_tokens": 1366
+    },
+    "structured": {
+      "view_bytes": 1591,
+      "view_tokens_est": 394
+    },
+    "truth": {
+      "nRows": 8,
+      "countPending": 1,
+      "maxCustomer": "Romiso GmbH",
+      "shipTargetId": 4903,
+      "shipTargetCustomer": "Romiso GmbH"
+    }
+  }
+]

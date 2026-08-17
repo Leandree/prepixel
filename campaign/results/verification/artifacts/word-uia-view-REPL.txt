@@ -1,0 +1,168 @@
+window -8,-8,1936,1048 "Document1 - Word"
+window 535,245,850,542 "Sign in to set up Office"
+window 543,276,834,503 "Sign in to set up Office"
+[pixels] image 563,276,108,48 "Microsoft Logo"
+button 1277,276,30,30 "Send a smile for feedback"
+button 1307,276,30,30 "Send a frown for feedback"
+text 584,382,429,38 "Sign in to get started with Office"
+listitem 584,446,429,30 "Use your work, school, or personal Microsoft account information"
+listitem 584,476,429,30 "Create and collaborate with Word, Excel, PowerPoint, and Outlook"
+listitem 584,506,429,49 "Save and share documents across devices with OneDrive cloud storage"
+button 584,585,195,33 "Sign in or create account"
+hyperlink 794,585,127,33 "I have a product key"
+hyperlink 583,742,72,19 "Close Word"
+pane 0,178,1920,6 "DropShadowTop"
+pane 0,0,1920,178 "MsoDockTop"
+pane 0,0,1920,178 "Ribbon"
+pane 0,0,1920,178 "Ribbon"
+toolbar 42,0,238,48 "Quick Access Toolbar"
+button 42,9,112,29 "AutoSave" [toggle=0]
+button 155,9,28,29 "Save"
+splitbutton 184,9,38,29 "VBA-Range.InsertAfter"
+button 184,9,25,29 "VBA-Range.InsertAfter"
+menuitem 209,9,13,29 "More Options"
+button 223,9,28,29 "Can't Repeat"
+menuitem 252,8,28,31 "Customize Quick Access Toolbar"
+titlebar 281,0,503,48 "‪Document1‬  -  Word"
+button 281,0,134,48 "‪Document1‬  -  Word"
+menuitem 784,8,368,32 "Type to search and use the up and down arrow keys to navigate"
+edit 825,15,314,20 "Microsoft search" value="Search"
+menuitem 1726,0,50,48 "Leandre Carpentier"
+button 1776,0,48,48 "Minimize"
+button 1824,0,48,48 "Restore Down"
+button 1872,0,48,48 "Close"
+button 4,48,54,30 "File Tab"
+tab 58,48,1850,30 "Ribbon Tabs"
+tabitem 58,48,55,30 "Home" [selected=True]
+tabitem 114,48,53,30 "Insert" [selected=False]
+tabitem 168,48,59,30 "Design" [selected=False]
+tabitem 228,48,59,30 "Layout" [selected=False]
+tabitem 288,48,83,30 "References" [selected=False]
+tabitem 372,48,68,30 "Mailings" [selected=False]
+tabitem 441,48,60,30 "Review" [selected=False]
+tabitem 502,48,46,30 "View" [selected=False]
+tabitem 549,48,46,30 "Help" [selected=False]
+button 1649,51,90,24 "Comments" [toggle=0]
+combobox 1747,51,82,24 "Editing" value="Editing"
+menuitem 1837,48,71,30 "Share"
+pane 8,78,1876,100 "Lower Ribbon"
+group 12,78,1872,100 "Home"
+group 12,80,171,96 "Clipboard"
+splitbutton 20,82,42,76 "Paste"
+button 20,82,42,38 "Paste"
+menuitem 20,120,42,38 "More Options"
+button 64,82,52,24 "Cut"
+button 64,108,61,24 "Copy"
+button 64,134,111,24 "Format Painter" [toggle=0]
+button 167,160,16,16 "Office Clipboard..."
+group 183,80,312,96 "Font"
+combobox 191,90,107,24 "Font" value="Aptos (Body)"
+edit 192,92,92,19 "Font" value="Aptos (Body)"
+button 284,91,13,22 "Open"
+combobox 300,90,61,24 "Font Size" value="12"
+edit 301,92,46,19 "Font Size" value="12"
+button 347,91,13,22 "Open"
+button 363,90,24,24 "Grow Font"
+button 389,90,24,24 "Shrink Font"
+menuitem 418,90,40,24 "Change Case"
+button 463,90,24,24 "Clear Formatting"
+button 191,122,24,24 "Bold" [toggle=0]
+button 217,122,24,24 "Italic" [toggle=0]
+splitbutton 243,122,39,24 "Underline" [toggle=0]
+button 243,122,24,24 "Underline" [toggle=0]
+menuitem 267,122,15,24 "More Options"
+button 284,122,24,24 "Strikethrough" [toggle=0]
+button 310,122,24,24 "Subscript" [toggle=0]
+button 336,122,24,24 "Superscript" [toggle=0]
+menuitem 365,122,40,24 "Text Effects and Typography"
+splitbutton 407,122,39,24 "Text Highlight Color" [toggle=0]
+button 407,122,24,24 "Text Highlight Color Yellow" [toggle=0]
+menuitem 431,122,15,24 "More Options"
+splitbutton 448,122,39,24 "Font Color"
+button 448,122,24,24 "Font Color Red"
+menuitem 472,122,15,24 "More Options"
+button 479,160,16,16 "Font..."
+group 495,80,251,96 "Paragraph"
+splitbutton 503,90,39,24 "Bullets" [toggle=0]
+button 503,90,24,24 "Bullets" [toggle=0]
+menuitem 527,90,15,24 "More Options"
+splitbutton 544,90,39,24 "Numbering" [toggle=0]
+button 544,90,24,24 "Numbering" [toggle=0]
+menuitem 568,90,15,24 "More Options"
+menuitem 585,90,40,24 "Multilevel List"
+button 630,90,24,24 "Decrease Indent"
+button 656,90,24,24 "Increase Indent"
+button 685,90,24,24 "Sort..."
+button 714,90,24,24 "Show All" [toggle=0]
+button 503,122,24,24 "Align Left" [toggle=1]
+button 529,122,24,24 "Center" [toggle=0]
+button 555,122,24,24 "Align Right" [toggle=0]
+button 581,122,24,24 "Justify" [toggle=0]
+menuitem 610,122,40,24 "Line and Paragraph Spacing"
+splitbutton 655,122,39,24 "Shading"
+button 655,122,24,24 "Shading RGB(0, 0, 0)"
+menuitem 679,122,15,24 "More Options"
+splitbutton 696,122,39,24 "Borders" [toggle=0]
+button 696,122,24,24 "Borders" [toggle=0]
+menuitem 720,122,15,24 "More Options"
+button 730,160,16,16 "Paragraph..."
+group 746,80,803,96 "Styles"
+group 754,87,787,63 "Styles"
+menuitem 754,90,787,60
+pane 756,92,758,56 "Styles"
+datagrid 757,92,756,168 "Styles"
+listitem 757,92,108,56 "¶ Normal" [selected=True]
+listitem 865,92,108,56 "¶ No Spacing" [selected=False]
+listitem 973,92,108,56 "Heading 1" [selected=False]
+listitem 1081,92,108,56 "Heading 2" [selected=False]
+listitem 1189,92,108,56 "Title" [selected=False]
+listitem 1297,92,108,56 "Subtitle" [selected=False]
+listitem 1405,92,108,56 "Subtle Emphasis" [selected=False]
+button 1514,90,24,60 "Styles"
+[pixels] image 1522,116,8,8
+button 1533,160,16,16 "Styles..."
+group 1549,80,96,96 "Editing"
+splitbutton 1557,82,80,24 "Find"
+button 1557,82,56,24 "Find"
+menuitem 1613,82,24,24 "More Options"
+button 1557,108,74,24 "Replace..."
+menuitem 1557,134,75,24 "Select"
+group 1645,80,58,96 "Voice"
+splitbutton 1653,82,42,76 "Dictate" [toggle=0]
+button 1653,82,42,38 "Dictate" [toggle=0]
+menuitem 1653,120,42,38 "More Options"
+group 1703,80,58,96 "Editor"
+button 1711,82,42,76 "Editor"
+group 1761,80,63,96 "Add-ins"
+button 1769,82,47,76 "Add‑ins" [toggle=0]
+menuitem 1888,154,20,20 "Ribbon Display Options"
+pane 0,1010,1920,22 "MsoDockBottom"
+pane 0,1010,1920,22 "Status Bar"
+statusbar 0,1010,1920,22 "Status Bar"
+button 4,1011,73,21 "Page Number Page 1 of 1"
+text 80,1011,63,21 "Word Count 14 words"
+button 146,1011,32,21 "Coauthoring Mode"
+button 181,1011,94,21 "Language French (France)"
+button 278,1011,117,21 "Text Predictions Text Predictions: On"
+button 398,1011,161,21 "Accessibility Checker Accessibility: Good to go"
+button 1550,1011,64,21 "Focus"
+button 1617,1011,40,21 "Read Mode" [toggle=0]
+button 1657,1011,40,21 "Print Layout" [toggle=1]
+button 1697,1011,40,21 "Web Layout" [toggle=0]
+button 1738,1011,18,21 "Zoom Out (Ctrl -)"
+slider 1756,1011,100,21 "Zoom"
+button 1756,1011,48,21 "Zoom Out"
+thumb 1804,1016,5,11 "Position"
+button 1809,1011,47,21 "Zoom In"
+button 1856,1011,18,21 "Zoom In (Ctrl +)"
+button 1874,1011,46,21 "Zoom 100 %"
+pane 0,178,1920,832 "Document1"
+document 0,178,1903,832 "Document1"
+custom 555,195,793,815 "Page 1"
+edit 555,291,793,719 "Page 1 content"
+pane 1903,178,17,832 "Vertical"
+button 1903,178,17,17 "Line up"
+button 1903,769,17,224 "Page down"
+button 1903,993,17,17 "Line down"
+menubar 0,0,22,22 "Système"
+menuitem 0,0,22,22 "Système"
