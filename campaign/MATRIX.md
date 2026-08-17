@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-64 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+66 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -54,6 +54,8 @@
 | windows | rekordbox 7.0.9 (Pioneer DJ, JUCE framework — fully custom-drawn like FL Studio), user's real library, READ-ONLY probe | custom-canvas | accessibility-api | 🟡 partial | explicit | 2,003 | 2,584 | ✅ |
 | windows | VS Code (Electron/Chromium 148) — isolated instance, temp profile, throwaway workspace | electron | cdp | ✅ works | explicit | 648 | 1,366 | ✅ |
 | windows | Unigine Heaven Benchmark 4.0 (Direct3D11, windowed 1280x720) — real-time 3D scene at ~317 fps | game | pixels-baseline | ⬜ unavailable | explicit | 59 | 1,285 | ✅ |
+| windows | R.E.P.O. v0.4.4.3 (Unity) — fullscreen main menu at 576 fps, engine diversity counterpart to the UE5 cell | game | pixels-baseline | ⬜ unavailable | explicit | 8 | 2,765 | ✅ |
+| windows | SILENT HILL 2 (2024 remake, Unreal Engine 5, AAA) — borderless fullscreen 1920x1080, in-engine scene at 54 fps | game | pixels-baseline | ⬜ unavailable | explicit | 9 | 2,765 | ✅ |
 | windows | Microsoft Word via COM (the brief's Tier C 'star case') / LibreOffice via UNO as fallback | office-native | object-model | ⛔ blocked | blocked |  |  | ✅ |
 | windows | Microsoft Word 16.0 via COM automation — the brief's Tier C star case: the document itself, above any render tree. Throwaway document, closed without saving | office-native | object-model | ✅ works | — | 18 | 1,446 | ✅ |
 | windows | Whole desktop — 10 concurrent visible windows, 6 process families (elevated WinUI, Chromium x2 modes, Electron, WinUI Notepad, Terminal, Win32 dialog, shell) | other | accessibility-api | ✅ works | explicit | 201 | 2,765 | ✅ |
@@ -98,6 +100,8 @@ The production-safety question: could a router know the channel in advance, and 
 | :9233/json/version -> Chrome/148.0.7778.97; Electron warns 'remote-debugging-port is not in the list of known options, but still passed to Electron/Chromium' (same banner as the macOS Cursor cell) | cdp | ✅ works | explicit |
 | com.apple.Chess; every piece an AXButton on first walk | accessibility-api | ✅ works | — |
 | AppWindow class, D3D11 swapchain; UIA tree = 7 nodes, all OS window chrome (title bar, system menu, min/max/close), ZERO content children — the unambiguous zero-coverage signal | pixels-baseline | ⬜ unavailable | explicit |
+| UnityWndClass; the window surfaces in UIA as a single PaneControl (NOT a WindowControl) — a UIA WindowControl name-search finds NOTHING while Win32 EnumWindows sees the window plainly | pixels-baseline | ⬜ unavailable | explicit |
+| UnrealWindow class + SHProto-Win64-Shipping.exe; UIA answers with a SINGLE WindowControl node — no title bar, no buttons, nothing (borderless strips even the 7-node chrome Heaven had) | pixels-baseline | ⬜ unavailable | explicit |
 | libgtk-4.so; text nodes name their font per run | render-tree-tap | ✅ works | explicit |
 | org.a11y.Bus not activatable in headless sandbox; app does not register | accessibility-api | ⛔ blocked | blocked |
 | libgtk-4.so; gsk_renderer_render | render-tree-tap | 🟡 partial | explicit |
@@ -131,9 +135,9 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 49/64.
-- **Silent divergences surviving** (disqualifying): 0/64 ✅ none
+- Cells where structure **works**: 49/66.
+- **Silent divergences surviving** (disqualifying): 0/66 ✅ none
 - Silent divergences **found, then caught-and-declared** by coverage-guard: 3 — FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
-- Cells **not** predictable in advance: 0/64 ✅ none
+- Cells **not** predictable in advance: 0/66 ✅ none
 
 Reading: the campaign found 3 silent divergences (**FL Studio 2025** (windows), **OBS Studio 31.0.3** (windows), **rekordbox 7.0.9** (windows)) and **neutralized every one** with the documented coverage-guard (pixel spot-check on structure-empty regions + view self-consistency): each cell re-emits its blind spot as an explicit `[pixels]`/`[inconsistent]` line and records the guard run in a `mitigation` field. Combined with 0 unpredictable cells, the safety claim stands in its honest form: not "structure never lies", but "every blind spot is predictable a priori and convertible to an explicit declaration by a documented, measured router guard."

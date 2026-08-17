@@ -1,0 +1,56 @@
+{
+ "cell": "windows-silenthill2-pixels-baseline",
+ "appid": "2124490",
+ "t_window_s": 5.1,
+ "window_rect": [
+  0,
+  0,
+  1920,
+  1080
+ ],
+ "window_title": "Silent Hill 2  ",
+ "window_class": "UnrealWindow",
+ "latch_attempts": [
+  {
+   "attempt": 1,
+   "nodes": 1,
+   "ms": 15.9
+  },
+  {
+   "attempt": 2,
+   "nodes": 1,
+   "ms": 17.0
+  }
+ ],
+ "uia_nodes": 1,
+ "uia_types": {
+  "WindowControl": 1
+ },
+ "view_tokens": 9,
+ "printwindow_ok": true,
+ "capture_mode": "printwindow",
+ "guard": {
+  "coverage_pct": 0.0,
+  "synthesized": true,
+  "suspects": [
+   {
+    "label": "client-area (synthesized: frame-only tree)",
+    "rect": [
+     0,
+     32,
+     1920,
+     1048
+    ],
+    "hasReadableContent": false,
+    "node_type": "synthesized",
+    "depth": -1,
+    "energy": 0.297,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 0,32,1920,1048 \"client-area (synthesized: frame-only tree)\" [unverified: pixels show content]"
+   }
+  ]
+ },
+ "screenshot_tokens": 2765,
+ "screenshot_tokens_legacy": 1534,
+ "closed": true
+}

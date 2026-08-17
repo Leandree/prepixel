@@ -268,11 +268,26 @@ locales and cookie states. The density law is a property of the pages, not of
 the OS or the renderer instance. FR locale raised more consent banners (8/16
 vs 6/16); 7/16 sites carry canvas/video, all declared.
 
+**Real games, both engines (manager's request).** SILENT HILL 2 (UE5, AAA,
+borderless): **1 UIA node** for a full in-engine scene at 54 fps — borderless
+sheds even the 7 chrome nodes Heaven had. R.E.P.O. (Unity, fullscreen menu at
+576 fps): **1 bare PaneControl** while the screen shows eight clickable menu
+items — the starkest structure-vs-screen gap of the campaign, guard energy
+0.825 (record). PrintWindow captures both swapchains; the guard declares both
+surfaces. The finding beyond the expected zero: **Unity's fullscreen window is
+a Pane, not a Window — a UIA WindowControl search misses a running fullscreen
+game entirely** while Win32 sees it; the second no-privilege instance of the
+enumeration blind spot (after the elevated Task Manager). Doctrine, now
+twice-proven: derive window identity from the Win32 map + ControlFromHandle,
+never from UIA name/type searches. Anticheat titles (CS2, GTA V Enhanced,
+Once Human, Rocket League) were excluded by policy from probing. One ownership
+incident owned and recorded: the probe's WM_CLOSE closed SH2 after the session
+had progressed into gameplay (plausibly the user's hands) — provenance is not
+authority; lifecycle actions need ownership re-verification on a live machine.
+
 ## What's still open
 
-Real AAA game cells (SILENT HILL 2 / UE5 and R.E.P.O. / Unity are queued;
-anticheat-protected titles excluded by policy) — on hold pending the
-manager's go-ahead. None of this blocks the Windows verdict:
+Nothing Windows-side from the plan. None of this blocks the Windows verdict:
 
 **Verdict (updated after the deepening round): everything was predictable a
 priori (23/23 cells carry their signature); the three silent cells the

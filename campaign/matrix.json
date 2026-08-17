@@ -3521,6 +3521,69 @@
     },
     {
       "os": "windows",
+      "os_version": "Windows 11 Pro 26100, RTX 2080 Ti, live in-use machine",
+      "app": "R.E.P.O. v0.4.4.3 (Unity) — fullscreen main menu at 576 fps, engine diversity counterpart to the UE5 cell",
+      "stack": "game",
+      "stack_detection": {
+        "method": "window class + tree shape",
+        "signature": "UnityWndClass; the window surfaces in UIA as a single PaneControl (NOT a WindowControl) — a UIA WindowControl name-search finds NOTHING while Win32 EnumWindows sees the window plainly",
+        "detected_before_use": true
+      },
+      "channel": "pixels-baseline",
+      "channel_setup": "Launched via steam://rungameid (no kernel anticheat). READ-ONLY, zero input; probed at the main menu; closed via WM_CLOSE at menu (no save at risk).",
+      "verdict": "unavailable",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": false,
+          "detail": "The menu screen shows EIGHT clickable items (PRIVATE GAME / PUBLIC GAME / JOIN FRIEND / SINGLEPLAYER / TUTORIAL / CUSTOMIZE / SETTINGS / QUIT GAME) plus version and FPS text — the channel holds 1 node with the title. The starkest structure-vs-screen gap of the whole campaign."
+        },
+        "t2_enumerate": {
+          "pass": false,
+          "detail": "1 node total (a bare PaneControl). Unity wires no accessibility at all — consistent with the macOS returns' note on Unity titles."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "576 fps of animated menu; 1 static node."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Correctly refused (no semantic targets); a pixel agent would have 8 obvious targets here — this screen is vision territory by construction."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Guard: coverage 0.0% -> the window's own bare pane serves as the suspect -> energy 0.825 (the highest measured in the campaign — a bright, dense menu) -> declared '[pixels] group 0,0,1920,1080 [unverified: pixels show content]'. PrintWindow works on the Unity swapchain too."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": 8,
+        "screenshot_tokens_est": 2765,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "ROUTER FINDING beyond the expected zero: the Unity fullscreen window is INVISIBLE to a UIA WindowControl search (it is a PaneControl — borderless popup semantics), while Win32 EnumWindows sees it normally. A router that enumerates 'windows' via UIA would miss a running fullscreen game entirely — second instance of the class first seen with the elevated Task Manager, now WITHOUT any privilege boundary involved. Doctrine confirmed and generalized: derive window identity from the Win32/WM map and bind channels via ControlFromHandle(hwnd); never treat a UIA name/type search as window enumeration. Engine comparison: UE5 borderless = 1 WindowControl; Unity fullscreen = 1 PaneControl; Heaven windowed = 7 chrome nodes — all three explicit-by-shape, all three PrintWindow-capturable, all three guard-declared."
+      },
+      "runtime_verification": {
+        "method": "PrintWindow frame (full menu visible, 576 fps counter) vs the 1-node tree",
+        "agreement": "consistent: channel claims nothing beyond existence; guard declares the surface"
+      },
+      "permissions_required": [
+        "Steam session (user's, already logged in)"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/windows/repo-shot.png",
+        "campaign/results/artifacts/windows/repo-game-report.json"
+      ]
+    },
+    {
+      "os": "windows",
       "os_version": "Windows 11 Pro 26100, panel temporarily set to 125% (96->120 DPI via SPI_SETLOGICALDPIOVERRIDE), reverted and verified after",
       "app": "LIVE coordinate-trap demo at 125% scaling (DEEPENING-PLAN P1): one blind click that MISSES under the naive frame and HITS after self-calibration",
       "stack": "win32-gdi",
@@ -3582,6 +3645,70 @@
         "campaign/results/artifacts/windows/scaling-trap-shot.png",
         "campaign/windows/unaware_clicker.py",
         "campaign/windows/run_scaling_trap.py"
+      ]
+    },
+    {
+      "os": "windows",
+      "os_version": "Windows 11 Pro 26100, RTX 2080 Ti, live in-use machine",
+      "app": "SILENT HILL 2 (2024 remake, Unreal Engine 5, AAA) — borderless fullscreen 1920x1080, in-engine scene at 54 fps",
+      "stack": "game",
+      "stack_detection": {
+        "method": "window class + process name + tree shape",
+        "signature": "UnrealWindow class + SHProto-Win64-Shipping.exe; UIA answers with a SINGLE WindowControl node — no title bar, no buttons, nothing (borderless strips even the 7-node chrome Heaven had)",
+        "detected_before_use": true
+      },
+      "channel": "pixels-baseline",
+      "channel_setup": "Launched via steam://rungameid (no anticheat on this title — kernel-anticheat games excluded by policy). READ-ONLY: zero input sent to the game. Per-window pixels via PrintWindow(PW_RENDERFULLCONTENT) — works on the UE5 D3D swapchain.",
+      "verdict": "unavailable",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": false,
+          "detail": "The captured frame is a full in-engine scene (character, desk, readable in-world documents, '54 FPS' overlay) — none of it exists in any structured channel. Expected: everything is engine-drawn."
+        },
+        "t2_enumerate": {
+          "pass": false,
+          "detail": "1 node total. Not even min/max/close (borderless window)."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "The scene renders at 54 fps; the 1-node tree never changes."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Correctly refused: no semantic targets."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Guard verdict: structural coverage 0.0% -> client-area suspect synthesized -> content-energy 0.297 -> '[pixels] group 0,32,1920,1048 [unverified: pixels show content]'. The blind spot is declared, the router routes the whole surface to vision. PrintWindow works on the UE5 swapchain (no screen-crop fallback needed)."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": 9,
+        "screenshot_tokens_est": 2765,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 16,
+        "notes": "The real-AAA-game cell the plan wanted (Heaven was a benchmark): a UE5 title is even MORE structure-void than the benchmark — 1 node vs Heaven's 7, because borderless fullscreen sheds the OS chrome too. View 9 tokens vs 2765-token screenshot (1534 legacy tier). TWO INCIDENTS KEPT AS DATA: (1) harness — the first 6-minute 'window not found' was a case-SENSITIVE regex against 'Silent Hill 2  ' (trailing spaces, mixed case); match window identity from the Win32 map, not from name guesses. (2) OWNERSHIP TOCTOU, the campaign's macOS-stopwatch mirror: between launch and close, the game had progressed past its intro into gameplay (the capture shows an in-game scene) — plausibly the user had taken over — and the probe's WM_CLOSE closed it without save confirmation. A lifecycle action on a window the agent launched is NOT safe by provenance alone: ownership must be re-verified (foreground history, input activity) before close, or close must be left to the human. Recorded in agent-returns."
+      },
+      "runtime_verification": {
+        "method": "PrintWindow frame vs the 1-node tree",
+        "agreement": "consistent: the channel claims only the window's existence; everything else on screen is pixels, and the guard declares exactly that"
+      },
+      "permissions_required": [
+        "Steam session (user's, already logged in)"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/windows/silenthill2-shot.png",
+        "campaign/results/artifacts/windows/silenthill2-uia-view.txt",
+        "campaign/results/artifacts/windows/silenthill2-game-report.json"
       ]
     },
     {

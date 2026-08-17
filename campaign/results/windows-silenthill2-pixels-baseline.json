@@ -1,0 +1,44 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, RTX 2080 Ti, live in-use machine",
+  "app": "SILENT HILL 2 (2024 remake, Unreal Engine 5, AAA) — borderless fullscreen 1920x1080, in-engine scene at 54 fps",
+  "stack": "game",
+  "stack_detection": {
+    "method": "window class + process name + tree shape",
+    "signature": "UnrealWindow class + SHProto-Win64-Shipping.exe; UIA answers with a SINGLE WindowControl node — no title bar, no buttons, nothing (borderless strips even the 7-node chrome Heaven had)",
+    "detected_before_use": true
+  },
+  "channel": "pixels-baseline",
+  "channel_setup": "Launched via steam://rungameid (no anticheat on this title — kernel-anticheat games excluded by policy). READ-ONLY: zero input sent to the game. Per-window pixels via PrintWindow(PW_RENDERFULLCONTENT) — works on the UE5 D3D swapchain.",
+  "verdict": "unavailable",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "The captured frame is a full in-engine scene (character, desk, readable in-world documents, '54 FPS' overlay) — none of it exists in any structured channel. Expected: everything is engine-drawn." },
+    "t2_enumerate": { "pass": false, "detail": "1 node total. Not even min/max/close (borderless window)." },
+    "t3_live_value": { "pass": null, "detail": "n/a." },
+    "t4_living_screen": { "pass": null, "detail": "The scene renders at 54 fps; the 1-node tree never changes." },
+    "t5_blind_action": { "pass": null, "detail": "Correctly refused: no semantic targets." },
+    "t6_pictorial": { "pass": true, "detail": "Guard verdict: structural coverage 0.0% -> client-area suspect synthesized -> content-energy 0.297 -> '[pixels] group 0,32,1920,1048 [unverified: pixels show content]'. The blind spot is declared, the router routes the whole surface to vision. PrintWindow works on the UE5 swapchain (no screen-crop fallback needed)." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": 9,
+    "screenshot_tokens_est": 2765,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 16,
+    "notes": "The real-AAA-game cell the plan wanted (Heaven was a benchmark): a UE5 title is even MORE structure-void than the benchmark — 1 node vs Heaven's 7, because borderless fullscreen sheds the OS chrome too. View 9 tokens vs 2765-token screenshot (1534 legacy tier). TWO INCIDENTS KEPT AS DATA: (1) harness — the first 6-minute 'window not found' was a case-SENSITIVE regex against 'Silent Hill 2  ' (trailing spaces, mixed case); match window identity from the Win32 map, not from name guesses. (2) OWNERSHIP TOCTOU, the campaign's macOS-stopwatch mirror: between launch and close, the game had progressed past its intro into gameplay (the capture shows an in-game scene) — plausibly the user had taken over — and the probe's WM_CLOSE closed it without save confirmation. A lifecycle action on a window the agent launched is NOT safe by provenance alone: ownership must be re-verified (foreground history, input activity) before close, or close must be left to the human. Recorded in agent-returns."
+  },
+  "runtime_verification": {
+    "method": "PrintWindow frame vs the 1-node tree",
+    "agreement": "consistent: the channel claims only the window's existence; everything else on screen is pixels, and the guard declares exactly that"
+  },
+  "permissions_required": ["Steam session (user's, already logged in)"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/silenthill2-shot.png",
+    "campaign/results/artifacts/windows/silenthill2-uia-view.txt",
+    "campaign/results/artifacts/windows/silenthill2-game-report.json"
+  ]
+}

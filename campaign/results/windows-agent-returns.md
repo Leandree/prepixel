@@ -14,7 +14,34 @@ HN 0.46/0.47, Wikipedia 0.72/0.72). The override was the right call: the
 OS-invariance claim is now MEASURED on all three OSes instead of asserted from
 two. Delta worth noting: FR locale raises consent banners (8/16 vs 6/16).
 
-## 2026-08-17 — BLOCKED (waiting on manager go) — real game cells
+## 2026-08-17 — DONE (with one incident to own) — real game cells, manager go received
+
+Both cells run: **SILENT HILL 2** (UE5 AAA — 1 UIA node for a full in-engine
+scene at 54 fps; PrintWindow works on the UE5 swapchain; guard energy 0.297 →
+declared) and **R.E.P.O.** (Unity — 1 bare PaneControl for a menu with EIGHT
+clickable items at 576 fps; guard energy 0.825, campaign record). New router
+finding from REPO: the Unity fullscreen window is a Pane, not a Window — a UIA
+WindowControl search misses a *running fullscreen game entirely* while Win32
+sees it; second no-privilege instance of the enumeration blind spot after the
+elevated Task Manager. Doctrine: window identity comes from the Win32 map +
+ControlFromHandle, never from UIA name/type search.
+
+**The incident (macOS-stopwatch mirror, my fault):** between launch and close,
+SH2 had progressed past its intro into an in-game scene — plausibly the user
+had taken over the session — and my probe's WM_CLOSE closed it without save
+confirmation. Provenance ("I launched this window") is NOT sufficient
+authority for lifecycle actions on a live machine: ownership must be
+re-verified (recent human input? foreground history?) before closing, or the
+close left to the human. Encoded in the cell; apologized to the user; loss
+bounded by SH2's autosave.
+
+Also: two harness bugs of mine burned ~12 min — a case-SENSITIVE title regex
+('SILENT HILL' vs 'Silent Hill 2  ' with trailing spaces), and the same
+name-search issue that the Pane finding then explained. Same recurring
+pattern: the channel was fine, the router guessed names instead of using the
+WM map.
+
+## 2026-08-17 — SUPERSEDED — real game cells (was: waiting on manager go)
 
 The manager asked for real 3D/demanding games (Heaven was a benchmark, not a
 game). Plan ready, runner written (`campaign/windows/run_game.py`, read-only,

@@ -1,0 +1,49 @@
+{
+ "hwnd_found_via": "Win32 EnumWindows (UIA name-search finds NOTHING)",
+ "uia_control_type": "PaneControl",
+ "uia_name": "R.E.P.O.",
+ "class": "UnityWndClass",
+ "window_rect": [
+  0,
+  0,
+  1920,
+  1080
+ ],
+ "uia_nodes": 1,
+ "uia_tree": [
+  {
+   "t": "PaneControl",
+   "n": "R.E.P.O.",
+   "r": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "d": 0
+  }
+ ],
+ "view_tokens": 8,
+ "printwindow_ok": true,
+ "capture_mode": "printwindow",
+ "coverage_pct": 0.0,
+ "guard": [
+  {
+   "label": "R.E.P.O.",
+   "rect": [
+    0,
+    0,
+    1920,
+    1080
+   ],
+   "hasReadableContent": false,
+   "node_type": "PaneControl",
+   "depth": 0,
+   "energy": 0.825,
+   "verdict": "SILENT->declare-opaque",
+   "line": "[pixels] group 0,0,1920,1080 \"R.E.P.O.\" [unverified: pixels show content]"
+  }
+ ],
+ "screenshot_tokens": 2765,
+ "closed": true
+}
