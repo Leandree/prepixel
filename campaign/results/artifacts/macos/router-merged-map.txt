@@ -1,0 +1,37 @@
+win z=0 661,542,28,40 owner=Window Server channel=pixels-baseline title=Cursor
+win z=1 382,0,748,264 owner=Kestro channel=accessibility-api title=Kestro
+win z=2 949,0,40,33 owner=Centre de contrôle channel=pixels-baseline title=Item-0
+win z=3 989,0,45,33 owner=Centre de contrôle channel=pixels-baseline title=Item-0
+win z=4 1034,0,32,33 owner=Centre de contrôle channel=pixels-baseline title=Item-0
+win z=5 1066,0,32,33 owner=Centre de contrôle channel=pixels-baseline title=Item-0
+win z=6 1098,0,48,33 owner=Centre de contrôle channel=pixels-baseline title=Item-0
+win z=7 1146,0,36,33 owner=Centre de contrôle channel=pixels-baseline title=Item-0
+win z=8 1182,0,32,33 owner=Centre de contrôle channel=pixels-baseline title=Bluetooth
+win z=9 1214,0,38,33 owner=Centre de contrôle channel=pixels-baseline title=WiFi
+win z=10 1252,0,42,33 owner=Centre de contrôle channel=pixels-baseline title=Battery
+win z=11 1294,0,32,33 owner=Centre de contrôle channel=pixels-baseline title=Item-0
+win z=12 1326,0,42,33 owner=Centre de contrôle channel=pixels-baseline title=BentoBox-0
+win z=13 1368,0,146,33 owner=Centre de contrôle channel=pixels-baseline title=Clock
+win z=14 0,0,1512,33 owner=Window Server channel=pixels-baseline title=Menubar
+win z=15 100,300,900,600 owner=Google Chrome channel=cdp title=Silent mimicry
+win z=16 181,102,656,422 owner=TextEdit channel=accessibility-api+object-model title=router-probe.txt
+win z=17 152,73,586,488 owner=TextEdit channel=accessibility-api+object-model title=Sans titre
+win z=18 0,33,1512,949 owner=Code channel=accessibility-api title=prepixel
+win z=19 0,33,1512,949 owner=Code channel=accessibility-api title=DOC PREPROD ALLIANCE 388ea8b6a98e8014aff9e338ee8e5c7b.md — fairwai [SSH: optiplex]
+win z=20 0,33,1512,949 owner=Code channel=accessibility-api title=reponse-helpline-servicenow.txt — fairwai
+win z=21 29,33,756,949 owner=Finder channel=accessibility-api+object-model title=Téléchargements
+win z=22 0,33,1512,949 owner=Google Chrome channel=accessibility-api title=zarza - Recherche Google
+win z=23 0,33,1512,949 owner=Google Chrome channel=accessibility-api title=Sign in - Claude
+win z=24 0,33,1512,949 owner=Signal channel=accessibility-api title=Signal (5)
+win z=25 0,33,1512,949 owner=Google Chrome channel=accessibility-api title=Computer use GPU input interpretation - Claude
+win z=26 143,171,1270,720 owner=Docker Desktop channel=accessibility-api title=Containers - Docker Desktop
+win z=27 0,33,1512,949 owner=Code channel=accessibility-api title=claude — kestro
+win z=28 0,33,1512,949 owner=‎WhatsApp channel=accessibility-api title=‎WhatsApp
+win z=29 756,33,756,949 owner=Finder channel=accessibility-api+object-model title=Privé et partagé 4
+win z=30 756,33,755,949 owner=Terminal channel=accessibility-api title=prepixel — claude — claude — claude — 105×60
+win z=31 14,33,756,949 owner=Finder channel=accessibility-api+object-model title=dev
+win z=32 756,33,756,949 owner=Finder channel=accessibility-api+object-model title=dev
+win z=33 0,33,1512,949 owner=Claude channel=accessibility-api title=Claude
+win z=34 8,221,360,180 owner=Centre de notifications channel=accessibility-api title=Recommandées
+win z=35 188,41,180,180 owner=Centre de notifications channel=accessibility-api title=Prévisions
+win z=36 8,41,180,180 owner=Centre de notifications channel=accessibility-api title=Mois

@@ -67,6 +67,48 @@ for verification) under `results/artifacts/` and list their paths in the JSON.
 Also append a short prose note per app to `results/<os>-FINDINGS.md`: what surprised
 you, any silent-divergence you found, and your honest read on predictability.
 
+## Returns to the test manager — `results/<os>-agent-returns.md`
+
+**Every OS agent maintains one, and you are expected to write in it.** It is the
+two-way log between you and the human test manager: you write when you need a
+decision, hit a blocker, or find something that changes another agent's work; the
+manager replies in the same file under `MANAGER:`. Create yours if it does not exist
+(`results/windows-agent-returns.md`, `results/linux-agent-returns.md`,
+`results/macos-agent-returns.md` — that last one is the worked example to copy).
+
+Do not confuse it with the two files above:
+
+| file | holds | trusted for |
+|---|---|---|
+| `<os>-<app>-<channel>.json` | the measurement | reproducing a result |
+| `<os>-FINDINGS.md` | the scientific prose record | the paper |
+| `<os>-agent-returns.md` | correspondence | **nothing** — it is not evidence |
+
+A claim is not published because it appears in returns. Put measurements in cells
+and prose in FINDINGS; put in returns what a colleague would say out loud.
+
+What belongs here:
+
+- **`DECISION NEEDED`** — anything you should not decide alone: installing software,
+  touching the user's accounts or real files, spending a long run, or choosing
+  between test targets that would change what the cell proves. State your
+  recommendation and the default you will take if no answer comes, then keep working
+  on everything that does not depend on the answer.
+- **`FYI`** — findings that change another agent's work. These are the highest-value
+  entries: a bug in a shared module, a rule that applies to all three OSes, a trap
+  that cost you an hour. Write them the moment you find them, not at the end.
+- **`BLOCKED`** — what you could not do and exactly why (missing permission, absent
+  hardware, policy refusal). A blocked cell is a first-class result; a blocked
+  *task* still needs saying out loud.
+- **`DONE`** — a short close-out, including any bug in **your own** harness that
+  produced a wrong intermediate result. Recording those is not self-flagellation:
+  across this campaign, most apparent channel failures turned out to be probe bugs,
+  and that pattern is itself a finding.
+
+Conventions: newest entry at the top, each one dated with a status, and **leave
+answered entries in place** — the history of what was asked and decided is part of
+the record.
+
 ## Scope discipline
 
 - Read-only where possible; when you must interact (T3/T5), use throwaway

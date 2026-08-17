@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-61 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+63 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -41,9 +41,11 @@
 | macos | All-canvas 'game' page + mixed opaque page (perimeter-law control) | custom-canvas | pixels-baseline | ⬜ unavailable | explicit | 7 | 1,366 | ✅ |
 | macos | Cursor 2.x (VS Code fork, Electron/Chromium 144) — isolated instance, temp profile | electron | cdp | ✅ works | explicit | 647 | 1,366 | ✅ |
 | macos | Chess/Échecs (com.apple.Chess) — Apple's 3D-rendered chess game | game | accessibility-api | ✅ works | — | 3,050 | 921 | ✅ |
+| macos | The whole desktop — semantic-compositor router (CGWindowList + per-window channel binding + system-wide hit test). Mirrors windows-desktop-router and linux-desktop-router-merged-view. | other | accessibility-api | ✅ works | explicit | 838 | 1,980 | ✅ |
 | macos | Render-tap feasibility on macOS (targets: TextEdit as a system/platform binary, Google Chrome as a hardened third-party app) | other | render-tree-tap | ⛔ blocked | blocked |  | 1,366 | ✅ |
 | macos | Zoom Workplace 6.x (us.zoom.xos) — home window, logged in, NOT in a meeting | other | accessibility-api | ✅ works | — | 1,712 | 878 | ✅ |
 | macos | Clock/Horloge (com.apple.clock, system SwiftUI app) — world clock + stopwatch | swiftui | accessibility-api | ✅ works | — | 634 | 1,049 | ✅ |
+| macos | Vibe Island (app.vibeisland.macos) — THIRD-PARTY SwiftUI notch-overlay app, the README's prime thin-tree suspect. Read-only probe, no input sent. | swiftui | accessibility-api | ✅ works | explicit | 24 | 526 | ✅ |
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile, repo test pages) | chromium | cdp | ✅ works | explicit | 273 | 1,366 | ✅ |
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile) — DUAL channel of windows-chrome-cdp, same page | chromium | accessibility-api | ✅ works | explicit | 969 | 1,560 | ✅ |
 | windows | Precision-vs-pixels duel (20 randomized order-console pages) — Windows replication of the Linux/macOS cells, same generator, same seeds | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
@@ -104,6 +106,7 @@ The production-safety question: could a router know the channel in advance, and 
 | New-Object -ComObject Word.Application -> REGDB_E_CLASSNOTREG 0x80040154 (no Office installed; Excel likewise); no LibreOffice present | object-model | ⛔ blocked | blocked |
 | Dispatch('Word.Application') answers in 10 ms (REGDB check is a registry read — free and a-priori) | object-model | ✅ works | — |
 | libgtk-4.so | libQt5*.so | soffice | chromium binary — one per window | render-tree-tap | ✅ works | explicit |
+| CGWindowListCopyWindowInfo returns 37 on-screen windows front-to-back with pid/owner/rect/layer/alpha; each pid then answers (or refuses) its channel probe | accessibility-api | ✅ works | explicit |
 | csrutil status = enabled; Chrome CodeDirectory flags=0x12a00 (kill, restrict, library-validation, runtime); TextEdit is a platform binary under /System | render-tree-tap | ⛔ blocked | blocked |
 | us.zoom.xos; home window exposes 100+ nodes incl. 3 embedded AXWebArea (hybrid native+web UI) | accessibility-api | ✅ works | — |
 | chrome.exe+port9235 -> cdp | chrome.exe/Discord.exe/Spotify.exe no port -> uia-latch | Notepad/Terminal/rundll32 -> uia | TokenElevation=True -> pixels-crop | accessibility-api | ✅ works | explicit |
@@ -112,6 +115,7 @@ The production-safety question: could a router know the channel in advance, and 
 | libQt5Gui.so / libQt5Widgets.so mapped (or Qt6 equivalents) | render-tree-tap | ⬜ unavailable | explicit |
 | Qt6Widgets.dll / Qt6Svg.dll / Qt6Network.dll mapped in obs64.exe; UIA answers through Qt's QAccessible->UIA bridge with a 185-node tree on first query | accessibility-api | 🟡 partial | explicit |
 | com.apple.clock; window tree 25 nodes with labeled toolbar tabs on first query | accessibility-api | ✅ works | — |
+| otool -L links SwiftUI.framework + AppKit.framework; bundle app.vibeisland.macos; window is kCGWindowLayer 27 (overlay layer, not a normal document window) | accessibility-api | ✅ works | explicit |
 | SunAwtFrame window class (=Java/AWT, a-priori); channel signature: jabswitch enabled + windowsaccessbridge-64.dll present + isJavaWindow(hwnd)=TRUE answers immediately once the JVM runs with the AccessBridge AT loaded | java-access-bridge | ✅ works | explicit |
 | CreateObject('Shell.Application') succeeds (always present on Windows); Windows() enumerates open Explorer windows with LocationURL | object-model | ✅ works | — |
 | CabinetWClass; UIA responds with a full 188-node tree on first query | accessibility-api | ✅ works | — |
@@ -125,9 +129,9 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 46/61.
-- **Silent divergences surviving** (disqualifying): 0/61 ✅ none
+- Cells where structure **works**: 48/63.
+- **Silent divergences surviving** (disqualifying): 0/63 ✅ none
 - Silent divergences **found, then caught-and-declared** by coverage-guard: 3 — FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
-- Cells **not** predictable in advance: 0/61 ✅ none
+- Cells **not** predictable in advance: 0/63 ✅ none
 
 Reading: the campaign found 3 silent divergences (**FL Studio 2025** (windows), **OBS Studio 31.0.3** (windows), **rekordbox 7.0.9** (windows)) and **neutralized every one** with the documented coverage-guard (pixel spot-check on structure-empty regions + view self-consistency): each cell re-emits its blind spot as an explicit `[pixels]`/`[inconsistent]` line and records the guard run in a `mitigation` field. Combined with 0 unpredictable cells, the safety claim stands in its honest form: not "structure never lies", but "every blind spot is predictable a priori and convertible to an explicit declaration by a documented, measured router guard."
