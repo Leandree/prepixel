@@ -19,7 +19,8 @@
     "trigger_signature": "in-view contradiction: a count line ('32 Tracks, 1 hours 51 minutes, 818.4 MB') with 0 row/listitem lines in the same view",
     "result": "flagged view-only in 0.0 ms: 'text 1521,1012,330,16 \"32 Tracks, …\" [inconsistent: count>0 but 0 rows -> unexposed list, crop]' — the router now knows to crop the table region instead of reading 'empty'",
     "cost": "free (no pixels); guard A found 0 structure-empty regions here because the table rect contains named headers — the case that shows why the two guards are independent and BOTH required",
-    "evidence": "campaign/results/artifacts/windows/windows-mitigation-report.json"
+    "evidence": "campaign/results/artifacts/windows/windows-mitigation-report.json",
+    "recalibration_rerun": "2026-08-17, threshold 0.01 + edge-fraction second vote (Linux calibration): guard B still catches the count/rows contradiction view-only; guard A still finds 0 structure-empty suspects (the table rect contains named headers) — verdict unchanged, no flip. The headers-without-rows shape remains guard B's case, confirming the two guards' complementarity under the new calibration"
   },
   "tests": {
     "t1_read_text": { "pass": true, "detail": "Live app STATE reads correctly: deck titles 'Not Loaded.' (x2), sampler BPM as a real edit value ('120.00'), status bar '32 Tracks, 1 hours 51 minutes, 818.4 MB' — all matching the pixels." },
@@ -40,7 +41,7 @@
   },
   "runtime_verification": {
     "method": "PrintWindow capture of the main window vs the distilled view and raw node dump; state values (deck titles, BPM, track count) compared against pixels",
-    "agreement": "chrome and states: full agreement, value-exact. Track browser: DISAGREEMENT by omission (headers + '32 Tracks' in channel, zero rows vs 11+ on screen) — recorded as the silent class"
+    "agreement": "chrome and states: full agreement, value-exact. Track browser: the channel alone under-reports (headers + '32 Tracks' in channel, zero rows vs 11+ on screen — found as the silent class on 2026-08-15); the self-consistency guard flags it from the view alone, which is why failure_class reads explicit"
   },
   "permissions_required": [],
   "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",

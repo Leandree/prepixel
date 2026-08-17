@@ -21,15 +21,20 @@
     "node_type": "GroupControl",
     "depth": 3,
     "energy": 0.245,
+    "edge_fraction": 0.0245,
+    "votes": {
+     "energy": true,
+     "edges": true
+    },
     "verdict": "SILENT->declare-opaque",
     "line": "[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]",
     "crop_artifact": "guard-obs-region0.png"
    }
   ],
   "guard_b_flags": [],
-  "walk_ms": 291.5,
-  "printwindow_ms": 30.1,
-  "guard_ms": 2.5,
+  "walk_ms": 469.5,
+  "printwindow_ms": 35.8,
+  "guard_ms": 97.3,
   "crop_cost_tokens": 245,
   "full_screenshot_tokens": 1275,
   "explicit_lines": [
@@ -58,6 +63,11 @@
     "node_type": "PaneControl",
     "depth": 4,
     "energy": 0.201,
+    "edge_fraction": 0.0237,
+    "votes": {
+     "energy": true,
+     "edges": true
+    },
     "verdict": "SILENT->declare-opaque",
     "line": "[pixels] group 965,322,402,374 \"TQuickStringGrid\" [unverified: pixels show content]",
     "crop_artifact": "guard-flstudio-region0.png"
@@ -74,6 +84,11 @@
     "node_type": "PaneControl",
     "depth": 4,
     "energy": 0.31,
+    "edge_fraction": 0.0254,
+    "votes": {
+     "energy": true,
+     "edges": true
+    },
     "verdict": "SILENT->declare-opaque",
     "line": "[pixels] group 545,322,402,421 \"TQuickStringGrid\" [unverified: pixels show content]",
     "crop_artifact": "guard-flstudio-region1.png"
@@ -90,6 +105,11 @@
     "node_type": "PaneControl",
     "depth": 3,
     "energy": 0.621,
+    "edge_fraction": 0.1208,
+    "votes": {
+     "energy": true,
+     "edges": true
+    },
     "verdict": "SILENT->declare-opaque",
     "line": "[pixels] group 13,142,187,860 \"TDataBrowserTree\" [unverified: pixels show content]",
     "crop_artifact": "guard-flstudio-region2.png"
@@ -106,6 +126,11 @@
     "node_type": "PaneControl",
     "depth": 3,
     "energy": 0.085,
+    "edge_fraction": 0.0249,
+    "votes": {
+     "energy": true,
+     "edges": true
+    },
     "verdict": "SILENT->declare-opaque",
     "line": "[pixels] group 329,494,1499,465 \"TVectorPanel\" [unverified: pixels show content]",
     "crop_artifact": "guard-flstudio-region3.png"
@@ -121,16 +146,21 @@
     "hasReadableContent": false,
     "node_type": "PaneControl",
     "depth": 1,
-    "energy": 0.304,
+    "energy": 0.305,
+    "edge_fraction": 0.073,
+    "votes": {
+     "energy": true,
+     "edges": true
+    },
     "verdict": "SILENT->declare-opaque",
     "line": "[pixels] group 0,0,1920,82 \"TQuickControlBar\" [unverified: pixels show content]",
     "crop_artifact": "guard-flstudio-region4.png"
    }
   ],
   "guard_b_flags": [],
-  "walk_ms": 274.9,
-  "printwindow_ms": 40.9,
-  "guard_ms": 15.4,
+  "walk_ms": 417.8,
+  "printwindow_ms": 59.5,
+  "guard_ms": 191.9,
   "crop_cost_tokens": 1780,
   "full_screenshot_tokens": 2642,
   "explicit_lines": [
@@ -158,8 +188,8 @@
     "line": "text 1521,1012,330,16 \"32 Tracks, 1 hours 51 minutes, 818.4 MB\"  [inconsistent: count>0 but 0 rows -> unexposed list, crop]"
    }
   ],
-  "walk_ms": 1750.7,
-  "printwindow_ms": 58.7,
+  "walk_ms": 4901.7,
+  "printwindow_ms": 106.1,
   "guard_ms": 0.0,
   "crop_cost_tokens": 0,
   "full_screenshot_tokens": 2584,

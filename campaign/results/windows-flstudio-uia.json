@@ -19,7 +19,8 @@
     "trigger_signature": "TFruityLoopsMainForm + all-Pane tree; 5 structure-empty regions >150k px² auto-detected (2x TQuickStringGrid incl. the Recent-projects grid, TDataBrowserTree, TVectorPanel, TQuickControlBar)",
     "result": "energies 0.085-0.621, 5/5 above threshold -> all five re-emitted as '[pixels] group … [unverified: pixels show content]'; structural coverage measured at 28.6%",
     "cost": "PrintWindow + guard ~35 ms total; crops 1780 tokens vs 2642 for the full window — sub-full-screenshot even in the worst case (whole app painted)",
-    "evidence": "campaign/results/artifacts/windows/guard-flstudio-region0..4.png"
+    "evidence": "campaign/results/artifacts/windows/guard-flstudio-region0..4.png",
+    "recalibration_rerun": "2026-08-17, threshold 0.01 + edge-fraction second vote (Linux calibration): 5/5 regions re-flagged, energies 0.085-0.621 / edge-fractions 0.0237-0.1208, BOTH votes positive on every region — verdict unchanged, no flip"
   },
   "tests": {
     "t1_read_text": { "pass": false, "detail": "The screen shows dense readable content: tempo '140.000', pattern names, browser tree with dozens of labeled sample folders, mixer channel names. The channel exposes NONE of it — only ~15 region captions ('Browser', 'Channel rack', 'Recent projects', 'Start a new project')." },
@@ -40,7 +41,7 @@
   },
   "runtime_verification": {
     "method": "PrintWindow(PW_RENDERFULLCONTENT) of FL's own surface vs the distilled view and raw node dump",
-    "agreement": "DISAGREEMENT by omission at whole-app scale: screen dense with text/controls, channel offers empty named panes — recorded as the silent class"
+    "agreement": "the channel alone under-reports at whole-app scale (screen dense with text/controls, channel offers empty named panes — found as the silent class on 2026-08-15); with coverage-guard in the loop all five painted regions re-emit as explicit [pixels] declarations, which is why failure_class reads explicit"
   },
   "permissions_required": [],
   "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
