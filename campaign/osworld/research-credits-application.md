@@ -50,7 +50,7 @@ uses the benchmark's own scaffold, unmodified — maximal comparability.
 
 **Methods & integrity.** Pre-registration committed before any run: task
 subset (seed-42 stratified sample of 50 tasks over 9 OSWorld domains, commit
-<COMMIT_PREREG>), frozen symmetric prompt template and condition driver
+fb5fdfc), frozen symmetric prompt template and condition driver
 (same commit), protocol with interleaving, no-re-run rule, and per-task
 JSON schema (campaign/OSWORLD-PROTOCOL.md). Success is judged by OSWorld's
 mechanical evaluators; all traces are published in the repo.
@@ -66,4 +66,4 @@ discipline), no dual-use content. The model performs ordinary desktop tasks
 
 ---
 
-*Fill <COMMIT_PREREG> with the pre-registration commit hash after it lands.*
+*Fill fb5fdfc with the pre-registration commit hash after it lands.*
