@@ -298,6 +298,35 @@ carried for.
 
 ---
 
+## Résolution (2026-08-17, après la passe)
+
+Les deux écarts ci-dessus ont été corrigés dans les cellules d'origine, à la
+demande du test manager :
+
+- `macos-swing-accessibility-api` : `t2` re-mesuré **sur `SwingProbe2.java`**
+  (12 nœuds — 5 `AXStaticText`, 5 `AXButton`, 1 `AXGroup`, 1 `AXWindow` — géométrie
+  12/12, marche 29.2 ms à froid / 7.9 ms médiane à chaud, vue 198 o / 50 tokens) ;
+  `t3` est désormais un test explicitement séparé sur `SwingProbe.java`, renforcé :
+  au-delà de la valeur de construction (`'initial'`), une chaîne unique tapée au
+  clavier (keycodes indépendants de la disposition, livrés par `CGEventPostToPid`)
+  se relit **caractère-exact** via `AXValue` (`REPL-T3-7Q42-café-naïve`, accents
+  intacts, relecture 15.4 ms). Le bloc `measurements` (388 o / 97 tok / 32.5 ms,
+  hérité lui aussi de la première sonde) a été remplacé par les valeurs
+  `SwingProbe2`. Un bloc `revisions` documente la correction.
+- `macos-desktop-router` : le passage « the split by window LAYER is total /
+  100 % / 0 % » est réécrit — la classe de fausse occlusion est confirmée, les taux
+  sont donnés comme dépendants de l'échantillon (0/7 et 5/7 sont deux tirages du
+  même phénomène), et la classe des bords partagés à ~2 px en layer 0 est
+  consignée avec les deux causes écartées. Un bloc `revisions` documente la
+  correction.
+
+Détail utile mis au jour pendant la re-mesure t3 : les keycodes virtuels macOS
+dépendent de la disposition clavier — sur l'AZERTY de cette machine, keycode 0
+est `Q`, si bien qu'un « Cmd+A » codé en dur devient **Cmd+Q** et quitte
+l'application au premier plan. C'est un vrai piège pour tout harnais d'action
+synthétique (et il a coûté deux sessions à cette passe) ; les frappes par
+`CGEventKeyboardSetUnicodeString` + `CGEventPostToPid` le contournent.
+
 ## Disclosures
 
 - **I entered Léandre's DiRT 4 career save.** Pressing Enter at the title screen

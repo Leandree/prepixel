@@ -2191,7 +2191,7 @@
         "diff_bytes_per_interaction": null,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 31.9,
-        "notes": "THE MEASUREMENT THIS CELL EXISTS FOR — and it is a sharper result than the headline ratio. There are two ways to answer 'which window owns this pixel'. (1) RECONSTRUCT it from the z-order list and the declared rectangles: the first window, front to back, whose rect contains the point. That is the ONLY method available to a Linux or Windows router. (2) ASK THE COMPOSITOR: AXUIElementCopyElementAtPosition puts the question to the window server, which answers with the element actually hit. We ran both at 40 overlap points on a real cluttered desktop. Global agreement is 33/40 = 82.5%, but the aggregate hides the structure entirely, because the split by window LAYER is total: on ordinary windows (kCGWindowLayer == 0) reconstruction is 33/33 = 100% EXACT, and on the overlay layer (layer 1000) it is 0/7 = 0% WRONG, every single time. The mechanism, confirmed by screenshot: an overlay window declared a 748x264 rect while painting only a small opaque band inside it; the rest of its rectangle is transparent and the windows behind show through. A reconstruction router therefore marks 748x264 points' worth of fully visible content as hidden — a FALSE OCCLUSION, which is a silent divergence in the router layer rather than in any app's channel. macOS closes it with one call, and the a-priori signature is free: kCGWindowLayer > 0 means the declared rect is an upper bound on what is painted, never a statement of coverage. A Linux/Windows router cannot make that call and must fall back to a per-window pixel spot-check (exactly what src/coverage-guard.mjs does) on every layer>0 surface."
+        "notes": "THE MEASUREMENT THIS CELL EXISTS FOR — and it is a sharper result than the headline ratio. There are two ways to answer 'which window owns this pixel'. (1) RECONSTRUCT it from the z-order list and the declared rectangles: the first window, front to back, whose rect contains the point. That is the ONLY method available to a Linux or Windows router. (2) ASK THE COMPOSITOR: AXUIElementCopyElementAtPosition puts the question to the window server, which answers with the element actually hit. We ran both at 40 overlap points on a real cluttered desktop: global agreement 33/40 = 82.5%, splitting by window LAYER into 33/33 on ordinary windows (kCGWindowLayer == 0) and 0/7 on the overlay layer (1000). AN INDEPENDENT REPLICATION (2026-08-17, same machine, a different 39-window desktop, two identical back-to-back runs) CONFIRMS THE CLASS AND CORRECTS THE RATES: 37/40 global, 32/33 on layer 0, 5/7 on layer 1000 — same overlay window, same mechanism. The per-layer rates are therefore SAMPLE-DEPENDENT, not a law: the overlay declares a 748x264 rect while painting only a small opaque band inside it, so whether an overlay-layer probe point is mis-attributed depends on where that point lands — on the painted band or on the transparent remainder — and the probe points are overlap centres, which move with the desktop. 0/7 and 5/7 are two draws of the same phenomenon; an earlier draft of this cell stated the 0/7 as 'wrong every single time', which generalised one sample and is withdrawn. What IS stable across both desktops: every mis-attribution inside the overlay rect is a FALSE OCCLUSION — fully visible content marked hidden — a silent divergence in the router layer rather than in any app's channel; macOS closes it with one call; and the a-priori signature stays free and exact: kCGWindowLayer > 0 means the declared rect is an UPPER BOUND on what is painted, never a statement of coverage. A Linux/Windows router cannot make that call and must fall back to a per-window pixel spot-check (exactly what src/coverage-guard.mjs does) on every layer>0 surface. The replication also surfaced a SECOND, NARROWER disagreement class that the first sample could not see, on layer 0 itself: at a shared window edge, the window server attributes a ~2-px band (x=756 and 757, for a window whose CGWindowBounds end at x=756) to the window whose AX hittable frame slightly overhangs its declared bounds. Ruled out as causes: map staleness (re-mapped immediately before each hit test, stable across 4 repeats per point) and int() truncation in the router (the raw CGWindowBounds are exact integers). Consequence: layer-0 reconstruction is near-exact but NOT exact — a router should treat any point within ~2 px of a shared window edge as ambiguous and resolve it with the hit test on macOS, or a pixel probe elsewhere."
       },
       "runtime_verification": {
         "method": "Screenshot of the disputed region (382,0,748,264) compared against both answers; TextEdit content compared byte-for-byte against the file the harness wrote; Chrome's CDP target list compared against the page the harness opened.",
@@ -2204,6 +2204,12 @@
       ],
       "agent": "claude-code (Fable 5) on leandre-macbook, live session",
       "date": "2026-08-15",
+      "revisions": [
+        {
+          "date": "2026-08-17",
+          "what": "Occlusion narrative reworded after the independent replication pass: the false-occlusion class and its mechanism replicate (same overlay window), but the 100%/0% per-layer dichotomy does not — replication measured 32/33 on layer 0 and 5/7 on layer 1000, so the rates are now stated as sample-dependent, and a second, narrower ~2-px shared-edge disagreement class on layer 0 is recorded. The headline cost figures and the a-priori layer signature are unchanged. See campaign/results/verification/macos-replication.md."
+        }
+      ],
       "raw_artifacts": [
         "campaign/macos/router_mac.py",
         "campaign/results/artifacts/macos/router-window-map.json",
@@ -2810,11 +2816,11 @@
         },
         "t2_enumerate": {
           "pass": true,
-          "detail": "10 nodes, correct roles (AXStaticText / AXButton / AXTextField), every one with usable geometry, 32.5 ms for the full walk. This is where macOS beats the other two outright: Windows found UIA content-blind and had to bring up the Access Bridge, Linux had to enable AtkWrapper, and here the native tree answers with no setup at all."
+          "detail": "RE-MEASURED 2026-08-17 on SwingProbe2.java itself (replication pass, Temurin 17) — the previous figures here ('10 nodes', an AXTextField) had been carried over from the retracted first probe, which this row now replaces. SwingProbe2's tree is 12 nodes: 5 AXStaticText, 5 AXButton (the two content buttons plus three window-chrome), 1 AXGroup, 1 AXWindow — correct roles throughout, and every node has usable geometry (12/12). Full walk 29.2 ms cold, 7.9 ms median warm over 5 runs; serialized view 198 bytes / 50 tokens. The cross-OS point is unchanged: Windows found UIA content-blind and had to bring up the Access Bridge, Linux had to enable AtkWrapper, and here the native tree answers with no setup at all."
         },
         "t3_live_value": {
           "pass": true,
-          "detail": "A JTextField's live contents are exposed: AXValue = 'initial', matching the screen."
+          "detail": "SwingProbe2.java deliberately contains no JTextField, so this row is answered by a SEPARATE, explicitly-labelled test on SwingProbe.java (the first probe — valid for this purpose, since its confound concerned accessibleName substitution on labels, not field values). Measured 2026-08-17: the construction value is exposed (AXValue = 'initial'); then a unique string typed through layout-independent keycodes delivered with CGEventPostToPid reads back CHAR-EXACT via AXValue — 'REPL-T3-7Q42-café-naïve', accents intact, re-read 15.4 ms. Note the precise shape of the naming hazard: this field's accessibleName ('probe-field') lands in AXDescription while the LIVE VALUE stays in AXValue, so the t1 substitution hazard applies to a label's painted text, not to a text field's value."
         },
         "t4_living_screen": {
           "pass": true,
@@ -2830,12 +2836,12 @@
         }
       },
       "measurements": {
-        "view_bytes": 388,
-        "view_tokens_est": 97,
+        "view_bytes": 198,
+        "view_tokens_est": 50,
         "screenshot_tokens_est": 168,
         "diff_bytes_per_interaction": 0,
         "idle_cost_bytes": 0,
-        "capture_latency_ms": 32.5,
+        "capture_latency_ms": 7.9,
         "notes": "THE NEW AXIS: 'THE ACTION LIES ABOUT ITS EFFECT'. Every silent divergence found so far in this campaign was a bad READ — a view disagreeing with the screen. This is an ACT that reports success and does nothing, which is worse for an agent, because it proceeds believing the world moved and every subsequent step is reasoned from a false premise. It is also invisible to src/coverage-guard.mjs by construction: both guards inspect a VIEW, and nothing was wrong with the view. MITIGATION BUILT AND MEASURED, NOT JUST PROPOSED (campaign/macos/act_guard.py). The contract is channel-agnostic and applies equally to UIA Invoke(), AT-SPI do_action and CDP dispatchMouseEvent: read the target region's state, perform, then re-read; err != 0 is an EXPLICIT_FAILURE and should be believed, an unchanged state after a success return is UNVERIFIED, and only a changed state is CONFIRMED. Measured on both sides of the boundary in one session. The lying Swing button: declared_actions [], perform_err 0, state identical before and after -> UNVERIFIED, caught. The positive control, a native AppKit Calculator button: declared_actions ['AXPress'], perform_err 0, display changed -> CONFIRMED. No false alarm on the control, and the failure caught on the liar. COST, which is the reason this is practical: the structured re-read is 5 tokens on the Calculator and 38 on the Swing window, against 168 for a screenshot of that same small window — 4.4x to 34x cheaper than verifying with pixels, and the ratio widens with window size since the structured re-read scales with the affected region while a capture scales with the whole surface. Round-trip 507-517 ms, dominated by the deliberate repaint wait, not by the channel. TWO SIGNALS, USE BOTH: the empty action list is the free a-priori predictor (never call AXPress on an element that declares no actions — fall back to a synthetic click), and the state re-read is the runtime verification for when you do act. Neither alone is sufficient: the declaration does not tell you the press landed, and the verification costs a round-trip you can skip when the declaration already says no."
       },
       "runtime_verification": {
@@ -2855,8 +2861,15 @@
       ],
       "agent": "claude-code (Fable 5) on leandre-macbook, live session",
       "date": "2026-08-17",
+      "revisions": [
+        {
+          "date": "2026-08-17",
+          "what": "t2/t3 corrected after the independent replication pass caught a provenance error: both rows (and the numeric measurements block) still carried the retracted first probe's figures — '10 nodes' and the AXTextField are SwingProbe.java's tree, which SwingProbe2.java (12 nodes, no text field) cannot produce. t2 re-measured on SwingProbe2 (Temurin 17); the text-field live-value result is now an explicitly separate test on SwingProbe.java, upgraded from reading the construction value to reading back a typed unique string. The act-side finding and its numbers were reproduced exactly in the same pass and are untouched. See campaign/results/verification/macos-replication.md."
+        }
+      ],
       "raw_artifacts": [
         "campaign/macos/SwingProbe2.java",
+        "campaign/macos/SwingProbe.java",
         "campaign/macos/act_guard.py",
         "campaign/results/artifacts/macos/swing-window-surface.png"
       ]
