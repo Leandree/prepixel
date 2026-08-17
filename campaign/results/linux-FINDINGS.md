@@ -191,3 +191,41 @@ client contact, no seat, no WM, no gsettings needed.
   runtime" is a property of the guard's *calibration*, and sparse line-art is a
   regime the Windows-derived threshold had never seen. Guard B stayed correctly
   silent (counts say 0, rows say 0 — consistent).
+
+## Round 5 — the per-window capture primitive, and the two missing tiers (debian-server, 2026-08-17)
+
+- **XComposite closes the per-window-capture rule on the third OS.** ~80 lines of
+  Xlib (`campaign/linux/grabwin.c`): redirect one window, read its own surface,
+  compare with the screen crop at the same rect. With FeatherPad covering 3/4 of
+  Mousepad: 14.2% of pixels diverge, and the guard energy of the screen crop
+  (0.042) CROSSES the 0.03 threshold while the window's own surface reads 0.021 —
+  the verdict flip macOS predicted, reproduced with plain occlusion instead of
+  transparency. Two X11 facts worth keeping: stock Xvfb ships Composite 0.4 and a
+  client can redirect a single window with no compositor; and the redirected
+  surface holds content under occluded regions (the X11 twin of PrintWindow
+  PW_RENDERFULLCONTENT), so per-window capture is strictly more informative than
+  the screen.
+- **Tier F/Java measured** (purpose-built SwingProbe, OpenJDK 21 +
+  java-atk-wrapper): the bridge works and is fast (25 ms full walk), text/value/
+  blind-click all pass, and the custom-painted JPanel reproduces the OBS shape on
+  a third toolkit — nameless kids=0 panel, painted text nowhere in the tree.
+  Dialect quirks a router must know: role is 'button' (not 'push button'), the
+  frame node reports extents [-1,-1,-1,-1]. Interception accident of the
+  -Bsymbolic class: AtkWrapper's static init execs a hardcoded /usr/bin/xprop and
+  a11y dies entirely if x11-utils is absent — three signatures needed, not one.
+- **Tier F/Flutter measured on a real third-party app** (AppFlowy 0.13.2,
+  official .deb): the screen renders a full login UI; the channel exposes 5
+  nodes, zero content, one node answering childCount = -1 with stalling property
+  reads (17.4 s first walk). ScreenReaderEnabled=true — live AND at launch —
+  changes nothing. Classified unavailable/EXPLICIT-by-shape: 0% structural
+  coverage is computable in one walk, so the router's pixel fallback is
+  deterministic; nothing mimics a valid answer. Flutter joins games in the
+  honest-refusal class on this build, with the usual caveat that the boundary is
+  build wiring, not technology.
+- **The guard spectrum is now five points and it condemns the 0.03 threshold**:
+  FL/OBS 0.06–0.07 (caught), Swing waveform-on-dark 0.036 (caught by 0.006),
+  AppFlowy full login UI 0.029 (a WHOLE REAL SCREEN under the threshold),
+  qBittorrent sparse chart 0.020 (missed), genuinely-empty 0.000 everywhere
+  measured, on three OSes. Threshold 0.01 separates every real-content sample
+  from every empty sample in the campaign's data; 0.03 sits in the middle of the
+  content distribution. Returns-file FYI updated accordingly.

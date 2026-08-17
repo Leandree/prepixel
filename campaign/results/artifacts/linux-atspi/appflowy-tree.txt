@@ -1,0 +1,2 @@
+  frame [0, 0, 1232, 752] "AppFlowy" kids=1
+    panel [0, 0, 1232, 752] "" kids=1

@@ -1,0 +1,504 @@
+[
+ {
+  "role": "application",
+  "name": "SwingProbe",
+  "ext": null,
+  "showing": false,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 1,
+  "depth": 0
+ },
+ {
+  "role": "frame",
+  "name": "SwingProbe",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 1,
+  "depth": 1
+ },
+ {
+  "role": "root pane",
+  "name": "",
+  "ext": [
+   60,
+   40,
+   900,
+   640
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 2,
+  "depth": 2
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 3
+ },
+ {
+  "role": "layered pane",
+  "name": "",
+  "ext": [
+   60,
+   40,
+   900,
+   640
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 2,
+  "depth": 3
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   60,
+   61,
+   900,
+   619
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 3,
+  "depth": 4
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   60,
+   61,
+   900,
+   35
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 4,
+  "depth": 5
+ },
+ {
+  "role": "label",
+  "name": "Type here:",
+  "ext": [
+   65,
+   71,
+   76,
+   15
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "text",
+  "name": "input-field",
+  "ext": [
+   146,
+   69,
+   268,
+   19
+  ],
+  "showing": true,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "EditableText",
+   "Text"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "button",
+  "name": "Do it",
+  "ext": [
+   419,
+   66,
+   67,
+   25
+  ],
+  "showing": true,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "label",
+  "name": "clicks: 0",
+  "ext": [
+   491,
+   71,
+   55,
+   15
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "scroll pane",
+  "name": "",
+  "ext": [
+   60,
+   104,
+   900,
+   326
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 3,
+  "depth": 5
+ },
+ {
+  "role": "viewport",
+  "name": "",
+  "ext": [
+   61,
+   105,
+   897,
+   323
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 1,
+  "depth": 6
+ },
+ {
+  "role": "text",
+  "name": "",
+  "ext": [
+   61,
+   105,
+   897,
+   323
+  ],
+  "showing": true,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "EditableText",
+   "Text"
+  ],
+  "text": "The quick brown fox jumps over the lazy dog 0123456789",
+  "kids": 0,
+  "depth": 7
+ },
+ {
+  "role": "scroll bar",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 2,
+  "depth": 6
+ },
+ {
+  "role": "button",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 7
+ },
+ {
+  "role": "button",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 7
+ },
+ {
+  "role": "scroll bar",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 2,
+  "depth": 6
+ },
+ {
+  "role": "button",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 7
+ },
+ {
+  "role": "button",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 7
+ },
+ {
+  "role": "panel",
+  "name": "Preview",
+  "ext": [
+   60,
+   438,
+   900,
+   242
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 1,
+  "depth": 5
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   65,
+   455,
+   890,
+   220
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "menu bar",
+  "name": "",
+  "ext": [
+   60,
+   40,
+   900,
+   21
+  ],
+  "showing": true,
+  "ifaces": [
+   "Collection",
+   "Selection"
+  ],
+  "text": "",
+  "kids": 2,
+  "depth": 4
+ },
+ {
+  "role": "menu",
+  "name": "File",
+  "ext": [
+   60,
+   40,
+   37,
+   19
+  ],
+  "showing": true,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Selection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 3,
+  "depth": 5
+ },
+ {
+  "role": "menu item",
+  "name": "New",
+  "ext": [
+   60,
+   40,
+   0,
+   0
+  ],
+  "showing": false,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Open",
+  "ext": [
+   60,
+   40,
+   0,
+   0
+  ],
+  "showing": false,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Quit",
+  "ext": [
+   60,
+   40,
+   0,
+   0
+  ],
+  "showing": false,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Help",
+  "ext": [
+   97,
+   40,
+   45,
+   19
+  ],
+  "showing": true,
+  "ifaces": [
+   "Action",
+   "Collection",
+   "Selection",
+   "Value"
+  ],
+  "text": "",
+  "kids": 0,
+  "depth": 5
+ }
+]

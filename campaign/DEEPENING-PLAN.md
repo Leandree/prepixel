@@ -82,6 +82,15 @@ Chess refuted "game = pixels" because Apple annotated it. Test one with no AX.
 
 ## LINUX agent — ✅ DONE 2026-08-17 (debian-server, headless + Xvfb, no root)
 
+Round 5 additions (same day): the per-window capture rule implemented on X11
+(grabwin.c/XComposite, measured verdict flip under occlusion), Tier F measured —
+Java/Swing works (J2SE-access-bridge; OBS shape reproduced and caught at 0.036),
+Flutter unavailable/explicit (AppFlowy: 5-node tree for a full UI, kids=-1
+breakage, ScreenReaderEnabled makes no difference). Every Linux tier is now
+measured or explicitly refused — none silently absent. Guard spectrum: 0.06-0.07
+/ 0.036 / 0.029 / 0.020 / 0.000 → the 0.03 threshold splits real content; 0.01
+separates everything measured (returns FYI).
+
 ### P1 — AT-SPI in a real session ✅
 The reference cell had it `blocked` (no a11y bus headless). **Result:** the block
 was a sandbox artifact — under plain dbus-run-session the a11y bus D-Bus-activates
