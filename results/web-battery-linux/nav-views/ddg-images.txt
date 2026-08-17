@@ -1,0 +1,127 @@
+a 4,17,86,50 id=header-logo-wrapper
+input 96,20,636,44 id=search_form_input value="gpu rasterization"
+button 740,26,32,32
+[pixels] svg 748,34,16,16
+a 889,23,321,32
+text 901,30,297,17 "Protection. Confidentialité. Tranquillité d'esprit."
+button 1214,23,32,32 id=header-hamburger-menu-btn
+text 1222,31,85,16 "Ouvrir le menu"
+[pixels] svg 1222,31,16,16
+a 110,70,49,38
+[pixels] svg 110,80,16,16
+text 129,80,30,17 "Tous"
+a 175,70,47,38
+text 175,80,47,17 "Images"
+a 238,70,45,38
+text 238,80,45,17 "Vidéos"
+a 299,70,66,38
+text 299,80,66,17 "Actualités"
+text 380,80,27,17 "Plus"
+[pixels] svg 412,83,12,12
+a 371,115,152,21 [occluded]
+text 377,119,27,13 "Carte" [occluded]
+a 371,136,152,21 [occluded]
+text 377,140,46,13 "Shopping" [occluded]
+a 520,76,121,26
+[pixels] svg 528,81,16,16
+text 548,80,85,17 "Search Assist"
+a 649,75,83,28
+[pixels] svg 657,80,16,16
+text 676,80,48,17 "Duck.ai"
+button 740,75,32,28
+[pixels] svg 748,80,16,16 [occluded]
+text 763,79,162,17 "Paramètres de recherche"
+a 740,75,32,29
+text 134,122,50,17 "Protégé"
+[pixels] svg 188,124,12,12
+mark 222,124,12,12 rgb(255, 255, 255)
+a 260,122,43,17
+text 260,122,43,17 "France"
+[pixels] svg 307,124,12,12
+text 339,122,146,17 "Filtre parental : modéré"
+[pixels] svg 489,124,12,12
+text 521,122,106,17 "Date indifférente"
+[pixels] svg 631,124,12,12
+button 731,163,32,32
+[pixels] svg 739,171,16,16
+a 110,161,32,32
+[pixels] img 118,169,16,16
+text 150,159,102,17 "kingofgeek.com"
+a 150,176,552,18
+text 150,177,45,16 "https://"
+text 195,177,127,16 "www.kingofgeek.com"
+text 323,177,11,16 "›"
+text 333,177,368,16 "2025 › 01 › rasterisation-expliquee-simplement-guide-complet"
+a 110,205,628,26
+text 110,204,528,27 "La rastérisation, expliquée simplement - kingofgeek.com"
+text 110,239,81,17 "26 janv. 2025"
+text 205,239,228,17 "Et là, la rastérisation entre en jeu : le"
+text 433,239,29,17 "GPU"
+text 110,239,629,38 "« remplit » chaque triangle projeté avec des pixels. Il découpe la forme du triangle en une multitude de petits carrés."
+button 731,313,32,32
+[pixels] svg 739,321,16,16
+a 110,311,32,32
+[pixels] img 118,319,16,16
+text 150,309,149,17 "The Chromium Projects"
+a 150,325,588,18
+text 150,327,45,16 "https://"
+text 195,327,114,16 "www.chromium.org"
+text 310,327,11,16 "›"
+text 321,327,501,16 "developers › design-documents › chromium-graphics › how-to-get-gpu-rasterization"
+a 110,355,628,26
+text 110,354,516,27 "How to get GPU Rasterization - The Chromium Projects"
+text 110,388,130,17 "Learn how to enable"
+text 240,388,29,17 "GPU"
+text 273,388,82,17 "rasterization"
+text 110,388,620,38 "in Chrome on Android and Desktop, and how to check if it is working."
+text 166,409,29,17 "GPU"
+text 199,409,82,17 "rasterization"
+text 110,409,638,38 "can improve performance for some paint workloads, but may be vetoed by the content or the device."
+button 731,484,32,32
+[pixels] svg 739,492,16,16
+a 110,482,32,32
+[pixels] img 118,490,16,16
+text 150,480,64,17 "Wikipédia"
+a 150,496,259,18
+text 150,498,46,16 "https://"
+text 196,498,91,16 "fr.wikipedia.org"
+text 286,498,11,16 "›"
+text 297,498,112,16 "wiki › Rastérisation"
+a 110,526,628,26
+text 110,525,244,27 "Rastérisation — Wikipédia"
+text 110,559,651,38 "La rastérisation, ou matricialisation, est un procédé qui consiste à convertir une image vectorielle en une image matricielle destinée à être affichée sur un écran ou imprimée par un matériel d'impression."
+button 731,634,32,32
+[pixels] svg 739,642,16,16
+a 110,632,32,32
+[pixels] img 118,640,16,16
+text 150,629,64,17 "Wikipedia"
+a 150,646,265,18
+text 150,647,45,16 "https://"
+text 195,647,97,16 "en.wikipedia.org"
+text 292,647,11,16 "›"
+text 302,647,112,16 "wiki › Rasterisation"
+a 110,676,628,26
+text 110,675,234,27 "Rasterisation - Wikipedia"
+text 110,709,61,17 "However,"
+text 171,709,82,17 "rasterization"
+text 110,709,644,59 "is simply the process of computing the mapping from scene geometry to pixels and does not prescribe a particular way to compute the color of those pixels. The specific color of each pixel is assigned by a pixel shader (which in modern"
+text 436,750,36,17 "GPUs"
+text 472,750,189,17 "is completely programmable)."
+text 150,800,105,17 "alelievr.github.io"
+a 850,175,375,22
+text 850,172,124,26 "Rastérisation"
+text 850,214,348,80 "La rastérisation, ou matricialisation, est un procédé qui consiste à convertir une image vectorielle en une image matricielle destinée à être affichée sur un écran ou imprimée par un matériel d'impression."
+text 850,276,367,101 "Les scènes en trois dimensions étant généralement stockées en mémoire sous forme vectorielle, ce terme s'applique également pour leur rendu à l'écran, c'est d'ailleurs la principale utilisation du mot rastérisation"
+a 969,360,166,17
+text 969,360,166,17 "Suite dans Wikipedia (FR)"
+[pixels] svg 1027,399,22,22
+text 889,438,51,16 "Source :"
+a 939,438,85,16
+text 939,438,85,16 "Wikipedia (FR)"
+text 1035,438,147,16 "Cela vous a-t-il été utile ?"
+button 1186,435,24,24
+[pixels] svg 1186,435,24,24
+button 1214,435,24,24
+[pixels] svg 1214,435,24,24
+button 1012,748,241,40
+text 1033,758,199,20 "Partagez vos commentaires"

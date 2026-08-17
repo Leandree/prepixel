@@ -1,0 +1,66 @@
+{
+ "window": {
+  "wid": 4507,
+  "pid": 82643,
+  "owner": "DiRT 4",
+  "title": "DiRT 4",
+  "rect": [
+   0,
+   0,
+   1512,
+   982
+  ],
+  "layer": 0,
+  "alpha": 1.0,
+  "area": 1484784.0
+ },
+ "ax": {
+  "axwindows_err": 0,
+  "n_axwindows": 1,
+  "window_attributes": [
+   "AXFocused",
+   "AXFullScreen",
+   "AXTitle",
+   "AXChildrenInNavigationOrder",
+   "AXFrame",
+   "AXPosition",
+   "AXGrowArea",
+   "AXMinimizeButton",
+   "AXDocument",
+   "AXSections",
+   "AXCloseButton",
+   "AXMain",
+   "AXActivationPoint",
+   "AXFullScreenButton",
+   "AXProxy",
+   "AXDefaultButton",
+   "AXMinimized",
+   "AXChildren",
+   "AXRole",
+   "AXParent",
+   "AXTitleUIElement",
+   "AXCancelButton",
+   "AXModal",
+   "AXSubrole",
+   "AXZoomButton",
+   "AXRoleDescription",
+   "AXSize",
+   "AXToolbarButton"
+  ]
+ },
+ "n_nodes": 1,
+ "roles": {
+  "AXWindow": 1
+ },
+ "nodes_with_text": 1,
+ "sample_text": [
+  "title=DiRT 4"
+ ],
+ "max_depth": 0,
+ "child_nodes_with_geometry": 0,
+ "screenshot_tokens_window": 1980,
+ "artifacts": {
+  "screen_region": "/Users/leandre/dev/prepixel/campaign/macos/../results/artifacts/macos/dirt-screen-region.png",
+  "window_surface": "/Users/leandre/dev/prepixel/campaign/macos/../results/artifacts/macos/dirt-window-surface.png"
+ }
+}

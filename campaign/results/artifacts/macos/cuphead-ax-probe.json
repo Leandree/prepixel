@@ -1,0 +1,68 @@
+{
+ "window": {
+  "wid": 4703,
+  "pid": 92011,
+  "owner": "Cuphead",
+  "title": "Cuphead",
+  "rect": [
+   0,
+   33,
+   1512,
+   949
+  ],
+  "layer": 0,
+  "alpha": 1.0,
+  "area": 1434888.0
+ },
+ "ax": {
+  "axwindows_err": 0,
+  "n_axwindows": 1,
+  "window_attributes": [
+   "AXFocused",
+   "AXFullScreen",
+   "AXTitle",
+   "AXChildrenInNavigationOrder",
+   "AXFrame",
+   "AXPosition",
+   "AXGrowArea",
+   "AXMinimizeButton",
+   "AXDocument",
+   "AXSections",
+   "AXCloseButton",
+   "AXMain",
+   "AXActivationPoint",
+   "AXFullScreenButton",
+   "AXProxy",
+   "AXDefaultButton",
+   "AXMinimized",
+   "AXChildren",
+   "AXRole",
+   "AXParent",
+   "AXTitleUIElement",
+   "AXCancelButton",
+   "AXModal",
+   "AXSubrole",
+   "AXZoomButton",
+   "AXRoleDescription",
+   "AXSize",
+   "AXToolbarButton"
+  ]
+ },
+ "n_nodes": 2,
+ "roles": {
+  "AXWindow": 1,
+  "AXStaticText": 1
+ },
+ "nodes_with_text": 2,
+ "sample_text": [
+  "title=Cuphead",
+  "value=Cuphead"
+ ],
+ "max_depth": 1,
+ "child_nodes_with_geometry": 1,
+ "screenshot_tokens_window": 1914,
+ "artifacts": {
+  "screen_region": "/Users/leandre/dev/prepixel/campaign/macos/../results/artifacts/macos/cuphead-screen-region.png",
+  "window_surface": "/Users/leandre/dev/prepixel/campaign/macos/../results/artifacts/macos/cuphead-window-surface.png"
+ }
+}

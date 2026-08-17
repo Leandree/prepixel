@@ -135,3 +135,59 @@ Same 20 randomized pages, both conditions, same model, mechanical verification.
   tree before believing it.
 - **Real-web battery/navigation**: `blocked` in this sandbox (egress filter) —
   one confirmation run on the real Linux desktop recommended, scripts exist.
+
+## Round 4 — the real-desktop confirmations the sandbox could not run (debian-server, 2026-08-17)
+
+Run on Léandre's headless Debian 13 server: real internet egress, no display —
+everything graphical under Xvfb + dbus-run-session, all GUI packages extracted
+from .debs into a user prefix without root (one 8-byte binary patch to relocate
+Xvfb's hardcoded /usr/bin/xkbcomp). That environment note is itself a datum: the
+"AT-SPI is blocked headless" verdict of the first sandbox was a *sandbox*
+artifact — under plain dbus-run-session the a11y bus D-Bus-activates on first
+client contact, no seat, no WM, no gsettings needed.
+
+- **The web-parity result replicates number-for-number across OSes.** Same 16
+  sites, same scripts (paths-only diff), Chrome 148-under-Xvfb vs macOS's Chrome
+  151, x86_64 vs Apple Silicon, two days apart: ratio of totals 1.00x (macOS
+  0.98x), median per-site 1.15x (identical), structure wins on the same 10/16,
+  vitrine 2.20x / commerce 0.83x / media 0.97x identical to the hundredth,
+  Hacker News 0.46x identical, 7.6 screens-per-page identical, the same 6
+  consent banners. Blind navigation: 8/8 again, same URLs, and the MDN
+  disclosure toggle moved the view by the same +16 lines as on macOS. If the
+  paper needs one sentence: the cost ratio is a property of the page, and the
+  page is the same page everywhere — the OS contributes only latency (mean view
+  61 ms here vs 16 ms on the M-series laptop).
+- **AT-SPI in session, GTK3 + Qt6, one client, zero adapters.** The same pyatspi
+  code drove Mousepad (GTK3) and FeatherPad (Qt6): identical roles, states,
+  Text/EditableText, identical text-changed event vocabulary. Editors cost 68
+  (GTK) / 331 (Qt) tokens vs 1365 for a screenshot; idle is 0 events; a
+  keystroke is a ~21 B pushed delta. The honesty details were the best part:
+  with no WM Mousepad renders menubar-less at 48x52 px, and the channel said
+  exactly that (SHOWING=false, MININT extents, frame extents matching X's
+  geometry byte-for-byte) — present-in-tree vs shown-on-screen is cleanly
+  distinguished.
+- **Native blind click, closed end-to-end on three stacks.** The old 'blocked'
+  cell re-ran first try: CDP box + window.screenX/Y + chromeTop → xdotool →
+  IDLE→CLICKED read back via CDP. Plus GTK (context menu → Select All →
+  selection [0,92] verified in-channel) and Qt (menubar + tab). 4/4 first-
+  attempt. Router note: CDP makes you compose three coordinate frames yourself;
+  AT-SPI answers in DESKTOP_COORDS directly.
+- **The OBS silent-mimicry class exists on Linux, in a stock Debian app — and
+  the shipped guard calibration MISSES it.** qBittorrent's speed graph
+  (SpeedPlotView, custom QGraphicsView paint) is on screen a live chart — axes,
+  legend, grid, real DHT-traffic curves — and in AT-SPI a nameless
+  `filler [154,313,1038,407] kids=0`, indistinguishable from the genuine spacer
+  fillers in the same tree, while the chrome around it (combos, labels) is
+  fully exposed. Silent-by-mimicry, predicted a priori from "QGraphicsView +
+  paintEvent". Then the twist that improves the paper: coverage-guard's
+  contentEnergy reads 0.020 — under the 0.03 threshold calibrated on Windows's
+  densely-painted panes (0.06–0.07) — so guard A as shipped calls the chart
+  "genuinely-empty". False negative. The margins say it's a calibration gap,
+  not a detector limit: the genuinely-empty control in the same frame measures
+  0.000 on all three metrics (64x64 energy, full-res energy, edge fraction) vs
+  the chart's 0.020 / 0.025 / 0.0268 — total separation; threshold 0.01 or an
+  edge-density metric catches it with zero false positives on every sample the
+  campaign has measured on any OS. Lesson for the safety claim: "catchable at
+  runtime" is a property of the guard's *calibration*, and sparse line-art is a
+  regime the Windows-derived threshold had never seen. Guard B stayed correctly
+  silent (counts say 0, rows say 0 — consistent).

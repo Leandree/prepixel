@@ -1,0 +1,3018 @@
+[
+ {
+  "role": "application",
+  "name": "mousepad",
+  "ext": null,
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection"
+  ],
+  "text": "",
+  "depth": 0
+ },
+ {
+  "role": "frame",
+  "name": "*Untitled 1 - Mousepad",
+  "ext": [
+   0,
+   0,
+   1000,
+   700
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 1
+ },
+ {
+  "role": "filler",
+  "name": "",
+  "ext": [
+   0,
+   0,
+   1000,
+   700
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 2
+ },
+ {
+  "role": "filler",
+  "name": "",
+  "ext": [
+   0,
+   0,
+   1000,
+   1
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 3
+ },
+ {
+  "role": "menu bar",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 4
+ },
+ {
+  "role": "menu",
+  "name": "File",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "menu item",
+  "name": "New",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "New Window",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "New From Template",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Open...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Open Recent",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Clear History",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Save",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Save As...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Save All",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Revert",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Print...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Detach Tab",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Close Tab",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Close Window",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Quit",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Edit",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "menu item",
+  "name": "Undo",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Redo",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Cut",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Copy",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Paste",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Paste Special",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Paste from History",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "Paste as Column",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "Delete Selection",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Delete Line",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Select All",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Convert",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "To Lowercase",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "To Uppercase",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "To Title Case",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "To Opposite Case",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "Tabs to Spaces",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "Leading Spaces to Tabs",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "Strip Trailing Spaces",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "Transpose",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu",
+  "name": "Move",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "One Line Up",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "One Line Down",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "One Word Left",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "One Word Right",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu item",
+  "name": "Duplicate Line / Selection",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Increase Indent",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Decrease Indent",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Preferences...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Search",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "menu item",
+  "name": "Find",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Find Next",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Find Previous",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Find and Replace...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Incremental Search",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Highlight All",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Go to...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "View",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "menu item",
+  "name": "Select Font...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Color Scheme",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "radio menu item",
+  "name": "None",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "check menu item",
+  "name": "Line Numbers",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Menubar",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Toolbar",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Statusbar",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Fullscreen",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Document",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "check menu item",
+  "name": "Word Wrap",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Auto Indent",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Tab Size",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "radio menu item",
+  "name": "2",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "radio menu item",
+  "name": "3",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "radio menu item",
+  "name": "4",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "radio menu item",
+  "name": "8",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "radio menu item",
+  "name": "Other...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "check menu item",
+  "name": "Insert Spaces",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Filetype",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "radio menu item",
+  "name": "Plain Text",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "menu",
+  "name": "Line Ending",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "radio menu item",
+  "name": "Unix (LF)",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "radio menu item",
+  "name": "Mac (CR)",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "radio menu item",
+  "name": "DOS / Windows (CR LF)",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 7
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Write Unicode BOM",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "check menu item",
+  "name": "Viewer Mode",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "separator",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Previous Tab",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "Next Tab",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu",
+  "name": "Help",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "menu item",
+  "name": "Contents",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "menu item",
+  "name": "About",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "filler",
+  "name": "",
+  "ext": [
+   0,
+   0,
+   1000,
+   1
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 3
+ },
+ {
+  "role": "tool bar",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 4
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "New",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Open...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Save",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Save As...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Revert",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Close Tab",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Undo",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Redo",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Cut",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Copy",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Paste",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Find",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Find and Replace...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Go to...",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "button",
+  "name": "Fullscreen",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Action",
+   "Collection",
+   "Component",
+   "Image"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "page tab list",
+  "name": "",
+  "ext": [
+   0,
+   2,
+   1000,
+   696
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component",
+   "Selection"
+  ],
+  "text": "",
+  "depth": 3
+ },
+ {
+  "role": "page tab",
+  "name": "",
+  "ext": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 4
+ },
+ {
+  "role": "scroll pane",
+  "name": "",
+  "ext": [
+   0,
+   2,
+   1000,
+   696
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 5
+ },
+ {
+  "role": "text",
+  "name": "",
+  "ext": [
+   1,
+   3,
+   998,
+   694
+  ],
+  "showing": true,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component",
+   "EditableText",
+   "Text"
+  ],
+  "text": "The quick brown fox jumps over the lazy dog 0123456789 PX-7Q4K-LINUX-ATSPI",
+  "depth": 6
+ },
+ {
+  "role": "scroll bar",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   46,
+   6
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component",
+   "Value"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "scroll bar",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component",
+   "Value"
+  ],
+  "text": "",
+  "depth": 6
+ },
+ {
+  "role": "status bar",
+  "name": "",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ],
+  "showing": false,
+  "ifaces": [
+   "Accessible",
+   "Collection",
+   "Component"
+  ],
+  "text": "",
+  "depth": 3
+ }
+]

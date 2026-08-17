@@ -1,0 +1,435 @@
+a 0,0,1,1 href=#start-of-content
+text 0,2,9,268 "Skip to content"
+text 0,20,230,28 "Navigation Menu"
+a 32,20,32,32 href=/ aria-label=Homepage
+button 80,16,105,40 type=button
+text 88,26,69,19 "Platform"
+button 185,16,112,40 type=button
+text 193,26,76,19 "Solutions"
+button 297,16,120,40 type=button
+text 305,26,84,19 "Resources"
+button 417,16,141,40 type=button
+text 425,26,105,19 "Open Source"
+button 558,16,121,40 type=button
+text 566,26,85,19 "Enterprise"
+a 679,16,72,40 href=https://github.com/pricing
+text 687,26,56,19 "Pricing"
+button 980,20,42,32 type=button aria-label=Search or jump to, type / to search
+a 1030,20,75,32 href=/login?return_to=https%3A%2F%2Fgithub.com%2Ftorvalds%2Flinux
+text 1043,28,49,16 "Sign in"
+a 1113,20,80,32 href=/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=torvalds%2Flinux
+text 1126,28,54,16 "Sign up"
+button 1201,20,32,32 type=button
+a 56,91,81,24 href=/torvalds
+text 56,91,81,24 "torvalds"
+text 141,91,7,24 "/"
+a 152,91,55,24 href=/torvalds/linux
+text 152,91,55,24 "linux"
+text 222,96,36,14 "Public"
+a 846,88,125,28 href=/login?return_to=%2Ftorvalds%2Flinux id=repository-details-watch-button aria-label=You must be signed in to change notification settings
+text 883,95,75,14 "Notifications"
+a 979,88,118,28 id=fork-button href=/login?return_to=%2Ftorvalds%2Flinux
+text 1016,95,30,14 "Fork"
+text 1055,95,22,14 "64k"
+a 1105,88,128,28 href=/login?return_to=%2Ftorvalds%2Flinux aria-label=You must be signed in to star a repository
+text 1142,95,32,14 "Star"
+text 1183,95,30,14 "243k"
+a 32,143,79,30 id=code-tab href=/torvalds/linux
+text 64,150,39,16 "Code"
+a 119,143,99,30 id=actions-tab href=/torvalds/linux/actions
+text 155,150,51,16 "Actions"
+a 226,143,104,30 id=projects-tab href=/torvalds/linux/projects
+text 263,150,55,16 "Projects"
+a 338,143,199,30 id=security-and-quality-tab href=/torvalds/linux/security
+text 380,150,141,16 "Security and quality"
+a 546,143,103,30 id=insights-tab href=/torvalds/linux/pulse
+text 582,150,55,16 "Insights"
+button 32,206,123,32 type=button aria-label=master branch id=ref-picker-repos-header-ref-selector
+text 69,214,49,16 "master"
+a 163,206,99,32 type=button href=/torvalds/linux/branches
+text 192,214,65,16 "Branches"
+a 263,206,65,32 type=button href=/torvalds/linux/tags
+text 292,214,31,16 "Tags"
+input 612,207,174,30 aria-label=Go to file role=combobox placeholder=Go to file type=text value= value=""
+button 811,206,110,32 type=button id=_R_3idahl6k5_
+text 848,214,36,16 "Code"
+text 32,259,133,134 "Folders and files"
+text 45,286,134,86 "Latest commit"
+text 61,274,261,14 "Cannot retrieve latest commit at this time."
+text 752,272,131,38 "History"
+a 752,267,156,28 href=/torvalds/linux/commits/master/
+text 781,273,118,14 "1,465,160 Commits"
+a 75,320,108,16 aria-label=Documentation, (Directory) href=/torvalds/linux/tree/master/Documentation
+text 75,320,108,16 "Documentation"
+a 75,361,68,16 aria-label=LICENSES, (Directory) href=/torvalds/linux/tree/master/LICENSES
+text 75,361,68,16 "LICENSES"
+a 75,402,31,16 aria-label=arch, (Directory) href=/torvalds/linux/tree/master/arch
+text 75,402,31,16 "arch"
+a 75,443,37,16 aria-label=block, (Directory) href=/torvalds/linux/tree/master/block
+text 75,443,37,16 "block"
+a 75,484,35,16 aria-label=certs, (Directory) href=/torvalds/linux/tree/master/certs
+text 75,484,35,16 "certs"
+a 75,525,45,16 aria-label=crypto, (Directory) href=/torvalds/linux/tree/master/crypto
+text 75,525,45,16 "crypto"
+a 75,566,48,16 aria-label=drivers, (Directory) href=/torvalds/linux/tree/master/drivers
+text 75,566,48,16 "drivers"
+a 75,607,12,16 aria-label=fs, (Directory) href=/torvalds/linux/tree/master/fs
+text 75,607,12,16 "fs"
+a 75,648,51,16 aria-label=include, (Directory) href=/torvalds/linux/tree/master/include
+text 75,648,51,16 "include"
+a 75,689,22,16 aria-label=init, (Directory) href=/torvalds/linux/tree/master/init
+text 75,689,22,16 "init"
+a 75,730,56,16 aria-label=io_uring, (Directory) href=/torvalds/linux/tree/master/io_uring
+text 75,730,56,16 "io_uring"
+a 75,771,20,16 aria-label=ipc, (Directory) href=/torvalds/linux/tree/master/ipc
+text 75,771,20,16 "ipc"
+a 75,812,43,16 aria-label=kernel, (Directory) href=/torvalds/linux/tree/master/kernel
+text 75,812,43,16 "kernel"
+a 75,853,17,16 aria-label=lib, (Directory) href=/torvalds/linux/tree/master/lib
+text 75,853,17,16 "lib"
+a 75,894,27,16 aria-label=mm, (Directory) href=/torvalds/linux/tree/master/mm
+text 75,894,27,16 "mm"
+a 75,935,23,16 aria-label=net, (Directory) href=/torvalds/linux/tree/master/net
+text 75,935,23,16 "net"
+a 75,976,27,16 aria-label=rust, (Directory) href=/torvalds/linux/tree/master/rust
+text 75,976,27,16 "rust"
+a 75,1017,58,16 aria-label=samples, (Directory) href=/torvalds/linux/tree/master/samples
+text 75,1017,58,16 "samples"
+a 75,1058,46,16 aria-label=scripts, (Directory) href=/torvalds/linux/tree/master/scripts
+text 75,1058,46,16 "scripts"
+a 75,1099,56,16 aria-label=security, (Directory) href=/torvalds/linux/tree/master/security
+text 75,1099,56,16 "security"
+a 75,1140,43,16 aria-label=sound, (Directory) href=/torvalds/linux/tree/master/sound
+text 75,1140,43,16 "sound"
+a 75,1181,34,16 aria-label=tools, (Directory) href=/torvalds/linux/tree/master/tools
+text 75,1181,34,16 "tools"
+a 75,1222,22,16 aria-label=usr, (Directory) href=/torvalds/linux/tree/master/usr
+text 75,1222,22,16 "usr"
+a 75,1263,23,16 aria-label=virt, (Directory) href=/torvalds/linux/tree/master/virt
+text 75,1263,23,16 "virt"
+a 75,1304,94,16 aria-label=.clang-format, (File) href=/torvalds/linux/blob/master/.clang-format
+text 75,1304,94,16 ".clang-format"
+a 75,1345,80,16 aria-label=.clippy.toml, (File) href=/torvalds/linux/blob/master/.clippy.toml
+text 75,1345,80,16 ".clippy.toml"
+a 75,1386,83,16 aria-label=.cocciconfig, (File) href=/torvalds/linux/blob/master/.cocciconfig
+text 75,1386,83,16 ".cocciconfig"
+a 75,1427,88,16 aria-label=.editorconfig, (File) href=/torvalds/linux/blob/master/.editorconfig
+text 75,1427,88,16 ".editorconfig"
+a 75,1468,158,16 aria-label=.get_maintainer.ignore, (File) href=/torvalds/linux/blob/master/.get_maintainer.ignore
+text 75,1468,158,16 ".get_maintainer.ignore"
+a 75,1509,91,16 aria-label=.gitattributes, (File) href=/torvalds/linux/blob/master/.gitattributes
+text 75,1509,91,16 ".gitattributes"
+a 75,1550,67,16 aria-label=.gitignore, (File) href=/torvalds/linux/blob/master/.gitignore
+text 75,1550,67,16 ".gitignore"
+a 75,1591,66,16 aria-label=.mailmap, (File) href=/torvalds/linux/blob/master/.mailmap
+text 75,1591,66,16 ".mailmap"
+a 75,1632,57,16 aria-label=.pylintrc, (File) href=/torvalds/linux/blob/master/.pylintrc
+text 75,1632,57,16 ".pylintrc"
+a 75,1673,92,16 aria-label=.rustfmt.toml, (File) href=/torvalds/linux/blob/master/.rustfmt.toml
+text 75,1673,92,16 ".rustfmt.toml"
+a 75,1714,63,16 aria-label=COPYING, (File) href=/torvalds/linux/blob/master/COPYING
+text 75,1714,63,16 "COPYING"
+a 75,1755,61,16 aria-label=CREDITS, (File) href=/torvalds/linux/blob/master/CREDITS
+text 75,1755,61,16 "CREDITS"
+a 75,1796,44,16 aria-label=Kbuild, (File) href=/torvalds/linux/blob/master/Kbuild
+text 75,1796,44,16 "Kbuild"
+a 75,1837,52,16 aria-label=Kconfig, (File) href=/torvalds/linux/blob/master/Kconfig
+text 75,1837,52,16 "Kconfig"
+a 75,1878,95,16 aria-label=MAINTAINERS, (File) href=/torvalds/linux/blob/master/MAINTAINERS
+text 75,1878,95,16 "MAINTAINERS"
+a 75,1919,58,16 aria-label=Makefile, (File) href=/torvalds/linux/blob/master/Makefile
+text 75,1919,58,16 "Makefile"
+a 75,1960,60,16 aria-label=README, (File) href=/torvalds/linux/blob/master/README
+text 75,1960,60,16 "README"
+text 33,2033,363,28 "Repository files navigation"
+a 41,2014,82,32 href=#
+text 49,2022,66,16 "README"
+a 131,2014,75,32 href=#
+text 143,2022,53,16 "License"
+text 65,2088,578,194 "Linux kernel
+============
+
+The Linux kernel is the core of any Linux operating system. It manages hardware,
+system resources, and provides the fundamental services for all other software.
+
+Quick Start
+-----------
+
+* Report a bug: See Documentation/admin-guide/reporting-issues.rst
+* Get the latest kernel:"
+a 246,2268,130,14 href=https://kernel.org
+text 246,2268,130,14 "https://kernel.org"
+text 65,2286,585,32 "* Build the kernel: See Documentation/admin-guide/quickly-build-trimmed-linux.rst
+* Join the community:"
+a 224,2304,173,14 href=https://lore.kernel.org/
+text 224,2304,173,14 "https://lore.kernel.org/"
+text 65,2340,477,176 "Essential Documentation
+-----------------------
+
+All users should be familiar with:
+
+* Building requirements: Documentation/process/changes.rst
+* Code of Conduct: Documentation/process/code-of-conduct.rst
+* License: See COPYING
+
+Documentation can be built with make htmldocs or viewed online at:"
+a 65,2520,282,14 href=https://www.kernel.org/doc/html/latest/
+text 65,2520,282,14 "https://www.kernel.org/doc/html/latest/"
+text 65,2574,585,2462 "Who Are You?
+============
+
+Find your role below:
+
+* New Kernel Developer - Getting started with kernel development
+* Academic Researcher - Studying kernel internals and architecture
+* Security Expert - Hardening and vulnerability analysis
+* Backport/Maintenance Engineer - Maintaining stable kernels
+* System Administrator - Configuring and troubleshooting
+* Maintainer - Leading subsystems and reviewing patches
+* Hardware Vendor - Writing drivers for new hardware
+* Distribution Maintainer - Packaging kernels for distros
+* AI Coding Assistant - LLMs and AI-powered development tools
+
+
+For Specific Users
+==================
+
+New Kernel Developer
+--------------------
+
+Welcome! Start your kernel development journey here:
+
+* Getting Started: Documentation/process/development-process.rst
+* Your First Patch: Documentation/process/submitting-patches.rst
+* Coding Style: Documentation/process/coding-style.rst
+* Build System: Documentation/kbuild/index.rst
+* Development Tools: Documentation/dev-tools/index.rst
+* Kernel Hacking Guide: Documentation/kernel-hacking/hacking.rst
+* Core APIs: Documentation/core-api/index.rst
+
+Academic Researcher
+-------------------
+
+Explore the kernel's architecture and internals:
+
+* Researcher Guidelines: Documentation/process/researcher-guidelines.rst
+* Memory Management: Documentation/mm/index.rst
+* Scheduler: Documentation/scheduler/index.rst
+* Networking Stack: Documentation/networking/index.rst
+* Filesystems: Documentation/filesystems/index.rst
+* RCU (Read-Copy Update): Documentation/RCU/index.rst
+* Locking Primitives: Documentation/locking/index.rst
+* Power Management: Documentation/power/index.rst
+
+Security Expert
+---------------
+
+Security documentation and hardening guides:
+
+* Security Documentation: Documentation/security/index.rst
+* LSM Development: Documentation/security/lsm-development.rst
+* Self Protection: Documentation/security/self-protection.rst
+* Reporting Vulnerabilities: Documentation/process/security-bugs.rst
+* CVE Procedures: Documentation/process/cve.rst
+* Embargoed Hardware Issues: Documentation/process/embargoed-hardware-issues.rst
+* Security Features: Documentation/userspace-api/seccomp_filter.rst
+
+Backport/Maintenance Engineer
+-----------------------------
+
+Maintain and stabilize kernel versions:
+
+* Stable Kernel Rules: Documentation/process/stable-kernel-rules.rst
+* Backporting Guide: Documentation/process/backporting.rst
+* Applying Patches: Documentation/process/applying-patches.rst
+* Subsystem Profile: Documentation/maintainer/maintainer-entry-profile.rst
+* Git for Maintainers: Documentation/maintainer/configure-git.rst
+
+System Administrator
+--------------------
+
+Configure, tune, and troubleshoot Linux systems:
+
+* Admin Guide: Documentation/admin-guide/index.rst
+* Kernel Parameters: Documentation/admin-guide/kernel-parameters.rst
+* Sysctl Tuning: Documentation/admin-guide/sysctl/index.rst
+* Tracing/Debugging: Documentation/trace/index.rst
+* Performance Security: Documentation/admin-guide/perf-security.rst
+* Hardware Monitoring: Documentation/hwmon/index.rst
+
+Maintainer
+----------
+
+Lead kernel subsystems and manage contributions:
+
+* Maintainer Handbook: Documentation/maintainer/index.rst
+* Pull Requests: Documentation/maintainer/pull-requests.rst
+* Managing Patches: Documentation/maintainer/modifying-patches.rst
+* Rebasing and Merging: Documentation/maintainer/rebasing-and-merging.rst
+* Development Process: Documentation/process/maintainer-handbooks.rst
+* Maintainer Entry Profile: Documentation/maintainer/maintainer-entry-profile.rst
+* Git Configuration: Documentation/maintainer/configure-git.rst
+
+Hardware Vendor
+---------------
+
+Write drivers and support new hardware:
+
+* Driver API Guide: Documentation/driver-api/index.rst
+* Driver Model: Documentation/driver-api/driver-model/driver.rst
+* Device Drivers: Documentation/driver-api/infrastructure.rst
+* Bus Types: Documentation/driver-api/driver-model/bus.rst
+* Device Tree Bindings: Documentation/devicetree/bindings/
+* Power Management: Documentation/driver-api/pm/index.rst
+* DMA API: Documentation/core-api/dma-api.rst
+
+Distribution Maintainer
+-----------------------
+
+Package and distribute the kernel:
+
+* Stable Kernel Rules: Documentation/process/stable-kernel-rules.rst
+* ABI Documentation: Documentation/ABI/README
+* Kernel Configuration: Documentation/kbuild/kconfig.rst
+* Module Signing: Documentation/admin-guide/module-signing.rst
+* Kernel Parameters: Documentation/admin-guide/kernel-parameters.rst
+* Tainted Kernels: Documentation/admin-guide/tainted-kernels.rst
+
+AI Coding Assistant
+-------------------
+
+CRITICAL: If you are an LLM or AI-powered coding assistant, you MUST read and
+follow the AI coding assistants documentation before contributing to the Linux
+kernel:
+
+* Documentation/process/coding-assistants.rst
+
+This documentation contains essential requirements about licensing, attribution,
+and the Developer Certificate of Origin that all AI tools must comply with.
+
+
+Communication and Support
+=========================
+
+* Mailing Lists:"
+a 188,5022,173,14 href=https://lore.kernel.org/
+text 188,5022,173,14 "https://lore.kernel.org/"
+text 65,5040,267,32 "* IRC: #kernelnewbies on irc.oftc.net
+* Bugzilla:"
+a 152,5058,202,14 href=https://bugzilla.kernel.org/
+text 152,5058,202,14 "https://bugzilla.kernel.org/"
+text 65,5076,470,32 "* MAINTAINERS file: Lists subsystem maintainers and mailing lists
+* Email Clients: Documentation/process/email-clients.rst"
+text 961,208,54,19 "About"
+text 961,244,193,19 "Linux kernel source tree"
+text 961,283,186,38 "Resources"
+a 961,280,81,16 href=#readme-ov-file
+text 985,280,57,16 "Readme"
+a 961,309,77,16 href=#License-1-ov-file
+text 985,309,53,16 "License"
+a 961,338,76,16 href=/torvalds/linux/activity
+text 985,338,52,16 "Activity"
+text 961,362,95,38 "Stars"
+text 985,367,54,16 "243.0k"
+text 1039,367,39,16 "stars"
+text 961,391,169,38 "Watchers"
+text 985,396,34,16 "8.4k"
+text 1019,396,68,16 "watching"
+text 961,420,99,38 "Forks"
+a 961,425,107,16 href=/torvalds/linux/forks
+text 985,425,44,16 "64.0k"
+text 1029,425,39,16 "forks"
+a 961,454,122,16 href=/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Ftorvalds%2Flinux&report=torvalds+%28user%29
+text 961,454,122,16 "Report repository"
+a 961,506,80,24 href=/torvalds/linux/releases
+text 961,508,80,19 "Releases"
+a 961,544,83,16 href=/torvalds/linux/tags
+text 981,544,29,16 "943"
+text 1014,544,30,16 "tags"
+a 961,596,114,24 href=/torvalds/linux/graphs/contributors
+text 961,598,114,19 "Contributors"
+text 1086,601,44,14 "18 786"
+text 961,610,13,19 "("
+text 974,610,59,19 "18 786"
+text 1033,610,7,19 ")"
+a 961,639,32,16 href=/torvalds
+[pixels] img 961,632,32,32 alt=@torvalds src=https://avatars.githubusercontent.com/u/1024025?s=64&v=4
+a 1001,639,32,16 href=/davem330
+[pixels] img 1001,632,32,32 alt=@davem330 src=https://avatars.githubusercontent.com/u/1053866?s=64&v=4
+a 1041,639,32,16 href=/arndb
+[pixels] img 1041,632,32,32 alt=@arndb src=https://avatars.githubusercontent.com/u/1080275?s=64&v=4
+a 1081,639,32,16 href=/broonie
+[pixels] img 1081,632,32,32 alt=@broonie src=https://avatars.githubusercontent.com/u/2903?s=64&v=4
+a 1121,639,32,16 href=/tiwai
+[pixels] img 1121,632,32,32 alt=@tiwai src=https://avatars.githubusercontent.com/u/306482?s=64&v=4
+a 1161,639,32,16 href=/krzk
+[pixels] img 1161,632,32,32 alt=@krzk src=https://avatars.githubusercontent.com/u/10425763?s=64&v=4
+a 961,679,32,16 href=/gregkh
+[pixels] img 961,672,32,32 alt=@gregkh src=https://avatars.githubusercontent.com/u/14953?s=64&v=4
+a 1001,679,32,16 href=/KAGA-KOKO
+[pixels] img 1001,672,32,32 alt=@KAGA-KOKO src=https://avatars.githubusercontent.com/u/171241280?s=64&v=4
+a 1041,679,32,16 href=/geertu
+[pixels] img 1041,672,32,32 alt=@geertu src=https://avatars.githubusercontent.com/u/4139050?s=64&v=4
+a 1081,679,32,16 href=/kuba-moo
+[pixels] img 1081,672,32,32 alt=@kuba-moo src=https://avatars.githubusercontent.com/u/6732289?s=64&v=4
+a 1121,679,32,16 href=/mchehab
+[pixels] img 1121,672,32,32 alt=@mchehab src=https://avatars.githubusercontent.com/u/6566927?s=64&v=4
+a 1161,679,32,16 href=/ickle
+[pixels] img 1161,672,32,32 alt=@ickle src=https://avatars.githubusercontent.com/u/958432?s=64&v=4
+a 961,719,32,16 href=/andy-shev
+[pixels] img 961,712,32,32 alt=@andy-shev src=https://avatars.githubusercontent.com/u/78496?s=64&v=4
+a 1001,719,32,16 href=/vsyrjala
+[pixels] img 1001,712,32,32 alt=@vsyrjala src=https://avatars.githubusercontent.com/u/1081303?s=64&v=4
+a 961,760,131,14 href=/torvalds/linux/graphs/contributors
+text 961,760,131,14 "+ 18 772 contributors"
+text 961,812,98,19 "Languages"
+a 961,864,67,18 href=/torvalds/linux/search?l=c
+text 977,866,9,14 "C"
+text 990,866,27,14 "97.9"
+text 1017,866,11,14 "%"
+a 1040,864,115,18 href=/torvalds/linux/search?l=assembly
+text 1056,866,65,14 "Assembly"
+text 1125,866,19,14 "0.7"
+text 1144,866,11,14 "%"
+a 961,885,81,18 href=/torvalds/linux/search?l=rust
+text 977,887,31,14 "Rust"
+text 1012,887,19,14 "0.4"
+text 1031,887,11,14 "%"
+a 1054,885,84,18 href=/torvalds/linux/search?l=shell
+text 1070,887,34,14 "Shell"
+text 1108,887,19,14 "0.4"
+text 1127,887,11,14 "%"
+a 961,906,98,18 href=/torvalds/linux/search?l=python
+text 977,908,48,14 "Python"
+text 1029,908,19,14 "0.3"
+text 1048,908,11,14 "%"
+a 1071,906,107,18 href=/torvalds/linux/search?l=makefile
+text 1087,908,57,14 "Makefile"
+text 1148,908,19,14 "0.2"
+text 1167,908,11,14 "%"
+a 961,927,89,18 href=/torvalds/linux/search?l=Other
+text 977,929,39,14 "Other"
+text 1020,929,19,14 "0.1"
+text 1039,929,11,14 "%"
+text 16,5275,88,28 "Footer"
+a 166,5271,24,26 aria-label=GitHub Homepage href=https://github.com
+text 198,5277,121,14 "© 2026 GitHub, Inc."
+text 326,5278,120,54 "Footer navigation"
+a 334,5277,35,14 href=https://docs.github.com/site-policy/github-terms/github-terms-of-service
+text 334,5277,35,14 "Terms"
+a 386,5277,43,14 href=https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+text 386,5277,43,14 "Privacy"
+a 445,5277,49,14 href=https://github.com/security
+text 445,5277,49,14 "Security"
+a 511,5277,38,14 href=https://www.githubstatus.com/
+text 511,5277,38,14 "Status"
+a 565,5277,69,14 href=https://github.community/
+text 565,5277,69,14 "Community"
+a 650,5277,29,14 href=https://docs.github.com/
+text 650,5277,29,14 "Docs"
+a 696,5277,47,14 href=https://support.github.com?tags=dotcom-footer
+text 696,5277,47,14 "Contact"
+button 758,5275,97,18 type=button
+text 758,5277,97,14 "Manage cookies"
+button 871,5275,228,18 type=button
+text 871,5277,228,14 "Do not share my personal information"

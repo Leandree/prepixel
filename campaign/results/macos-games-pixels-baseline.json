@@ -1,0 +1,49 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Two real games, two different engines: DiRT 4 (Feral port, Metal+OpenGL, 3D) and Cuphead (Unity, OpenGL, 2D). Read-only probes; the only input sent was one AXPress on the launcher's own Play button.",
+  "stack": "game",
+  "stack_detection": {
+    "method": "linked frameworks + bundle id, then the shape of the AX tree itself",
+    "signature": "com.feralinteractive.dirt4 links Metal.framework + OpenGL.framework; unity.Studio MDHR.Cuphead links OpenGL.framework (no Metal). Once running, both expose an AXWindow with no meaningful children — that shape IS the router's predictor.",
+    "detected_before_use": true
+  },
+  "channel": "pixels-baseline",
+  "channel_setup": "Accessibility TCC for the AX probe, Screen Recording for the captures. Both titles were installed by the user specifically for this cell. Games were launched, sampled, and quit; nothing else on the machine was touched.",
+  "verdict": "unavailable",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "DiRT 4 while rendering: the ENTIRE AX tree is ONE node — AXWindow titled 'DiRT 4', zero children, depth 0 — over a 1512x982 client area, sampled five times across two minutes with an identical result each time. Cuphead: TWO nodes, AXWindow plus a single AXStaticText whose value is 'Cuphead'. Stated precisely, because it would be easy to misread: that node is the window title echoed as a child, standard AppKit behaviour. It is NOT the channel reading the painted 'CUPHEAD' logo on the title screen, which is drawn art, not text. Neither game exposes a single word of its own rendered UI."},
+    "t2_enumerate": { "pass": false, "detail": "Zero interactive elements in both. Structural coverage of the client area is 0% (DiRT 4: 0 child nodes with geometry; Cuphead: 1, and it is the title echo). This is the number a router computes in one walk to decide the window is pixels territory."},
+    "t3_live_value": { "pass": null, "detail": "No text field."},
+    "t4_living_screen": { "pass": null, "detail": "Not measured as a diff cell; both surfaces animate continuously, which is the regime where a structured channel would help most and provides least."},
+    "t5_blind_action": { "pass": true, "detail": "Not in the game, but worth recording: the FERAL LAUNCHER's 'Jouer' button was found by role+title and actuated with a coordinate-free AXPress (err 0), and the game started. The launcher is fully addressable; the game it starts is not."},
+    "t6_pictorial": { "pass": true, "detail": "This is the cell's positive result. The failure is EXPLICIT, not silent: the channel returns an honest, almost-empty tree and never claims content it does not have. A router reading 'AXWindow, 0 children, 1512x982' learns exactly the right thing — there is nothing here for me, crop the pixels. Running src/coverage-guard.mjs on the window's own surface agrees and quantifies it: energy 0.625 (DiRT 4) and 0.866 (Cuphead), far above the 0.03 threshold, so the guard converts 'structure is empty' into 'declared opaque region, fall back to pixels'."}
+  },
+  "measurements": {
+    "view_bytes": 24,
+    "view_tokens_est": 6,
+    "screenshot_tokens_est": 1980,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": null,
+    "notes": "THE CONTRAST THAT MAKES THIS CELL WORTH RUNNING is not game-vs-app, it is SURFACE-vs-surface INSIDE THE SAME PROCESS. Before the game starts, the very same pid (DiRT 4, com.feralinteractive.dirt4) presents its Feral launcher: 31 AX nodes, an AXWebArea, 24 of them carrying text, 11 buttons, a checkbox and a popup — a fully annotated, fully addressable UI that we drove with a coordinate-free AXPress. Press Play and the same process becomes a 1-node window over a 1512x982 GPU surface. Structure did not degrade because the app is a 'game'; it disappeared because the surface on screen stopped being an AppKit/Web view and became a Metal drawable. A router must therefore evaluate coverage PER WINDOW AND PER STATE, never per application: caching 'DiRT 4 = well annotated' from the launcher would be exactly wrong ten seconds later. This is the pixels-territory control that balances macos-chess-accessibility-api, where Apple's annotation refuted 'game implies pixels only'. Taken together the two cells fix the boundary precisely: it is DEVELOPER ANNOTATION over a GPU surface, not rendering technology and not app category. Cost, for the record: 1980 image tokens per frame for DiRT 4 (1914 for Cuphead) with no structured alternative at all — the one regime where the pixel channel is not merely competitive but mandatory. One methodological check we ran rather than assumed: since a Metal drawable could plausibly return a stale frame to a compositor capture, we hashed two captures ~12 s apart through both paths (screencapture of the screen region, and CGWindowListCreateImage of the window surface). All four hashes differ, so both capture paths are live on a GPU surface — the per-window capture rule from macos-swiftui-thirdparty holds here too."
+  },
+  "runtime_verification": {
+    "method": "Window-surface captures kept as artifacts for both titles and compared against the AX trees; AX sampled 5x over 2 minutes for DiRT 4; capture liveness verified by hashing two captures 12 s apart through two independent paths.",
+    "agreement": "Total disagreement in coverage, zero disagreement in content: the screen is dense (energy 0.625 / 0.866) while the tree is 1-2 nodes, and the channel never reported anything that is not on screen. That is the definition of an explicit failure rather than a silent one."
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for the AX probe",
+    "Screen Recording for the window captures"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "campaign/macos/probe_game.py",
+    "campaign/results/artifacts/macos/dirt-ax-probe.json",
+    "campaign/results/artifacts/macos/dirt-window-surface.png",
+    "campaign/results/artifacts/macos/cuphead-ax-probe.json",
+    "campaign/results/artifacts/macos/cuphead-window-surface.png"
+  ]
+}

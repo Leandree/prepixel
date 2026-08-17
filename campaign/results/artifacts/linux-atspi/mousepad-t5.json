@@ -1,0 +1,155 @@
+{
+ "text_node_extents": [
+  1,
+  3,
+  998,
+  694
+ ],
+ "rclick_at": [
+  500,
+  350
+ ],
+ "popup_items_in_channel": [
+  {
+   "name": "Undo",
+   "ext": [
+    501,
+    355,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Redo",
+   "ext": [
+    501,
+    380,
+    343,
+    25
+   ],
+   "enabled": false
+  },
+  {
+   "name": "Cut",
+   "ext": [
+    501,
+    406,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Copy",
+   "ext": [
+    501,
+    431,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Paste",
+   "ext": [
+    501,
+    456,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Delete Selection",
+   "ext": [
+    501,
+    506,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Delete Line",
+   "ext": [
+    501,
+    531,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Select All",
+   "ext": [
+    501,
+    557,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Duplicate Line / Selection",
+   "ext": [
+    501,
+    633,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Increase Indent",
+   "ext": [
+    501,
+    658,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Decrease Indent",
+   "ext": [
+    501,
+    683,
+    343,
+    25
+   ],
+   "enabled": true
+  },
+  {
+   "name": "Menubar",
+   "ext": [
+    501,
+    709,
+    343,
+    25
+   ],
+   "enabled": true
+  }
+ ],
+ "target": {
+  "name": "Select All",
+  "ext": [
+   501,
+   557,
+   343,
+   25
+  ],
+  "enabled": true
+ },
+ "click_at": [
+  672,
+  569
+ ],
+ "n_selections": 1,
+ "selection_span": [
+  0,
+  92
+ ],
+ "buffer_chars": 92,
+ "t5_pass": true
+}

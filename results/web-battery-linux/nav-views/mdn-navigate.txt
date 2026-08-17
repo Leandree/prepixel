@@ -1,0 +1,127 @@
+[pixels] img 18,2,50,50 alt=Otari [occluded]
+text 84,19,547,15 "Meet Otari, the open source LLM Control Plane that helps developers control LLM infrastructure."
+text 665,19,86,15 "Discover Otari"
+a 1221,8,24,17 [occluded]
+text 1226,10,14,12 "Ad" [occluded]
+a 1146,40,103,11 [occluded]
+text 1146,40,103,11 "Don't want to see ads?" [occluded]
+a 10,104,99,40
+[pixels] svg 18,112,83,24
+button 205,106,88,37
+text 217,115,45,20 "HTML"
+button 292,106,74,37
+text 305,115,32,20 "CSS"
+button 367,106,122,37
+text 379,115,80,20 "JavaScript"
+button 489,106,117,37
+text 501,115,75,20 "Web APIs"
+button 606,106,62,37
+text 618,115,20,20 "All"
+button 668,106,107,37
+text 702,115,43,20 "Learn"
+button 775,106,105,37
+text 809,115,41,20 "Tools"
+button 880,106,87,37
+text 892,115,45,20 "About"
+a 967,106,56,36
+text 978,114,34,20 "Blog"
+button 1119,107,80,34
+[pixels] svg 1170,112,24,24 [occluded]
+a 1215,107,34,34 [occluded]
+[pixels] svg 1223,115,18,18 [occluded]
+text 1232,122,9,73 "Log in" [occluded]
+a 18,161,34,24
+text 18,163,34,20 "Web"
+a 80,161,75,24
+text 80,163,75,20 "Web APIs"
+a 183,161,88,24
+text 183,163,88,20 "Canvas API"
+button 1008,158,92,30
+text 1040,163,52,20 "Theme"
+button 1117,158,133,30
+text 1149,163,93,20 "English (US)"
+text 288,205,204,49 "Canvas API"
+summary 349,271,628,68
+[pixels] bg 304,287,37,36 alt=Baseline Check
+text 349,295,70,20 "Baseline"
+text 419,295,122,20 "Widely available"
+mark 946,300,11,11 rgb(0, 0, 0)
+text 349,341,574,44 "This feature is well established and works across many devices and browser versions. It’s been available across browsers since July 2015." [occluded]
+a 349,405,86,20 [occluded]
+text 349,405,86,20 "Learn more" [occluded]
+a 459,405,160,20 [occluded]
+text 459,405,160,20 "See full compatibility" [occluded]
+text 288,359,33,20 "The"
+text 321,359,92,20 "Canvas API"
+text 413,359,327,20 "provides a means for drawing graphics via"
+a 740,359,80,20
+text 740,359,80,20 "JavaScript"
+text 819,359,65,20 "and the"
+a 884,359,45,20
+text 884,359,45,20 "HTML"
+a 288,387,81,20
+text 292,387,73,21 "<canvas>"
+text 288,387,681,49 "element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing."
+text 288,460,401,20 "The Canvas API largely focuses on 2D graphics. The"
+a 689,460,87,20
+text 689,460,87,20 "WebGL API"
+text 776,460,157,20 ", which also uses the"
+text 292,488,73,21 "<canvas>"
+text 369,488,448,20 "element, draws hardware-accelerated 2D and 3D graphics."
+text 1025,210,141,29 "In this article"
+a 1027,261,185,32
+text 1035,267,169,20 "Accessibility concerns"
+a 1027,293,124,32
+text 1035,299,108,20 "Basic example"
+a 1027,325,92,32
+text 1035,331,76,20 "Reference"
+a 1027,357,166,32
+text 1035,363,150,20 "Guides and tutorials"
+a 1027,389,81,32
+text 1035,395,65,20 "Libraries"
+a 1027,421,122,32
+text 1035,427,106,20 "Specifications"
+a 1027,453,179,32
+text 1035,459,163,20 "Browser compatibility"
+a 1027,485,80,32
+text 1035,491,64,20 "See also"
+a 1026,542,176,182
+[pixels] img 1026,542,176,176 alt=Otari [occluded]
+text 1042,719,120,35 "Control Your LLM Infrastructure"
+text 1042,758,141,45 "Meet Otari, the open source LLM Control Plane built by Mozilla AI."
+a 1174,546,24,17 [occluded]
+text 1179,548,14,12 "Ad" [occluded]
+a 288,545,311,39
+text 288,545,311,39 "Accessibility concerns"
+text 288,605,33,20 "The"
+text 325,605,73,21 "<canvas>"
+text 288,605,683,133 "element is just a bitmap and does not provide information about any drawn objects. Text written on canvas can cause legibility issues with users relying on screen magnification. The pixels within a canvas element do not scale and can become blurry with magnification. This is because they are not a vector but letter-shaped collection of pixels. When zooming in on it, the pixels become bigger."
+text 288,762,686,76 "Canvas content is not exposed to accessibility tools like semantic HTML is. In general, you should use canvases like images and avoid using them to render significant content without accessible backing markup."
+[pixels] bg 16,189,209,76
+label 27,205,20,20
+text 26,206,98,20 "Filter sidebar"
+input 16,197,201,36 id=input
+a 16,265,90,32
+text 16,271,90,20 "Canvas API"
+summary 16,305,209,32
+text 32,311,52,20 "Guides"
+a 40,345,185,56
+text 40,351,143,44 "Manipulating video using canvas"
+summary 16,409,209,32
+text 32,415,56,20 "Tutorial"
+a 40,449,112,32
+text 40,455,112,20 "Canvas tutorial"
+a 40,489,168,32
+text 40,495,168,20 "Basic usage of canvas"
+a 40,529,185,56
+text 40,535,156,44 "Drawing shapes with canvas"
+a 40,593,185,56
+text 40,599,148,44 "Applying styles and colors"
+a 40,657,95,32
+text 40,663,95,20 "Drawing text"
+a 40,697,102,32
+text 40,703,102,20 "Using images"
+a 40,737,122,32
+text 40,743,122,20 "Transformations"
+a 40,777,185,56 [occluded]
+text 40,783,127,44 "Compositing and clipping"

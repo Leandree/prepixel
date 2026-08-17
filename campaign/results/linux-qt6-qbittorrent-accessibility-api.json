@@ -1,0 +1,49 @@
+{
+  "os": "linux",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, NO window manager",
+  "app": "qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView)",
+  "stack": "qt",
+  "stack_detection": {
+    "method": "libQt6Gui mapped + AT-SPI bus registration (toolkit 'Qt'), checked before extraction. The custom-paint RISK is also predictable a priori: any QGraphicsView/QWidget::paintEvent surface is invisible to Qt's a11y bridge unless the developer adds accessible children — same mechanism as OBS's preview on Windows/UIA.",
+    "signature": "AT-SPI desktop lists 'qBittorrent' (toolkit Qt); a priori suspect: the Speed tab hosts a SpeedPlotView (custom QGraphicsView painting)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Same no-root Xvfb environment. Launched with --confirm-legal-notice (fresh profile). Read-only: no torrent added; the only traffic is the client's own DHT bootstrap, which conveniently animates the speed graph with REAL live data.",
+  "verdict": "partial",
+  "failure_class": "silent",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "French UI labels char-exact through the channel: sidebar filters ('En téléchargement (0)'...), 37 table column headers, status bar 'DHT : N nœuds'. Off-viewport columns get extents=None — explicitly positionless, not fabricated." },
+    "t2_enumerate": { "pass": true, "detail": "117 SHOWING nodes with extents (3839 B): menu bar, toolbar buttons with names, filter sidebar, transfer table with headers, bottom tab buttons, status bar. Standard-widget coverage is complete and geometrically correct." },
+    "t3_live_value": { "pass": null, "detail": "Not exercised (read-only discipline: no form filled in a network-capable app; covered by the two editor cells)." },
+    "t4_living_screen": { "pass": true, "detail": "The status-bar DHT label is a live value IN the channel: 'DHT : 248 nœuds' → 'DHT : 251 nœuds' across 6 s, 15 B per re-read (vs 1365 tokens per re-screenshot). Observed monotonically climbing 186→196→213→248→251 across the probe session." },
+    "t5_blind_action": { "pass": true, "detail": "Blind click on the 'Vitesse' (Speed) tab button from its channel extents [1113,726,80,24]: the properties panel opens and the channel proves it — new nodes appear (label 'Période :', combo '5 minutes', combo 'Sélectionner les graphiques'). Effect verified in-channel." },
+    "t6_pictorial": { "pass": false, "detail": "THE HEADLINE, and it is the Windows OBS finding replicated on Linux with a stock Debian app: the speed graph on screen is a live painted chart (axis labels '6,0 Kio/s'..'0,0 Kio/s', two-entry legend, dashed grid, moving DHT-traffic curves — screenshot kept), but its AT-SPI node is `filler [154,313,1038,407] \"\" kids=0` — nameless, childless, no Text interface, no image/canvas role, NOTHING declaring an unreadable region. It is byte-for-byte indistinguishable from the genuinely-empty spacer fillers elsewhere in the same tree. The panel's chrome around it (combos, label) IS exposed, which makes the hole look even more like a valid empty area. Disagreement by omission — silent-by-mimicry, exactly the OBS/FL-Studio class." }
+  },
+  "measurements": {
+    "view_bytes": 3839,
+    "view_tokens_est": 960,
+    "screenshot_tokens_est": 1365,
+    "diff_bytes_per_interaction": 15,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 600,
+    "notes": "MITIGATION TESTED ON THE REAL SUSPECT — AND THE SHIPPED CALIBRATION MISSES IT, WHICH IS THE CELL'S MOST USEFUL NUMBER. coverage-guard contentEnergy on the graph crop = 0.020, UNDER the 0.03 threshold that was calibrated on the Windows shapes (FL Studio 0.07, OBS 0.06 vs genuinely-empty 0.00): as shipped, guard A declares the painted chart 'genuinely-empty' — a false negative. Cause: sparse line-art (thin 1px curves, dashed grid, small axis text on white) leaves only ~2% of pixels off the modal colour, where the Windows panes were densely painted. The margin data says the miss is a THRESHOLD artifact, not a detector limit: the genuinely-empty control (transfer-table body, which structure ALSO declares empty: 'Tous (0)') measures 0.000 on every metric — energy 64x64 0.000, full-res 0.000, edge-fraction 0.000 — while the chart measures 0.020 / 0.025 / 0.0268. Separation is total; threshold 0.01, or an edge-density metric, catches this instance with zero false positives on every sample measured so far in the campaign (Windows 0.06-0.07 and 0.00; here 0.02 and 0.000). The honest generalization for the paper: 'catchable at runtime' is not a property of the guard's existence but of its CALIBRATION, and line-art charts sit in a regime the first calibration never saw. Also note guard B (self-consistency) correctly stays silent here: the sidebar declares counts of 0 and shows 0 rows — consistent."
+  },
+  "runtime_verification": {
+    "method": "Root-window screenshot captured in the same probe run as the tree walk (qbt-speed-panel.png); the graph region cropped (guard-crop-graph.png) and fed to src/coverage-guard.mjs contentEnergy, plus full-res energy and edge-fraction re-measurements (campaign/linux/guard-metrics.mjs); genuinely-empty control region cropped from the same frame.",
+    "agreement": "Standard widgets: full agreement between view and pixels. The SpeedPlotView region: pixels show a live chart, structure shows an anonymous empty filler, nothing declares the gap — SILENT divergence, confirmed by inspection of both artifacts. The mitigation as shipped does NOT convert it (energy 0.020 < 0.03); recalibrated (0.01 or edge metric) it does."
+  },
+  "permissions_required": [
+    "None beyond a session bus. --confirm-legal-notice to skip the first-run dialog; the client's own DHT traffic is the only network activity."
+  ],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/linux-atspi/qbt-full-tree.txt",
+    "campaign/results/artifacts/linux-atspi/qbt-speed-panel.png",
+    "campaign/results/artifacts/linux-atspi/guard-crop-graph.png",
+    "campaign/results/artifacts/linux-atspi/guard-crop-table.png",
+    "campaign/linux/qt-guard.mjs",
+    "campaign/linux/guard-metrics.mjs"
+  ]
+}

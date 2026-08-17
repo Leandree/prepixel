@@ -1,0 +1,53 @@
+{
+  "os": "macos",
+  "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+  "app": "Zoom Workplace — IN-MEETING surfaces during a real meeting on the user's own account (read-only, run at the user's explicit request). Completes macos-zoom-accessibility-api, which covered the home window only.",
+  "stack": "other",
+  "stack_detection": {
+    "method": "bundle + the shape of the AX tree per window",
+    "signature": "us.zoom.xos; in a meeting the app presents THREE windows — a 342x45 control bar, the 1512x949 meeting stage, and the 960x660 Workplace shell — and their AX shapes differ completely from one another",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Accessibility TCC only. PRIVACY WAS PART OF THE PROBE, not an afterthought: a live meeting window can carry participant names, chat and video of people who did not consent to being in a research artifact. So no screenshot of any meeting window was ever written to disk (content energy was computed in memory from the CGImage and only the scalar kept), and text was CLASSIFIED rather than copied — a string is quoted verbatim only if it matches the app's own UI vocabulary, everything else is stored as a category plus a length. The cell needs to know whether a KIND of content is exposed, never what it says.",
+  "verdict": "partial",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "The meeting stage exposes SEVEN nodes in total for a 1512x949 window: AXWindow, one AXTabGroup, three traffic-light buttons, an 'Upgrade Zoom' upsell button, and a single 115x22 label carrying a participant name. Not one word of the meeting itself — no gallery, no tiles, no shared content, no chat. The control bar is worse and better at once: a SEPARATE 342x45 window whose AX tree is exactly ONE node, so mute, camera, participants, chat, share and leave — the controls an agent would actually need — have no structural existence at all."},
+    "t2_enumerate": { "pass": false, "detail": "Five buttons, four of which are window chrome or an upsell. The Workplace shell in the same process is the control: 54 nodes, 101 child rects, 91.7% structural coverage — richly annotated, exactly as the earlier home-window cell found. Same app, same pid, three windows, three completely different regimes."},
+    "t3_live_value": { "pass": null, "detail": "No text field probed; nothing was typed into a live meeting."},
+    "t4_living_screen": { "pass": null, "detail": "Not measured as a diff cell — the meeting stage is continuously animating video, the regime where a structured channel would help most and provides least."},
+    "t5_blind_action": { "pass": null, "detail": "Deliberately not attempted. Actuating a control during a real meeting (mute, camera, leave) is exactly the destructive-adjacent class the Clock stopwatch incident taught us to keep behind an allowlist."},
+    "t6_pictorial": { "pass": false, "detail": "The video region is never declared. That omission is the cell's central finding — see notes."}
+  },
+  "measurements": {
+    "view_bytes": 214,
+    "view_tokens_est": 54,
+    "screenshot_tokens_est": 1914,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": null,
+    "notes": "THE CAMPAIGN'S FOURTH SILENT DIVERGENCE, AND THE FIRST OUTSIDE WINDOWS — which matters more than the count, because it shows the pattern is not a UIA artifact. The meeting stage contains an AXTabGroup measuring 1512x850, i.e. 89.6% of the window, whose ENTIRE contents are one 115x22 label — 0.16% of its own area. Meanwhile the screen behind it is dense: content energy 0.691 for the window, 0.876 measured over the tab group's own rect. So a router asking the only question it can ask — 'how much of this client area does structure account for?' — gets 89.4% and concludes the window is well described. It is not: a named container claims almost the whole stage and exposes nothing inside it, with nothing declaring the region opaque. That is precisely silent-by-mimicry, the FL Studio / OBS / rekordbox shape, reproduced on a different OS and a different accessibility API. THE SAME APPLICATION ALSO SHIPS THE CONTRASTING SHAPE, which is why this cell is worth more than a fourth data point: the control bar is a 1-node window with zero children and 0.0% structural coverage. That one is explicit-by-shape — a router computes 'nothing here' in one walk and crops, and is never misled. Two windows, one process, one API, the two opposite failure modes side by side: coverage near zero is SAFE because it is unmistakable, coverage near 90% is DANGEROUS when the container is hollow. The lesson for a router is that structural coverage must be measured with the CONTENTS of a container, never with its declared rect. MITIGATION VERIFIED HERE, NOT ASSUMED: guard A of src/coverage-guard.mjs, given the tab-group rect as a structure-empty suspect, measures energy 0.876 against a 0.03 threshold and converts the blind spot into the explicit line '[pixels] group 0,108,1512,850 \"AXTabGroup\" [unverified: pixels show content]'. The declared-rect trap from macos-swiftui-thirdparty applies unchanged: the energy must be read from the window's own surface, which is what was done."
+  },
+  "runtime_verification": {
+    "method": "AX tree shape compared against per-window content energy computed in memory from CGWindowListCreateImage (no meeting image written to disk); structural coverage computed by rasterising every child rect onto a 120x120 grid of the client area rather than summing areas, so nesting is not double-counted.",
+    "agreement": "Total disagreement on the meeting stage — 89.4% apparent structural coverage against a channel that exposes no meeting content whatsoever, and no opacity declaration anywhere. Full agreement on the Workplace shell (54 nodes, richly annotated) and honest emptiness on the control bar."
+  },
+  "mitigation": {
+    "module": "coverage-guard (guard A: per-region pixel spot-check, read from the window's own surface)",
+    "date": "2026-08-17",
+    "found_as": "silent (2026-08-17): an AXTabGroup claiming 89.6% of the meeting stage with one 115x22 label inside it, over a dense live video gallery, with no opacity declaration",
+    "trigger_signature": "us.zoom.xos in-meeting + a container node whose rect exceeds 50% of the client area while its descendants cover under 1% of that rect",
+    "result": "energy 0.876 vs 0.03 threshold -> region re-emitted as '[pixels] group 0,108,1512,850 \"AXTabGroup\" [unverified: pixels show content]'; router routes to a pixel crop instead of reading an empty stage"
+  },
+  "permissions_required": [
+    "Accessibility (TCC) for host process",
+    "Screen Recording for the in-memory content-energy measurement"
+  ],
+  "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/macos/probe_zoom.py",
+    "campaign/results/artifacts/macos/zoom-inmeeting-meeting.json"
+  ]
+}

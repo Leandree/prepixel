@@ -1,0 +1,82 @@
+{
+ "app_name": "mousepad",
+ "toolkit": "gtk",
+ "window_extents": [
+  0,
+  0,
+  1000,
+  700
+ ],
+ "walk_ms": 115,
+ "n_nodes": 154,
+ "n_lines_showing": 8,
+ "view_bytes": 268,
+ "view_tokens": 67,
+ "screenshot_tokens": 1365,
+ "t1_readback": "The quick brown fox jumps over the lazy dog 0123456789 PX-7Q4K-LINUX-ATSPI",
+ "t1_exact": true,
+ "t3_unique_seen": true,
+ "text_node_extents": [
+  1,
+  3,
+  998,
+  694
+ ],
+ "t4_idle_events": 0,
+ "t4_typed_events": 18,
+ "t4_event_sample": [
+  {
+   "t": 1786977012.9904563,
+   "type": "object:text-changed:insert",
+   "data": " ",
+   "detail": [
+    74,
+    1
+   ]
+  },
+  {
+   "t": 1786977013.0112977,
+   "type": "object:text-changed:insert",
+   "data": "t",
+   "detail": [
+    75,
+    1
+   ]
+  },
+  {
+   "t": 1786977013.0320134,
+   "type": "object:text-changed:insert",
+   "data": "i",
+   "detail": [
+    76,
+    1
+   ]
+  },
+  {
+   "t": 1786977013.0426955,
+   "type": "object:text-changed:insert",
+   "data": "c",
+   "detail": [
+    77,
+    1
+   ]
+  }
+ ],
+ "t4_diff_bytes": 378,
+ "t5_target": {
+  "name": "File",
+  "ext": [
+   -2147483648,
+   -2147483648,
+   1,
+   1
+  ]
+ },
+ "t5_click_at": [
+  -2147483648,
+  -2147483648
+ ],
+ "t5_menu_items_shown": [],
+ "t5_effect_in_channel": false,
+ "t6_image_nodes": []
+}

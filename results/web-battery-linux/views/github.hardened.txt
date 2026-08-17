@@ -1,0 +1,192 @@
+a 0,0,1,1 [occluded]
+text 0,2,9,268 "Skip to content" [occluded]
+text 0,20,230,28 "Navigation Menu" [occluded]
+a 32,20,32,32
+[pixels] svg 32,20,32,32
+button 80,16,105,40
+text 88,26,69,19 "Platform"
+[pixels] svg 161,28,16,16
+button 185,16,112,40
+text 193,26,76,19 "Solutions"
+[pixels] svg 273,28,16,16
+button 297,16,120,40
+text 305,26,84,19 "Resources"
+[pixels] svg 393,28,16,16
+button 417,16,141,40
+text 425,26,105,19 "Open Source"
+[pixels] svg 534,28,16,16
+button 558,16,121,40
+text 566,26,85,19 "Enterprise"
+[pixels] svg 655,28,16,16
+a 679,16,72,40
+text 687,26,56,19 "Pricing"
+button 980,20,42,32
+[pixels] svg 993,28,16,16
+a 1030,20,75,32
+text 1043,28,49,16 "Sign in"
+a 1113,20,80,32
+text 1126,28,54,16 "Sign up"
+button 1201,20,32,32
+[pixels] svg 1209,28,16,16
+[pixels] svg 32,95,16,16
+a 56,91,81,24
+text 56,91,81,24 "torvalds"
+text 141,91,7,24 "/"
+a 152,91,55,24
+text 152,91,55,24 "linux"
+text 222,96,36,14 "Public"
+a 846,88,125,28 id=repository-details-watch-button
+[pixels] svg 859,95,16,16
+text 883,95,75,14 "Notifications"
+a 979,88,118,28 id=fork-button
+[pixels] svg 992,95,16,16
+text 1016,95,30,14 "Fork"
+text 1055,95,22,14 "64k"
+a 1105,88,128,28
+[pixels] svg 1118,93,16,16
+text 1142,95,32,14 "Star"
+text 1183,95,30,14 "243k"
+a 32,143,79,30 id=code-tab
+[pixels] svg 40,150,16,16
+text 64,150,39,16 "Code"
+a 119,143,99,30 id=actions-tab
+[pixels] svg 127,150,16,16
+text 155,150,51,16 "Actions"
+a 226,143,104,30 id=projects-tab
+[pixels] svg 234,150,16,16
+text 263,150,55,16 "Projects"
+a 338,143,199,30 id=security-and-quality-tab
+[pixels] svg 346,150,16,16
+text 380,150,141,16 "Security and quality"
+a 546,143,103,30 id=insights-tab
+[pixels] svg 554,150,16,16
+text 582,150,55,16 "Insights"
+button 32,206,123,32 id=ref-picker-repos-header-ref-selector
+[pixels] svg 45,214,16,16 [occluded]
+text 69,214,49,16 "master"
+[pixels] svg 126,214,16,16 [occluded]
+a 163,206,99,32
+[pixels] svg 168,214,16,16 [occluded]
+text 192,214,65,16 "Branches"
+a 263,206,65,32
+[pixels] svg 268,214,16,16 [occluded]
+text 292,214,31,16 "Tags"
+[pixels] svg 588,214,16,16
+input 612,207,174,30
+button 811,206,110,32 id=_R_3idahl6k5_
+[pixels] svg 824,214,16,16 [occluded]
+text 848,214,36,16 "Code"
+[pixels] svg 892,214,16,16 [occluded]
+text 32,259,133,134 "Folders and files" [occluded]
+text 45,286,134,86 "Latest commit" [occluded]
+[pixels] svg 45,272,16,16
+text 61,274,261,14 "Cannot retrieve latest commit at this time."
+text 752,272,131,38 "History" [occluded]
+a 752,267,156,28
+[pixels] svg 761,273,16,16 [occluded]
+text 781,273,118,14 "1,465,160 Commits"
+[pixels] svg 49,320,16,16
+a 75,320,108,16
+text 75,320,108,16 "Documentation"
+[pixels] svg 49,361,16,16
+a 75,361,68,16
+text 75,361,68,16 "LICENSES"
+[pixels] svg 49,402,16,16
+a 75,402,31,16
+text 75,402,31,16 "arch"
+[pixels] svg 49,443,16,16
+a 75,443,37,16
+text 75,443,37,16 "block"
+[pixels] svg 49,484,16,16
+a 75,484,35,16
+text 75,484,35,16 "certs"
+[pixels] svg 49,525,16,16
+a 75,525,45,16
+text 75,525,45,16 "crypto"
+[pixels] svg 49,566,16,16
+a 75,566,48,16
+text 75,566,48,16 "drivers"
+[pixels] svg 49,607,16,16
+a 75,607,12,16
+text 75,607,12,16 "fs"
+[pixels] svg 49,648,16,16
+a 75,648,51,16
+text 75,648,51,16 "include"
+[pixels] svg 49,689,16,16
+a 75,689,22,16
+text 75,689,22,16 "init"
+[pixels] svg 49,730,16,16
+a 75,730,56,16
+text 75,730,56,16 "io_uring"
+[pixels] svg 49,771,16,16
+a 75,771,20,16
+text 75,771,20,16 "ipc"
+text 961,208,54,19 "About"
+text 961,244,193,19 "Linux kernel source tree"
+text 961,283,186,38 "Resources"
+a 961,280,81,16
+[pixels] svg 961,280,16,16
+text 985,280,57,16 "Readme"
+a 961,309,77,16
+[pixels] svg 961,309,16,16
+text 985,309,53,16 "License"
+a 961,338,76,16
+[pixels] svg 961,338,16,16
+text 985,338,52,16 "Activity"
+text 961,362,95,38 "Stars" [occluded]
+[pixels] svg 961,367,16,16
+text 985,367,54,16 "243.0k"
+text 1039,367,39,16 "stars"
+text 961,391,169,38 "Watchers" [occluded]
+[pixels] svg 961,396,16,16
+text 985,396,34,16 "8.4k"
+text 1019,396,68,16 "watching"
+text 961,420,99,38 "Forks" [occluded]
+a 961,425,107,16
+[pixels] svg 961,425,16,16
+text 985,425,44,16 "64.0k"
+text 1029,425,39,16 "forks"
+a 961,454,122,16
+text 961,454,122,16 "Report repository"
+a 961,506,80,24
+text 961,508,80,19 "Releases"
+a 961,544,83,16
+[pixels] svg 961,544,16,16
+text 981,544,29,16 "943"
+text 1014,544,30,16 "tags"
+a 961,596,114,24
+text 961,598,114,19 "Contributors"
+text 1086,601,44,14 "18 786"
+text 961,610,13,19 "(" [occluded]
+text 974,610,59,19 "18 786" [occluded]
+text 1033,610,7,19 ")" [occluded]
+a 961,639,32,16
+[pixels] img 961,632,32,32 alt=@torvalds
+a 1001,639,32,16
+[pixels] img 1001,632,32,32 alt=@davem330
+a 1041,639,32,16
+[pixels] img 1041,632,32,32 alt=@arndb
+a 1081,639,32,16
+[pixels] img 1081,632,32,32 alt=@broonie
+a 1121,639,32,16
+[pixels] img 1121,632,32,32 alt=@tiwai
+a 1161,639,32,16
+[pixels] img 1161,632,32,32 alt=@krzk
+a 961,679,32,16
+[pixels] img 961,672,32,32 alt=@gregkh
+a 1001,679,32,16
+[pixels] img 1001,672,32,32 alt=@KAGA-KOKO
+a 1041,679,32,16
+[pixels] img 1041,672,32,32 alt=@geertu
+a 1081,679,32,16
+[pixels] img 1081,672,32,32 alt=@kuba-moo
+a 1121,679,32,16
+[pixels] img 1121,672,32,32 alt=@mchehab
+a 1161,679,32,16
+[pixels] img 1161,672,32,32 alt=@ickle
+a 961,719,32,16
+[pixels] img 961,712,32,32 alt=@andy-shev
+a 1001,719,32,16
+[pixels] img 1001,712,32,32 alt=@vsyrjala
+a 961,760,131,14
+text 961,760,131,14 "+ 18 772 contributors"

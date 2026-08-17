@@ -1,0 +1,1035 @@
+a 0,-1,72,23 href=#ds-anchor-target-content
+text 0,-1,72,23 "Contenu"
+a 96,-1,47,23 href=#ds-anchor-target-menu
+text 96,-1,47,23 "Menu"
+a 167,-1,90,23 href=#ds-anchor-target-search
+text 167,-1,90,23 "Recherche"
+a 281,-1,108,23 href=#footer
+text 281,-1,108,23 "Pied de page"
+a 32,15,72,54 href=https://journal.lemonde.fr
+text 36,48,64,18 "Le journal"
+button 128,16,64,52 id=ds-services-trigger type=button aria-label=Services
+text 132,48,56,18 "Services"
+a 536,17,216,48 href=/
+text 536,15,260,20 "Retour à la page d’accueil Le Monde"
+text 536,64,260,20 "Retour à la page d’accueil Le Monde"
+a 999,27,34,30 href=https://www.lemonde.fr?preferred_lang=fr
+text 1007,33,18,18 "FR"
+a 1041,27,35,30 href=https://www.lemonde.fr/en/?preferred_lang=en
+text 1049,33,19,18 "EN"
+a 1092,26,108,32 href=https://abo.lemonde.fr/subscribe?edi_medium=cta_sabonner&edi_campaign=home_lmfr&edi_position=header&edi_rubrique=5&edi_type_de_page=Home
+text 1108,32,76,20 "S’abonner"
+a 1200,22,56,40 href=https://secure.lemonde.fr/sfuser/connexion
+button 16,92,105,40 id=ds-burger-trigger__nav type=button aria-label=Menu
+text 64,102,41,20 "Menu"
+a 121,92,40,40 href=https://www.lemonde.fr/recherche/
+text 141,99,52,16 "Recherche"
+text 141,99,52,16 "Recherche"
+a 194,92,54,40 href=https://www.lemonde.fr/incendies/
+text 194,103,54,18 "Incendies"
+a 264,92,48,40 href=https://www.lemonde.fr/canicule/
+text 264,103,48,18 "Canicule"
+a 345,92,76,40 href=https://www.lemonde.fr/international/
+text 345,103,76,18 "International"
+a 437,92,45,40 href=https://www.lemonde.fr/planete/
+text 437,103,45,18 "Planète"
+a 498,92,52,40 href=https://www.lemonde.fr/politique/
+text 498,103,52,18 "Politique"
+a 566,92,44,40 href=https://www.lemonde.fr/societe/
+text 566,103,44,18 "Société"
+a 626,92,57,40 href=https://www.lemonde.fr/economie/
+text 626,103,57,18 "Économie"
+a 699,92,32,40 href=https://www.lemonde.fr/idees/
+text 699,103,32,18 "Idées"
+a 747,92,43,40 href=https://www.lemonde.fr/culture/
+text 747,103,43,18 "Culture"
+a 806,92,104,40 href=https://www.lemonde.fr/m-styles/
+text 806,103,104,18 "Le Goût du Monde"
+a 926,92,52,40 href=https://www.lemonde.fr/sciences/
+text 926,103,52,18 "Sciences"
+a 994,92,33,40 href=https://www.lemonde.fr/sport/
+text 994,103,33,18 "Sport"
+a 1043,92,34,40 href=https://www.lemonde.fr/pixels/
+text 1043,103,34,18 "Pixels"
+a 32,157,172,96 href=https://www.lemonde.fr/politique/article/2026/08/17/presidentielle-pour-monique-barbut-ministre-de-l-ecologie-jean-luc-melenchon-est-le-candidat-qui-integre-le-plus-la-question-du-climat-dans-ses-propositions_6748291_823448.html
+text 32,158,21,14 "16:17"
+text 32,181,168,71 "Monique Barbut questionne à nouveau la politique écologique du gouvernement"
+a 252,157,172,96 href=https://www.lemonde.fr/climat/live/2026/08/17/en-direct-incendies-et-canicule-le-gouvernement-promet-une-aide-de-12-millions-d-euros-et-un-fonds-de-garantie-pour-les-sinistres-en-gironde-et-dans-les-landes_6744636_1652612.html
+text 252,158,22,14 "15:12"
+text 296,158,78,14 "LIVE EN COURS"
+text 252,181,161,53 "Les dernières informations sur la canicule et les incendies"
+a 473,157,172,96 href=https://www.lemonde.fr/politique/article/2026/08/17/ce-qu-il-faut-retenir-des-annonces-de-sebastien-lecornu-apres-les-feux-en-gironde-et-dans-les-landes_6748221_823448.html
+text 473,158,24,14 "15:03"
+text 473,181,144,53 "Incendies : ce qu’il faut retenir des annonces de Sébastien Lecornu"
+a 693,157,172,96 href=https://www.lemonde.fr/international/article/2026/08/17/donald-trump-menace-de-bombarder-oman-si-le-sultanat-entrave-un-accord-sur-le-detroit-d-ormuz_6748219_3210.html
+text 693,158,23,14 "14:57"
+text 693,181,166,53 "Détroit d’Ormuz : D. Trump menace de bombarder Oman s’il entrave un accord"
+a 914,157,172,96 href=https://www.lemonde.fr/societe/article/2026/08/17/dans-le-pas-de-calais-le-feu-et-l-essor-des-megaboats-creent-des-tensions-autour-des-traversees-de-migrants-dans-la-manche_6747961_3224.html
+text 914,158,24,14 "14:55"
+text 949,158,39,14 "ALERTE"
+text 914,181,172,89 "Dans le Pas-de-Calais, le feu et l’essor des « megaboats » créent des tensions autour des traversées de migrants dans la Manche"
+a 1134,157,114,26 href=/actualite-en-continu id=en-continu
+text 1191,168,141,18 "d’actualité en continu"
+text 1151,161,56,18 "Voir plus"
+text 1191,168,141,18 "d’actualité en continu"
+[pixels] picture 374,622,410,273
+[pixels] img 374,622,410,273 src=https://img.lemde.fr/2026/08/14/0/32/8070/5380/664/442/75/0/103f476_ftp-1-hu5aniadrxox-2026-08-14t115949z-1155178306-rc29ymauch1y-rtrmadp-3-ukraine-crisis-russia-fuel-moscow.JPG alt=Des voitures font la queue à une station-service du fait de la pénurie de carburant. A Moscou, le 14 août 2026. - Anastasia Barashkova/REUTERS
+text 630,899,154,11 "ANASTASIA BARASHKOVA/REUTERS"
+text 181,519,31,18 "LIVE"
+a 164,512,614,88 href=https://www.lemonde.fr/international/live/2026/08/17/en-direct-guerre-en-ukraine-les-dernieres-informations-au-17-aout-2026_6746952_3210.html
+text 164,512,614,88 "La pénurie de carburant s’étend à toute la Russie après de nouvelles frappes de drones ukrainiens sur des raffineries"
+a 164,622,185,139 href=https://www.lemonde.fr/international/live/2026/08/17/en-direct-guerre-en-ukraine-les-dernieres-informations-au-17-aout-2026_6746952_3210.html
+text 164,622,39,19 "15:58"
+text 164,622,185,139 "Le Pentagone signe un contrat de 23 milliards de dollars pour accélérer la production de missiles Tomahawk, que l’Ukraine a réclamés en vain"
+a 164,778,183,119 href=https://www.lemonde.fr/international/live/2026/08/17/en-direct-guerre-en-ukraine-les-dernieres-informations-au-17-aout-2026_6746952_3210.html
+text 164,778,39,19 "15:20"
+text 164,778,183,119 "Plus de 239 000 soldats russes tués en Ukraine, selon le média indépendant russe « Mediazona » et le service en russe de la BBC"
+text 201,933,205,20 "Article réservé à nos abonnés"
+a 180,933,515,40 href=https://www.lemonde.fr/international/article/2026/08/17/guerre-en-ukraine-au-c-ur-de-la-nuit-avec-le-regiment-de-drones-qui-frappe-durement-moscou_6747970_3210.html
+text 180,933,515,40 "Avec le régiment ukrainien de drones qui frappe durement Moscou, au cœur de la nuit"
+[pixels] picture 484,1022,300,200
+[pixels] img 484,1022,300,200 src=https://img.lemde.fr/2026/08/17/1584/0/3644/2429/664/442/75/0/9a9b7e9_upload-1-vmw313thql11-mfache-17082026-le-monde-deplacement-lecornu-en-gironde-france-004.jpg alt=Le premier ministre, Sébastien Lecornu, lors d’une table ronde avec les acteurs de la reconstruction en Gironde, à Mérignac, le 17 août 2026. - MORGAN FACHE/DIVERGENCE POUR « LE MONDE »
+text 181,1025,24,14 "LIVE"
+a 164,1020,303,129 href=https://www.lemonde.fr/climat/live/2026/08/17/en-direct-incendies-et-canicule-le-gouvernement-promet-une-aide-de-12-millions-d-euros-et-un-fonds-de-garantie-pour-les-sinistres-en-gironde-et-dans-les-landes_6744636_1652612.html
+text 164,1020,303,129 "« On assume de sortir l’artillerie lourde » : Lecornu promet une aide de 12 millions d’euros et un fonds de garantie pour les victimes des incendies en Gironde et dans le Landes"
+a 164,1164,303,79 href=https://www.lemonde.fr/climat/live/2026/08/17/en-direct-incendies-et-canicule-le-gouvernement-promet-une-aide-de-12-millions-d-euros-et-un-fonds-de-garantie-pour-les-sinistres-en-gironde-et-dans-les-landes_6744636_1652612.html
+text 164,1164,40,19 "16:05"
+text 164,1164,303,79 "« Message personnel » de Sébastien Lecornu, délai de déclaration allongé, frais de relogement… Le point sur les mesures concernant les assurances"
+a 164,1260,574,39 href=https://www.lemonde.fr/climat/live/2026/08/17/en-direct-incendies-et-canicule-le-gouvernement-promet-une-aide-de-12-millions-d-euros-et-un-fonds-de-garantie-pour-les-sinistres-en-gironde-et-dans-les-landes_6744636_1652612.html
+text 164,1260,36,19 "15:18"
+text 164,1260,574,39 "Le projet d’une base aérienne à Mont-de-Marsan de nouveau à l’étude, selon Laurent Nuñez"
+a 180,1324,264,60 href=https://www.lemonde.fr/politique/article/2026/08/17/ce-qu-il-faut-retenir-des-annonces-de-sebastien-lecornu-apres-les-feux-en-gironde-et-dans-les-landes_6748221_823448.html
+text 180,1324,264,60 "Ce qu’il faut retenir des annonces de Sébastien Lecornu après les incendies en Gironde et dans les Landes"
+text 502,1324,64,14 "EN CARTES"
+text 523,1343,205,20 "Article réservé à nos abonnés"
+a 502,1343,253,60 href=https://www.lemonde.fr/les-decodeurs/article/2026/07/29/canicule-visualisez-l-evolution-des-temperatures-au-cours-des-prochains-jours_6704994_4355771.html
+text 502,1343,253,60 "Visualisez l’évolution des températures pendant les prochains jours dans votre région"
+text 164,1452,63,14 "ÉDITORIAL"
+a 164,1473,462,24 href=https://www.lemonde.fr/idees/article/2026/08/17/le-bilan-desastreux-de-donald-trump-au-moyen-orient_6748113_3232.html
+text 164,1473,462,24 "Le bilan désastreux de Donald Trump au Moyen-Orient"
+text 164,1505,608,61 "Depuis son retour à la Maison Blanche, le président américain accumule les échecs dans la région, que ce soit pour la guerre qu’il a déclenchée avec Israël contre l’Iran ou pour sa gestion du dossier palestinien, faisant ainsi la démonstration de son incompétence."
+a 180,1591,263,60 href=https://www.lemonde.fr/international/article/2026/08/17/donald-trump-menace-de-bombarder-oman-si-le-sultanat-entrave-un-accord-sur-le-detroit-d-ormuz_6748219_3210.html
+text 180,1591,263,60 "Donald Trump menace de bombarder Oman si le sultanat entrave un accord sur le détroit d’Ormuz"
+text 523,1591,205,20 "Article réservé à nos abonnés"
+a 502,1591,277,80 href=https://www.lemonde.fr/international/article/2026/08/17/au-liban-des-frappes-israeliennes-meurtrieres-fragilisent-un-peu-plus-le-cessez-le-feu-avec-le-hezbollah_6747969_3210.html
+text 502,1591,277,80 "Des attaques meurtrières perpétrées par Israël dans le sud du Liban fragilisent un peu plus le cessez-le-feu avec le Hezbollah"
+[pixels] picture 484,1720,300,200
+[pixels] img 484,1720,300,200 src=https://img.lemde.fr/2026/08/16/177/0/4252/2834/664/442/75/0/a37b2ca_upload-1-s9n0msjgi73k-28.JPG alt=Deux bénévoles de l’association Opal’Exil sur la plage des départs des embarcations à Neufchâtel-Hardelot (Pas-de-Calais), le 2 juillet 2025.  - AIMÉE THIRION POUR « LE MONDE »
+text 632,1924,152,11 "AIMÉE THIRION POUR « LE MONDE »"
+text 186,1718,246,24 "Article réservé à nos abonnés"
+a 164,1718,296,87 href=https://www.lemonde.fr/societe/article/2026/08/17/dans-le-pas-de-calais-le-feu-et-l-essor-des-megaboats-creent-des-tensions-autour-des-traversees-de-migrants-dans-la-manche_6747961_3224.html
+text 164,1718,296,87 "Des départs de feu et des « megaboats » pour migrants attisent les tensions dans le Pas-de-Calais"
+text 164,1821,299,103 "Depuis début 2026, le nombre de tentatives de passages en Angleterre est en nette diminution. Mais des embarcations plus grosses posent d’importants problèmes de sécurité."
+[pixels] picture 484,1983,300,200
+[pixels] img 484,1983,300,200 src=https://img.lemde.fr/2026/08/03/0/24/3228/2152/664/442/75/0/2a50c6c_upload-1-edec6gpxv3wb-000-par197073.jpg alt=Panneaux électoraux consacrés à la campagne en faveur de l’adoption de la Constitution européenne par référendum, à Marseille, le 24 mai 2005. - BORIS HORVAT/AFP
+text 700,2187,84,11 "BORIS HORVAT/AFP"
+text 186,1981,246,24 "Article réservé à nos abonnés"
+a 164,1981,274,66 href=https://www.lemonde.fr/politique/article/2026/08/17/presidentielle-2027-un-drole-de-consensus-pour-le-referendum_6747979_823448.html
+text 164,1981,274,66 "Un drôle de consensus pour le référendum avant l’élection présidentielle de 2027"
+text 164,2063,303,124 "Dans la foulée du RN, qui promet depuis longtemps de le mettre en œuvre, les candidats à l’élection présidentielle semblent redécouvrir l’instrument de la démocratie directe, y compris à gauche et au centre."
+[pixels] picture 484,2246,300,200
+[pixels] img 484,2246,300,200 src=https://img.lemde.fr/2026/08/14/1629/148/2515/1677/664/442/75/0/d9a5011_upload-1-uhwa4bofe43f-img-1627.jpg alt=Brebis morte de chaleur, à Hauteroche (Côte-d’Or), le 14 août 2026. - Claire Jachymiak/Hans Lucas pour « Le Monde »
+text 555,2450,229,11 "CLAIRE JACHYMIAK/HANS LUCAS POUR « LE MONDE »"
+text 164,2246,65,14 "ENTRETIEN"
+text 186,2267,246,24 "Article réservé à nos abonnés"
+a 164,2267,298,108 href=https://www.lemonde.fr/planete/article/2026/08/17/cop17-contre-la-desertification-pour-le-geographe-jean-daniel-cesaro-la-secheresse-de-cet-ete-montre-que-nous-devenons-nous-aussi-vulnerables_6747967_3244.html
+text 164,2267,298,108 "« La sécheresse de cet été montre que nous devenons nous aussi vulnérables » à la désertification, alerte le géographe Jean-Daniel Cesaro"
+text 164,2391,299,166 "Alors que 40 % des terres émergées, dont un quart des terres arables, sont dégradées, la COP17 contre la désertification s’ouvre, lundi, en Mongolie. Dans un entretien au « Monde », le chercheur estime que la France, désormais frappée par le phénomène, devrait renforcer ses échanges pour enrichir son expertise."
+text 201,2582,205,20 "Article réservé à nos abonnés"
+a 180,2582,523,40 href=https://www.lemonde.fr/economie/article/2026/08/17/mise-a-mal-par-une-secheresse-historique-l-agriculture-francaise-souffre-et-s-inquiete-pour-son-avenir_6747960_3234.html
+text 180,2582,523,40 "Un été catastrophique pour l'agriculture française, après une sécheresse historique"
+[pixels] picture 816,647,300,200
+[pixels] img 816,647,300,200 src=https://img.lemde.fr/2026/06/25/0/0/1500/1000/664/442/75/0/35d4b59_upload-1-jr12f1pkstmi-ftanet-lemonde-potdedepart-ho-18.jpg alt=Florent Tanet pour Le Monde
+text 970,851,146,11 "FLORENT TANET POUR LE MONDE"
+text 822,517,80,14 "TÉMOIGNAGES"
+text 838,540,246,24 "Article réservé à nos abonnés"
+a 816,540,291,66 href=https://www.lemonde.fr/intimites/article/2026/08/17/j-opte-pour-une-ceremonie-funeraire-et-fais-appel-a-des-comediens-pour-la-mettre-en-scene-le-pot-de-depart-creatif-de-christine-pour-enterrer-sa-societe-d-urbanisme-culturel_6748215_6190330.html
+text 816,540,291,66 "Le pot de départ « funéraire » de Christine pour enterrer sa société d’urbanisme culturel"
+text 816,613,108,18 "Par Djaïd Yamak"
+a 816,885,300,108 href=https://www.lemonde.fr/climat/meteo/?lmd_medium=web&lmd_campaign=teaser-card
+text 920,909,121,23 "Météo du climat"
+text 920,937,160,39 "Consulter la carte et les données climatiques."
+text 876,1032,179,14 "LA SUITE APRÈS CETTE PUBLICITÉ"
+[pixels] picture 351,2670,111,74
+[pixels] img 351,2670,111,74 src=https://img.lemde.fr/2026/08/17/892/0/2454/1636/664/442/75/0/5ee9dbf_upload-1-vxl8jmhpirod-063-488355055.jpg alt=L’actrice Hayden Panettiere, à New York, le 5 mai 2014. - LARRY BUSACCA/Getty Images via AFP
+a 164,2670,169,105 href=https://www.lemonde.fr/disparitions/article/2026/08/17/hayden-panettiere-revelee-par-les-series-heroes-et-nashville-est-morte-a-l-age-de-36-ans_6747975_3382.html
+text 164,2670,169,105 "Hayden Panettiere, l’actrice révélée par les séries « Heroes » et « Nashville », est morte à l’âge de 36 ans"
+[pixels] picture 673,2670,111,74
+[pixels] img 673,2670,111,74 src=https://img.lemde.fr/2026/08/14/0/0/5500/3666/664/442/75/0/c873bd9_ftp-1-w1cmyk8vncl3-2026-08-14t055038z-1919546406-rc25ymaz2a7v-rtrmadp-3-asia-weather-japan.JPG alt=Une zone inondée, à la suite de fortes pluies à Oamishirasato, dans la préfecture de Chiba, au Japon, le 14 août 2026. - Issei Kato/REUTERS
+text 508,2670,219,21 "Article réservé à nos abonnés"
+a 486,2670,286,126 href=https://www.lemonde.fr/planete/article/2026/08/17/pluies-torrentielles-a-chiba-un-lourd-bilan-humain-et-la-prefiguration-des-risques-a-venir-pour-le-japon_6748181_3244.html
+text 486,2670,286,126 "Les pluies torrentielles sur la ville de Chiba, un avant-goût de futurs phénomènes climatiques extrêmes au Japon"
+[pixels] picture 351,2845,111,74
+[pixels] img 351,2845,111,74 src=https://img.lemde.fr/2026/08/12/0/0/6000/4000/664/442/75/0/5abc941_ftp-1-w5ozaf2ogc26-ab72ac0188b04d54877720f6fbe4e6ad-0-3ba04dc592c84c3599a0afd9658274d9.jpg alt=Un agent de santé pulvérise du désinfectant sur le cercueil contenant la dépouille d’un homme, décédé du virus Ebola, à Bunia (République démocratique du Congo), le 12 août 2026. - Dieudonne Dirole/AP
+a 164,2845,163,105 href=https://www.lemonde.fr/international/article/2026/08/17/ebola-en-rdc-l-epidemie-devient-la-plus-meurtriere-de-l-histoire-du-pays-en-seulement-trois-mois_6748146_3210.html
+text 164,2845,163,105 "L’épidémie d’Ebola en RDC devient, en seulement trois mois, la plus meurtrière de l’histoire du pays"
+[pixels] picture 673,2845,111,74
+[pixels] img 673,2845,111,74 src=https://img.lemde.fr/2026/08/17/0/0/5760/3840/664/442/75/0/c5ea2ad_upload-1-lnhcmf0hfb7x-opaleplus-diool260414a-02.jpg alt=Olivier Nora, à Paris, en septembre 2017. - Olivier Dion/LH/opale.photo
+text 508,2845,219,21 "Article réservé à nos abonnés"
+a 486,2845,179,105 href=https://www.lemonde.fr/economie/article/2026/08/17/quatre-mois-apres-son-eviction-de-la-presidence-de-grasset-olivier-nora-cree-sa-propre-maison-d-edition_6748180_3234.html
+text 486,2845,179,105 "Olivier Nora crée sa propre maison d’édition, quatre mois après son éviction de la présidence de Grasset"
+[pixels] picture 351,2999,111,74
+[pixels] img 351,2999,111,74 src=https://img.lemde.fr/2026/08/17/0/0/8256/5504/664/442/75/0/a60a529_upload-1-pcymke5sft7r-000-346q7vd.jpg alt=Une chambre étudiante à Suresnes (Hauts-de-Seine), le 1ᵉʳ décembre 2023. - JULIEN DE ROSA/AFP
+a 164,2999,215,105 href=https://www.lemonde.fr/campus/article/2026/08/17/le-cout-de-la-vie-etudiante-a-augmente-de-1-66-sur-un-an-et-de-plus-de-35-depuis-l-election-d-emmanuel-macron-en-2017-alerte-l-unef_6747977_4401467.html
+text 164,2999,215,105 "Le coût de la vie étudiante a augmenté de plus de 35 % depuis l’élection d’Emmanuel Macron en 2017, alerte l’Unef"
+text 505,2999,51,14 "TRIBUNE"
+text 508,3022,219,21 "Article réservé à nos abonnés"
+a 486,3022,289,84 href=https://www.lemonde.fr/idees/article/2026/08/17/aide-a-mourir-la-liberte-de-refus-d-un-etablissement-prive-pourrait-rendre-illusoire-l-exercice-d-un-droit-de-la-personne-en-fin-de-vie_6748223_3232.html
+text 486,3022,289,84 "Aide à mourir : « La liberté de refus d’un établissement privé pourrait rendre illusoire l’exercice d’un droit de la personne en fin de vie »"
+text 486,3122,82,18 "Par Collectif"
+[pixels] picture 351,3189,111,74
+[pixels] img 351,3189,111,74 src=https://img.lemde.fr/2026/07/28/14/111/5748/3832/664/442/75/0/71efe70_upload-1-h46zcrodgzwn-2026-07-04-terence-blanchard-ravi-coltrane-arthur-viguier-738510.jpg alt=Le concert « Miles / Coltrane – Legacy », organisé en hommage aux deux musiciens, à Vienne (Isère), le 4 juillet 2026. - Arthur Viguier
+text 186,3189,219,21 "Article réservé à nos abonnés"
+a 164,3189,164,105 href=https://www.lemonde.fr/series-d-ete/article/2026/08/17/a-jazz-a-vienne-une-lettre-d-amour-a-miles-davis-et-john-coltrane_6747958_3451060.html
+text 164,3189,164,105 "Miles Davis et John Coltrane, centenaires de légende : la « lettre d’amour » de Jazz à Vienne"
+[pixels] picture 673,3189,111,74
+[pixels] img 673,3189,111,74 src=https://img.lemde.fr/2026/07/28/0/0/3000/2000/664/442/75/0/9e00c9d_upload-1-zvb4rz7hbcxv-frame-1206.jpg alt=« LE MONDE » d’après Istock
+a 486,3189,226,126 href=https://www.lemonde.fr/societe/article/2026/08/17/collision-de-bateaux-a-cannes-un-disparu-et-dix-blesses-a-la-suite-d-une-collision-entre-deux-bateaux-de-plaisance-les-recherches-reprennent_6747981_3224.html
+text 486,3189,226,126 "Collision de bateaux à Cannes : un disparu et dix blessés à la suite d’une collision entre deux bateaux de plaisance, les recherches reprennent"
+[pixels] picture 351,3364,111,74
+[pixels] img 351,3364,111,74 src=https://img.lemde.fr/2026/08/13/0/7/8859/5906/664/442/75/0/96624ab_upload-1-9ymqyecctgqy-000-96p399f.jpg alt=Lors du traditionnel « Carnaval provençal » à Saint-Tropez (Var), le 7 février 2026. - VALERY HACHE/AFP
+text 186,3364,219,21 "Article réservé à nos abonnés"
+a 164,3364,136,84 href=https://www.lemonde.fr/argent/article/2026/08/14/ou-acheter-son-logement-pour-profiter-d-une-ambiance-festive_6746143_1657007.html
+text 164,3364,136,84 "Où acheter son logement pour profiter d’une ambiance festive ?"
+[pixels] picture 673,3364,111,74
+[pixels] img 673,3364,111,74 src=https://img.lemde.fr/2026/08/10/0/0/5194/3462/664/442/75/0/643a739_ftp-1-kfxs612nnwcz-c07c8deb4f9741fb89b121fbb0629c70-0-ca52d117ade343c1a7e06ea4cc82b444.jpg alt=Des fidèles hindous prient devant une rangée d’idoles symbolisant le dieu hindou Shiva, lors du deuxième jour de Sawan Somvar, à Prayagraj (Inde), le 10 août 2026. - Rajesh Kumar Singh/AP
+a 486,3364,167,105 href=https://www.lemonde.fr/international/article/2026/08/17/en-inde-15-morts-dans-deux-accidents-lies-a-des-fetes-religieuses-en-l-honneur-du-dieu-shiva_6748216_3210.html
+text 486,3364,167,105 "En Inde, 15 morts dans deux accidents liés à des fêtes religieuses en l’honneur du dieu Shiva"
+text 164,3607,84,25 "LE MONDE"
+text 254,3607,107,25 "MÉMORABLE"
+a 385,3607,98,26 href=https://www.lemonde.fr/memorable/quiz-et-questions-de-culture-generale?lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=memorable
+text 402,3611,64,18 "Découvrir"
+button 1032,3609,32,32 id= type=button
+text 1048,3625,77,20 "précédent"
+button 1084,3609,32,32 id= type=button
+text 1100,3625,54,20 "suivant"
+a 164,3657,300,80 href=https://www.lemonde.fr/memorable/inscription?a9epi=epi4d6a49314d5451774f5449314e673d3d0a&lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=memorable
+[pixels] picture 164,3657,80,80
+[pixels] img 164,3657,80,80 alt=Le génie Chaplin src=//img.lemde.fr/160x160/2024/06/28/e407695_1719582181072-memorable-chaplin.jpg
+text 256,3656,94,18 "Le génie Chaplin"
+text 256,3673,190,59 "Personnalités, événements historiques, société… Testez votre culture générale"
+a 480,3657,300,80 href=https://www.lemonde.fr/memorable/inscription?a9epi=gAAAAABe615S_shyVBc3YfOPlg1ydKFGFwqtJ3bPT_OrhoIhIHKsfeK8mCjEA0lR6TrGDx7jycuBqw1uYkdnbbnsJbeKdrDuKQ&lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=memorable
+[pixels] picture 480,3657,80,80
+[pixels] img 480,3657,80,80 alt=La fabrique de la loi src=//img.lemde.fr/160x160/2024/06/28/7a81cd1_1719582221509-memorable-fabriqueloi.jpg
+text 572,3656,111,18 "La fabrique de la loi"
+text 572,3673,196,39 "Boostez votre mémoire en 10 minutes par jour"
+a 796,3657,300,80 href=https://www.lemonde.fr/memorable/boutique/gift/?lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=memorable
+[pixels] picture 796,3657,80,80
+[pixels] img 796,3657,80,80 alt=Offrir Mémorable src=//img.lemde.fr/160x160/2024/06/28/20a9666_1719582265154-memorable-offrir.jpg
+text 888,3656,100,18 "Offrir Mémorable"
+text 888,3673,202,39 "Un cadeau ludique, intelligent et utile chaque jour"
+a 1112,3657,300,80 href=https://www.lemonde.fr/memorable/quiz-et-questions-de-culture-generale?lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=memorable
+[pixels] picture 1112,3657,80,80
+[pixels] img 1112,3657,80,80 alt=Culture générale src=//img.lemde.fr/160x160/2024/06/28/515fa6e_1719582296986-memorable-culture2.jpg
+text 1204,3656,96,18 "Culture générale"
+text 1204,3673,192,59 "Approfondissez vos savoirs grâce à la richesse éditoriale du Monde"
+a 1428,3657,300,80 href=https://www.lemonde.fr/memorable/tester-et-ameliorer-sa-memoire?lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=memorable
+[pixels] picture 1428,3657,80,80
+[pixels] img 1428,3657,80,80 alt=Mémorisation src=//img.lemde.fr/160x160/2024/06/28/2c3cf25_1719582318527-memorable-memorisation2.jpg
+text 1520,3656,81,18 "Mémorisation"
+text 1520,3673,175,39 "Ancrez durablement vos acquis grâce aux révisions"
+a 1744,3657,300,80 href=https://www.lemonde.fr/memorable/boutique/?lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=memorable
+[pixels] picture 1744,3657,80,80
+[pixels] img 1744,3657,80,80 alt=Le Monde Mémorable src=//img.lemde.fr/160x160/2024/06/28/5333ac4_1719582342188-memorable.jpg
+text 1836,3656,126,18 "Le Monde Mémorable"
+text 1836,3673,141,39 "Découvrez nos offres d’abonnements"
+text 164,3801,236,25 "SÉLECTION DE LA RÉDACTION"
+[pixels] picture 164,3849,301,201
+[pixels] img 164,3849,301,201 src=https://img.lemde.fr/2026/07/08/0/0/4723/3149/664/442/75/0/ec8bbf8_upload-1-vvilyzv02uyb-mmagnin-le-pen-bardella-a-la-fleche-56.jpg alt=Marine Le Pen lors de son premier déplacement de la campagne présidentielle 2027, sur un marché de La Flèche (Sarthe), le 8 juillet 2026.  - MARIE MAGNIN/DIVERGENCE POUR « LE MONDE »
+text 186,4064,246,24 "Article réservé à nos abonnés"
+a 164,4064,300,87 href=https://www.lemonde.fr/politique/article/2026/08/17/presidentielle-2027-le-referendum-constitutionnel-de-marine-le-pen-un-coup-d-etat-sur-le-fond-et-sur-la-forme_6747963_823448.html
+text 164,4064,300,87 "La révolution constitutionnelle de Marine Le Pen en cas de victoire en 2027, un texte menaçant l’Etat de droit"
+text 164,4166,140,18 "Par Corentin Lesueur"
+[pixels] picture 489,3849,301,201
+[pixels] img 489,3849,301,201 src=https://img.lemde.fr/2026/07/09/619/0/2136/1424/664/442/75/0/ef04509_upload-1-hvva1eyfokxs-cannibale6-copie.jpg alt=Olivier Balez
+text 489,4066,54,14 "ENQUÊTE"
+text 511,4087,246,24 "Article réservé à nos abonnés"
+a 489,4087,264,66 href=https://www.lemonde.fr/series-d-ete/article/2026/08/17/cannibalisme-l-etrange-maladie-du-kuru-rancon-de-festins-mortuaires_6747962_3451060.html
+text 489,4087,264,66 "L’étrange maladie du kuru, rançon de festins cannibales en Papouasie-Nouvelle-Guinée"
+text 489,4168,106,18 "Par Hervé Morin"
+[pixels] picture 815,3849,301,201
+[pixels] img 815,3849,301,201 src=https://img.lemde.fr/2026/08/11/0/0/7008/4672/664/442/75/0/4b44022_upload-1-cntxs1erafnq-afg-2025-01-21-0406.jpg alt=Bahar (prénom d’emprunt), 14 ans, enfile sa burqa avant de sortir de chez elle pour se rendre dans une école clandestine. Elle et sa mère ont fui son père, qui menace de la marier de force. A Kaboul, le 22 janvier 2025.  - Sandra Calligaro/ITEM/Saif Images
+text 837,4064,246,24 "Article réservé à nos abonnés"
+a 815,4064,289,108 href=https://www.lemonde.fr/series-d-ete/article/2026/08/16/notre-voisine-hurlait-les-talibans-reviennent-nous-etions-petrifiees-cinq-ans-apres-des-afghanes-racontent-ce-jour-funeste-ou-elles-sont-devenues-le-pire-ennemi-de-leur-propre-nation_6747646_3451060.html
+text 815,4064,289,108 "« Notre voisine hurlait : “Les talibans reviennent !”, nous étions pétrifiées » : cinq ans après le 15 août 2021, des Afghanes racontent leur enfer"
+text 815,4187,121,18 "Par Annick Cojean"
+text 164,4269,154,25 "IDÉES ET TRIBUNES"
+text 183,4317,51,14 "TRIBUNE"
+text 186,4338,246,24 "Article réservé à nos abonnés"
+a 164,4338,280,108 href=https://www.lemonde.fr/idees/article/2026/08/15/plainte-de-jordan-bardella-contre-le-rappeur-kerchak-judiciariser-une-punchline-releve-soit-d-une-cecite-culturelle-soit-d-un-contresens-volontaire_6746669_3232.html
+text 164,4338,280,108 "Plainte de Jordan Bardella contre le rappeur Kerchak : « Judiciariser une punchline relève soit d’une cécité culturelle, soit d’un contresens volontaire »"
+text 164,4454,282,124 "L’artiste est visé par une plainte pour injure publique. Une façon pour le RN de jauger la capacité de l’appareil judiciaire à intimider la culture populaire, dénonce la coach vocale Salwa Lakrafi, dans une tribune au « Monde »."
+text 164,4595,116,18 "Par Salwa Lakrafi"
+text 164,4615,85,18 "Coach vocale"
+text 516,4317,51,14 "TRIBUNE"
+text 519,4338,246,24 "Article réservé à nos abonnés"
+a 497,4338,269,108 href=https://www.lemonde.fr/idees/article/2026/08/16/apres-l-etat-providence-construisons-une-societe-de-la-prevoyance-capable-de-prevenir-les-chocs-notamment-le-rechauffement-climatique_6747435_3232.html
+text 497,4338,269,108 "« Après l’Etat-providence, construisons une société de la prévoyance, capable de prévenir les chocs notamment le réchauffement climatique »"
+text 497,4461,114,18 "Par Florian Guyot"
+text 497,4481,250,18 "Responsable à la Banque des territoires"
+text 497,4547,70,14 "CHRONIQUE"
+text 519,4568,246,24 "Article réservé à nos abonnés"
+a 497,4568,271,66 href=https://www.lemonde.fr/un-si-proche-orient/article/2026/08/16/les-luttes-de-faction-a-teheran-pesent-sur-les-pourparlers-avec-les-etats-unis_6747122_6116995.html
+text 497,4568,271,66 "« Les luttes de faction à Téhéran pèsent sur les pourparlers avec les Etats-Unis »"
+[pixels] img 497,4655,44,44 src=https://img.lemde.fr/2025/10/05/0/0/0/0/100/100/60/0/842652e_upload-1-sgvt8973xr1p-jean-pierre-filiu-a-pierre-hybre-myop-2652.jpg alt=
+text 553,4649,132,18 "Par Jean-Pierre Filiu"
+text 553,4669,175,36 "Professeur des universités à Sciences Po"
+text 850,4317,51,14 "TRIBUNE"
+text 853,4338,246,24 "Article réservé à nos abonnés"
+a 831,4338,276,87 href=https://www.lemonde.fr/idees/article/2026/08/17/mortalite-infantile-le-debat-se-concentre-sur-l-organisation-des-maternites-alors-que-les-determinants-sont-ailleurs_6747973_3232.html
+text 831,4338,276,87 "Mortalité infantile : « Le débat se concentre sur l’organisation des maternités, alors que les déterminants sont ailleurs »"
+text 831,4440,276,36 "Par Charlotte Bouvard et Jean-Christophe Rozé"
+text 850,4547,51,14 "TRIBUNE"
+text 853,4568,246,24 "Article réservé à nos abonnés"
+a 831,4568,268,108 href=https://www.lemonde.fr/idees/article/2026/08/16/l-extreme-droite-francaise-a-voue-une-detestation-tenace-au-general-de-gaulle-aujourd-hui-elle-pourrait-reussir-sa-strategie-de-captation-d-heritage_6747643_3232.html
+text 831,4568,268,108 "« L’extrême droite française a voué une détestation tenace au général de Gaulle ; aujourd’hui, elle pourrait réussir sa stratégie de captation d’héritage »"
+text 831,4691,142,18 "Par  Jonathan Hayoun"
+text 831,4711,180,18 "Documentariste et essayiste"
+text 164,4793,96,25 "DÉCOUVRIR"
+[pixels] picture 164,4841,430,287
+[pixels] img 164,4841,430,287 src=https://img.lemde.fr/2026/06/10/817/0/3358/2238/664/442/75/0/c8cc75c_upload-1-ouracwjrp7bq-photo12-lwe19a00-238.jpg alt=JACQUES LOEW/PHOTO12
+[pixels] picture 164,4841,604,287
+[pixels] img 164,4841,604,287 src=https://img.lemde.fr/2026/06/10/817/0/3358/2238/664/442/75/0/c8cc75c_upload-1-ouracwjrp7bq-photo12-lwe19a00-238.jpg alt=JACQUES LOEW/PHOTO12
+text 631,4856,238,25 "Article réservé à nos abonnés"
+a 610,4856,135,169 href=https://www.lemonde.fr/series-d-ete/article/2026/08/17/la-tirade-du-nez-dans-cyrano-de-bergerac-jouee-par-jacques-weber-elle-m-emmerde_6747966_3451060.html
+text 610,4856,135,169 "La tirade du nez dans « Cyrano de Bergerac » jouée par Jacques Weber : « Elle m’emmerde »"
+text 610,5094,111,11 "JACQUES LOEW/PHOTO12"
+[pixels] picture 164,5140,296,197
+[pixels] img 164,5140,296,197 src=https://img.lemde.fr/2026/08/07/333/0/1000/666/664/442/75/0/036070a_ftp-1-xj1ylob9drzi-438200-3490702.jpg alt=Anna Ostasenko Bogdanoff chez elle, à Paris, le 8 juillet 2026. - Léa Boeglin pour M Le magazine du Monde
+[pixels] picture 164,5140,296,356
+[pixels] img 164,5140,296,356 src=https://img.lemde.fr/2026/08/07/333/0/1000/666/664/442/75/0/036070a_ftp-1-xj1ylob9drzi-438200-3490702.jpg alt=Anna Ostasenko Bogdanoff chez elle, à Paris, le 8 juillet 2026. - Léa Boeglin pour M Le magazine du Monde
+text 180,5353,59,14 "PORTRAIT"
+text 201,5377,217,23 "Article réservé à nos abonnés"
+a 180,5377,245,101 href=https://www.lemonde.fr/m-le-mag/article/2026/08/16/entre-enquete-familiale-et-journal-intime-la-fille-d-igor-bogdanoff-entreprend-le-deuil-de-son-pere_6747230_4500055.html
+text 180,5377,245,101 "La fille d’Igor Bogdanoff entreprend le deuil de son père, entre enquête familiale et journal intime"
+[pixels] picture 472,5140,296,197
+[pixels] img 472,5140,296,197 src=https://img.lemde.fr/2026/07/03/171/0/4096/2730/664/442/75/0/37eb2ea_upload-1-flqroqora4vc-img20260528120804.jpg alt=La Friterie des nations, sur la plage de Calais. - Léo Bourdin pour M Le magazine du Monde
+[pixels] picture 472,5140,296,356
+[pixels] img 472,5140,296,356 src=https://img.lemde.fr/2026/07/03/171/0/4096/2730/664/442/75/0/37eb2ea_upload-1-flqroqora4vc-img20260528120804.jpg alt=La Friterie des nations, sur la plage de Calais. - Léo Bourdin pour M Le magazine du Monde
+text 509,5354,217,23 "Article réservé à nos abonnés"
+a 488,5354,251,75 href=https://www.lemonde.fr/m-styles/article/2026/08/17/trois-kiosques-gourmands-pour-manger-sur-le-pouce-cet-ete-de-calais-a-marseille_6747959_4497319.html
+text 488,5354,251,75 "Trois kiosques gourmands pour manger sur le pouce cet été, de Calais à Marseille"
+[pixels] picture 164,5508,430,287
+[pixels] img 164,5508,430,287 src=https://img.lemde.fr/2026/06/01/659/0/5504/3669/664/442/75/0/7225781_upload-1-vjeryzdviya0-zabou-10.jpg alt=Zabou Breitman, à proximité du port ostréicole d’Arès (Gironde), le 1ᵉʳ juin 2026. Elle tient dans ses bras une photo de ses parents prise sur le bassin d’Arcachon.  - UGO AMEZ POUR « LE MONDE »
+[pixels] picture 164,5508,604,287
+[pixels] img 164,5508,604,287 src=https://img.lemde.fr/2026/06/01/659/0/5504/3669/664/442/75/0/7225781_upload-1-vjeryzdviya0-zabou-10.jpg alt=Zabou Breitman, à proximité du port ostréicole d’Arès (Gironde), le 1ᵉʳ juin 2026. Elle tient dans ses bras une photo de ses parents prise sur le bassin d’Arcachon.  - UGO AMEZ POUR « LE MONDE »
+text 631,5523,238,25 "Article réservé à nos abonnés"
+a 610,5523,133,145 href=https://www.lemonde.fr/culture/article/2026/08/16/zabou-breitman-etre-grande-gueule-c-est-une-facon-de-cacher-le-reste_6747127_3246.html
+text 610,5523,133,145 "Zabou Breitman : « Etre grande gueule, c’est une façon de cacher le reste »"
+text 610,5761,133,11 "UGO AMEZ POUR « LE MONDE »"
+[pixels] picture 164,5807,296,197
+[pixels] img 164,5807,296,197 src=https://img.lemde.fr/2026/02/25/0/0/1500/1000/664/442/75/0/10027d0_upload-1-rchltnpkg1ay-frame-1326.jpg alt=
+[pixels] picture 164,5807,296,410
+[pixels] img 164,5807,296,410 src=https://img.lemde.fr/2026/02/25/0/0/1500/1000/664/442/75/0/10027d0_upload-1-rchltnpkg1ay-frame-1326.jpg alt=
+text 199,6021,51,14 "TRIBUNE"
+text 201,6045,217,23 "Article réservé à nos abonnés"
+a 180,6045,251,101 href=https://www.lemonde.fr/idees/article/2026/08/17/fabien-gantois-architecte-ce-que-nous-construisons-mal-aujourd-hui-nos-enfants-devront-l-habiter-le-transformer-ou-le-demolir-demain_6747957_3232.html
+text 180,6045,251,101 "« Ce que nous construisons mal aujourd’hui, nos enfants devront l’habiter, le transformer ou le démolir demain »"
+text 180,6164,125,18 "Par Fabien Gantois"
+text 180,6184,67,18 "Architecte"
+[pixels] picture 472,5807,296,197
+[pixels] img 472,5807,296,197 src=https://img.lemde.fr/2026/08/10/0/0/1500/1000/664/442/75/0/b53a785_ftp-1-utnmur3rdanx-438120-3491403.jpg alt=A la rédaction du journal « L’Arlésienne », à Arles, le 8 juillet 2026. - Elsa Beaumont pour M Le magazine du Monde
+[pixels] picture 472,5807,296,410
+[pixels] img 472,5807,296,410 src=https://img.lemde.fr/2026/08/10/0/0/1500/1000/664/442/75/0/b53a785_ftp-1-utnmur3rdanx-438120-3491403.jpg alt=A la rédaction du journal « L’Arlésienne », à Arles, le 8 juillet 2026. - Elsa Beaumont pour M Le magazine du Monde
+text 509,6022,217,23 "Article réservé à nos abonnés"
+a 488,6022,256,75 href=https://www.lemonde.fr/series-d-ete/article/2026/08/17/l-arlesienne-le-magazine-qui-porte-un-regard-piquant-sur-le-pays-d-arles_6747956_3451060.html
+text 488,6022,256,75 "« L’Arlésienne », le magazine qui porte un regard piquant sur le pays d’Arles"
+text 876,4856,179,14 "LA SUITE APRÈS CETTE PUBLICITÉ"
+text 164,6282,88,25 "CRITIQUES"
+button 164,6330,61,26 id=ds-area--reviews__nav__item__btn--arts type=button aria-label=Arts role=tab
+text 181,6334,27,18 "Arts"
+button 233,6330,73,26 id=ds-area--reviews__nav__item__btn--livres type=button aria-label=Livres role=tab
+text 250,6334,39,18 "Livres"
+button 315,6330,84,26 id=ds-area--reviews__nav__item__btn--cinema type=button aria-label=Cinéma role=tab
+text 332,6334,50,18 "Cinéma"
+button 407,6330,81,26 id=ds-area--reviews__nav__item__btn--scenes type=button aria-label=Scènes role=tab
+text 424,6334,47,18 "Scènes"
+button 496,6330,186,26 id=ds-area--reviews__nav__item__btn--le-monde-passe-a-table type=button aria-label=Le Monde passe à table role=tab
+text 513,6334,152,18 "Le Monde passe à table"
+button 690,6330,96,26 id=ds-area--reviews__nav__item__btn--musiques type=button aria-label=Musiques role=tab
+text 707,6334,62,18 "Musiques"
+button 794,6330,75,26 id=ds-area--reviews__nav__item__btn--series type=button aria-label=Séries role=tab
+text 811,6334,41,18 "Séries"
+button 877,6330,101,26 id=ds-area--reviews__nav__item__btn--jeux-video type=button aria-label=Jeux vidéo role=tab
+text 894,6334,67,18 "Jeux vidéo"
+[pixels] picture 164,6380,145,145
+[pixels] img 164,6380,145,145 src=https://img.lemde.fr/2026/08/05/0/1472/3331/3331/664/664/75/0/1528b71_upload-1-4nlux46r7xvz-10-ryan-mcginley.jpg alt=RYAN MCGINLEY
+text 184,6536,185,19 "Article réservé à nos abonnés"
+a 164,6536,136,85 href=https://www.lemonde.fr/culture/article/2026/08/16/au-jeu-de-paume-elton-john-expose-ses-coups-de-c-ur-photographiques_6747121_3246.html
+text 164,6536,136,85 "Au Jeu de paume, Elton John expose ses coups de cœur photographiques"
+[pixels] picture 325,6380,145,145
+[pixels] img 325,6380,145,145 src=https://img.lemde.fr/2026/07/27/130/0/4009/4009/664/664/75/0/2928b71_upload-1-ucueg7s4lc0e-victor-brauner-repas-de-la-somnambule-1942.jpg alt=FRANÇOIS FERNANDEZ/SACEM MONACO 2026
+text 346,6536,185,19 "Article réservé à nos abonnés"
+a 325,6536,137,85 href=https://www.lemonde.fr/culture/article/2026/08/14/a-monaco-victor-brauner-et-ses-visions-picturales-toujours-plus-etranges_6746178_3246.html
+text 325,6536,137,85 "A Monaco, Victor Brauner et ses visions picturales toujours plus étranges"
+[pixels] picture 487,6380,145,145
+[pixels] img 487,6380,145,145 src=https://img.lemde.fr/2026/08/11/0/2752/5504/5504/664/664/75/0/e505c6c_upload-1-g95g7cyzdock-i-will-sleep-when-i-m-dead.jpg alt=« I Will Sleep When I’m Dead », de Jeanne Susplugas, au centre d’arts et du patrimoine de Roueïre, à Quarante (Hérault), le 13 juillet 2026. - MELKAN BASSIL/CC. SUD-HÉRAULT
+text 507,6536,185,19 "Article réservé à nos abonnés"
+a 487,6536,138,151 href=https://www.lemonde.fr/culture/article/2026/08/11/au-centre-d-arts-et-du-patrimoine-de-roueire-dans-l-herault-jeanne-susplugas-ausculte-notre-cerveau-avec-un-humour-noir-et-cruel_6743781_3246.html
+text 487,6536,138,151 "Au centre d’arts et du patrimoine de Roueïre, dans l’Hérault, Jeanne Susplugas ausculte notre cerveau avec un humour noir et cruel"
+[pixels] picture 648,6380,145,145
+[pixels] img 648,6380,145,145 src=https://img.lemde.fr/2026/08/06/0/1155/3801/3801/664/664/75/0/ac54026_upload-1-5r3ez7p2whyn-lol.jpg alt=ESTATE OF BROOMBERG AND CHANARIN
+text 668,6536,185,19 "Article réservé à nos abonnés"
+a 648,6536,132,129 href=https://www.lemonde.fr/culture/article/2026/08/10/rencontres-d-arles-les-livres-de-photos-pour-enfants-petites-merveilles-et-signatures-prestigieuses_6743505_3246.html
+text 648,6536,132,129 "Rencontres d’Arles : les livres de photos pour enfants, petites merveilles et signatures prestigieuses"
+[pixels] picture 809,6380,145,145
+[pixels] img 809,6380,145,145 src=https://img.lemde.fr/2026/08/07/0/312/1875/1875/664/664/75/0/78c584b_upload-1-r9zsirj5cks2-camille-henrot-in-the-veins-2026-2027-la-tour-glassroom-luma-arles-france-large.png alt=Projection de la vidéo « In the Veins », de Camille Henrot, à LUMA Arles (Bouches-du-Rhône), en 2026. - GRÉGOIRE D’ABLON/VICTOR&SIMON
+text 830,6536,185,19 "Article réservé à nos abonnés"
+a 809,6536,129,151 href=https://www.lemonde.fr/culture/article/2026/08/08/l-artiste-camille-henrot-s-interroge-dans-une-video-touchante-sur-la-maniere-d-elever-son-enfant-en-temps-de-crise-ecologique_6741161_3246.html
+text 809,6536,129,151 "L’artiste Camille Henrot s’interroge, dans une vidéo touchante, sur la manière d’élever son enfant en temps de crise écologique"
+[pixels] picture 971,6380,145,145
+[pixels] img 971,6380,145,145 src=https://img.lemde.fr/2026/08/07/0/1161/4280/4280/664/664/75/0/fcad5bf_upload-1-e2029ouanukq-john-t-daniels-premier-vol-motorise-contro-le-orville-wright-aux-commandes-du-flyerkitty-hawk-caroline-du-nor.jpg alt=JOHN T. DANIELS/LIBRARY OF CONGRESS
+text 991,6536,185,19 "Article réservé à nos abonnés"
+a 971,6536,143,107 href=https://www.lemonde.fr/culture/article/2026/08/08/a-montpellier-les-premieres-fois-en-photographie-racontent-deux-siecles-d-images_6740855_3246.html
+text 971,6536,143,107 "A Montpellier, les « premières fois » en photographie racontent deux siècles d’images"
+text 164,6753,105,25 "SÉRIES D’ÉTÉ"
+button 1044,6753,32,32 id=ds-area--series__slideshow--series type=button
+text 1060,6768,77,20 "précédent"
+button 1084,6753,32,32 id=ds-area--series__slideshow--series type=button
+text 1100,6768,54,20 "suivant"
+a 164,6800,60,18 href=bon-vent
+text 164,6800,60,18 "Bon vent !"
+[pixels] picture 164,6829,260,260
+[pixels] img 164,6829,260,260 src=https://img.lemde.fr/2026/06/25/0/250/1000/1000/664/664/75/0/c240576_upload-1-sjlkulmxe17n-ftanet-lemonde-potdedepart-ho-12.jpg alt=Florent Tanet pour Le Monde
+[pixels] picture 164,6829,260,454
+[pixels] img 164,6829,260,454 src=https://img.lemde.fr/2026/06/25/0/250/1000/1000/664/664/75/0/c240576_upload-1-sjlkulmxe17n-ftanet-lemonde-potdedepart-ho-12.jpg alt=Florent Tanet pour Le Monde
+text 201,7107,220,23 "Article réservé à nos abonnés"
+a 180,7107,228,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/15/j-ai-honte-de-pleurer-au-travail-mais-c-est-plus-fort-que-moi-le-pot-de-depart-eprouvant-de-thomas-ingenieur_6746713_3451060.html
+text 180,7107,228,131 "« J’ai honte de pleurer au travail, mais c’est plus fort que moi » : le pot de départ éprouvant de Thomas, ingénieur"
+a 440,6800,123,18 href=la-seine-en-cinq-iles
+text 440,6800,123,18 "La Seine en cinq îles"
+[pixels] picture 440,6829,260,260
+[pixels] img 440,6829,260,260 src=https://img.lemde.fr/2026/06/30/0/490/2577/2577/664/664/75/0/8865e2e_upload-1-gra6xlbmfqbv-02-ile-saint-denis-juin-2026-101-rec.jpg alt=L'Ile-Saint-Denis vue depuis Saint-Denis (Seine-Saint-Denis), en juin 2026. - FLORIAN THÉVENARD  POUR « LE MONDE »
+[pixels] picture 440,6829,260,454
+[pixels] img 440,6829,260,454 src=https://img.lemde.fr/2026/06/30/0/490/2577/2577/664/664/75/0/8865e2e_upload-1-gra6xlbmfqbv-02-ile-saint-denis-juin-2026-101-rec.jpg alt=L'Ile-Saint-Denis vue depuis Saint-Denis (Seine-Saint-Denis), en juin 2026. - FLORIAN THÉVENARD  POUR « LE MONDE »
+text 477,7107,220,23 "Article réservé à nos abonnés"
+a 456,7107,225,50 href=https://www.lemonde.fr/m-styles/article/2026/08/15/l-ile-saint-denis-une-terre-de-resilience-et-de-reinvention_6746611_4497319.html
+text 456,7107,225,50 "L’Ile-Saint-Denis, une terre de résilience et de réinvention"
+a 716,6800,114,18 href=venu-e-s-d-ailleurs
+text 716,6800,114,18 "Venu(e)s d’ailleurs"
+[pixels] picture 716,6829,260,260
+[pixels] img 716,6829,260,260 src=https://img.lemde.fr/2026/06/17/0/634/3543/3543/664/664/75/0/72e3bc3_upload-1-incc7mhlph8k-habibatou-ndiaye-assaita-sadio-saint-die-senegalais-056.jpg alt=Habibatou Ndiaye, dans son appartement du quartier Kellermann, et son amie et voisine Aissata Sadio, à Saint-Dié-des-Vosges (Vosges), le 4 juin 2026. - PASCAL BASTIEN POUR « LE MONDE »
+[pixels] picture 716,6829,260,454
+[pixels] img 716,6829,260,454 src=https://img.lemde.fr/2026/06/17/0/634/3543/3543/664/664/75/0/72e3bc3_upload-1-incc7mhlph8k-habibatou-ndiaye-assaita-sadio-saint-die-senegalais-056.jpg alt=Habibatou Ndiaye, dans son appartement du quartier Kellermann, et son amie et voisine Aissata Sadio, à Saint-Dié-des-Vosges (Vosges), le 4 juin 2026. - PASCAL BASTIEN POUR « LE MONDE »
+text 753,7107,220,23 "Article réservé à nos abonnés"
+a 732,7107,222,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/16/l-ascension-sociale-gomme-beaucoup-de-prejuges-a-saint-die-des-vosges-la-communaute-peule-fait-tomber-les-barrieres_6747086_3451060.html
+text 732,7107,222,131 "« L’ascension sociale gomme beaucoup de préjugés » : à Saint-Dié-des-Vosges, la communauté peule fait tomber les barrières"
+a 992,6800,128,18 href=kiosques-gourmands
+text 992,6800,128,18 "Kiosques gourmands"
+[pixels] picture 992,6829,260,260
+[pixels] img 992,6829,260,260 src=https://img.lemde.fr/2026/07/28/147/0/1205/1205/664/664/75/0/5f0a23e_ftp-1-c6qtqglb63va-437435-3491993.jpg alt=A la la Casa Juan Pedro. - Léo Bourdin
+[pixels] picture 992,6829,260,454
+[pixels] img 992,6829,260,454 src=https://img.lemde.fr/2026/07/28/147/0/1205/1205/664/664/75/0/5f0a23e_ftp-1-c6qtqglb63va-437435-3491993.jpg alt=A la la Casa Juan Pedro. - Léo Bourdin
+text 1029,7107,220,23 "Article réservé à nos abonnés"
+a 1008,7107,216,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/03/a-biarritz-sur-le-port-des-pecheurs-la-casa-juan-pedro-perpetue-le-rituel-de-la-plancha_6737360_3451060.html
+text 1008,7107,216,104 "A Biarritz, sur le port des Pêcheurs, la Casa Juan Pedro perpétue le rituel de la plancha"
+a 1268,6800,132,18 href=dix-ans-de-post-verite
+text 1268,6800,132,18 "Dix ans de post-vérité"
+[pixels] picture 1268,6829,260,260
+[pixels] img 1268,6829,260,260 src=https://img.lemde.fr/2026/08/04/125/125/4482/4482/664/664/75/0/dc5a9c7_upload-1-z75cjdfmthhd-5-electio-europa-c-copie.jpg alt=Gwen Keraval
+[pixels] picture 1268,6829,260,454
+[pixels] img 1268,6829,260,454 src=https://img.lemde.fr/2026/08/04/125/125/4482/4482/664/664/75/0/dc5a9c7_upload-1-z75cjdfmthhd-5-electio-europa-c-copie.jpg alt=Gwen Keraval
+text 1305,7107,220,23 "Article réservé à nos abonnés"
+a 1284,7107,204,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/14/l-education-de-la-societe-civile-une-arme-contre-la-desinformation-qui-sevit-en-europe_6746271_3451060.html
+text 1284,7107,204,104 "L’éducation de la société civile, une arme contre la désinformation qui sévit en Europe"
+a 1544,6800,250,18 href=reinhold-messner-l-ivresse-des-sommets
+text 1544,6800,250,18 "Reinhold Messner, l’ivresse des sommets"
+[pixels] picture 1544,6829,260,260
+[pixels] img 1544,6829,260,260 src=https://img.lemde.fr/2026/07/22/0/1332/4000/4000/664/664/75/0/09ec800_upload-1-nnkeqwuqedl0-gettyimages-2279117833.jpg alt=Reinhold Messner et sa troisième épouse, Diane, durant la soirée d’ouverture du CALL Film Festival, à Bad Hofgastein (Autriche), le 28 mai 2026. - JULIA BEVERLY/GETTY IMAGES
+[pixels] picture 1544,6829,260,454
+[pixels] img 1544,6829,260,454 src=https://img.lemde.fr/2026/07/22/0/1332/4000/4000/664/664/75/0/09ec800_upload-1-nnkeqwuqedl0-gettyimages-2279117833.jpg alt=Reinhold Messner et sa troisième épouse, Diane, durant la soirée d’ouverture du CALL Film Festival, à Bad Hofgastein (Autriche), le 28 mai 2026. - JULIA BEVERLY/GETTY IMAGES
+text 1581,7107,220,23 "Article réservé à nos abonnés"
+a 1560,7107,214,104 href=https://www.lemonde.fr/series-d-ete/article/2026/07/31/l-ultime-aventure-de-reinhold-messner-couve-par-sa-troisieme-femme-mais-coupe-des-siens_6737120_3451060.html
+text 1560,7107,214,104 "L’ultime aventure de Reinhold Messner, couvé par sa troisième femme mais coupé des siens"
+a 1820,6800,197,18 href=spielberg-le-spectacle-d-une-vie
+text 1820,6800,197,18 "Spielberg, le spectacle d’une vie"
+[pixels] picture 1820,6829,260,260
+[pixels] img 1820,6829,260,260 src=https://img.lemde.fr/2026/07/28/68/0/1741/1741/664/664/75/0/805374e_upload-1-i7pfpx3288ia-sipa-00377788-000003.jpg alt=Le président américain Bill Clinton remet la médaille nationale des humanités à Steven Spielberg, en présence de Hillary Clinton, à Washington, le 29 septembre 1999. - TRIPPETT/SIPA
+[pixels] picture 1820,6829,260,454
+[pixels] img 1820,6829,260,454 src=https://img.lemde.fr/2026/07/28/68/0/1741/1741/664/664/75/0/805374e_upload-1-i7pfpx3288ia-sipa-00377788-000003.jpg alt=Le président américain Bill Clinton remet la médaille nationale des humanités à Steven Spielberg, en présence de Hillary Clinton, à Washington, le 29 septembre 1999. - TRIPPETT/SIPA
+text 1857,7107,220,23 "Article réservé à nos abonnés"
+a 1836,7107,216,158 href=https://www.lemonde.fr/series-d-ete/article/2026/08/07/steven-spielberg-coach-exceptionnel-de-bill-clinton-et-de-barack-obama-une-campagne-presidentielle-doit-prendre-exemple-sur-hollywood_6740522_3451060.html
+text 1836,7107,216,158 "Steven Spielberg, « coach exceptionnel » de Bill Clinton et de Barack Obama : « Une campagne présidentielle doit prendre exemple sur Hollywood »"
+a 2096,6800,94,18 href=la-saga-ubisoft
+text 2096,6800,94,18 "La saga Ubisoft"
+[pixels] picture 2096,6829,260,260
+[pixels] img 2096,6829,260,260 src=https://img.lemde.fr/2026/07/20/0/0/3610/3610/664/664/75/0/4cb82cd_upload-1-apbikyhzvgea-000-96u6663.jpg alt=Des employés d’Ubisoft tiennent un piquet de grève devant les locaux de Bordeaux, le 10 février 2026. - CHRISTOPHE ARCHAMBAULT/AFP
+[pixels] picture 2096,6829,260,454
+[pixels] img 2096,6829,260,454 src=https://img.lemde.fr/2026/07/20/0/0/3610/3610/664/664/75/0/4cb82cd_upload-1-apbikyhzvgea-000-96u6663.jpg alt=Des employés d’Ubisoft tiennent un piquet de grève devant les locaux de Bordeaux, le 10 février 2026. - CHRISTOPHE ARCHAMBAULT/AFP
+text 2133,7107,220,23 "Article réservé à nos abonnés"
+a 2112,7107,207,77 href=https://www.lemonde.fr/series-d-ete/article/2026/08/01/en-2020-la-degringolade-d-ubisoft-apres-des-annees-d-euphorie_6737195_3451060.html
+text 2112,7107,207,77 "En 2020, la dégringolade d’Ubisoft après des années d’euphorie"
+a 2372,6800,244,18 href=quand-gouvernent-sages-et-philosophes
+text 2372,6800,244,18 "Quand gouvernent sages et philosophes"
+[pixels] picture 2372,6829,260,260
+[pixels] img 2372,6829,260,260 src=https://img.lemde.fr/2026/08/11/0/1027/4000/4000/664/664/75/0/8ba7ddd_upload-1-lznv6e3vthni-000-33pf6ct.jpg alt=Badges de Mao, à Hong Kong , en 2023.  - MAY JAMES / AFP
+[pixels] picture 2372,6829,260,454
+[pixels] img 2372,6829,260,454 src=https://img.lemde.fr/2026/08/11/0/1027/4000/4000/664/664/75/0/8ba7ddd_upload-1-lznv6e3vthni-000-33pf6ct.jpg alt=Badges de Mao, à Hong Kong , en 2023.  - MAY JAMES / AFP
+text 2409,7107,220,23 "Article réservé à nos abonnés"
+a 2388,7107,220,50 href=https://www.lemonde.fr/series-d-ete/article/2026/08/13/mao-zedong-et-la-science-marxiste-leniniste_6745576_3451060.html
+text 2388,7107,220,50 "Mao Zedong et la « science » marxiste-léniniste"
+a 2648,6800,111,18 href=delices-de-cheffes
+text 2648,6800,111,18 "Délices de cheffes"
+[pixels] picture 2648,6829,260,260
+[pixels] img 2648,6829,260,260 src=https://img.lemde.fr/2026/08/06/956/0/3887/3887/664/664/75/0/23ffbc7_upload-1-sbtbrp46pzbt-202606-boeglinlea-laurencedufour-web-4.jpg alt=Les accras de maïs réalisés par la cheffe Laurence Dufour. - Léa Boeglin pour M Le magazine du Monde
+[pixels] picture 2648,6829,260,454
+[pixels] img 2648,6829,260,454 src=https://img.lemde.fr/2026/08/06/956/0/3887/3887/664/664/75/0/23ffbc7_upload-1-sbtbrp46pzbt-202606-boeglinlea-laurencedufour-web-4.jpg alt=Les accras de maïs réalisés par la cheffe Laurence Dufour. - Léa Boeglin pour M Le magazine du Monde
+a 2664,7107,223,50 href=https://www.lemonde.fr/m-styles/article/2026/08/13/trois-recettes-a-base-de-mais-creme-accras-et-tempura_6745613_4497319.html
+text 2664,7107,223,50 "Trois recettes à base de maïs : crème, accras et tempura"
+a 2924,6800,161,18 href=la-nouvelle-ere-de-la-mode
+text 2924,6800,161,18 "La nouvelle ère de la mode"
+[pixels] picture 2924,6829,260,260
+[pixels] img 2924,6829,260,260 src=https://img.lemde.fr/2026/07/14/0/680/2400/2400/664/664/75/0/4396245_upload-1-eyuolaa8addg-rea11474892.jpg alt=Grace Wales Bonner, dans les coulisses, lors du défilé de sa marque, à Florence (Italie), le 14 juin 2025.  - CLARA VANNUCCI/« NEW YORK TIMES »/REDUX-RÉA
+[pixels] picture 2924,6829,260,454
+[pixels] img 2924,6829,260,454 src=https://img.lemde.fr/2026/07/14/0/680/2400/2400/664/664/75/0/4396245_upload-1-eyuolaa8addg-rea11474892.jpg alt=Grace Wales Bonner, dans les coulisses, lors du défilé de sa marque, à Florence (Italie), le 14 juin 2025.  - CLARA VANNUCCI/« NEW YORK TIMES »/REDUX-RÉA
+text 2961,7107,220,23 "Article réservé à nos abonnés"
+a 2940,7107,225,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/15/a-l-issue-du-grand-mercato-de-la-mode-les-femmes-designers-ecartees-des-places-convoitees_6746664_3451060.html
+text 2940,7107,225,104 "A l’issue du grand mercato de la mode, les femmes designers écartées des places convoitées"
+a 3200,6800,106,18 href=l-envers-du-decor
+text 3200,6800,106,18 "L’envers du décor"
+[pixels] picture 3200,6829,260,260
+[pixels] img 3200,6829,260,260 src=https://img.lemde.fr/2026/08/06/0/255/973/973/664/664/75/0/af77a96_ftp-1-jferzy9ipplf-438072-3488838.jpg alt=Défilé Louis Vuitton, dans la cour Carrée du Louvre, à Paris, le 3 octobre 2012. - Rex Features/REX/Sipa
+[pixels] picture 3200,6829,260,454
+[pixels] img 3200,6829,260,454 src=https://img.lemde.fr/2026/08/06/0/255/973/973/664/664/75/0/af77a96_ftp-1-jferzy9ipplf-438072-3488838.jpg alt=Défilé Louis Vuitton, dans la cour Carrée du Louvre, à Paris, le 3 octobre 2012. - Rex Features/REX/Sipa
+text 3237,7107,220,23 "Article réservé à nos abonnés"
+a 3216,7107,221,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/14/en-octobre-2012-louis-vuitton-emprunte-avec-daniel-buren-les-escaliers-mecaniques_6746250_3451060.html
+text 3216,7107,221,104 "En octobre 2012, Louis Vuitton emprunte avec Daniel Buren les escaliers mécaniques"
+a 3476,6800,165,18 href=nouveau-logis-nouvelle-vie
+text 3476,6800,165,18 "Nouveau logis, nouvelle vie"
+[pixels] picture 3476,6829,260,260
+[pixels] img 3476,6829,260,260 src=https://img.lemde.fr/2026/08/06/0/1107/5504/5504/664/664/75/0/5b1e662_upload-1-3pipv0lbje5t-000-33yj6jg.jpg alt=Sur la terrasse du Cercle des nageurs, à Marseille, le 19 octobre 2023. - NICOLAS TUCAT/AFP
+[pixels] picture 3476,6829,260,454
+[pixels] img 3476,6829,260,454 src=https://img.lemde.fr/2026/08/06/0/1107/5504/5504/664/664/75/0/5b1e662_upload-1-3pipv0lbje5t-000-33yj6jg.jpg alt=Sur la terrasse du Cercle des nageurs, à Marseille, le 19 octobre 2023. - NICOLAS TUCAT/AFP
+text 3513,7107,220,23 "Article réservé à nos abonnés"
+a 3492,7107,207,77 href=https://www.lemonde.fr/argent/article/2026/08/07/ou-acheter-pour-assouvir-sa-passion-sportive-en-france_6740453_1657007.html
+text 3492,7107,207,77 "Où acheter son logement pour assouvir sa passion sportive en France ?"
+a 3752,6800,107,18 href=les-negos-de-l-ete
+text 3752,6800,107,18 "Les négos de l’été"
+[pixels] picture 3752,6829,260,260
+[pixels] img 3752,6829,260,260 src=https://img.lemde.fr/2026/07/31/0/137/1225/1225/664/664/75/0/24ce4b7_ftp-1-hspbbzoqeukz-437786-3492419.jpg alt=  - Jules Le Barazer pour M Le magazine du Monde
+[pixels] picture 3752,6829,260,454
+[pixels] img 3752,6829,260,454 src=https://img.lemde.fr/2026/07/31/0/137/1225/1225/664/664/75/0/24ce4b7_ftp-1-hspbbzoqeukz-437786-3492419.jpg alt=  - Jules Le Barazer pour M Le magazine du Monde
+text 3789,7107,220,23 "Article réservé à nos abonnés"
+a 3768,7107,204,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/11/la-tambouille-de-saison-c-est-apres-l-ete-qu-on-se-retrouve-a-commander-des-spritz-en-novembre_6743768_3451060.html
+text 3768,7107,204,104 "La tambouille de saison : « C’est après l’été qu’on se retrouve à commander des spritz en novembre »"
+text 3768,7229,144,18 "Par Guillemette Faure"
+a 4028,6800,145,18 href=ca-trompe-enormement
+text 4028,6800,145,18 "Ça trompe énormément"
+[pixels] picture 4028,6829,260,260
+[pixels] img 4028,6829,260,260 src=https://img.lemde.fr/2026/07/24/0/521/1618/1618/664/664/75/0/200ea76_upload-1-ddbxjyw5gnac-infidelity-06.jpg alt=Stefania Infante
+[pixels] picture 4028,6829,260,454
+[pixels] img 4028,6829,260,454 src=https://img.lemde.fr/2026/07/24/0/521/1618/1618/664/664/75/0/200ea76_upload-1-ddbxjyw5gnac-infidelity-06.jpg alt=Stefania Infante
+text 4065,7107,220,23 "Article réservé à nos abonnés"
+a 4044,7107,218,104 href=https://www.lemonde.fr/series-d-ete/article/2026/07/31/je-decouvre-qu-il-nous-a-offert-le-meme-bijou-ils-ont-ete-trompes-et-racontent-le-jour-ou-tout-a-bascule_6737093_3451060.html
+text 4044,7107,218,104 "« Je découvre qu’il nous a offert le même bijou » : ils ont été trompés et racontent le jour où tout a basculé"
+a 4304,6800,195,18 href=ces-placements-qui-passent-mal
+text 4304,6800,195,18 "Ces placements qui passent mal"
+[pixels] picture 4304,6829,260,260
+[pixels] img 4304,6829,260,260 src=https://img.lemde.fr/2026/08/10/0/1000/4016/4016/664/664/75/0/1ac63e5_upload-1-n3p6xbcq2oco-rea10494829.jpg alt=Le site Internet d’H2O Asset Management. - KERMALO/RÉA
+[pixels] picture 4304,6829,260,454
+[pixels] img 4304,6829,260,454 src=https://img.lemde.fr/2026/08/10/0/1000/4016/4016/664/664/75/0/1ac63e5_upload-1-n3p6xbcq2oco-rea10494829.jpg alt=Le site Internet d’H2O Asset Management. - KERMALO/RÉA
+text 4341,7107,220,23 "Article réservé à nos abonnés"
+a 4320,7107,211,77 href=https://www.lemonde.fr/argent/article/2026/08/11/la-saga-du-scandale-h2o-entre-stars-de-la-finance-jet-prive-et-conflits-d-interets_6743751_1657007.html
+text 4320,7107,211,77 "La saga du scandale H2O, entre stars de la finance, jet privé et conflits d’intérêts"
+a 4580,6800,174,18 href=le-theatre-sous-l-occupation
+text 4580,6800,174,18 "Le théâtre sous l’Occupation"
+[pixels] picture 4580,6829,260,260
+[pixels] img 4580,6829,260,260 src=https://img.lemde.fr/2023/07/01/0/968/4246/4246/664/664/75/0/384d3d0_1688215346783-334484-641b0ed77f685.jpeg alt=Julien Gosselin, photographié par Simon Gosselin
+[pixels] picture 4580,6829,260,454
+[pixels] img 4580,6829,260,454 src=https://img.lemde.fr/2023/07/01/0/968/4246/4246/664/664/75/0/384d3d0_1688215346783-334484-641b0ed77f685.jpeg alt=Julien Gosselin, photographié par Simon Gosselin
+text 4617,7107,220,23 "Article réservé à nos abonnés"
+a 4596,7107,212,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/13/aujourd-hui-l-occupation-est-peu-abordee-par-un-theatre-pourtant-prompt-a-s-emparer-des-sujets-politiques_6745834_3451060.html
+text 4596,7107,212,131 "Aujourd’hui, l’Occupation est peu abordée par un théâtre pourtant prompt à s’emparer des sujets politiques"
+a 4856,6800,68,18 href=envole-moi
+text 4856,6800,68,18 "Envole-moi"
+[pixels] picture 4856,6829,260,260
+[pixels] img 4856,6829,260,260 src=https://img.lemde.fr/2026/07/07/0/1233/3000/3000/664/664/75/0/6f5c5c9_upload-1-yhiibhu0iwdb-martinet-sirius.jpg alt=
+[pixels] picture 4856,6829,260,454
+[pixels] img 4856,6829,260,454 src=https://img.lemde.fr/2026/07/07/0/1233/3000/3000/664/664/75/0/6f5c5c9_upload-1-yhiibhu0iwdb-martinet-sirius.jpg alt=
+a 4872,7107,210,50 href=https://www.lemonde.fr/podcasts/article/2026/08/11/envole-moi-le-martinet-noir-4-6_6743760_5463015.html
+text 4872,7107,210,50 "Envole-moi : le martinet noir (4/6)"
+a 5132,6800,152,18 href=l-empire-bernard-arnault
+text 5132,6800,152,18 "L’empire Bernard Arnault"
+[pixels] picture 5132,6829,260,260
+[pixels] img 5132,6829,260,260 src=https://img.lemde.fr/2026/07/17/590/569/3243/3243/664/664/75/0/c7551c3_upload-1-frlsyhmu3v47-kzihnioglu-pol-bernard-arnault-invalides-02072026-87.JPG alt=Bernard Arnault, lors de son discours à l’hôtel des Invalides, à Paris, le 2 juillet 2026. - KAMIL ZIHNIOGLU POUR « LE MONDE »
+[pixels] picture 5132,6829,260,454
+[pixels] img 5132,6829,260,454 src=https://img.lemde.fr/2026/07/17/590/569/3243/3243/664/664/75/0/c7551c3_upload-1-frlsyhmu3v47-kzihnioglu-pol-bernard-arnault-invalides-02072026-87.JPG alt=Bernard Arnault, lors de son discours à l’hôtel des Invalides, à Paris, le 2 juillet 2026. - KAMIL ZIHNIOGLU POUR « LE MONDE »
+a 5148,7107,218,77 href=https://www.lemonde.fr/economie/article/2026/07/27/l-empire-bernard-arnault-le-pdg-de-lvmh-reagit-a-l-enquete-du-monde_6734198_3234.html
+text 5148,7107,218,77 "« L’Empire Bernard Arnault » : le PDG de LVMH réagit à l’enquête du « Monde »"
+a 5408,6800,134,18 href=la-france-de-l-art-brut
+text 5408,6800,134,18 "La France de l’art brut"
+[pixels] picture 5408,6829,260,260
+[pixels] img 5408,6829,260,260 src=https://img.lemde.fr/2026/07/21/984/0/3467/3467/664/664/75/0/4dfebba_upload-1-p4ml1il224jb-20260708-cl-artbrut-andrepailloux-13.jpg alt=André Pailloux actionne l’un de ses moulins à vent, à Brem-sur-Mer (Vendée), le 8 juillet 2026. - CÉLINE LEVAIN/MIRAGE COLLECTIF POUR « LE MONDE »
+[pixels] picture 5408,6829,260,454
+[pixels] img 5408,6829,260,454 src=https://img.lemde.fr/2026/07/21/984/0/3467/3467/664/664/75/0/4dfebba_upload-1-p4ml1il224jb-20260708-cl-artbrut-andrepailloux-13.jpg alt=André Pailloux actionne l’un de ses moulins à vent, à Brem-sur-Mer (Vendée), le 8 juillet 2026. - CÉLINE LEVAIN/MIRAGE COLLECTIF POUR « LE MONDE »
+text 5445,7107,220,23 "Article réservé à nos abonnés"
+a 5424,7107,223,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/08/les-moulinets-hypnotiques-d-andre-pailloux-peintre-ouvrier-disciple-du-vent-et-des-couleurs_6741515_3451060.html
+text 5424,7107,223,104 "Les moulinets hypnotiques d’André Pailloux, peintre-ouvrier disciple du vent et des couleurs"
+a 5684,6800,101,18 href=mes-seins-et-moi
+text 5684,6800,101,18 "Mes seins et moi"
+[pixels] picture 5684,6829,260,260
+[pixels] img 5684,6829,260,260 src=https://img.lemde.fr/2026/08/08/0/554/1417/1417/664/664/75/0/af26f5e_upload-1-nkouhdxyohcn-le-monde-institut-du-sein-5-exe-copie-1.jpg alt=Isabel Espanol
+[pixels] picture 5684,6829,260,454
+[pixels] img 5684,6829,260,454 src=https://img.lemde.fr/2026/08/08/0/554/1417/1417/664/664/75/0/af26f5e_upload-1-nkouhdxyohcn-le-monde-institut-du-sein-5-exe-copie-1.jpg alt=Isabel Espanol
+text 5721,7107,220,23 "Article réservé à nos abonnés"
+a 5700,7107,225,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/14/je-te-paie-un-sein-meme-deux-si-tu-veux-les-petits-et-les-grands-calculs-pour-se-faire-operer-de-la-poitrine-dans-le-secteur-prive_6746177_3451060.html
+text 5700,7107,225,131 "« Je te paie un sein. Même deux, si tu veux » : les petits et les grands calculs pour se faire opérer de la poitrine dans le secteur privé"
+a 5960,6800,245,18 href=gourous-et-ashrams-la-ruee-vers-l-ouest
+text 5960,6800,245,18 "Gourous et ashrams, la ruée vers l'Ouest"
+[pixels] picture 5960,6829,260,260
+[pixels] img 5960,6829,260,260 src=https://img.lemde.fr/2026/07/23/498/0/3003/3003/664/664/75/0/2798336_upload-1-yuwkpjo7gcte-08-260612-fert.jpg alt=Lors du rituel de la puja, au centre védantique Ramakrishna à Gretz-Armainvilliers (Seine-et-Marne), le 12 juin 2026.  - BRUNO FERT/DIVERGENCE POUR « LE MONDE »
+[pixels] picture 5960,6829,260,454
+[pixels] img 5960,6829,260,454 src=https://img.lemde.fr/2026/07/23/498/0/3003/3003/664/664/75/0/2798336_upload-1-yuwkpjo7gcte-08-260612-fert.jpg alt=Lors du rituel de la puja, au centre védantique Ramakrishna à Gretz-Armainvilliers (Seine-et-Marne), le 12 juin 2026.  - BRUNO FERT/DIVERGENCE POUR « LE MONDE »
+text 5997,7107,220,23 "Article réservé à nos abonnés"
+a 5976,7107,210,158 href=https://www.lemonde.fr/series-d-ete/article/2026/08/09/du-sage-ascete-a-l-influenceur-suivi-par-des-millions-de-followers-les-gourous-hindous-et-leurs-disciples-a-l-heure-de-la-mondialisation_6741847_3451060.html
+text 5976,7107,210,158 "Du sage ascète à l’influenceur suivi par des millions de followers : comment l’Occident a refaçonné l’hindouisme... et vice-versa"
+a 6236,6800,119,18 href=fortunes-africaines
+text 6236,6800,119,18 "Fortunes africaines"
+[pixels] picture 6236,6829,260,260
+[pixels] img 6236,6829,260,260 src=https://img.lemde.fr/2026/07/16/0/218/2820/2820/664/664/75/0/b8457a2_upload-1-9woiufqsjpwr-monde-serie-fortunesafricaines-rabiu-300dpi.jpg alt=Anne-Gaëlle Amiot
+[pixels] picture 6236,6829,260,454
+[pixels] img 6236,6829,260,454 src=https://img.lemde.fr/2026/07/16/0/218/2820/2820/664/664/75/0/b8457a2_upload-1-9woiufqsjpwr-monde-serie-fortunesafricaines-rabiu-300dpi.jpg alt=Anne-Gaëlle Amiot
+text 6273,7107,220,23 "Article réservé à nos abonnés"
+a 6252,7107,228,77 href=https://www.lemonde.fr/afrique/article/2026/08/02/abdul-samad-rabiu-l-autre-industriel-multimilliardaire-qui-veut-changer-le-nigeria_6737313_3212.html
+text 6252,7107,228,77 "Abdul Samad Rabiu, l’autre industriel multimilliardaire qui veut changer le Nigeria"
+a 6512,6800,162,18 href=les-douleurs-des-vacances
+text 6512,6800,162,18 "Les douleurs des vacances"
+[pixels] picture 6512,6829,260,260
+[pixels] img 6512,6829,260,260 src=https://img.lemde.fr/2026/08/13/0/159/1193/1193/664/664/75/0/4cfa72f_upload-1-pijvmhx7wymi-5-maison-de-vacances.jpg alt=Francois Olislaeger
+[pixels] picture 6512,6829,260,454
+[pixels] img 6512,6829,260,454 src=https://img.lemde.fr/2026/08/13/0/159/1193/1193/664/664/75/0/4cfa72f_upload-1-pijvmhx7wymi-5-maison-de-vacances.jpg alt=Francois Olislaeger
+text 6549,7107,220,23 "Article réservé à nos abonnés"
+a 6528,7107,224,77 href=https://www.lemonde.fr/m-perso/article/2026/08/16/et-au-fait-qui-sait-ou-est-la-pompe-du-paddle-l-ete-a-un-accessoire-pres_6746985_4497916.html
+text 6528,7107,224,77 "« Et, au fait, qui sait où est la pompe du paddle ? » : l’été à un accessoire près"
+text 6528,7202,144,18 "Par Guillemette Faure"
+a 6788,6800,106,18 href=havres-des-cimes
+text 6788,6800,106,18 "Havres des cimes"
+[pixels] picture 6788,6829,260,260
+[pixels] img 6788,6829,260,260 src=https://img.lemde.fr/2026/07/08/0/1500/3000/3000/664/664/75/0/3fcea4c_upload-1-jm3uxe4pnnzx-divergence-mfc0011-124.jpg alt=Dans le dortoir du refuge de la Balme, sur la commune des Contamines-Montjoie (Haute-Savoie), en mai 2023. - MORGAN FACHE/DIVERGENCE
+[pixels] picture 6788,6829,260,454
+[pixels] img 6788,6829,260,454 src=https://img.lemde.fr/2026/07/08/0/1500/3000/3000/664/664/75/0/3fcea4c_upload-1-jm3uxe4pnnzx-divergence-mfc0011-124.jpg alt=Dans le dortoir du refuge de la Balme, sur la commune des Contamines-Montjoie (Haute-Savoie), en mai 2023. - MORGAN FACHE/DIVERGENCE
+text 6825,7107,220,23 "Article réservé à nos abonnés"
+a 6804,7107,214,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/15/en-refuge-l-enfer-c-est-les-autres-ce-randonneur-s-etait-equipe-d-un-reveil-a-l-ancienne-celui-qui-sonne-tres-fort_6746504_3451060.html
+text 6804,7107,214,131 "En refuge, l’enfer, c’est les autres : « Ce randonneur s’était équipé d’un réveil à l’ancienne, celui qui sonne très fort »"
+a 7064,6800,159,18 href=ecrire-sur-les-siens
+text 7064,6800,159,18 "Un écrivain dans la famille"
+[pixels] picture 7064,6829,260,260
+[pixels] img 7064,6829,260,260 src=https://img.lemde.fr/2026/08/07/218/0/1222/1222/664/664/75/0/08415fe_ftp-1-6yvtvp6hnr3z-438182-3490625.jpg alt=L’écrivaine Emma Becker, à Paris, le 8 juillet 2026. - Anaïs Barelli pour M Le magazine du Monde
+[pixels] picture 7064,6829,260,454
+[pixels] img 7064,6829,260,454 src=https://img.lemde.fr/2026/08/07/218/0/1222/1222/664/664/75/0/08415fe_ftp-1-6yvtvp6hnr3z-438182-3490625.jpg alt=L’écrivaine Emma Becker, à Paris, le 8 juillet 2026. - Anaïs Barelli pour M Le magazine du Monde
+text 7101,7107,220,23 "Article réservé à nos abonnés"
+a 7080,7107,223,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/15/l-autrice-emma-becker-racontee-par-son-clan-elle-a-appris-l-erotisme-dans-notre-bibliotheque-j-avais-du-bataille-tous-les-regine-desforges-et-les-francoise-rey_6746428_3451060.html
+text 7080,7107,223,104 "L’autrice Emma Becker racontée par son clan : « Elle a appris l’érotisme dans notre bibliothèque ! »"
+a 7340,6800,185,18 href=sept-nuances-de-cannibalisme
+text 7340,6800,185,18 "Sept nuances de cannibalisme"
+[pixels] picture 7340,6829,260,260
+[pixels] img 7340,6829,260,260 src=https://img.lemde.fr/2026/07/09/0/41/2053/2053/664/664/75/0/43a4e5e_upload-1-lnjfx1qudza5-cannibale5.jpg alt=Olivier Balez
+[pixels] picture 7340,6829,260,454
+[pixels] img 7340,6829,260,454 src=https://img.lemde.fr/2026/07/09/0/41/2053/2053/664/664/75/0/43a4e5e_upload-1-lnjfx1qudza5-cannibale5.jpg alt=Olivier Balez
+text 7377,7107,220,23 "Article réservé à nos abonnés"
+a 7356,7107,224,77 href=https://www.lemonde.fr/series-d-ete/article/2026/08/10/cannibalisme-quand-la-conquete-de-l-ouest-tourne-au-cauchemar_6743080_3451060.html
+text 7356,7107,224,77 "Cannibalisme : quand la conquête de l’Ouest tourne au cauchemar"
+a 7616,6800,165,18 href=un-chateau-de-sable-avec
+text 7616,6800,165,18 "Un château de sable avec…"
+[pixels] picture 7616,6829,260,260
+[pixels] img 7616,6829,260,260 src=https://img.lemde.fr/2026/07/22/0/0/2953/2953/664/664/75/0/a94bbc3_upload-1-nyovmpoa69wg-dscf8822-2.jpg alt=Fabrice Hyber, sur la plage de L’Aiguillon-sur-Mer (Vendée), le 13 juillet 2026. - JÉRÔME BLIN POUR « LE MONDE »
+[pixels] picture 7616,6829,260,454
+[pixels] img 7616,6829,260,454 src=https://img.lemde.fr/2026/07/22/0/0/2953/2953/664/664/75/0/a94bbc3_upload-1-nyovmpoa69wg-dscf8822-2.jpg alt=Fabrice Hyber, sur la plage de L’Aiguillon-sur-Mer (Vendée), le 13 juillet 2026. - JÉRÔME BLIN POUR « LE MONDE »
+text 7653,7107,220,23 "Article réservé à nos abonnés"
+a 7632,7107,226,77 href=https://www.lemonde.fr/culture/article/2026/08/09/le-plasticien-fabrice-hyber-je-suis-joueur-mais-je-deteste-suivre-des-regles_6741924_3246.html
+text 7632,7107,226,77 "Fabrice Hyber, plasticien : « Je suis joueur mais je déteste suivre des règles »"
+a 7892,6800,91,18 href=etoiles-filantes
+text 7892,6800,91,18 "Etoiles filantes"
+[pixels] picture 7892,6829,260,260
+[pixels] img 7892,6829,260,260 src=https://img.lemde.fr/2026/08/10/184/0/1212/1212/664/664/75/0/2fbdcd2_ftp-1-m33abt1reore-438116-3476864.jpg alt=Dominic Guard dans « Le Messager », avec Julie Christie et Alan Bates, Palme d’or au Festival de Cannes en 1971. En bas, le réalisateur Joseph Losey, la même année, sur la Croisette. - Collage Ricardo Santos pour M Le magazine du monde, d’après Metro Goldwyn Mayer British Stud/Collection ChristopheL via AFP x2/NANA PRODUCTIONS/SIPA/Archives du 7eme Art/Photo12 via AFP/AFP
+[pixels] picture 7892,6829,260,454
+[pixels] img 7892,6829,260,454 src=https://img.lemde.fr/2026/08/10/184/0/1212/1212/664/664/75/0/2fbdcd2_ftp-1-m33abt1reore-438116-3476864.jpg alt=Dominic Guard dans « Le Messager », avec Julie Christie et Alan Bates, Palme d’or au Festival de Cannes en 1971. En bas, le réalisateur Joseph Losey, la même année, sur la Croisette. - Collage Ricardo Santos pour M Le magazine du monde, d’après Metro Goldwyn Mayer British Stud/Collection ChristopheL via AFP x2/NANA PRODUCTIONS/SIPA/Archives du 7eme Art/Photo12 via AFP/AFP
+text 7929,7107,220,23 "Article réservé à nos abonnés"
+a 7908,7107,203,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/16/dominic-guard-du-jeune-acteur-repere-par-joseph-losey-a-l-adulte-psychotherapeute-pour-enfants_6747162_3451060.html
+text 7908,7107,203,131 "Dominic Guard, du jeune acteur repéré par Joseph Losey à l’adulte psychothérapeute pour enfants"
+a 8168,6800,134,18 href=couture-et-dechirures
+text 8168,6800,134,18 "Couture et déchirures"
+[pixels] picture 8168,6829,260,260
+[pixels] img 8168,6829,260,260 src=https://img.lemde.fr/2026/07/27/0/1072/2898/2898/664/664/75/0/0dc16c0_upload-1-1pyujlw4b062-778-rupture-001.jpg alt=Rudolf Dassler (à gauche) et son frère Adolf Dassler (à droite). - Collage Jefferson Fouquet pour M Le magazine du Monde. D’après photos Alamy. DPA/Abaca. Ullstein bild/akg image
+[pixels] picture 8168,6829,260,454
+[pixels] img 8168,6829,260,454 src=https://img.lemde.fr/2026/07/27/0/1072/2898/2898/664/664/75/0/0dc16c0_upload-1-1pyujlw4b062-778-rupture-001.jpg alt=Rudolf Dassler (à gauche) et son frère Adolf Dassler (à droite). - Collage Jefferson Fouquet pour M Le magazine du Monde. D’après photos Alamy. DPA/Abaca. Ullstein bild/akg image
+text 8205,7107,220,23 "Article réservé à nos abonnés"
+a 8184,7107,220,50 href=https://www.lemonde.fr/series-d-ete/article/2026/08/11/adolf-et-rudolf-dassler-les-abel-et-cain-de-la-basket_6743764_3451060.html
+text 8184,7107,220,50 "Adolf et Rudolf Dassler, les Abel et Caïn de la basket"
+a 8444,6800,102,18 href=voyages-en-italie
+text 8444,6800,102,18 "Voyages en Italie"
+[pixels] picture 8444,6829,260,260
+[pixels] img 8444,6829,260,260 src=https://img.lemde.fr/2026/08/05/253/0/1212/1212/664/664/75/0/61b7d42_ftp-1-9cydicw8bc6m-438088-3492547.jpg alt=La terrasse du bar, en juillet 2026. - Paolo Zerbini pour M Le magazine du Monde
+[pixels] picture 8444,6829,260,454
+[pixels] img 8444,6829,260,454 src=https://img.lemde.fr/2026/08/05/253/0/1212/1212/664/664/75/0/61b7d42_ftp-1-9cydicw8bc6m-438088-3492547.jpg alt=La terrasse du bar, en juillet 2026. - Paolo Zerbini pour M Le magazine du Monde
+text 8481,7107,220,23 "Article réservé à nos abonnés"
+a 8460,7107,224,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/15/a-milan-le-bar-basso-intemporel-temple-du-cocktail-un-point-d-ancrage-heureux-et-authentique-dans-une-ville-qui-l-est-de-moins-en-moins_6746499_3451060.html
+text 8460,7107,224,131 "A Milan, le Bar Basso, intemporel temple du cocktail : « Un point d’ancrage heureux et authentique, dans une ville qui l’est de moins en moins »"
+a 8720,6800,98,18 href=livres-fantomes
+text 8720,6800,98,18 "Livres fantômes"
+[pixels] picture 8720,6829,260,260
+[pixels] img 8720,6829,260,260 src=https://img.lemde.fr/2026/08/12/0/355/2652/2652/664/664/75/0/4a5df7c_upload-1-rmpvilc2zuci-des-rochets-le-monde-des-livres.jpg alt=Benjamin Van Blancke
+[pixels] picture 8720,6829,260,454
+[pixels] img 8720,6829,260,454 src=https://img.lemde.fr/2026/08/12/0/355/2652/2652/664/664/75/0/4a5df7c_upload-1-rmpvilc2zuci-des-rochets-le-monde-des-livres.jpg alt=Benjamin Van Blancke
+text 8757,7107,220,23 "Article réservé à nos abonnés"
+a 8736,7107,228,77 href=https://www.lemonde.fr/series-d-ete/article/2026/08/15/le-roman-de-louis-rene-des-forets-qui-a-failli-resurgir-des-flammes_6746429_3451060.html
+text 8736,7107,228,77 "Le roman de Louis-René des Forêts qui a failli resurgir des flammes"
+a 8996,6800,88,18 href=etranges-nuits
+text 8996,6800,88,18 "Etranges nuits"
+[pixels] picture 8996,6829,260,260
+[pixels] img 8996,6829,260,260 src=https://img.lemde.fr/2026/07/09/0/928/2000/2000/664/664/75/0/10f032a_upload-1-lr1m9ok0gokd-76d3829fhmdr7jxfyv3etrangenuitrvb.jpg alt=Loïc Lusnia
+[pixels] picture 8996,6829,260,454
+[pixels] img 8996,6829,260,454 src=https://img.lemde.fr/2026/07/09/0/928/2000/2000/664/664/75/0/10f032a_upload-1-lr1m9ok0gokd-76d3829fhmdr7jxfyv3etrangenuitrvb.jpg alt=Loïc Lusnia
+text 9033,7107,220,23 "Article réservé à nos abonnés"
+a 9012,7107,227,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/11/hypersomnie-idiopathique-un-sommeil-interminable-suivi-d-une-somnolence-persistante_6744022_3451060.html
+text 9012,7107,227,104 "Hypersomnie idiopathique : un sommeil interminable, suivi d’une somnolence persistante"
+a 9272,6800,106,18 href=keskili-keskeli
+text 9272,6800,106,18 "Keskili ? Keskèli ?"
+[pixels] picture 9272,6829,260,260
+[pixels] img 9272,6829,260,260 src=https://img.lemde.fr/2026/08/10/351/0/5464/5464/664/664/75/0/cbeb015_upload-1-2l1xnll60yqf-000-82up8jd.jpg alt=L’écrivaine mauricienne Nathacha Appanah, à Paris, en 2025. - THIBAUD MORITZ/AFP
+[pixels] picture 9272,6829,260,454
+[pixels] img 9272,6829,260,454 src=https://img.lemde.fr/2026/08/10/351/0/5464/5464/664/664/75/0/cbeb015_upload-1-2l1xnll60yqf-000-82up8jd.jpg alt=L’écrivaine mauricienne Nathacha Appanah, à Paris, en 2025. - THIBAUD MORITZ/AFP
+text 9309,7107,220,23 "Article réservé à nos abonnés"
+a 9288,7107,228,131 href=https://www.lemonde.fr/series-d-ete/article/2026/08/12/portrait-de-l-ecrivaine-nathacha-appanah-a-travers-un-questionnaire-serre-sur-ses-lectures-passees-presentes-et-a-venir_6745083_3451060.html
+text 9288,7107,228,131 "Portrait de l’écrivaine Nathacha Appanah à travers un questionnaire serré sur ses lectures passées, présentes et à venir"
+a 9548,6800,194,18 href=une-planche-de-bd-de-la-rentree
+text 9548,6800,194,18 "Une planche de BD de la rentrée"
+[pixels] picture 9548,6829,260,260
+[pixels] img 9548,6829,260,260 src=https://img.lemde.fr/2026/07/15/44/34/1993/1993/664/664/75/0/d18a5c2_upload-1-jqqr1wpg1y2j-ep3-2042-fafb-print-3.jpg alt=Chaque page de « Face A Face B », entièrement en noir et blanc, ne compte qu’une ou deux cases. - Éditions 2042
+[pixels] picture 9548,6829,260,454
+[pixels] img 9548,6829,260,454 src=https://img.lemde.fr/2026/07/15/44/34/1993/1993/664/664/75/0/d18a5c2_upload-1-jqqr1wpg1y2j-ep3-2042-fafb-print-3.jpg alt=Chaque page de « Face A Face B », entièrement en noir et blanc, ne compte qu’une ou deux cases. - Éditions 2042
+text 9585,7107,220,23 "Article réservé à nos abonnés"
+a 9564,7107,211,104 href=https://www.lemonde.fr/livres/article/2026/07/31/dans-face-a-face-b-blutch-se-met-a-nu-en-explorant-le-couple-et-ses-secrets_6737161_3260.html
+text 9564,7107,211,104 "Dans « Face A Face B », Blutch se met à nu en explorant le couple et ses secrets"
+a 9824,6800,172,18 href=jeunesse-en-milieux-hostiles
+text 9824,6800,172,18 "Jeunesse en milieux hostiles"
+[pixels] picture 9824,6829,260,260
+[pixels] img 9824,6829,260,260 src=https://img.lemde.fr/2026/07/16/0/150/1200/1200/664/664/75/0/fa2cf66_ftp-1-nlukx1wbiwg6-436426-3488739.jpg alt=« Wanda se metió al mar, 2019 » (« Wanda s’est mise à l’eau »). - Silvana Trevale
+[pixels] picture 9824,6829,260,454
+[pixels] img 9824,6829,260,454 src=https://img.lemde.fr/2026/07/16/0/150/1200/1200/664/664/75/0/fa2cf66_ftp-1-nlukx1wbiwg6-436426-3488739.jpg alt=« Wanda se metió al mar, 2019 » (« Wanda s’est mise à l’eau »). - Silvana Trevale
+text 9861,7107,220,23 "Article réservé à nos abonnés"
+a 9840,7107,214,158 href=https://www.lemonde.fr/series-d-ete/article/2026/08/12/au-venezuela-la-photographe-silvana-trevale-saisit-les-instants-de-joie-de-ceux-qui-resistent-au-tourbillon-de-l-effondrement_6744708_3451060.html
+text 9840,7107,214,158 "Au Venezuela, la photographe Silvana Trevale saisit les instants de joie de ceux qui résistent au « tourbillon de l’effondrement »"
+a 10100,6800,131,18 href=plus-qu-un-restaurant
+text 10100,6800,131,18 "Plus qu’un restaurant"
+[pixels] picture 10100,6829,260,260
+[pixels] img 10100,6829,260,260 src=https://img.lemde.fr/2026/07/13/0/396/1600/1600/664/664/75/0/96bffa0_upload-1-g7fv1byebqp4-img-8012-002.jpeg alt=La salle de la brasserie La Cigale, à Nantes, le 22 avril 2024.  - Antoine Monié/La Cigale
+[pixels] picture 10100,6829,260,454
+[pixels] img 10100,6829,260,454 src=https://img.lemde.fr/2026/07/13/0/396/1600/1600/664/664/75/0/96bffa0_upload-1-g7fv1byebqp4-img-8012-002.jpeg alt=La salle de la brasserie La Cigale, à Nantes, le 22 avril 2024.  - Antoine Monié/La Cigale
+text 10137,7107,220,23 "Article réservé à nos abonnés"
+a 10116,7107,221,104 href=https://www.lemonde.fr/series-d-ete/article/2026/08/02/a-nantes-une-escouade-de-fourmis-au-service-des-charmes-de-la-brasserie-la-cigale_6737255_3451060.html
+text 10116,7107,221,104 "A Nantes, une escouade de fourmis au service des charmes de la brasserie La Cigale"
+a 10376,6800,103,18 href=animaux-soldats
+text 10376,6800,103,18 "Animaux-soldats"
+[pixels] picture 10376,6829,260,260
+[pixels] img 10376,6829,260,260 src=https://img.lemde.fr/2026/07/30/0/0/1659/1659/664/664/75/0/cb85d69_upload-1-cot6uhydixjc-dbd088.jpg alt=Kahili, alias K-Dog, et son coéquipier, le sergent Andrew Garrett, du Corps des Marines des Etats-Unis, le 18 mars 2003. - CNP Collection/Alamy Stock Photo
+[pixels] picture 10376,6829,260,454
+[pixels] img 10376,6829,260,454 src=https://img.lemde.fr/2026/07/30/0/0/1659/1659/664/664/75/0/cb85d69_upload-1-cot6uhydixjc-dbd088.jpg alt=Kahili, alias K-Dog, et son coéquipier, le sergent Andrew Garrett, du Corps des Marines des Etats-Unis, le 18 mars 2003. - CNP Collection/Alamy Stock Photo
+text 10413,7107,220,23 "Article réservé à nos abonnés"
+a 10392,7107,215,77 href=https://www.lemonde.fr/series-d-ete/article/2026/08/08/le-dauphin-soldat-un-auxiliaire-de-l-armee-objet-de-nombreux-fantasmes_6740641_3451060.html
+text 10392,7107,215,77 "Les dauphins-soldats, des auxiliaires de l’armée objets de nombreux fantasmes"
+text 164,7347,108,25 "LES PLUS LUS"
+text 185,7393,6,20 "1"
+a 218,7393,236,108 href=https://www.lemonde.fr/politique/article/2026/08/17/presidentielle-2027-le-referendum-constitutionnel-de-marine-le-pen-un-coup-d-etat-sur-le-fond-et-sur-la-forme_6747963_823448.html
+text 218,7393,236,108 "Présidentielle 2027 : le référendum constitutionnel de Marine Le Pen, « un coup d’Etat sur le fond et sur la forme »"
+text 515,7393,10,20 "2"
+a 543,7393,231,87 href=https://www.lemonde.fr/disparitions/article/2026/08/17/hayden-panettiere-revelee-par-les-series-heroes-et-nashville-est-morte-a-l-age-de-36-ans_6747975_3382.html
+text 543,7393,231,87 "Hayden Panettiere, l’actrice révélée par les séries « Heroes » et « Nashville », est morte à l’âge de 36 ans"
+text 843,7393,10,20 "3"
+a 869,7393,221,129 href=https://www.lemonde.fr/sport/article/2026/08/16/leon-marchand-champion-d-europe-sur-400-m-nage-libre-la-reinvention-du-nageur-francais-qu-on-n-attendait-pas-sur-cette-distance_6747685_3242.html
+text 869,7393,221,129 "Léon Marchand champion d’Europe sur 400 m nage libre : la réinvention du nageur français, qu’on n’attendait pas sur cette distance"
+text 195,7568,9,20 "4"
+a 218,7568,240,129 href=https://www.lemonde.fr/series-d-ete/article/2026/08/16/notre-voisine-hurlait-les-talibans-reviennent-nous-etions-petrifiees-cinq-ans-apres-des-afghanes-racontent-ce-jour-funeste-ou-elles-sont-devenues-le-pire-ennemi-de-leur-propre-nation_6747646_3451060.html
+text 218,7568,240,129 "« Notre voisine hurlait : “Les talibans reviennent !”, nous étions pétrifiées » : cinq ans après le 15 août 2021, des Afghanes racontent leur enfer"
+text 515,7568,10,20 "5"
+a 543,7568,240,108 href=https://www.lemonde.fr/series-d-ete/article/2026/08/16/pour-les-jeunes-la-quete-effrenee-du-corps-parfait-je-prends-toujours-mon-shaker-de-proteines-avant-de-venir-a-la-salle_6747684_3451060.html
+text 543,7568,240,108 "Pour les jeunes, la quête effrénée du corps parfait : « Je prends toujours mon shaker de protéines avant de venir à la salle »"
+text 844,7568,10,20 "6"
+a 869,7568,231,66 href=https://www.lemonde.fr/series-d-ete/article/2026/08/17/cannibalisme-l-etrange-maladie-du-kuru-rancon-de-festins-mortuaires_6747962_3451060.html
+text 869,7568,231,66 "Cannibalisme : l’étrange maladie du kuru, rançon de festins mortuaires"
+text 191,7743,8,20 "7"
+a 218,7743,247,87 href=https://www.lemonde.fr/sport/article/2026/08/16/en-suede-felix-lebrun-entre-dans-l-histoire-en-devenant-le-premier-francais-vainqueur-d-un-grand-smash_6747754_3242.html
+text 218,7743,247,87 "En Suède, Félix Lebrun entre dans l’histoire en devenant le premier Français vainqueur d’un Grand Smash"
+text 517,7743,10,20 "8"
+a 543,7743,243,87 href=https://www.lemonde.fr/sciences/article/2026/08/16/de-plus-amples-derives-ethiques-identifiees-dans-des-publications-scientifiques-de-l-ihu-de-marseille_6747644_1650684.html
+text 543,7743,243,87 "De plus amples dérives éthiques identifiées dans des publications scientifiques de l’IHU de Marseille"
+text 844,7743,10,20 "9"
+a 869,7743,243,66 href=https://www.lemonde.fr/politique/article/2026/08/17/presidentielle-2027-un-drole-de-consensus-pour-le-referendum_6747979_823448.html
+text 869,7743,243,66 "Présidentielle 2027 : un drôle de consensus pour le référendum"
+a 164,8066,112,25 href=https://www.lemonde.fr/services/
+text 164,8066,112,25 "PARTENAIRES"
+text 164,8113,118,16 "Guides d’achat"
+text 286,8114,81,15 "avec Le Monde"
+a 177,8137,281,32 href=https://www.lemonde.fr/guides-d-achat/article/2022/06/15/les-meilleures-gourdes-pour-remplacer-les-bouteilles-jetables_6130466_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8145,215,14 "Les meilleures gourdes réutilisables"
+a 177,8169,281,32 href=https://www.lemonde.fr/guides-d-achat/article/2024/07/31/les-meilleures-machines-a-cafe-a-grains-de-500-a-1-000-euros_6262975_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8170,238,27 "Les meilleures machines à café haut de gamme"
+a 177,8201,281,32 href=https://www.lemonde.fr/guides-d-achat/article/2026/04/24/les-meilleurs-ventilateurs-pour-affronter-la-chaleur_6168531_5306572.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8209,155,14 "Les meilleurs ventilateurs"
+a 177,8233,281,32 href=https://www.lemonde.fr/guides-d-achat/article/2023/09/08/les-meilleurs-robots-aspirateurs-laveurs_6188403_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8241,240,14 "Les meilleurs robots aspirateurs laveurs"
+a 177,8265,281,32 href=https://www.lemonde.fr/guides-d-achat/article/2023/10/04/les-meilleurs-gaufriers_6192421_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8273,137,14 "Les meilleurs gaufriers"
+a 177,8297,281,32 href=https://www.lemonde.fr/guides-d-achat/article/2024/11/26/les-meilleurs-pianos-numeriques-pas-chers-pour-debutants_6415845_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8305,198,14 "Les meilleurs pianos numériques"
+a 177,8329,281,32 href=https://www.lemonde.fr/guides-d-achat/article/2025/04/17/les-meilleurs-grille-pains_6596973_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8337,143,14 "Les meilleurs grille-pain"
+a 177,8361,281,32 href=https://www.lemonde.fr/guides-d-achat/?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=footer-partner
+text 177,8368,97,17 "Tous nos guides"
+a 487,8114,300,280 href=https://www.lemonde.fr/chaleur-humaine/article/2025/01/30/mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=bizdev&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe
+[pixels] img 487,8114,300,280 src=https://img.lemde.fr/2025/06/04/de7bb81_sirius-fs-upload-1-s3zusco7cxbn-1749042077648-nogestesclimat.png alt=
+text 809,8113,172,16 "Formation de langues"
+text 985,8114,78,15 "avec Gymglish"
+a 822,8137,281,32 href=https://langues.lemonde.fr/fr/anglais?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=gymglish-anglais
+text 822,8145,145,14 "Cours d’anglais en ligne"
+a 822,8169,281,32 href=https://langues.lemonde.fr/fr/espagnol?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=gymglish-espagnol
+text 822,8177,156,14 "Cours d’espagnol en ligne"
+a 822,8201,281,32 href=https://langues.lemonde.fr/fr/italien?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=gymglish-italien
+text 822,8209,139,14 "Cours d’italien en ligne"
+a 822,8233,281,32 href=https://langues.lemonde.fr/fr/allemand?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=gymglish-allemand
+text 822,8241,157,14 "Cours d’allemand en ligne"
+a 822,8265,281,32 href=https://progresser-orthographe.lemonde.fr/?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=gymglish-orthographe
+text 822,8273,176,14 "Cours d’orthographe en ligne"
+a 822,8297,281,32 href=https://langues.lemonde.fr/aimigo?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=aimigo-coach
+text 822,8305,138,14 "Coach d’apprentissage"
+a 822,8329,281,32 href=https://langues.lemonde.fr/fr/test?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=gymglish
+text 822,8337,138,14 "Essai gratuit de 7 jours"
+a 822,8361,281,32 href=https://langues.lemonde.fr/?lmd_campaign=services_gymglish_lmfr&lmd_medium=display&lmd_variant=widgets&lmd_creation=gymglish
+text 822,8368,160,17 "Tous nos cours de langues"
+text 550,8611,179,14 "LA SUITE APRÈS CETTE PUBLICITÉ"
+text 164,8985,165,20 "Contenus partenaires"
+button 333,8979,32,32 id= type=button
+text 164,9026,78,18 "proposé par"
+a 164,9056,301,402 href=https://la-beaute-creatrice.lemonde.fr/chaque-innovation-loreal-est-un-pas-de-plus/
+[pixels] img 164,9056,301,201 src=https://img.lemde.fr/2026/06/16/174/25/1391/927/250/166/60/0/cfa6c34_upload-1-pvvlm7rgkqxb-capture-d-e-cran-2026-06-16-a-10-26-56.png alt=
+text 164,9269,294,57 "« Chaque innovation L’Oréal est un pas de plus vers une beauté qui respecte et sublime chaque individu »"
+text 164,9339,299,117 "Directrice générale Innovation et Prospective du Groupe L’Oréal, Delphine Viguier-Hovasse côtoie et supervise au quotidien une multitude de métiers et d’expertises scientifiques. Elle revient ici sur les savoir-faire qui président à l’élaboration d’un produit de beauté."
+text 489,9026,78,18 "proposé par"
+a 489,9056,301,344 href=https://vivre-l-automne-montrealais.lemonde.fr/
+[pixels] img 489,9056,301,201 src=https://img.lemde.fr/2026/07/16/0/0/8256/5504/250/166/60/0/b684f9a_upload-1-zto024fumbbr-59700-credit-fr-daph-nico-tourisme-montreal-en-credit-daph-nico-tourisme-montreal-2.png alt=
+text 489,9269,200,19 "Vivre l'automne montréalais"
+text 489,9301,286,97 "Lorsque les érables se parent de rouge et d'or, Montréal vit l'une de ses plus belles saisons. La lumière est douce et chaleureuse, les festivals se multiplient et les tables célèbrent les produits du terroir."
+text 815,9026,78,18 "proposé par"
+a 815,9056,301,323 href=https://www.lemonde.fr/innovation-et-mobilite/article/2026/07/01/automobile-vers-une-mobilite-sans-pilote_6717499_656.html
+[pixels] img 815,9056,301,201 src=https://img.lemde.fr/2026/06/16/0/382/3843/2562/250/166/60/0/15dd8ab_upload-1-y5o7wuoenpah-article-4-nouveau-visuel-stellantis.jpg alt=Bolt, Pony.ai et Stellantis démarrent les essais du programme pilote de mobilité autonome au Luxembourg. Exemple avec le Peugeot E-Traveller.
+text 815,9269,250,38 "Automobile : vers une mobilité sans pilote ?"
+text 815,9320,297,57 "Souvent présentée comme une rupture, la mobilité autonome relève en réalité du processus d’évolution de la mobilité. Proposé par Stellantis."
+text 1042,9474,74,18 "PUBLICITÉ"
+text 164,10207,79,25 "SERVICES"
+text 249,10207,84,25 "LE MONDE"
+a 357,10207,98,26 href=https://www.lemonde.fr/services/
+text 374,10211,64,18 "Découvrir"
+button 1032,10209,32,32 id= type=button
+text 1048,10225,77,20 "précédent"
+button 1084,10209,32,32 id= type=button
+text 1100,10225,54,20 "suivant"
+a 164,10257,300,80 href=https://www.lemonde.fr/chaleur-humaine/article/2025/01/30/mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=blocservice&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe
+[pixels] picture 164,10257,80,80
+[pixels] img 164,10257,80,80 alt=Calculez votre empreinte écologique src=//img.lemde.fr/160x160/2025/01/30/0197de3_sirius-fs-upload-1-34dfnerrzkox-1738244528049-vignette-3.jpg
+text 256,10256,144,34 "Calculez votre empreinte écologique"
+text 256,10289,194,39 "Découvrez votre impact sur environnement avec l'Ademe"
+a 480,10257,300,80 href=https://boutique.lemonde.fr/?lmd_campaign=services_boutique_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=carrousel-services
+[pixels] picture 480,10257,80,80
+[pixels] img 480,10257,80,80 alt=Boutique src=//img.lemde.fr/160x160/2024/07/02/a7c9feb_1719919412486-service-boutique.png
+text 572,10256,53,18 "Boutique"
+text 572,10273,208,39 "Retrouvez nos derniers hors-séries, livres et Unes du Monde"
+a 796,10257,300,80 href=https://jeux.lemonde.fr/?lmd_campaign=services_jeux_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=carrousel-services
+[pixels] picture 796,10257,80,80
+[pixels] img 796,10257,80,80 alt=Jeux src=//img.lemde.fr/160x160/2024/06/28/981ead7_1719581770368-service-jeux.jpg
+text 888,10256,25,18 "Jeux"
+text 888,10273,183,39 "Mots croisés, sudoku, mots trouvés… Jouez avec nous"
+a 1112,10257,300,80 href=https://ateliers.lemonde.fr/#origin=HPcarrousel
+[pixels] picture 1112,10257,80,80
+[pixels] img 1112,10257,80,80 alt=Ateliers src=//img.lemde.fr/160x160/2024/06/28/87a4d69_1719581720801-service-atelier.jpg
+text 1204,10256,45,18 "Ateliers"
+text 1204,10273,192,59 "Cours en ligne, cours du soir, ateliers : développez vos compétences"
+a 1428,10257,300,80 href=https://www.lemonde.fr/memorable/?lmd_campaign=services_memorable_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=carrousel-services
+[pixels] picture 1428,10257,80,80
+[pixels] img 1428,10257,80,80 alt=Mémorable src=//img.lemde.fr/160x160/2024/06/28/76ae25d_1719581747228-service-memorable.jpg
+text 1520,10256,67,18 "Mémorable"
+text 1520,10273,196,39 "Testez votre culture générale avec la rédaction du Monde"
+a 1744,10257,300,80 href=https://www.lemonde.fr/guides-d-achat/?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=carrousel-services
+[pixels] picture 1744,10257,80,80
+[pixels] img 1744,10257,80,80 alt=Guides d’achat src=//img.lemde.fr/160x160/2024/09/25/d71b300_1727274926272-type-guides-d-achat.png
+text 1836,10256,85,18 "Guides d’achat"
+text 1836,10273,193,59 "Gagnez du temps avec notre sélection des meilleurs produits"
+text 398,757,393,20 "Offre spéciale été : 0,99 € pour 2 mois d'abonnement"
+a 798,753,98,30 href=https://abo.lemonde.fr/op-ete-2026-disp-web?lmd_medium=display&lmd_campaign=cnv_promo_lmfr&lmd_creation=prp_op-ete-2026&lmd_format=bandeau&lmd_source=autopromo&edi_medium=bandeau&edi_campaign=cnv_home_lmfr&edi_creation=op-ete-2026&edi_variant=bandeaubas&edi_position=home
+text 814,759,66,18 "S'abonner"
+text 140,10416,110,16 "SERVICES LE MONDE"
+a 149,10449,91,17 href=https://boutique.lemonde.fr/30-unes-par-date
+text 149,10448,91,17 "Unes du Monde"
+a 149,10474,128,17 href=https://ateliers.lemonde.fr/
+text 149,10473,128,17 "Les ateliers du Monde"
+a 149,10499,98,17 href=https://www.lemonde.fr/memorable/blog
+text 149,10498,98,17 "Culture générale"
+a 149,10524,74,17 href=https://jeux.lemonde.fr/mots-croises
+text 149,10523,74,17 "Mots croisés"
+a 149,10549,51,17 href=https://jeux.lemonde.fr/sudoku
+text 149,10548,51,17 "Sudokus"
+a 149,10574,205,32 href=https://www.lemonde.fr/resultats-elections/
+text 149,10573,136,33 "Résultats des élections municipales 2026"
+a 149,10614,60,17 href=https://www.lemonde.fr/education/
+text 149,10613,60,17 "Education"
+a 149,10639,76,17 href=https://www.lemonde.fr/m-gastronomie/
+text 149,10638,76,17 "Gastronomie"
+a 149,10664,137,17 href=https://www.lemonde.fr/syndication/
+text 149,10663,137,17 "Réutiliser nos contenus"
+a 149,10689,180,17 href=https://www.lemonde.fr/annonces-legales/list
+text 149,10688,180,17 "Consulter les annonces légales"
+a 149,10714,117,17 href=https://carnet.lemonde.fr/annonce
+text 149,10713,117,17 "Le carnet du Monde"
+text 140,10762,145,16 "GUIDES D'ACHAT LE MONDE"
+a 149,10795,177,17 href=https://www.lemonde.fr/guides-d-achat/article/2024/04/05/les-meilleurs-robots-patissiers_6226175_5306571.html
+text 149,10794,177,17 "Les meilleurs robots pâtissiers"
+a 149,10820,205,32 href=https://www.lemonde.fr/guides-d-achat/article/2025/06/04/les-meilleurs-robots-aspirateurs-laveurs_6188403_5306572.html
+text 149,10819,186,33 "Les meilleurs robots aspirateurs laveurs"
+a 149,10860,165,17 href=https://www.lemonde.fr/guides-d-achat/article/2022/11/23/les-meilleurs-jeux-de-societe-pour-adultes_6151232_5306571.html
+text 149,10859,165,17 "Jeux de société pour adultes"
+a 149,10885,164,17 href=https://www.lemonde.fr/guides-d-achat/article/2023/10/17/le-meilleur-antivol-pour-velo_6195018_5306571.html
+text 149,10884,164,17 "Le meilleur antivol pour vélo"
+a 149,10910,198,17 href=https://www.lemonde.fr/guides-d-achat/article/2025/06/10/les-meilleures-friteuses-sans-huile_6202128_5306572.html
+text 149,10909,198,17 "Les meilleures friteuses sans huile"
+a 149,10935,192,17 href=https://www.lemonde.fr/guides-d-achat/article/2023/01/26/les-meilleures-imprimantes-laser_6159425_5306571.html
+text 149,10934,192,17 "Les meilleures imprimantes laser"
+text 394,10416,162,16 "LE MONDE À L'INTERNATIONAL"
+a 403,10449,117,17 href=https://www.lemonde.fr/en/
+text 403,10448,117,17 "Le Monde in English"
+a 403,10474,41,17 href=https://www.lemonde.fr/algerie/
+text 403,10473,41,17 "Algérie"
+a 403,10499,52,17 href=https://www.lemonde.fr/belgique/
+text 403,10498,52,17 "Belgique"
+a 403,10524,45,17 href=https://www.lemonde.fr/canada/
+text 403,10523,45,17 "Canada"
+a 403,10549,74,17 href=https://www.lemonde.fr/cote-d-ivoire/
+text 403,10548,74,17 "Côte d’Ivoire"
+a 403,10574,25,17 href=https://www.lemonde.fr/mali/
+text 403,10573,25,17 "Mali"
+a 403,10599,37,17 href=https://www.lemonde.fr/maroc/
+text 403,10598,37,17 "Maroc"
+a 403,10624,48,17 href=https://www.lemonde.fr/senegal/
+text 403,10623,48,17 "Sénégal"
+a 403,10649,38,17 href=https://www.lemonde.fr/suisse/
+text 403,10648,38,17 "Suisse"
+a 403,10674,41,17 href=https://www.lemonde.fr/tunisie/
+text 403,10673,41,17 "Tunisie"
+text 394,10722,128,16 "SERVICES PARTENAIRES"
+a 403,10755,93,17 href=https://www.lemonde.fr/le-monde-services/article/2024/04/26/les-partenaires-du-monde_6230133_447.html
+text 403,10754,93,17 "Nos partenaires"
+a 403,10780,94,17 href=https://paroles2chansons.lemonde.fr/
+text 403,10779,94,17 "Hits du moment"
+a 403,10805,143,17 href=https://arcade.lemonde.fr/mahjong-solitaire/
+text 403,10804,143,17 "Mahjong solitaire gratuit"
+a 403,10830,127,17 href=https://arcade.lemonde.fr/
+text 403,10829,127,17 "Jeux gratuits d’arcade"
+a 403,10855,92,17 href=https://arcade.lemonde.fr/bubble-shooter/
+text 403,10854,92,17 "Bubble Shooter"
+a 403,10880,146,17 href=https://about.pressreader.com/hotels/le-monde/?utm_campaign=hospitality-le-monde&utm_source=le-monde&utm_medium=footer
+text 403,10879,146,17 "Le Monde pour les hôtels"
+a 403,10905,130,17 href=https://langues.lemonde.fr/
+text 403,10904,130,17 "Apprendre une langue"
+text 648,10416,95,16 "SITES DU GROUPE"
+a 657,10449,134,17 href=https://www.lemonde.fr/le-monde-evenements/
+text 657,10448,134,17 "Le Monde Evènements"
+a 657,10474,126,17 href=https://www.courrierinternational.com/
+text 657,10473,126,17 "Courrier International"
+a 657,10499,54,17 href=https://www.telerama.fr/
+text 657,10498,54,17 "Télérama"
+a 657,10524,36,17 href=https://www.lavie.fr/
+text 657,10523,36,17 "La Vie"
+a 657,10549,69,17 href=https://www.huffingtonpost.fr/
+text 657,10548,69,17 "Le HuffPost"
+a 657,10574,85,17 href=https://www.nouvelobs.com/
+text 657,10573,85,17 "Le Nouvel Obs"
+a 657,10599,139,17 href=https://www.monde-diplomatique.fr/
+text 657,10598,139,17 "Le Monde diplomatique"
+a 657,10624,196,17 href=https://sdllemonde.fr/
+text 657,10623,196,17 "La société des lecteurs du Monde"
+a 657,10649,43,17 href=https://www.lemonde.fr/qui-sommes-nous/article/2007/11/17/talents-un-site-d-emploi-coedite-par-le-monde-interactif-et-telerama_978404_3386.html
+text 657,10648,43,17 "Talents"
+a 657,10674,72,17 href=https://ensecurite.sourcesure.eu/
+text 657,10673,72,17 "Source Sûre"
+a 657,10699,128,17 href=https://www.lemonde.fr/le-club-de-l-economie/
+text 657,10698,128,17 "Le Club de l’économie"
+a 657,10724,66,17 href=https://mpublicite.fr/
+text 657,10723,66,17 "M Publicité"
+text 902,10409,138,16 "NEWSLETTERS DU MONDE"
+a 902,10442,238,24 href=/newsletters/
+text 934,10445,204,17 "Recevoir les newsletters du Monde"
+text 902,10515,129,16 "APPLICATIONS MOBILES"
+a 934,10553,64,16 href=https://www.lemonde.fr/applications-groupe/lemonde/ios/iphone/
+text 934,10552,64,17 "Sur iPhone"
+a 1009,10553,69,16 href=https://www.lemonde.fr/applications-groupe/lemonde/android/smartphone/
+text 1009,10552,69,17 "Sur Android"
+text 902,10622,76,16 "ABONNEMENT"
+a 902,10655,222,24 href=https://www.lemonde.fr/archives-du-monde/
+text 934,10658,111,17 "Archives du Monde"
+a 902,10695,222,24 href=https://abo.lemonde.fr/?edi_medium=cta_sabonner&edi_campaign=home_lmfr&edi_position=footer&edi_rubrique=5&edi_type_de_page=Home
+text 934,10698,157,17 "S’abonner / Se désabonner"
+a 902,10735,222,24 href=https://secure.lemonde.fr/sfuser/connexion
+text 934,10738,78,17 "Se connecter"
+a 902,10775,222,24 href=https://journal.lemonde.fr/
+text 934,10778,158,17 "Consulter le Journal du jour"
+a 902,10814,126,17 href=https://evenements-abonnes.lemonde.fr/
+text 902,10814,126,17 "Évenements abonnés"
+a 902,10846,136,17 href=https://www.lemonde.fr/jeux-abonnes/
+text 902,10846,136,17 "Jeux-concours abonnés"
+a 902,10878,121,17 href=https://www.lemonde.fr/faq/?thematic=contacter
+text 902,10878,121,17 "Contacter Le Monde"
+text 545,11001,190,16 "INFORMATIONS LÉGALES LE MONDE"
+a 149,11034,99,17 href=https://www.lemonde.fr/mentions-legales/
+text 149,11033,99,17 "Mentions légales"
+a 283,11034,105,17 href=https://www.lemonde.fr/actualite-medias/article/2010/11/03/la-charte-d-ethique-et-de-deontologie-du-groupe-le-monde_1434737_3236.html
+text 283,11033,105,17 "Charte du Groupe"
+a 423,11034,158,17 href=https://www.lemonde.fr/confidentialite/
+text 423,11033,158,17 "Politique de confidentialité"
+a 616,11034,117,17 href=javascript:void(0) role=button
+text 616,11033,117,17 "Gestion des cookies"
+a 768,11034,124,17 href=https://www.lemonde.fr/cgv/
+text 768,11033,124,17 "Conditions générales"
+a 926,11034,63,17 href=https://www.lemonde.fr/faq/
+text 926,11033,63,17 "Aide (FAQ)"
+a 1024,11034,116,17 href=https://refairelemonde.typeform.com/to/pXJNjoIE#source=footer&device=xxxxx&abo=xxxxx
+text 1024,11033,116,17 "Votre avis sur le site"
+text 592,11100,96,16 "SUIVEZ LE MONDE"
+a 310,11133,89,24 href=https://www.facebook.com/lemonde.fr
+text 342,11136,57,17 "Facebook"
+a 431,11133,81,24 href=https://www.youtube.com/user/LeMonde
+text 463,11136,49,17 "Youtube"
+a 544,11133,91,24 href=https://www.instagram.com/lemondefr/?hl=fr
+text 576,11136,59,17 "Instagram"
+a 667,11133,89,24 href=https://www.snapchat.com/discover/Le-Monde/8843708388
+text 699,11136,57,17 "Snapchat"
+a 788,11133,70,24 href=https://www.tiktok.com/@lemondefr
+text 820,11136,38,17 "TikTok"
+a 890,11133,80,24 href=https://www.lemonde.fr/actualite-medias/article/2019/08/12/les-flux-rss-du-monde-fr_5498778_3236.html
+text 922,11136,48,17 "Fils RSS"
+text 386,98,466,41 "Soutenez un journalisme fiable"
+text 386,153,462,47 "Accéder gratuitement en acceptant l’utilisation de vos données."
+text 386,212,491,129 "L’accès gratuit au site (hors contenus exclusifs abonnés) est subordonné à votre consentement sur l’utilisation de vos données personnelles (telles que : adresse IP, données de navigation, informations renseignées à la création de votre compte utilisateur) à des fins de personnalisation des communications et pour améliorer et développer nos produits et services."
+text 386,348,67,19 "Le Monde"
+text 453,348,46,19 "et ses"
+a 499,348,119,19
+text 499,348,119,19 "partenaires (305)"
+text 386,348,484,151 "traitent et associent des données vous concernant, collectées via des cookies et technologies similaires, pour stocker et/ou accéder à des informations stockées sur un terminal, proposer des publicités et contenu personnalisés, mesurer la performance des publicités et du contenu et conduire des études d’audience. Des informations de géolocalisation précises et des informations sur les caractéristiques de l‘appareil peuvent être utilisées."
+text 386,506,486,41 "Vous pouvez retirer votre consentement à tout moment en cliquant sur « Gestion des cookies » en bas des pages de ce site."
+text 386,577,155,23 "...ou s’abonner au"
+text 541,577,59,23 "Monde"
+text 386,577,421,47 "pour profiter de tous les contenus."
+text 386,636,453,41 "L’accès au site avec abonnement vous permet de consulter tous les contenus et archives du"
+text 550,658,47,19 "Monde"
+text 386,658,485,85 "depuis notre site et nos applications mobiles. En cliquant sur le bouton « S’abonner », vous pourrez refuser les cookies ou paramétrer vos choix (hors cookies de fonctionnement et de mesure d’audience)."
+button 386,775,205,21
+text 386,777,181,18 "À quoi servent les cookies ?"
+button 386,813,493,41
+text 386,814,78,18 "Pourquoi le"
+text 464,814,46,18 "Monde"
+text 386,814,450,39 "vous demande d'accepter ces traitements de vos données"
+button 386,575,508,42
+text 559,586,162,20 "Accepter et continuer"
+a 386,629,508,42 href=https://macommande.lemonde.fr/account/create/ESSADIMENS1299PRIO/ESS365J14199PRLVT1FPRIO?marketing=241RESSCMP
+text 602,640,76,20 "S’abonner"
+text 545,685,99,19 "Déjà abonné ?"
+a 644,685,90,19 href=https://secure.lemonde.fr/sfuser/connexion?redirectionUrl=https://www.lemonde.fr
+text 644,685,90,19 "Se
+                connecter"

@@ -1,0 +1,259 @@
+button 24,16,24,24 id=button aria-label=Guide
+a 56,0,123,56 id=logo aria-label= href=/
+text 169,12,12,11 "FR"
+button 16,-1000,219,40 aria-label=Ignorer les liens de navigation
+text 32,-988,187,16 "Ignorer les liens de navigation"
+input 332,16,567,24 name=search_query type=text role=combobox placeholder=Rechercher value=""
+button 903,8,64,40 aria-label=Search
+a 1063,8,40,40
+button 1071,16,24,24 id=button aria-label=Paramètres
+a 1111,8,138,40 href=https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dfr%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DjNQXAC9IVRw&hl=fr&ec=65620 aria-label=Se connecter
+text 1151,20,82,16 "Se connecter"
+a 16,68,873,655 id=thumbnail
+[pixels] video 16,68,873,655 src=blob:https://www.youtube.com/426520d7-8cd6-4c9e-8d85-fe9ae0b31b0c
+button 837,659,40,40
+[pixels] img 837,659,40,40 aria-label=Filigrane de chaîne src=https://i.ytimg.com/an/4QobU6STFB0P71PMvOGN5A/featured_channel.jpg?v=641dde46
+text 222,676,461,34 "Also hier sind wir vor den Elefanten."
+button 28,675,40,40 aria-label=Pause (k)
+button 80,675,40,40 aria-label=Désactiver le son (m)
+text 144,687,28,16 "0:00"
+text 172,687,13,16 "/"
+text 184,687,27,16 "0:19"
+button 235,675,79,40
+text 251,687,27,15 "Intro"
+button 585,675,48,40 aria-label=Lecture automatique activée
+button 633,675,48,40 aria-label=Sous-titres non disponibles
+button 681,675,48,40 aria-label=Paramètres
+button 729,675,48,40 aria-label=Mode cinéma (t)
+button 777,675,48,40 aria-label=Regarder sur un téléviseur
+button 825,675,48,40 aria-label=Plein écran (f)
+text 16,737,122,24 "Me at the zoo"
+a 16,771,52,42 href=/@jawed
+[pixels] img 16,771,40,40 alt=jawed src=https://yt3.ggpht.com/uI3VE4PVqvCy0xnWLqMJnEzyBUm3T8VHOCp4ee-1RxdHqKXCdUE_qXYQnpf9AfuEoIPactVyDhM=s48-c-k-c0x00ffffff-no-rj
+a 68,772,44,22 href=/@jawed
+text 68,773,42,19 "jawed"
+text 68,796,94,14 "6,42 M d’abonnés"
+button 190,772,95,40 aria-label=S'abonner à jawed.
+text 206,784,63,16 "S’abonner"
+button 602,774,88,40 aria-label=J'aime cette vidéo, comme 19 373 075 autres personnes avant moi
+text 642,786,32,16 "19 M"
+button 689,774,56,40 aria-label=Je n'aime pas cette vidéo
+button 753,774,40,40 aria-label=Partager
+button 801,774,40,40 aria-label=Enregistrer dans une playlist
+button 849,774,40,40 aria-label=Autres actions
+text 28,839,91,16 "405 M de vues"
+text 126,839,59,16 "il y a 21 a"
+a 192,837,102,20 href=/results?search_query=San+Diego+Zoo&sp=EiG4AQHCARtDaElKeVlCX1NaVlUyWUFSUi1JMUpqZjA4RjA%253D
+text 192,839,102,16 "SAN DIEGO ZOO"
+text 28,859,418,16 "Microplastics are accumulating in human brains at an alarming rate"
+a 28,879,322,16 href=/watch?v=0PT5c1z3LL8 aria-label=YouTube Channel Link: Microplastics are accumulating in human brains at an alarming rate
+[pixels] img 35,883,14,10 alt= src=https://www.gstatic.com/youtube/img/watch/yt_favicon_ringo2.png
+text 49,879,301,16 "• Microplastics are accumulating in human br..."
+text 31,899,9,16 "…"
+text 31,899,78,16 "afficher plus"
+text 15,954,132,24 "Commentaires"
+a 905,68,223,121 href=/watch?v=DQOI9pW1muc&pp=ugUEEgJmcg%3D%3D
+[pixels] img 905,68,215,121 alt= src=https://i.ytimg.com/vi/DQOI9pW1muc/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBtznmu9vk4B5vff8bKViqnriedMw
+text 1082,168,30,14 "13:33"
+a 1128,68,121,60 href=/watch?v=DQOI9pW1muc&pp=ugUEEgJmcg%3D%3D aria-label=Le plus grand EL NIÑO de l'Histoire ARRIVE ... Ça va faire mal ! 13 minutes et 33 secondes
+text 1128,70,114,76 "Le plus grand EL NIÑO de l'Histoire ARRIVE ... Ça va faire mal !"
+text 1128,132,46,14 "PRISME."
+text 1144,152,29,14 "167 k"
+text 1181,152,50,14 "il y a 1 m."
+button 1209,149,40,40 aria-label=Autres actions
+a 905,197,223,125 href=/watch?v=FeSxTNmQktA&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D
+[pixels] img 905,197,215,121 alt= src=https://i.ytimg.com/vi/FeSxTNmQktA/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBYchS9hT8-4iFIajxi6vFEem_djQ
+text 1088,297,24,14 "8:00"
+a 1128,197,121,60 href=/watch?v=FeSxTNmQktA&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D aria-label=UN MOMENT RICHE EN SPORTS (UNE FOIS SUR UN MILLION) ! 8 minutes
+text 1128,199,121,76 "UN MOMENT RICHE EN SPORTS (UNE FOIS SUR UN MILLION) !"
+text 1128,261,55,14 "Hyperloop"
+text 1144,281,29,14 "4,1 M"
+text 1181,281,43,14 "il y a 4 a"
+text 1150,301,142,14 "Doublée automatiquement"
+button 1209,282,40,40 aria-label=Autres actions
+a 905,330,223,121 href=/watch?v=lZRCcfx9agE&pp=ugUEEgJmcg%3D%3D
+[pixels] img 905,330,215,121 alt= src=https://i.ytimg.com/vi/lZRCcfx9agE/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDaqXRJstrXbWf6iJEAEb3MpmVaZQ
+text 1082,430,30,14 "35:31"
+a 1128,330,121,60 href=/watch?v=lZRCcfx9agE&pp=ugUEEgJmcg%3D%3D aria-label=IA : la vérité dérangeante que Jancovici balance 35 minutes
+text 1128,332,112,56 "IA : la vérité dérangeante que Jancovici balance"
+text 1128,394,60,14 "Numero Un"
+text 1144,414,23,14 "74 k"
+text 1175,414,50,14 "il y a 1 m."
+button 1209,411,40,40 aria-label=Autres actions
+a 905,459,223,121 href=/watch?v=bRxjG0xyNmE
+[pixels] img 905,459,215,121 alt= src=https://i.ytimg.com/vi/bRxjG0xyNmE/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDBfidVyNi1MnoaKaQDVwwi__micg
+text 1082,559,30,14 "22:53"
+a 1128,459,121,60 href=/watch?v=bRxjG0xyNmE aria-label=When Animals Think No One’s Watching 😂 Backyard Edition 22 minutes
+text 1128,461,105,76 "When Animals Think No One’s Watching 😂 Backyard Edition"
+text 1128,523,40,14 "Novella"
+text 1144,543,29,14 "579 k"
+text 1181,543,50,14 "il y a 4 m."
+button 1209,540,40,40 aria-label=Autres actions
+a 905,588,223,121 href=/watch?v=KqswnbWDs_U
+[pixels] img 905,588,215,121 alt= src=https://i.ytimg.com/vi/KqswnbWDs_U/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBHLDeJmkfoQG423_5tq1sgppPRSQ
+text 1088,687,24,14 "8:06"
+a 1128,588,121,60 href=/watch?v=KqswnbWDs_U aria-label=Pato Donald | A Face do Führer [1943] 8 minutes et 6 secondes
+text 1128,590,99,56 "Pato Donald | A Face do Führer [1943]"
+text 1128,652,108,14 "PLAYTRONIC ® TV+"
+text 1144,672,29,14 "524 k"
+text 1181,672,50,14 "il y a 1 m."
+button 1209,668,40,40 aria-label=Autres actions
+a 905,716,223,121 href=/watch?v=ElEVobtxBUk
+[pixels] img 905,716,215,121 alt= src=https://i.ytimg.com/vi/ElEVobtxBUk/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCrA3CRbngiyfkSsINI0RztXEyBzQ
+text 1082,816,30,14 "34:40"
+a 1128,716,121,60 href=/watch?v=ElEVobtxBUk aria-label=L'effondrement du mouvement LGBTQ+ (décryptage) 34 minutes
+text 1128,718,118,76 "L'effondrement du mouvement LGBTQ+ (décryptage)"
+text 1128,780,41,14 "VA Plus"
+text 1144,800,29,14 "404 k"
+text 1181,800,63,14 "il y a 3 sem."
+button 1209,797,40,40 aria-label=Autres actions
+a 905,845,223,121 href=/watch?v=Whh-JpLiIuc
+[pixels] img 905,845,215,121 alt= src=https://i.ytimg.com/vi/Whh-JpLiIuc/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLC1EeDBPoVnHnqg_gmsOkwWie_sxA
+text 1072,945,40,14 "4:08:40"
+a 1128,845,121,60 href=/watch?v=Whh-JpLiIuc aria-label=I Built a Two Story Forest House in 15 Days with No Money: Solo Bushcraft Survival (Full) 4 heures et 8 minutes
+text 1128,847,121,116 "I Built a Two Story Forest House in 15 Days with No Money: Solo Bushcraft Survival (Full)"
+text 1128,909,150,14 "Minh Anh Survival Bushcraft"
+text 1144,929,29,14 "427 k"
+text 1181,929,50,14 "il y a 3 m."
+button 1209,926,40,40 aria-label=Autres actions
+a 905,974,223,125 href=/watch?v=ExKFqOvs1Dw&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D
+text 1088,1074,24,14 "6:04"
+a 1128,974,121,60 href=/watch?v=ExKFqOvs1Dw&pp=ugUHEgVmci1GUtIHCQn5CwGHKiGM7w%3D%3D aria-label=Un agent du FBI prend à son propre piège un policier irrespectueux. 6 minutes et 4 secondes
+text 1128,976,121,76 "Un agent du FBI prend à son propre piège un policier irrespectueux."
+text 1128,1038,118,14 "Bodycam Declassified"
+text 1144,1058,27,14 "13 M"
+text 1179,1058,43,14 "il y a 1 a"
+text 1150,1078,142,14 "Doublée automatiquement"
+button 1209,1059,40,40 aria-label=Autres actions
+a 905,1107,223,121 href=/watch?v=BHS7i20nHD8&list=RDBHS7i20nHD8&start_radio=1&pp=oAcB
+text 1082,1207,30,14 "55:28"
+a 1128,1107,121,60 href=/watch?v=BHS7i20nHD8&list=RDBHS7i20nHD8&start_radio=1&pp=oAcB aria-label=PARADISE パラダイス | Liquid DnB/Jungle Mix to Relax & Focus 55 minutes
+text 1128,1109,119,76 "PARADISE パラダイス | Liquid DnB/Jungle Mix to Relax & Focus"
+text 1128,1171,52,14 "Noumena"
+text 1144,1191,29,14 "397 k"
+text 1181,1191,50,14 "il y a 2 m."
+button 1209,1188,40,40 aria-label=Autres actions
+a 905,1236,223,121 href=/watch?v=X3716fs-VVw&pp=ugUEEgJmcg%3D%3D
+text 1072,1336,40,14 "1:32:08"
+a 1128,1236,121,60 href=/watch?v=X3716fs-VVw&pp=ugUEEgJmcg%3D%3D aria-label=Seule avec 5 enfants, elle n'arrive plus à se faire respecter 👀 1 heure et 32 minutes
+text 1128,1238,117,76 "Seule avec 5 enfants, elle n'arrive plus à se faire respecter 👀"
+text 1128,1300,111,14 "REPLAY TV GRATUIT"
+text 1144,1320,29,14 "183 k"
+text 1181,1320,40,14 "il y a 2 j"
+text 1132,1340,47,14 "Nouveau"
+button 1209,1317,40,40 aria-label=Autres actions
+a 905,1365,223,121 href=/watch?v=ePr-JNdUxbE
+text 1088,1465,24,14 "8:30"
+a 1128,1365,121,60 href=/watch?v=ePr-JNdUxbE aria-label=🤯 Mélanie Thierry très agacée par les questions de Yann Moix... 8 minutes et 30 secondes
+text 1128,1367,122,76 "🤯 Mélanie Thierry très agacée par les questions de Yann Moix..."
+text 1128,1429,115,14 "On n'est pas couché"
+text 1144,1449,29,14 "917 k"
+text 1181,1449,43,14 "il y a 1 a"
+button 1209,1446,40,40 aria-label=Autres actions
+a 905,1494,223,121 href=/watch?v=j05ihgkM5qs&pp=ugUEEgJmcg%3D%3D
+text 1082,1593,30,14 "22:31"
+a 1128,1494,121,60 href=/watch?v=j05ihgkM5qs&pp=ugUEEgJmcg%3D%3D aria-label=Des choses que vous auriez préféré ne JAMAIS savoir... (Zack D Films) 22 minutes
+text 1128,1496,123,96 "Des choses que vous auriez préféré ne JAMAIS savoir... (Zack D Films)"
+text 1128,1558,66,14 "Lil McQueen"
+text 1144,1578,29,14 "428 k"
+text 1181,1578,63,14 "il y a 2 sem."
+button 1209,1574,40,40 aria-label=Autres actions
+a 905,1622,223,121 href=/watch?v=idgtvU-amY0&pp=ugUEEgJmcg%3D%3D
+text 1082,1722,30,14 "28:30"
+a 1128,1622,121,60 href=/watch?v=idgtvU-amY0&pp=ugUEEgJmcg%3D%3D aria-label=Notre fille de 6 ans a pris le pouvoir à la maison 28 minutes
+text 1128,1624,121,56 "Notre fille de 6 ans a pris le pouvoir à la maison"
+text 1128,1686,33,14 "La Vie"
+text 1144,1706,27,14 "20 M"
+text 1179,1706,43,14 "il y a 7 a"
+button 1209,1703,40,40 aria-label=Autres actions
+a 905,1751,223,121 href=/watch?v=aQ57Zzj1GW0&pp=ugUEEgJmcg%3D%3D
+text 1082,1851,30,14 "47:20"
+a 1128,1751,121,60 href=/watch?v=aQ57Zzj1GW0&pp=ugUEEgJmcg%3D%3D aria-label=L’Iceberg des Anomalies Humaines 47 minutes
+text 1128,1753,87,56 "L’Iceberg des Anomalies Humaines"
+text 1128,1815,85,14 "Poisson Fécond"
+text 1144,1835,29,14 "845 k"
+text 1181,1835,50,14 "il y a 2 m."
+button 1209,1832,40,40 aria-label=Autres actions
+a 905,1880,223,121 href=/watch?v=5rFGCQpy8O0
+text 1082,1980,30,14 "23:20"
+a 1128,1880,121,60 href=/watch?v=5rFGCQpy8O0 aria-label=J'AI ENVOYÉ un DRONE SOUS VENISE... 23 minutes
+text 1128,1882,101,56 "J'AI ENVOYÉ un DRONE SOUS VENISE..."
+text 1128,1944,53,14 "Jo URBEX"
+text 1144,1964,20,14 "1 M"
+text 1172,1964,63,14 "il y a 2 sem."
+button 1209,1961,40,40 aria-label=Autres actions
+a 905,2009,223,121 href=/watch?v=gmFIjb9KKDg
+text 1082,2109,30,14 "25:45"
+a 1128,2009,121,60 href=/watch?v=gmFIjb9KKDg aria-label=Ces 2 Petits Idiots Tuent une Mère de Famille en Faisant un Prank Stupide 25 minutes
+text 1128,2011,120,76 "Ces 2 Petits Idiots Tuent une Mère de Famille en Faisant un Prank Stupide"
+text 1128,2073,80,14 "Misha Raconte"
+text 1144,2093,29,14 "389 k"
+text 1181,2093,50,14 "il y a 6 m."
+button 1209,2090,40,40 aria-label=Autres actions
+a 905,2138,223,125 href=/watch?v=viF5A_o34Lw&pp=ugUHEgVmci1GUg%3D%3D
+text 1082,2238,30,14 "10:26"
+a 1128,2138,121,60 href=/watch?v=viF5A_o34Lw&pp=ugUHEgVmci1GUg%3D%3D aria-label=Voix de personnages historiques 10 minutes et 26 secondes
+text 1128,2140,85,56 "Voix de personnages historiques"
+text 1128,2202,120,14 "Pure Data Comparison"
+text 1144,2222,27,14 "10 M"
+text 1179,2222,43,14 "il y a 2 a"
+text 1150,2242,142,14 "Doublée automatiquement"
+button 1209,2223,40,40 aria-label=Autres actions
+a 905,2271,223,125 href=/watch?v=91JjbfmqHNQ&pp=ugUEEgJmcg%3D%3D
+text 1082,2371,30,14 "26:59"
+a 1128,2271,121,60 href=/watch?v=91JjbfmqHNQ&pp=ugUEEgJmcg%3D%3D aria-label=Vivre sur une autoroute jusqu'à ce que je me fasse expulser 26 minutes
+text 1128,2273,121,76 "Vivre sur une autoroute jusqu'à ce que je me fasse expulser"
+text 1128,2335,33,14 "Jando"
+text 1144,2355,29,14 "872 k"
+text 1181,2355,50,14 "il y a 1 m."
+text 1150,2375,44,14 "Doublée"
+button 1209,2356,40,40 aria-label=Autres actions
+a 905,2404,223,121 href=/watch?v=5gg0uDwh2Ho&pp=ugUHEgVmci1GUg%3D%3D
+text 1082,2504,30,14 "54:21"
+a 1128,2404,121,60 href=/watch?v=5gg0uDwh2Ho&pp=ugUHEgVmci1GUg%3D%3D aria-label=Alice Taglioni : Après la mort de Jocelyn, j’ai reçu des signes 54 minutes
+text 1128,2406,117,76 "Alice Taglioni : Après la mort de Jocelyn, j’ai reçu des signes"
+text 1128,2468,58,14 "Les Lueurs"
+text 1144,2488,23,14 "40 k"
+text 1175,2488,50,14 "il y a 23 h"
+text 1132,2508,47,14 "Nouveau"
+button 1209,2485,40,40 aria-label=Autres actions
+a 905,2533,223,121 href=/watch?v=5J-_GkgtwQk
+text 1082,2633,30,14 "26:09"
+a 1128,2533,121,60 href=/watch?v=5J-_GkgtwQk aria-label=Je TROLL des INCONNUS en faisant la TANA  (C’est trop drôle 🤣) 26 minutes
+text 1128,2535,117,76 "Je TROLL des INCONNUS en faisant la TANA  (C’est trop drôle 🤣)"
+text 1128,2597,67,14 "ImDylanOff2"
+text 1144,2617,29,14 "642 k"
+text 1181,2617,43,14 "il y a 1 a"
+button 1209,2614,40,40 aria-label=Autres actions
+text 415,36,127,16 "Une filiale de Google"
+button 746,24,66,40 aria-label=Langue : French
+text 786,36,10,16 "fr"
+a 828,24,138,40 href=https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dfr%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DjNQXAC9IVRw&hl=fr aria-label=Se connecter
+text 868,36,82,16 "Se connecter"
+text 472,90,321,34 "Avant d'accéder à YouTube"
+text 314,152,119,16 "Nous utilisons des"
+a 433,150,48,20 href=https://policies.google.com/technologies/cookies?hl=fr
+text 433,152,48,16 "cookies"
+text 481,152,307,16 "et des données, y compris des adresses IP, pour :"
+text 354,188,461,16 "Proposer les services Google et s'assurer qu'ils fonctionnent correctement"
+text 354,220,522,16 "Suivre les interruptions de service et protéger contre le spam, les fraudes et les abus"
+text 354,252,591,36 "Mesurer l'engagement de l'audience et les statistiques des sites pour comprendre la façon dont nos services sont utilisés et pour améliorer leur qualité"
+text 314,308,636,36 "Si vous sélectionnez "Tout accepter", nous utiliserons aussi des cookies et des données, y compris des adresses IP, pour :"
+text 354,364,307,16 "Développer de nouveaux services et les améliorer"
+text 354,396,291,16 "Diffuser des annonces et évaluer leur efficacité"
+text 354,428,427,16 "Proposer des contenus personnalisés en fonction de vos paramètres"
+text 354,460,429,16 "Afficher des annonces personnalisées en fonction de vos paramètres"
+text 314,500,590,36 "Si vous sélectionnez "Tout refuser", nous n'utiliserons pas de cookies ni d'adresses IP à ces fins supplémentaires."
+text 314,556,636,136 "Les annonces et les contenus non personnalisés dépendent, par exemple, du contenu du site que vous consultez et de votre position (la diffusion d'annonces est basée sur votre position approximative). Les annonces et les contenus personnalisés peuvent aussi inclure, par exemple, des recommandations de vidéos, une page d'accueil YouTube personnalisée et des annonces adaptées en fonction de votre activité passée, comme les vidéos que vous avez regardées et les contenus que vous avez recherchés sur YouTube. Le cas échéant, nous adaptons également l'expérience en fonction de l'âge de l'utilisateur à l'aide de cookies et de données."
+text 314,712,626,36 "Cliquez sur "Plus d'options" pour afficher plus d'informations, y compris sur la manière de gérer vos paramètres de confidentialité. Vous pouvez aussi consulter la page g.co/privacytools à tout moment."
+button 557,786,108,40 aria-label=Refuser l'utilisation de cookies et d'autres données aux fins décrites
+text 573,798,76,16 "Tout refuser"
+button 685,786,118,40 aria-label=Accepter l'utilisation de cookies et d'autres données aux fins décrites
+text 701,798,86,16 "Tout accepter"
+a 823,786,120,40 href=https://consent.youtube.com/d?continue=https://www.youtube.com/watch%3Fv%3DjNQXAC9IVRw%26cbrd%3D1&gl=FR&m=0&pc=yt&uxe=bip&cm=2&hl=fr&src=2&escs=AZ-r6Z6CNwyprpBTVvQK5wWV9Erxf1EDDNZ1oc7v1S684GTx79qGeSDA8RBJwP20Pb1uMJN07XMHxSfCe13fKdHTEIXQ_2ajM7rI aria-label=Plus d'options
+text 839,798,88,16 "Plus d'options"
+a 314,854,153,20 href=https://policies.google.com/privacy?hl=fr
+text 314,856,153,16 "Règles de confidentialité"
+text 478,856,5,16 "•"
+a 494,854,142,20 href=https://policies.google.com/terms?hl=fr
+text 494,856,142,16 "Conditions d'utilisation"

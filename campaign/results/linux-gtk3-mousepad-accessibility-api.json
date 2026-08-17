@@ -1,0 +1,50 @@
+{
+  "os": "linux",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, NO window manager",
+  "app": "Mousepad 0.6.3 (Xfce text editor, GTK3)",
+  "stack": "other",
+  "stack_detection": {
+    "method": "ldd shows libgtk-3.so.0 + libatk-bridge-2.0.so; after launch the app appears on the org.a11y AT-SPI bus with toolkit attribute 'gtk' — both checks precede any extraction",
+    "signature": "libgtk-3.so.0 mapped; AT-SPI desktop lists 'mousepad' (toolkit gtk); a11y bus auto-activated via D-Bus service org.a11y.Bus",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "This machine is a headless server: everything runs under Xvfb + dbus-run-session, with Xvfb/xdotool/pyatspi extracted from .debs into a user prefix (no root; one 8-byte binary patch to relocate Xvfb's hardcoded xkbcomp path). The a11y bus needed NO manual setup — the first pyatspi client D-Bus-activated at-spi-bus-launcher + registryd, and GTK3's built-in atk-bridge registered the app. GTK_MODULES=gail:atk-bridge exported (belt-and-braces; GTK3 links atk-bridge directly). Typing via xdotool (real X keystrokes), clicks via xdotool (XTEST): the OS input path, not synthetic AT-SPI actions.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Typed 'The quick brown fox jumps over the lazy dog 0123456789' via xdotool; read back through the Text interface of the sole EditableText node: character-exact, arrives as real strings (no glyph decoding needed at this level)." },
+    "t2_enumerate": { "pass": true, "detail": "154-node tree; 9 nodes SHOWING with extents — and the screenshot confirms the screen really shows exactly that (frame, tab list, scroll pane, text area). THE HONESTY RESULT OF THIS CELL: with no WM and no xfconf, Mousepad renders WITHOUT its menubar; AT-SPI reports the menubar present-in-tree but STATE_SHOWING=false and its items' extents as MININT ('no on-screen position'). The channel never claimed a control was clickable that wasn't rendered. Same story for window geometry: before an explicit resize the window really was 48x52 px, and AT-SPI's frame extents matched X's geometry byte-for-byte at every step (48x52 then 1000x700). Present-in-tree vs shown-on-screen is cleanly distinguished — exactly the distinction a router needs." },
+    "t3_live_value": { "pass": true, "detail": "Unique string PX-7Q4K-LINUX-ATSPI typed then read back from the live buffer through the channel — current value, not a stale snapshot." },
+    "t4_living_screen": { "pass": true, "detail": "Event-driven, not polled: object:text-changed:insert events carry position + inserted text. 3 s idle window = 0 events = 0 bytes (idle is genuinely free). 18 keystrokes → 18 events, ~21 B each (378 B total) vs 1365 tokens for one re-screenshot. The channel pushes deltas; pixels can only re-pull the world." },
+    "t5_blind_action": { "pass": true, "detail": "End-to-end with REAL OS clicks, every coordinate from the channel: (1) right-click at the centre of the text node's extents (500,350) via xdotool → (2) the popup menu enters the channel: 12 menu items, each with real on-screen extents → (3) blind-click 'Select All' at its centre (672,569) → (4) effect verified IN the channel: Text.getSelection = [0,92] over a 92-char buffer, the whole document. No screenshot in the decision loop at any step." },
+    "t6_pictorial": { "pass": null, "detail": "No pictorial region exists in this app (no image/canvas roles in the tree, none on screen — consistent). The Qt cells cover the pictorial/custom-paint question." }
+  },
+  "measurements": {
+    "view_bytes": 271,
+    "view_tokens_est": 68,
+    "screenshot_tokens_est": 1365,
+    "diff_bytes_per_interaction": 21,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 115,
+    "notes": "The SHOWING view of a simple editor is 68 tokens vs 1365 for a screenshot (20x) — the synthetic-app-UI regime, as expected for a sparse native window. Full 154-node walk: 115 ms (per-node D-Bus round-trips; a production router would use the batched GetTree or cache). Event stream: 21 B per keystroke, 0 idle. The environmental result worth keeping: the AT-SPI bus auto-activates headlessly under plain dbus-run-session — the 'blocked: no a11y bus' status of the old sandbox cell was a sandbox artifact, not a Linux property."
+  },
+  "runtime_verification": {
+    "method": "Root-window screenshot (GdkPixbuf) captured alongside each probe step; screenshots read back and compared to the emitted view; X window geometry cross-checked via xdotool getwindowgeometry.",
+    "agreement": "Full agreement including the degenerate cases: tiny 48x52 window (extents matched X exactly), hidden menubar (SHOWING=false + MININT extents, and the screenshot indeed shows no menubar), popup menu (items appear on screen and in the channel simultaneously, extents match the rendered popup)."
+  },
+  "permissions_required": [
+    "None beyond a session bus (no root: all GUI packages extracted to a user prefix; a11y bus D-Bus-activated automatically)"
+  ],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/linux-atspi/mousepad-tree.txt",
+    "campaign/results/artifacts/linux-atspi/mousepad-nodes.json",
+    "campaign/results/artifacts/linux-atspi/mousepad-battery.json",
+    "campaign/results/artifacts/linux-atspi/mousepad-t5.json",
+    "campaign/results/artifacts/linux-atspi/t5-step1-popup.png",
+    "campaign/results/artifacts/linux-atspi/t5-step2-clicked.png",
+    "campaign/results/artifacts/linux-atspi/final.png"
+  ]
+}

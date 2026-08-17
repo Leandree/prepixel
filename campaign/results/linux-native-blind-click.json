@@ -1,29 +1,42 @@
 {
   "os": "linux",
-  "os_version": "Ubuntu 24.04, Xvfb + openbox, Chromium",
-  "app": "Native OS-level blind click driven by structured coordinates",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb (X11), no WM",
+  "app": "Native OS-level blind click driven by structured coordinates — completed on three stacks (was: partial/blocked in the old sandbox)",
   "stack": "chromium",
-  "stack_detection": { "method": "open debug port", "signature": "CDP responds", "detected_before_use": true },
+  "stack_detection": { "method": "open debug port / AT-SPI bus registration", "signature": "CDP :9223 responds; apps registered on org.a11y bus", "detected_before_use": true },
   "channel": "cdp",
-  "channel_setup": "blind_click.mjs: read element box (page coords) + window.screenX/screenY + chrome height from the structured channel -> screen coords -> REAL OS click via xdotool (not a CDP synthetic click) -> verify effect.",
-  "verdict": "partial",
-  "failure_class": "blocked",
+  "channel_setup": "The 2026-08-14 sandbox cell recorded this path 'blocked' after Chromium's DevTools port stopped binding across relaunches. On this machine the same script ran first try. Three independent end-to-end runs, all with REAL OS clicks (xdotool/XTEST — the input path an OS agent would use), never a synthetic in-channel click: (a) Chromium/CDP via campaign/linux/blind-click-linux.mjs (identical logic to campaign/desktop/blind_click.mjs, display/xauth from env); (b) GTK3/AT-SPI (mousepad); (c) Qt6/AT-SPI (FeatherPad, qBittorrent).",
+  "verdict": "works",
+  "failure_class": "none",
   "tests": {
-    "t1_read_text": { "pass": null, "detail": "n/a" },
+    "t1_read_text": { "pass": null, "detail": "n/a — actuation cell" },
     "t2_enumerate": { "pass": null, "detail": "n/a" },
     "t3_live_value": { "pass": null, "detail": "n/a" },
     "t4_living_screen": { "pass": null, "detail": "n/a" },
-    "t5_blind_action": { "pass": null, "detail": "Actuation logic implemented and committed (structured element box + on-screen window origin + chrome offset -> screen pixel -> xdotool OS click -> verify). Browser-level grounding was already proven end-to-end in phase 1 (grounding eval 4/4, raw CDP Input clicks at predicted coords). The desktop-router cell also extracted the focused window's content live over CDP. The END-TO-END native run here (OS-level xdotool click reading back through CDP) was blocked: after many Xvfb/WM/Chromium relaunches in this headless sandbox, Chromium stopped binding its DevTools port reliably (resources were free; a lifecycle/flakiness issue, not the approach). On a real desktop (the agent-brief target) this path runs directly." },
+    "t5_blind_action": { "pass": true, "detail": "(a) CDP: element box (page coords 420,396 126x47) + window.screenX/Y (10,10) + chromeTop (outerHeight-innerHeight=143) → screen (493,572) → xdotool click on the Xvfb display → page state IDLE→CLICKED read back through CDP. The one real subtlety is the coordinate-frame composition (page→window→screen), and it worked unmodified. (b) GTK/AT-SPI: right-click at text-node extents centre → popup published in-channel with real extents → blind-click 'Select All' → Text.getSelection [0,92] = whole buffer. (c) Qt/AT-SPI: FeatherPad 'File' menubar item extents → click → 12 menu items flip to SHOWING; qBittorrent 'Vitesse' tab extents → click → panel nodes appear. Every coordinate from the structured channel; every verification in the channel; zero screenshots in any decision loop." },
     "t6_pictorial": { "pass": null, "detail": "n/a" }
   },
   "measurements": {
-    "view_bytes": null, "view_tokens_est": null, "screenshot_tokens_est": 1366,
-    "diff_bytes_per_interaction": null, "idle_cost_bytes": null, "capture_latency_ms": null,
-    "notes": "Honest partial. The coordinate-frame math (page coords + window.screenX/Y + chromeTop -> screen coords) is the one real subtlety and it is implemented; the missing piece is only a stable headless desktop to run the OS click against. Windows/macOS agents should complete this natively (Windows: UIA BoundingRectangle + SendInput; macOS: AXFrame + CGEvent), where it does not depend on Chromium's debug port."
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1365,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Closes the P2 item from DEEPENING-PLAN. The 2026-08-14 'blocked' was environmental (sandbox Chromium lifecycle), as suspected — the approach needed zero changes. Cross-stack note: the CDP path must COMPOSE three coordinate frames itself (page + window origin + chrome height, all read from the channel), while AT-SPI's DESKTOP_COORDS already answers in screen space — one call, no composition. For a desktop router that is an argument for taking geometry from the OS layer even when content comes from a browser-level channel; it is also exactly where the calibration rule from pages/click-dpr.html applies (never hardcode the frame transform, probe it)."
   },
-  "runtime_verification": { "method": "intended: xdotool click then CDP read of button state", "agreement": "not completed in sandbox (see detail)" },
-  "permissions_required": ["Xvfb/WM", "CDP port", "xdotool (XTEST)"],
-  "agent": "claude (sandbox Linux, reference cell)",
-  "date": "2026-08-14",
-  "raw_artifacts": ["campaign/desktop/blind_click.mjs"]
+  "runtime_verification": {
+    "method": "(a) CDP re-read of the page state element after the OS click; (b)(c) AT-SPI re-read of selection/menu/panel state after the click; screenshots kept as human evidence only.",
+    "agreement": "4/4 blind clicks landed and produced their intended, channel-verified effect on the first attempt (CDP button, GTK context-menu item, Qt menubar item, Qt tab button)."
+  },
+  "permissions_required": ["Xvfb session", "CDP loopback port", "xdotool (XTEST)"],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/linux/blind-click-linux.mjs",
+    "campaign/desktop/blind_click.mjs",
+    "campaign/results/artifacts/linux-atspi/clicktarget.html",
+    "campaign/results/artifacts/linux-atspi/mousepad-t5.json",
+    "campaign/results/artifacts/linux-atspi/t5-step2-clicked.png"
+  ]
 }

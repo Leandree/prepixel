@@ -1,60 +1,48 @@
 {
   "os": "linux",
-  "os_version": "Ubuntu 24.04 sandbox (egress-filtered network)",
-  "app": "Real-web battery + blind navigation (macOS cells) — Linux replication attempt",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Chrome headed under Xvfb 1280x800 (X11)",
+  "app": "16 live public websites in Chromium 148 (6 categories: vitrine, presse, commerce, media, reference, webapp, webapp-canvas) — Linux confirmation run of the macOS cell",
   "stack": "chromium",
   "stack_detection": {
-    "method": "n/a",
-    "signature": "n/a",
+    "method": "open debug port answers /json/version; the sites themselves need no detection — the stack is the browser, not the page",
+    "signature": "http://127.0.0.1:9223/json/version → Chrome/148.0.7778.96, Protocol 1.3",
     "detected_before_use": true
   },
   "channel": "cdp",
-  "channel_setup": "Would mirror campaign/macos/web-battery.mjs + web-navigate.mjs on the same 16 sites.",
-  "verdict": "blocked",
-  "failure_class": "blocked",
+  "channel_setup": "This machine has no physical display, so the replication runs the FULL headed browser under Xvfb (xvfb-run + dbus-run-session; Xvfb extracted from .debs without root, one 8-byte binary patch to relocate its hardcoded /usr/bin/xkbcomp path) — NOT --headless, so the engine, UA and windowing path match the macOS methodology as closely as a server allows. Chromium 148 from the playwright cache, --remote-debugging-port=9223, viewport normalised to 1280x800 CSS via Emulation.setDeviceMetricsOverride{deviceScaleFactor:1}. Same script as macOS with only paths changed (campaign/linux/web-battery.mjs), same hardened distiller, same 16 URLs.",
+  "verdict": "works",
+  "failure_class": "explicit",
   "tests": {
-    "t1_read_text": {
-      "pass": null,
-      "detail": "Sandbox egress proxy refuses arbitrary sites (ERR_TUNNEL_CONNECTION_FAILED) — live-web cells cannot run here. Since both OSes drive the same Chromium/CDP engine, the macOS real-web numbers are expected to transfer; still worth one confirmation run on Léandre's real Linux desktop using the existing scripts."
-    },
-    "t2_enumerate": {
-      "pass": null,
-      "detail": "blocked"
-    },
-    "t3_live_value": {
-      "pass": null,
-      "detail": "blocked"
-    },
-    "t4_living_screen": {
-      "pass": null,
-      "detail": "blocked"
-    },
-    "t5_blind_action": {
-      "pass": null,
-      "detail": "blocked"
-    },
-    "t6_pictorial": {
-      "pass": null,
-      "detail": "blocked"
-    }
+    "t1_read_text": { "pass": true, "detail": "16/16 sites yielded a readable structured view on the first try — including Amazon.fr and leboncoin, the two DataDome-guarded commerce sites that were the predicted casualties of a datacenter IP; neither raised a captcha. View latency 9-133 ms (mean 61 ms, median 60 ms) vs mean 16 ms on the macOS laptop — a slower shared server CPU, but still far below a screenshot round-trip." },
+    "t2_enumerate": { "pass": true, "detail": "Interactive elements with boxes on every site. The occlusion-tagging profile reproduces the macOS layering signal: 4 on Hacker News (flat table layout), 9 on Wikipedia, 47 on Apple and YouTube home, 76 on BBC, 112 on Le Monde, 142 on YouTube watch — the last identical to macOS's 142. Same-day page churn moves individual counts but the flat-1990s-vs-layered-commercial ordering is intact." },
+    "t3_live_value": { "pass": null, "detail": "Not exercised — no form filled on third-party sites (read-only discipline), same scope as the macOS cell." },
+    "t4_living_screen": { "pass": null, "detail": "Not measured per-site; covered elsewhere (linux diff-streaming cell)." },
+    "t5_blind_action": { "pass": true, "detail": "Covered in depth by the companion cell linux-web-navigation-blind-cdp (8/8 on live sites, structured view only)." },
+    "t6_pictorial": { "pass": true, "detail": "Canvas/video sites all declared their opaque regions as '[pixels] <tag> x,y,w,h' lines: Excalidraw (canvas), Apple and Amazon (video), Stripe (canvas), YouTube home and watch (video). OpenStreetMap again declares tiled <img> rather than one opaque canvas block. No site produced an EMPTY region where the screen shows content." }
   },
   "measurements": {
-    "view_bytes": null,
-    "view_tokens_est": null,
-    "screenshot_tokens_est": null,
+    "view_bytes": 5523,
+    "view_tokens_est": 1372,
+    "screenshot_tokens_est": 1366,
     "diff_bytes_per_interaction": null,
-    "idle_cost_bytes": null,
-    "capture_latency_ms": null,
-    "notes": "Environmental block, recorded for matrix completeness."
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 61,
+    "notes": "THE MACOS COLLAPSE-TO-PARITY REPLICATES ON LINUX, NUMBER FOR NUMBER. Ratio of TOTALS: 1.00x (21946 structured tokens vs 16x1366 screenshot tokens; macOS: 0.98x). MEDIAN per-site ratio 1.15x (macOS: 1.15x, identical). Mean of ratios 1.28x (macOS 1.27x). Range 0.46x on Hacker News (identical to macOS's 0.46x) to 3.19x on Vercel (macOS: 3.11x). Structure wins on 10/16 sites — the SAME 10. By category: vitrine 2.20x (macOS 2.20x, identical), commerce 0.83x (identical), media 0.97x (identical), reference 0.96x (0.93x), presse 1.18x (1.21x), webapp 0.81x (0.78x), webapp-canvas 1.77x (1.74x). Avg screens to cover a full page: 7.6 (identical). The same 6 sites raised consent banners (Stripe, Vercel, YouTube home, BBC, Amazon.fr, leboncoin). This is the strongest possible form of the 'the ratio is a property of the PAGE, not the method' claim: two different OSes, different CPU architectures (x86_64 vs Apple Silicon), different Chromium major versions (148 vs 151), a real desktop session vs Xvfb on a headless server, two days apart — and every aggregate lands within noise of the macOS run, with several exact to the last digit. The only meaningful OS-level difference is capture latency (mean 61 ms vs 16 ms), which is CPU speed, not channel behaviour. Per-site deltas vs macOS are live-content churn (Amazon 2809 vs 3163 tokens: different result set for the same query; Le Monde 1769 vs different headlines), not distiller variance — the four static marketing pages land within a few tokens of their macOS values."
   },
   "runtime_verification": {
-    "method": "n/a",
-    "agreement": "n/a"
+    "method": "Per-site viewport screenshot (PNG via Page.captureScreenshot) kept alongside the structured view; page-level counters (nText/nCanvas/nVideo/nImg/scrollH) read from the same DOM the distiller walked; aggregates cross-checked against the committed macOS run of the identical script.",
+    "agreement": "No site produced view content absent from the screen. Declared gaps are the honest ones: opaque media regions, occluded overlay-hidden nodes, off-viewport content dropped by design. Agreement with the macOS run is the headline (see notes): every category ratio within 0.03, three categories and the median exact."
   },
   "permissions_required": [
-    "unfiltered egress"
+    "None (loopback CDP socket; no root — Xvfb/xdotool extracted from .debs into a user-writable prefix). No account, no login, no cookie import on any of the 16 sites."
   ],
-  "agent": "claude (sandbox Linux)",
-  "date": "2026-08-15",
-  "raw_artifacts": []
+  "agent": "claude-code (Fable 5) on debian-server (headless), Chrome under Xvfb",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "results/web-battery-linux/web-battery.json",
+    "results/web-battery-linux/web-battery-summary.json",
+    "results/web-battery-linux/views/",
+    "results/web-battery-linux/shots/",
+    "campaign/linux/web-battery.mjs"
+  ]
 }

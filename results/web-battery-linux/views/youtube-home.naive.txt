@@ -1,0 +1,59 @@
+button 24,16,24,24 id=button aria-label=Guide
+a 56,0,123,56 id=logo aria-label= href=/
+text 169,12,12,11 "FR"
+button 16,-1000,219,40 aria-label=Ignorer les liens de navigation
+text 32,-988,187,16 "Ignorer les liens de navigation"
+input 332,16,567,24 name=search_query type=text role=combobox placeholder=Rechercher value=""
+button 903,8,64,40 aria-label=Search
+a 1063,8,40,40
+button 1071,16,24,24 id=button aria-label=Paramètres
+a 1111,8,138,40 href=https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dfr%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=fr&ec=65620 aria-label=Se connecter
+text 1151,20,82,16 "Se connecter"
+a 4,60,64,76 id=endpoint aria-label=Accueil href=/
+text 20,108,33,11 "Accueil"
+a 4,136,64,76 id=endpoint aria-label=Shorts href=/shorts/
+text 21,184,29,11 "Shorts"
+a 4,212,64,76 id=endpoint aria-label=Abonnements href=/feed/subscriptions
+text 5,260,62,11 "Abonnements"
+a 4,288,64,76 id=endpoint aria-label=Vous href=/feed/you
+text 25,336,23,11 "Vous"
+text 510,107,317,21 "Votre historique YouTube est désactivé"
+text 362,145,616,96 "Vous pouvez activer l'historique des vidéos regardées et l'historique des recherches à tout moment pour que nous vous proposions les dernières vidéos adaptées à vos goûts.
+
+Pour actualiser votre sélection, activez l'historique YouTube, et acceptez l'utilisation des cookies et des données dans vos paramètres."
+a 736,223,86,20 href=https://support.google.com/youtube/answer/95725
+text 736,225,86,16 "En savoir plus"
+a 361,255,616,40 href=https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=FR&m=0&pc=yt&uxe=bip&oyh=1&cm=6&hl=fr&src=4 aria-label=Modifier le paramètre
+text 601,267,135,16 "Modifier le paramètre"
+text 415,36,127,16 "Une filiale de Google"
+button 746,24,66,40 aria-label=Langue : French
+text 786,36,10,16 "fr"
+a 828,24,138,40 href=https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dfr%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=fr aria-label=Se connecter
+text 868,36,82,16 "Se connecter"
+text 472,90,321,34 "Avant d'accéder à YouTube"
+text 314,152,119,16 "Nous utilisons des"
+a 433,150,48,20 href=https://policies.google.com/technologies/cookies?hl=fr
+text 433,152,48,16 "cookies"
+text 481,152,307,16 "et des données, y compris des adresses IP, pour :"
+text 354,188,461,16 "Proposer les services Google et s'assurer qu'ils fonctionnent correctement"
+text 354,220,522,16 "Suivre les interruptions de service et protéger contre le spam, les fraudes et les abus"
+text 354,252,591,36 "Mesurer l'engagement de l'audience et les statistiques des sites pour comprendre la façon dont nos services sont utilisés et pour améliorer leur qualité"
+text 314,308,636,36 "Si vous sélectionnez "Tout accepter", nous utiliserons aussi des cookies et des données, y compris des adresses IP, pour :"
+text 354,364,307,16 "Développer de nouveaux services et les améliorer"
+text 354,396,291,16 "Diffuser des annonces et évaluer leur efficacité"
+text 354,428,427,16 "Proposer des contenus personnalisés en fonction de vos paramètres"
+text 354,460,429,16 "Afficher des annonces personnalisées en fonction de vos paramètres"
+text 314,500,590,36 "Si vous sélectionnez "Tout refuser", nous n'utiliserons pas de cookies ni d'adresses IP à ces fins supplémentaires."
+text 314,556,636,136 "Les annonces et les contenus non personnalisés dépendent, par exemple, du contenu du site que vous consultez et de votre position (la diffusion d'annonces est basée sur votre position approximative). Les annonces et les contenus personnalisés peuvent aussi inclure, par exemple, des recommandations de vidéos, une page d'accueil YouTube personnalisée et des annonces adaptées en fonction de votre activité passée, comme les vidéos que vous avez regardées et les contenus que vous avez recherchés sur YouTube. Le cas échéant, nous adaptons également l'expérience en fonction de l'âge de l'utilisateur à l'aide de cookies et de données."
+text 314,712,626,36 "Cliquez sur "Plus d'options" pour afficher plus d'informations, y compris sur la manière de gérer vos paramètres de confidentialité. Vous pouvez aussi consulter la page g.co/privacytools à tout moment."
+button 557,786,108,40 aria-label=Refuser l'utilisation de cookies et d'autres données aux fins décrites
+text 573,798,76,16 "Tout refuser"
+button 685,786,118,40 aria-label=Accepter l'utilisation de cookies et d'autres données aux fins décrites
+text 701,798,86,16 "Tout accepter"
+a 823,786,120,40 href=https://consent.youtube.com/d?continue=https://www.youtube.com/%3Fcbrd%3D1&gl=FR&m=0&pc=yt&uxe=bip&cm=2&hl=fr&src=2&escs=AZ-r6Z5_H-89q2ECDjpMdWyChnlkKhTowq-6VTaoWCV2OJeng6xpR4PeRNJl8le_LOqsaoiGkuZEnz0HYJDk8E2Fd-9E2lODa9kv aria-label=Plus d'options
+text 839,798,88,16 "Plus d'options"
+a 314,854,153,20 href=https://policies.google.com/privacy?hl=fr
+text 314,856,153,16 "Règles de confidentialité"
+text 478,856,5,16 "•"
+a 494,854,142,20 href=https://policies.google.com/terms?hl=fr
+text 494,856,142,16 "Conditions d'utilisation"

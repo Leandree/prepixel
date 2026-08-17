@@ -1,7 +1,8 @@
 # Deepening plan — close every open question before the paper
 
-Status after three OS campaigns: **56 cells, 56/56 schema-valid, 3 silent
-divergences (all Windows, all predictable a priori), 0 unpredictable.** The thesis
+Status after three OS campaigns + the Linux desktop round: **63 cells, 63/63
+schema-valid, 4 silent divergences (3 Windows + 1 Linux/qBittorrent, all
+predictable a priori), 0 unpredictable.** The thesis
 is no longer "structure is always safe" — Windows disproved that honestly — it is:
 **every channel's coverage is predictable in advance from a stack signature, every
 failure is either explicit or convertible-to-explicit by a documented router guard,
@@ -79,21 +80,30 @@ Chess refuted "game = pixels" because Apple annotated it. Test one with no AX.
 
 ---
 
-## LINUX agent (on Léandre's real desktop — my sandbox blocked these)
+## LINUX agent — ✅ DONE 2026-08-17 (debian-server, headless + Xvfb, no root)
 
-### P1 — AT-SPI in a real session
-The reference cell had it `blocked` (no a11y bus headless).
-- **Acceptance:** AT-SPI T1–T6 on a real GTK and a real Qt app; confirm the Qt
-  thin-tree/silent risk against coverage-guard, mirroring the Windows OBS finding.
+### P1 — AT-SPI in a real session ✅
+The reference cell had it `blocked` (no a11y bus headless). **Result:** the block
+was a sandbox artifact — under plain dbus-run-session the a11y bus D-Bus-activates
+headlessly. T1–T6 on Mousepad/GTK3 (68 tok, 0-cost idle, 21 B/keystroke events,
+blind context-menu click verified in-channel) and FeatherPad/Qt6 (331 tok, same
+event vocabulary, zero client-code changes between toolkits). The Qt thin-tree
+risk CONFIRMED on qBittorrent: SpeedPlotView = nameless kids=0 filler vs a live
+painted chart → `failure_class: silent` (the 4th silent cell, first non-Windows).
+Coverage-guard twist: contentEnergy 0.020 < threshold 0.03 → the shipped
+calibration MISSES it; empty control = 0.000 on all metrics, so 0.01 or an edge
+metric separates perfectly. See linux-qt6-*.json + linux-FINDINGS round 4.
 
-### P1 — Real-web battery + blind navigation on Linux Chrome
-Blocked by sandbox egress; the browser stack is OS-invariant so this is a
-confirmation, not a discovery.
-- **Acceptance:** the 16-site numbers reproduced within noise; 8/8 navigation re-run.
+### P1 — Real-web battery + blind navigation on Linux Chrome ✅
+**Result:** replicated number-for-number (ratio of totals 1.00x vs 0.98x, median
+1.15x identical, same 10/16 wins, three category ratios identical to the
+hundredth, 8/8 navigation, MDN toggle = same +16 view lines as macOS). The ratio
+is a property of the page, confirmed cross-OS. See linux-web-battery-cdp.json.
 
-### P2 — End-to-end native blind click
-Partial earlier (Chromium DevTools-port flakiness).
-- **Acceptance:** one native OS-level click driven by structured coords, verified.
+### P2 — End-to-end native blind click ✅
+**Result:** the old blocked CDP+xdotool run passed first try (IDLE→CLICKED), plus
+GTK context-menu and Qt menubar/tab variants — 4/4 first-attempt, all coords from
+the channel, all effects verified in the channel. See linux-native-blind-click.json.
 
 ---
 
