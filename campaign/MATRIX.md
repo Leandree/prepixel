@@ -32,7 +32,7 @@
 | linux | Per-window pixel capture via XComposite — the X11 implementation of the per-window capture rule (macOS: CGWindowListCreateImage per window; Windows: PrintWindow PW_RENDERFULLCONTENT), demonstrated with a measured verdict flip | other | pixels-baseline | ✅ works | — |  | 1,365 | ✅ |
 | linux | Qt Widgets (examples/widgets/calculator) — representative Qt app | qt | render-tree-tap | ⬜ unavailable | explicit |  | 1,366 | ✅ |
 | linux | FeatherPad 1.6.1 (Qt 6.8.2 widgets text editor) | qt | accessibility-api | ✅ works | — | 331 | 1,365 | ✅ |
-| linux | qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView) | qt | accessibility-api | 🟡 partial | ❗SILENT | 960 | 1,365 | ✅ |
+| linux | qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView) | qt | accessibility-api | 🟡 partial | explicit | 960 | 1,365 | ✅ |
 | linux | SwingProbe (purpose-built Java Swing app, OpenJDK 21 + java-atk-wrapper 0.40): standard widgets + one custom-painted JPanel mimicking the OBS/qBittorrent shape — Tier F (Java) was absent from the matrix on every OS until this cell | swing | accessibility-api | ✅ works | explicit | 124 | 1,365 | ✅ |
 | macos | Finder (system file manager), probe folder with 3 throwaway files | appkit | accessibility-api | ✅ works | — | 4,345 | 1,049 | ✅ |
 | macos | TextEdit — hard-text stress (ligatures, combining accents, CJK, RTL Arabic/Hebrew, bidi, ZWJ emoji) | appkit | accessibility-api | ✅ works | — | 35 | 1,477 | ✅ |
@@ -136,7 +136,7 @@ The production-safety question: could a router know the channel in advance, and 
 | LOGPIXELSX=96, HORZRES=DESKTOPHORZRES=1920x1080 (no DPI virtualization); ImageGrab returns exactly 1920x1080 | pixels-baseline | ✅ works | — |
 | libQt5Gui.so / libQt5Widgets.so mapped (or Qt6 equivalents) | render-tree-tap | ⬜ unavailable | explicit |
 | libQt6Gui.so.6 mapped + QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 exported; AT-SPI desktop lists 'FeatherPad' (toolkit Qt) | accessibility-api | ✅ works | — |
-| AT-SPI desktop lists 'qBittorrent' (toolkit Qt); a priori suspect: the Speed tab hosts a SpeedPlotView (custom QGraphicsView painting) | accessibility-api | 🟡 partial | ❗SILENT |
+| AT-SPI desktop lists 'qBittorrent' (toolkit Qt); a priori suspect: the Speed tab hosts a SpeedPlotView (custom QGraphicsView painting) | accessibility-api | 🟡 partial | explicit |
 | Qt6Widgets.dll / Qt6Svg.dll / Qt6Network.dll mapped in obs64.exe; UIA answers through Qt's QAccessible->UIA bridge with a 185-node tree on first query | accessibility-api | 🟡 partial | explicit |
 | com.apple.clock; window tree 25 nodes with labeled toolbar tabs on first query | accessibility-api | ✅ works | — |
 | otool -L links SwiftUI.framework + AppKit.framework; bundle app.vibeisland.macos; window is kCGWindowLayer 27 (overlay layer, not a normal document window) | accessibility-api | ✅ works | explicit |
@@ -156,8 +156,8 @@ The production-safety question: could a router know the channel in advance, and 
 ## Safety verdict
 
 - Cells where structure **works**: 56/76.
-- **Silent divergences surviving** (disqualifying): 2/76 ❗ qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView), Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab.
-- Silent divergences **found, then caught-and-declared** by coverage-guard: 4 — Zoom Workplace, FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
+- **Silent divergences surviving** (disqualifying): 1/76 ❗ Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab.
+- Silent divergences **found, then caught-and-declared** by coverage-guard: 5 — qBittorrent 5.1.0, Zoom Workplace, FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
 - Cells **not** predictable in advance: 0/76 ✅ none
 
-Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **qBittorrent 5.1.0** (linux); **Java Swing** (macos). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.
+Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **Java Swing** (macos). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.
