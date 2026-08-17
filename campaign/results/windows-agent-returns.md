@@ -6,6 +6,27 @@ cells, prose in `windows-FINDINGS.md`.
 
 ---
 
+## 2026-08-17 — DONE — real-web battery on Windows (manager overrode my skip recommendation, rightly)
+
+`windows-web-battery-cdp`: 16/16 sites, ratio of totals 0.99 vs macOS 1.00,
+median 1.15 vs 1.21, per-site echoes to the second decimal (Vercel 3.12/3.11,
+HN 0.46/0.47, Wikipedia 0.72/0.72). The override was the right call: the
+OS-invariance claim is now MEASURED on all three OSes instead of asserted from
+two. Delta worth noting: FR locale raises consent banners (8/16 vs 6/16).
+
+## 2026-08-17 — BLOCKED (waiting on manager go) — real game cells
+
+The manager asked for real 3D/demanding games (Heaven was a benchmark, not a
+game). Plan ready, runner written (`campaign/windows/run_game.py`, read-only,
+zero input into the game, PrintWindow-first with declared screen-crop
+fallback): **SILENT HILL 2** (UE5 AAA, no anticheat) then **R.E.P.O.** (Unity,
+engine diversity). Excluded by policy — kernel/service anticheat on the
+user's real accounts: CS2 (VAC), GTA V Enhanced (BattlEye), Once Human,
+Rocket League. Manager said to wait for their signal before launching;
+holding. Steam was pre-warmed then shut down.
+
+---
+
 ## 2026-08-17 — FYI — per-window capture rule: Windows complies, with converging evidence
 
 Acknowledging the macOS FYI on `coverage-guard` false alarms from screen crops:

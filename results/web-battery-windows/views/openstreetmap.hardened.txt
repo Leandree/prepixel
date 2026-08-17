@@ -1,0 +1,101 @@
+a 10,13,163,30
+[pixels] img 10,13,30,30 alt=Logo d’OpenStreetMap
+text 44,15,129,24 "OpenStreetMap"
+a 193,10,78,35 id=editanchor
+text 206,18,52,19 "Modifier"
+button 271,10,28,35
+a 315,13,72,29
+text 319,18,64,19 "Historique"
+a 387,13,60,29
+text 391,18,52,19 "Exporter"
+a 446,13,75,29
+text 450,18,67,19 "Traces GPS"
+a 521,13,159,29
+text 525,18,151,19 "Journaux des utilisateurs"
+a 680,13,98,29
+text 684,18,90,19 "Communautés"
+a 778,13,100,29
+text 782,18,92,19 "Droits d’auteur"
+a 878,13,36,29
+text 882,18,28,19 "Aide"
+button 986,13,45,29
+text 990,18,25,19 "Plus"
+button 1038,10,38,35
+a 1084,10,106,35
+text 1097,18,80,19 "Se connecter"
+a 1189,10,81,35
+text 1202,18,55,19 "S’inscrire"
+input 8,63,255,34 id=query
+button 202,69,57,23
+text 206,73,49,14 "Où est-ce ?"
+button 262,63,34,34
+[pixels] svg 267,72,24,20
+a 304,63,38,34
+[pixels] svg 309,68,28,24
+button 312,113,30,30
+text 16,118,244,81 "Bienvenue dans OpenStreetMap !"
+text 16,207,316,69 "OpenStreetMap est une carte du monde, créée par des gens comme vous et libre d’utilisation sous licence libre."
+text 16,295,221,19 "L’hébergement est pris en charge par"
+a 237,295,30,19
+text 237,295,30,19 "Fastly"
+text 268,295,7,19 ","
+a 16,295,279,40 [occluded]
+text 16,295,279,40 "des entreprises membres de l'OSMF"
+text 201,316,67,19 ", et d’autres"
+a 16,337,65,19
+text 16,337,65,19 "partenaires"
+text 81,337,3,19 "."
+text 16,374,299,61 "En utilisant ce site web ou toute autre infrastructure fournie par la Fondation OpenStreetMap, vous acceptez les"
+a 91,416,132,19
+text 91,416,132,19 "Conditions d'utilisation"
+text 223,416,3,19 "."
+a 16,452,155,62
+text 45,472,96,21 "En savoir plus"
+a 179,452,155,62
+text 207,460,98,45 "Commencer à cartographier"
+a 0,693,350,19
+[pixels] img 0,530,350,350 alt=State of the Map 2026
+button 305,554,21,21 id=_osm_banner_sotm_2026
+[pixels] img 505,100,256,256 [occluded]
+[pixels] img 761,100,256,256 [occluded]
+[pixels] img 505,356,256,256 [occluded]
+[pixels] img 761,356,256,256 [occluded]
+[pixels] img 505,-156,256,256 [occluded]
+[pixels] img 761,-156,256,256 [occluded]
+[pixels] img 249,100,256,256 [occluded]
+[pixels] img 1017,100,256,256 [occluded]
+[pixels] img 249,356,256,256 [occluded]
+[pixels] img 1017,356,256,256 [occluded]
+[pixels] img 505,612,256,256 [occluded]
+[pixels] img 761,612,256,256 [occluded]
+[pixels] img 249,-156,256,256 [occluded]
+[pixels] img 1017,-156,256,256 [occluded]
+[pixels] img 249,612,256,256 [occluded]
+[pixels] img 1017,612,256,256 [occluded]
+[pixels] img -7,100,256,256 [occluded]
+[pixels] img 1273,100,256,256
+[pixels] img -7,356,256,256 [occluded]
+[pixels] img 1273,356,256,256
+[pixels] img -7,-156,256,256 [occluded]
+[pixels] img 1273,-156,256,256
+[pixels] img -7,612,256,256 [occluded]
+[pixels] img 1273,612,256,256
+a 1240,65,40,40
+a 1240,105,40,40
+a 1240,145,40,40
+a 1240,195,40,40
+a 1240,235,40,40
+a 1240,275,40,40
+a 1240,325,40,40
+a 1240,375,40,40
+text 12,762,26,14 "1 km" [occluded]
+text 12,780,37,14 "3000 ft" [occluded]
+text 764,784,12,14 "©"
+a 776,784,160,14
+text 776,784,160,14 "Contributeurs OpenStreetMap"
+text 936,784,23,14 "♥️"
+a 959,784,67,14
+text 959,784,67,14 "Faire un don"
+text 1027,784,7,14 "."
+a 1034,784,241,14
+text 1034,784,241,14 "Conditions d’utilisation du site web et de l’API"

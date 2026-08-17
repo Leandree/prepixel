@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-63 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+64 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -49,6 +49,7 @@
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile, repo test pages) | chromium | cdp | ✅ works | explicit | 273 | 1,366 | ✅ |
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile) — DUAL channel of windows-chrome-cdp, same page | chromium | accessibility-api | ✅ works | explicit | 969 | 1,560 | ✅ |
 | windows | Precision-vs-pixels duel (20 randomized order-console pages) — Windows replication of the Linux/macOS cells, same generator, same seeds | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
+| windows | 16 live public websites (same 6 categories, same URLs as the macOS battery) — third-OS replication of the real-web cost measurement | chromium | cdp | ✅ works | explicit | 1,378 | 1,366 | ✅ |
 | windows | FL Studio 2025 (Producer Edition v25.1.6) — fully custom-drawn UI (Delphi, TFruityLoopsMainForm), READ-ONLY probe, zero input sent | custom-canvas | accessibility-api | 🟡 partial | explicit | 127 | 2,642 | ✅ |
 | windows | rekordbox 7.0.9 (Pioneer DJ, JUCE framework — fully custom-drawn like FL Studio), user's real library, READ-ONLY probe | custom-canvas | accessibility-api | 🟡 partial | explicit | 2,003 | 2,584 | ✅ |
 | windows | VS Code (Electron/Chromium 148) — isolated instance, temp profile, throwaway workspace | electron | cdp | ✅ works | explicit | 648 | 1,366 | ✅ |
@@ -89,6 +90,7 @@ The production-safety question: could a router know the channel in advance, and 
 | http://127.0.0.1:9231/json/version -> Chrome/151.0.7922.138, Protocol 1.3 | cdp | ✅ works | explicit |
 | first UIA walk returns 257 nodes of browser chrome WITHOUT page content (the stub); the walk itself is the assistive-client signal — 328 nodes WITH full page content by the second walk, t+1.4 s. No --force-renderer-accessibility needed | accessibility-api | ✅ works | explicit |
 | chromium.launch on the installed chrome.exe; same duel.mjs page generator (mulberry32, seeds 1000+97i) | cdp | ✅ works | — |
+| http://127.0.0.1:9236/json/version answers; same hardened distiller as all reference cells | cdp | ✅ works | explicit |
 | single CANVAS element covering the viewport; DOM has no text/interactive nodes inside it | pixels-baseline | ⬜ unavailable | explicit |
 | TFruityLoopsMainForm window class (Delphi/VCL custom); oleacc.dll + uiautomationcore.dll loaded (minimal a11y layer); first UIA walk returns 52 nodes that are ALL PaneControl — zero interactive control types, zero value patterns. That shape IS the router's predictor: 'custom-drawn, region map only' | accessibility-api | 🟡 partial | explicit |
 | JUCE_* window class; UIA answers with a RICH 549-node tree (141 named buttons, 17 sliders, radios, combos, 11 table headers) — JUCE >=6.1 ships an accessibility layer and Pioneer wired it. Predictor refined: custom-drawn + JUCE class -> expect annotated chrome, verify list contents separately | accessibility-api | 🟡 partial | explicit |
@@ -129,9 +131,9 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 48/63.
-- **Silent divergences surviving** (disqualifying): 0/63 ✅ none
+- Cells where structure **works**: 49/64.
+- **Silent divergences surviving** (disqualifying): 0/64 ✅ none
 - Silent divergences **found, then caught-and-declared** by coverage-guard: 3 — FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
-- Cells **not** predictable in advance: 0/63 ✅ none
+- Cells **not** predictable in advance: 0/64 ✅ none
 
 Reading: the campaign found 3 silent divergences (**FL Studio 2025** (windows), **OBS Studio 31.0.3** (windows), **rekordbox 7.0.9** (windows)) and **neutralized every one** with the documented coverage-guard (pixel spot-check on structure-empty regions + view self-consistency): each cell re-emits its blind spot as an explicit `[pixels]`/`[inconsistent]` line and records the guard run in a `mitigation` field. Combined with 0 unpredictable cells, the safety claim stands in its honest form: not "structure never lies", but "every blind spot is predictable a priori and convertible to an explicit declaration by a documented, measured router guard."

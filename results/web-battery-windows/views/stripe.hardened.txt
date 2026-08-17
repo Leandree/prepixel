@@ -1,0 +1,88 @@
+a 34,26,60,25
+[pixels] svg 34,26,60,25 alt=Logo Stripe
+button 122,18,73,40
+text 122,29,53,18 "Produits"
+[pixels] svg 179,31,16,16 [occluded]
+button 219,18,78,40
+text 219,29,58,18 "Solutions"
+[pixels] svg 281,31,16,16 [occluded]
+button 321,18,107,40
+text 321,29,87,18 "Développeurs"
+[pixels] svg 413,31,16,16 [occluded]
+button 453,18,93,40
+text 453,29,73,18 "Ressources"
+[pixels] svg 529,31,16,16 [occluded]
+a 569,19,35,38
+text 569,29,35,18 "Tarifs"
+a 902,18,124,40
+[pixels] svg 903,19,122,38 [occluded]
+text 922,28,82,18 "Se connecter"
+a 1034,18,197,40
+text 1054,29,144,18 "Contacter notre équipe"
+[pixels] svg 1206,36,5,8
+text 134,184,230,18 "Part du PIB mondial traitée sur Stripe"
+text 370,184,8,18 "1"
+text 378,184,3,18 ","
+text 380,184,8,18 "6"
+text 388,184,8,18 "9"
+text 397,184,8,18 "9"
+text 405,184,8,18 "7"
+text 413,184,8,18 "5"
+text 421,184,8,18 "7"
+text 429,184,8,18 "3"
+text 437,184,8,18 "5"
+text 448,184,8,18 "%"
+text 370,202,8,18 "1"
+text 378,202,3,18 ","
+text 380,202,8,18 "6"
+text 388,202,8,18 "9"
+text 397,202,8,18 "9"
+text 405,202,8,18 "7"
+text 413,202,8,18 "5"
+text 421,202,8,18 "7"
+text 429,202,8,18 "3"
+text 437,202,8,18 "5"
+text 448,202,8,18 "%"
+text 134,240,966,51 "Une infrastructure financière qui booste votre croissance." [occluded]
+text 134,286,989,143 "Acceptez des paiements, proposez des services financiers et personnalisez votre modèle de revenus, quel que soit votre volume de transactions." [occluded]
+text 134,240,966,51 "Une infrastructure financière qui booste votre croissance."
+text 134,286,989,143 "Acceptez des paiements, proposez des services financiers et personnalisez votre modèle de revenus, quel que soit votre volume de transactions."
+a 134,467,214,48
+text 158,479,153,21 "Démarrer maintenant"
+[pixels] svg 319,488,5,8
+a 356,467,227,48
+[pixels] svg 381,484,12,12
+text 401,479,157,21 "S'inscrire avec Google"
+[pixels] canvas 250,0,1392,693 [occluded]
+[pixels] picture 250,-141,1392,975 [occluded]
+[pixels] img 250,-141,1392,975 [occluded]
+a -78,640,142,34 [occluded]
+[pixels] svg -78,640,142,34 alt=OpenAI [occluded]
+a 94,640,142,34
+[pixels] svg 94,640,142,34 alt=LaRedoute
+a 266,640,142,34
+[pixels] svg 266,640,142,34 alt=Amazon
+[pixels] svg 438,640,142,34 alt=MistralAI
+a 610,640,142,34
+[pixels] svg 610,640,142,34 alt=Nvidia
+a 782,640,142,34
+[pixels] svg 782,640,142,34 alt=LeMonde
+a 954,640,142,34 [occluded]
+[pixels] svg 954,640,142,34 alt=Figma [occluded]
+a 1126,640,142,34 [occluded]
+[pixels] svg 1126,640,142,34 alt=Alma [occluded]
+text 33,786,707,40 "Des solutions flexibles pour chaque business model."
+button 808,712,433,64 [occluded]
+[pixels] svg 832,736,16,16
+text 872,734,357,20 "Discuter par chat avec l’équipe commerciale de Stripe" [occluded]
+text 887,632,323,57 "Nous utilisons des cookies pour améliorer votre expérience, ainsi qu'à des fins de marketing. Pour en savoir plus, consultez notre"
+a 887,671,286,38
+text 887,671,286,38 "Politique relative à l'utilisation des cookies"
+text 1031,691,22,18 "ou"
+a 1052,691,107,18
+text 1052,691,107,18 "gérez les cookies"
+text 1159,691,3,18 "."
+button 887,724,129,42
+text 908,735,87,18 "Tout accepter"
+button 1024,724,118,42
+text 1045,735,76,18 "Tout refuser"

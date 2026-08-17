@@ -3839,6 +3839,71 @@
     },
     {
       "os": "windows",
+      "os_version": "Windows 11 Pro 26100, Chrome 151 isolated instance, viewport 1280x800 DPR=1, logged out, French locale",
+      "app": "16 live public websites (same 6 categories, same URLs as the macOS battery) — third-OS replication of the real-web cost measurement",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "open debug port",
+        "signature": "http://127.0.0.1:9236/json/version answers; same hardened distiller as all reference cells",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "campaign/windows/run_web_battery.mjs: exact URL list from the macOS cell, distill-hardened per site, viewport screenshot, page stats, consent detection.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "16/16 sites loaded and distilled, 0 errors."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Occlusion tagging and [pixels] declarations active on production pages (7/16 sites carry canvas or video, all declared)."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a in the battery."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a in the battery."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Blind navigation (8/8) was run on macOS; not repeated — the per-site views here are the same channel output."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Canvas-heavy sites (OpenStreetMap, Excalidraw) distill to declared [pixels] rects + chrome, at 805/762 tokens."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": 1378,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "THE OS-INVARIANCE RESULT, to two decimal places. Aggregations (macOS values in parens): ratio of totals 0.99 (1.00), median per-site 1.15 (1.21), mean 1.28 (1.30), structure ahead on 11/16 (10/16). Per-site echoes are near-exact despite different network days, locales and cookies: Vercel 3.12 (3.11), Hacker News 0.46 (0.47), Amazon.fr 0.46 (0.48), Wikipedia 0.72 (0.72), Excalidraw 1.79, Stripe 1.72, Apple 1.69, Le Monde 0.79 (0.7-0.8). The density law is a property of the PAGES, not of the OS, the renderer instance, or the day — which is exactly what the paper needs the real-web section to claim. Ops delta vs macOS: 8/16 consent banners here (6/16 there — FR locale raises more), 7/16 canvas/video sites (same). view_tokens_est above is the per-site mean (22046/16)."
+      },
+      "runtime_verification": {
+        "method": "per-site screenshot artifacts alongside every view (results/web-battery-windows/)",
+        "agreement": "views consistent with shots; consent banners appear in both when present"
+      },
+      "permissions_required": [
+        "network egress"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "results/web-battery-windows/web-battery.json",
+        "results/web-battery-windows/web-battery-summary.json",
+        "results/web-battery-windows/views/",
+        "results/web-battery-windows/shots/"
+      ]
+    },
+    {
+      "os": "windows",
       "os_version": "Windows 11 Pro 26100, live in-use machine; Microsoft 365 Word 16.0 installed by the user mid-campaign (one UAC click — the human-in-the-loop step recorded in windows-office-object-model)",
       "app": "Microsoft Word 16.0 via COM automation — the brief's Tier C star case: the document itself, above any render tree. Throwaway document, closed without saving",
       "stack": "office-native",

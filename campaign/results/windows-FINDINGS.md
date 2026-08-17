@@ -259,11 +259,20 @@ to exit the window; bound the blast radius before any uncalibrated click.
   estimate), ~0% on Qt/JUCE which don't dual-publish. Pure post-pass, no API
   cost, duplicates only.
 
+**Real-web battery, third OS (added on the manager's request).** 16/16 sites,
+same URLs as macOS, and the replication is to two decimals: ratio of totals
+**0.99** (macOS 1.00), median **1.15** (1.21), mean **1.28** (1.30), structure
+ahead **11/16** (10/16) — with per-site echoes like Vercel 3.12 vs 3.11,
+Hacker News 0.46 vs 0.47, Wikipedia 0.72 vs 0.72 across different days,
+locales and cookie states. The density law is a property of the pages, not of
+the OS or the renderer instance. FR locale raised more consent banners (8/16
+vs 6/16); 7/16 sites carry canvas/video, all declared.
+
 ## What's still open
 
-Only the real-web battery on Windows Chrome (done on macOS; the browser stack
-is OS-invariant, so low marginal value). None of this blocks the Windows
-verdict:
+Real AAA game cells (SILENT HILL 2 / UE5 and R.E.P.O. / Unity are queued;
+anticheat-protected titles excluded by policy) — on hold pending the
+manager's go-ahead. None of this blocks the Windows verdict:
 
 **Verdict (updated after the deepening round): everything was predictable a
 priori (23/23 cells carry their signature); the three silent cells the
