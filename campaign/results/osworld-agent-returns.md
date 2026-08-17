@@ -1,5 +1,32 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-18 — DONE — quota pilot 4/4 SUCCESS; driver validated; awaiting campaign go
+
+Pilot (2 non-pre-registered tasks × 2 conditions, interleaved, sonnet
+subagents, results NEVER counted in the campaign):
+
+| run | success | steps | wall | subagent tokens (quota burn) |
+|---|---|---|---|---|
+| os-A (terminal 132x43) | YES | 7 | 254s | ~221k |
+| os-B | YES | 9 | 563s | ~278k |
+| chrome-A (030eeff7) | YES | 10 | 658s | ~355k |
+| chrome-B | YES | 14 | 1525s | ~556k |
+
+Driver fully exercised, zero infra failures: coverage-guard checked 13
+suspects on os-B (0 hits — plausible on stock GTK/Chrome UIs), act-guard
+verdicts recorded (8/8 CONFIRMED on os-B), diff protocol applied, CROP
+fallback never requested. Both conditions solved both tasks; B consistently
+took MORE steps than A on these two tasks (9v7, 14v10) — small-n, no
+conclusion, but worth watching in the campaign. Cost accounting note: the
+quota figures above include the Claude Code subagent fixed overhead
+(~20–22k/spawn); the paper's per-task input-token metric will be computed
+from the traces (prompt text + image-formula tokens for images actually
+read), harness overhead excluded and reported separately. Campaign
+extrapolation: ~350k subagent tokens/run avg → **~35M tokens of subscription
+quota for the 100 runs**, ~10–12 h of VM wall clock, realistically spread
+over 2–4 days of quota windows. AWAITING manager go to start the campaign
+(interleaved, task 1 A then B, per protocol §4).
+
 **What this file is.** Correspondence between the OSWorld-campaign agent and the
 test manager, per `campaign/agent-brief-COMMON.md` § Returns and
 `OSWORLD-PROTOCOL.md` §4.5. Measurements will go in per-task JSON cells, not

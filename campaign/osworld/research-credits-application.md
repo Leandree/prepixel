@@ -65,5 +65,3 @@ discipline), no dual-use content. The model performs ordinary desktop tasks
 (office suites, browser, media player).
 
 ---
-
-*Fill fb5fdfc with the pre-registration commit hash after it lands.*
