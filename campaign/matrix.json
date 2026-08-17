@@ -2311,6 +2311,70 @@
     },
     {
       "os": "macos",
+      "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session",
+      "app": "Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab.",
+      "stack": "swing",
+      "stack_detection": {
+        "method": "bundled JVM + AWT window class",
+        "signature": "Android Studio ships Contents/jbr (OpenJDK 21.0.10); the probe's window is owned by a java process and answers AX directly — no bridge process, no jabswitch equivalent",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Accessibility TCC only. NOTE THE STRUCTURAL DIFFERENCE FROM WINDOWS: there is no Java Access Bridge on macOS and none is needed — AWT's macOS peer maps Swing's AccessibleContext onto NSAccessibility itself, so the ordinary AX client sees the Swing tree with no handshake, no flag, and no message-pump requirements. Everything the Windows cell had to fight for is free here; what it buys is examined below.",
+      "verdict": "partial",
+      "failure_class": "silent",
+      "tests": {
+        "t1_read_text": {
+          "pass": false,
+          "detail": "THE SILENT CLASS, AND IT IS A SUBSTITUTION RATHER THAN AN OMISSION. Where a Swing component carries an accessibleName, the macOS peer publishes that NAME in both AXDescription and AXValue, and the PAINTED TEXT IS THEN EXPOSED NOWHERE. Measured exhaustively, not inferred: every string attribute of every node in the tree was enumerated and searched. The screen reads 'SWING-TAP-SENTINEL café naïve 日本語 END' and 'count=0'; the channel reads 'sentinel-label' and 'counter-label'; the substrings 'SENTINEL' and 'count=' appear in ZERO attributes of ZERO nodes. Control that isolates the mechanism: the one label with no accessibleName set reports its real text correctly in AXValue ('pipeline-tap Swing probe'). So the channel returns a plausible, positive, WRONG string, with nothing declaring the discrepancy — the disqualifying shape."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Enumeration itself is good: 10 nodes, correct roles (AXStaticText, AXTextField, AXButton), every one with usable geometry, 32.5 ms for the full walk. This is where macOS beats Windows outright — the Windows cell found UIA content-blind and needed the Access Bridge to see anything; here the native tree is there for free."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "A JTextField's live contents ARE exposed: AXValue = 'initial', matching the screen. Text inputs behave correctly; it is labels that substitute."
+        },
+        "t4_living_screen": {
+          "pass": false,
+          "detail": "This is the sharpest consequence of t1. The counter label's painted text changes over time, and its AXValue is the constant string 'counter-label'. A router watching this region would report the same value forever while the screen advanced — a stale reading that is indistinguishable, from inside the channel, from a screen that did not change."
+        },
+        "t5_blind_action": {
+          "pass": false,
+          "detail": "A SECOND SILENT CLASS, ON THE ACT SIDE, WHICH THE CAMPAIGN HAD NOT SEEN BEFORE. The Increment button declares NO actions at all — AXUIElementCopyActionNames returns an empty list — and yet AXUIElementPerformAction(button, 'AXPress') returns 0, i.e. SUCCESS. Five presses were issued, including after raising the window and making the app frontmost; all five returned 0 and the counter stayed at count=0, confirmed on the window's own surface capture. The API had a correct answer available (kAXErrorActionUnsupported, -25206) and did not use it. Every previous silent divergence in this campaign was a READ that disagreed with the screen; this is an ACT that reports success and does nothing, which is worse for an agent: it will proceed believing the world changed."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "No pictorial region in the probe window."
+        }
+      },
+      "measurements": {
+        "view_bytes": 388,
+        "view_tokens_est": 97,
+        "screenshot_tokens_est": 333,
+        "diff_bytes_per_interaction": 0,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 32.5,
+        "notes": "WHY THIS CELL IS CLASSIFIED silent AND CARRIES NO mitigation RECORD, unlike the four before it. Neither guard in src/coverage-guard.mjs can catch either failure, and saying so is more useful than a clean matrix. Guard A fires on a region that structure calls EMPTY while pixels show content; here the region is not empty — there is a node, with geometry, carrying a confident string — so the guard never looks. Guard B fires on an in-view contradiction such as 'N items declared, 0 rows exposed'; a label reading 'counter-label' contradicts nothing inside the view. And no guard exists for the act side at all: nothing currently checks that an action which returned 0 actually changed anything. So the campaign's mitigation story, which held for four cells, has a boundary, and this cell is where it lies: THE GUARD CATCHES OMISSION, NOT SUBSTITUTION, AND IT DOES NOT WATCH ACTIONS. Two concrete extensions follow, and they are cheap. (1) A substitution check: for any node whose text is claimed and whose rect is known, the router can OCR-spot-check a sample rather than trust it — expensive per node, so gate it on the a-priori signature, which here is precise and free (a Swing/AWT process where AXDescription == AXValue on a static text is exactly the misannotated shape; when they differ, as on the unnamed label, the value is trustworthy). (2) An act-side guard: after any action that returns 0, re-read the target region and require SOMETHING to have changed — view diff or pixel energy delta — before reporting success to the model. The cost is one re-read per action, which the diff-streaming numbers say is around 20 tokens. COST, for the record, is not the story here but is measured: the 10-node view is 97 tokens against 333 for a screenshot of this small window — 3.4x, in the regime where the campaign already knew structure wins."
+      },
+      "runtime_verification": {
+        "method": "Every string attribute of every node enumerated and searched for the painted substrings; the window's OWN surface captured (per the rule from macos-swiftui-thirdparty — a screen-region crop at the window's coordinates showed a Terminal, because the probe window was behind others, which is that rule demonstrating itself) and read directly to confirm what the screen said before and after five AXPress calls.",
+        "agreement": "Disagreement on both axes. Read: channel says 'counter-label', screen says 'count=0'; the painted text exists in no attribute. Act: channel returns success, screen is unchanged. Enumeration, geometry and the text field's value all agree exactly — the failure is specific, not general, which is what makes it dangerous."
+      },
+      "permissions_required": [
+        "Accessibility (TCC) for host process",
+        "Screen Recording for the window-surface verification"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-macbook, live session",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/macos/SwingProbe.java",
+        "campaign/results/artifacts/macos/swing-window-surface.png"
+      ]
+    },
+    {
+      "os": "macos",
       "os_version": "macOS 26.5.2 (25F84), Apple Silicon, live user session (not headless)",
       "app": "TextEdit (com.apple.TextEdit)",
       "stack": "appkit",

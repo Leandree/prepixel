@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-66 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+67 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -48,6 +48,7 @@
 | macos | Zoom Workplace — IN-MEETING surfaces during a real meeting on the user's own account (read-only, run at the user's explicit request). Completes macos-zoom-accessibility-api, which covered the home window only. | other | accessibility-api | 🟡 partial | explicit | 54 | 1,914 | ✅ |
 | macos | Clock/Horloge (com.apple.clock, system SwiftUI app) — world clock + stopwatch | swiftui | accessibility-api | ✅ works | — | 634 | 1,049 | ✅ |
 | macos | Vibe Island (app.vibeisland.macos) — THIRD-PARTY SwiftUI notch-overlay app, the README's prime thin-tree suspect. Read-only probe, no input sent. | swiftui | accessibility-api | ✅ works | explicit | 24 | 526 | ✅ |
+| macos | Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab. | swing | accessibility-api | 🟡 partial | ❗SILENT | 97 | 333 | ✅ |
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile, repo test pages) | chromium | cdp | ✅ works | explicit | 273 | 1,366 | ✅ |
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile) — DUAL channel of windows-chrome-cdp, same page | chromium | accessibility-api | ✅ works | explicit | 969 | 1,560 | ✅ |
 | windows | Precision-vs-pixels duel (20 randomized order-console pages) — Windows replication of the Linux/macOS cells, same generator, same seeds | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
@@ -122,6 +123,7 @@ The production-safety question: could a router know the channel in advance, and 
 | Qt6Widgets.dll / Qt6Svg.dll / Qt6Network.dll mapped in obs64.exe; UIA answers through Qt's QAccessible->UIA bridge with a 185-node tree on first query | accessibility-api | 🟡 partial | explicit |
 | com.apple.clock; window tree 25 nodes with labeled toolbar tabs on first query | accessibility-api | ✅ works | — |
 | otool -L links SwiftUI.framework + AppKit.framework; bundle app.vibeisland.macos; window is kCGWindowLayer 27 (overlay layer, not a normal document window) | accessibility-api | ✅ works | explicit |
+| Android Studio ships Contents/jbr (OpenJDK 21.0.10); the probe's window is owned by a java process and answers AX directly — no bridge process, no jabswitch equivalent | accessibility-api | 🟡 partial | ❗SILENT |
 | SunAwtFrame window class (=Java/AWT, a-priori); channel signature: jabswitch enabled + windowsaccessbridge-64.dll present + isJavaWindow(hwnd)=TRUE answers immediately once the JVM runs with the AccessBridge AT loaded | java-access-bridge | ✅ works | explicit |
 | CreateObject('Shell.Application') succeeds (always present on Windows); Windows() enumerates open Explorer windows with LocationURL | object-model | ✅ works | — |
 | CabinetWClass; UIA responds with a full 188-node tree on first query | accessibility-api | ✅ works | — |
@@ -135,9 +137,9 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 49/66.
-- **Silent divergences surviving** (disqualifying): 0/66 ✅ none
+- Cells where structure **works**: 49/67.
+- **Silent divergences surviving** (disqualifying): 1/67 ❗ Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab.
 - Silent divergences **found, then caught-and-declared** by coverage-guard: 4 — Zoom Workplace, FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
-- Cells **not** predictable in advance: 0/66 ✅ none
+- Cells **not** predictable in advance: 0/67 ✅ none
 
-Reading: the campaign found 4 silent divergences (**Zoom Workplace** (macos), **FL Studio 2025** (windows), **OBS Studio 31.0.3** (windows), **rekordbox 7.0.9** (windows)) and **neutralized every one** with the documented coverage-guard (pixel spot-check on structure-empty regions + view self-consistency): each cell re-emits its blind spot as an explicit `[pixels]`/`[inconsistent]` line and records the guard run in a `mitigation` field. Combined with 0 unpredictable cells, the safety claim stands in its honest form: not "structure never lies", but "every blind spot is predictable a priori and convertible to an explicit declaration by a documented, measured router guard."
+Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **Java Swing** (macos). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.

@@ -18,6 +18,65 @@ the history of what was asked and decided is part of the record.
 
 ---
 
+## 2026-08-17 — FYI — the guard has a boundary, and I found where: Java Swing on macOS
+
+The last two macOS tasks are done and one of them broke the clean story, so it needs
+flagging rather than filing. **`macos-swing-accessibility-api` is classified `silent`
+with NO mitigation record** — the first surviving silent divergence in the matrix
+since the Windows round was neutralised. That is deliberate and I want it challenged
+if anyone disagrees.
+
+Two failures, neither of which `coverage-guard` can see:
+
+1. **Substitution, not omission.** Where a Swing component carries an
+   `accessibleName`, the macOS AWT peer publishes that name as its *value*, and the
+   painted text then appears in **no attribute of any node** — I enumerated every
+   string attribute of every node and searched; `SENTINEL` and `count=` return zero
+   hits. Control isolating the mechanism: the one label without an `accessibleName`
+   reports its real text correctly. So a counter whose text advances reads as the
+   constant `counter-label` forever. Guard A only fires on regions structure calls
+   *empty*; here there is a node with a confident string, so it never looks.
+2. **Act-side silence, a class we had not seen.** The button declares **zero**
+   actions (`AXUIElementCopyActionNames` → `[]`) and `AXPress` returns **0, success**
+   — five times, including with the window raised and the app frontmost — while the
+   screen never changed, confirmed on the window's own surface. The API had
+   `kAXErrorActionUnsupported` available and did not use it. Every prior silent cell
+   was a bad *read*; this is an *act* that reports success and does nothing, which is
+   worse, because the agent proceeds believing the world moved.
+
+So the honest form of the safety claim is now: **the guard catches omission, not
+substitution, and it does not watch actions.** I specified two cheap extensions in
+the cell rather than leaving it as a complaint — an OCR spot-check gated on the
+a-priori signature (`AXDescription == AXValue` on a static text in an AWT process is
+exactly the misannotated shape), and an act-side guard that re-reads the target
+after any action returning 0 and requires *something* to have changed before
+reporting success upward, at roughly 20 tokens per action.
+
+For the Windows and Linux agents: your Swing/JAB and AT-SPI cells should check the
+same two things. On Windows, JAB may well expose the real label text where macOS AX
+does not — if so, that is a clean cross-OS contrast worth having, and it would mean
+the substitution is the *macOS peer's* fault specifically, not Swing's.
+
+---
+
+## 2026-08-17 — DONE — Zoom in-meeting, run live at Léandre's request
+
+`macos-zoom-inmeeting-accessibility-api`. The meeting stage's `AXTabGroup` claims
+89.6% of the window and contains exactly one 115x22 label, over a live gallery
+reading 0.876 energy — silent-by-mimicry, the FL Studio shape, **on a different OS
+and a different accessibility API**, which is the part that matters: the pattern is
+not a UIA artifact. The same app ships the opposite shape in another window (the
+1-node control bar, 0% coverage, explicit and safely cropped), so both failure modes
+sit side by side in one process. Router rule that falls out: measure coverage from a
+container's *contents*, never its declared rect.
+
+Privacy handling, since it was a real meeting: no meeting image was written to disk
+(energy computed in memory from the CGImage, only the scalar kept), and text was
+classified rather than copied — verbatim only for the app's own UI vocabulary. The
+artifact contains shapes and counts and nothing else; I re-read it to confirm.
+
+---
+
 ## 2026-08-17 — FYI — I reviewed the Windows silent→explicit reclassification, and it holds
 
 Merging the Windows round, I saw `silent=3` become `silent=0` in the matrix and went

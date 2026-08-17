@@ -15,10 +15,12 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 > **The thesis is not "never use pixels."** It's *"stop doing image interpretation
 > you don't need."* Structure is the backbone; pixels are a targeted fallback for
 > the regions structure can't read (games, video, canvas). The whole point is that
-> the boundary between the two is **knowable in advance** — and the Windows campaign
-> showed that it is *not* automatically declared. Three apps returned a view that
-> disagreed with the screen without saying so. The boundary is predictable; making
-> it **explicit is the router's job, not the OS's.**
+> the boundary between the two is **knowable in advance** — and the campaign showed
+> that it is *not* automatically declared. Five applications returned a view that
+> disagreed with the screen without saying so; a documented router guard converts
+> four of them into explicit declarations, and the fifth is still open. The boundary
+> is predictable; making it **explicit is the router's job, not the OS's** — and
+> that job is not finished.
 
 ---
 
@@ -58,17 +60,27 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
 - **Safety (the production question) — and the campaign's most important negative
-  result — followed by its repair.** Across 65 cells on three OSes, **100% of
-  channels were predictable in advance** from a stack signature. But "never silent"
-  did **not** survive contact with Windows: **3 silent divergences** (FL Studio/
-  Delphi, OBS/Qt6, rekordbox/JUCE), all the same mechanism — *disagreement by
-  omission*. A container node is present, its content is absent, and **nothing
-  declares the region opaque**. All three were then **caught and declared** by a
-  documented router guard (`src/coverage-guard.mjs`: a pixel spot-check on
-  structure-empty regions, plus a self-consistency check that needs no pixels and
-  catches "32 tracks declared, 0 rows exposed"). Each cell keeps a `mitigation`
-  record naming what it was found as, so the finding is preserved rather than
-  edited away: **3 found, 3 neutralised, 0 surviving.**
+  result — followed by its partial repair.** Across 67 cells on three OSes, **100%
+  of channels were predictable in advance** from a stack signature. But "never
+  silent" did not survive contact with reality: **5 silent divergences found, 4
+  neutralised, 1 still standing.** Four share one mechanism, *disagreement by
+  omission* — a container node is present, its content is absent, and nothing
+  declares the region opaque (FL Studio/Delphi, OBS/Qt6, rekordbox/JUCE on Windows;
+  Zoom's in-meeting stage on macOS, where an `AXTabGroup` claims 89.6% of the window
+  and holds one 115x22 label). Those four are **caught and declared** by a documented
+  router guard (`src/coverage-guard.mjs`: a pixel spot-check on structure-empty
+  regions plus a self-consistency check needing no pixels), and each keeps a
+  `mitigation` record naming what it was found as, so the finding is preserved
+  rather than edited away.
+  The fifth is different in kind and **the guard cannot catch it**: Java Swing on
+  macOS *substitutes* rather than omits. A label carrying an `accessibleName`
+  publishes that name as its value and the painted text appears in **no attribute of
+  any node** — the channel returns a confident, plausible, wrong string, and a
+  counter whose text advances reads as a constant. The same cell found the first
+  **act-side** silent failure of the campaign: a button that declares zero actions
+  accepts `AXPress` and returns **success** while nothing happens. The honest
+  summary is therefore: **the guard catches omission, not substitution, and it does
+  not watch actions** — two concrete extensions are specified in that cell.
   The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
   a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
   router computes 0% structural coverage in one walk), whereas named-but-empty panes
@@ -207,12 +219,13 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 65 cells, schema-valid, 100% predictable in advance,
-3 silent divergences found and all 3 neutralised.** Linux 21, macOS 20, Windows 24.
-The three were all Windows
-custom-drawn apps (FL Studio, OBS, rekordbox) and are the campaign's headline
-negative result; the guard that converts each one into an explicit declaration is
-the answer to it. See `campaign/MATRIX.md`, which reports *surviving* and
+**All three OSes are covered: 67 cells, schema-valid, 100% predictable in advance,
+5 silent divergences found — 4 neutralised, 1 surviving.** Linux 21, macOS 22,
+Windows 24. The four neutralised ones are custom-drawn or video
+surfaces (FL Studio, OBS, rekordbox, Zoom in-meeting) and the guard that converts
+each into an explicit declaration is the answer to them. The surviving one — Java
+Swing on macOS — is the campaign's sharpest open problem, because it substitutes
+text rather than omitting it and it fakes action success. See `campaign/MATRIX.md`, which reports *surviving* and
 *found-then-declared* as two separate numbers, and each cell's `mitigation` record.
 
 The real-web battery has now been run on all three OSes and the result is
