@@ -1,0 +1,235 @@
+a -1,-1,1,1 [occluded]
+text -1,-1,52,53 "Jump to content" [occluded]
+label 38,17,32,32 id=vector-main-menu-dropdown-label [occluded]
+mark 44,23,20,20 rgb(64, 66, 68)
+text 54,33,73,16 "Main menu" [occluded]
+a 84,14,140,38
+[pixels] img 84,14,140,22 alt=Wikipedia
+[pixels] img 84,41,140,11 alt=The Free Encyclopedia
+input 266,17,404,32 id=searchInput
+mark 275,24,18,18 rgb(32, 33, 34)
+button 669,17,71,32
+text 681,25,47,16 "Search"
+a 1023,25,45,16
+text 1023,25,45,16 "Donate"
+a 1076,25,95,16
+text 1076,25,95,16 "Create account"
+a 1179,25,38,16
+text 1179,25,38,16 "Log in"
+text 60,140,61,16 "Contents"
+button 133,137,39,22
+text 141,141,23,14 "hide"
+a 60,172,164,28
+text 60,178,34,16 "(Top)"
+a 60,200,164,28
+text 60,206,52,16 "Concept"
+a 60,228,164,28
+text 60,234,57,16 "Structure"
+button 37,229,22,22
+mark 42,234,12,12 rgb(32, 33, 34)
+text 37,245,151,12 "Toggle Structure subsection" [occluded]
+a 72,256,152,28
+text 72,262,69,16 "Application"
+a 72,284,152,28
+text 72,290,61,16 "Geometry"
+a 84,312,140,44
+text 84,318,109,32 "World Coordinate System"
+a 84,356,140,44
+text 84,362,94,32 "Camera Transformation"
+a 84,400,140,28
+text 84,406,62,16 "Projection"
+a 84,428,140,28
+text 84,434,49,16 "Lighting"
+a 84,456,140,28
+text 84,462,51,16 "Clipping"
+a 84,484,140,44
+text 84,490,109,32 "Window-Viewport transformation"
+a 72,528,152,28
+text 72,534,82,16 "Rasterization"
+a 72,556,152,28
+text 72,562,46,16 "Inverse"
+a 60,584,164,28
+text 60,590,54,16 "See also"
+a 60,612,164,28
+text 60,618,51,16 "Sources"
+a 60,640,164,28
+text 60,646,72,16 "References"
+a 60,668,164,28
+text 60,674,83,16 "External links"
+text 264,93,224,32 "Graphics pipeline"
+label 856,94,157,32 id=p-lang-btn-label [occluded]
+mark 868,100,20,20 rgb(51, 102, 204)
+text 894,102,89,16 "15 languages" [occluded]
+a 264,130,39,32
+text 264,138,39,16 "Article"
+a 319,130,25,32
+text 319,138,25,16 "Talk"
+a 804,130,33,32
+text 804,138,33,16 "Read"
+a 854,130,24,32
+text 854,138,24,16 "Edit"
+a 894,130,75,32
+text 894,138,75,16 "View history"
+label 977,130,32,32 id=vector-page-tools-dropdown-label [occluded]
+mark 983,136,20,20 rgb(64, 66, 68)
+text 993,145,33,16 "Tools" [occluded]
+text 1041,140,80,16 "Appearance"
+button 1133,137,39,22
+text 1141,141,23,14 "hide"
+text 1041,178,26,16 "Text"
+mark 1041,214,18,18 rgb(255, 255, 255)
+label 1041,213,164,26
+text 1065,216,35,16 "Small"
+mark 1041,246,18,18 rgb(255, 255, 255)
+label 1041,245,164,26
+text 1065,248,57,16 "Standard"
+mark 1041,278,18,18 rgb(255, 255, 255)
+label 1041,277,164,26
+text 1065,280,36,16 "Large"
+text 1041,321,36,16 "Width"
+mark 1041,357,18,18 rgb(255, 255, 255)
+label 1041,356,164,26
+text 1065,359,57,16 "Standard"
+mark 1041,389,18,18 rgb(255, 255, 255)
+label 1041,388,164,26
+text 1065,391,32,16 "Wide"
+text 1041,432,33,16 "Color"
+mark 1041,468,18,18 rgb(255, 255, 255)
+label 1041,467,164,26
+text 1065,470,62,16 "Automatic"
+mark 1041,500,18,18 rgb(255, 255, 255)
+label 1041,499,164,26
+text 1065,502,30,16 "Light"
+mark 1041,532,18,18 rgb(255, 255, 255)
+label 1041,531,164,26
+text 1065,534,30,16 "Dark"
+text 264,174,238,16 "From Wikipedia, the free encyclopedia"
+a 733,223,227,47 [occluded]
+text 733,223,227,22 "Three-dimensional (3D)"
+text 754,247,184,22 "computer graphics"
+a 721,357,250,16
+[pixels] img 721,277,250,178
+text 798,463,95,16 "Fundamentals"
+a 713,485,57,16
+text 713,485,57,16 "Modeling"
+a 783,485,59,16
+text 783,485,59,16 "Scanning"
+a 854,485,65,16
+text 854,485,65,16 "Rendering"
+a 931,485,48,16
+text 931,485,48,16 "Printing"
+text 802,511,88,16 "Primary uses"
+a 729,532,67,16
+text 729,532,67,16 "3D models"
+a 809,532,146,16
+text 809,532,146,16 "Computer-aided design"
+a 699,552,95,16
+text 699,552,95,16 "Graphic design"
+a 807,552,82,16
+text 807,552,82,16 "Video games"
+a 901,552,83,16
+text 901,552,83,16 "Visual effects"
+a 738,572,79,16
+text 738,572,79,16 "Visualization"
+a 829,572,117,16
+text 829,572,117,16 "Virtual engineering"
+a 727,592,81,16
+text 727,592,81,16 "Virtual reality"
+a 821,592,144,16
+text 821,592,144,16 "Virtual cinematography"
+text 798,618,96,16 "Related topics"
+a 700,639,217,16
+text 700,639,188,16 "Computer-generated imagery"
+text 888,641,29,14 "(CGI)"
+a 930,639,63,16
+text 930,639,63,16 "Animation"
+a 743,660,59,16
+text 743,660,59,16 "computer"
+a 814,660,48,16
+text 814,660,48,16 "skeletal"
+a 879,660,66,16
+text 879,660,66,16 "3D display"
+a 728,680,112,16
+text 728,680,112,16 "Wire-frame model"
+a 852,680,104,16
+text 852,680,104,16 "Texture mapping"
+a 735,700,93,16
+text 735,700,93,16 "Motion capture"
+a 841,700,108,16
+text 841,700,108,16 "Crowd simulation"
+a 727,719,115,16
+text 727,719,115,16 "Global illumination"
+a 855,719,110,16
+text 855,719,110,16 "Volume rendering"
+a 952,746,8,16
+text 952,746,8,16 "v"
+a 969,746,7,16
+text 969,746,7,16 "t"
+a 986,746,8,16
+text 986,746,8,16 "e"
+text 264,213,32,17 "The"
+text 296,213,209,17 "computer graphics pipeline"
+text 505,213,77,17 ", or simply"
+text 264,213,385,43 "graphics pipeline"
+text 324,239,141,17 ", also known as the"
+text 466,239,139,17 "rendering pipeline"
+text 264,239,374,43 ", is a series of procedures for transforming a"
+a 264,265,406,43 id=mwCQ [occluded]
+text 264,265,406,43 "three-dimensional (3D) scene"
+text 342,291,48,17 "into a"
+a 390,291,258,17 id=mwCg
+text 390,291,258,17 "two-dimensional (2D) representation"
+text 264,291,406,43 "on a screen."
+a 330,313,14,15 id=mwCw
+text 330,313,4,15 "["
+text 333,313,7,15 "1"
+text 341,313,4,15 "]"
+text 344,317,60,17 "Once a"
+a 405,317,68,17 id=mwDw
+text 405,317,68,17 "3D model"
+text 473,317,128,17 "is generated, the"
+a 264,317,358,43 id=mwEA [occluded]
+text 264,317,358,43 "3D computer graphics"
+text 264,343,374,43 "pipeline converts the model into a visually perceivable format on the computer display."
+a 630,365,14,15 id=mwEQ
+text 630,365,4,15 "["
+text 634,365,7,15 "2"
+text 641,365,4,15 "]"
+text 264,411,251,17 "Due to the dependence on specific"
+a 515,411,60,17 id=mwFg
+text 515,411,60,17 "software"
+text 575,411,31,17 "and"
+a 264,437,67,17 id=mwFw
+text 264,437,67,17 "hardware"
+text 264,437,401,69 "configurations and desired display attributes, a universally applicable graphics pipeline does not exist. Nevertheless, graphics"
+a 264,489,342,43 id=mwGA [occluded]
+text 264,489,342,43 "application programming interfaces"
+text 333,515,117,17 "(APIs), such as"
+a 451,515,62,17 id=mwGQ
+text 451,515,62,17 "Direct3D"
+text 513,515,9,17 ","
+a 522,515,60,17 id=mwGg
+text 522,515,60,17 "OpenGL"
+text 582,515,36,17 "and"
+a 617,515,48,17 id=mwGw
+text 617,515,48,17 "Vulkan"
+text 264,541,405,95 "were developed to standardize common procedures and oversee the graphics pipeline of a given hardware accelerator. These APIs provide an abstraction layer over the underlying hardware, relieving"
+a 509,619,95,17 id=mwHA
+text 509,619,95,17 "programmers"
+text 264,619,403,69 "from the need to write code explicitly targeting various graphics hardware accelerators like"
+a 454,671,36,17 id=mwHQ
+text 454,671,36,17 "AMD"
+text 490,671,9,17 ","
+a 499,671,30,17 id=mwHg
+text 499,671,30,17 "Intel"
+text 529,671,9,17 ","
+a 538,671,44,17 id=mwHw
+text 538,671,44,17 "Nvidia"
+text 582,671,89,17 ", and others."
+text 264,713,407,69 "The model of the graphics pipeline is usually used in real-time rendering. Often, most of the pipeline steps are implemented in hardware, which allows for special"
+a 264,791,93,17 id=mwIQ [occluded]
+text 264,791,93,17 "optimizations"
+text 357,791,458,17 ". The term "pipeline" is used in a similar sense for the pipeline in"
+a 815,791,78,17 id=mwIg [occluded]
+text 815,791,78,17 "processors"
+text 264,791,731,43 ": the individual steps of the pipeline often run in parallel when a given stage has enough data."

@@ -1,0 +1,45 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, panel temporarily set to 125% (96->120 DPI via SPI_SETLOGICALDPIOVERRIDE), reverted and verified after",
+  "app": "LIVE coordinate-trap demo at 125% scaling (DEEPENING-PLAN P1): one blind click that MISSES under the naive frame and HITS after self-calibration",
+  "stack": "win32-gdi",
+  "stack_detection": {
+    "method": "per-process DPI-awareness audit",
+    "signature": "router process: per-monitor-aware (UIA rects physical); executor process: DPI-unaware (no manifest, no SetProcessDpiAwareness) — its LOGPIXELSX reads 96 while the fresh-aware probe reads 120: the mismatch IS the detectable signature",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Target: the 'Horloges supplémentaires' tab of timedate.cpl (SELECTED state flips in-channel = pixel-free hit verification). Dialog positioned so the predicted x1.25 miss lands harmlessly inside the same dialog (safety precondition asserted before any click; the first run ABORTED on that assertion with a Calculator target — the guard works).",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "n/a — coordinate-frame cell." },
+    "t2_enumerate": { "pass": null, "detail": "n/a." },
+    "t3_live_value": { "pass": null, "detail": "n/a." },
+    "t4_living_screen": { "pass": null, "detail": "n/a." },
+    "t5_blind_action": { "pass": true, "detail": "THE TRAP, measured: UIA published the tab at physical (588,358); the DPI-unaware executor was handed exactly that, its own GetCursorPos then REPORTED (588,358) — the virtualization lies to the process about its own miss — while the real cursor sat at (735,448) (=x1.25). Tab stayed [selected=False]: MISS. Calibration probe: ask (320,320), land (400,400) -> scale 1.25 measured (not assumed). Corrected hand-off (470.4,286.4) logical -> landed (588,358) physical exactly -> tab flipped [selected=True]: HIT, verified in-channel before any screenshot." },
+    "t6_pictorial": { "pass": null, "detail": "n/a." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": null,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Closes DEEPENING-PLAN P1-Windows: the trap is now DEMONSTRATED, not just encoded. Three lessons with numbers: (1) the naive miss is invisible from inside the unaware process (own GetCursorPos echoes the asked coords; LOGPIXELSX reads 96 under 120) — only an independent aware reader sees (735,448); (2) the calibration is one move-and-measure round-trip (~150 ms) and yields the exact scale, mirroring the sandbox click-dpr.html finding: MEASURE the box->input scale, never hardcode /DPR; (3) the safety precondition (predicted-landing-inside-harmless-zone) aborted the first attempt against Calculator — mis-scaled clicks land 25% down-right of target, far enough to leave the window entirely; routers must bound the blast radius before any uncalibrated click. Scaling restored in a finally block: 96 DPI re-verified. Windows-vs-macOS symmetry now complete: same trap class, opposite direction (macOS CDP: device-px boxes fed to CSS-px input, divide; Windows: physical-px boxes fed to a virtualized executor, divide) — one self-calibration probe covers both."
+  },
+  "runtime_verification": {
+    "method": "in-channel selected-state before/after each click + independent aware-process GetCursorPos as ground truth for where clicks actually landed",
+    "agreement": "naive: channel and cursor agree it missed; calibrated: landed exactly on target, state flipped"
+  },
+  "permissions_required": ["ability to change display scaling (SystemParametersInfo, reverted immediately)"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/scaling-trap-log.json",
+    "campaign/results/artifacts/windows/scaling-trap-shot.png",
+    "campaign/windows/unaware_clicker.py",
+    "campaign/windows/run_scaling_trap.py"
+  ]
+}

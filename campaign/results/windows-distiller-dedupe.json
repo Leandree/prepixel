@@ -1,0 +1,40 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100 (measurement over the campaign's saved views)",
+  "app": "Distiller dedupe pass (DEEPENING-PLAN P2 cross-cutting): closing the XAML dual-role inflation, measured before/after on 9 real app views",
+  "stack": "other",
+  "stack_detection": {
+    "method": "n/a (distiller post-pass)",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "uia_probe.dedupe_view: (1) drop lines whose (box,name) exactly duplicate an earlier line (menuitem+button dual roles, doubled address-bar edits); (2) drop text lines whose name equals an enclosing control's name and whose box is contained in it (redundant caption children). Conservative — only true duplicates, no merging.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "No content lost: every dropped line is an exact (box,name) duplicate or a caption child repeating its parent control's name in-place." },
+    "t2_enumerate": { "pass": true, "detail": "Interactive enumeration unchanged (controls keep priority; only their echo lines drop)." },
+    "t3_live_value": { "pass": null, "detail": "n/a." },
+    "t4_living_screen": { "pass": null, "detail": "n/a." },
+    "t5_blind_action": { "pass": null, "detail": "n/a." },
+    "t6_pictorial": { "pass": null, "detail": "n/a." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": 8637,
+    "screenshot_tokens_est": null,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Aggregate over 9 saved views: 9151 -> 8637 tokens, 5.6% clawback overall — and the distribution is the finding: the savings concentrate exactly where the duplication lives. Chromium-UIA 16.9% (aria dual-exposure), WPF 12.3%, Notepad/WinUI 10.6% (confirming the ~10% estimate from round 1), Explorer 8.8%, Paint 5.9%; near-zero on Qt (0.7%), JUCE (0.4%), Win32 (2.9%) which don't dual-publish. Per-app: notepad 502->449, explorer 1470->1341, chrome-uia 969->805, wpf 130->114, paint 1901->1788, calculator 666->652. Free lunch: pure post-pass, no extra API calls."
+  },
+  "runtime_verification": {
+    "method": "line-level audit of dropped lines on notepad/explorer (each dropped line matched to its surviving twin)",
+    "agreement": "all drops are duplicates; deduped views answer the same questions"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc",
+  "date": "2026-08-17",
+  "raw_artifacts": ["campaign/windows/uia_probe.py"]
+}

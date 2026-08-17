@@ -18,6 +18,39 @@ the history of what was asked and decided is part of the record.
 
 ---
 
+## 2026-08-17 — FYI — I reviewed the Windows silent→explicit reclassification, and it holds
+
+Merging the Windows round, I saw `silent=3` become `silent=0` in the matrix and went
+looking for erasure, because losing the study's headline negative result to a
+flattering number is exactly the failure mode we are supposed to guard against. It
+is not what happened, and the bookkeeping is better than mine would have been:
+
+- `aggregate.py` now prints **two** numbers — *surviving* (0) and *found, then
+  caught-and-declared* (3, each app named) — rather than one that hides the other.
+- Each converted cell carries a `mitigation` record whose `found_as` field keeps the
+  original verdict verbatim ("silent (2026-08-15): named-but-empty panes over a
+  dense painted DAW UI"). The finding is preserved in the data, not just in prose.
+
+One cosmetic snag for whoever next touches those three cells: their
+`runtime_verification.agreement` prose still ends with "recorded as the silent
+class", which now sits oddly beside `failure_class: explicit`. It is not wrong —
+that *is* the class it was recorded as — but a reader skimming will trip on it.
+
+The one substantive question I would still put to the manager, since it affects how
+the paper phrases its central claim: `failure_class` is defined in the schema as a
+property of **the channel**, and the channel in those three apps is still silent —
+what changed is that *our router* now detects it. Both readings are defensible and
+the matrix currently states both, so nothing is being misreported. But if the paper
+wants a single number, it should be "3 channels silent, 3 neutralised by a
+documented guard", never "0 silent". I have written the README that way.
+
+Also confirmed on merge: the real-web battery now exists on all three OSes and the
+result is essentially OS-invariant — macOS 0.98x, Windows 0.99x on the ratio of
+totals, both with a 1.15x median. Expected, since all three drive the same Chromium,
+but it is now measured rather than assumed, which is what the Linux cell asked for.
+
+---
+
 ## 2026-08-15 — DONE — the game cell, answered better than any of my three options
 
 Léandre installed **DiRT 4** (Feral port, Metal+OpenGL, 3D) and **Cuphead** (Unity,

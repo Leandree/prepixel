@@ -1,0 +1,71 @@
+button 24,16,24,24 id=button [occluded]
+[pixels] svg 24,16,24,24 [occluded]
+a 56,0,123,56 id=logo [occluded]
+[pixels] svg 72,18,93,20 [occluded]
+text 169,12,12,13 "FR" [occluded]
+input 332,16,567,24 [occluded]
+button 903,8,64,40 [occluded]
+[pixels] svg 923,16,24,24 [occluded]
+a 1063,8,40,40 [occluded]
+button 1071,16,24,24 id=button [occluded]
+[pixels] svg 1071,16,24,24 [occluded]
+a 1111,8,138,40 [occluded]
+[pixels] svg 1121,16,24,24 [occluded]
+text 1151,19,82,17 "Se connecter" [occluded]
+a 4,60,64,76 id=endpoint [occluded]
+[pixels] svg 24,76,24,24 [occluded]
+text 20,107,33,13 "Accueil" [occluded]
+a 4,136,64,76 id=endpoint [occluded]
+[pixels] svg 24,152,24,24 [occluded]
+text 21,183,29,13 "Shorts" [occluded]
+a 4,212,64,76 id=endpoint [occluded]
+[pixels] svg 24,228,24,24 [occluded]
+text 5,259,62,13 "Abonnements" [occluded]
+a 4,288,64,76 id=endpoint [occluded]
+[pixels] svg 24,304,24,24 [occluded]
+text 25,335,23,13 "Vous" [occluded]
+text 510,107,317,22 "Votre historique YouTube est désactivé" [occluded]
+text 362,144,616,97 "Vous pouvez activer l'historique des vidéos regardées et l'historique des recherches à tout moment pour que nous vous proposions les dernières vidéos adaptées à vos goûts.
+
+Pour actualiser votre sélection, activez l'historique YouTube, et acceptez l'utilisation des cookies et des données dans vos paramètres." [occluded]
+a 736,223,86,20 [occluded]
+text 736,224,86,17 "En savoir plus" [occluded]
+a 361,255,616,40 [occluded]
+text 601,266,135,17 "Modifier le paramètre" [occluded]
+[pixels] svg 314,34,93,20 [occluded]
+text 415,35,127,17 "Une filiale de Google"
+button 746,24,66,40
+[pixels] svg 756,32,24,24 [occluded]
+text 786,35,10,17 "fr" [occluded]
+a 828,24,138,40
+[pixels] svg 838,32,24,24 [occluded]
+text 868,35,82,17 "Se connecter" [occluded]
+text 472,90,321,34 "Avant d'accéder à YouTube"
+text 314,151,119,17 "Nous utilisons des"
+a 433,150,48,20
+text 433,151,48,17 "cookies"
+text 481,151,307,17 "et des données, y compris des adresses IP, pour :"
+[pixels] svg 314,186,24,24 [occluded]
+text 354,187,461,17 "Proposer les services Google et s'assurer qu'ils fonctionnent correctement"
+[pixels] svg 314,218,24,24 [occluded]
+text 354,219,522,17 "Suivre les interruptions de service et protéger contre le spam, les fraudes et les abus"
+[pixels] svg 314,250,24,24 [occluded]
+text 354,251,591,37 "Mesurer l'engagement de l'audience et les statistiques des sites pour comprendre la façon dont nos services sont utilisés et pour améliorer leur qualité"
+text 314,307,636,37 "Si vous sélectionnez "Tout accepter", nous utiliserons aussi des cookies et des données, y compris des adresses IP, pour :"
+[pixels] svg 314,362,24,24 [occluded]
+text 354,363,307,17 "Développer de nouveaux services et les améliorer"
+[pixels] svg 314,394,24,24 [occluded]
+text 354,395,291,17 "Diffuser des annonces et évaluer leur efficacité"
+[pixels] svg 314,426,24,24 [occluded]
+text 354,427,427,17 "Proposer des contenus personnalisés en fonction de vos paramètres"
+[pixels] svg 314,458,24,24 [occluded]
+text 354,459,429,17 "Afficher des annonces personnalisées en fonction de vos paramètres"
+text 314,499,590,37 "Si vous sélectionnez "Tout refuser", nous n'utiliserons pas de cookies ni d'adresses IP à ces fins supplémentaires."
+text 314,555,636,137 "Les annonces et les contenus non personnalisés dépendent, par exemple, du contenu du site que vous consultez et de votre position (la diffusion d'annonces est basée sur votre position approximative). Les annonces et les contenus personnalisés peuvent aussi inclure, par exemple, des recommandations de vidéos, une page d'accueil YouTube personnalisée et des annonces adaptées en fonction de votre activité passée, comme les vidéos que vous avez regardées et les contenus que vous avez recherchés sur YouTube. Le cas échéant, nous adaptons également l'expérience en fonction de l'âge de l'utilisateur à l'aide de cookies et de données."
+text 314,711,626,37 "Cliquez sur "Plus d'options" pour afficher plus d'informations, y compris sur la manière de gérer vos paramètres de confidentialité. Vous pouvez aussi consulter la page g.co/privacytools à tout moment."
+button 557,786,108,40 [occluded]
+text 573,797,76,17 "Tout refuser"
+button 685,786,118,40 [occluded]
+text 701,797,86,17 "Tout accepter"
+a 823,786,120,40 [occluded]
+text 839,797,88,17 "Plus d'options"

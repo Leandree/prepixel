@@ -1,0 +1,91 @@
+a 112,18,111,44 [occluded]
+text 120,30,95,18 "aller au contenu" [occluded]
+a 239,18,140,44 [occluded]
+text 247,30,124,18 "aller au pied de page" [occluded]
+[pixels] svg 911,34,12,12 [occluded]
+input -1,-1,1,1 id=high-contrast-toggle value="on" [occluded]
+label 965,28,173,24 id=:switch-label-_R_o9braqj6_ [occluded]
+text 965,29,173,22 "Renforcer les contrastes" [occluded]
+[pixels] svg 100,15,164,30 [occluded]
+a 326,8,216,44 [occluded]
+[pixels] svg 342,22,16,16 [occluded]
+text 366,19,160,22 "Déposer une annonce" [occluded]
+input 558,8,272,44 id=search-header-extendable-input [occluded]
+button 790,14,32,32 [occluded]
+[pixels] svg 798,22,16,16 [occluded]
+a 846,0,100,59 [occluded]
+[pixels] svg 884,8,24,24 [occluded]
+text 854,36,84,16 "Mes recherches" [occluded]
+a 945,0,54,59 [occluded]
+[pixels] svg 961,8,24,24 [occluded]
+text 953,36,38,16 "Favoris" [occluded]
+a 1000,0,70,59 [occluded]
+[pixels] svg 1023,8,24,24 [occluded]
+text 1008,36,54,16 "Messages" [occluded]
+button 1070,0,96,59 [occluded]
+[pixels] svg 1106,8,24,24 [occluded]
+text 1083,36,69,16 "Se connecter" [occluded]
+button 100,59,70,50 [occluded]
+text 101,74,67,19 "Immobilier" [occluded]
+button 207,59,62,50 [occluded]
+text 208,74,60,19 "Véhicules" [occluded]
+button 307,59,79,50 [occluded]
+text 308,74,76,19 "Matériel pro" [occluded]
+button 424,59,45,50 [occluded]
+text 424,74,43,19 "Emploi" [occluded]
+button 506,59,36,50 [occluded]
+text 507,74,35,19 "Mode" [occluded]
+button 580,59,102,50 [occluded]
+text 582,74,98,19 "Maison & Jardin" [occluded]
+button 720,59,48,50 [occluded]
+text 721,74,46,19 "Famille" [occluded]
+button 806,59,82,50 [occluded]
+text 807,74,78,19 "Électronique" [occluded]
+button 925,59,42,50 [occluded]
+text 926,74,40,19 "Loisirs" [occluded]
+button 1005,59,44,50 [occluded]
+text 1006,74,42,19 "Autres" [occluded]
+a 1086,59,79,50 [occluded]
+text 1086,74,79,19 "Bons plans !" [occluded]
+text -1,373,258,18 "leboncoin, site de petites annonces gratuites" [occluded]
+[pixels] img 116,390,1034,124 [occluded]
+text 484,406,297,32 "C’est le moment de vendre" [occluded]
+a 520,454,224,44 [occluded]
+[pixels] svg 536,464,24,24 [occluded]
+text 568,465,160,22 "Déposer une annonce" [occluded]
+text 116,554,190,27 "Recherches récentes" [occluded]
+text 141,619,356,24 "Et si vous lanciez une première recherche ?" [occluded]
+text 141,675,422,18 "Vos recherches s’afficheront ici pour y accéder facilement à tout moment." [occluded]
+text 116,751,224,27 "Tendance en ce moment" [occluded]
+a 116,795,192,240 [occluded]
+[pixels] img 116,795,192,240
+a 324,795,192,240 [occluded]
+[pixels] img 324,795,192,240
+a 532,795,192,240 [occluded]
+[pixels] img 532,795,192,240
+a 740,795,192,240 [occluded]
+[pixels] img 740,795,192,240
+a 948,795,192,240 [occluded]
+[pixels] img 948,795,192,240
+text 132,62,229,18 "Contenu de la fenêtre de consentement" [occluded]
+[pixels] bg 133,63,350,674
+[pixels] svg 704,87,208,38
+button 722,133,172,24
+text 722,134,172,22 "Continuer sans accepter"
+text 507,181,582,27 "Pour leboncoin, votre expérience sur notre site est une priorité."
+text 507,214,595,46 "C'est pourquoi nous utilisons des cookies et autres traceurs pour vous fournir notre service, le personnaliser, en mesurer l'audience et améliorer votre expérience."
+text 507,262,584,70 "Sur la base de votre consentement, des informations liées à votre navigation sur notre site (telle que l'IP, les pages visitées, etc.) sont stockées et/ou lues sur votre terminal par leboncoin et ses"
+button 718,309,114,24
+text 718,310,114,22 "192 partenaires"
+text 832,310,4,22 "."
+text 507,334,595,94 "Ces derniers peuvent également associer ces informations à vos données personnelles, sur la base de votre consentement ou de leur intérêt légitime, afin de diffuser des publicités personnalisées/ciblées sur différentes plateformes, mesurer leurs performances, obtenir des données d'audience et améliorer les produits."
+text 507,430,513,22 "Vous pouvez vous y opposer en cliquant sur le bouton « Personnaliser »."
+text 507,454,571,94 "En cliquant sur « Accepter », vous consentez à l'utilisation de cookies pour l'ensemble des finalités ci-dessus. Vous pouvez également configurer vos choix finalité par finalité en cliquant sur « Personnaliser » ou refuser en cliquant sur « Continuer sans accepter »."
+text 507,550,589,46 "Vous pouvez changer d'avis à tout moment en cliquant sur « Gestion des cookies » figurant en bas de chaque page. Pour plus d'informations, rendez-vous sur notre"
+a 507,598,190,22
+text 507,598,190,22 "politique de confidentialité"
+text 697,598,4,22 "."
+button 592,669,208,44
+text 644,680,104,22 "En savoir plus"
+button 816,669,208,44 id=didomi-agree-to-all
+text 840,680,159,22 "Accepter & Fermer →"

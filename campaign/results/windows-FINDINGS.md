@@ -197,22 +197,93 @@ a signed uiAccess client) and **UAC consent** (secure desktop, human-only).
 macOS gates the channel behind one human toggle; Windows gives the channel away
 and gates *power* instead.
 
+---
+
+# Deepening round (2026-08-17) — closing the DEEPENING-PLAN's Windows items
+
+**P0 — the mitigation, proven on the real silent apps.** All three re-opened
+(read-only) and run through coverage-guard:
+
+- **OBS**: the guard *auto-found* the exact silent region ('OBSBasicPreview',
+  the only structure-empty rect >150k px² in a 46.5%-covered client area),
+  energy **0.245** → re-emitted `[pixels] group … [unverified: pixels show
+  content]`. The evidence crop literally shows the painted "On arrive bientôt".
+  Cost: PrintWindow 30 ms + guard 2.5 ms; the crop is 245 tokens vs 1275 for a
+  full-window shot.
+- **FL Studio**: 5 suspects auto-found (both wizard grids incl. Recent
+  projects, the browser tree, the playlist panel, the toolbar), energies
+  0.085–0.621, **5/5 flagged**; crops total 1780 tok < 2642 full-window — the
+  guard stays sub-screenshot even when the whole app is painted.
+- **rekordbox**: guard A found *nothing* — the table rect contains named
+  headers, so it isn't structure-empty — and guard B caught it **from the view
+  alone, for free**: '32 Tracks' + 0 rows → `[inconsistent … unexposed list,
+  crop]`. The case that proves the two guards are independent and both needed.
+
+The three cells now carry `failure_class: explicit` + a `mitigation` record;
+the aggregate reads **0 silent survivors, 3 caught-and-declared**.
+
+**P1 — the coordinate trap, demonstrated live at 125%.** Panel switched 96→120
+DPI (reverted and re-verified after). UIA published the timedate tab at
+physical (588,358); a deliberately DPI-unaware executor was handed exactly
+that and *its own GetCursorPos then echoed (588,358)* — the virtualization
+lies to the process about its own miss — while the real cursor sat at
+**(735,448)** (=×1.25): tab stayed unselected. One move-and-measure probe
+((320,320)→(400,400), scale 1.25 measured), corrected hand-off (470,286) →
+landed exactly (588,358) → `[selected=True]` in-channel. Bonus: the safety
+precondition (predicted-landing-inside-harmless-zone) aborted the first
+attempt against Calculator — mis-scaled clicks land 25% down-right, far enough
+to exit the window; bound the blast radius before any uncalibrated click.
+
+**P2 — the two missing tiers + the dedupe.**
+
+- **WPF** (PresentationFramework, no SDK needed): full battery green, 130 tok
+  vs 314, capture ~35 ms, everything named out of the box — even a
+  Canvas-hosted TextBlock stays structured (the anti-FL-Studio: a retained
+  element tree never rasterizes semantics away). Round-1 harness bug kept: a
+  BOM-less .ps1 made the APP display mojibake and UIA reported the mojibake
+  faithfully — the screen lied, the channel didn't.
+- **Java/Swing** (portable JDK, no admin): UIA sees the Heaven shape (7 chrome
+  nodes, 4.6% coverage) — which exposed the guard's own blind spot: a
+  frame-only tree offers *no container to check*. Fixed
+  (`synthesize_client_suspect`): coverage≈0 ⇒ the client area itself becomes
+  the suspect; energy 0.186 → declared. Then the **Java Access Bridge**
+  channel end-to-end: `jabswitch -enable` (per-user) + the explicit
+  `-Djavax.accessibility…AccessBridge` JVM flag + a 60-line ctypes client →
+  isJavaWindow TRUE, full tree (roles/names/rects) in **21.7 ms**. Two
+  handshake gotchas documented: the JVM-side AT flag beats
+  `.accessibility.properties`, and the client must pump ALL messages (a
+  starved pump reads isJavaWindow=false forever).
+- **Dedupe pass** (`uia_probe.dedupe_view`): 9151→8637 tok over 9 saved views
+  (**5.6%**), concentrated exactly where dual-publication lives — Chromium-UIA
+  16.9%, WPF 12.3%, Notepad/WinUI 10.6% (confirming the round-1 ~10%
+  estimate), ~0% on Qt/JUCE which don't dual-publish. Pure post-pass, no API
+  cost, duplicates only.
+
+**Real-web battery, third OS (added on the manager's request).** 16/16 sites,
+same URLs as macOS, and the replication is to two decimals: ratio of totals
+**0.99** (macOS 1.00), median **1.15** (1.21), mean **1.28** (1.30), structure
+ahead **11/16** (10/16) — with per-site echoes like Vercel 3.12 vs 3.11,
+Hacker News 0.46 vs 0.47, Wikipedia 0.72 vs 0.72 across different days,
+locales and cookie states. The density law is a property of the pages, not of
+the OS or the renderer instance. FR locale raised more consent banners (8/16
+vs 6/16); 7/16 sites carry canvas/video, all declared.
+
 ## What's still open
 
-A live 125/150% scaling run (this panel is 100%; the coordinate trap is encoded
-but not demonstrated), WPF and Java Access Bridge tiers (no representative apps
-installed), and the real-web battery on Windows Chrome (done on macOS; the
-browser stack is OS-invariant, so low marginal value). None of these block the
-Windows verdict:
+Real AAA game cells (SILENT HILL 2 / UE5 and R.E.P.O. / Unity are queued;
+anticheat-protected titles excluded by policy) — on hold pending the
+manager's go-ahead. None of this blocks the Windows verdict:
 
-**Verdict: everything was predictable a priori (19/19 cells carry their
-signature), failures were explicit or blocked at the OS layer — and the three
-silent cells the campaign finally found are exactly where the brief pointed
-(custom-drawn content behind thin accessibility bridges: Qt anonymous
-container, Delphi named-empty panes, JUCE headers-without-rows), are detectable
-in advance from stack signatures, and are convertible to explicit by a router
-that pairs the Win32 window map with per-window structure and spot-checks
-against per-window pixels. The annotation counter-example (rekordbox's chrome)
-and the 80x star case (Word) complete the picture: where developers or document
-models speak, structure is unbeatable; where they are silent, only the router's
-own hygiene stands between explicit and silent.**
+**Verdict (updated after the deepening round): everything was predictable a
+priori (23/23 cells carry their signature); the three silent cells the
+campaign found are exactly where the brief pointed (custom-drawn content
+behind thin accessibility bridges: Qt anonymous container, Delphi named-empty
+panes, JUCE headers-without-rows) — and every one is now CAUGHT-AND-DECLARED
+by the measured coverage-guard run against the real apps, at sub-screenshot
+cost. The coordinate trap is demonstrated, not just encoded. Every tier is
+measured or explicitly signatured — including WPF (fully structured) and
+Java (UIA-blind but with its own 21-ms structured channel). The annotation
+counter-example (rekordbox's chrome) and the 80x star case (Word) complete
+the picture: where developers or document models speak, structure is
+unbeatable; where they are silent, the router's documented guards convert
+the blind spot to an explicit declaration.**

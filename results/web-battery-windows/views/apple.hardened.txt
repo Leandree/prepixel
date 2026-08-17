@@ -1,0 +1,81 @@
+text 143,20,423,30 "Choisissez un pays ou une région pour afficher le contenu spécifique à votre localisation et acheter en ligne."
+text 682,25,55,20 "France" [occluded]
+a 998,17,95,36 id=ac-ls-continue
+text 1014,27,63,16 "Continuer"
+button 1107,26,18,18 id=ac-ls-close
+[pixels] svg 1107,26,18,18
+text 0,5,95,40 "Apple" [occluded]
+a 135,70,30,44
+[pixels] svg 143,70,14,44 [occluded]
+text 151,82,47,20 "Apple"
+a 184,70,46,44
+[pixels] svg 192,70,30,44 [occluded]
+text 192,85,30,14 "Store"
+button 215,70,22,44 id=globalnav-menubutton-link-store [occluded]
+[pixels] svg 221,88,10,10 [occluded]
+a 249,70,39,44
+[pixels] svg 257,70,23,44 [occluded]
+text 257,85,23,14 "Mac"
+button 273,70,22,44 id=globalnav-menubutton-link-mac [occluded]
+[pixels] svg 279,88,10,10 [occluded]
+a 307,70,40,44
+[pixels] svg 315,70,24,44 [occluded]
+text 315,85,24,14 "iPad"
+button 332,70,22,44 id=globalnav-menubutton-link-ipad [occluded]
+[pixels] svg 338,88,10,10 [occluded]
+a 366,70,54,44
+[pixels] svg 374,70,38,44 [occluded]
+text 374,85,38,14 "iPhone"
+button 405,70,22,44 id=globalnav-menubutton-link-iphone [occluded]
+[pixels] svg 411,88,10,10 [occluded]
+a 439,70,51,44
+[pixels] svg 447,70,35,44 [occluded]
+text 447,85,35,14 "Watch"
+button 475,70,22,44 id=globalnav-menubutton-link-watch [occluded]
+[pixels] svg 481,88,10,10 [occluded]
+a 509,70,50,44
+[pixels] svg 517,70,34,44 [occluded]
+text 517,85,34,14 "Vision"
+button 544,70,22,44 id=globalnav-menubutton-link-vision [occluded]
+[pixels] svg 550,88,10,10 [occluded]
+a 579,70,59,44
+[pixels] svg 587,70,43,44 [occluded]
+text 587,85,43,14 "AirPods"
+button 623,70,22,44 id=globalnav-menubutton-link-airpods [occluded]
+[pixels] svg 629,88,10,10 [occluded]
+a 657,70,81,44
+[pixels] svg 665,70,65,44 [occluded]
+text 665,85,63,14 "TV & Home"
+button 723,70,22,44 id=globalnav-menubutton-link-tv-home [occluded]
+[pixels] svg 729,88,10,10 [occluded]
+a 757,70,93,44
+[pixels] svg 765,70,77,44 [occluded]
+text 765,85,78,14 "Entertainment"
+button 835,70,22,44 id=globalnav-menubutton-link-entertainment [occluded]
+[pixels] svg 841,88,10,10 [occluded]
+a 869,70,83,44
+[pixels] svg 877,70,67,44 [occluded]
+text 877,85,67,14 "Accessories"
+button 937,70,22,44 id=globalnav-menubutton-link-accessories [occluded]
+[pixels] svg 943,88,10,10 [occluded]
+a 971,70,60,44
+[pixels] svg 979,70,44,44 [occluded]
+text 979,85,45,14 "Support"
+button 1016,70,22,44 id=globalnav-menubutton-link-support [occluded]
+[pixels] svg 1022,88,10,10 [occluded]
+a 1050,70,31,44 id=globalnav-menubutton-link-search
+[pixels] svg 1058,70,15,44 [occluded]
+a 1101,70,30,44 id=globalnav-menubutton-link-bag
+[pixels] svg 1109,70,14,44 [occluded]
+a 0,114,1265,692
+text 443,166,379,67 "College, sorted." [occluded]
+text 369,235,396,34 "Get a gift card from $100 to $150" [occluded]
+text 765,235,11,34 "*" [occluded]
+text 396,235,500,66 "when you buy Mac or iPad with education savings." [occluded]
+a 591,317,84,44
+text 613,329,40,20 "Shop"
+[pixels] img 22,346,1222,460 [occluded]
+[pixels] video 22,346,1222,460 alt=Animated cutouts of smiling students each carrying various MacBook and iPad models, and assorted dorm room supplies [occluded]
+[pixels] video 22,346,484,460 [occluded]
+[pixels] video 383,346,500,460 [occluded]
+[pixels] video 761,346,482,460 [occluded]

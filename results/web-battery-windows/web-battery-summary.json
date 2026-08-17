@@ -1,0 +1,12 @@
+{
+ "n_ok": 16,
+ "n_err": 0,
+ "total_structured_tokens": 22046,
+ "total_pixel_tokens": 21856,
+ "ratio_of_totals": 0.99,
+ "median_per_site_ratio": 1.15,
+ "mean_per_site_ratio": 1.28,
+ "sites_structure_ahead": 11,
+ "consent_banners": 8,
+ "canvas_or_video_sites": 7
+}

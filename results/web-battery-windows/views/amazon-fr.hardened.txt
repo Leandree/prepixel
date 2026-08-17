@@ -1,0 +1,255 @@
+text 64,512,254,20 "Cookies et choix publicitaires"
+text 64,548,570,16 "Si vous y consentez, nous pourrons utiliser vos informations personnelles provenant de ces"
+a 635,548,112,16
+text 635,548,112,16 "Services Amazon"
+text 64,548,1070,56 "pour personnaliser les publicités que nous vous proposons sur d''autres services et sur les sites tiers. Par exemple, nous pourrons utiliser votre historique des vidéos regardées sur Prime Video pour personnaliser les publicités que nous affichons sur nos Boutiques ou sur Fire TV. Nous pouvons également utiliser les informations personnelles que nous recevons de tiers."
+text 64,618,1037,16 "De plus, si vous y consentez, nous utiliserons également des cookies pour compléter votre expérience d''achat dans les boutiques Amazon, comme indiqué dans notre"
+a 64,618,1091,36 [occluded]
+text 64,618,1091,36 "Politique relative aux cookies"
+text 64,638,1087,36 ". Votre choix s''applique à l''utilisation des cookies publicitaires internes et tiers sur ce service. Les cookies stockent des informations standard relatives à un appareil, telles qu''un identifiant unique, ou y accèdent. Les"
+a 434,658,54,16
+text 434,658,54,16 "129 tiers"
+text 64,658,1021,36 "qui utilisent des cookies sur ce service le font dans le but d''afficher et de mesurer des publicités personnalisées, de générer des informations sur l''audience, et de développer et d''améliorer des produits."
+text 64,708,1102,36 "Dans tous les cas, nous utilisons des cookies et des outils similaires, qui sont nécessaires pour vous permettre d''effectuer des achats, d''améliorer votre expérience d''achat et de fournir nos services, comme indiqué dans notre"
+a 362,728,181,16 [occluded]
+text 362,728,181,16 "Politique relative aux cookies" [occluded]
+text 64,728,1119,56 ". Nous utilisons également ces cookies pour comprendre comment les clients utilisent nos services (par exemple, en mesurant les visites de sites) afin de pouvoir apporter des améliorations. Cliquez sur « Refuser » pour refuser, ou sur « Personnaliser » pour effectuer des choix publicitaires plus détaillés ou pour en savoir plus. Vous pouvez modifier vos choix à tout moment en accédant à la section" [occluded]
+a 821,768,274,16 [occluded]
+text 821,768,274,16 "Choix en matière de cookies et de publicités"
+text 64,768,1107,56 ". Pour en savoir plus sur la manière dont Amazon utilise les cookies, les publicités personnalisées et les informations personnelles, telles que l''historique des commandes sur la boutique ou l''historique des vidéos regardées sur Prime Video, et à quelles fins, consultez notre"
+input 65,739,77,30 id=sp-cc-accept value="Accepter "
+text 76,746,55,16 "Accepter" [occluded]
+input 150,739,71,30 id=sp-cc-rejectall-link value="Refuser"
+text 161,746,49,16 "Refuser" [occluded]
+a 227,746,86,16 id=sp-cc-customize
+text 227,746,86,16 "Personnaliser"
+a 12,5,127,50 id=nav-logo-sprites
+[pixels] bg 18,17,98,34 [occluded]
+text 117,22,12,15 ".fr"
+a 140,5,221,50 id=nav-global-location-popover-link
+text 167,15,119,14 "Livraison à 59000 Lille"
+text 167,28,185,16 "Mettre à jour l’emplacement"
+text 383,23,117,14 "Toutes nos catégories" [occluded]
+input 522,11,242,38 id=twotabsearchtextbox value="clavier mecanique"
+[pixels] bg 764,10,45,40 alt=Go
+input 764,10,45,40 id=nav-search-submit-button value="Go"
+a 828,6,46,50
+text 855,27,19,16 "FR"
+button 875,36,8,4
+a 893,5,138,50
+text 902,16,125,14 "Bonjour, Identifiez-vous"
+text 902,29,108,16 "Compte et listes"
+button 1032,37,8,4
+a 1051,5,102,50 id=nav-orders
+text 1060,28,84,16 "Commandes"
+a 1155,5,99,50 id=nav-cart
+text 1182,12,9,17 "0"
+[pixels] bg 1164,17,38,26
+text 1202,28,43,16 "Panier"
+a 11,60,85,39 id=nav-hamburger-menu
+text 42,72,45,16 "Toutes"
+a 101,65,94,28
+text 106,71,84,16 "Amazon Haul"
+a 205,65,68,28
+text 210,71,58,16 "Monoprix"
+a 283,65,119,28
+text 288,71,109,16 "Meilleures ventes"
+a 411,65,91,28
+text 416,71,81,16 "Ventes Flash"
+a 512,65,149,28
+text 517,71,139,16 "Dernières Nouveautés"
+a 672,65,132,28
+text 677,71,122,16 "Vendre
+sur Amazon"
+a 101,104,47,28 [occluded]
+text 106,110,37,16 "Prime" [occluded]
+button 147,117,8,4 [occluded]
+a 165,104,131,28 [occluded]
+text 170,110,121,16 "Guide de l’acheteur" [occluded]
+a 307,104,108,28 [occluded]
+text 312,110,98,16 "Cartes cadeaux" [occluded]
+button 415,117,8,4 [occluded]
+a 433,104,121,28 [occluded]
+text 438,110,111,16 "Cuisine et maison" [occluded]
+a 564,104,73,28 [occluded]
+text 569,110,63,16 "High-Tech" [occluded]
+a 647,104,100,28 [occluded]
+text 652,110,90,16 "Jeux et Jouets" [occluded]
+a 758,104,77,28 [occluded]
+text 763,110,67,16 "Jeux vidéo" [occluded]
+a 101,143,43,28 [occluded]
+text 106,149,33,16 "Bébé" [occluded]
+a 154,143,180,28 [occluded]
+text 159,149,170,16 "Santé et produits d’hygiène" [occluded]
+a 343,143,88,28 [occluded]
+text 348,149,78,16 "Informatique" [occluded]
+a 441,143,192,28 [occluded]
+text 446,149,182,16 "Sports & Activités en plein-air" [occluded]
+a 643,143,54,28 [occluded]
+text 648,149,44,16 "Beauté" [occluded]
+a 708,143,89,28 [occluded]
+text 713,149,79,16 "Auto et moto" [occluded]
+a 101,182,45,28 [occluded]
+text 106,188,35,16 "Mode" [occluded]
+a 156,182,152,28 [occluded]
+text 161,188,142,16 "Produits personnalisés" [occluded]
+a 318,182,145,28 [occluded]
+text 323,188,135,16 "Produits du Quotidien" [occluded]
+a 472,182,117,28 [occluded]
+text 477,188,107,16 "Livraison gratuite" [occluded]
+a 599,182,164,28 [occluded]
+text 604,188,154,16 "Prévoyez et Économisez" [occluded]
+a 101,221,86,28 [occluded]
+text 106,227,76,16 "Prime Video" [occluded]
+a 197,221,100,28 [occluded]
+text 202,227,90,16 "Ebooks Kindle" [occluded]
+a 306,221,124,28 [occluded]
+text 311,227,114,16 "Marques Premium" [occluded]
+a 441,221,47,28 [occluded]
+text 446,227,37,16 "Livres" [occluded]
+a 498,221,96,28 [occluded]
+text 503,227,86,16 "Service Client" [occluded]
+a 865,60,400,39
+[pixels] img 865,60,400,39 alt=Prime
+a 19,100,73,31
+text 26,109,59,14 "Amazon.fr"
+a 100,100,170,31
+text 107,109,156,14 "Points de retrait Amazon Hub"
+a 278,100,83,31
+text 285,109,69,14 "Ventes Flash"
+button 358,114,6,3
+a 380,100,46,31
+text 387,109,32,14 "Outlet"
+a 434,100,62,31
+text 441,109,48,14 "Coupons"
+a 504,100,107,31
+text 511,109,93,14 "Meilleures ventes"
+button 609,114,6,3
+a 631,100,138,31
+text 638,109,124,14 "Amazon Seconde main"
+a 777,100,116,31
+text 784,109,102,14 "Nos idées cadeaux"
+button 890,114,6,3
+a 912,100,107,31
+text 919,109,93,14 "Services Amazon"
+button 1015,114,6,3
+text 9,145,243,16 "1-48 sur plus de 100 000 résultats pour"
+text 255,145,135,16 ""clavier mecanique""
+label 1096,141,63,22 [occluded]
+text 1098,143,61,16 "Trier par:" [occluded]
+select 1096,141,156,20 id=s-result-sort-select value="relevanceblender" [occluded]
+text 1108,146,48,14 "Trier par:"
+text 1162,146,68,14 "Mis en avant"
+a 263,196,994,332 [occluded]
+a 267,200,52,52
+[pixels] img 267,200,52,52 alt=Logo blanc sur fond orange. Icône de casque stylisée au-dessus du texte
+a 344,201,408,23
+text 344,202,408,20 "La Seule Gamme De Claviers Avec Triple Threat"
+text 344,232,54,14 "Sponsorisé"
+text 420,231,3,14 "|"
+text 428,232,290,14 "Les 10 marques les plus vendues dans cette catégorie"
+text 723,231,3,14 "|"
+a 732,232,168,16
+text 732,232,99,14 "En savoir plus sur"
+text 830,232,65,14 "SteelSeries"
+[pixels] svg 895,236,5,7
+a 264,265,489,254 [occluded]
+a 264,265,244,254
+[pixels] img 282,309,208,166 alt=SteelSeries Apex Pro Gen 3 - Clavier Gamer HyperMagnetic - Switches OmniPoint 3.0 - Actionnement Ajustable - Toucher Rapide/SOCD - OLED - RGB - Capuchons PBT - USB-C - FR Layout AZERTY
+a 264,265,489,254
+a 516,336,228,42
+text 516,337,223,38 "SteelSeries Apex Pro Gen 3 - Clavier Gamer HyperMagneti…"
+a 516,382,228,16
+text 516,383,17,14 "4.4" [occluded]
+text 600,383,21,14 "(70)"
+a 516,402,58,20
+text 516,402,28,19 "198"
+text 545,402,5,19 ","
+text 549,402,19,19 "99"
+text 571,403,6,12 "€"
+text 516,426,56,14 "Conseillé :" [occluded]
+text 576,426,47,14 "269,99 €" [occluded]
+a 763,265,489,254 [occluded]
+a 763,265,244,254
+[pixels] img 781,296,208,192 alt=SteelSeries Apex Pro TKL Gen 3 – Commutateurs magnétiques analogiques OmniPoint 3.0, préréglages automatiques Quickset (Rapid Trigger, Rapid Tap/SOCD, Mode de Protection), OLED, RGB, USB-C, FR AZERTY
+a 763,265,489,254
+a 1015,336,228,42
+text 1015,337,227,38 "SteelSeries Apex Pro TKL Gen 3 – Commutateurs magnétiqu…"
+a 1015,382,228,16
+text 1015,383,17,14 "4.7" [occluded]
+text 1098,383,28,14 "(688)"
+a 1015,402,58,20
+text 1015,402,28,19 "189"
+text 1043,402,5,19 ","
+text 1048,402,19,19 "99"
+text 1069,403,6,12 "€"
+text 1015,426,43,14 "Ancien :" [occluded]
+text 1062,426,47,14 "202,17 €" [occluded]
+a 1262,265,489,254 [occluded]
+a 1262,265,244,254 [occluded]
+[pixels] img 1280,327,208,131 alt=SteelSeries Apex Pro Mini Gen 3 Switchs OmniPoint 3.0 - Actionnement Ajustable - Rapid Trigger - Préréglages prêts à Jouer - Mode Protection - Rapid Tap/SOCD - OLED - Capuchons PBT - Format FR AZERTY
+a 1262,265,489,254 [occluded]
+a 1209,366,48,48 id=a-autoid-2
+text 1228,388,64,16 "Next page" [occluded]
+text 263,531,90,22 "Résultats" [occluded]
+a 263,558,224,16 [occluded]
+text 263,558,224,16 "En apprendre plus sur ces résultats." [occluded]
+text 491,558,488,16 "Consultez la page de chaque produit pour connaître les autres options d'achat." [occluded]
+a 272,581,224,224 [occluded]
+[pixels] img 272,608,224,170 alt=Publicité sponsorisée - be quiet! Clavier Dark Mount Silent Linear FR ISO, modularité inégalée, 8 Touches programmables av... [occluded]
+a 522,581,224,224 [occluded]
+[pixels] img 522,652,224,82 alt=Publicité sponsorisée - The G-Lab Keyz Elite 300 GRG - Clavier sans Fil TKL Mécanique AZERTY FR | Sans Fil Tri Mode 2.4GH... [occluded]
+a 773,581,224,224 [occluded]
+[pixels] img 773,616,224,155 alt=Publicité sponsorisée - Keychron V1 Max 75% Mise en Page Clavier Mécanique sans Fil Personnalisé, 2.4GHz Bluetooth Cable C... [occluded]
+a 1023,581,224,224 [occluded]
+[pixels] img 1023,615,224,157 alt=Publicité sponsorisée - nuphy Clavier mécanique sans Fil Node75 (ISO-FR AZERTY) | clavier personnalisable à 75 % avec touc... [occluded]
+text 13,198,194,16 "Éligible à la livraison gratuite"
+a 13,226,230,62
+label 13,222,24,24
+text 37,226,107,16 "Livraison gratuite"
+text 13,250,216,36 "Livraison gratuite par Amazon vers les destinations éligibles"
+text 13,306,26,16 "Prix"
+label 13,332,41,20
+text 13,334,41,16 "2 EUR"
+text 58,334,8,16 "–"
+label 70,332,116,20
+text 70,334,116,16 "8 100 EUR et plus"
+input 13,380,230,4 id=p_36/range-slider_slider-item_lower-bound-slider value="0" [occluded]
+input 13,380,230,4 id=p_36/range-slider_slider-item_upper-bound-slider value="167" [occluded]
+a 37,422,101,16
+label 13,418,24,24
+text 37,422,101,16 "Jusqu’à 20 EUR"
+a 37,446,100,16
+label 13,442,24,24
+text 37,446,100,16 "de 20 à 40 EUR"
+a 37,470,100,16
+label 13,466,24,24
+text 37,470,100,16 "de 40 à 60 EUR"
+a 37,494,94,16 [occluded]
+label 13,490,24,24 [occluded]
+text 37,494,94,16 "60 EUR et plus" [occluded]
+text 13,530,201,16 "Promotions et bonnes affaires" [occluded]
+a 13,558,192,16 [occluded]
+text 13,558,192,16 "Achetez plus, économisez plus" [occluded]
+a 13,582,56,16 [occluded]
+text 13,582,56,16 "Coupons" [occluded]
+a 13,606,93,16 [occluded]
+text 13,606,93,16 "Tous les rabais" [occluded]
+a 13,630,81,16 [occluded]
+text 13,630,81,16 "Ventes Flash" [occluded]
+text 13,666,58,16 "Marques" [occluded]
+a 37,694,67,16 [occluded]
+label 13,690,24,24 [occluded]
+text 37,694,67,16 "The G-Lab" [occluded]
+a 37,718,68,16 [occluded]
+label 13,714,24,24 [occluded]
+text 37,718,68,16 "Logitech G" [occluded]
+a 37,742,131,16 [occluded]
+label 13,738,24,24 [occluded]
+text 37,742,131,16 "RK ROYAL KLUDGE" [occluded]
+a 37,766,62,16 [occluded]
+label 13,762,24,24 [occluded]
+text 37,766,62,16 "Redragon" [occluded]
+a 37,790,45,16 [occluded]
+label 13,786,24,24 [occluded]
+text 37,790,45,16 "Corsair" [occluded]

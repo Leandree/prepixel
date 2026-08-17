@@ -11,7 +11,16 @@
   "channel": "accessibility-api",
   "channel_setup": "UI Automation via Python `uiautomation`. Zero clicks/keys on the user's library; the Upmgr updater gate was dismissed via InvokePattern ('Fermer') to reach the main window.",
   "verdict": "partial",
-  "failure_class": "silent",
+  "failure_class": "explicit",
+  "mitigation": {
+    "module": "coverage-guard (guard B: view self-consistency — zero pixels needed)",
+    "date": "2026-08-17",
+    "found_as": "silent (2026-08-15): track table with 11 declared headers, 0 rows, against a screen listing 32 tracks",
+    "trigger_signature": "in-view contradiction: a count line ('32 Tracks, 1 hours 51 minutes, 818.4 MB') with 0 row/listitem lines in the same view",
+    "result": "flagged view-only in 0.0 ms: 'text 1521,1012,330,16 \"32 Tracks, …\" [inconsistent: count>0 but 0 rows -> unexposed list, crop]' — the router now knows to crop the table region instead of reading 'empty'",
+    "cost": "free (no pixels); guard A found 0 structure-empty regions here because the table rect contains named headers — the case that shows why the two guards are independent and BOTH required",
+    "evidence": "campaign/results/artifacts/windows/windows-mitigation-report.json"
+  },
   "tests": {
     "t1_read_text": { "pass": true, "detail": "Live app STATE reads correctly: deck titles 'Not Loaded.' (x2), sampler BPM as a real edit value ('120.00'), status bar '32 Tracks, 1 hours 51 minutes, 818.4 MB' — all matching the pixels." },
     "t2_enumerate": { "pass": true, "detail": "549 nodes: 141 buttons, 17 sliders, 8 radios, 4 combos, 6 edits — the ENTIRE custom-drawn performance chrome is annotated (names are developer IDs like 'WiFiSyncDetectButton', 'SelectFullArtworkButton': machine-usable, not user-facing labels). This REFUTES 'custom-drawn implies structural silence' for the second time in the campaign — the Windows twin of macOS Chess: the boundary is developer annotation, not rendering technology. Same rendering class as FL Studio (52 empty panes), opposite outcome." },

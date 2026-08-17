@@ -11,7 +11,16 @@
   "channel": "accessibility-api",
   "channel_setup": "UI Automation via Python `uiautomation` against Qt's built-in Windows accessibility bridge. No flags needed. Zero clicks on the user's config (one allowlisted exception: answering OBS's own 'Mode sans échec' dialog with 'Lancer normalement' via InvokePattern, after our probe's force-kill caused it).",
   "verdict": "partial",
-  "failure_class": "silent",
+  "failure_class": "explicit",
+  "mitigation": {
+    "module": "coverage-guard (guard A: per-region pixel spot-check)",
+    "date": "2026-08-17",
+    "found_as": "silent (2026-08-15): video preview = anonymous QWidget group, no opacity marker, screen showed painted text",
+    "trigger_signature": "Qt6*.dll mapped + structure-empty region >150k px² in the client area (auto-detected: 'OBSBasicPreview' 421,175,522,351)",
+    "result": "content-energy 0.245 (threshold 0.03) -> region re-emitted as '[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]'",
+    "cost": "PrintWindow 30 ms + guard 2.5 ms; crop 245 tokens vs 1275 for a full-window shot; structural coverage of client area measured at 46.5%",
+    "evidence": "campaign/results/artifacts/windows/guard-obs-region0.png (the crop plainly shows the painted 'On arrive bientôt')"
+  },
   "tests": {
     "t1_read_text": { "pass": true, "detail": "Dock semantics are RICH and exact: mixer channels with live values ('Desktop Audio' -3.2 dB, 'Mic/Aux' -15.0 dB '(actuellement muet)', 'nvidia broadcast' -9.8 dB), scene list ('comming soon' [selected=True] …), sources, transition, controls — every value cross-checked against the pixels." },
     "t2_enumerate": { "pass": true, "detail": "185 nodes: buttons, sliders (with values), checkboxes (mute state), lists with selection. Qt maps QWidget semantics to UIA correctly wherever a widget IS the content." },

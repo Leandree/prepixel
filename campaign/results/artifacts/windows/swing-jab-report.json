@@ -1,0 +1,76 @@
+{
+ "cell": "windows-swing-jab",
+ "jdk": "C:\\Users\\LANDRE~1\\AppData\\Local\\Temp\\ptap-jdk\\jdk-21.0.12+8\\bin",
+ "jabswitch": "The Java Access Bridge has been enabled.",
+ "window_rect": [
+  240,
+  180,
+  480,
+  260
+ ],
+ "window_class": "SunAwtFrame",
+ "uia": {
+  "latch_attempts": [
+   {
+    "attempt": 1,
+    "nodes": 7,
+    "ms": 6.6
+   },
+   {
+    "attempt": 2,
+    "nodes": 7,
+    "ms": 6.6
+   }
+  ],
+  "nodes": 7,
+  "types": {
+   "WindowControl": 1,
+   "TitleBarControl": 1,
+   "MenuBarControl": 1,
+   "MenuItemControl": 1,
+   "ButtonControl": 3
+  },
+  "view_tokens": 52,
+  "sentinel_visible": false
+ },
+ "guard": {
+  "coverage_pct": 4.6,
+  "synthesized": true,
+  "suspects": [
+   {
+    "label": "client-area (synthesized: frame-only tree)",
+    "rect": [
+     240,
+     212,
+     480,
+     228
+    ],
+    "hasReadableContent": false,
+    "node_type": "synthesized",
+    "depth": -1,
+    "energy": 0.186,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 240,212,480,228 \"client-area (synthesized: frame-only tree)\" [unverified: pixels show content]"
+   }
+  ]
+ },
+ "jab_dll": "C:\\Users\\LANDRE~1\\AppData\\Local\\Temp\\ptap-jdk\\jdk-21.0.12+8\\bin\\windowsaccessbridge-64.dll",
+ "jab": {
+  "isJavaWindow": true,
+  "detected_after_s": 0.0,
+  "gotRoot": true,
+  "walk_ms": 21.7,
+  "node_count": 10,
+  "sentinel_via_jab": false,
+  "field_value_seen": false,
+  "roles_sample": [
+   "frame",
+   "label",
+   "layered pane",
+   "panel",
+   "push button",
+   "root pane",
+   "text"
+  ]
+ }
+}

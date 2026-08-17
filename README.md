@@ -58,11 +58,17 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
 - **Safety (the production question) — and the campaign's most important negative
-  result.** Across 60 cells on three OSes, **100% of channels were predictable in
-  advance** from a stack signature. But "never silent" did **not** survive contact
-  with Windows: **3 silent divergences** (FL Studio/Delphi, OBS/Qt6,
-  rekordbox/JUCE), all the same mechanism — *disagreement by omission*. A container
-  node is present, its content is absent, and **nothing declares the region opaque**.
+  result — followed by its repair.** Across 65 cells on three OSes, **100% of
+  channels were predictable in advance** from a stack signature. But "never silent"
+  did **not** survive contact with Windows: **3 silent divergences** (FL Studio/
+  Delphi, OBS/Qt6, rekordbox/JUCE), all the same mechanism — *disagreement by
+  omission*. A container node is present, its content is absent, and **nothing
+  declares the region opaque**. All three were then **caught and declared** by a
+  documented router guard (`src/coverage-guard.mjs`: a pixel spot-check on
+  structure-empty regions, plus a self-consistency check that needs no pixels and
+  catches "32 tracks declared, 0 rows exposed"). Each cell keeps a `mitigation`
+  record naming what it was found as, so the finding is preserved rather than
+  edited away: **3 found, 3 neutralised, 0 surviving.**
   The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
   a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
   router computes 0% structural coverage in one walk), whereas named-but-empty panes
@@ -201,14 +207,22 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 60 cells, schema-valid, 100% predictable in advance,
-3 silent.** Linux 21, macOS 20, Windows 19. The three silent cells are all Windows
+**All three OSes are covered: 65 cells, schema-valid, 100% predictable in advance,
+3 silent divergences found and all 3 neutralised.** Linux 21, macOS 20, Windows 24.
+The three were all Windows
 custom-drawn apps (FL Studio, OBS, rekordbox) and are the campaign's headline
-negative result — see `campaign/MATRIX.md` and `campaign/results/windows-FINDINGS.md`.
+negative result; the guard that converts each one into an explicit declaration is
+the answer to it. See `campaign/MATRIX.md`, which reports *surviving* and
+*found-then-declared* as two separate numbers, and each cell's `mitigation` record.
 
-Still open: Tier F toolkits (Qt/Java/Flutter) on macOS, Zoom's in-meeting
-surfaces, and one confirmation run of the real-web battery on a Linux desktop (it
-was egress-blocked in the sandbox).
+The real-web battery has now been run on all three OSes and the result is
+essentially OS-invariant (macOS 0.98x, Windows 0.99x on the ratio of totals) —
+unsurprising, since all three drive the same Chromium, but worth having measured
+rather than assumed.
+
+Still open: Tier F toolkits (Qt/Java/Flutter) on macOS, Zoom's in-meeting surfaces,
+and a live specimen for the layered-window occlusion rule on Windows (the rule is
+encoded there but the audited desktop had no layered window to exercise it).
 
 The write-up is a position paper (arXiv cs.HC/cs.AI) + a blog post; project notes
 live in the attached Claude project.

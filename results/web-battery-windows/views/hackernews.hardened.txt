@@ -1,0 +1,454 @@
+a 104,10,20,20
+[pixels] img 104,10,20,20
+a 129,12,98,16
+text 129,12,98,16 "Hacker News"
+a 232,12,27,16
+text 232,12,27,16 "new"
+text 259,12,15,16 "|"
+a 274,12,29,16
+text 274,12,29,16 "past"
+text 303,12,15,16 "|"
+a 318,12,70,16
+text 318,12,70,16 "comments"
+text 388,12,15,16 "|"
+a 403,12,23,16
+text 403,12,23,16 "ask"
+text 426,12,15,16 "|"
+a 442,12,34,16
+text 442,12,34,16 "show"
+text 476,12,15,16 "|"
+a 491,12,28,16
+text 491,12,28,16 "jobs"
+text 519,12,15,16 "|"
+a 535,12,46,16
+text 535,12,46,16 "submit"
+a 1125,12,32,16
+text 1125,12,32,16 "login"
+text 110,42,13,16 "1."
+a 123,45,14,10 id=up_49329575
+a 137,44,404,16
+text 137,44,404,16 "GPT 5.6 Sol is the best "vision" model OpenAI ever released"
+text 542,46,9,13 "("
+a 550,46,72,13
+text 550,46,72,13 "roboflow.com"
+text 622,46,5,13 ")"
+text 137,61,50,11 "109 points"
+text 187,61,18,11 "by"
+a 205,61,30,11
+text 205,61,30,11 "plurby"
+a 238,61,56,11
+text 238,61,56,11 "2 hours ago"
+text 297,61,8,11 "|"
+a 304,61,20,11
+text 304,61,20,11 "hide"
+text 324,61,11,11 "|"
+a 335,61,64,11
+text 335,61,64,11 "58 comments"
+text 110,77,13,16 "2."
+a 123,80,14,10 id=up_49330684
+a 137,79,169,16
+text 137,79,169,16 "Incident with Github.com"
+text 307,81,9,13 "("
+a 315,81,93,13
+text 315,81,93,13 "githubstatus.com"
+text 408,81,5,13 ")"
+text 137,96,50,11 "342 points"
+text 187,96,18,11 "by"
+a 205,96,48,11
+text 205,96,48,11 "kevcampb"
+a 256,96,73,11
+text 256,96,73,11 "50 minutes ago"
+text 332,96,8,11 "|"
+a 340,96,20,11
+text 340,96,20,11 "hide"
+text 360,96,11,11 "|"
+a 370,96,70,11
+text 370,96,70,11 "270 comments"
+text 110,112,13,16 "3."
+a 123,115,14,10 id=up_49330215
+a 137,114,196,16
+text 137,114,196,16 "Show HN: Sokoban AI Solver"
+text 334,116,9,13 "("
+a 342,116,81,13
+text 342,116,81,13 "mkornreich.me"
+text 423,116,5,13 ")"
+text 137,131,44,11 "24 points"
+text 181,131,18,11 "by"
+a 199,131,61,11
+text 199,131,61,11 "enjoyyourlife"
+a 263,131,51,11
+text 263,131,51,11 "1 hour ago"
+text 317,131,8,11 "|"
+a 325,131,20,11
+text 325,131,20,11 "hide"
+text 345,131,11,11 "|"
+a 356,131,64,11
+text 356,131,64,11 "12 comments"
+text 110,147,13,16 "4."
+a 123,150,14,10 id=up_49324985
+a 137,149,429,16
+text 137,149,429,16 "Qwen 3.8 27B is excellent, but it defaults to overthinking things"
+text 567,151,9,13 "("
+a 576,151,92,13
+text 576,151,92,13 "simonwillison.net"
+text 668,151,5,13 ")"
+text 137,166,50,11 "654 points"
+text 187,166,18,11 "by"
+a 205,166,30,11
+text 205,166,30,11 "bilsbie"
+a 238,166,62,11
+text 238,166,62,11 "14 hours ago"
+text 303,166,8,11 "|"
+a 311,166,20,11
+text 311,166,20,11 "hide"
+text 330,166,11,11 "|"
+a 341,166,70,11
+text 341,166,70,11 "309 comments"
+text 110,182,13,16 "5."
+a 123,185,14,10 id=up_49331033
+a 137,184,208,16
+text 137,184,208,16 "Ask HN: Alternatives to GitHub"
+text 137,201,44,11 "28 points"
+text 181,201,18,11 "by"
+a 199,201,51,11
+text 199,201,51,11 "dhruv3006"
+a 253,201,73,11
+text 253,201,73,11 "32 minutes ago"
+text 329,201,8,11 "|"
+a 337,201,20,11
+text 337,201,20,11 "hide"
+text 357,201,11,11 "|"
+a 368,201,64,11
+text 368,201,64,11 "12 comments"
+text 110,217,13,16 "6."
+a 123,220,14,10 id=up_49330632
+a 137,219,226,16
+text 137,219,226,16 "GitHub down again? no PR access"
+text 137,236,44,11 "88 points"
+text 181,236,18,11 "by"
+a 199,236,28,11
+text 199,236,28,11 "yodon"
+a 231,236,73,11
+text 231,236,73,11 "54 minutes ago"
+text 307,236,8,11 "|"
+a 315,236,20,11
+text 315,236,20,11 "hide"
+text 334,236,11,11 "|"
+a 345,236,64,11
+text 345,236,64,11 "26 comments"
+text 110,252,13,16 "7."
+a 123,255,14,10 id=up_49278577
+a 137,254,200,16
+text 137,254,200,16 "My Ten Years in No Man's Sky"
+text 337,256,9,13 "("
+a 346,256,72,13
+text 346,256,72,13 "nmsspot.com"
+text 417,256,5,13 ")"
+text 137,271,44,11 "25 points"
+text 181,271,18,11 "by"
+a 199,271,45,11
+text 199,271,45,11 "blakespot"
+a 247,271,51,11
+text 247,271,51,11 "1 hour ago"
+text 302,271,8,11 "|"
+a 309,271,20,11
+text 309,271,20,11 "hide"
+text 329,271,11,11 "|"
+a 340,271,58,11
+text 340,271,58,11 "7 comments"
+text 110,287,13,16 "8."
+a 123,290,14,10 id=up_49284983
+a 137,289,318,16
+text 137,289,318,16 "How Go detects struct copies with sync.noCopy"
+text 455,291,9,13 "("
+a 464,291,60,13
+text 464,291,60,13 "func25.dev"
+text 524,291,5,13 ")"
+text 137,306,44,11 "32 points"
+text 181,306,18,11 "by"
+a 199,306,32,11
+text 199,306,32,11 "func25"
+a 234,306,56,11
+text 234,306,56,11 "3 hours ago"
+text 293,306,8,11 "|"
+a 301,306,20,11
+text 301,306,20,11 "hide"
+text 321,306,11,11 "|"
+a 331,306,64,11
+text 331,306,64,11 "26 comments"
+text 110,322,13,16 "9."
+a 123,325,14,10 id=up_49330139
+a 137,324,226,16
+text 137,324,226,16 "Stripe to Buy OpenRouter for $7B"
+text 364,326,9,13 "("
+a 372,326,83,13
+text 372,326,83,13 "bloomberg.com"
+text 456,326,5,13 ")"
+text 137,341,44,11 "67 points"
+text 181,341,18,11 "by"
+a 199,341,55,11
+text 199,341,55,11 "FinnLobsien"
+a 258,341,51,11
+text 258,341,51,11 "1 hour ago"
+text 312,341,8,11 "|"
+a 319,341,20,11
+text 319,341,20,11 "hide"
+text 339,341,11,11 "|"
+a 350,341,64,11
+text 350,341,64,11 "26 comments"
+text 102,357,22,16 "10."
+a 123,360,14,10 id=up_49325789
+a 137,359,226,16
+text 137,359,226,16 "On A.I. regulation and messaging"
+text 363,361,9,13 "("
+a 372,361,131,13
+text 372,361,131,13 "twitter.com/darioamodei"
+text 503,361,5,13 ")"
+text 137,376,50,11 "165 points"
+text 187,376,18,11 "by"
+a 205,376,45,11
+text 205,376,45,11 "jacquesm"
+a 253,376,56,11
+text 253,376,56,11 "7 hours ago"
+text 312,376,8,11 "|"
+a 320,376,20,11
+text 320,376,20,11 "hide"
+text 340,376,11,11 "|"
+a 350,376,70,11
+text 350,376,70,11 "324 comments"
+text 102,392,22,16 "11."
+a 123,395,14,10 id=up_49324087
+a 137,394,513,16
+text 137,394,513,16 "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing"
+text 651,396,9,13 "("
+a 659,396,92,13
+text 659,396,92,13 "daringfireball.net"
+text 751,396,5,13 ")"
+text 137,411,50,11 "519 points"
+text 187,411,18,11 "by"
+a 205,411,36,11
+text 205,411,36,11 "ropbear"
+a 245,411,62,11
+text 245,411,62,11 "16 hours ago"
+text 310,411,8,11 "|"
+a 317,411,20,11
+text 317,411,20,11 "hide"
+text 337,411,11,11 "|"
+a 348,411,70,11
+text 348,411,70,11 "466 comments"
+text 102,427,22,16 "12."
+a 123,430,14,10 id=up_49329583
+a 137,429,364,16
+text 137,429,364,16 "Mexico Crackdown on Coastal Development Underway"
+text 501,431,9,13 "("
+a 510,431,120,13
+text 510,431,120,13 "yucatanmagazine.com"
+text 630,431,5,13 ")"
+text 137,446,44,11 "40 points"
+text 181,446,18,11 "by"
+a 199,446,63,11
+text 199,446,63,11 "untiledsource"
+a 265,446,56,11
+text 265,446,56,11 "2 hours ago"
+text 324,446,8,11 "|"
+a 332,446,20,11
+text 332,446,20,11 "hide"
+text 352,446,11,11 "|"
+a 362,446,58,11
+text 362,446,58,11 "6 comments"
+text 102,462,22,16 "13."
+a 123,465,14,10 id=up_49330456
+a 137,464,479,16
+text 137,464,479,16 "Cialis is an erectile dysfunction drug. Could it also help you live longer?"
+text 616,466,9,13 "("
+a 625,466,38,13
+text 625,466,38,13 "npr.org"
+text 663,466,5,13 ")"
+text 137,481,44,11 "32 points"
+text 181,481,18,11 "by"
+a 199,481,44,11
+text 199,481,44,11 "brandonb"
+a 247,481,51,11
+text 247,481,51,11 "1 hour ago"
+text 301,481,8,11 "|"
+a 308,481,20,11
+text 308,481,20,11 "hide"
+text 328,481,11,11 "|"
+a 339,481,64,11
+text 339,481,64,11 "11 comments"
+text 102,497,22,16 "14."
+a 123,500,14,10 id=up_49327643
+a 137,499,564,16
+text 137,499,564,16 "Show HN: Desktopcolors.com – A museum for solid background colors of classic OS"
+text 701,501,9,13 "("
+a 710,501,100,13
+text 710,501,100,13 "desktopcolors.com"
+text 810,501,5,13 ")"
+text 137,516,44,11 "71 points"
+text 181,516,18,11 "by"
+a 199,516,39,11
+text 199,516,39,11 "vlowrian"
+a 242,516,56,11
+text 242,516,56,11 "6 hours ago"
+text 301,516,8,11 "|"
+a 308,516,20,11
+text 308,516,20,11 "hide"
+text 328,516,11,11 "|"
+a 339,516,64,11
+text 339,516,64,11 "32 comments"
+text 102,532,22,16 "15."
+a 123,535,14,10 id=up_49323474
+a 137,534,398,16
+text 137,534,398,16 "How I developed an Am29000 C compiler and web browser"
+text 535,536,9,13 "("
+a 544,536,78,13
+text 544,536,78,13 "nanochess.org"
+text 622,536,5,13 ")"
+text 137,551,38,11 "6 points"
+text 175,551,18,11 "by"
+a 193,551,49,11
+text 193,551,49,11 "nanochess"
+a 245,551,51,11
+text 245,551,51,11 "1 hour ago"
+text 300,551,8,11 "|"
+a 307,551,20,11
+text 307,551,20,11 "hide"
+text 327,551,11,11 "|"
+a 338,551,34,11
+text 338,551,34,11 "discuss"
+text 102,567,22,16 "16."
+a 123,570,14,10 id=up_49321717
+a 137,569,519,16
+text 137,569,519,16 "A third world engineer responds to “RISC-V: They should have known better”"
+text 657,571,9,13 "("
+a 665,571,93,13
+text 665,571,93,13 "rvembedded.com"
+text 758,571,5,13 ")"
+text 137,586,50,11 "570 points"
+text 187,586,18,11 "by"
+a 205,586,45,11
+text 205,586,45,11 "Narishma"
+a 253,586,62,11
+text 253,586,62,11 "21 hours ago"
+text 318,586,8,11 "|"
+a 325,586,20,11
+text 325,586,20,11 "hide"
+text 345,586,11,11 "|"
+a 356,586,70,11
+text 356,586,70,11 "292 comments"
+text 102,602,22,16 "17."
+a 123,605,14,10 id=up_49330742
+a 137,604,547,16
+text 137,604,547,16 "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility"
+text 685,606,9,13 "("
+a 693,606,69,13
+text 693,606,69,13 "404media.co"
+text 762,606,5,13 ")"
+text 137,621,44,11 "19 points"
+text 181,621,18,11 "by"
+a 199,621,59,11
+text 199,621,59,11 "amarcheschi"
+a 261,621,73,11
+text 261,621,73,11 "47 minutes ago"
+text 337,621,8,11 "|"
+a 345,621,20,11
+text 345,621,20,11 "hide"
+text 365,621,11,11 "|"
+a 376,621,64,11
+text 376,621,64,11 "14 comments"
+text 102,637,22,16 "18."
+a 123,640,14,10 id=up_49326816
+a 137,639,169,16
+text 137,639,169,16 "Linear algebra done right"
+text 306,641,9,13 "("
+a 315,641,46,13
+text 315,641,46,13 "axler.net"
+text 361,641,5,13 ")"
+text 137,656,50,11 "156 points"
+text 187,656,18,11 "by"
+a 205,656,39,11
+text 205,656,39,11 "the-mitr"
+a 247,656,56,11
+text 247,656,56,11 "9 hours ago"
+text 306,656,8,11 "|"
+a 314,656,20,11
+text 314,656,20,11 "hide"
+text 333,656,11,11 "|"
+a 344,656,64,11
+text 344,656,64,11 "57 comments"
+text 102,672,22,16 "19."
+a 123,675,14,10 id=up_49325061
+a 137,674,274,16
+text 137,674,274,16 "Reticulum – Decentralized Mesh Network"
+text 412,676,9,13 "("
+a 421,676,98,13
+text 421,676,98,13 "reticulum.network"
+text 518,676,5,13 ")"
+text 137,691,50,11 "173 points"
+text 187,691,18,11 "by"
+a 205,691,62,11
+text 205,691,62,11 "sudo_cowsay"
+a 270,691,62,11
+text 270,691,62,11 "14 hours ago"
+text 336,691,8,11 "|"
+a 343,691,20,11
+text 343,691,20,11 "hide"
+text 363,691,11,11 "|"
+a 374,691,64,11
+text 374,691,64,11 "59 comments"
+text 102,707,22,16 "20."
+a 123,710,14,10 id=up_49319556
+a 137,709,166,16
+text 137,709,166,16 "Claude: System Prompts"
+text 304,711,9,13 "("
+a 312,711,61,13
+text 312,711,61,13 "claude.com"
+text 373,711,5,13 ")"
+text 137,726,50,11 "717 points"
+text 187,726,18,11 "by"
+a 205,726,20,11
+text 205,726,20,11 "tosh"
+a 228,726,46,11
+text 228,726,46,11 "1 day ago"
+text 278,726,8,11 "|"
+a 286,726,20,11
+text 286,726,20,11 "hide"
+text 305,726,11,11 "|"
+a 316,726,70,11
+text 316,726,70,11 "271 comments"
+text 102,742,22,16 "21."
+a 123,745,14,10 id=up_49330597
+a 137,744,369,16
+text 137,744,369,16 "Tell HN: GitHub Is Experiencing Degraded Performance"
+text 137,761,44,11 "79 points"
+text 181,761,18,11 "by"
+a 199,761,57,11
+text 199,761,57,11 "SpyCoder77"
+a 259,761,73,11
+text 259,761,73,11 "56 minutes ago"
+text 336,761,8,11 "|"
+a 343,761,20,11
+text 343,761,20,11 "hide"
+text 363,761,11,11 "|"
+a 374,761,64,11
+text 374,761,64,11 "23 comments"
+text 102,777,22,16 "22."
+a 123,780,14,10 id=up_49325714
+a 137,779,372,16
+text 137,779,372,16 "AGI-64 Brings Sierra Adventures to the Commodore 64"
+text 509,781,9,13 "("
+a 518,781,99,13
+text 518,781,99,13 "meanhamster.com"
+text 617,781,5,13 ")"
+text 137,796,50,11 "115 points"
+text 187,796,18,11 "by"
+a 205,796,36,11 [occluded]
+text 205,796,36,11 "erickhill"
+a 244,796,62,11 [occluded]
+text 244,796,62,11 "12 hours ago"
+text 309,796,8,11 "|"
+a 317,796,20,11 [occluded]
+text 317,796,20,11 "hide"
+text 337,796,11,11 "|"
+a 348,796,64,11 [occluded]
+text 348,796,64,11 "15 comments"

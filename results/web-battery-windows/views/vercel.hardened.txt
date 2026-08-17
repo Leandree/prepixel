@@ -1,0 +1,48 @@
+a 16,15,37,34 id=marketing-header-logo
+[pixels] svg 24,23,21,18
+button 65,16,94,32
+text 77,23,57,18 "Products"
+[pixels] svg 137,25,14,14 [occluded]
+button 159,16,104,32
+text 171,23,67,18 "Resources"
+[pixels] svg 242,25,14,14 [occluded]
+a 264,16,89,32
+text 276,23,65,18 "Enterprise"
+a 353,16,68,32
+text 365,23,44,18 "Pricing"
+a 977,16,101,32
+text 989,23,77,18 "Get a Demo"
+a 1090,16,64,32
+text 1102,23,40,18 "Log In"
+a 1166,16,75,32
+text 1178,23,51,18 "Sign Up"
+text 472,87,152,18 "Ship 26 is coming to SF"
+a 640,80,153,32
+text 658,87,97,18 "Get your ticket"
+[pixels] svg 765,89,14,14
+[pixels] svg 522,287,222,222 [occluded]
+text 558,544,150,31 "Drop to deploy"
+[pixels] canvas 162,84,942,628 [occluded]
+text 24,268,347,147 "Agentic Infrastructure"
+a 24,438,124,40
+text 42,447,88,21 "Deploy now"
+a 160,438,130,40
+text 178,447,94,21 "Talk to sales"
+text 885,335,127,21 "For coding agents"
+text 885,367,171,21 "To ship apps and agents"
+text 885,399,152,21 "Automated by agents"
+[pixels] svg 24,728,127,20 alt=Blackbox [occluded]
+[pixels] svg 235,721,69,35 alt=Charles Schwab [occluded]
+[pixels] svg 389,730,147,17 alt=DoorDash [occluded]
+[pixels] svg 620,728,78,21 alt=OpenAI [occluded]
+[pixels] svg 782,724,102,28 alt=Supreme [occluded]
+[pixels] svg 969,716,58,45 alt=The Weather Company [occluded]
+[pixels] svg 1111,723,130,30 alt=Polymarket [occluded]
+[pixels] svg -7,0,14,7 [occluded]
+text 32,683,369,39 "This site uses tracking technologies. You may opt in or opt out of the use of these technologies."
+button 32,736,59,32 id=fides-reject-all-button
+text 45,743,33,18 "Deny"
+button 103,736,92,32 id=fides-accept-all-button
+text 116,743,66,18 "Accept all"
+button 283,736,137,32 id=fides-manage-preferences-button
+text 295,743,113,18 "Consent Settings"

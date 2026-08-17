@@ -90,9 +90,17 @@ def cb(hwnd, lp):
     if r.right - r.left <= 0 or r.bottom - r.top <= 0:
         return True
     pid = pid_of(hwnd)
+    # macOS router FYI (layer>0 predicts false occlusion): layered/transparent
+    # windows declare rects that are upper bounds on what they paint —
+    # geometric occlusion reconstruction must not trust them; pixel-spot-check
+    # with the per-window surface instead.
+    exstyle = u.GetWindowLongW(hwnd, -20)
     wins.append({"z": len(wins), "hwnd": hwnd, "title": t,
                  "rect": [r.left, r.top, r.right - r.left, r.bottom - r.top],
                  "pid": pid, "process": pname(pid), "elevated": elevated(pid),
+                 "layered": bool(exstyle & 0x00080000),      # WS_EX_LAYERED
+                 "click_through": bool(exstyle & 0x00000020),  # WS_EX_TRANSPARENT
+                 "rect_is_upper_bound": bool(exstyle & 0x00080020),
                  "foreground": u.GetForegroundWindow() == hwnd})
     return True
 t0 = time.perf_counter()
