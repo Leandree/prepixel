@@ -58,7 +58,7 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
 - **Safety (the production question) — and the campaign's most important negative
-  result.** Across 54 cells on three OSes, **100% of channels were predictable in
+  result.** Across 59 cells on three OSes, **100% of channels were predictable in
   advance** from a stack signature. But "never silent" did **not** survive contact
   with Windows: **3 silent divergences** (FL Studio/Delphi, OBS/Qt6,
   rekordbox/JUCE), all the same mechanism — *disagreement by omission*. A container
@@ -74,7 +74,12 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 - **The merged desktop view.** No single OS channel is both whole-screen and
   semantic (the compositor has all windows but only pixels; each toolkit is semantic
   but per-window). A **router** assembles it: window-manager map (geometry, z-order,
-  focus) + best channel per window. Demonstrated live on 4 windows / 4 toolkits.
+  focus) + best channel per window. Demonstrated live on all three OSes; the macOS
+  run mapped 37 real windows in 32 ms for 838 tokens against 1980 for one
+  full-screen capture. macOS adds a primitive the others lack — asking the window
+  server directly (`AXUIElementCopyElementAtPosition`) instead of reconstructing
+  occlusion from z-order, which is **100% exact on ordinary windows but 0% on
+  overlay layers**, where a declared rect is an upper bound rather than coverage.
 
 See `campaign/MATRIX.md` for the full coverage matrix.
 
@@ -103,12 +108,20 @@ Do this, in order:
    verify) under `campaign/results/artifacts/`.
 4. **Append a prose note** per OS to `campaign/results/<os>-FINDINGS.md`: what
    surprised you, any silent divergence you found, your honest read on predictability.
-5. **Validate and aggregate before you finish:**
+5. **Keep `campaign/results/<os>-agent-returns.md`** — your two-way log with the
+   human test manager. Write a `DECISION NEEDED` entry for anything you should not
+   decide alone (installing software, touching real accounts or files), an `FYI` the
+   moment you find something that changes another agent's work, `BLOCKED` for what
+   you could not do and why, and a `DONE` close-out that includes any bug in your
+   *own* harness. It is correspondence, not evidence — measurements go in cells,
+   prose goes in FINDINGS. Full convention in `agent-brief-COMMON.md`;
+   `macos-agent-returns.md` is the worked example.
+6. **Validate and aggregate before you finish:**
    ```bash
    python3 campaign/validate.py     # every result JSON must pass the schema
    python3 campaign/aggregate.py    # rebuilds MATRIX.md + matrix.json
    ```
-6. **The Linux cell is already done as a worked example** — read
+7. **The Linux cell is already done as a worked example** — read
    `campaign/results/linux-*.json` and `campaign/results/linux-FINDINGS.md` to see
    exactly the shape and honesty level expected, then mirror it for your OS.
 
@@ -188,8 +201,8 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 54 cells, schema-valid, 100% predictable in advance,
-3 silent.** Linux 18, macOS 17, Windows 19. The three silent cells are all Windows
+**All three OSes are covered: 59 cells, schema-valid, 100% predictable in advance,
+3 silent.** Linux 21, macOS 19, Windows 19. The three silent cells are all Windows
 custom-drawn apps (FL Studio, OBS, rekordbox) and are the campaign's headline
 negative result — see `campaign/MATRIX.md` and `campaign/results/windows-FINDINGS.md`.
 
