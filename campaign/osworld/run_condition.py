@@ -72,6 +72,10 @@ TOPBAR_Y = 28           # px, system bar excluded from ALL diffs (§2.4)
 GUARD_MARGIN = 8        # px, act-guard match margin around the target (§2.4)
 WAIT_SLEEP = 5          # s, model-requested WAIT (unchanged from v1)
 VW, VH = 1920, 1080
+# Roles where a click means "put the caret here", not "activate me"
+TEXT_INPUT_ROLES = {"entry", "text", "password-text", "searchbox", "textbox",
+                    "textfield", "textarea", "terminal", "document-text",
+                    "document-web", "document-frame", "spin-button"}
 
 
 def template_section(block, marker):
@@ -219,6 +223,16 @@ def _run():
             except Exception as e:
                 return {"ok": False, "err": "no-settable-interface: %s" % e}
         if VERB in ("click", "toggle"):
+            if P["text_input"]:
+                # On a text field, AT-SPI's "activate" means SUBMIT, not
+                # "put the caret here". Measured on chrome://settings:
+                # activating the search box moved focus to another tab and
+                # the following keystrokes went there. Focus is the click.
+                try:
+                    acc.queryComponent().grabFocus()
+                    return {"ok": True, "method": "Component.grabFocus"}
+                except Exception as e:
+                    return {"ok": False, "err": "grabFocus: %s" % e}
             try:
                 ai = acc.queryAction()
             except Exception:
@@ -354,8 +368,12 @@ class Driver:
     def _platform(self, rec, verb, value, mech):
         x, y, w, h = rec["rect"]
         params = {"role": rec["role"], "x": x, "y": y, "w": w, "h": h,
-                  "verb": verb, "value": str(value)}
-        script = "P = " + json.dumps(params) + "\n" + PLATFORM_SCRIPT
+                  "verb": verb, "value": str(value),
+                  "text_input": rec["role"] in TEXT_INPUT_ROLES}
+        # repr, not json.dumps: JSON writes `true`, which is not Python and
+        # made the whole script die on line 1 (measured — rung 1 silently
+        # fell back to the pointer on every text field)
+        script = "P = " + repr(params) + "\n" + PLATFORM_SCRIPT
         r = self.ctrl.run_python_script(script)
         outp = (r or {}).get("output") or ""
         m = re.search(r"OSW_RESULT:(\{.*\})", outp)

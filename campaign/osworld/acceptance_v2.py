@@ -47,6 +47,7 @@ class Probe:
         self.out = out
         self.n = 0
         self.registry = {}
+        self.nav_log = []
 
     def refresh(self, settle=True):
         self.n += 1
@@ -202,18 +203,40 @@ def scenario_os(env, drv, probe, rep):
 
 
 def navigate(probe, url):
-    """ctrl+l, type, kill the inline autocompletion, Enter.
+    """Open a URL by launching it, NOT by typing in the omnibox.
 
-    The `delete` is not politeness: measured on this VM, typing
-    "chrome://settings/" leaves Chrome's inline completion pointing at
-    google.com/chrome, and Enter follows the completion instead of the typed
-    URL — in BOTH the v1 single-command shape and the v2 separate-action
-    shape (see acceptance-nav.json). Same UX trap in both conditions."""
-    probe.act({"action": "key", "keys": "ctrl+l"})
-    probe.act({"action": "type", "text": url})
-    probe.act({"action": "key", "keys": "delete"})
-    probe.act({"action": "key", "keys": "enter"})
-    time.sleep(3)
+    Measured on this VM: from google.com/chrome, typing "chrome://settings/"
+    leaves Chrome's inline completion pointing back at google.com/chrome and
+    Enter follows the completion — in the v1 single-command shape, in the v2
+    separate-action shape, and even with a `delete` before Enter. That is a
+    Chrome UX trap, identical in both conditions, and it is NOT what
+    scenarios b/c/d are testing. The driver's own typing path is measured
+    separately by the nav scenario (2/2 URLs reached).
+    """
+    # The chrome tasks launch the browser with --remote-debugging-port=1337,
+    # which is also how OSWorld's own chrome evaluators talk to it. Opening
+    # the tab there is deterministic; `google-chrome <url>` as a second
+    # process did not reach the running instance on this VM.
+    script = (
+        "import json, urllib.request\n"
+        "u = %r\n"
+        "out = {}\n"
+        "try:\n"
+        "    req = urllib.request.Request("
+        "'http://localhost:1337/json/new?' + u, method='PUT')\n"
+        "    t = json.load(urllib.request.urlopen(req, timeout=10))\n"
+        "    out['new'] = t.get('id')\n"
+        "    urllib.request.urlopen("
+        "'http://localhost:1337/json/activate/' + t['id'], timeout=10).read()\n"
+        "    out['activated'] = True\n"
+        "except Exception as e:\n"
+        "    out['err'] = str(e)\n"
+        "print('NAV:' + json.dumps(out))\n") % url
+    r = probe.drv.ctrl.run_python_script(script)
+    probe.nav_log.append({"url": url,
+                          "out": ((r or {}).get("output") or "").strip()[:200],
+                          "err": ((r or {}).get("error") or "")[:200]})
+    time.sleep(6)
 
 
 def scenario_chrome(env, drv, probe, rep):
@@ -241,6 +264,25 @@ def scenario_chrome(env, drv, probe, rep):
                                      if "self-inconsistent" in l]
         rep["d_result_lines"] = [l for l in view.split("\n")
                                  if "track" in l.lower()][:12]
+        # How long does Chrome's settings search actually take to populate?
+        # The settle budget is a mechanic, not a guess: measure the target
+        # instead of picking a number. Poll the raw tree, do not act.
+        t0 = time.time()
+        timeline = []
+        while time.time() - t0 < 24:
+            tree = drv.ctrl.get_accessibility_tree()
+            recs, _, inc = drv.distill(tree)
+            hit = [r["line"] for r in recs
+                   if "track" in (r["label"] or "").lower()]
+            timeline.append({"t": round(time.time() - t0, 1),
+                             "track_lines": len(hit),
+                             "declares_count": len(inc),
+                             "sample": hit[0][:90] if hit else None})
+            if hit:
+                break
+        rep["d_population_timeline"] = timeline
+        rep["d_populated_after_s"] = timeline[-1]["t"] if timeline and \
+            timeline[-1]["track_lines"] else None
 
     # (b-DNT) the v1 chrome fault: toggle with its state exposed
     eid, tog = probe.find(lambda r: r["role"] in ("toggle-button", "check-box")
@@ -373,6 +415,8 @@ def main():
         rep["exception"] = traceback.format_exc()[-2000:]
     finally:
         rep["mechanics"] = drv.mech_total
+        if probe.nav_log:
+            rep["nav_log"] = probe.nav_log
         json.dump(rep, open(os.path.join(
             args.out, f"acceptance-{args.scenario}.json"), "w"), indent=1)
         env.close()
