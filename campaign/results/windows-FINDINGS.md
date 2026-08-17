@@ -280,10 +280,14 @@ game entirely** while Win32 sees it; the second no-privilege instance of the
 enumeration blind spot (after the elevated Task Manager). Doctrine, now
 twice-proven: derive window identity from the Win32 map + ControlFromHandle,
 never from UIA name/type searches. Anticheat titles (CS2, GTA V Enhanced,
-Once Human, Rocket League) were excluded by policy from probing. One ownership
-incident owned and recorded: the probe's WM_CLOSE closed SH2 after the session
-had progressed into gameplay (plausibly the user's hands) — provenance is not
-authority; lifecycle actions need ownership re-verification on a live machine.
+Once Human, Rocket League) were excluded by policy from probing. One
+interpretation corrected by the user's review, leaving a sharper lesson: the
+in-engine frame captured before WM_CLOSE was first read as interrupted
+gameplay; it is far more likely the UE5 title/attract sequence (zero input was
+ever sent). The point that survives: at close time the probe could not
+DISTINGUISH menu-idle from human-play — lifecycle actions on a live machine
+need a recent-input check (GetLastInputInfo) before firing, because
+provenance alone cannot answer "is a human in this session right now?".
 
 ## What's still open
 

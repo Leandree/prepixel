@@ -6,6 +6,20 @@ cells, prose in `windows-FINDINGS.md`.
 
 ---
 
+## 2026-08-17 — FYI — SH2 "ownership incident" DOWNGRADED after the manager's review
+
+The manager pointed out the obvious reading I missed: the SH2 remake renders
+its title/attract sequence in-engine, so the "in-game scene" captured before
+my WM_CLOSE is most simply the idle title screen — zero input was ever sent,
+and no one was playing. Cell and FINDINGS corrected. What survives, sharpened:
+my probe fired a lifecycle action while UNABLE to distinguish menu-idle from
+human-play. The missing check is one API call (GetLastInputInfo + foreground
+history) — routers should gate close/kill on "no recent human input", not on
+provenance. Good example of why the returns channel exists: the manager's
+domain knowledge fixed my over-interpretation in one message.
+
+---
+
 ## 2026-08-17 — DONE — real-web battery on Windows (manager overrode my skip recommendation, rightly)
 
 `windows-web-battery-cdp`: 16/16 sites, ratio of totals 0.99 vs macOS 1.00,
