@@ -1,0 +1,47 @@
+{
+  "os": "linux",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, no WM",
+  "app": "AppFlowy 0.13.2 (third-party Flutter desktop app, official Linux .deb, GTK embedder) — Tier F (Flutter), absent from the matrix on every OS until this cell",
+  "stack": "flutter",
+  "stack_detection": {
+    "method": "process maps / package layout: libflutter_linux_gtk.so + libapp.so (AOT snapshot) are unambiguous BEFORE launch. Trap recorded: once on the bus the toolkit attribute claims 'gtk' — that is the EMBEDDER, and a router keying on it would wrongly expect a GTK-shaped tree; the honest signature is the flutter engine library.",
+    "signature": "usr/lib/AppFlowy/lib/libflutter_linux_gtk.so + libapp.so; AT-SPI desktop lists 'AppFlowy' (toolkit 'gtk' — the embedder shell only)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Official .deb unpacked into the rootless prefix (two extra host libs fetched: libkeybinder-3.0, libarchive13). App runs and renders its full onboarding/login UI under Xvfb (screenshot kept). AT-SPI probed three ways: default; setting org.a11y.Status ScreenReaderEnabled=true live; and restarting the app with the flag pre-set — Flutter only builds semantics when assistive tech is announced, so the flag test is the fair one.",
+  "verdict": "unavailable",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": false, "detail": "The screen shows a full login UI ('Bienvenue sur AppFlowy', e-mail field, four sign-in buttons, links, two footer buttons). NONE of that text exists in the channel — the entire AT-SPI tree is 5 nodes: application → frame → full-window panel → filler (extents -1,-1,-1,-1) → panel with childCount = -1. No text node anywhere." },
+    "t2_enumerate": { "pass": false, "detail": "0 interactive elements exposed for a screen holding at least 7 (field, 4 buttons, 2 footer buttons + links). Structural coverage of the window: 0% in one walk — which is exactly what makes this EXPLICIT-BY-SHAPE rather than silent-by-mimicry: a frame-only shell cannot be mistaken for a valid reading of a populated screen, unlike OBS/qBittorrent where a rich tree surrounds one empty pane." },
+    "t3_live_value": { "pass": null, "detail": "Unreachable — no text node to type into (and no login was attempted on a third-party service anyway)." },
+    "t4_living_screen": { "pass": null, "detail": "n/a — no content nodes to watch." },
+    "t5_blind_action": { "pass": null, "detail": "Refused by policy: with zero interactive nodes there are no channel-derived coordinates, and a correct router must refuse to aim rather than guess. The refusal IS the pass condition here, mirroring the github-absent-pr negative control." },
+    "t6_pictorial": { "pass": false, "detail": "The whole 1232x752 window is one undeclared painted region. Nothing marks it opaque; the router must derive that from the 0% structural coverage. Bonus breakage datum: the FlView accessible answers childCount = -1 (out-of-contract) and its property reads stall — the first full walk took 17.4 s for 5 nodes on D-Bus timeouts. A production router needs per-node read timeouts, and must treat -1 childCount as 'broken subtree → 0% coverage → pixels'." }
+  },
+  "measurements": {
+    "view_bytes": 160,
+    "view_tokens_est": 40,
+    "screenshot_tokens_est": 1365,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 17399,
+    "notes": "capture_latency_ms is the FIRST full walk (17.4 s for 5 nodes — the broken FlView node stalls every property read); a re-walk that skips the broken node is milliseconds. THE FLAG TEST MATTERS: Flutter's engine builds semantics only when a screen reader is announced, so we set org.a11y.Status ScreenReaderEnabled=true (verified true on the bus) both live and before launch — the tree did not change. In THIS shipped build the semantics path is absent or broken end-to-end; upstream Flutter does have an ATK bridge, so the boundary is once again developer/build wiring, not rendering technology — the same lesson as Chess (annotated game = readable) and rekordbox (custom-drawn app = silent): Flutter here lands in the honest-refusal class, not the silent class. GUARD SPECTRUM DATUM, and it is the strongest one yet against the 0.03 threshold: contentEnergy of the full login window (captured via its own XComposite surface) = 0.029 — an ENTIRE REAL UI measures just under the threshold, because the page is mostly white. The measured spectrum is now: FL/OBS 0.06-0.07, Swing waveform 0.036, AppFlowy full login UI 0.029, qBittorrent chart 0.020, genuinely-empty 0.000. A threshold of 0.01 separates every real-content sample from every empty sample measured across all three OSes; 0.03 misses two and near-misses a third. (For THIS app the guard is not needed to route correctly — 0% structural coverage already says 'pixels' a priori — but the number calibrates the guard for the mimicry cases where coverage looks fine.)"
+  },
+  "runtime_verification": {
+    "method": "Screenshot of the rendered window (appflowy-screen.png) held against the 5-node tree dumps (appflowy-tree.txt, appflowy-tree-sr-enabled.txt); per-window XComposite capture for the energy measurement.",
+    "agreement": "Pixels show a complete login UI; structure shows an empty shell with one out-of-contract node. The disagreement is total but UNDISGUISED — 0% coverage is computable before acting, so the router's fallback decision is deterministic. Classified unavailable/explicit accordingly."
+  },
+  "permissions_required": [
+    "None beyond a session bus (official .deb unpacked without root; no account created, no login attempted)"
+  ],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/linux-atspi/appflowy-screen.png",
+    "campaign/results/artifacts/linux-atspi/appflowy-tree.txt",
+    "campaign/results/artifacts/linux-atspi/appflowy-tree-sr-enabled.txt",
+    "campaign/results/artifacts/linux-atspi/xcomp-appflowy-window.png"
+  ]
+}

@@ -14,6 +14,29 @@ result cells, prose findings in `linux-FINDINGS.md`. This is correspondence.
 
 ---
 
+## 2026-08-17 (round 5) — FYI — the guard spectrum is now five points; 0.03 sits in the middle of real content
+
+Update to the FYI below, with two new measured points from the Tier F cells:
+Swing waveform-on-dark panel = 0.036 (caught by 0.006); AppFlowy's ENTIRE login
+UI = 0.029 (a whole real screen, under the threshold, because the page is mostly
+white). Full spectrum across three OSes: 0.06-0.07 (FL/OBS) / 0.036 (Swing) /
+0.029 (AppFlowy full UI) / 0.020 (qBittorrent chart) / 0.000 (every genuinely-
+empty control). Threshold 0.01 separates all real content from all empties in
+the campaign's data; 0.03 misses or near-misses three real-content cases. The
+recommendation below stands, with more force.
+
+Also for the record, the per-window-capture rule now has its X11 implementation
+(campaign/linux/grabwin.c, XComposite manual redirection — works on stock Xvfb
+with no compositor, reads content under occlusion like PrintWindow) and a
+measured Linux verdict flip: screen crop 0.042 vs window surface 0.021 across
+the 0.03 boundary with plain window overlap. And two Tier-F interception traps:
+java-atk-wrapper execs a hardcoded /usr/bin/xprop (a11y dies without x11-utils —
+the -Bsymbolic accident class), and Flutter's bus entry claims toolkit 'gtk'
+(the embedder), so the honest Flutter signature is libflutter_linux_gtk.so in
+the process, not the toolkit attribute.
+
+---
+
 ## 2026-08-17 — FYI — coverage-guard has a FALSE-NEGATIVE regime, complementary to the macOS false-positive one
 
 This concerns whoever owns `src/coverage-guard.mjs` and the Windows agent, whose

@@ -374,6 +374,71 @@
     },
     {
       "os": "linux",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, no WM",
+      "app": "AppFlowy 0.13.2 (third-party Flutter desktop app, official Linux .deb, GTK embedder) — Tier F (Flutter), absent from the matrix on every OS until this cell",
+      "stack": "flutter",
+      "stack_detection": {
+        "method": "process maps / package layout: libflutter_linux_gtk.so + libapp.so (AOT snapshot) are unambiguous BEFORE launch. Trap recorded: once on the bus the toolkit attribute claims 'gtk' — that is the EMBEDDER, and a router keying on it would wrongly expect a GTK-shaped tree; the honest signature is the flutter engine library.",
+        "signature": "usr/lib/AppFlowy/lib/libflutter_linux_gtk.so + libapp.so; AT-SPI desktop lists 'AppFlowy' (toolkit 'gtk' — the embedder shell only)",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Official .deb unpacked into the rootless prefix (two extra host libs fetched: libkeybinder-3.0, libarchive13). App runs and renders its full onboarding/login UI under Xvfb (screenshot kept). AT-SPI probed three ways: default; setting org.a11y.Status ScreenReaderEnabled=true live; and restarting the app with the flag pre-set — Flutter only builds semantics when assistive tech is announced, so the flag test is the fair one.",
+      "verdict": "unavailable",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": false,
+          "detail": "The screen shows a full login UI ('Bienvenue sur AppFlowy', e-mail field, four sign-in buttons, links, two footer buttons). NONE of that text exists in the channel — the entire AT-SPI tree is 5 nodes: application → frame → full-window panel → filler (extents -1,-1,-1,-1) → panel with childCount = -1. No text node anywhere."
+        },
+        "t2_enumerate": {
+          "pass": false,
+          "detail": "0 interactive elements exposed for a screen holding at least 7 (field, 4 buttons, 2 footer buttons + links). Structural coverage of the window: 0% in one walk — which is exactly what makes this EXPLICIT-BY-SHAPE rather than silent-by-mimicry: a frame-only shell cannot be mistaken for a valid reading of a populated screen, unlike OBS/qBittorrent where a rich tree surrounds one empty pane."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Unreachable — no text node to type into (and no login was attempted on a third-party service anyway)."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a — no content nodes to watch."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "Refused by policy: with zero interactive nodes there are no channel-derived coordinates, and a correct router must refuse to aim rather than guess. The refusal IS the pass condition here, mirroring the github-absent-pr negative control."
+        },
+        "t6_pictorial": {
+          "pass": false,
+          "detail": "The whole 1232x752 window is one undeclared painted region. Nothing marks it opaque; the router must derive that from the 0% structural coverage. Bonus breakage datum: the FlView accessible answers childCount = -1 (out-of-contract) and its property reads stall — the first full walk took 17.4 s for 5 nodes on D-Bus timeouts. A production router needs per-node read timeouts, and must treat -1 childCount as 'broken subtree → 0% coverage → pixels'."
+        }
+      },
+      "measurements": {
+        "view_bytes": 160,
+        "view_tokens_est": 40,
+        "screenshot_tokens_est": 1365,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 17399,
+        "notes": "capture_latency_ms is the FIRST full walk (17.4 s for 5 nodes — the broken FlView node stalls every property read); a re-walk that skips the broken node is milliseconds. THE FLAG TEST MATTERS: Flutter's engine builds semantics only when a screen reader is announced, so we set org.a11y.Status ScreenReaderEnabled=true (verified true on the bus) both live and before launch — the tree did not change. In THIS shipped build the semantics path is absent or broken end-to-end; upstream Flutter does have an ATK bridge, so the boundary is once again developer/build wiring, not rendering technology — the same lesson as Chess (annotated game = readable) and rekordbox (custom-drawn app = silent): Flutter here lands in the honest-refusal class, not the silent class. GUARD SPECTRUM DATUM, and it is the strongest one yet against the 0.03 threshold: contentEnergy of the full login window (captured via its own XComposite surface) = 0.029 — an ENTIRE REAL UI measures just under the threshold, because the page is mostly white. The measured spectrum is now: FL/OBS 0.06-0.07, Swing waveform 0.036, AppFlowy full login UI 0.029, qBittorrent chart 0.020, genuinely-empty 0.000. A threshold of 0.01 separates every real-content sample from every empty sample measured across all three OSes; 0.03 misses two and near-misses a third. (For THIS app the guard is not needed to route correctly — 0% structural coverage already says 'pixels' a priori — but the number calibrates the guard for the mimicry cases where coverage looks fine.)"
+      },
+      "runtime_verification": {
+        "method": "Screenshot of the rendered window (appflowy-screen.png) held against the 5-node tree dumps (appflowy-tree.txt, appflowy-tree-sr-enabled.txt); per-window XComposite capture for the energy measurement.",
+        "agreement": "Pixels show a complete login UI; structure shows an empty shell with one out-of-contract node. The disagreement is total but UNDISGUISED — 0% coverage is computable before acting, so the router's fallback decision is deterministic. Classified unavailable/explicit accordingly."
+      },
+      "permissions_required": [
+        "None beyond a session bus (official .deb unpacked without root; no account created, no login attempted)"
+      ],
+      "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/linux-atspi/appflowy-screen.png",
+        "campaign/results/artifacts/linux-atspi/appflowy-tree.txt",
+        "campaign/results/artifacts/linux-atspi/appflowy-tree-sr-enabled.txt",
+        "campaign/results/artifacts/linux-atspi/xcomp-appflowy-window.png"
+      ]
+    },
+    {
+      "os": "linux",
       "os_version": "Ubuntu 24.04, GTK 4.14, gnome-text-editor",
       "app": "GNOME Text Editor — hard-text stress (ligatures, accents, RTL Arabic, emoji, CJK)",
       "stack": "gtk4",
@@ -798,6 +863,73 @@
       "date": "2026-08-15",
       "raw_artifacts": [
         "pages/hardtext.html"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, no WM",
+      "app": "SwingProbe (purpose-built Java Swing app, OpenJDK 21 + java-atk-wrapper 0.40): standard widgets + one custom-painted JPanel mimicking the OBS/qBittorrent shape — Tier F (Java) was absent from the matrix on every OS until this cell",
+      "stack": "swing",
+      "stack_detection": {
+        "method": "java process + AT-SPI registration; once on the bus the toolkit attribute names the bridge itself",
+        "signature": "AT-SPI desktop lists 'SwingProbe' with toolkit 'J2SE-access-bridge' (java-atk-wrapper); JVM signature: libjvm.so mapped, /usr/share/java/java-atk-wrapper.jar present",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "The bridge is NOT on by default: it needs the AtkWrapper assistive technology enabled (-Djavax.accessibility.assistive_technologies=org.GNOME.Accessibility.AtkWrapper, or the same line in conf/accessibility.properties, which Debian ships commented out) plus the wrapper jar on the classpath and its JNI lib on java.library.path. INTERCEPTION-PREDICTABILITY DATUM (the -Bsymbolic class of accident): AtkWrapper's static initializer execs a HARDCODED /usr/bin/xprop and the whole a11y load dies (java.lang.InternalError chain) if x11-utils is not installed — on this rootless prefix it required patching the 14-byte string to /tmp/xkb/xprop inside the .class (same length) and symlinking xprop there. A router probing 'is Java a11y available' must therefore check three signatures, not one: wrapper jar present, assistive_technologies enabled, AND xprop present.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "JTextArea sentence read char-exact through the Text interface. The Java bridge speaks the same AT-SPI vocabulary as GTK/Qt — with one dialect quirk found the hard way: JButton's role string is 'button', not the 'push button' GTK and Qt emit. A cross-toolkit router needs a role-synonym table; matching on exact role strings silently loses controls."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "28-node tree, 17 SHOWING with correct extents (menu bar, menus, labels, text field, button, text area, panels). One geometry quirk: the top-level frame reports extents [-1,-1,-1,-1] while every child reports real screen coordinates — harmless for aiming (children are what you click) but a router must not use the Java frame node for window geometry."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "Typed PX-JAVA-SWING-LIVE into the JTextField via real X keystrokes; read back exactly from the channel's live value."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not exercised (event stream covered on GTK/Qt cells; the Java bridge forwards the same object:* event classes)."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Blind click on the 'Do it' button purely from its channel extents [419,66,67,25] → status label read back through the channel flips 'clicks: 0' → 'clicks: 1'. Coordinates and verification both in-channel."
+        },
+        "t6_pictorial": {
+          "pass": false,
+          "detail": "The custom-painted JPanel (waveform + 'PAINTED-ONLY-TEXT 42.7 dB' drawn in paintComponent) is the OBS shape on a THIRD toolkit: on the bus it is a nameless panel [65,455,890,220] kids=0 inside the named 'Preview' panel, and the painted text appears NOWHERE in the tree — disagreement by omission, silent-by-mimicry. Purpose-built probe, so this is a mechanism confirmation (Swing paints outside the a11y tree unless the developer implements getAccessibleContext on the custom component), not a third-party finding."
+        }
+      },
+      "measurements": {
+        "view_bytes": 495,
+        "view_tokens_est": 124,
+        "screenshot_tokens_est": 1365,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 25,
+        "notes": "124 tokens vs 1365 for a screenshot (11x) on this window; full walk 25 ms (the Java bridge is FAST — fewer D-Bus hops than the GTK3 tree of similar size). MITIGATION RESULT, and it completes the guard's measured spectrum: contentEnergy on the painted panel (captured via the window's own XComposite surface, per the per-window rule) = 0.036 — caught by the shipped 0.03 threshold, but by a margin of only 0.006. The campaign's painted-content spectrum now reads: Windows FL/OBS 0.06-0.07 (caught comfortably), Swing waveform-on-dark 0.036 (caught barely), qBittorrent sparse chart 0.020 (MISSED), genuinely-empty 0.000 everywhere. The 0.03 threshold sits in the middle of the real-content distribution — strengthening the returns-file recommendation to drop it to 0.01, which separates every measured sample with zero false positives. The failure_class here is 'explicit' because guard A as shipped does convert this instance; qBittorrent remains the counter-example where it does not."
+      },
+      "runtime_verification": {
+        "method": "Per-window XComposite capture (campaign/linux/grabwin.c) of the Java window; painted-panel crop fed to coverage-guard contentEnergy (campaign/linux/swing-guard.mjs); tree dump and screenshots kept side by side.",
+        "agreement": "Standard widgets: full agreement (labels, values, extents match the rendered window). Custom panel: pixels show waveform + text, channel shows an empty anonymous panel — the known silent shape, caught by the pixel spot-check at 0.036."
+      },
+      "permissions_required": [
+        "None beyond a session bus (JDK + wrapper extracted to a user prefix; a11y enabled per-process via -D flags)"
+      ],
+      "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/linux-atspi/swingprobe-tree.txt",
+        "campaign/results/artifacts/linux-atspi/swingprobe-nodes.json",
+        "campaign/results/artifacts/linux-atspi/xcomp-swing-window.png",
+        "campaign/results/artifacts/linux-atspi/guard-crop-swing-scope.png",
+        "campaign/linux/SwingProbe.java",
+        "campaign/linux/swing-guard.mjs"
       ]
     },
     {
@@ -1552,6 +1684,71 @@
         "results/web-battery-linux/nav-views/",
         "results/web-battery-linux/nav-shots/",
         "campaign/linux/web-navigate.mjs"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11), no WM, no compositor",
+      "app": "Per-window pixel capture via XComposite — the X11 implementation of the per-window capture rule (macOS: CGWindowListCreateImage per window; Windows: PrintWindow PW_RENDERFULLCONTENT), demonstrated with a measured verdict flip",
+      "stack": "other",
+      "stack_detection": {
+        "method": "XCompositeQueryExtension before any capture — the extension's presence is queryable a priori, so a router knows which capture primitive it may use before acting",
+        "signature": "Composite extension version 0.4 present on stock Xvfb (no compositor needed for manual redirection)",
+        "detected_before_use": true
+      },
+      "channel": "pixels-baseline",
+      "channel_setup": "campaign/linux/grabwin.c (~80 lines, plain Xlib + libXcomposite): XCompositeRedirectWindow(CompositeRedirectAutomatic) → force one repaint (XClearArea with exposures) → XCompositeNameWindowPixmap → XGetImage on the pixmap; plus a root-window XGetImage of the same rect as the naive-screen-crop comparator. Analysis in campaign/linux/xcomp-analyze.mjs (PPM→PNG, pixel divergence, guard content-energy on both captures). Setup: Mousepad (800x600) holding two sentinel text lines, FeatherPad (700x500) raised on top covering ~3/4 of it.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": null,
+          "detail": "n/a — pixel-capture primitive cell"
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "The two captures of the SAME window rect diverge on 14.2% of pixels: the window-surface capture shows Mousepad's true, complete content (both sentinel lines — including the region occluded on screen), while the screen crop shows FeatherPad's menubar/toolbar/statusbar painted over it. Artifacts kept side by side (xcomp-mousepad-window.png vs xcomp-mousepad-screen.png)."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1365,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": 600,
+        "notes": "THE VERDICT FLIP, MEASURED: content-energy of the screen crop = 0.042 — ABOVE the 0.03 guard threshold — vs 0.021 for the window's own surface. A router spot-checking this window's structure-empty region through a screen crop would read the OVERLAPPING window's ink, cross the decision boundary, and file a false '[unverified: pixels show content]' report against the window below. The macOS finding showed the same failure through transparency (129x energy inflation); this shows it through plain occlusion (2x, but straddling the threshold, which is what matters). Same rule, third OS, now implemented on all three: THE PIXEL SPOT-CHECK MUST READ A PER-WINDOW SURFACE, NEVER A SCREEN CROP. Two X11-specific facts worth recording: (1) stock Xvfb ships Composite 0.4 and a client may redirect a single window manually — no compositing window manager required, so the primitive is available even on bare sessions; (2) the redirected surface holds the window's full content INCLUDING occluded regions (like PrintWindow with PW_RENDERFULLCONTENT), so per-window capture is not merely correct, it is strictly more informative than the screen. Latency: one redirect+repaint+read cycle ~600 ms in this implementation (dominated by the deliberate settle sleep; the X round-trips themselves are milliseconds)."
+      },
+      "runtime_verification": {
+        "method": "Both captures converted to PNG and inspected; sentinel text lines placed in the occluded window beforehand so truth is known by construction; pixel-divergence and guard energies computed by campaign/linux/xcomp-analyze.mjs.",
+        "agreement": "Window-surface capture = the window's true content, byte-verifiable against what was typed; screen crop = the composited screen at that rect. The 14.2% divergence is exactly the occluded area painted by the covering window."
+      },
+      "permissions_required": [
+        "None (any X client may redirect and read a window on its own display; no root, no compositor)"
+      ],
+      "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/linux/grabwin.c",
+        "campaign/linux/xcomp-analyze.mjs",
+        "campaign/results/artifacts/linux-atspi/xcomp-mousepad-window.png",
+        "campaign/results/artifacts/linux-atspi/xcomp-mousepad-screen.png"
       ]
     },
     {
@@ -4170,7 +4367,7 @@
         "diff_bytes_per_interaction": null,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 16,
-        "notes": "The real-AAA-game cell the plan wanted (Heaven was a benchmark): a UE5 title is even MORE structure-void than the benchmark — 1 node vs Heaven's 7, because borderless fullscreen sheds the OS chrome too. View 9 tokens vs 2765-token screenshot (1534 legacy tier). TWO INCIDENTS KEPT AS DATA: (1) harness — the first 6-minute 'window not found' was a case-SENSITIVE regex against 'Silent Hill 2  ' (trailing spaces, mixed case); match window identity from the Win32 map, not from name guesses. (2) OWNERSHIP TOCTOU, the campaign's macOS-stopwatch mirror: between launch and close, the game had progressed past its intro into gameplay (the capture shows an in-game scene) — plausibly the user had taken over — and the probe's WM_CLOSE closed it without save confirmation. A lifecycle action on a window the agent launched is NOT safe by provenance alone: ownership must be re-verified (foreground history, input activity) before close, or close must be left to the human. Recorded in agent-returns."
+        "notes": "The real-AAA-game cell the plan wanted (Heaven was a benchmark): a UE5 title is even MORE structure-void than the benchmark — 1 node vs Heaven's 7, because borderless fullscreen sheds the OS chrome too. View 9 tokens vs 2765-token screenshot (1534 legacy tier). TWO INCIDENTS KEPT AS DATA: (1) harness — the first 6-minute 'window not found' was a case-SENSITIVE regex against 'Silent Hill 2  ' (trailing spaces, mixed case); match window identity from the Win32 map, not from name guesses. (2) OWNERSHIP AMBIGUITY AT CLOSE TIME — corrected after the user's review: the captured in-engine scene was first read as gameplay (implying the user might have taken over before our WM_CLOSE). The user pointed out, correctly, that the SH2 remake renders its title/attract sequence in-engine; with ZERO input sent by the probe and none evidenced, the simplest account is that the game idled at its title sequence and the closure was harmless. The durable lesson survives the correction in sharper form: at close time the probe COULD NOT DISTINGUISH menu-idle from human-play — it lacked the one check that answers it (recent-input query, e.g. GetLastInputInfo, plus foreground history). Provenance ('I launched it') plus a lifecycle action minus that check is a gamble that happened to be safe here. Recorded in agent-returns with the correction trail."
       },
       "runtime_verification": {
         "method": "PrintWindow frame vs the 1-node tree",

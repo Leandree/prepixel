@@ -1,0 +1,49 @@
+{
+  "os": "linux",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, no WM",
+  "app": "SwingProbe (purpose-built Java Swing app, OpenJDK 21 + java-atk-wrapper 0.40): standard widgets + one custom-painted JPanel mimicking the OBS/qBittorrent shape — Tier F (Java) was absent from the matrix on every OS until this cell",
+  "stack": "swing",
+  "stack_detection": {
+    "method": "java process + AT-SPI registration; once on the bus the toolkit attribute names the bridge itself",
+    "signature": "AT-SPI desktop lists 'SwingProbe' with toolkit 'J2SE-access-bridge' (java-atk-wrapper); JVM signature: libjvm.so mapped, /usr/share/java/java-atk-wrapper.jar present",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "The bridge is NOT on by default: it needs the AtkWrapper assistive technology enabled (-Djavax.accessibility.assistive_technologies=org.GNOME.Accessibility.AtkWrapper, or the same line in conf/accessibility.properties, which Debian ships commented out) plus the wrapper jar on the classpath and its JNI lib on java.library.path. INTERCEPTION-PREDICTABILITY DATUM (the -Bsymbolic class of accident): AtkWrapper's static initializer execs a HARDCODED /usr/bin/xprop and the whole a11y load dies (java.lang.InternalError chain) if x11-utils is not installed — on this rootless prefix it required patching the 14-byte string to /tmp/xkb/xprop inside the .class (same length) and symlinking xprop there. A router probing 'is Java a11y available' must therefore check three signatures, not one: wrapper jar present, assistive_technologies enabled, AND xprop present.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "JTextArea sentence read char-exact through the Text interface. The Java bridge speaks the same AT-SPI vocabulary as GTK/Qt — with one dialect quirk found the hard way: JButton's role string is 'button', not the 'push button' GTK and Qt emit. A cross-toolkit router needs a role-synonym table; matching on exact role strings silently loses controls." },
+    "t2_enumerate": { "pass": true, "detail": "28-node tree, 17 SHOWING with correct extents (menu bar, menus, labels, text field, button, text area, panels). One geometry quirk: the top-level frame reports extents [-1,-1,-1,-1] while every child reports real screen coordinates — harmless for aiming (children are what you click) but a router must not use the Java frame node for window geometry." },
+    "t3_live_value": { "pass": true, "detail": "Typed PX-JAVA-SWING-LIVE into the JTextField via real X keystrokes; read back exactly from the channel's live value." },
+    "t4_living_screen": { "pass": null, "detail": "Not exercised (event stream covered on GTK/Qt cells; the Java bridge forwards the same object:* event classes)." },
+    "t5_blind_action": { "pass": true, "detail": "Blind click on the 'Do it' button purely from its channel extents [419,66,67,25] → status label read back through the channel flips 'clicks: 0' → 'clicks: 1'. Coordinates and verification both in-channel." },
+    "t6_pictorial": { "pass": false, "detail": "The custom-painted JPanel (waveform + 'PAINTED-ONLY-TEXT 42.7 dB' drawn in paintComponent) is the OBS shape on a THIRD toolkit: on the bus it is a nameless panel [65,455,890,220] kids=0 inside the named 'Preview' panel, and the painted text appears NOWHERE in the tree — disagreement by omission, silent-by-mimicry. Purpose-built probe, so this is a mechanism confirmation (Swing paints outside the a11y tree unless the developer implements getAccessibleContext on the custom component), not a third-party finding." }
+  },
+  "measurements": {
+    "view_bytes": 495,
+    "view_tokens_est": 124,
+    "screenshot_tokens_est": 1365,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 25,
+    "notes": "124 tokens vs 1365 for a screenshot (11x) on this window; full walk 25 ms (the Java bridge is FAST — fewer D-Bus hops than the GTK3 tree of similar size). MITIGATION RESULT, and it completes the guard's measured spectrum: contentEnergy on the painted panel (captured via the window's own XComposite surface, per the per-window rule) = 0.036 — caught by the shipped 0.03 threshold, but by a margin of only 0.006. The campaign's painted-content spectrum now reads: Windows FL/OBS 0.06-0.07 (caught comfortably), Swing waveform-on-dark 0.036 (caught barely), qBittorrent sparse chart 0.020 (MISSED), genuinely-empty 0.000 everywhere. The 0.03 threshold sits in the middle of the real-content distribution — strengthening the returns-file recommendation to drop it to 0.01, which separates every measured sample with zero false positives. The failure_class here is 'explicit' because guard A as shipped does convert this instance; qBittorrent remains the counter-example where it does not."
+  },
+  "runtime_verification": {
+    "method": "Per-window XComposite capture (campaign/linux/grabwin.c) of the Java window; painted-panel crop fed to coverage-guard contentEnergy (campaign/linux/swing-guard.mjs); tree dump and screenshots kept side by side.",
+    "agreement": "Standard widgets: full agreement (labels, values, extents match the rendered window). Custom panel: pixels show waveform + text, channel shows an empty anonymous panel — the known silent shape, caught by the pixel spot-check at 0.036."
+  },
+  "permissions_required": [
+    "None beyond a session bus (JDK + wrapper extracted to a user prefix; a11y enabled per-process via -D flags)"
+  ],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/linux-atspi/swingprobe-tree.txt",
+    "campaign/results/artifacts/linux-atspi/swingprobe-nodes.json",
+    "campaign/results/artifacts/linux-atspi/xcomp-swing-window.png",
+    "campaign/results/artifacts/linux-atspi/guard-crop-swing-scope.png",
+    "campaign/linux/SwingProbe.java",
+    "campaign/linux/swing-guard.mjs"
+  ]
+}

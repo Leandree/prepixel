@@ -1,0 +1,17 @@
+frame -1,-1,-1,-1 "SwingProbe"
+root pane 60,40,900,640
+layered pane 60,40,900,640
+panel 60,61,900,619
+panel 60,61,900,35
+label 65,71,76,15 "Type here:"
+text 146,69,268,19 "input-field"
+button 419,66,67,25 "Do it"
+label 491,71,55,15 "clicks: 0"
+scroll pane 60,104,900,326
+viewport 61,105,897,323
+text 61,105,897,323 <<The quick brown fox jumps over the lazy dog 0123456789>>
+panel 60,438,900,242 "Preview"
+panel 65,455,890,220
+menu bar 60,40,900,21
+menu 60,40,37,19 "File"
+menu 97,40,45,19 "Help"

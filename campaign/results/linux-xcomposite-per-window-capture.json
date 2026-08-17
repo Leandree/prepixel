@@ -1,0 +1,47 @@
+{
+  "os": "linux",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11), no WM, no compositor",
+  "app": "Per-window pixel capture via XComposite — the X11 implementation of the per-window capture rule (macOS: CGWindowListCreateImage per window; Windows: PrintWindow PW_RENDERFULLCONTENT), demonstrated with a measured verdict flip",
+  "stack": "other",
+  "stack_detection": {
+    "method": "XCompositeQueryExtension before any capture — the extension's presence is queryable a priori, so a router knows which capture primitive it may use before acting",
+    "signature": "Composite extension version 0.4 present on stock Xvfb (no compositor needed for manual redirection)",
+    "detected_before_use": true
+  },
+  "channel": "pixels-baseline",
+  "channel_setup": "campaign/linux/grabwin.c (~80 lines, plain Xlib + libXcomposite): XCompositeRedirectWindow(CompositeRedirectAutomatic) → force one repaint (XClearArea with exposures) → XCompositeNameWindowPixmap → XGetImage on the pixmap; plus a root-window XGetImage of the same rect as the naive-screen-crop comparator. Analysis in campaign/linux/xcomp-analyze.mjs (PPM→PNG, pixel divergence, guard content-energy on both captures). Setup: Mousepad (800x600) holding two sentinel text lines, FeatherPad (700x500) raised on top covering ~3/4 of it.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": null, "detail": "n/a — pixel-capture primitive cell" },
+    "t2_enumerate": { "pass": null, "detail": "n/a" },
+    "t3_live_value": { "pass": null, "detail": "n/a" },
+    "t4_living_screen": { "pass": null, "detail": "n/a" },
+    "t5_blind_action": { "pass": null, "detail": "n/a" },
+    "t6_pictorial": { "pass": true, "detail": "The two captures of the SAME window rect diverge on 14.2% of pixels: the window-surface capture shows Mousepad's true, complete content (both sentinel lines — including the region occluded on screen), while the screen crop shows FeatherPad's menubar/toolbar/statusbar painted over it. Artifacts kept side by side (xcomp-mousepad-window.png vs xcomp-mousepad-screen.png)." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1365,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": 600,
+    "notes": "THE VERDICT FLIP, MEASURED: content-energy of the screen crop = 0.042 — ABOVE the 0.03 guard threshold — vs 0.021 for the window's own surface. A router spot-checking this window's structure-empty region through a screen crop would read the OVERLAPPING window's ink, cross the decision boundary, and file a false '[unverified: pixels show content]' report against the window below. The macOS finding showed the same failure through transparency (129x energy inflation); this shows it through plain occlusion (2x, but straddling the threshold, which is what matters). Same rule, third OS, now implemented on all three: THE PIXEL SPOT-CHECK MUST READ A PER-WINDOW SURFACE, NEVER A SCREEN CROP. Two X11-specific facts worth recording: (1) stock Xvfb ships Composite 0.4 and a client may redirect a single window manually — no compositing window manager required, so the primitive is available even on bare sessions; (2) the redirected surface holds the window's full content INCLUDING occluded regions (like PrintWindow with PW_RENDERFULLCONTENT), so per-window capture is not merely correct, it is strictly more informative than the screen. Latency: one redirect+repaint+read cycle ~600 ms in this implementation (dominated by the deliberate settle sleep; the X round-trips themselves are milliseconds)."
+  },
+  "runtime_verification": {
+    "method": "Both captures converted to PNG and inspected; sentinel text lines placed in the occluded window beforehand so truth is known by construction; pixel-divergence and guard energies computed by campaign/linux/xcomp-analyze.mjs.",
+    "agreement": "Window-surface capture = the window's true content, byte-verifiable against what was typed; screen crop = the composited screen at that rect. The 14.2% divergence is exactly the occluded area painted by the covering window."
+  },
+  "permissions_required": [
+    "None (any X client may redirect and read a window on its own display; no root, no compositor)"
+  ],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/linux/grabwin.c",
+    "campaign/linux/xcomp-analyze.mjs",
+    "campaign/results/artifacts/linux-atspi/xcomp-mousepad-window.png",
+    "campaign/results/artifacts/linux-atspi/xcomp-mousepad-screen.png"
+  ]
+}

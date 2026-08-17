@@ -62,7 +62,7 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
 - **Safety (the production question) — the campaign's most important negative
-  result, its repair, and the two places the repair does not reach.** Across 71
+  result, its repair, and the two places the repair does not reach.** Across 76
   cells on three OSes, **100% of channels were predictable in advance** from a stack
   signature. But "never silent" did **not** survive contact with real apps: **6
   silent divergences found, 4 neutralised, 2 still standing.**
@@ -96,6 +96,20 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   it is: **the guard catches omission when it is dense enough to see, does not catch
   substitution, and does not watch actions at all.** Both survivors stay classified
   `silent` on purpose, and each cell specifies the concrete extension it needs.
+
+  Round 5 on Linux put numbers on the calibration boundary. The guard's measured
+  content-energy spectrum across three OSes now reads: **0.06–0.07** (FL/OBS,
+  caught comfortably) / **0.036** (a Swing painted panel on Linux — the same
+  omission shape reproduced on a third toolkit — caught by 0.006) / **0.029**
+  (AppFlowy's *entire* Flutter login UI, under the threshold because the page is
+  mostly white) / **0.020** (qBittorrent, missed) / **0.000** (every genuinely-
+  empty control measured). A 0.01 threshold separates all real content from all
+  empties in the campaign's data. And the per-window capture rule the guard
+  depends on now has its X11 implementation (`campaign/linux/grabwin.c`,
+  XComposite manual redirection — works on stock Xvfb, reads content under
+  occlusion like `PrintWindow`), with a measured verdict flip under plain window
+  overlap: screen crop 0.042 vs the window's own surface 0.021, straddling the
+  threshold.
   The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
   a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
   router computes 0% structural coverage in one walk), whereas named-but-empty panes
@@ -234,9 +248,9 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 71 cells, schema-valid, 100% predictable in advance,
+**All three OSes are covered: 76 cells, schema-valid, 100% predictable in advance,
 6 silent divergences found — 4 neutralised, 2 kept as counter-examples.**
-Linux 25, macOS 22, Windows 24.
+Linux 28, macOS 22, Windows 26.
 
 The four neutralised are custom-drawn or video surfaces (FL Studio, OBS, rekordbox
 on Windows; Zoom's in-meeting stage on macOS), each carrying its `mitigation`
@@ -257,6 +271,16 @@ totals) — unsurprising, since all three drive the same Chromium, but worth hav
 measured rather than assumed. The Linux desktop round also exercised AT-SPI in
 session on GTK3 and Qt6 (the old headless `blocked` was a sandbox artifact) and
 closed the native blind click end-to-end on three stacks.
+
+Round 5 (Linux) filled that OS's last empty tiers and closed the capture rule on
+the third OS: Java/Swing works via java-atk-wrapper (and reproduces the OBS
+omission shape on a third toolkit, caught at energy 0.036 — the same toolkit
+whose macOS twin exhibits the *substitution* class, so Java has now shown both
+failure kinds); Flutter (AppFlowy, real third-party app) is
+unavailable/explicit-by-shape — a 5-node tree for a full login UI, 0% coverage
+computable a priori; and the per-window capture rule has its X11 implementation
+(`campaign/linux/grabwin.c`, XComposite; measured verdict flip 0.042 vs 0.021
+across the threshold under plain occlusion).
 
 Still open: the two guard extensions the survivors call for (a lower/edge-based
 energy metric, and an act-side check that re-reads after any action returning
