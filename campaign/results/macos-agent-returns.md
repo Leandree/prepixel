@@ -18,7 +18,42 @@ the history of what was asked and decided is part of the record.
 
 ---
 
-## 2026-08-15 — DECISION NEEDED — which app for the unannotated GL/Metal game cell
+## 2026-08-15 — DONE — the game cell, answered better than any of my three options
+
+Léandre installed **DiRT 4** (Feral port, Metal+OpenGL, 3D) and **Cuphead** (Unity,
+OpenGL, 2D), which supersedes the decision below. I ran both rather than picking
+one, because two different engines test whether the boundary is "game" or "renderer".
+Cell: `macos-games-pixels-baseline`. Result: DiRT 4 while rendering is a **1-node**
+tree (AXWindow, zero children) over a 1512x982 surface, stable across five samples
+in two minutes; Cuphead is 2 nodes, the second being the window title echoed as a
+child — *not* a reading of the painted logo, and I said so explicitly in the cell
+because that one is easy to misreport.
+
+The finding I did not expect, and the reason the cell is worth more than a control:
+**the contrast is inside a single process.** Before the game starts, the same pid
+presents the Feral launcher — 31 AX nodes, an AXWebArea, 11 buttons, which I drove
+with a coordinate-free AXPress on "Jouer". Press Play and that same pid becomes a
+1-node window. Structure did not degrade because the app is a game; it vanished
+because the surface stopped being a web/AppKit view and became a Metal drawable.
+**A router must evaluate coverage per window and per state, never per application** —
+caching "DiRT 4 is well annotated" from the launcher would be exactly wrong ten
+seconds later. Together with the Chess cell this pins the boundary: developer
+annotation over a GPU surface, not rendering technology and not app category.
+
+Two checks I ran instead of assuming. A Metal drawable could plausibly hand a stale
+frame to a compositor capture, so I hashed two captures ~12 s apart through both
+paths; all four differ, so the per-window capture rule from the SwiftUI cell holds on
+GPU surfaces too. And `coverage-guard` on the window surface gives energy 0.625 and
+0.866 — it correctly converts "structure is empty" into "declared opaque, crop".
+
+Both games were quit at the end and nothing else on the machine was touched. Note
+for the record: I downscaled the two evidence captures to 1400 px and dropped the
+screen-region duplicates, which for a fullscreen game are byte-equivalent to the
+window surface — 19 MB of redundant PNG for no added evidence.
+
+---
+
+## 2026-08-15 — SUPERSEDED — which app for the unannotated GL/Metal game cell
 
 The deepening plan's macOS P1 asks for "a genuinely unannotated GL/Metal game" whose
 acceptance is *a cell confirming frame-only/empty tree → explicit `0% coverage →

@@ -58,7 +58,7 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
 - **Safety (the production question) — and the campaign's most important negative
-  result.** Across 59 cells on three OSes, **100% of channels were predictable in
+  result.** Across 60 cells on three OSes, **100% of channels were predictable in
   advance** from a stack signature. But "never silent" did **not** survive contact
   with Windows: **3 silent divergences** (FL Studio/Delphi, OBS/Qt6,
   rekordbox/JUCE), all the same mechanism — *disagreement by omission*. A container
@@ -201,15 +201,14 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 59 cells, schema-valid, 100% predictable in advance,
-3 silent.** Linux 21, macOS 19, Windows 19. The three silent cells are all Windows
+**All three OSes are covered: 60 cells, schema-valid, 100% predictable in advance,
+3 silent.** Linux 21, macOS 20, Windows 19. The three silent cells are all Windows
 custom-drawn apps (FL Studio, OBS, rekordbox) and are the campaign's headline
 negative result — see `campaign/MATRIX.md` and `campaign/results/windows-FINDINGS.md`.
 
-Still open, and all of it needs a physical desktop rather than more probing: a
-third-party SwiftUI app on macOS (the thin-tree suspect), Tier F toolkits
-(Java/Flutter) anywhere, an unannotated GL/Metal game, and one confirmation run of
-the real-web battery on a Linux desktop (it was egress-blocked in the sandbox).
+Still open: Tier F toolkits (Qt/Java/Flutter) on macOS, Zoom's in-meeting
+surfaces, and one confirmation run of the real-web battery on a Linux desktop (it
+was egress-blocked in the sandbox).
 
 The write-up is a position paper (arXiv cs.HC/cs.AI) + a blog post; project notes
 live in the attached Claude project.

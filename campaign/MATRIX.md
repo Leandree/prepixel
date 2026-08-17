@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-59 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+60 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -41,6 +41,7 @@
 | macos | All-canvas 'game' page + mixed opaque page (perimeter-law control) | custom-canvas | pixels-baseline | ⬜ unavailable | explicit | 7 | 1,366 | ✅ |
 | macos | Cursor 2.x (VS Code fork, Electron/Chromium 144) — isolated instance, temp profile | electron | cdp | ✅ works | explicit | 647 | 1,366 | ✅ |
 | macos | Chess/Échecs (com.apple.Chess) — Apple's 3D-rendered chess game | game | accessibility-api | ✅ works | — | 3,050 | 921 | ✅ |
+| macos | Two real games, two different engines: DiRT 4 (Feral port, Metal+OpenGL, 3D) and Cuphead (Unity, OpenGL, 2D). Read-only probes; the only input sent was one AXPress on the launcher's own Play button. | game | pixels-baseline | ⬜ unavailable | explicit | 6 | 1,980 | ✅ |
 | macos | The whole desktop — semantic-compositor router (CGWindowList + per-window channel binding + system-wide hit test). Mirrors windows-desktop-router and linux-desktop-router-merged-view. | other | accessibility-api | ✅ works | explicit | 838 | 1,980 | ✅ |
 | macos | Render-tap feasibility on macOS (targets: TextEdit as a system/platform binary, Google Chrome as a hardened third-party app) | other | render-tree-tap | ⛔ blocked | blocked |  | 1,366 | ✅ |
 | macos | Zoom Workplace 6.x (us.zoom.xos) — home window, logged in, NOT in a meeting | other | accessibility-api | ✅ works | — | 1,712 | 878 | ✅ |
@@ -91,6 +92,7 @@ The production-safety question: could a router know the channel in advance, and 
 | http://127.0.0.1:9224/json/version → Chrome/144.0.7559.236; app warns 'remote-debugging-port is not in the list of known options, but still passed to Electron/Chromium' | cdp | ✅ works | explicit |
 | :9233/json/version -> Chrome/148.0.7778.97; Electron warns 'remote-debugging-port is not in the list of known options, but still passed to Electron/Chromium' (same banner as the macOS Cursor cell) | cdp | ✅ works | explicit |
 | com.apple.Chess; every piece an AXButton on first walk | accessibility-api | ✅ works | — |
+| com.feralinteractive.dirt4 links Metal.framework + OpenGL.framework; unity.Studio MDHR.Cuphead links OpenGL.framework (no Metal). Once running, both expose an AXWindow with no meaningful children — that shape IS the router's predictor. | pixels-baseline | ⬜ unavailable | explicit |
 | AppWindow class, D3D11 swapchain; UIA tree = 7 nodes, all OS window chrome (title bar, system menu, min/max/close), ZERO content children — the unambiguous zero-coverage signal | pixels-baseline | ⬜ unavailable | explicit |
 | libgtk-4.so; text nodes name their font per run | render-tree-tap | ✅ works | explicit |
 | org.a11y.Bus not activatable in headless sandbox; app does not register | accessibility-api | ⛔ blocked | blocked |
@@ -121,8 +123,8 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 44/59.
-- **Silent divergences** (disqualifying): 3/59 ❗ FL Studio 2025 (Producer Edition v25.1.6) — fully custom-drawn UI (Delphi, TFruityLoopsMainForm), READ-ONLY probe, zero input sent, OBS Studio 31.0.3 (Qt 6 Widgets) — user's real config, READ-ONLY probe, rekordbox 7.0.9 (Pioneer DJ, JUCE framework — fully custom-drawn like FL Studio), user's real library, READ-ONLY probe
-- Cells **not** predictable in advance: 0/59 ✅ none
+- Cells where structure **works**: 44/60.
+- **Silent divergences** (disqualifying): 3/60 ❗ FL Studio 2025 (Producer Edition v25.1.6) — fully custom-drawn UI (Delphi, TFruityLoopsMainForm), READ-ONLY probe, zero input sent, OBS Studio 31.0.3 (Qt 6 Widgets) — user's real config, READ-ONLY probe, rekordbox 7.0.9 (Pioneer DJ, JUCE framework — fully custom-drawn like FL Studio), user's real library, READ-ONLY probe
+- Cells **not** predictable in advance: 0/60 ✅ none
 
 Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **FL Studio 2025** (windows); **OBS Studio 31.0.3** (windows); **rekordbox 7.0.9** (windows). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.
