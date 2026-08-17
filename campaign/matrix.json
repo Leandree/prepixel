@@ -614,6 +614,74 @@
     },
     {
       "os": "linux",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, NO window manager",
+      "app": "Mousepad 0.6.3 (Xfce text editor, GTK3)",
+      "stack": "other",
+      "stack_detection": {
+        "method": "ldd shows libgtk-3.so.0 + libatk-bridge-2.0.so; after launch the app appears on the org.a11y AT-SPI bus with toolkit attribute 'gtk' — both checks precede any extraction",
+        "signature": "libgtk-3.so.0 mapped; AT-SPI desktop lists 'mousepad' (toolkit gtk); a11y bus auto-activated via D-Bus service org.a11y.Bus",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "This machine is a headless server: everything runs under Xvfb + dbus-run-session, with Xvfb/xdotool/pyatspi extracted from .debs into a user prefix (no root; one 8-byte binary patch to relocate Xvfb's hardcoded xkbcomp path). The a11y bus needed NO manual setup — the first pyatspi client D-Bus-activated at-spi-bus-launcher + registryd, and GTK3's built-in atk-bridge registered the app. GTK_MODULES=gail:atk-bridge exported (belt-and-braces; GTK3 links atk-bridge directly). Typing via xdotool (real X keystrokes), clicks via xdotool (XTEST): the OS input path, not synthetic AT-SPI actions.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Typed 'The quick brown fox jumps over the lazy dog 0123456789' via xdotool; read back through the Text interface of the sole EditableText node: character-exact, arrives as real strings (no glyph decoding needed at this level)."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "154-node tree; 9 nodes SHOWING with extents — and the screenshot confirms the screen really shows exactly that (frame, tab list, scroll pane, text area). THE HONESTY RESULT OF THIS CELL: with no WM and no xfconf, Mousepad renders WITHOUT its menubar; AT-SPI reports the menubar present-in-tree but STATE_SHOWING=false and its items' extents as MININT ('no on-screen position'). The channel never claimed a control was clickable that wasn't rendered. Same story for window geometry: before an explicit resize the window really was 48x52 px, and AT-SPI's frame extents matched X's geometry byte-for-byte at every step (48x52 then 1000x700). Present-in-tree vs shown-on-screen is cleanly distinguished — exactly the distinction a router needs."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "Unique string PX-7Q4K-LINUX-ATSPI typed then read back from the live buffer through the channel — current value, not a stale snapshot."
+        },
+        "t4_living_screen": {
+          "pass": true,
+          "detail": "Event-driven, not polled: object:text-changed:insert events carry position + inserted text. 3 s idle window = 0 events = 0 bytes (idle is genuinely free). 18 keystrokes → 18 events, ~21 B each (378 B total) vs 1365 tokens for one re-screenshot. The channel pushes deltas; pixels can only re-pull the world."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "End-to-end with REAL OS clicks, every coordinate from the channel: (1) right-click at the centre of the text node's extents (500,350) via xdotool → (2) the popup menu enters the channel: 12 menu items, each with real on-screen extents → (3) blind-click 'Select All' at its centre (672,569) → (4) effect verified IN the channel: Text.getSelection = [0,92] over a 92-char buffer, the whole document. No screenshot in the decision loop at any step."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "No pictorial region exists in this app (no image/canvas roles in the tree, none on screen — consistent). The Qt cells cover the pictorial/custom-paint question."
+        }
+      },
+      "measurements": {
+        "view_bytes": 271,
+        "view_tokens_est": 68,
+        "screenshot_tokens_est": 1365,
+        "diff_bytes_per_interaction": 21,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 115,
+        "notes": "The SHOWING view of a simple editor is 68 tokens vs 1365 for a screenshot (20x) — the synthetic-app-UI regime, as expected for a sparse native window. Full 154-node walk: 115 ms (per-node D-Bus round-trips; a production router would use the batched GetTree or cache). Event stream: 21 B per keystroke, 0 idle. The environmental result worth keeping: the AT-SPI bus auto-activates headlessly under plain dbus-run-session — the 'blocked: no a11y bus' status of the old sandbox cell was a sandbox artifact, not a Linux property."
+      },
+      "runtime_verification": {
+        "method": "Root-window screenshot (GdkPixbuf) captured alongside each probe step; screenshots read back and compared to the emitted view; X window geometry cross-checked via xdotool getwindowgeometry.",
+        "agreement": "Full agreement including the degenerate cases: tiny 48x52 window (extents matched X exactly), hidden menubar (SHOWING=false + MININT extents, and the screenshot indeed shows no menubar), popup menu (items appear on screen and in the channel simultaneously, extents match the rendered popup)."
+      },
+      "permissions_required": [
+        "None beyond a session bus (no root: all GUI packages extracted to a user prefix; a11y bus D-Bus-activated automatically)"
+      ],
+      "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/linux-atspi/mousepad-tree.txt",
+        "campaign/results/artifacts/linux-atspi/mousepad-nodes.json",
+        "campaign/results/artifacts/linux-atspi/mousepad-battery.json",
+        "campaign/results/artifacts/linux-atspi/mousepad-t5.json",
+        "campaign/results/artifacts/linux-atspi/t5-step1-popup.png",
+        "campaign/results/artifacts/linux-atspi/t5-step2-clicked.png",
+        "campaign/results/artifacts/linux-atspi/final.png"
+      ]
+    },
+    {
+      "os": "linux",
       "os_version": "Ubuntu 24.04, GTK 4.14, gtk4-widget-factory (spinner + progress bars animating)",
       "app": "GTK4 Widget Factory — animated",
       "stack": "gtk4",
@@ -915,22 +983,22 @@
     },
     {
       "os": "linux",
-      "os_version": "Ubuntu 24.04, Xvfb + openbox, Chromium",
-      "app": "Native OS-level blind click driven by structured coordinates",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb (X11), no WM",
+      "app": "Native OS-level blind click driven by structured coordinates — completed on three stacks (was: partial/blocked in the old sandbox)",
       "stack": "chromium",
       "stack_detection": {
-        "method": "open debug port",
-        "signature": "CDP responds",
+        "method": "open debug port / AT-SPI bus registration",
+        "signature": "CDP :9223 responds; apps registered on org.a11y bus",
         "detected_before_use": true
       },
       "channel": "cdp",
-      "channel_setup": "blind_click.mjs: read element box (page coords) + window.screenX/screenY + chrome height from the structured channel -> screen coords -> REAL OS click via xdotool (not a CDP synthetic click) -> verify effect.",
-      "verdict": "partial",
-      "failure_class": "blocked",
+      "channel_setup": "The 2026-08-14 sandbox cell recorded this path 'blocked' after Chromium's DevTools port stopped binding across relaunches. On this machine the same script ran first try. Three independent end-to-end runs, all with REAL OS clicks (xdotool/XTEST — the input path an OS agent would use), never a synthetic in-channel click: (a) Chromium/CDP via campaign/linux/blind-click-linux.mjs (identical logic to campaign/desktop/blind_click.mjs, display/xauth from env); (b) GTK3/AT-SPI (mousepad); (c) Qt6/AT-SPI (FeatherPad, qBittorrent).",
+      "verdict": "works",
+      "failure_class": "none",
       "tests": {
         "t1_read_text": {
           "pass": null,
-          "detail": "n/a"
+          "detail": "n/a — actuation cell"
         },
         "t2_enumerate": {
           "pass": null,
@@ -945,8 +1013,8 @@
           "detail": "n/a"
         },
         "t5_blind_action": {
-          "pass": null,
-          "detail": "Actuation logic implemented and committed (structured element box + on-screen window origin + chrome offset -> screen pixel -> xdotool OS click -> verify). Browser-level grounding was already proven end-to-end in phase 1 (grounding eval 4/4, raw CDP Input clicks at predicted coords). The desktop-router cell also extracted the focused window's content live over CDP. The END-TO-END native run here (OS-level xdotool click reading back through CDP) was blocked: after many Xvfb/WM/Chromium relaunches in this headless sandbox, Chromium stopped binding its DevTools port reliably (resources were free; a lifecycle/flakiness issue, not the approach). On a real desktop (the agent-brief target) this path runs directly."
+          "pass": true,
+          "detail": "(a) CDP: element box (page coords 420,396 126x47) + window.screenX/Y (10,10) + chromeTop (outerHeight-innerHeight=143) → screen (493,572) → xdotool click on the Xvfb display → page state IDLE→CLICKED read back through CDP. The one real subtlety is the coordinate-frame composition (page→window→screen), and it worked unmodified. (b) GTK/AT-SPI: right-click at text-node extents centre → popup published in-channel with real extents → blind-click 'Select All' → Text.getSelection [0,92] = whole buffer. (c) Qt/AT-SPI: FeatherPad 'File' menubar item extents → click → 12 menu items flip to SHOWING; qBittorrent 'Vitesse' tab extents → click → panel nodes appear. Every coordinate from the structured channel; every verification in the channel; zero screenshots in any decision loop."
         },
         "t6_pictorial": {
           "pass": null,
@@ -956,25 +1024,29 @@
       "measurements": {
         "view_bytes": null,
         "view_tokens_est": null,
-        "screenshot_tokens_est": 1366,
+        "screenshot_tokens_est": 1365,
         "diff_bytes_per_interaction": null,
         "idle_cost_bytes": null,
         "capture_latency_ms": null,
-        "notes": "Honest partial. The coordinate-frame math (page coords + window.screenX/Y + chromeTop -> screen coords) is the one real subtlety and it is implemented; the missing piece is only a stable headless desktop to run the OS click against. Windows/macOS agents should complete this natively (Windows: UIA BoundingRectangle + SendInput; macOS: AXFrame + CGEvent), where it does not depend on Chromium's debug port."
+        "notes": "Closes the P2 item from DEEPENING-PLAN. The 2026-08-14 'blocked' was environmental (sandbox Chromium lifecycle), as suspected — the approach needed zero changes. Cross-stack note: the CDP path must COMPOSE three coordinate frames itself (page + window origin + chrome height, all read from the channel), while AT-SPI's DESKTOP_COORDS already answers in screen space — one call, no composition. For a desktop router that is an argument for taking geometry from the OS layer even when content comes from a browser-level channel; it is also exactly where the calibration rule from pages/click-dpr.html applies (never hardcode the frame transform, probe it)."
       },
       "runtime_verification": {
-        "method": "intended: xdotool click then CDP read of button state",
-        "agreement": "not completed in sandbox (see detail)"
+        "method": "(a) CDP re-read of the page state element after the OS click; (b)(c) AT-SPI re-read of selection/menu/panel state after the click; screenshots kept as human evidence only.",
+        "agreement": "4/4 blind clicks landed and produced their intended, channel-verified effect on the first attempt (CDP button, GTK context-menu item, Qt menubar item, Qt tab button)."
       },
       "permissions_required": [
-        "Xvfb/WM",
-        "CDP port",
+        "Xvfb session",
+        "CDP loopback port",
         "xdotool (XTEST)"
       ],
-      "agent": "claude (sandbox Linux, reference cell)",
-      "date": "2026-08-14",
+      "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+      "date": "2026-08-17",
       "raw_artifacts": [
-        "campaign/desktop/blind_click.mjs"
+        "campaign/linux/blind-click-linux.mjs",
+        "campaign/desktop/blind_click.mjs",
+        "campaign/results/artifacts/linux-atspi/clicktarget.html",
+        "campaign/results/artifacts/linux-atspi/mousepad-t5.json",
+        "campaign/results/artifacts/linux-atspi/t5-step2-clicked.png"
       ]
     },
     {
@@ -1101,6 +1173,137 @@
     },
     {
       "os": "linux",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, NO window manager",
+      "app": "FeatherPad 1.6.1 (Qt 6.8.2 widgets text editor)",
+      "stack": "qt",
+      "stack_detection": {
+        "method": "ldd shows libQt6Widgets/libQt6Gui; after launch the app appears on the AT-SPI bus with toolkit attribute 'Qt' — both checks precede extraction",
+        "signature": "libQt6Gui.so.6 mapped + QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 exported; AT-SPI desktop lists 'FeatherPad' (toolkit Qt)",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Same no-root Xvfb + dbus-run-session environment as the mousepad cell. Qt6's built-in AT-SPI bridge (in QtGui) activated with QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1; on a real desktop the bridge activates whenever the a11y bus answers GetAddress, so the env var is the headless belt-and-braces, not a special permission. Input via xdotool (real X keystrokes/XTEST clicks).",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Same typed sentence read back character-exact through the Text interface of the QPlainTextEdit's AT-SPI node. Strings, not glyphs."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "167-node tree, 45 SHOWING lines with extents — richer than the GTK cell because Qt renders its menubar even without a WM: File/Edit/Options/Search/Help all carry real extents ([106,50,29,19] for File). Qt's AT-SPI tree for standard widgets is NOT thin: menus, scrollbars, statusbar, tab list all present with correct geometry. The thin-tree risk is real but lives in CUSTOM-PAINTED surfaces — see the qBittorrent cell."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "PX-7Q4K-LINUX-ATSPI read back from the live buffer."
+        },
+        "t4_living_screen": {
+          "pass": true,
+          "detail": "Identical to GTK: 0 events in a 3 s idle window; 18 keystrokes → 18 object:text-changed:insert events (~21 B each). The Qt bridge emits the same event vocabulary as GTK's — one listener serves both toolkits, which is the point of AT-SPI as the cross-toolkit merge."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Blind click on the 'File' menubar item purely from its channel extents (click at 120,59 via xdotool): the menu opens and the channel itself proves it — 12 menu items (New, Open, Recently Modified, ...) flip to STATE_SHOWING. Effect verified in-channel, no screenshot consulted."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "No pictorial region in this app (none in tree, none on screen — consistent). The custom-paint question is answered by the qBittorrent cell."
+        }
+      },
+      "measurements": {
+        "view_bytes": 1326,
+        "view_tokens_est": 331,
+        "screenshot_tokens_est": 1365,
+        "diff_bytes_per_interaction": 21,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 158,
+        "notes": "331 tokens vs 1365 for a screenshot (4.1x) on a standard-widgets window. Walk 158 ms for 167 nodes (per-node D-Bus round-trips, same caveat as GTK). The cross-toolkit result: the SAME pyatspi client code ran unmodified against GTK3 and Qt6 apps — roles, states, Text/EditableText interfaces, event types all identical. AT-SPI really is the OS-level merge layer on Linux; the router does not need per-toolkit adapters for standard widgets."
+      },
+      "runtime_verification": {
+        "method": "Root-window screenshots alongside probes; menu-open verified both in-channel (SHOWING states) and on the captured frame.",
+        "agreement": "Full agreement. Menubar extents match the rendered menubar; the opened File menu's items appear at their published positions."
+      },
+      "permissions_required": [
+        "None beyond a session bus (QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 exported for headless activation)"
+      ],
+      "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/linux-atspi/FeatherPad-tree.txt",
+        "campaign/results/artifacts/linux-atspi/FeatherPad-nodes.json",
+        "campaign/results/artifacts/linux-atspi/featherpad-battery.json"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, NO window manager",
+      "app": "qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView)",
+      "stack": "qt",
+      "stack_detection": {
+        "method": "libQt6Gui mapped + AT-SPI bus registration (toolkit 'Qt'), checked before extraction. The custom-paint RISK is also predictable a priori: any QGraphicsView/QWidget::paintEvent surface is invisible to Qt's a11y bridge unless the developer adds accessible children — same mechanism as OBS's preview on Windows/UIA.",
+        "signature": "AT-SPI desktop lists 'qBittorrent' (toolkit Qt); a priori suspect: the Speed tab hosts a SpeedPlotView (custom QGraphicsView painting)",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Same no-root Xvfb environment. Launched with --confirm-legal-notice (fresh profile). Read-only: no torrent added; the only traffic is the client's own DHT bootstrap, which conveniently animates the speed graph with REAL live data.",
+      "verdict": "partial",
+      "failure_class": "silent",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "French UI labels char-exact through the channel: sidebar filters ('En téléchargement (0)'...), 37 table column headers, status bar 'DHT : N nœuds'. Off-viewport columns get extents=None — explicitly positionless, not fabricated."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "117 SHOWING nodes with extents (3839 B): menu bar, toolbar buttons with names, filter sidebar, transfer table with headers, bottom tab buttons, status bar. Standard-widget coverage is complete and geometrically correct."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "Not exercised (read-only discipline: no form filled in a network-capable app; covered by the two editor cells)."
+        },
+        "t4_living_screen": {
+          "pass": true,
+          "detail": "The status-bar DHT label is a live value IN the channel: 'DHT : 248 nœuds' → 'DHT : 251 nœuds' across 6 s, 15 B per re-read (vs 1365 tokens per re-screenshot). Observed monotonically climbing 186→196→213→248→251 across the probe session."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Blind click on the 'Vitesse' (Speed) tab button from its channel extents [1113,726,80,24]: the properties panel opens and the channel proves it — new nodes appear (label 'Période :', combo '5 minutes', combo 'Sélectionner les graphiques'). Effect verified in-channel."
+        },
+        "t6_pictorial": {
+          "pass": false,
+          "detail": "THE HEADLINE, and it is the Windows OBS finding replicated on Linux with a stock Debian app: the speed graph on screen is a live painted chart (axis labels '6,0 Kio/s'..'0,0 Kio/s', two-entry legend, dashed grid, moving DHT-traffic curves — screenshot kept), but its AT-SPI node is `filler [154,313,1038,407] \"\" kids=0` — nameless, childless, no Text interface, no image/canvas role, NOTHING declaring an unreadable region. It is byte-for-byte indistinguishable from the genuinely-empty spacer fillers elsewhere in the same tree. The panel's chrome around it (combos, label) IS exposed, which makes the hole look even more like a valid empty area. Disagreement by omission — silent-by-mimicry, exactly the OBS/FL-Studio class."
+        }
+      },
+      "measurements": {
+        "view_bytes": 3839,
+        "view_tokens_est": 960,
+        "screenshot_tokens_est": 1365,
+        "diff_bytes_per_interaction": 15,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 600,
+        "notes": "MITIGATION TESTED ON THE REAL SUSPECT — AND THE SHIPPED CALIBRATION MISSES IT, WHICH IS THE CELL'S MOST USEFUL NUMBER. coverage-guard contentEnergy on the graph crop = 0.020, UNDER the 0.03 threshold that was calibrated on the Windows shapes (FL Studio 0.07, OBS 0.06 vs genuinely-empty 0.00): as shipped, guard A declares the painted chart 'genuinely-empty' — a false negative. Cause: sparse line-art (thin 1px curves, dashed grid, small axis text on white) leaves only ~2% of pixels off the modal colour, where the Windows panes were densely painted. The margin data says the miss is a THRESHOLD artifact, not a detector limit: the genuinely-empty control (transfer-table body, which structure ALSO declares empty: 'Tous (0)') measures 0.000 on every metric — energy 64x64 0.000, full-res 0.000, edge-fraction 0.000 — while the chart measures 0.020 / 0.025 / 0.0268. Separation is total; threshold 0.01, or an edge-density metric, catches this instance with zero false positives on every sample measured so far in the campaign (Windows 0.06-0.07 and 0.00; here 0.02 and 0.000). The honest generalization for the paper: 'catchable at runtime' is not a property of the guard's existence but of its CALIBRATION, and line-art charts sit in a regime the first calibration never saw. Also note guard B (self-consistency) correctly stays silent here: the sidebar declares counts of 0 and shows 0 rows — consistent."
+      },
+      "runtime_verification": {
+        "method": "Root-window screenshot captured in the same probe run as the tree walk (qbt-speed-panel.png); the graph region cropped (guard-crop-graph.png) and fed to src/coverage-guard.mjs contentEnergy, plus full-res energy and edge-fraction re-measurements (campaign/linux/guard-metrics.mjs); genuinely-empty control region cropped from the same frame.",
+        "agreement": "Standard widgets: full agreement between view and pixels. The SpeedPlotView region: pixels show a live chart, structure shows an anonymous empty filler, nothing declares the gap — SILENT divergence, confirmed by inspection of both artifacts. The mitigation as shipped does NOT convert it (energy 0.020 < 0.03); recalibrated (0.01 or edge metric) it does."
+      },
+      "permissions_required": [
+        "None beyond a session bus. --confirm-legal-notice to skip the first-run dialog; the client's own DHT traffic is the only network activity."
+      ],
+      "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/linux-atspi/qbt-full-tree.txt",
+        "campaign/results/artifacts/linux-atspi/qbt-speed-panel.png",
+        "campaign/results/artifacts/linux-atspi/guard-crop-graph.png",
+        "campaign/results/artifacts/linux-atspi/guard-crop-table.png",
+        "campaign/linux/qt-guard.mjs",
+        "campaign/linux/guard-metrics.mjs"
+      ]
+    },
+    {
+      "os": "linux",
       "os_version": "Ubuntu 24.04, Chromium headless, deviceScaleFactor emulation",
       "app": "Retina/DPR image-token two-tier replication (mirror of macOS finding)",
       "stack": "chromium",
@@ -1222,63 +1425,134 @@
     },
     {
       "os": "linux",
-      "os_version": "Ubuntu 24.04 sandbox (egress-filtered network)",
-      "app": "Real-web battery + blind navigation (macOS cells) — Linux replication attempt",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Chrome headed under Xvfb 1280x800 (X11)",
+      "app": "16 live public websites in Chromium 148 (6 categories: vitrine, presse, commerce, media, reference, webapp, webapp-canvas) — Linux confirmation run of the macOS cell",
       "stack": "chromium",
       "stack_detection": {
-        "method": "n/a",
-        "signature": "n/a",
+        "method": "open debug port answers /json/version; the sites themselves need no detection — the stack is the browser, not the page",
+        "signature": "http://127.0.0.1:9223/json/version → Chrome/148.0.7778.96, Protocol 1.3",
         "detected_before_use": true
       },
       "channel": "cdp",
-      "channel_setup": "Would mirror campaign/macos/web-battery.mjs + web-navigate.mjs on the same 16 sites.",
-      "verdict": "blocked",
-      "failure_class": "blocked",
+      "channel_setup": "This machine has no physical display, so the replication runs the FULL headed browser under Xvfb (xvfb-run + dbus-run-session; Xvfb extracted from .debs without root, one 8-byte binary patch to relocate its hardcoded /usr/bin/xkbcomp path) — NOT --headless, so the engine, UA and windowing path match the macOS methodology as closely as a server allows. Chromium 148 from the playwright cache, --remote-debugging-port=9223, viewport normalised to 1280x800 CSS via Emulation.setDeviceMetricsOverride{deviceScaleFactor:1}. Same script as macOS with only paths changed (campaign/linux/web-battery.mjs), same hardened distiller, same 16 URLs.",
+      "verdict": "works",
+      "failure_class": "explicit",
       "tests": {
         "t1_read_text": {
-          "pass": null,
-          "detail": "Sandbox egress proxy refuses arbitrary sites (ERR_TUNNEL_CONNECTION_FAILED) — live-web cells cannot run here. Since both OSes drive the same Chromium/CDP engine, the macOS real-web numbers are expected to transfer; still worth one confirmation run on Léandre's real Linux desktop using the existing scripts."
+          "pass": true,
+          "detail": "16/16 sites yielded a readable structured view on the first try — including Amazon.fr and leboncoin, the two DataDome-guarded commerce sites that were the predicted casualties of a datacenter IP; neither raised a captcha. View latency 9-133 ms (mean 61 ms, median 60 ms) vs mean 16 ms on the macOS laptop — a slower shared server CPU, but still far below a screenshot round-trip."
         },
         "t2_enumerate": {
-          "pass": null,
-          "detail": "blocked"
+          "pass": true,
+          "detail": "Interactive elements with boxes on every site. The occlusion-tagging profile reproduces the macOS layering signal: 4 on Hacker News (flat table layout), 9 on Wikipedia, 47 on Apple and YouTube home, 76 on BBC, 112 on Le Monde, 142 on YouTube watch — the last identical to macOS's 142. Same-day page churn moves individual counts but the flat-1990s-vs-layered-commercial ordering is intact."
         },
         "t3_live_value": {
           "pass": null,
-          "detail": "blocked"
+          "detail": "Not exercised — no form filled on third-party sites (read-only discipline), same scope as the macOS cell."
         },
         "t4_living_screen": {
           "pass": null,
-          "detail": "blocked"
+          "detail": "Not measured per-site; covered elsewhere (linux diff-streaming cell)."
         },
         "t5_blind_action": {
+          "pass": true,
+          "detail": "Covered in depth by the companion cell linux-web-navigation-blind-cdp (8/8 on live sites, structured view only)."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Canvas/video sites all declared their opaque regions as '[pixels] <tag> x,y,w,h' lines: Excalidraw (canvas), Apple and Amazon (video), Stripe (canvas), YouTube home and watch (video). OpenStreetMap again declares tiled <img> rather than one opaque canvas block. No site produced an EMPTY region where the screen shows content."
+        }
+      },
+      "measurements": {
+        "view_bytes": 5523,
+        "view_tokens_est": 1372,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 61,
+        "notes": "THE MACOS COLLAPSE-TO-PARITY REPLICATES ON LINUX, NUMBER FOR NUMBER. Ratio of TOTALS: 1.00x (21946 structured tokens vs 16x1366 screenshot tokens; macOS: 0.98x). MEDIAN per-site ratio 1.15x (macOS: 1.15x, identical). Mean of ratios 1.28x (macOS 1.27x). Range 0.46x on Hacker News (identical to macOS's 0.46x) to 3.19x on Vercel (macOS: 3.11x). Structure wins on 10/16 sites — the SAME 10. By category: vitrine 2.20x (macOS 2.20x, identical), commerce 0.83x (identical), media 0.97x (identical), reference 0.96x (0.93x), presse 1.18x (1.21x), webapp 0.81x (0.78x), webapp-canvas 1.77x (1.74x). Avg screens to cover a full page: 7.6 (identical). The same 6 sites raised consent banners (Stripe, Vercel, YouTube home, BBC, Amazon.fr, leboncoin). This is the strongest possible form of the 'the ratio is a property of the PAGE, not the method' claim: two different OSes, different CPU architectures (x86_64 vs Apple Silicon), different Chromium major versions (148 vs 151), a real desktop session vs Xvfb on a headless server, two days apart — and every aggregate lands within noise of the macOS run, with several exact to the last digit. The only meaningful OS-level difference is capture latency (mean 61 ms vs 16 ms), which is CPU speed, not channel behaviour. Per-site deltas vs macOS are live-content churn (Amazon 2809 vs 3163 tokens: different result set for the same query; Le Monde 1769 vs different headlines), not distiller variance — the four static marketing pages land within a few tokens of their macOS values."
+      },
+      "runtime_verification": {
+        "method": "Per-site viewport screenshot (PNG via Page.captureScreenshot) kept alongside the structured view; page-level counters (nText/nCanvas/nVideo/nImg/scrollH) read from the same DOM the distiller walked; aggregates cross-checked against the committed macOS run of the identical script.",
+        "agreement": "No site produced view content absent from the screen. Declared gaps are the honest ones: opaque media regions, occluded overlay-hidden nodes, off-viewport content dropped by design. Agreement with the macOS run is the headline (see notes): every category ratio within 0.03, three categories and the median exact."
+      },
+      "permissions_required": [
+        "None (loopback CDP socket; no root — Xvfb/xdotool extracted from .debs into a user-writable prefix). No account, no login, no cookie import on any of the 16 sites."
+      ],
+      "agent": "claude-code (Fable 5) on debian-server (headless), Chrome under Xvfb",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "results/web-battery-linux/web-battery.json",
+        "results/web-battery-linux/web-battery-summary.json",
+        "results/web-battery-linux/views/",
+        "results/web-battery-linux/shots/",
+        "campaign/linux/web-battery.mjs"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Chrome headed under Xvfb 1280x800 (X11)",
+      "app": "Blind navigation on 5 live sites in Chromium 148 (Hacker News, Wikipedia, GitHub, MDN, DuckDuckGo) — Linux confirmation run of the macOS cell",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "open debug port answers /json/version",
+        "signature": "http://127.0.0.1:9223/json/version → Chrome/148.0.7778.96, Protocol 1.3",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Same Chrome-under-Xvfb + hardened distiller as linux-web-battery-cdp, viewport 1280x800 CSS. Same router and steps as macOS (campaign/linux/web-navigate.mjs, paths-only diff): every decision — which line to target, where to click, whether to refuse — is taken from the published view lines alone. No screenshot is read anywhere in the loop; screenshots are taken after each step only as evidence.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Targets located by text in the structured view on all steps that had one, first view except the deliberate below-the-fold step."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "The geometric text→control join (smallest interactive box containing the matched text's centre) worked on every step, including reading the affordance off the joined tag: <a> → navigate, <summary> → toggle. Wikipedia's 'Rasterization' had exactly one un-occluded candidate in view; the router picked it without disambiguation logic."
+        },
+        "t3_live_value": {
           "pass": null,
-          "detail": "blocked"
+          "detail": "No form filled on third-party sites (read-only discipline)."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not applicable to a navigation probe."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "8/8 steps, first attempt each: 6/6 navigate (HN 'new' → /newest; Wikipedia in-article 'Rasterization' → #Rasterization anchor; GitHub 'Insights' on the hydrated app shell → /pulse; MDN sidebar 'Canvas tutorial' → /Canvas_API/Tutorial; DuckDuckGo 'Images' filter → &ia=images; HN 'More' below the fold → /?p=2 after one 90%-viewport scroll), 1/1 toggle (MDN 'Tutorial' disclosure widget), 1/1 correct refusal (no 'Pull requests' tab offered on torvalds/linux, where PRs are disabled — the negative control)."
         },
         "t6_pictorial": {
           "pass": null,
-          "detail": "blocked"
+          "detail": "No pictorial target was aimed at."
         }
       },
       "measurements": {
         "view_bytes": null,
-        "view_tokens_est": null,
-        "screenshot_tokens_est": null,
+        "view_tokens_est": 16654,
+        "screenshot_tokens_est": 12294,
         "diff_bytes_per_interaction": null,
-        "idle_cost_bytes": null,
-        "capture_latency_ms": null,
-        "notes": "Environmental block, recorded for matrix completeness."
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 61,
+        "notes": "SESSION COST: 16654 structured tokens across 9 view reads vs 12294 for 9 CSS-resolution screenshots — structured 1.35x MORE expensive (macOS: 16826 vs 12294, 1.37x). Same honest conclusion: at CSS resolution on these text-bearing pages the structured route costs more per look; it flips decisively at Retina/high-DPI (4784 tokens per 2x screenshot). SCROLL-AND-SEARCH replicated: the HN 'More' target needed 2 views (1 scroll), exactly as on macOS. THE DETERMINISM DETAIL WORTH PUBLISHING: the MDN disclosure toggle changed the structured view by +16 lines — the SAME +16 lines as on macOS, on a different OS, CPU architecture and Chromium major (148 vs 151), two days apart. The channel did not just agree qualitatively; the in-channel effect of the same action on the same page is byte-countably identical. The toggle step again needed no screenshot to confirm its own effect: URL unchanged, view changed — self-verification inside the channel. Router logic (the text→control geometric join, affordance read off the tag, absent-as-first-class-expectation) transferred with zero Linux-specific modification, which is the point of a browser-level channel: the router is OS-invariant."
       },
       "runtime_verification": {
-        "method": "n/a",
-        "agreement": "n/a"
+        "method": "Outcome judged by the browser's own resulting URL and title (not by the view that chose the click), plus a post-click screenshot per step kept under nav-shots/.",
+        "agreement": "8/8. URLs land exactly where the macOS run landed (same /newest, /pulse, #Rasterization, /Canvas_API/Tutorial, &ia=images, /?p=2). The toggle's +16-line view delta doubles as a cross-OS determinism check against the macOS value."
       },
       "permissions_required": [
-        "unfiltered egress"
+        "None (loopback CDP socket). No login on any site."
       ],
-      "agent": "claude (sandbox Linux)",
-      "date": "2026-08-15",
-      "raw_artifacts": []
+      "agent": "claude-code (Fable 5) on debian-server (headless), Chrome under Xvfb",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "results/web-battery-linux/web-navigation.json",
+        "results/web-battery-linux/nav-views/",
+        "results/web-battery-linux/nav-shots/",
+        "campaign/linux/web-navigate.mjs"
+      ]
     },
     {
       "os": "macos",

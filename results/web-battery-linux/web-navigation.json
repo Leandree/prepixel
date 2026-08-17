@@ -1,0 +1,383 @@
+{
+  "summary": {
+    "passed": 8,
+    "total": 8,
+    "by_kind": {
+      "navigate": "6/6",
+      "toggle": "1/1",
+      "absent": "1/1"
+    },
+    "viewport_shot_tokens": 1366,
+    "total_view_tokens_spent": 16654,
+    "total_shot_tokens_equivalent": 12294,
+    "scrolled_steps": [
+      {
+        "id": "hn-scrolled",
+        "scrolls": 1,
+        "views": 2
+      }
+    ]
+  },
+  "steps": [
+    {
+      "id": "hn-newest",
+      "url": "https://news.ycombinator.com/",
+      "why": "tiny text link in a dense header",
+      "pick": "/\"new\"$/",
+      "kind": "navigate",
+      "expect": "/newest/",
+      "candidates": [
+        "text 231,12,28,15 \"new\""
+      ],
+      "scrolls": 0,
+      "views_read": 1,
+      "view_tokens_spent": 2954,
+      "shot_tokens_equivalent": 1366,
+      "final_view_tokens": 2954,
+      "chosen_line": "text 231,12,28,15 \"new\"",
+      "aim": {
+        "text_box": [
+          231,
+          12,
+          28,
+          15
+        ],
+        "centre": [
+          245,
+          19.5
+        ],
+        "control": {
+          "tag": "a",
+          "box": [
+            231,
+            12,
+            28,
+            15
+          ],
+          "area": 420,
+          "line": "a 231,12,28,15"
+        },
+        "affordance": "navigate"
+      },
+      "click_at": [
+        245,
+        19.5
+      ],
+      "url_before": "https://news.ycombinator.com/",
+      "url_after": "https://news.ycombinator.com/newest",
+      "title_after": "New Links | Hacker News",
+      "ok": true
+    },
+    {
+      "id": "wikipedia-link",
+      "url": "https://en.wikipedia.org/wiki/Graphics_pipeline",
+      "why": "in-article link among competing occurrences",
+      "pick": "/\"Rasterisation\"|\"Rasterization\"/",
+      "kind": "navigate",
+      "expect": "/Rasteri[sz]ation/",
+      "candidates": [
+        "text 72,534,92,16 \"Rasterization\""
+      ],
+      "scrolls": 0,
+      "views_read": 1,
+      "view_tokens_spent": 1727,
+      "shot_tokens_equivalent": 1366,
+      "final_view_tokens": 1727,
+      "chosen_line": "text 72,534,92,16 \"Rasterization\"",
+      "aim": {
+        "text_box": [
+          72,
+          534,
+          92,
+          16
+        ],
+        "centre": [
+          118,
+          542
+        ],
+        "control": {
+          "tag": "a",
+          "box": [
+            72,
+            528,
+            152,
+            28
+          ],
+          "area": 4256,
+          "line": "a 72,528,152,28"
+        },
+        "affordance": "navigate"
+      },
+      "click_at": [
+        148,
+        542
+      ],
+      "url_before": "https://en.wikipedia.org/wiki/Graphics_pipeline",
+      "url_after": "https://en.wikipedia.org/wiki/Graphics_pipeline#Rasterization",
+      "title_after": "Graphics pipeline - Wikipedia",
+      "ok": true
+    },
+    {
+      "id": "github-insights",
+      "url": "https://github.com/torvalds/linux",
+      "why": "app-shell nav tab on a JS-heavy page",
+      "pick": "/\"Insights\"$/",
+      "kind": "navigate",
+      "expect": "/\\/pulse|graphs/",
+      "candidates": [
+        "text 582,150,55,16 \"Insights\""
+      ],
+      "scrolls": 0,
+      "views_read": 1,
+      "view_tokens_spent": 1327,
+      "shot_tokens_equivalent": 1366,
+      "final_view_tokens": 1327,
+      "chosen_line": "text 582,150,55,16 \"Insights\"",
+      "aim": {
+        "text_box": [
+          582,
+          150,
+          55,
+          16
+        ],
+        "centre": [
+          609.5,
+          158
+        ],
+        "control": {
+          "tag": "a",
+          "box": [
+            546,
+            143,
+            103,
+            30
+          ],
+          "area": 3090,
+          "line": "a 546,143,103,30 id=insights-tab"
+        },
+        "affordance": "navigate"
+      },
+      "click_at": [
+        597.5,
+        158
+      ],
+      "url_before": "https://github.com/torvalds/linux",
+      "url_after": "https://github.com/torvalds/linux/pulse",
+      "title_after": "Pulse · torvalds/linux · GitHub",
+      "ok": true
+    },
+    {
+      "id": "github-absent-pr",
+      "url": "https://github.com/torvalds/linux",
+      "why": "NEGATIVE CONTROL: this repo has PRs disabled; a correct view must not offer the tab",
+      "pick": "/\"Pull requests\"/",
+      "kind": "absent",
+      "expect": null,
+      "scrolls": 0,
+      "views_read": 1,
+      "view_tokens_spent": 1327,
+      "shot_tokens_equivalent": 1366,
+      "final_view_tokens": 1327,
+      "ok": true,
+      "detail": "view correctly reports the control as absent — no fabricated affordance"
+    },
+    {
+      "id": "mdn-tutorial",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+      "why": "disclosure widget that LOOKS like a link in the text stream",
+      "pick": "/\"Tutorial\"$/",
+      "kind": "toggle",
+      "expect": null,
+      "candidates": [
+        "text 32,415,56,20 \"Tutorial\""
+      ],
+      "scrolls": 0,
+      "views_read": 1,
+      "view_tokens_spent": 1198,
+      "shot_tokens_equivalent": 1366,
+      "final_view_tokens": 1198,
+      "chosen_line": "text 32,415,56,20 \"Tutorial\"",
+      "aim": {
+        "text_box": [
+          32,
+          415,
+          56,
+          20
+        ],
+        "centre": [
+          60,
+          425
+        ],
+        "control": {
+          "tag": "summary",
+          "box": [
+            16,
+            409,
+            209,
+            32
+          ],
+          "area": 6688,
+          "line": "summary 16,409,209,32"
+        },
+        "affordance": "toggle"
+      },
+      "click_at": [
+        120.5,
+        425
+      ],
+      "url_before": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+      "url_after": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+      "title_after": "Canvas API - Web APIs | MDN",
+      "view_delta_lines": 16,
+      "ok": true,
+      "detail": "disclosure toggled in place: URL unchanged, view changed by 16 lines — the effect is visible IN the channel, no screenshot needed to confirm it"
+    },
+    {
+      "id": "mdn-navigate",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+      "why": "the real link, two lines below the decoy",
+      "pick": "/\"Canvas tutorial\"/",
+      "kind": "navigate",
+      "expect": "/Tutorial/i",
+      "candidates": [
+        "text 40,455,112,20 \"Canvas tutorial\""
+      ],
+      "scrolls": 0,
+      "views_read": 1,
+      "view_tokens_spent": 1198,
+      "shot_tokens_equivalent": 1366,
+      "final_view_tokens": 1198,
+      "chosen_line": "text 40,455,112,20 \"Canvas tutorial\"",
+      "aim": {
+        "text_box": [
+          40,
+          455,
+          112,
+          20
+        ],
+        "centre": [
+          96,
+          465
+        ],
+        "control": {
+          "tag": "a",
+          "box": [
+            40,
+            449,
+            112,
+            32
+          ],
+          "area": 3584,
+          "line": "a 40,449,112,32"
+        },
+        "affordance": "navigate"
+      },
+      "click_at": [
+        96,
+        465
+      ],
+      "url_before": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+      "url_after": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial",
+      "title_after": "Canvas tutorial - Web APIs | MDN",
+      "ok": true
+    },
+    {
+      "id": "ddg-images",
+      "url": "https://duckduckgo.com/?q=gpu+rasterization",
+      "why": "result-page filter tab",
+      "pick": "/\"Images\"$/",
+      "kind": "navigate",
+      "expect": "/images/i",
+      "candidates": [
+        "text 175,80,47,17 \"Images\""
+      ],
+      "scrolls": 0,
+      "views_read": 1,
+      "view_tokens_spent": 1264,
+      "shot_tokens_equivalent": 1366,
+      "final_view_tokens": 1264,
+      "chosen_line": "text 175,80,47,17 \"Images\"",
+      "aim": {
+        "text_box": [
+          175,
+          80,
+          47,
+          17
+        ],
+        "centre": [
+          198.5,
+          88.5
+        ],
+        "control": {
+          "tag": "a",
+          "box": [
+            175,
+            70,
+            47,
+            38
+          ],
+          "area": 1786,
+          "line": "a 175,70,47,38"
+        },
+        "affordance": "navigate"
+      },
+      "click_at": [
+        198.5,
+        89
+      ],
+      "url_before": "https://duckduckgo.com/?q=gpu+rasterization&ia=web",
+      "url_after": "https://duckduckgo.com/?q=gpu+rasterization&ia=images&iax=images",
+      "title_after": "gpu rasterization at DuckDuckGo",
+      "ok": true
+    },
+    {
+      "id": "hn-scrolled",
+      "url": "https://news.ycombinator.com/",
+      "why": "BELOW THE FOLD — forces scroll-and-search",
+      "pick": "/\"More\"$/",
+      "kind": "navigate",
+      "expect": "/\\?p=2|next=/",
+      "candidates": [
+        "text 137,688,33,15 \"More\""
+      ],
+      "scrolls": 1,
+      "views_read": 2,
+      "view_tokens_spent": 5659,
+      "shot_tokens_equivalent": 2732,
+      "final_view_tokens": 2705,
+      "chosen_line": "text 137,688,33,15 \"More\"",
+      "aim": {
+        "text_box": [
+          137,
+          688,
+          33,
+          15
+        ],
+        "centre": [
+          153.5,
+          695.5
+        ],
+        "control": {
+          "tag": "a",
+          "box": [
+            137,
+            688,
+            33,
+            15
+          ],
+          "area": 495,
+          "line": "a 137,688,33,15"
+        },
+        "affordance": "navigate"
+      },
+      "click_at": [
+        153.5,
+        695.5
+      ],
+      "url_before": "https://news.ycombinator.com/",
+      "url_after": "https://news.ycombinator.com/?p=2",
+      "title_after": "Hacker News",
+      "ok": true
+    }
+  ]
+}

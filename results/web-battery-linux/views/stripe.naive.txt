@@ -1,0 +1,694 @@
+a 34,26,60,25 href=/ aria-label=Page d'accueil Stripe
+button 122,18,73,40 type=button
+text 122,29,53,18 "Produits"
+button 219,18,78,40 type=button
+text 219,29,58,18 "Solutions"
+button 321,18,107,40 type=button
+text 321,29,87,18 "Développeurs"
+button 453,18,93,40 type=button
+text 453,29,73,18 "Ressources"
+a 569,19,35,38 href=/fr/pricing
+text 569,29,35,18 "Tarifs"
+a 902,18,124,40 href=https://dashboard.stripe.com/login aria-label=Se connecter
+text 922,28,82,18 "Se connecter"
+a 1034,18,197,40 href=/fr/contact/sales
+text 1054,29,144,18 "Contacter notre équipe"
+text 134,184,230,18 "Part du PIB mondial traitée sur Stripe"
+text 370,184,8,18 "1"
+text 378,184,3,18 ","
+text 380,184,8,18 "6"
+text 388,184,8,18 "9"
+text 397,184,8,18 "9"
+text 405,184,8,18 "7"
+text 413,184,8,18 "5"
+text 421,184,8,18 "1"
+text 429,184,8,18 "8"
+text 437,184,8,18 "7"
+text 448,184,8,18 "%"
+text 370,202,8,18 "1"
+text 378,202,3,18 ","
+text 380,202,8,18 "6"
+text 388,202,8,18 "9"
+text 397,202,8,18 "9"
+text 405,202,8,18 "7"
+text 413,202,8,18 "5"
+text 421,202,8,18 "1"
+text 429,202,8,18 "8"
+text 437,202,8,18 "7"
+text 448,202,8,18 "%"
+text 134,240,966,51 "Une infrastructure financière qui booste votre croissance."
+text 134,286,989,143 "Acceptez des paiements, proposez des services financiers et personnalisez votre modèle de revenus, quel que soit votre volume de transactions."
+text 134,240,966,51 "Une infrastructure financière qui booste votre croissance."
+text 134,286,989,143 "Acceptez des paiements, proposez des services financiers et personnalisez votre modèle de revenus, quel que soit votre volume de transactions."
+a 134,467,214,48 href=https://dashboard.stripe.com/register
+text 158,479,153,21 "Démarrer maintenant"
+a 356,467,227,48 href=https://dashboard.stripe.com/login/oauth/google/init
+text 401,479,157,21 "S'inscrire avec Google"
+[pixels] picture 250,-141,1392,975
+[pixels] img 250,-141,1392,975 src=https://images.stripeassets.com/fzn2n1nzq965/115d4Vd5LVAsqFGDR1ClAv/0ceb2c44a7a7182cd624262420af7544/wave-fallback-desktop.png alt=
+a -62,640,142,34 href=/fr/newsroom/news/stripe-openai-instant-checkout
+a 110,640,142,34 href=/fr/customers/la-redoute
+a 282,640,142,34 href=/fr/customers/amazon
+a 626,640,142,34 href=/fr/newsroom/news/nvidia-collaboration-with-stripe
+a 798,640,142,34 href=/fr/customers/le-monde
+a 970,640,142,34 href=/fr/customers/figma
+a 1142,640,142,34 href=/fr/customers/alma
+a 1486,640,142,34 href=/fr/newsroom/news/accor-and-stripe
+a 1658,640,142,34 href=/fr/newsroom/news/google-and-stripe
+a 1830,640,142,34 href=/fr/customers/tf1
+a 2002,640,142,34 href=/fr/customers/shopify
+a 2174,640,142,34 href=/fr/customers/planity
+a 2346,640,142,34 href=/fr/customers/anthropic
+a 2518,640,142,34 href=/fr/customers/shotgun
+a 2690,640,142,34 href=/fr/newsroom/news/stripe-and-uber
+a 2862,640,142,34 href=/fr/customers/cursor
+a 3034,640,142,34 href=/fr/newsroom/news/stripe-openai-instant-checkout
+a 3206,640,142,34 href=/fr/customers/la-redoute
+a 3378,640,142,34 href=/fr/customers/amazon
+a 3722,640,142,34 href=/fr/newsroom/news/nvidia-collaboration-with-stripe
+a 3894,640,142,34 href=/fr/customers/le-monde
+a 4066,640,142,34 href=/fr/customers/figma
+a 4238,640,142,34 href=/fr/customers/alma
+a 4582,640,142,34 href=/fr/newsroom/news/accor-and-stripe
+a 4754,640,142,34 href=/fr/newsroom/news/google-and-stripe
+a 4926,640,142,34 href=/fr/customers/tf1
+a 5098,640,142,34 href=/fr/customers/shopify
+a 5270,640,142,34 href=/fr/customers/planity
+a 5442,640,142,34 href=/fr/customers/anthropic
+a 5614,640,142,34 href=/fr/customers/shotgun
+a 5786,640,142,34 href=/fr/newsroom/news/stripe-and-uber
+a 5958,640,142,34 href=/fr/customers/cursor
+text 33,786,707,40 "Des solutions flexibles pour chaque business model."
+text 33,821,787,110 "Développez votre activité grâce à une suite modulaire d’outils de paiement et de solutions financières, à déployer ensemble ou séparément."
+button 33,994,791,662 type=button
+text 57,1016,477,62 "Acceptez et optimisez les paiements en ligne ou en personne dans le monde entier"
+[pixels] picture 46,1145,276,470
+[pixels] img 46,1145,276,470 alt= src=https://images.stripeassets.com/fzn2n1nzq965/1Vf8oT9Fm6dEwpnEx5PgK1/055956f38d7fd8b0cc7419692ef29778/bento-terminal.png?w=308&q=90
+text 149,1244,68,12 "Payer Roastery"
+text 147,1259,72,12 "Cartsy bezahlen"
+text 151,1274,64,12 "Showflix に支払う"
+text 149,1288,68,12 "Payer Roastery"
+text 132,1262,102,33 "5,46 $US"
+text 140,1291,86,33 "26,89 €"
+text 129,1321,107,33 "5 000 JPY"
+text 132,1351,102,33 "5,46 $US"
+text 122,1304,122,23 "Présentez, insérez ou faites glisser la carte pour payer"
+text 116,1328,134,23 "Zum Bezahlen Karte auflegen, einführen oder durchziehen"
+text 125,1352,116,12 "タップ、挿入、またはスワイプして支払う"
+text 122,1375,122,23 "Présentez, insérez ou faites glisser la carte pour payer"
+text 107,1355,47,12 "Moka latte"
+text 216,1355,43,12 "5,50 $US"
+text 107,1380,39,12 "Fidélité ("
+text 146,1380,19,12 "10 %"
+text 107,1391,52,12 "désactivée)"
+text 213,1380,46,12 "-0,55 $US"
+text 107,1415,21,12 "Taxe"
+text 216,1415,43,12 "0,51 $US"
+text 107,1439,22,12 "Total"
+text 216,1439,43,12 "5,46 $US"
+text 283,1355,62,12 "Deluxe-Hemd"
+text 399,1355,36,12 "22,60 €"
+text 283,1380,18,12 "VAT"
+text 405,1380,30,12 "4,29 €"
+text 283,1404,34,12 "Summe"
+text 399,1404,36,12 "26,89 €"
+text 458,1355,37,12 "ギフトカード"
+text 565,1355,45,12 "5 000 JPY"
+text 458,1380,12,12 "合計"
+text 565,1380,45,12 "5 000 JPY"
+text 633,1355,47,12 "Moka latte"
+text 743,1355,43,12 "5,50 $US"
+text 633,1380,39,12 "Fidélité ("
+text 672,1380,19,12 "10 %"
+text 633,1391,52,12 "désactivée)"
+text 739,1380,46,12 "-0,55 $US"
+text 633,1415,21,12 "Taxe"
+text 743,1415,43,12 "0,51 $US"
+text 633,1439,22,12 "Total"
+text 743,1439,43,12 "5,46 $US"
+text 161,1484,44,12 "Continuer"
+text 168,1496,29,12 "Weiter"
+text 177,1508,12,12 "続行"
+text 161,1520,44,12 "Continuer"
+text 582,1160,91,11 "roastery.com/checkout"
+text 587,1172,83,11 "cartsy.com/checkout"
+text 574,1184,107,11 "showflixapp.com/checkout"
+text 582,1196,91,11 "roastery.com/checkout"
+text 358,1258,53,10 "Adresse e-mail"
+text 358,1267,22,10 "E-Mail"
+text 358,1276,34,10 "メールアドレス"
+text 358,1285,53,10 "Adresse e-mail"
+text 371,1280,133,12 "isabelle.martin@example.com"
+text 371,1300,158,12 "damian.michelfelder@example.com"
+text 371,1320,122,12 "taro.yamada@example.com"
+text 371,1340,133,12 "isabelle.martin@example.com"
+text 473,1356,9,10 "ou"
+text 470,1365,16,10 "oder"
+text 471,1374,15,10 "または"
+text 473,1382,9,10 "ou"
+text 358,1383,70,10 "Moyen de paiement"
+text 358,1392,65,10 "Zahlungsmethode"
+text 358,1401,24,10 "支払い方法"
+text 358,1410,70,10 "Moyen de paiement"
+text 402,1411,38,20 "Carte bancaire"
+text 434,1411,24,12 "Karte"
+text 465,1411,18,12 "カード"
+text 497,1411,38,20 "Carte bancaire"
+text 373,1440,27,11 "カード番号"
+text 373,1475,21,11 "有効期限"
+text 487,1475,48,11 "セキュリティコード"
+text 402,1445,29,12 "Klarna"
+text 383,1465,92,11 "Zahlen Sie jetzt oder in"
+text 475,1465,5,11 "4"
+text 383,1465,163,23 "zinsfreien Raten zu je"
+text 403,1477,30,11 "50,28 €"
+text 433,1477,2,11 "."
+text 399,1445,28,12 "Affirm"
+text 383,1465,114,11 "Payez immédiatement ou en"
+text 497,1465,5,11 "4"
+text 383,1465,184,23 "paiements sans intérêt de"
+text 423,1477,41,11 "40,73 $US"
+text 464,1477,4,11 "."
+text 402,1510,43,12 "Cash App"
+text 402,1544,69,12 "Cryptomonnaie"
+text 399,1579,33,12 "PayPay"
+text 399,1578,50,12 "FamilyMart"
+text 399,1578,45,12 "Rechnung"
+text 402,1578,76,12 "Compte bancaire"
+text 455,1622,45,12 "Continuer"
+text 463,1634,30,12 "Weiter"
+text 472,1646,12,12 "続行"
+text 455,1658,45,12 "Continuer"
+text 664,1275,158,15 "Récapitulatif de la commande"
+text 664,1293,182,15 "Zusammenfassung der Bestellung"
+text 664,1311,29,15 "注文概要"
+text 664,1329,158,15 "Récapitulatif de la commande"
+[pixels] picture 669,1312,80,86
+[pixels] img 669,1312,80,86 alt= src=https://images.stripeassets.com/fzn2n1nzq965/6BTjJGdjfGVA8brPwj7p3M/fcf084ff85142366e118fe85ee78b632/payments-electric-kettle.jpg?w=80&q=90
+text 759,1321,50,43 "Bouilloire électrique à température réglable"
+text 759,1375,51,12 "150,00 $US"
+[pixels] picture 846,1312,80,86
+[pixels] img 846,1312,80,86 alt= src=https://images.stripeassets.com/fzn2n1nzq965/5Dr3Oc550drIrxyzzXgFbq/f6e4fb0b8b4b40d73e94fdf7c9bc7028/payments-hoodie.jpg?w=80&q=90
+text 936,1319,65,22 "Unverzichtbarer Hoodie"
+text 936,1342,45,11 "Marineblau"
+text 936,1354,23,11 "Mittel"
+text 936,1377,33,12 "41,70 €"
+[pixels] picture 1023,1312,80,86
+[pixels] img 1023,1312,80,86 alt= src=https://images.stripeassets.com/fzn2n1nzq965/1UE1lPgwbfQRH586XfTWKM/f90bfc79f87b3e60a4189cc0f5a03228/showflix-streaming.jpg?w=80&q=90
+text 1113,1332,76,22 "ストリーミング月次サブスクリプション"
+text 1113,1364,42,12 "1 886 JPY"
+[pixels] picture 1200,1312,80,86
+[pixels] img 1200,1312,80,86 alt= src=https://images.stripeassets.com/fzn2n1nzq965/6BTjJGdjfGVA8brPwj7p3M/fcf084ff85142366e118fe85ee78b632/payments-electric-kettle.jpg?w=80&q=90
+text 1290,1321,50,43 "Bouilloire électrique à température réglable"
+text 1290,1375,51,12 "150,00 $US"
+text 664,1422,46,12 "Sous-total"
+text 664,1438,75,12 "Zwischensumme"
+text 664,1454,12,12 "小計"
+text 664,1470,46,12 "Sous-total"
+text 798,1422,51,12 "150,00 $US"
+text 816,1438,33,12 "41,70 €"
+text 808,1454,42,12 "1 886 JPY"
+text 798,1470,51,12 "150,00 $US"
+text 664,1446,21,12 "Taxe"
+text 664,1462,18,12 "VAT"
+text 664,1478,17,12 "JCT"
+text 664,1494,21,12 "Taxe"
+text 804,1446,45,12 "15,38 $US"
+text 822,1462,28,12 "7,92 €"
+text 800,1478,49,12 "189,00 JPY"
+text 804,1494,45,12 "15,38 $US"
+text 664,1470,40,12 "Livraison"
+text 664,1486,37,12 "Versand"
+text 664,1502,18,12 "消費税"
+text 664,1518,40,12 "Livraison"
+text 818,1470,31,12 "Gratuit"
+text 664,1505,22,12 "Total"
+text 664,1521,34,12 "Summe"
+text 664,1537,12,12 "合計"
+text 664,1552,22,12 "Total"
+text 798,1505,51,12 "165,38 $US"
+text 816,1521,33,12 "49,62 €"
+text 793,1537,56,12 "2 075,00 JPY"
+text 798,1552,51,12 "165,38 $US"
+[pixels] img 28,948,860,712 alt= src=https://images.stripeassets.com/fzn2n1nzq965/vYmk6v8n7oDAwbDpwhjV6/846f9b3e214549b8f14e2b8c8cfe9343/payment-bento-background.jpg?w=860&q=80
+button 840,994,392,662 type=button
+text 864,1016,199,91 "Utilisez le modèle de facturation de votre choix"
+text 947,1158,56,18 "Offre Pro"
+text 947,1177,119,15 "Facturation mensuelle"
+text 897,1209,38,15 "Tokens"
+text 897,1229,30,14 "0,01 €"
+text 928,1229,28,14 "pour"
+text 955,1229,28,14 "1 000"
+text 984,1229,32,14 "unités"
+text 913,1258,118,15 "Compteur d’utilisation"
+text 897,1339,138,14 "Tokens utilisés au cours des"
+text 1035,1339,13,14 "30"
+text 1048,1339,70,14 "derniers jours"
+text 897,1356,78,15 "1 500 000 000"
+button 33,1672,388,662 type=button
+text 57,1694,242,91 "Boostez vos revenus grâce au commerce agentique"
+[pixels] picture 10,1692,435,621
+[pixels] img 10,1692,435,621 alt= src=https://images.stripeassets.com/fzn2n1nzq965/78eaknFXeySTtfpQUh4lD2/e2a97240d78e6e239bcfe045d5b21239/particles.png?w=514&q=90
+button 437,1672,388,662 type=button
+text 461,1694,230,91 "Créez votre propre programme d’émission de cartes"
+[pixels] picture 413,1649,435,708
+[pixels] img 413,1649,435,708 alt= src=https://images.stripeassets.com/fzn2n1nzq965/1zneiFjZyS8cGQvki2cGqz/35294f1866720bec6d80fb2532270258/card-placeholder_2x.png?w=447&q=90
+button 840,1672,392,662 type=button
+text 864,1694,280,120 "Faites circuler vos fonds au-delà des frontières grâce aux stablecoins et à la crypto"
+[pixels] picture 817,1645,439,715
+[pixels] img 817,1645,439,715 alt= src=https://images.stripeassets.com/fzn2n1nzq965/7dwxc06fkzWOmlwBs9GezW/667c1af2d03a023fc61ea4cec995204d/money-movement-fallback_2x.png?w=447&q=90
+button 33,2350,1199,438 type=button
+text 57,2372,256,91 "Intégrez les paiements directement dans votre plateforme"
+[pixels] picture 28,2348,1210,442
+[pixels] img 28,2348,1210,442 alt= src=https://images.stripeassets.com/fzn2n1nzq965/1j4wM9h2bBsyRFvTv6Wsn0/07f4b9b1e1e17fdc509d9087454dd8bc/ConnectBentoBackground.jpg?w=1242&q=90
+[pixels] picture 33,2964,1199,400
+[pixels] img 33,2964,1199,400 alt= src=https://images.stripeassets.com/fzn2n1nzq965/2YFdgdFPeIiDpmQbhHPAx8/186752498bf713fea245f31bcec84f8a/sessions-2026-on-demand-bg.png?w=296&q=90
+text 57,2990,636,110 "L’infrastructure économique de l’IA"
+a 57,3126,186,48 href=https://stripe.com/sessions/2026?utm_medium=owned-surfaces&utm_source=9cb9&utm_campaign=GLOBAL_4301&utm_content=8a70&utm_term=5a728d3d167c
+text 81,3139,125,21 "Regarder la vidéo"
+text 403,3517,458,129 "Le pilier du commerce mondial"
+button 130,3760,69,34 type=button
+text 130,3755,69,43 "135+"
+text 79,3802,172,43 "devises et moyens de paiement pris en charge"
+button 401,3760,151,34 type=button
+text 401,3755,151,43 "1,9 Bn $US"
+text 390,3802,173,43 "en volume de paiements traités en 2025"
+button 722,3760,134,34 type=button
+text 722,3755,134,43 "99,999 %"
+a 707,3802,163,21 href=https://status.stripe.com
+text 707,3802,163,21 "disponibilité historique"
+text 721,3824,135,21 "des services Stripe"
+button 1043,3760,114,34 type=button
+text 1043,3755,114,43 "200 M+"
+text 1020,3802,160,43 "d’abonnements actifs gérés sur Stripe Billing"
+text 33,4486,731,40 "Une solution adaptée aux entreprises de toutes tailles."
+text 33,4521,743,75 "Développez votre activité sur une plateforme fiable, qui s’adapte à vos besoins."
+text 33,4722,464,62 "Transformez votre entreprise grâce à une infrastructure financière flexible"
+a 33,4806,312,48 href=/fr/enterprise
+text 57,4818,251,21 "Stripe pour les grandes entreprises"
+text 742,4730,466,73 "50 % des entreprises du Fortune 100 ont utilisé Stripe pour développer leur activité, que ce soit pour se développer à l’international ou redéfinir leur l’expérience client."
+button 73,4926,964,24 type=button
+text 89,4924,483,28 "Hertz unifie ses activités commerciales avec Stripe"
+a 1037,4918,195,40 href=/fr/customers/hertz aria-label=Découvrez l’histoire de Hertz
+text 1061,4927,132,21 "Lire le témoignage"
+[pixels] picture 33,4974,1199,517
+[pixels] img 33,4974,1199,517 alt=Vue aérienne d’une intersection où les passages piétons dessinent un parallélogramme incliné, évoquant le logo Stripe. src=https://images.stripeassets.com/fzn2n1nzq965/24BNV3GGtvCprFLrYovyaa/b2eac20a1d5ec75e4bff3888b998d163/enterprise-accordion-hertz.png?w=296&q=90
+text 33,5515,26,21 "160"
+text 59,5515,37,21 "pays"
+text 337,5515,80,21 "Plus de 11 k"
+text 337,5515,198,43 "agences dans le monde entier"
+text 641,5515,121,21 "Produits utilisés :"
+text 762,5515,372,21 "Payments, Terminal, Connect, Radar et Stripe Sigma"
+button 73,5632,1119,24 type=button
+text 89,5630,858,28 "URBN centralise 5 milliards de dollars de chiffre d'affaires en ligne et en magasin sur Stripe"
+a 1192,5624,40,40 href=/fr/customers/urbn aria-label=Découvrez l’histoire de URBN
+text 1216,5633,132,21 "Lire le témoignage"
+button 73,5705,1119,24 type=button
+text 89,5703,673,28 "Instacart utilise Stripe pour son service de livraison de courses en ligne"
+a 1192,5697,40,40 href=/fr/customers/instacart aria-label=Découvrez l’histoire de Instacart
+text 1216,5706,132,21 "Lire le témoignage"
+button 73,5778,1119,24 type=button
+text 89,5776,654,28 "Le Monde booste ses paiements locaux et internationaux avec Stripe"
+a 1192,5770,40,40 href=/fr/customers/le-monde aria-label=Découvrez l’histoire de LeMonde
+text 1216,5779,132,21 "Lire le témoignage"
+text 33,5888,582,62 "Atteignez vos objectifs plus rapidement grâce à des experts dédiés"
+text 33,6044,178,21 "Services aux entreprises."
+text 33,6044,350,111 "Bénéficiez de conseils personnalisés de la part d’experts Stripe, qui vous aideront à réussir votre lancement, vos intégrations (même les plus complexes) ou vos migrations majeures."
+a 33,6172,168,21 href=/fr/professional-services
+text 33,6172,157,21 "Découvrir les services"
+text 438,6044,194,21 "Experts certifiés par Stripe."
+text 438,6044,341,88 "Faites appel à l'un des partenaires de notre réseau, qui se chargera d'intégrer et de déployer les solutions Stripe pour vous."
+a 438,6150,190,21 href=/fr/partners
+text 438,6150,179,21 "Découvrir les partenaires"
+text 843,6044,129,21 "Offres de support."
+text 843,6044,328,88 "Bénéficiez d'une assistance quotidienne pour toutes vos questions techniques, avec des offres progressives adaptées à vos besoins."
+a 843,6150,150,21 href=/fr/support-plans
+text 843,6150,139,21 "Découvrir les offres"
+text 33,6351,474,62 "Posez des bases solides pour faire grandir votre startup"
+a 33,6435,228,48 href=/fr/startups
+text 57,6448,167,21 "Stripe pour les startups"
+text 742,6360,469,73 "Stripe aide les startups à innover pour l’avenir grâce à une infrastructure financière simple à intégrer, des pionniers du stablecoin à 88 % des entreprises du Forbes AI 50."
+button 1144,6507,40,40 type=button aria-label=Témoignage client précédent
+button 1192,6507,40,40 type=button aria-label=Témoignage client suivant
+a 33,6579,323,563 href=/fr/customers/shotgun
+[pixels] img 27,6579,335,436 alt= src=https://images.stripeassets.com/fzn2n1nzq965/1d3mX58c8lHjyWX9WeXy9U/611c53276cc4cf552310f7b1c3341dbd/Shotgun.png?w=432&q=90
+text 33,7032,227,66 "Shotgun enregistre une hausse de plus de 560 % de son volume de paiements avec Stripe."
+text 33,7115,219,21 "Découvrir l’histoire de Shotgun"
+a 372,6579,323,563 href=/fr/customers/runway
+[pixels] img 367,6579,335,436 alt= src=https://images.stripeassets.com/fzn2n1nzq965/6fpvaTP1TZWXKWVMewABjV/4412b9ca2940d89d3834ac65c1fc329d/Runway.png?w=432&q=90
+text 372,7032,229,66 "Runway préserve la disponibilité de ses développeurs grâce aux solutions no-code de Stripe."
+text 372,7115,215,21 "Découvrir l’histoire de Runway"
+a 712,6579,323,563 href=/fr/customers/lovable
+[pixels] img 706,6579,335,436 alt= src=https://images.stripeassets.com/fzn2n1nzq965/1CBkJePR5Cwf2QNIVCia1I/c0a702cec7a3814c69f21f86b89ed718/lovable.png?w=432&q=90
+text 712,7032,281,43 "Lovable s’impose comme une référence du code assisté par l’IA grâce à Stripe"
+text 712,7092,215,21 "Découvrir l’histoire de Lovable"
+a 1051,6579,323,563 href=/fr/customers/supabase
+[pixels] img 1045,6579,335,436 alt= src=https://images.stripeassets.com/fzn2n1nzq965/7fM8bvEbivprOMM1zyow9N/3cad3cc826f96e4038b4ea88d81ebe3b/Supabase.png?w=432&q=90
+text 1051,7032,241,66 "Supabase commercialise sa solution de back-end-as-a-service dans 150 pays avec Stripe."
+text 1051,7115,230,21 "Découvrir l’histoire de Supabase"
+a 1391,6579,323,563 href=/fr/customers/gamma
+[pixels] img 1385,6579,335,436 alt= src=https://images.stripeassets.com/fzn2n1nzq965/2QjRFO1cRvocACDtyA7g9e/44245671788d6e086ab7d82b37937450/Gamma.png?w=432&q=90
+text 1391,7032,249,66 "Gamma franchit le cap des 100 M $US d’ARR et des 70 millions d’utilisateurs avec Stripe."
+text 1391,7115,215,21 "Découvrir l’histoire de Gamma"
+a 1730,6579,323,563 href=/fr/customers/elevenlabs
+[pixels] img 1724,6579,335,436 alt= src=https://images.stripeassets.com/fzn2n1nzq965/JK7aZoMzWA3uUbLb35kxx/dea1444a0aee29751c0c7098ffb33534/Eleven_Labs.png?w=432&q=90
+text 1730,7032,295,66 "ElevenLabs atteint un chiffre d’affaires de 3 Md $US avec Stripe, et devient un leader mondial de l’audio générée par l’IA."
+text 1730,7115,125,21 "Regarder la vidéo"
+a 33,7222,592,213 href=/fr/startups#application
+text 57,7254,199,21 "Programme Stripe Startups."
+text 57,7254,342,88 "Accédez à des avantages financiers, à une communauté dédiée et à des ressources d’experts qui vous aideront à développer votre entreprise."
+text 57,7359,172,21 "Rejoindre le programme"
+a 641,7222,592,213 href=/fr/atlas
+text 665,7254,87,21 "Stripe Atlas."
+text 665,7254,313,111 "Constituez votre entreprise et obtenez tout ce dont vous avez besoin pour lever des fonds, ouvrir un compte bancaire et accepter des paiements en deux jours ouvrables."
+text 665,7382,156,21 "Créer votre entreprise"
+text 33,7593,391,62 "Faites de votre plateforme SaaS un véritable écosystème financier"
+a 33,7677,254,48 href=/fr/use-cases/platforms
+text 57,7690,193,21 "Stripe pour les plateformes"
+text 742,7601,471,99 "De nombreuses plateformes SaaS du classement Fortune 100 ou Forbes Cloud 100 s’appuient sur Stripe pour enrichir leur offre en y intégrant des fonctionnalités de paiement ou des services financiers."
+[pixels] img 33,7821,1199,532 alt= src=https://images.stripeassets.com/fzn2n1nzq965/5dQAw5oJf3TOO1Jt6IKDRH/f391594c11f38d821259acdd3412a7a6/platform-graphic-background_2x.png?w=296&q=90
+text 33,8449,193,21 "Accélérez votre lancement."
+text 33,8449,351,88 "Développez des produits de paiement avec des frais d'exploitation réduits grâce à des composants intégrés et des outils no-code."
+a 33,8555,98,21 href=/fr/guides/best-practices-for-launching-and-scaling-platform-payments
+text 33,8555,87,21 "Lire le guide"
+text 438,8449,279,21 "Créez de nouvelles sources de revenus."
+text 438,8449,356,88 "Monétisez différents aspects des transactions de votre plateforme, y compris les paiements, les frais d'interchange et les frais de financement."
+a 438,8555,98,21 href=/fr/guides/introduction-to-monetizing-payments
+text 438,8555,87,21 "Lire le guide"
+text 843,8449,287,21 "Gérez les risques liés à votre plateforme."
+text 843,8449,348,88 "Gardez une longueur d’avance sur les réglementations internationales grâce à des outils intégrés de conformité, de gestion des risques et de sécurité."
+a 843,8555,98,21 href=/fr/guides/introduction-to-risk-management
+text 843,8555,87,21 "Lire le guide"
+text 246,8738,786,91 "Stripe nous permet d’aider les salons à se concentrer sur leur cœur de métier, c’est-à-dire les coupes et les soins, en automatisant toutes les autres tâches."
+text 428,8860,148,23 "Antoine Puymirat,"
+text 576,8860,261,23 "Cofondateur et PDG chez Planity"
+a 561,8916,143,21 href=/fr/customers/planity
+text 561,8916,132,21 "Lire le témoignage"
+text 1445,8738,837,149 "Notre entreprise a toujours visé une croissance internationale. Nous avions donc besoin d’un partenaire de paiement capable de répondre aux besoins des marchés locaux. Aujourd’hui, c’est en partie grâce à Stripe que nous donnons aux studios de fitness les moyens d’innover grâce à la technologie."
+text 1675,8918,108,23 "Marc Capelo,"
+text 1784,8918,268,23 "Chief Product Officer chez bSport"
+a 1792,8974,143,21 href=/fr/customers/bsport
+text 1792,8974,132,21 "Lire le témoignage"
+text 2687,8738,816,120 "Stripe facilite vraiment la gestion des abonnements et des paiements. Cela nous permet de nous concentrer sur le plus important : aider les auteurs et créateurs à faire ce qu’ils aiment sur Substack, et à en tirer des revenus."
+text 2888,8889,121,23 "Seth McMillan,"
+text 3009,8889,293,23 "Engineering Manager chez Substack"
+a 3023,8945,143,21 href=/fr/customers/substack
+text 3023,8945,132,21 "Lire le témoignage"
+text 3911,8738,830,120 "Stripe n’est pas qu’un prestataire : c’est un véritable partenaire, qui comprend notre business model et les défis que nous devons relever. Cela lui permet de nous aider à mieux servir nos utilisateurs. Ensemble, nous avons créé une offre de référence dans le secteur associatif."
+text 4110,8889,135,23 "Bérengère Alart,"
+text 4246,8889,295,23 "Chief Product Officer chez HelloAsso"
+a 4254,8945,143,21 href=/fr/customers/HelloAsso
+text 4254,8945,132,21 "Lire le témoignage"
+button 33,9067,300,100 type=button aria-label=Montrer le témoignage de Planity
+button 333,9067,300,100 type=button aria-label=Montrer le témoignage de bSport
+button 633,9067,300,100 type=button aria-label=Montrer le témoignage de Substack
+button 932,9067,300,100 type=button aria-label=Montrer le témoignage de HelloAsso
+text 33,9308,845,75 "Une infrastructure fiable et évolutive, compatible avec tous vos outils existants."
+text 33,9343,714,75 "Adaptez Stripe aux besoins de votre entreprise grâce à des options d'intégration flexibles."
+a 33,9449,258,48 href=https://docs.stripe.com/development
+text 57,9461,197,21 "Consulter la documentation"
+a 299,9449,217,48 href=https://github.com/stripe
+text 324,9461,167,21 "Voir le GitHub de Stripe"
+text 33,9624,455,33 "Intégrez Stripe à vos systèmes existants."
+text 33,9624,698,120 "Orchestrez les paiements à vos différents sous-traitants, créez des workflows personnalisés et connectez-vous à des solutions tierces grâce aux API et aux intégrations partenaires ou préconfigurées."
+text 33,10318,505,33 "Développez votre activité en toute confiance."
+text 33,10318,711,91 "Gérez des milliers de transactions par seconde avec une rapidité et une fiabilité constantes, même lors des pics d’activité."
+text 33,10742,162,61 "500 M+"
+text 33,10809,150,21 "requêtes API par jour"
+text 438,10742,108,61 "10 k+"
+text 438,10809,183,21 "requêtes API par seconde"
+text 843,10742,134,61 "150 k+"
+text 843,10809,169,21 "transactions par minute"
+text 33,10957,444,33 "Choisissez votre stratégie d'intégration."
+text 33,10957,696,120 "Grâce à l’IA, à une documentation détaillée et à des outils de diagnostic intégrés, vous pouvez rapidement mettre en place la configuration la plus adaptée à votre entreprise."
+text 33,11442,193,21 "Tirez parti d’outils no-code."
+text 33,11442,334,111 "Configurez des abonnements, acceptez des paiements en personne ou partagez un lien de paiement directement depuis le Dashboard Stripe, le tout sans écrire une seule ligne de code."
+a 33,11570,211,21 href=https://docs.stripe.com/no-code
+text 33,11570,200,21 "Découvrir les outils no-code"
+text 438,11442,260,21 "Utilisez une plateforme pré-intégrée."
+text 438,11442,340,66 "Découvrez notre répertoire de plateformes partenaires qui intègrent Stripe à leurs propres workflows."
+a 438,11525,171,21 href=https://marketplace.stripe.com/
+text 438,11525,160,21 "Consulter le répertoire"
+text 843,11442,218,21 "Créez votre propre intégration."
+text 843,11442,341,88 "Utilisez nos SDK, nos API, notre serveur MCP et nos outils de développement basés sur l’IA pour créer et maintenir votre propre intégration avec Stripe."
+a 843,11547,164,21 href=https://docs.stripe.com/development
+text 843,11547,153,21 "Démarrer maintenant"
+text 33,11780,165,40 "Nouveautés"
+text 33,11815,360,40 "Suivez l'actualité de Stripe."
+button 1144,11845,40,40 type=button aria-label=Diapositive précédente
+button 1192,11845,40,40 type=button aria-label=Diapositive suivante
+[pixels] canvas 33,11917,1199,448
+text 33,12395,588,28 "Les entreprises utilisant Stripe ont généré 1,9 Bn $US en 2025."
+text 33,12395,817,103 "Notre lettre annuelle explore les tendances qui façonnent l’économie d’Internet, notamment une croissance plus marquée pour les entreprises récentes, une expansion internationale plus rapide, les avancées des stablecoins, le commerce agentique, et bien plus encore."
+a 1085,12397,147,48 href=/fr/annual-updates/2025
+text 1110,12409,84,21 "Lire la lettre"
+text 33,12395,573,28 "150 k+ utilisateurs ont réalisé leur record de vente sur Stripe."
+text 33,12395,773,78 "Entre Black Friday et Cyber Monday 2025, Stripe a traité plus de 40 Md $US pour ses clients, tout en garantissant un temps de disponibilité de 99,9999 %."
+a 1030,12397,202,48 href=/fr/newsroom/news/bfcm2025
+text 1055,12409,139,21 "Voir les statistiques"
+text 33,12395,684,28 "Tidemark a publié un rapport de référence sur les SaaS dédiés aux PME."
+text 33,12395,791,78 "Découvrez ce qui stimule la croissance des SaaS en 2025 : diversification des produits, et intégration de la fintech et de l’IA au cœur de leurs solutions."
+a 1010,12397,222,48 href=/fr/lp/vertical-saas-benchmark-2025?utm_medium=owned-surfaces&utm_source=33d6&utm_campaign=GLOBAL_4250&utm_content=819a&utm_term=a6a6d7b23e01 aria-label=Obtenez les données de benchmark SaaS de Tidemark
+text 1035,12409,159,21 "Découvrir les données"
+text 33,12395,462,28 "Tobi Lütke (Shopify) échange avec John Collison."
+text 33,12395,809,78 "Découvrez les choix qui ont façonné la réussite de Shopify et de Stripe, leur vision de l’avenir du commerce, et leurs conseils aux créateurs d'entreprise."
+a 1044,12397,188,48 href=https://www.youtube.com/watch?v=eMSqlQMk480 aria-label=Regardez la conversation entre Tobi Lütke et John Collison
+text 1069,12409,125,21 "Regarder la vidéo"
+text 33,12395,633,28 "Paiements hors app stores : de nouveaux outils changent la donne."
+text 33,12395,781,103 "Les évolutions réglementaires ouvrent de nouvelles possibilités. Découvrez comment Stripe vous permet d’accepter des paiements hors app stores iOS et Android, pour augmenter vos revenus et garder le contrôle de l’expérience client"
+a 1071,12397,161,48 href=/fr/use-cases/in-app-payments aria-label=Découvrez comment traiter des paiements en dehors des boutiques d’applications
+text 1096,12409,98,21 "En savoir plus"
+text 33,12395,742,28 "Crypto.com s’associe à Stripe pour simplifier les paiements en cryptomonnaie."
+text 33,12420,762,78 "Découvrez comment ce partenariat peut vous aider à développer votre activité à l’international, en permettant à vos clients d’utiliser directement leur solde en cryptomonnaie au moment du paiement."
+a 1071,12397,161,48 href=/fr/customers/crypto-com-spotlight
+text 1096,12409,98,21 "En savoir plus"
+text 33,12395,733,28 "Vos clients peuvent désormais acheter vos produits sur des plateformes d’IA."
+text 33,12420,783,78 "Découvrez comment le Protocole de commerce agentique (ACP) permet à toute entreprise d’accepter des achats depuis des plateformes d’IA, sans transformation technique majeure."
+a 1071,12397,161,48 href=/fr/blog/introducing-our-agentic-commerce-solutions aria-label=En savoir plus sur les solutions de commerce agentique
+text 1096,12409,98,21 "En savoir plus"
+text 33,12395,749,53 "Les plus grands acteurs du retail unifient leur expérience client et boostent leur croissance."
+text 33,12420,771,78 "Découvrez comment les plus grandes marques ont unifié leurs expériences en ligne et en magasin, et optimisé leurs parcours de paiement, pour offrir une expérience d’achat fluide."
+a 1071,12397,161,48 href=/fr/lp/how-retailers-drive-growth
+text 1096,12409,98,21 "En savoir plus"
+text 32,11782,557,21 "Élément 1 sur 8 : Les entreprises utilisant Stripe ont généré 1,9 Bn $US en 2025."
+text 33,12622,289,40 "Le livre de la semaine"
+text 33,12657,564,40 "Toute entreprise commence par une idée."
+text 641,13176,322,32 "Pour en savoir plus sur le progrès économique et l’innovation technologique, consultez nos publications internes :"
+a 641,13226,142,38 href=https://press.stripe.com/
+text 688,13236,76,18 "Stripe Press"
+a 790,13226,179,38 href=https://worksinprogress.co/
+[pixels] picture 793,13229,32,32
+[pixels] img 793,13229,32,32 alt= src=https://images.stripeassets.com/fzn2n1nzq965/1hmjWQj2Xwglop2rAW62zf/2899db472c5095e1a6b69bee0ead60c9/WorkInProgressIcon.png?w=32&q=90
+text 837,13236,113,18 "Works in Progress"
+text 33,13533,299,40 "Envie de vous lancer ?"
+text 33,13588,505,54 "Créez un compte instantanément ou contactez-nous pour concevoir une offre sur mesure adaptée à votre entreprise."
+a 33,13675,214,48 href=https://dashboard.stripe.com/register
+text 57,13688,153,21 "Démarrer maintenant"
+a 255,13675,215,48 href=/fr/contact/sales
+text 280,13688,165,21 "Contacter notre équipe"
+text 641,13592,220,21 "Découvrez ce que vous paierez"
+text 641,13619,224,43 "Une tarification par transaction, sans aucuns frais cachés."
+a 641,13679,178,21 href=/fr/pricing
+text 641,13679,167,21 "Détails de la tarification"
+text 944,13592,164,21 "Commencez sans délai"
+text 944,13619,183,43 "Lancez-vous sur Stripe en seulement 10 minutes"
+a 944,13679,161,21 href=https://docs.stripe.com/get-started
+text 944,13679,150,21 "Options d’intégration"
+text 33,13883,118,21 "Produits et tarifs"
+a 33,13916,39,20 href=/fr/pricing
+text 33,13915,39,21 "Tarifs"
+a 33,13940,36,20 href=/fr/atlas
+text 33,13939,36,21 "Atlas"
+a 33,13964,142,20 href=/fr/authorization-boost
+text 33,13963,142,21 "Authorization Boost"
+a 33,13988,44,20 href=/fr/billing
+text 33,13987,44,21 "Billing"
+a 33,14012,50,20 href=/fr/capital
+text 33,14011,50,21 "Capital"
+a 33,14036,145,20 href=/fr/capital/platforms
+text 33,14035,145,21 "Capital for platforms"
+a 33,14060,68,20 href=/fr/payments/checkout
+text 33,14059,68,21 "Checkout"
+a 33,14084,55,20 href=/fr/climate
+text 33,14083,55,21 "Climate"
+a 33,14108,60,20 href=/fr/connect
+text 33,14107,60,21 "Connect"
+a 33,14132,49,20 href=/fr/use-cases/crypto
+text 33,14131,49,21 "Crypto"
+a 33,14156,110,20 href=/fr/crypto-onramp
+text 33,14155,110,21 "Crypto Onramp"
+a 33,14180,94,20 href=/fr/data-pipeline
+text 33,14179,94,21 "Data Pipeline"
+a 33,14204,67,20 href=/fr/payments/elements
+text 33,14203,67,21 "Elements"
+a 33,14228,157,20 href=/fr/financial-connections
+text 33,14227,157,21 "Financial Connections"
+a 33,14252,107,20 href=/fr/payouts
+text 33,14251,107,21 "Global Payouts"
+a 33,14276,54,20 href=/fr/identity
+text 33,14275,54,21 "Identity"
+a 33,14300,64,20 href=/fr/invoicing
+text 33,14299,64,21 "Invoicing"
+a 33,14324,51,20 href=/fr/issuing
+text 33,14323,51,21 "Issuing"
+a 33,14348,30,20 href=/fr/payments/link
+text 33,14347,30,21 "Link"
+a 33,14372,142,20 href=/fr/managed-payments
+text 33,14371,142,21 "Managed Payments"
+a 33,14396,100,20 href=/fr/payments/payment-links
+text 33,14395,100,21 "Payment links"
+a 33,14420,148,20 href=/fr/payments/payment-methods
+text 33,14419,148,21 "Moyens de paiement"
+a 33,14444,71,20 href=/fr/payments
+text 33,14443,71,21 "Payments"
+a 33,14468,43,20 href=/fr/radar
+text 33,14467,43,21 "Radar"
+a 33,14492,151,20 href=/fr/revenue-recognition
+text 33,14491,151,21 "Revenue Recognition"
+a 33,14516,91,20 href=/fr/sigma
+text 33,14515,91,21 "Stripe Sigma"
+a 33,14540,101,20 href=/fr/billing/subscriptions
+text 33,14539,101,21 "Abonnements"
+a 33,14564,25,20 href=/fr/tax
+text 33,14563,25,21 "Tax"
+a 33,14588,62,20 href=/fr/terminal
+text 33,14587,62,21 "Terminal"
+a 33,14612,62,20 href=/fr/treasury
+text 33,14611,62,21 "Treasury"
+a 33,14636,157,20 href=/fr/treasury/platforms
+text 33,14635,157,21 "Treasury for platforms"
+a 33,14660,146,20 href=/fr/billing/usage-based-billing
+text 33,14659,146,21 "Facturation à l'usage"
+text 337,13883,67,21 "Solutions"
+a 337,13916,145,20 href=/fr/enterprise
+text 337,13915,145,21 "Grandes entreprises"
+a 337,13940,61,20 href=/fr/startups
+text 337,13939,61,21 "Startups"
+a 337,13964,154,20 href=/fr/use-cases/agentic-commerce
+text 337,13963,154,21 "Commerce agentique"
+a 337,13988,111,20 href=/fr/use-cases/crypto
+text 337,13987,111,21 "Cryptomonnaie"
+a 337,14012,92,20 href=/fr/use-cases/ecommerce
+text 337,14011,92,21 "E-commerce"
+a 337,14036,196,20 href=/fr/use-cases/embedded-finance
+text 337,14035,196,21 "Services financiers intégrés"
+a 337,14060,263,40 href=/fr/use-cases/finance-automation
+text 337,14059,219,41 "Automatisation des opérations financières"
+a 337,14104,191,20 href=/fr/use-cases/global-businesses
+text 337,14103,191,21 "Entreprises internationales"
+a 337,14128,125,20 href=/fr/use-cases/in-app-payments
+text 337,14127,125,21 "Paiements in-app"
+a 337,14152,97,20 href=/fr/use-cases/marketplaces
+text 337,14151,97,21 "Marketplaces"
+a 337,14176,120,20 href=/fr/money-management/availability
+text 337,14175,120,21 "Gestion de fonds"
+a 337,14200,86,20 href=/fr/use-cases/platforms
+text 337,14199,86,21 "Plateformes"
+a 337,14224,36,20 href=/fr/use-cases/saas
+text 337,14223,36,21 "SaaS"
+a 337,14248,113,20 href=/fr/use-cases/ai
+text 337,14247,113,21 "Entreprises d’IA"
+a 337,14272,171,20 href=/fr/use-cases/creator-economy
+text 337,14271,171,21 "Économie des créateurs"
+a 337,14296,32,20 href=/fr/industries/gaming
+text 337,14295,32,21 "Jeux"
+a 337,14320,198,20 href=/fr/industries/travel
+text 337,14319,198,21 "Hôtellerie, voyages et loisirs"
+a 337,14344,76,20 href=/fr/industries/insurance
+text 337,14343,76,21 "Assurance"
+a 337,14368,187,20 href=/fr/industries/media-entertainment
+text 337,14367,187,21 "Médias et divertissements"
+a 337,14392,214,20 href=/fr/industries/nonprofits
+text 337,14391,214,21 "Associations à but non lucratif"
+a 337,14416,174,20 href=/fr/industries/professional-services
+text 337,14415,174,21 "Services aux entreprises"
+a 337,14440,103,20 href=/fr/industries/public-sector
+text 337,14439,103,21 "Secteur public"
+a 337,14464,105,20 href=/fr/industries/retail
+text 337,14463,105,21 "Vente au détail"
+text 337,14547,100,21 "Développeurs"
+a 337,14579,110,20 href=https://docs.stripe.com/
+text 337,14578,110,21 "Documentation"
+a 337,14603,167,20 href=https://docs.stripe.com/api
+text 337,14602,167,21 "Documentation de l'API"
+a 337,14627,85,20 href=https://status.stripe.com/
+text 337,14626,85,21 "État de l'API"
+a 337,14651,221,20 href=https://docs.stripe.com/changelog
+text 337,14650,221,21 "Liste des modifications de l'API"
+a 337,14675,150,20 href=https://docs.stripe.com/development
+text 337,14674,150,21 "Bibliothèques et SDK"
+a 337,14699,105,20 href=https://docs.stripe.com/projects
+text 337,14698,105,21 "Stripe Projects"
+a 337,14723,163,20 href=https://stripe.dev/
+text 337,14722,163,21 "Blog des développeurs"
+text 641,13883,172,40 "Intégrations et solutions personnalisées"
+a 641,13935,169,20 href=https://marketplace.stripe.com/
+text 641,13934,169,21 "Stripe App Marketplace"
+a 641,13959,239,20 href=/fr/partners
+text 641,13958,239,21 "Écosystème de partenaires Stripe"
+a 641,13983,174,20 href=/fr/professional-services
+text 641,13982,174,21 "Services aux entreprises"
+text 641,14066,83,21 "Ressources"
+a 641,14098,124,20 href=/fr/roadmap
+text 641,14097,124,21 "Roadmap produit"
+a 641,14122,50,20 href=/fr/guides
+text 641,14121,50,21 "Guides"
+a 641,14146,197,20 href=/fr/customers
+text 641,14145,197,21 "Témoignages de nos clients"
+a 641,14170,33,20 href=/fr/blog
+text 641,14169,33,21 "Blog"
+a 641,14194,97,20 href=https://stripecommunity.com/
+text 641,14193,97,21 "Communauté"
+a 641,14218,213,20 href=/fr/sessions
+text 641,14217,213,21 "Conférence annuelle Sessions"
+a 641,14242,263,40 href=/fr/privacy
+text 641,14241,200,41 "Confidentialité et conditions d’utilisation"
+a 641,14286,263,40 href=/fr/legal/restricted-businesses
+text 641,14285,253,41 "Entreprises interdites et soumises à restriction"
+a 641,14330,63,20 href=/fr/spc/licenses
+text 641,14329,63,21 "Licences"
+a 641,14354,82,20 href=/fr/sitemap
+text 641,14353,82,21 "Plan du site"
+a 641,14378,170,20 href=/fr/cookie-settings
+text 641,14377,170,21 "Paramètres des cookies"
+a 641,14402,121,20 href=/fr/legal/france-legal-notice
+text 641,14401,121,21 "Mentions légales"
+a 641,14426,129,20 href=/fr/resources/more
+text 641,14425,129,21 "Autres ressources"
+text 944,13883,74,21 "Entreprise"
+a 944,13916,65,20 href=/fr/careers
+text 944,13915,65,21 "Carrières"
+a 944,13940,177,20 href=/fr/newsroom
+text 944,13939,177,21 "Communiqués de presse"
+a 944,13964,86,20 href=https://press.stripe.com/
+text 944,13963,86,21 "Stripe Press"
+a 944,13988,164,20 href=/fr/contact/sales
+text 944,13987,164,21 "Contacter notre équipe"
+text 944,14071,58,21 "Support"
+a 944,14103,108,20 href=https://support.stripe.com/
+text 944,14102,108,21 "Site de support"
+a 944,14127,125,20 href=/fr/support-plans
+text 944,14126,125,21 "Offres de support"
+a 944,14211,105,21 href=https://dashboard.stripe.com/login
+text 944,14211,94,21 "Se connecter"
+button 33,14848,147,16 type=button aria-label=France. Choisissez votre pays role=combobox
+text 57,14845,49,21 "France"
+text 109,14845,5,21 "("
+text 114,14845,60,21 "Français"
+text 175,14845,5,21 ")"
+text 33,14880,17,21 "©"
+text 50,14880,37,21 "2026"
+text 87,14880,84,21 "Stripe, LLC."
+button 808,712,433,64 aria-label=Chat with Stripe type=button
+text 872,734,357,20 "Discuter par chat avec l’équipe commerciale de Stripe"
+text 887,632,323,57 "Nous utilisons des cookies pour améliorer votre expérience, ainsi qu'à des fins de marketing. Pour en savoir plus, consultez notre"
+a 887,671,286,38 href=/fr/legal/cookies-policy
+text 887,671,286,38 "Politique relative à l'utilisation des cookies"
+text 1031,691,22,18 "ou"
+a 1052,691,107,18 href=/fr/cookie-settings
+text 1052,691,107,18 "gérez les cookies"
+text 1159,691,3,18 "."
+button 887,724,129,42 type=button
+text 908,735,87,18 "Tout accepter"
+button 1024,724,118,42 type=button
+text 1045,735,76,18 "Tout refuser"

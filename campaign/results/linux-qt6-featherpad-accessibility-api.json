@@ -1,0 +1,46 @@
+{
+  "os": "linux",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Xvfb 1280x800 (X11) + dbus-run-session, NO window manager",
+  "app": "FeatherPad 1.6.1 (Qt 6.8.2 widgets text editor)",
+  "stack": "qt",
+  "stack_detection": {
+    "method": "ldd shows libQt6Widgets/libQt6Gui; after launch the app appears on the AT-SPI bus with toolkit attribute 'Qt' — both checks precede extraction",
+    "signature": "libQt6Gui.so.6 mapped + QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 exported; AT-SPI desktop lists 'FeatherPad' (toolkit Qt)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Same no-root Xvfb + dbus-run-session environment as the mousepad cell. Qt6's built-in AT-SPI bridge (in QtGui) activated with QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1; on a real desktop the bridge activates whenever the a11y bus answers GetAddress, so the env var is the headless belt-and-braces, not a special permission. Input via xdotool (real X keystrokes/XTEST clicks).",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Same typed sentence read back character-exact through the Text interface of the QPlainTextEdit's AT-SPI node. Strings, not glyphs." },
+    "t2_enumerate": { "pass": true, "detail": "167-node tree, 45 SHOWING lines with extents — richer than the GTK cell because Qt renders its menubar even without a WM: File/Edit/Options/Search/Help all carry real extents ([106,50,29,19] for File). Qt's AT-SPI tree for standard widgets is NOT thin: menus, scrollbars, statusbar, tab list all present with correct geometry. The thin-tree risk is real but lives in CUSTOM-PAINTED surfaces — see the qBittorrent cell." },
+    "t3_live_value": { "pass": true, "detail": "PX-7Q4K-LINUX-ATSPI read back from the live buffer." },
+    "t4_living_screen": { "pass": true, "detail": "Identical to GTK: 0 events in a 3 s idle window; 18 keystrokes → 18 object:text-changed:insert events (~21 B each). The Qt bridge emits the same event vocabulary as GTK's — one listener serves both toolkits, which is the point of AT-SPI as the cross-toolkit merge." },
+    "t5_blind_action": { "pass": true, "detail": "Blind click on the 'File' menubar item purely from its channel extents (click at 120,59 via xdotool): the menu opens and the channel itself proves it — 12 menu items (New, Open, Recently Modified, ...) flip to STATE_SHOWING. Effect verified in-channel, no screenshot consulted." },
+    "t6_pictorial": { "pass": null, "detail": "No pictorial region in this app (none in tree, none on screen — consistent). The custom-paint question is answered by the qBittorrent cell." }
+  },
+  "measurements": {
+    "view_bytes": 1326,
+    "view_tokens_est": 331,
+    "screenshot_tokens_est": 1365,
+    "diff_bytes_per_interaction": 21,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 158,
+    "notes": "331 tokens vs 1365 for a screenshot (4.1x) on a standard-widgets window. Walk 158 ms for 167 nodes (per-node D-Bus round-trips, same caveat as GTK). The cross-toolkit result: the SAME pyatspi client code ran unmodified against GTK3 and Qt6 apps — roles, states, Text/EditableText interfaces, event types all identical. AT-SPI really is the OS-level merge layer on Linux; the router does not need per-toolkit adapters for standard widgets."
+  },
+  "runtime_verification": {
+    "method": "Root-window screenshots alongside probes; menu-open verified both in-channel (SHOWING states) and on the captured frame.",
+    "agreement": "Full agreement. Menubar extents match the rendered menubar; the opened File menu's items appear at their published positions."
+  },
+  "permissions_required": [
+    "None beyond a session bus (QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 exported for headless activation)"
+  ],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Xvfb session",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/linux-atspi/FeatherPad-tree.txt",
+    "campaign/results/artifacts/linux-atspi/FeatherPad-nodes.json",
+    "campaign/results/artifacts/linux-atspi/featherpad-battery.json"
+  ]
+}

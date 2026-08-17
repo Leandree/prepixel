@@ -1,0 +1,357 @@
+a 0,-9999,142,38 href=#bbc-main aria-label=Skip to content role=link
+text 14,-9990,114,19 "Skip to content"
+button 16,25,50,30 role=button aria-label=Open menu
+a 563,20,140,40 href=/
+a 1059,23,90,34 href=https://session.bbc.com/session?action=register&userOrigin=BBCS_BBC&ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews
+button 1059,23,90,34 type=button aria-label=Register
+text 1073,30,62,19 "Register"
+a 1170,23,79,34 href=https://session.bbc.com/session?userOrigin=BBCS_BBC&ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews
+button 1170,23,79,34 type=button aria-label=Sign In
+text 1184,30,51,19 "Sign In"
+a 255,81,55,42 href=/
+text 263,94,39,16 "Home"
+a 310,81,52,42 href=/news
+text 318,94,36,16 "News"
+a 362,81,53,42 href=/sport
+text 370,94,37,16 "Sport"
+a 415,81,73,42 href=/business
+text 423,94,57,16 "Business"
+a 488,81,92,42 href=/technology
+text 496,94,76,16 "Technology"
+a 580,81,60,42 href=/health
+text 588,94,44,16 "Health"
+a 641,81,65,42 href=/culture
+text 649,94,49,16 "Culture"
+a 706,81,44,42 href=/arts
+text 714,94,28,16 "Arts"
+a 750,81,56,42 href=/travel
+text 758,94,40,16 "Travel"
+a 806,81,52,42 href=/future-planet
+text 814,94,36,16 "Earth"
+a 858,81,55,42 href=/audio
+text 866,94,39,16 "Audio"
+a 913,81,54,42 href=/video
+text 921,94,38,16 "Video"
+a 967,81,43,42 href=/live
+text 975,94,27,16 "Live"
+a 255,123,88,32 href=/news/us-canada
+text 263,132,72,14 "US & Canada"
+a 345,123,33,32 href=/news/uk
+text 353,132,17,14 "UK"
+a 379,123,49,32 href=/news/world/africa
+text 387,132,33,14 "Africa"
+a 429,123,40,32 href=/news/world/asia
+text 437,132,24,14 "Asia"
+a 470,123,66,32 href=/news/world/australia
+text 478,132,50,14 "Australia"
+a 537,123,56,32 href=/news/world/europe
+text 545,132,40,14 "Europe"
+a 594,123,93,32 href=/news/world/latin_america
+text 602,132,77,14 "Latin America"
+a 688,123,81,32 href=/news/world/middle_east
+text 696,132,65,14 "Middle East"
+a 770,123,75,32 href=/news/in_pictures
+text 778,132,59,14 "In Pictures"
+a 846,123,88,32 href=/news/bbcindepth
+text 854,132,72,14 "BBC InDepth"
+a 935,123,76,32 href=/news/bbcverify
+text 943,132,60,14 "BBC Verify"
+[pixels] img 325,529,616,347 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/8304/live/fde5dbb0-99c6-11f1-b604-2bfb19ba7385.jpg.webp alt=North Korean leader Kim Jong Un and US President Donald Trump inside the demilitarized zone (DMZ) separating the South and North Korea on 30 June 2019
+a 9,567,300,270 href=/news/articles/cx2lll7zvn0o
+text 9,566,299,161 "Trump says US to reduce military drills with South Korea after it stayed out of Iran war"
+text 9,740,271,52 "Trump cites his "very good relationship" with North Korea's leader in deciding to downsize the exercises."
+text 9,814,50,14 "8 hrs ago"
+text 80,814,33,14 "World"
+a 957,529,300,362 href=/news/articles/c77gg5vn44yo
+[pixels] img 957,529,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/1476/live/b59ea940-9a3e-11f1-a291-b542ee92de7c.jpg.webp alt=Close up of Jared Kushner, who has short, dark hair and is wearing a dark suit, white shirt and tie.
+text 957,710,274,65 "Trump envoy Kushner meets Netanyahu after Hamas talks on peace plan"
+text 957,789,280,52 "US President Trump's son-in-law Jared Kushner is seeking to gain Israeli backing for the US-backed Gaza peace plan."
+text 957,863,66,14 "20 mins ago"
+text 1043,863,64,14 "Middle East"
+a 957,907,300,169 href=/news/articles/crl7686r71yo
+text 957,907,287,65 "Aid shortages and fears of starvation as Indonesia reels from deadly earthquake"
+text 957,982,288,52 "Some 53 people were killed and thousands displaced by the earthquake, which struck early on Saturday."
+text 957,1052,50,14 "4 hrs ago"
+text 1028,1052,23,14 "Asia"
+a 957,1092,300,169 href=/news/articles/c8xnwqe00v1o
+text 957,1092,258,65 "India built the world's biggest digital payments miracle. Now comes the bill"
+text 957,1167,288,52 "India's UPI may finally face merchant fees, raising questions over who pays and whether users will resist."
+text 957,1237,57,14 "15 hrs ago"
+text 1035,1237,23,14 "Asia"
+a 9,932,221,357 href=https://www.bbc.com/news/live/cvg5v5evee8t
+[pixels] img 9,932,221,124 src=https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e7c4/live/2facc8c0-9a2b-11f1-a291-b542ee92de7c.jpg.webp alt=Hayden Panettiere smiles and looks at the camera
+text 31,1068,40,21 "LIVE"
+text 9,1068,204,87 "Actors lead tributes to 'amazing' Hayden Panettiere after Heroes star dies aged 36"
+text 9,1169,221,70 "Oscar-winning actress Viola Davis describes Panettiere as "so gifted". No cause of death has been confirmed."
+a 246,932,221,295 href=/news/articles/cn7n4lm11vro
+[pixels] img 246,932,221,124 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/47a8/live/067cc130-9a26-11f1-aed2-8d6da8d75094.jpg.webp alt=Emergency workers at the scene of an attack in Odesa on 9 August
+text 246,1068,214,43 "Russia and Ukraine trade more deadly strikes"
+text 246,1125,215,52 "Moscow says nine people have been killed in the past 24 hours, while Kyiv reports four deaths."
+text 246,1199,45,14 "1 hr ago"
+text 311,1199,39,14 "Europe"
+a 483,932,221,339 href=/news/articles/clyvj5zdjj2o
+[pixels] img 483,932,221,124 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/fd38/live/07503aa0-9a22-11f1-a291-b542ee92de7c.jpg.webp alt=A composite image shows Burnham on the left and Wiles on the right, both head and shoulders portraits.
+text 483,1068,219,87 "UK PM Burnham exchanged messages with person posing as Trump's chief of staff"
+text 483,1169,221,52 "Downing Street has declined to comment on the security breach, first reported by Politico."
+text 483,1243,66,14 "48 mins ago"
+text 569,1243,40,14 "Politics"
+a 720,932,221,357 href=/news/articles/cy0j2r15dr1o
+[pixels] img 720,932,221,124 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/2b0d/live/bd99be00-9a1b-11f1-aed2-8d6da8d75094.jpg.webp alt=A person in the foreground wears pre- Victorian-era clothing and signs a document with a quil while wearing a hat, as people dressed in scantily clad slave robes walk through the street in chains in the background, during a re-enactment of the trans-Atlantic slave trade in the courtyard of Christiansborg Castle in Accra, Ghana on 19 June.
+text 720,1068,195,87 "'Ghana was the crime scene': The country leading the demand for slavery reparations"
+text 720,1169,221,70 "Ghana has become Africa's leading voice in telling the world that Western nations owe reparations."
+text 720,1261,57,14 "15 hrs ago"
+text 798,1261,32,14 "Africa"
+a 16,1337,234,104 href=/news/articles/cy077exnv8jo
+text 16,1337,201,87 "Singapore police investigate assault on elderly man who patted child's head"
+a 266,1337,234,104 href=/news/articles/ce8lx172kero
+text 266,1337,225,87 "Post-mortems due on five boys killed in crash on wrong side of motorway that injured four in Ireland"
+a 516,1337,234,82 href=/news/articles/ce34rlkw6q7o
+text 516,1337,207,65 "US hiker dies after being struck by lightning on Mount Etna"
+a 765,1337,234,82 href=/news/articles/cvgll74vvydo
+text 765,1337,234,65 "Ebola outbreak in DR Congo becomes deadliest in its history"
+a 1015,1337,234,82 href=/news/articles/c4g4r0mrmlpo
+text 1015,1337,233,65 "Movie that went viral for terrible animation becomes China box office hit"
+text 9,1500,156,18 "MORE TO EXPLORE"
+[pixels] img 325,1543,616,347 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/e671/live/7f2aad10-9a15-11f1-aed2-8d6da8d75094.jpg.webp alt=Hayden Panettiere surrounded by photographers she has her hair tied back and wearing red lipstick and a greendress with a black leather jacket over the top
+a 9,1597,300,238 href=/news/articles/c75g0n2wy6lo
+text 9,1596,262,129 "In pictures: Hayden Panettiere's life and career, from child actor to Scream star"
+text 9,1738,286,52 "The former child star whose breakthrough came in 2006 later opened up about her struggles with mental health."
+text 9,1812,50,14 "4 hrs ago"
+text 80,1812,71,14 "US & Canada"
+a 957,1543,300,340 href=/news/articles/c629krywgw2o
+[pixels] img 957,1543,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/8c4a/live/54c2c620-9a2e-11f1-90d9-9d833c0912f2.jpg.webp alt=Hayden Panettiere's head seen turned to look behind her and smile softly, in front of a red background
+text 957,1724,291,43 "A life of struggles alongside screen success"
+text 957,1781,298,52 "She went from child actress to Hollywood star, but endured addiction, harassment and personal trauma."
+text 957,1855,50,14 "3 hrs ago"
+text 1028,1855,41,14 "Culture"
+a 957,1899,300,362 href=/news/videos/cj4kglpl55lo
+[pixels] img 957,1899,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/8072/live/541515d0-9811-11f1-a7ab-8b30adf0800a.jpg.webp alt=Split screen. Left, Tupac Shakur is seen. Right, Mopreme Shakur is seen.
+text 957,2079,277,65 "'I want my brother back': Tupac’s brother tells BBC murder trial won’t bring justice"
+text 957,2158,282,52 "The BBC's Shaimaa Khalil sat down with Mopreme Shakur ahead of the trial for his brother and late rapper's 1996 murder."
+text 957,2232,57,14 "15 hrs ago"
+text 1035,2232,71,14 "US & Canada"
+a 9,1945,458,429 href=/news/articles/cr49739xd5do
+[pixels] img 9,1945,458,258 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/05e0/live/eafe2c60-97ef-11f1-9bd9-d1c2814d5e5d.jpg.webp alt=A mother and her son sit in a bright garden. The woman is smiling down fondly at her son as he holds her arm. She has long red hair that is being blown by the wind and is wearing a shirt with stripes. The young man alongside her has a big smile.
+text 9,2215,410,43 "Boy who changed UK law on medicinal cannabis thriving as he turns 21"
+text 9,2272,449,52 "Billy Caldwell from Castlederg in County Tyrone has a severe form of epilepsy, which at one point had him suffering hundreds of "life-threatening" seizures a day."
+text 9,2346,50,14 "9 hrs ago"
+text 80,2346,91,14 "Northern Ireland"
+a 483,1945,458,411 href=/news/articles/clyqpx6xk69o
+[pixels] img 483,1945,458,258 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/078d/live/f51173c0-97c1-11f1-9963-d1f200dff659.jpg.webp alt=Mark Zuckerberg, CEO of Meta, wearing a dark blue suit and a dark red tie
+text 483,2215,452,43 "Instagram and Facebook could change forever if Meta loses child privacy trial"
+text 483,2272,455,34 "US states are suing the social media giant to force an overhaul of its platforms for young users."
+text 483,2328,50,14 "9 hrs ago"
+text 554,2328,63,14 "Technology"
+text 9,2774,120,18 "ALSO IN NEWS"
+[pixels] img 325,2817,616,347 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 325,2817,616,347 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/5988/live/5aa64f40-9a3c-11f1-b792-a710e56a11dc.jpg.webp alt=Robert Jenrick holding Reform UK's welfare proposals
+a 9,2862,300,256 href=/news/articles/cly555430nno
+text 9,2861,279,129 "Reform proposes ban on most benefits for foreign nationals in UK"
+text 9,3003,284,70 "The move would require renegotiating the UK's Brexit deal and could risk stripping British expats living in the EU of similar rights."
+text 9,3095,50,14 "2 hrs ago"
+text 80,3095,39,14 "Europe"
+a 957,2817,300,362 href=https://www.bbc.com/news/live/cm74gdgz2y2pt
+[pixels] img 957,2817,300,169 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 957,2817,300,169 src=https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f935/live/c5e5af10-9a3e-11f1-a86b-519b4d19bbee.jpg.webp alt=Man in black top hat and coat in front of funeral car and procession
+text 979,2998,40,21 "LIVE"
+text 957,2998,292,65 "Bonnie Tyler's coffin arrives in hometown to cheers and singing after funeral service"
+text 957,3077,294,52 "The Welsh singer, whose famous works include Total Eclipse of the Heart, died on 8 July, aged 75."
+a 957,3195,300,362 href=/news/articles/clyxklg3xypo
+[pixels] img 957,3195,300,169 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 957,3195,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/f467/live/1a793ee0-996b-11f1-870d-5d08c49babb2.jpg.webp alt=Jason Arday wears a black shirt and smiles at the camera as he appears as a guest on the panel of BBC show Sunday with Laura Kuenssberg
+text 957,3375,298,65 "Cambridge chancellor criticises 'racist feeding frenzy' around Jason Arday"
+text 957,3454,285,52 "Jason Arday, the former University of Cambridge professor at the centre of a plagiarism row, was found dead last week."
+text 957,3528,66,14 "29 mins ago"
+text 1043,3528,86,14 "Cambridgeshire"
+a 9,3219,458,411 href=/news/articles/cjrvx4yye81o
+[pixels] img 9,3219,458,258 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 9,3219,458,258 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/0d0e/live/a809a810-9a12-11f1-a05c-fdd5e0ed226e.jpg.webp alt=An artist's impression of a Virgin train at St Pancras International
+text 9,3489,427,43 "Virgin takes step towards running Channel Tunnel rail services"
+text 9,3546,451,34 "Firm wants to run up to 20 daily journeys to Europe but it must get additional approval for overseas tracks."
+text 9,3602,50,14 "2 hrs ago"
+text 80,3602,48,14 "Business"
+a 483,3219,458,411 href=/news/articles/cn0nj3ln8r5o
+[pixels] img 483,3219,458,258 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 483,3219,458,258 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/4885/live/b3a7d990-9a02-11f1-ad4f-c7824f9e4997.jpg.webp alt=An election official displays a ballot paper as observers look on during the counting of votes after the polls closed at a polling station in Lusaka, Zambia
+text 483,3489,432,43 "Top Zambian opposition figures arrested days after presidential vote"
+text 483,3546,424,34 "The leading opposition candidate calls allegations of a planned insurrection as "total fabrications"."
+text 483,3602,50,14 "2 hrs ago"
+text 554,3602,32,14 "Africa"
+text 16,3689,134,18 "MOST WATCHED"
+a 16,3732,234,80 href=/news/videos/cj4kglpl55lo
+text 26,3730,18,38 "1"
+text 62,3732,170,79 "'I want my brother back' - Tupac’s brother tells BBC murder trial won’t bring justice"
+a 266,3732,234,80 href=/news/videos/cj4kg74ndggo
+text 276,3730,18,38 "2"
+text 312,3732,167,79 "Moment family rescued after 16 hours floating on jet ski off Thailand"
+a 516,3732,234,60 href=/news/videos/c62e1v8p07go
+text 525,3730,18,38 "3"
+text 562,3732,183,59 "Why is Australia's mushroom killer back in court this week?"
+a 765,3732,234,60 href=/news/videos/cjej4y3gvzlo
+text 775,3730,18,38 "4"
+text 811,3732,153,59 "Why are 'human fridges' being sold in Japan?"
+a 1015,3732,234,80 href=/news/videos/cg5llzv49p8o
+text 1025,3730,18,38 "5"
+text 1061,3732,149,79 "Watch: Flooding destroys a road in Indiana after heavy rainfall"
+text 16,4228,98,18 "MOST READ"
+a 16,4271,234,60 href=/news/articles/c629krywgw2o
+text 26,4269,18,38 "1"
+text 62,4271,185,59 "Hayden Panettiere: A life of struggles alongside screen success"
+a 16,4367,234,80 href=/news/articles/cx2lll7zvn0o
+text 26,4365,18,38 "2"
+text 62,4367,188,79 "Trump says US to reduce military drills with South Korea after it stayed out of Iran war"
+a 266,4271,234,80 href=/news/articles/clyvj5zdjj2o
+text 276,4269,18,38 "3"
+text 312,4271,177,79 "Burnham exchanged messages with person posing as Trump's chief of staff"
+a 266,4367,234,80 href=/news/articles/ce8lx172kero
+text 276,4365,18,38 "4"
+text 312,4367,180,79 "Post-mortems to take place after five boys killed in crash on wrong side of motorway"
+a 516,4271,234,80 href=/news/articles/c75g0n2wy6lo
+text 525,4269,18,38 "5"
+text 562,4271,173,79 "In pictures: Hayden Panettiere's life and career, from child actor to Scream star"
+a 516,4367,234,80 href=/news/articles/c77gg5vn44yo
+text 525,4365,18,38 "6"
+text 562,4367,172,79 "Trump envoy Kushner meets Netanyahu after Hamas talks on peace plan"
+a 765,4271,234,60 href=/news/articles/cly555430nno
+text 775,4269,18,38 "7"
+text 811,4271,184,59 "Reform proposes ban on most benefits for foreign nationals in UK"
+a 765,4367,234,60 href=/news/articles/c77ggpgrp2do
+text 775,4365,18,38 "8"
+text 811,4367,142,59 "Ferrari's first ever electric car sold for record $40m"
+a 1015,4271,234,80 href=/news/articles/cq5665zgg1po
+text 1025,4269,18,38 "9"
+text 1061,4271,181,79 "Tributes paid to Heroes actress Hayden Panettiere who has died aged 36"
+a 1015,4367,234,60 href=/news/articles/cn7n4lm11vro
+text 1016,4365,37,38 "10"
+text 1061,4367,147,59 "Russia and Ukraine trade more deadly strikes"
+text 9,4522,55,18 "SPORT"
+[pixels] img 325,4565,616,347 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 325,4565,616,347 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/9ba9/live/af032020-9a43-11f1-aed2-8d6da8d75094.png.webp alt=Ayyoub Bouaddi and Enzo Fernandez
+a 9,4635,300,206 href=/sport/football/articles/cd7l9n4qnlno
+text 9,4634,269,97 "Man City move for £85m Bouaddi and still want Fernandez"
+text 9,4744,293,52 "Manchester City are in advanced talks with Lille over a move for Morocco midfielder Ayyoub Bouaddi."
+text 9,4818,66,14 "28 mins ago"
+text 95,4818,46,14 "Football"
+a 957,4565,300,376 href=/sport/football/articles/crrv4092pvlo
+[pixels] img 957,4565,300,169 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 957,4565,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/e69f/live/e03a5720-9a35-11f1-bb53-f521e7e25454.jpg.webp alt=Gianni Infantino the president of FIFA waves as he arrives at the presidential inauguration day event in Colombia
+text 957,4746,290,43 "Scottish FA withdraws support for Fifa president Infantino"
+text 957,4803,291,88 "The Scottish Football Association has lost confidence in Gianni Infantino and will not be voting for his re-election as president of Fifa, chief executive Ian Maxwell has told BBC Sport."
+text 957,4913,50,14 "2 hrs ago"
+text 1028,4913,46,14 "Football"
+a 957,4957,300,187 href=/sport/athletics/articles/clyqqxgrdqqo
+text 957,4957,276,65 "'Are you not entertained?' - Hunt enters stardom with iconic quadruple"
+text 957,5032,292,70 "Amy Hunt asserts herself as Great Britain's new track sensation after winning an unprecedented four gold medals at the European Athletics Championships."
+text 957,5120,50,14 "7 hrs ago"
+text 1028,5120,49,14 "Athletics"
+a 957,5160,300,147 href=/sport/football/articles/cgk451r4z76o
+text 957,5160,287,43 "Spurs' Vicario set to join Juventus on loan"
+text 957,5213,292,52 "Tottenham accept a loan offer from Juventus for goalkeeper Guglielmo Vicario, which includes an option to buy."
+text 957,5283,50,14 "5 hrs ago"
+text 1028,5283,60,14 "Tottenham"
+a 9,4968,300,376 href=/sport/football/articles/clyj7rn31dpo
+[pixels] img 9,4968,300,169 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 9,4968,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/5927/live/800367c0-9a3f-11f1-a291-b542ee92de7c.jpg.webp alt=Manchester United skipper Bruno Fernandes
+text 9,5148,256,43 "Man Utd will reject any bid for Fernandes"
+text 9,5205,292,88 "Manchester United have no intention of selling captain Bruno Fernandes despite Turkish club Galatasaray being prepared to lodge a bid for the 31-year-old later this week."
+text 9,5315,66,14 "23 mins ago"
+text 95,5315,47,14 "Man Utd"
+a 325,4968,300,340 href=/sport/rugby-union/articles/c2dkz3k94dlo
+[pixels] img 325,4968,300,169 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 325,4968,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/9bb2/live/00a21000-965a-11f1-ad58-9debde8148f5.jpg.webp alt=New Zealand haka v South Africa
+text 325,5148,293,43 "Is All Blacks' tour of South Africa a new chapter for rugby union?"
+text 325,5205,296,52 "Is New Zealand's 'Greatest Rivalry' tour of world champions South Africa a signpost to the future of rugby union?"
+text 325,5279,45,14 "1 hr ago"
+text 390,5279,70,14 "Rugby Union"
+a 641,4968,300,340 href=/sport/football/articles/cm2g7mr0d17o
+[pixels] img 641,4968,300,169 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 641,4968,300,169 src=https://ichef.bbci.co.uk/news/480/cpsprodpb/03d4/live/72236b20-9a24-11f1-bf12-b5882ef8968b.jpg.webp alt=Yael Trepy claps at the end of a game
+text 641,5148,275,43 "Cagliari's Trepy in intensive care after reported pool incident"
+text 641,5205,284,52 "Cagliari striker Yael Trepy is being treated in intensive care after an incident in Sardinia."
+text 641,5279,50,14 "4 hrs ago"
+text 712,5279,46,14 "Football"
+a 425,5732,832,468 href=https://cloud.email.bbc.com/bbcnewsignup2?&at_bbc_team=studios&at_medium=display&at_objective=acquisition&at_ptr_type=&at_ptr_name=bbc.comhp&at_format=Module&at_link_origin=intlfront&at_campaign=newsbriefing&at_campaign_type=owned
+[pixels] img 425,5732,832,468 src=https://static.files.bbci.co.uk/bbcdotcom/web/20260729-174851-148577b706-web-3.17.0-2/grey-placeholder.png aria-label=image unavailable
+[pixels] img 425,5732,832,468 src=https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4234/live/ccb11760-566c-11f0-9074-8989d8c97d87.png.webp alt=A collage of images and illustrations
+text 25,5887,324,33 "Sign up to News Briefing"
+text 25,5933,379,52 "News and expert analysis for every schedule. Get morning and evening editions of our flagship newsletter in your inbox."
+text 39,6017,70,19 "See more"
+a 16,6337,105,30 href=/
+a 16,6397,39,16 href=https://www.bbc.com/
+text 16,6397,39,16 "Home"
+a 71,6397,36,16 href=/news
+text 71,6397,36,16 "News"
+a 123,6397,37,16 href=/sport
+text 123,6397,37,16 "Sport"
+a 176,6397,57,16 href=/business
+text 176,6397,57,16 "Business"
+a 249,6397,76,16 href=/technology
+text 249,6397,76,16 "Technology"
+a 341,6397,44,16 href=/health
+text 341,6397,44,16 "Health"
+a 402,6397,49,16 href=/culture
+text 402,6397,49,16 "Culture"
+a 466,6397,28,16 href=/arts
+text 466,6397,28,16 "Arts"
+a 511,6397,40,16 href=/travel
+text 511,6397,40,16 "Travel"
+a 567,6397,36,16 href=/future-planet
+text 567,6397,36,16 "Earth"
+a 619,6397,39,16 href=/audio
+text 619,6397,39,16 "Audio"
+a 674,6397,38,16 href=/video
+text 674,6397,38,16 "Video"
+a 728,6397,27,16 href=/live
+text 728,6397,27,16 "Live"
+a 771,6397,56,16 href=https://www.bbc.com/weather
+text 771,6397,56,16 "Weather"
+a 843,6397,65,16 href=https://shop.bbc.com/
+text 843,6397,65,16 "BBC Shop"
+a 924,6397,50,16 href=https://www.britbox.com/?utm_source=bbc.com&utm_medium=referral&utm_campaign=footer
+text 924,6397,50,16 "BritBox"
+button 16,6435,206,44 type=button
+text 28,6449,154,16 "BBC in other languages"
+text 16,6514,114,19 "Follow BBC on:"
+button 170,6512,24,24 aria-label=Follow BBC on x
+button 210,6512,24,24 aria-label=Follow BBC on facebook
+button 250,6512,24,24 aria-label=Follow BBC on instagram
+button 290,6512,24,24 aria-label=Follow BBC on tiktok
+button 330,6512,24,24 aria-label=Follow BBC on linkedin
+button 370,6512,24,24 aria-label=Follow BBC on youtube
+a 16,6554,72,14 href=https://www.bbc.com/pages/terms-of-use
+text 16,6554,72,14 "Terms of Use"
+a 104,6554,107,14 href=https://www.bbc.com/pages/subscription-terms
+text 104,6554,107,14 "Subscription Terms"
+a 227,6554,83,14 href=https://www.bbc.co.uk/aboutthebbc
+text 227,6554,83,14 "About the BBC"
+a 326,6554,76,14 href=https://www.bbc.com/pages/privacy-policy
+text 326,6554,76,14 "Privacy Policy"
+a 419,6554,44,14 href=https://www.bbc.com/usingthebbc/cookies/
+text 419,6554,44,14 "Cookies"
+a 479,6554,98,14 href=https://www.bbc.co.uk/accessibility/
+text 479,6554,98,14 "Accessibility Help"
+a 593,6554,93,14 href=https://www.bbc.co.uk/contact
+text 593,6554,93,14 "Contact the BBC"
+a 702,6554,96,14 href=https://advertising.bbcstudios.com/
+text 702,6554,96,14 "Advertise with us"
+a 813,6554,152,14 href=https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+text 813,6554,152,14 "Do not share or sell my info"
+a 982,6554,124,14 href=https://help.bbc.com/hc/
+text 982,6554,124,14 "BBC.com Help & FAQs"
+a 1122,6554,78,14 href=https://www.bbc.com/pages/content-index
+text 1122,6554,78,14 "Content Index"
+a 16,6583,115,14 href=https://www.bbc.com/future/article/20260128-how-to-make-google-put-trusted-sources-up-top-when-you-search
+text 16,6583,115,14 "Set Preferred Source"
+text 16,6615,559,14 "Copyright 2026 BBC. All rights reserved. The BBC is not responsible for the content of external sites."
+a 575,6615,253,14 href=https://www.bbc.com/editorialguidelines/guidance/links-and-feeds
+text 575,6615,253,14 "Read about our approach to external linking."
+text 145,721,169,41 "Let us know you agree to cookies"
+text 374,722,51,15 "We use"
+a 425,722,49,15 href=https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/
+text 425,722,49,15 "cookies"
+text 474,722,259,15 "to give you the best online experience."
+text 374,738,353,15 "Please let us know if you agree to all of these cookies."
+button 925,722,195,16 type=button id=bbccookies-continue-button
+text 949,720,103,18 "Yes, I agree"
+a 925,746,153,37 href=https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/
+text 925,746,153,37 "No, take me to settings"

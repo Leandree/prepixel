@@ -1,0 +1,45 @@
+frame 100,50,1000,700 "*Untitled"
+filler 100,108,1000,614
+split pane 100,108,1000,614
+filler 100,108,1000,614
+layered pane 100,140,1000,582
+filler 100,140,1000,582
+text 100,140,1000,555 <<The quick brown fox jumps over the lazy dog 0123456789 PX-7Q4K-LINUX-ATSPI>>
+filler 100,140,1000,555
+panel 100,699,1000,23
+combo box 102,699,855,22
+text 104,701,832,18
+button 960,699,24,23
+button 987,699,24,23
+check box 1020,699,24,23
+check box 1047,699,24,23
+check box 1074,699,24,23
+page tab list 100,108,1000,32 "*Untitled"
+page tab 100,108,102,32 "*Untitled"
+menu bar 100,50,1000,19
+menu item 106,50,29,19 "File"
+menu item 141,50,32,19 "Edit"
+menu item 179,50,55,19 "Options"
+menu item 240,50,50,19 "Search"
+menu item 296,50,36,19 "Help"
+tool bar 100,69,1000,39
+button 104,73,32,31 "New"
+button 137,73,32,31 "Open"
+button 170,73,32,31 "Save"
+filler 203,73,6,31
+button 210,73,32,31 "Undo"
+button 243,73,32,31 "Redo"
+button 276,73,32,31 "Reload"
+filler 309,73,6,31
+button 316,73,32,31 "Find"
+button 349,73,32,31 "Replace"
+button 382,73,32,31 "Jump to"
+filler 415,73,6,31
+button 422,73,32,31 "Side-Pane"
+button 455,73,32,31 "Save/Restore Session"
+filler 488,73,6,31
+filler 495,73,601,31
+status bar 100,722,1000,28
+unknown 1083,733,17,17
+label 102,725,326,23 "Encoding: UTF-8   Lines: 1   Sel. Chars: 0   Words:"
+button 434,725,24,23

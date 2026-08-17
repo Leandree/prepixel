@@ -1,0 +1,415 @@
+text 137,-3,43,11 "53 points"
+text 180,-3,17,11 "by"
+a 198,-3,55,11
+text 198,-3,55,11 "FinnLobsien"
+a 256,-3,51,11
+text 256,-3,51,11 "1 hour ago"
+text 309,-3,6,11 "|"
+a 315,-3,20,11
+text 315,-3,20,11 "hide"
+text 335,-3,9,11 "|"
+a 344,-3,64,11
+text 344,-3,64,11 "22 comments"
+text 102,13,21,15 "12."
+a 123,16,14,10 id=up_49324087
+a 137,15,511,15
+text 137,15,511,15 "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing"
+text 648,17,8,13 "("
+a 656,17,92,13
+text 656,17,92,13 "daringfireball.net"
+text 747,17,4,13 ")"
+text 137,32,49,11 "505 points"
+text 186,32,17,11 "by"
+a 204,32,36,11
+text 204,32,36,11 "ropbear"
+a 243,32,61,11
+text 243,32,61,11 "16 hours ago"
+text 307,32,6,11 "|"
+a 314,32,20,11
+text 314,32,20,11 "hide"
+text 334,32,9,11 "|"
+a 343,32,70,11
+text 343,32,70,11 "459 comments"
+text 102,48,21,15 "13."
+a 123,51,14,10 id=up_49327643
+a 137,50,556,15
+text 137,50,556,15 "Show HN: Desktopcolors.com – A museum for solid background colors of classic OS"
+text 693,52,8,13 "("
+a 701,52,100,13
+text 701,52,100,13 "desktopcolors.com"
+text 801,52,4,13 ")"
+text 137,67,43,11 "69 points"
+text 180,67,17,11 "by"
+a 198,67,40,11
+text 198,67,40,11 "vlowrian"
+a 240,67,55,11
+text 240,67,55,11 "6 hours ago"
+text 299,67,6,11 "|"
+a 305,67,20,11
+text 305,67,20,11 "hide"
+text 325,67,9,11 "|"
+a 334,67,64,11
+text 334,67,64,11 "31 comments"
+text 102,83,21,15 "14."
+a 123,86,14,10 id=up_49330456
+a 137,85,476,15
+text 137,85,476,15 "Cialis is an erectile dysfunction drug. Could it also help you live longer?"
+text 613,87,8,13 "("
+a 621,87,38,13
+text 621,87,38,13 "npr.org"
+text 659,87,4,13 ")"
+text 137,102,43,11 "26 points"
+text 180,102,17,11 "by"
+a 198,102,45,11
+text 198,102,45,11 "brandonb"
+a 246,102,73,11
+text 246,102,73,11 "54 minutes ago"
+text 321,102,6,11 "|"
+a 328,102,20,11
+text 328,102,20,11 "hide"
+text 348,102,9,11 "|"
+a 357,102,58,11
+text 357,102,58,11 "7 comments"
+text 102,118,21,15 "15."
+a 123,121,14,10 id=up_49329583
+a 137,120,365,15
+text 137,120,365,15 "Mexico Crackdown on Coastal Development Underway"
+text 502,122,8,13 "("
+a 509,122,121,13
+text 509,122,121,13 "yucatanmagazine.com"
+text 631,122,4,13 ")"
+text 137,137,43,11 "36 points"
+text 180,137,17,11 "by"
+a 198,137,63,11
+text 198,137,63,11 "untiledsource"
+a 264,137,55,11
+text 264,137,55,11 "2 hours ago"
+text 322,137,6,11 "|"
+a 329,137,20,11
+text 329,137,20,11 "hide"
+text 349,137,9,11 "|"
+a 358,137,58,11
+text 358,137,58,11 "6 comments"
+text 102,153,21,15 "16."
+a 123,156,14,10 id=up_49321717
+a 137,155,512,15
+text 137,155,512,15 "A third world engineer responds to “RISC-V: They should have known better”"
+text 649,157,8,13 "("
+a 657,157,94,13
+text 657,157,94,13 "rvembedded.com"
+text 751,157,4,13 ")"
+text 137,172,49,11 "569 points"
+text 186,172,17,11 "by"
+a 204,172,45,11
+text 204,172,45,11 "Narishma"
+a 251,172,61,11
+text 251,172,61,11 "21 hours ago"
+text 316,172,6,11 "|"
+a 322,172,20,11
+text 322,172,20,11 "hide"
+text 342,172,9,11 "|"
+a 351,172,70,11
+text 351,172,70,11 "291 comments"
+text 102,188,21,15 "17."
+a 123,191,14,10 id=up_49323474
+a 137,190,395,15
+text 137,190,395,15 "How I developed an Am29000 C compiler and web browser"
+text 532,192,8,13 "("
+a 540,192,78,13
+text 540,192,78,13 "nanochess.org"
+text 617,192,4,13 ")"
+text 137,207,38,11 "4 points"
+text 174,207,17,11 "by"
+a 192,207,50,11
+text 192,207,50,11 "nanochess"
+a 245,207,51,11
+text 245,207,51,11 "1 hour ago"
+text 298,207,6,11 "|"
+a 304,207,20,11
+text 304,207,20,11 "hide"
+text 324,207,9,11 "|"
+a 333,207,34,11
+text 333,207,34,11 "discuss"
+text 102,223,21,15 "18."
+a 123,226,14,10 id=up_49331033
+a 137,225,205,15
+text 137,225,205,15 "Ask HN: Alternatives to GitHub"
+text 137,242,38,11 "7 points"
+text 174,242,17,11 "by"
+a 192,242,51,11
+text 192,242,51,11 "dhruv3006"
+a 246,242,73,11
+text 246,242,73,11 "20 minutes ago"
+text 322,242,6,11 "|"
+a 328,242,20,11
+text 328,242,20,11 "hide"
+text 348,242,9,11 "|"
+a 357,242,58,11
+text 357,242,58,11 "4 comments"
+text 102,258,21,15 "19."
+a 123,261,14,10 id=up_49326816
+a 137,260,169,15
+text 137,260,169,15 "Linear algebra done right"
+text 306,262,8,13 "("
+a 314,262,47,13
+text 314,262,47,13 "axler.net"
+text 360,262,4,13 ")"
+text 137,277,49,11 "147 points"
+text 186,277,17,11 "by"
+a 204,277,38,11
+text 204,277,38,11 "the-mitr"
+a 245,277,55,11
+text 245,277,55,11 "8 hours ago"
+text 303,277,6,11 "|"
+a 309,277,20,11
+text 309,277,20,11 "hide"
+text 329,277,9,11 "|"
+a 338,277,64,11
+text 338,277,64,11 "56 comments"
+text 102,293,21,15 "20."
+a 123,296,14,10 id=up_49325061
+a 137,295,273,15
+text 137,295,273,15 "Reticulum – Decentralized Mesh Network"
+text 410,297,8,13 "("
+a 418,297,97,13
+text 418,297,97,13 "reticulum.network"
+text 515,297,4,13 ")"
+text 137,312,49,11 "172 points"
+text 186,312,17,11 "by"
+a 204,312,62,11
+text 204,312,62,11 "sudo_cowsay"
+a 268,312,61,11
+text 268,312,61,11 "14 hours ago"
+text 333,312,6,11 "|"
+a 339,312,20,11
+text 339,312,20,11 "hide"
+text 359,312,9,11 "|"
+a 368,312,64,11
+text 368,312,64,11 "59 comments"
+text 102,328,21,15 "21."
+a 123,331,14,10 id=up_49319556
+a 137,330,164,15
+text 137,330,164,15 "Claude: System Prompts"
+text 301,332,8,13 "("
+a 308,332,62,13
+text 308,332,62,13 "claude.com"
+text 370,332,4,13 ")"
+text 137,347,49,11 "715 points"
+text 186,347,17,11 "by"
+a 204,347,20,11
+text 204,347,20,11 "tosh"
+a 227,347,46,11
+text 227,347,46,11 "1 day ago"
+text 276,347,6,11 "|"
+a 282,347,20,11
+text 282,347,20,11 "hide"
+text 302,347,9,11 "|"
+a 311,347,70,11
+text 311,347,70,11 "271 comments"
+text 102,363,21,15 "22."
+a 123,366,14,10 id=up_49325714
+a 137,365,366,15
+text 137,365,366,15 "AGI-64 Brings Sierra Adventures to the Commodore 64"
+text 503,367,8,13 "("
+a 510,367,100,13
+text 510,367,100,13 "meanhamster.com"
+text 610,367,4,13 ")"
+text 137,382,49,11 "113 points"
+text 186,382,17,11 "by"
+a 204,382,36,11
+text 204,382,36,11 "erickhill"
+a 243,382,61,11
+text 243,382,61,11 "12 hours ago"
+text 307,382,6,11 "|"
+a 313,382,20,11
+text 313,382,20,11 "hide"
+text 334,382,9,11 "|"
+a 343,382,64,11
+text 343,382,64,11 "15 comments"
+text 102,398,21,15 "23."
+a 123,401,14,10 id=up_49303380
+a 137,400,385,15
+text 137,400,385,15 "The Mysterious Syndrome Destroying Endurance Athletes"
+text 522,402,8,13 "("
+a 529,402,98,13
+text 529,402,98,13 "outsideonline.com"
+text 627,402,4,13 ")"
+text 137,417,43,11 "61 points"
+text 180,417,17,11 "by"
+a 198,417,26,11
+text 198,417,26,11 "cwwc"
+a 226,417,55,11
+text 226,417,55,11 "7 hours ago"
+text 285,417,6,11 "|"
+a 291,417,20,11
+text 291,417,20,11 "hide"
+text 311,417,9,11 "|"
+a 320,417,64,11
+text 320,417,64,11 "42 comments"
+text 102,433,21,15 "24."
+a 123,436,14,10 id=up_49329430
+a 137,435,531,15
+text 137,435,531,15 "Who Owns Commodore? The Retro PC Brand Still Exists, but a Lot Has Changed"
+text 668,437,8,13 "("
+a 676,437,43,13
+text 676,437,43,13 "bgr.com"
+text 719,437,4,13 ")"
+text 137,452,43,11 "19 points"
+text 180,452,17,11 "by"
+a 198,452,87,11
+text 198,452,87,11 "theanonymousone"
+a 288,452,55,11
+text 288,452,55,11 "2 hours ago"
+text 346,452,6,11 "|"
+a 352,452,20,11
+text 352,452,20,11 "hide"
+text 372,452,9,11 "|"
+a 381,452,53,11
+text 381,452,53,11 "1 comment"
+text 102,468,21,15 "25."
+a 123,471,14,10 id=up_49290545
+a 137,470,577,15
+text 137,470,577,15 "How do I permanently disable random Google Photos popup to backup photos? (2024)"
+text 714,472,8,13 "("
+a 721,472,107,13
+text 721,472,107,13 "support.google.com"
+text 828,472,4,13 ")"
+text 137,487,49,11 "178 points"
+text 186,487,17,11 "by"
+a 204,487,22,11
+text 204,487,22,11 "dt3ft"
+a 229,487,61,11
+text 229,487,61,11 "16 hours ago"
+text 293,487,6,11 "|"
+a 299,487,20,11
+text 299,487,20,11 "hide"
+text 320,487,9,11 "|"
+a 329,487,70,11
+text 329,487,70,11 "123 comments"
+text 102,503,21,15 "26."
+a 123,506,14,10 id=up_49286211
+a 137,505,323,15
+text 137,505,323,15 "Build a Stratum 1 PTP Grandmaster on a Budget"
+text 460,507,8,13 "("
+a 467,507,57,13
+text 467,507,57,13 "opscode.io"
+text 525,507,4,13 ")"
+text 137,522,43,11 "33 points"
+text 180,522,17,11 "by"
+a 198,522,70,11
+text 198,522,70,11 "malcolmfrazier"
+a 271,522,55,11
+text 271,522,55,11 "6 hours ago"
+text 329,522,6,11 "|"
+a 335,522,20,11
+text 335,522,20,11 "hide"
+text 355,522,9,11 "|"
+a 364,522,58,11
+text 364,522,58,11 "8 comments"
+text 102,538,21,15 "27."
+a 123,541,14,10 id=up_49330742
+a 137,540,538,15
+text 137,540,538,15 "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility"
+text 674,542,8,13 "("
+a 682,542,69,13
+text 682,542,69,13 "404media.co"
+text 751,542,4,13 ")"
+text 137,557,43,11 "10 points"
+text 180,557,17,11 "by"
+a 198,557,59,11
+text 198,557,59,11 "amarcheschi"
+a 260,557,73,11
+text 260,557,73,11 "35 minutes ago"
+text 336,557,6,11 "|"
+a 342,557,20,11
+text 342,557,20,11 "hide"
+text 362,557,9,11 "|"
+a 371,557,58,11
+text 371,557,58,11 "8 comments"
+text 102,573,21,15 "28."
+a 123,576,14,10 id=up_49325384
+a 137,575,199,15
+text 137,575,199,15 "Rhombus 1.1 is now available"
+text 336,577,8,13 "("
+a 344,577,81,13
+text 344,577,81,13 "racket-lang.org"
+text 425,577,4,13 ")"
+text 137,592,49,11 "104 points"
+text 186,592,17,11 "by"
+a 204,592,63,11
+text 204,592,63,11 "spdegabrielle"
+a 270,592,61,11
+text 270,592,61,11 "13 hours ago"
+text 334,592,6,11 "|"
+a 340,592,20,11
+text 340,592,20,11 "hide"
+text 360,592,9,11 "|"
+a 369,592,64,11
+text 369,592,64,11 "30 comments"
+text 102,608,21,15 "29."
+a 123,611,14,10 id=up_49288449
+a 137,610,87,15
+text 137,610,87,15 "Gakutensoku"
+text 224,612,8,13 "("
+a 231,612,71,13
+text 231,612,71,13 "wikipedia.org"
+text 303,612,4,13 ")"
+text 137,627,43,11 "54 points"
+text 180,627,17,11 "by"
+a 198,627,45,11
+text 198,627,45,11 "benbreen"
+a 245,627,55,11
+text 245,627,55,11 "9 hours ago"
+text 304,627,6,11 "|"
+a 310,627,20,11
+text 310,627,20,11 "hide"
+text 330,627,9,11 "|"
+a 339,627,64,11
+text 339,627,64,11 "10 comments"
+text 102,643,21,15 "30."
+a 123,646,14,10 id=up_49285096
+a 137,645,343,15
+text 137,645,343,15 "SIMD in the 90s: Programming Intel's Pentium MMX"
+text 480,647,8,13 "("
+a 487,647,65,13
+text 487,647,65,13 "pikuma.com"
+text 553,647,4,13 ")"
+text 137,662,49,11 "134 points"
+text 186,662,17,11 "by"
+a 204,662,31,11
+text 204,662,31,11 "ibobev"
+a 238,662,61,11
+text 238,662,61,11 "19 hours ago"
+text 302,662,6,11 "|"
+a 309,662,20,11
+text 309,662,20,11 "hide"
+text 329,662,9,11 "|"
+a 338,662,64,11
+text 338,662,64,11 "58 comments"
+a 137,688,33,15
+text 137,688,33,15 "More"
+a 450,730,56,13
+text 450,730,56,13 "Guidelines"
+text 506,730,10,13 "|"
+a 516,730,21,13
+text 516,730,21,13 "FAQ"
+text 537,730,10,13 "|"
+a 547,730,24,13
+text 547,730,24,13 "Lists"
+text 572,730,10,13 "|"
+a 582,730,17,13
+text 582,730,17,13 "API"
+text 599,730,10,13 "|"
+a 609,730,44,13
+text 609,730,44,13 "Security"
+text 653,730,10,13 "|"
+a 663,730,29,13
+text 663,730,29,13 "Legal"
+text 692,730,10,13 "|"
+a 702,730,61,13
+text 702,730,61,13 "Apply to YC"
+text 763,730,10,13 "|"
+a 774,730,41,13
+text 774,730,41,13 "Contact"
+text 528,761,55,15 "Search:"
+input 583,758,154,21

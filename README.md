@@ -58,17 +58,24 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
 - **Safety (the production question) — and the campaign's most important negative
-  result — followed by its repair.** Across 65 cells on three OSes, **100% of
-  channels were predictable in advance** from a stack signature. But "never silent"
-  did **not** survive contact with Windows: **3 silent divergences** (FL Studio/
-  Delphi, OBS/Qt6, rekordbox/JUCE), all the same mechanism — *disagreement by
-  omission*. A container node is present, its content is absent, and **nothing
-  declares the region opaque**. All three were then **caught and declared** by a
-  documented router guard (`src/coverage-guard.mjs`: a pixel spot-check on
-  structure-empty regions, plus a self-consistency check that needs no pixels and
-  catches "32 tracks declared, 0 rows exposed"). Each cell keeps a `mitigation`
-  record naming what it was found as, so the finding is preserved rather than
-  edited away: **3 found, 3 neutralised, 0 surviving.**
+  result — followed by its repair, and the repair's own limit.** Across 69 cells
+  on three OSes, **100% of channels were predictable in advance** from a stack
+  signature. But "never silent" did **not** survive contact with real apps: **4
+  silent divergences**, all the same mechanism — *disagreement by omission*. A
+  container node is present, its content is absent, and **nothing declares the
+  region opaque**. The three Windows ones (FL Studio/Delphi, OBS/Qt6,
+  rekordbox/JUCE) were then **caught and declared** by a documented router guard
+  (`src/coverage-guard.mjs`: a pixel spot-check on structure-empty regions, plus a
+  self-consistency check that needs no pixels and catches "32 tracks declared, 0
+  rows exposed"); each cell keeps a `mitigation` record naming what it was found
+  as: **3 found, 3 neutralised, 0 surviving on Windows.** Then the Linux desktop
+  round found the 4th — qBittorrent's custom-painted speed graph, the same class
+  in a stock Debian app — and with it the guard's own limit: **as calibrated on
+  the densely-painted Windows shapes it misses sparse line-art** (content energy
+  0.020 vs threshold 0.03, while the genuinely-empty control reads 0.000 on every
+  metric — a 0.01 threshold or an edge metric closes the gap). "Catchable at
+  runtime" is a property of the guard's *calibration*, not its existence; that
+  cell stays classified silent on purpose.
   The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
   a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
   router computes 0% structural coverage in one walk), whereas named-but-empty panes
@@ -207,18 +214,25 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 65 cells, schema-valid, 100% predictable in advance,
-3 silent divergences found and all 3 neutralised.** Linux 21, macOS 20, Windows 24.
-The three were all Windows
-custom-drawn apps (FL Studio, OBS, rekordbox) and are the campaign's headline
-negative result; the guard that converts each one into an explicit declaration is
-the answer to it. See `campaign/MATRIX.md`, which reports *surviving* and
-*found-then-declared* as two separate numbers, and each cell's `mitigation` record.
+**All three OSes are covered: 69 cells, schema-valid, 100% predictable in advance,
+4 silent divergences found — 3 neutralised, 1 kept as the calibration
+counter-example.** Linux 25, macOS 20, Windows 24. The Windows three (FL Studio,
+OBS, rekordbox) are neutralised by the coverage-guard mitigation run on the live
+apps, each cell carrying its `mitigation` record. The Linux one (qBittorrent's
+custom-painted speed graph, found in the 2026-08-17 desktop round) is deliberately
+left classified silent: the shipped guard calibration misses its sparse line-art
+(energy 0.020 < threshold 0.03, empty control at 0.000 on every metric — see
+`campaign/results/linux-qt6-qbittorrent-accessibility-api.json` and the
+recalibration FYI in `campaign/results/linux-agent-returns.md`). See
+`campaign/MATRIX.md`, which reports *surviving* and *found-then-declared* as two
+separate numbers.
 
 The real-web battery has now been run on all three OSes and the result is
-essentially OS-invariant (macOS 0.98x, Windows 0.99x on the ratio of totals) —
-unsurprising, since all three drive the same Chromium, but worth having measured
-rather than assumed.
+essentially OS-invariant (macOS 0.98x, Linux 1.00x, Windows 0.99x on the ratio of
+totals) — unsurprising, since all three drive the same Chromium, but worth having
+measured rather than assumed. The Linux desktop round also exercised AT-SPI in
+session on GTK3 and Qt6 (the old headless `blocked` was a sandbox artifact) and
+closed the native blind click end-to-end on three stacks.
 
 Still open: Tier F toolkits (Qt/Java/Flutter) on macOS, Zoom's in-meeting surfaces,
 and a live specimen for the layered-window occlusion rule on Windows (the rule is

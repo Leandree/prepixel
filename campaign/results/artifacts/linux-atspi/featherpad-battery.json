@@ -1,0 +1,95 @@
+{
+ "app_name": "FeatherPad",
+ "toolkit": "Qt",
+ "window_extents": [
+  100,
+  50,
+  1000,
+  700
+ ],
+ "walk_ms": 158,
+ "n_nodes": 167,
+ "n_lines_showing": 45,
+ "view_bytes": 1321,
+ "view_tokens": 331,
+ "screenshot_tokens": 1365,
+ "t1_readback": "The quick brown fox jumps over the lazy dog 0123456789 PX-7Q4K-LINUX-ATSPI",
+ "t1_exact": true,
+ "t3_unique_seen": true,
+ "text_node_extents": [
+  100,
+  140,
+  1000,
+  555
+ ],
+ "t4_idle_events": 0,
+ "t4_typed_events": 18,
+ "t4_event_sample": [
+  {
+   "t": 1786977126.059229,
+   "type": "object:text-changed:insert",
+   "data": " ",
+   "detail": [
+    74,
+    1
+   ]
+  },
+  {
+   "t": 1786977126.0697098,
+   "type": "object:text-changed:insert",
+   "data": "t",
+   "detail": [
+    75,
+    1
+   ]
+  },
+  {
+   "t": 1786977126.0902483,
+   "type": "object:text-changed:insert",
+   "data": "i",
+   "detail": [
+    76,
+    1
+   ]
+  },
+  {
+   "t": 1786977126.110796,
+   "type": "object:text-changed:insert",
+   "data": "c",
+   "detail": [
+    77,
+    1
+   ]
+  }
+ ],
+ "t4_diff_bytes": 378,
+ "t5_target": {
+  "name": "File",
+  "ext": [
+   106,
+   50,
+   29,
+   19
+  ]
+ },
+ "t5_click_at": [
+  120,
+  59
+ ],
+ "t5_menu_items_shown": [
+  "New",
+  "Open",
+  "Recently Modified",
+  "Save/Restore Session",
+  "Side-Pane",
+  "Detach Tab",
+  "Last Active Tab",
+  "Next Tab",
+  "Previous Tab",
+  "Last Tab",
+  "First Tab",
+  "Reload"
+ ],
+ "t5_effect_in_channel": true,
+ "t6_image_nodes": []
+}
