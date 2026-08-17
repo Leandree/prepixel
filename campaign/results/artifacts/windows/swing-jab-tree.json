@@ -1,0 +1,122 @@
+[
+ {
+  "role": "frame",
+  "name": "pipeline-tap Swing probe",
+  "r": [
+   240,
+   180,
+   480,
+   260
+  ],
+  "children": 1,
+  "d": 0
+ },
+ {
+  "role": "root pane",
+  "name": "",
+  "r": [
+   248,
+   211,
+   464,
+   221
+  ],
+  "children": 2,
+  "d": 1
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "r": [
+   -1,
+   -1,
+   -1,
+   -1
+  ],
+  "children": 0,
+  "d": 2
+ },
+ {
+  "role": "layered pane",
+  "name": "",
+  "r": [
+   248,
+   211,
+   464,
+   221
+  ],
+  "children": 1,
+  "d": 2
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "r": [
+   248,
+   211,
+   464,
+   221
+  ],
+  "children": 1,
+  "d": 3
+ },
+ {
+  "role": "panel",
+  "name": "",
+  "r": [
+   248,
+   211,
+   464,
+   221
+  ],
+  "children": 4,
+  "d": 4
+ },
+ {
+  "role": "label",
+  "name": "sentinel-label",
+  "r": [
+   251,
+   211,
+   252,
+   16
+  ],
+  "children": 0,
+  "d": 5
+ },
+ {
+  "role": "text",
+  "name": "probe-field",
+  "r": [
+   248,
+   227,
+   464,
+   163
+  ],
+  "children": 0,
+  "d": 5
+ },
+ {
+  "role": "push button",
+  "name": "Increment",
+  "r": [
+   251,
+   390,
+   92,
+   26
+  ],
+  "children": 0,
+  "d": 5
+ },
+ {
+  "role": "label",
+  "name": "counter-label",
+  "r": [
+   251,
+   416,
+   46,
+   16
+  ],
+  "children": 0,
+  "d": 5
+ }
+]

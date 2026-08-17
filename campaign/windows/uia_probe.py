@@ -178,6 +178,46 @@ def distill(root, include_offscreen=False, max_depth=60, max_nodes=25000,
         lines.append(" ".join(parts))
     return "\n".join(lines), stats
 
+def dedupe_view(view):
+    """Post-pass closing the XAML dual-role inflation (~10% noted on Explorer):
+    (1) drop a line whose (box, name) exactly duplicates an earlier line
+        (menuitem+button pairs, doubled address-bar edits);
+    (2) drop a `text` line whose name equals an earlier CONTROL line's name and
+        whose box is contained in that control's box (redundant caption child).
+    Conservative: never merges different names or disjoint boxes."""
+    out, seen, controls = [], set(), []
+    for line in view.splitlines():
+        parts = line.split(" ", 2)
+        if len(parts) < 2 or "," not in parts[1]:
+            out.append(line); continue
+        role, box = parts[0], parts[1]
+        name = ""
+        if len(parts) > 2 and parts[2].startswith('"'):
+            name = parts[2].split('"')[1]
+        key = (box, name)
+        if name and key in seen:
+            continue                       # rule 1
+        if role == "text" and name:
+            try:
+                x, y, w, h = map(int, box.split(","))
+                redundant = any(n == name and cx <= x and cy <= y and
+                                x + w <= cx + cw and y + h <= cy + ch
+                                for (cx, cy, cw, ch, n) in controls)
+                if redundant:
+                    continue               # rule 2
+            except ValueError:
+                pass
+        if name:
+            seen.add(key)
+            if role != "text":
+                try:
+                    x, y, w, h = map(int, box.split(","))
+                    controls.append((x, y, w, h, name))
+                except ValueError:
+                    pass
+        out.append(line)
+    return "\n".join(out)
+
 # --- screenshots -------------------------------------------------------------
 def screenshot(bbox=None, path=None):
     """Grab physical pixels. bbox=(x,y,w,h) window rect or None for full screen."""

@@ -1,0 +1,71 @@
+{
+ "cell": "windows-scaling-blind-click",
+ "dpi_before": 96,
+ "dpi_at_test": 120,
+ "scale_change_ok": true,
+ "scale_true": 1.25,
+ "dialog_rect_at_125": [
+  400,
+  300,
+  528,
+  628
+ ],
+ "target_line": "tabitem 508,348,160,21 \"Horloges supplémentaires\" [selected=False]",
+ "target_physical": [
+  588,
+  358
+ ],
+ "naive_predicted_landing": [
+  735,
+  448
+ ],
+ "naive": {
+  "handed_physical": [
+   588,
+   358
+  ],
+  "executor_saw": {
+   "asked": [
+    588,
+    358
+   ],
+   "own_getcursorpos": [
+    588,
+    358
+   ],
+   "own_logpixelsx": 96
+  },
+  "landed_physical": [
+   735,
+   448
+  ],
+  "tab_after": "tabitem 508,348,160,21 \"Horloges supplémentaires\" [selected=False]",
+  "hit": false
+ },
+ "calibration": {
+  "asked_logical": [
+   320,
+   320
+  ],
+  "landed_physical": [
+   400,
+   400
+  ],
+  "scale_measured": 1.25,
+  "executor_logpixelsx": 96
+ },
+ "calibrated": {
+  "handed_logical": [
+   470.4,
+   286.4
+  ],
+  "landed_physical": [
+   588,
+   358
+  ],
+  "tab_after": "tabitem 508,348,160,21 \"Horloges supplémentaires\" [selected=True]",
+  "hit": true
+ },
+ "dpi_after_revert": 96,
+ "reverted": true
+}

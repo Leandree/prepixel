@@ -11,7 +11,16 @@
   "channel": "accessibility-api",
   "channel_setup": "UI Automation via Python `uiautomation`. Latch protocol applied (2 walks, 1.5 s apart — count stable at 52; not a lazy tree, a thin one).",
   "verdict": "partial",
-  "failure_class": "silent",
+  "failure_class": "explicit",
+  "mitigation": {
+    "module": "coverage-guard (guard A: per-region pixel spot-check)",
+    "date": "2026-08-17",
+    "found_as": "silent (2026-08-15): named-but-empty panes over a dense painted DAW UI",
+    "trigger_signature": "TFruityLoopsMainForm + all-Pane tree; 5 structure-empty regions >150k px² auto-detected (2x TQuickStringGrid incl. the Recent-projects grid, TDataBrowserTree, TVectorPanel, TQuickControlBar)",
+    "result": "energies 0.085-0.621, 5/5 above threshold -> all five re-emitted as '[pixels] group … [unverified: pixels show content]'; structural coverage measured at 28.6%",
+    "cost": "PrintWindow + guard ~35 ms total; crops 1780 tokens vs 2642 for the full window — sub-full-screenshot even in the worst case (whole app painted)",
+    "evidence": "campaign/results/artifacts/windows/guard-flstudio-region0..4.png"
+  },
   "tests": {
     "t1_read_text": { "pass": false, "detail": "The screen shows dense readable content: tempo '140.000', pattern names, browser tree with dozens of labeled sample folders, mixer channel names. The channel exposes NONE of it — only ~15 region captions ('Browser', 'Channel rack', 'Recent projects', 'Start a new project')." },
     "t2_enumerate": { "pass": false, "detail": "Zero interactive elements exposed. The step-sequencer cells, transport buttons, mixer faders, browser items — all painted, none in the tree. The welcome wizard's 'Recent projects' TQuickStringGrid node had NO children while the screen listed the user's recent projects inside it." },

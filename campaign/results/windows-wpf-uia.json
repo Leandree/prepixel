@@ -1,0 +1,44 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), live in-use machine",
+  "app": "WPF probe app (PresentationFramework hosted via PowerShell/XamlReader — no SDK needed): TextBox, Button+counter, CheckBox, Canvas subtree",
+  "stack": "wpf",
+  "stack_detection": {
+    "method": "loaded-module enumeration",
+    "signature": "PresentationCore.ni.dll + PresentationFramework.ni.dll + wpfgfx_v0400.dll mapped; UIA answers with the full 18-node element tree on first query (WPF is UIA's first-class citizen)",
+    "detected_before_use": true
+  },
+  "channel": "accessibility-api",
+  "channel_setup": "Throwaway WPF window (campaign/windows/wpf_app.ps1) probed with the standard UIA battery. Closes the DEEPENING-PLAN P2 'WPF tier absent' gap.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Sentinel char-exact ('WPF-TAP-SENTINEL café naïve 日本語 END') — after an instructive round-1 harness bug kept as data: the .ps1 was written UTF-8 without BOM, PowerShell 5.1 read it as ANSI, the APP displayed mojibake ('cafÃ©') and UIA reported that mojibake faithfully. The screen lied, the channel didn't — text fidelity is bounded by what the app painted, on every channel." },
+    "t2_enumerate": { "pass": true, "detail": "6 interactive elements with boxes, values, toggle states — matches the window exactly." },
+    "t3_live_value": { "pass": true, "detail": "Typed 'WPF-LIVE-5j1q'; value line updates immediately (ValuePattern native on WPF TextBox)." },
+    "t4_living_screen": { "pass": null, "detail": "Idle: two distills 1 s apart byte-identical (0)." },
+    "t5_blind_action": { "pass": true, "detail": "Blind click on 'Increment' from the view line (guarded); counter flipped to 'count=1' IN CHANNEL, diff 324 B." },
+    "t6_pictorial": { "pass": true, "detail": "Even the Canvas-hosted TextBlock stays a structured text node ('painted-in-canvas' readable) — WPF's retained element tree means nothing is rasterized away until an actual bitmap (which would surface as an ImageControl rect). The anti-FL-Studio: same 'custom drawing surface' concept, fully structured because the framework retains elements." }
+  },
+  "measurements": {
+    "view_bytes": 530,
+    "view_tokens_est": 130,
+    "screenshot_tokens_est": 314,
+    "diff_bytes_per_interaction": 324,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 35,
+    "notes": "The WPF tier verdict is unambiguous: full T-battery green, 130 tok vs 314 shot (2.4x), capture 28-44 ms, everything named/valued out of the box because WPF's UIA provider ships with the framework. Together with WinUI/XAML (Calculator/Notepad/Paint cells) this closes the 'Microsoft-framework' half of the matrix: every first-party UI framework is structurally first-class; the silent risks live exclusively in third-party custom renderers (Qt gaps, Delphi, JUCE lists)."
+  },
+  "runtime_verification": {
+    "method": "window screenshot after the battery vs final channel state",
+    "agreement": "full agreement (sentinel, field value, count=1, checkbox state)"
+  },
+  "permissions_required": [],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/wpf-uia-view.txt",
+    "campaign/results/artifacts/windows/wpf-uia-shot.png",
+    "campaign/windows/wpf_app.ps1"
+  ]
+}

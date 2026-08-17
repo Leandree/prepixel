@@ -2629,6 +2629,66 @@
     },
     {
       "os": "windows",
+      "os_version": "Windows 11 Pro 26100 (measurement over the campaign's saved views)",
+      "app": "Distiller dedupe pass (DEEPENING-PLAN P2 cross-cutting): closing the XAML dual-role inflation, measured before/after on 9 real app views",
+      "stack": "other",
+      "stack_detection": {
+        "method": "n/a (distiller post-pass)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "uia_probe.dedupe_view: (1) drop lines whose (box,name) exactly duplicate an earlier line (menuitem+button dual roles, doubled address-bar edits); (2) drop text lines whose name equals an enclosing control's name and whose box is contained in it (redundant caption children). Conservative — only true duplicates, no merging.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "No content lost: every dropped line is an exact (box,name) duplicate or a caption child repeating its parent control's name in-place."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Interactive enumeration unchanged (controls keep priority; only their echo lines drop)."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "n/a."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": 8637,
+        "screenshot_tokens_est": null,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Aggregate over 9 saved views: 9151 -> 8637 tokens, 5.6% clawback overall — and the distribution is the finding: the savings concentrate exactly where the duplication lives. Chromium-UIA 16.9% (aria dual-exposure), WPF 12.3%, Notepad/WinUI 10.6% (confirming the ~10% estimate from round 1), Explorer 8.8%, Paint 5.9%; near-zero on Qt (0.7%), JUCE (0.4%), Win32 (2.9%) which don't dual-publish. Per-app: notepad 502->449, explorer 1470->1341, chrome-uia 969->805, wpf 130->114, paint 1901->1788, calculator 666->652. Free lunch: pure post-pass, no extra API calls."
+      },
+      "runtime_verification": {
+        "method": "line-level audit of dropped lines on notepad/explorer (each dropped line matched to its surviving twin)",
+        "agreement": "all drops are duplicates; deduped views answer the same questions"
+      },
+      "permissions_required": [],
+      "agent": "claude-code (Fable 5) on leandre-pc",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/windows/uia_probe.py"
+      ]
+    },
+    {
+      "os": "windows",
       "os_version": "Windows 11 Pro 26100, single 1920x1080 panel at 100% scaling (96 DPI) — machine truth, measured not assumed",
       "app": "Display-scaling / image-token two-tier measurement (Windows counterpart of the macOS Retina and Linux DPR cells)",
       "stack": "other",
@@ -2822,7 +2882,16 @@
       "channel": "accessibility-api",
       "channel_setup": "UI Automation via Python `uiautomation`. Latch protocol applied (2 walks, 1.5 s apart — count stable at 52; not a lazy tree, a thin one).",
       "verdict": "partial",
-      "failure_class": "silent",
+      "failure_class": "explicit",
+      "mitigation": {
+        "module": "coverage-guard (guard A: per-region pixel spot-check)",
+        "date": "2026-08-17",
+        "found_as": "silent (2026-08-15): named-but-empty panes over a dense painted DAW UI",
+        "trigger_signature": "TFruityLoopsMainForm + all-Pane tree; 5 structure-empty regions >150k px² auto-detected (2x TQuickStringGrid incl. the Recent-projects grid, TDataBrowserTree, TVectorPanel, TQuickControlBar)",
+        "result": "energies 0.085-0.621, 5/5 above threshold -> all five re-emitted as '[pixels] group … [unverified: pixels show content]'; structural coverage measured at 28.6%",
+        "cost": "PrintWindow + guard ~35 ms total; crops 1780 tokens vs 2642 for the full window — sub-full-screenshot even in the worst case (whole app painted)",
+        "evidence": "campaign/results/artifacts/windows/guard-flstudio-region0..4.png"
+      },
       "tests": {
         "t1_read_text": {
           "pass": false,
@@ -3009,7 +3078,16 @@
       "channel": "accessibility-api",
       "channel_setup": "UI Automation via Python `uiautomation` against Qt's built-in Windows accessibility bridge. No flags needed. Zero clicks on the user's config (one allowlisted exception: answering OBS's own 'Mode sans échec' dialog with 'Lancer normalement' via InvokePattern, after our probe's force-kill caused it).",
       "verdict": "partial",
-      "failure_class": "silent",
+      "failure_class": "explicit",
+      "mitigation": {
+        "module": "coverage-guard (guard A: per-region pixel spot-check)",
+        "date": "2026-08-17",
+        "found_as": "silent (2026-08-15): video preview = anonymous QWidget group, no opacity marker, screen showed painted text",
+        "trigger_signature": "Qt6*.dll mapped + structure-empty region >150k px² in the client area (auto-detected: 'OBSBasicPreview' 421,175,522,351)",
+        "result": "content-energy 0.245 (threshold 0.03) -> region re-emitted as '[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]'",
+        "cost": "PrintWindow 30 ms + guard 2.5 ms; crop 245 tokens vs 1275 for a full-window shot; structural coverage of client area measured at 46.5%",
+        "evidence": "campaign/results/artifacts/windows/guard-obs-region0.png (the crop plainly shows the painted 'On arrive bientôt')"
+      },
       "tests": {
         "t1_read_text": {
           "pass": true,
@@ -3253,7 +3331,16 @@
       "channel": "accessibility-api",
       "channel_setup": "UI Automation via Python `uiautomation`. Zero clicks/keys on the user's library; the Upmgr updater gate was dismissed via InvokePattern ('Fermer') to reach the main window.",
       "verdict": "partial",
-      "failure_class": "silent",
+      "failure_class": "explicit",
+      "mitigation": {
+        "module": "coverage-guard (guard B: view self-consistency — zero pixels needed)",
+        "date": "2026-08-17",
+        "found_as": "silent (2026-08-15): track table with 11 declared headers, 0 rows, against a screen listing 32 tracks",
+        "trigger_signature": "in-view contradiction: a count line ('32 Tracks, 1 hours 51 minutes, 818.4 MB') with 0 row/listitem lines in the same view",
+        "result": "flagged view-only in 0.0 ms: 'text 1521,1012,330,16 \"32 Tracks, …\" [inconsistent: count>0 but 0 rows -> unexposed list, crop]' — the router now knows to crop the table region instead of reading 'empty'",
+        "cost": "free (no pixels); guard A found 0 structure-empty regions here because the table rect contains named headers — the case that shows why the two guards are independent and BOTH required",
+        "evidence": "campaign/results/artifacts/windows/windows-mitigation-report.json"
+      },
       "tests": {
         "t1_read_text": {
           "pass": true,
@@ -3300,6 +3387,139 @@
         "campaign/results/artifacts/windows/rekordbox-uia-view.txt",
         "campaign/results/artifacts/windows/rekordbox-uia-rawnodes.json",
         "campaign/results/artifacts/windows/rekordbox-uia-shot.png"
+      ]
+    },
+    {
+      "os": "windows",
+      "os_version": "Windows 11 Pro 26100, panel temporarily set to 125% (96->120 DPI via SPI_SETLOGICALDPIOVERRIDE), reverted and verified after",
+      "app": "LIVE coordinate-trap demo at 125% scaling (DEEPENING-PLAN P1): one blind click that MISSES under the naive frame and HITS after self-calibration",
+      "stack": "win32-gdi",
+      "stack_detection": {
+        "method": "per-process DPI-awareness audit",
+        "signature": "router process: per-monitor-aware (UIA rects physical); executor process: DPI-unaware (no manifest, no SetProcessDpiAwareness) — its LOGPIXELSX reads 96 while the fresh-aware probe reads 120: the mismatch IS the detectable signature",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Target: the 'Horloges supplémentaires' tab of timedate.cpl (SELECTED state flips in-channel = pixel-free hit verification). Dialog positioned so the predicted x1.25 miss lands harmlessly inside the same dialog (safety precondition asserted before any click; the first run ABORTED on that assertion with a Calculator target — the guard works).",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": null,
+          "detail": "n/a — coordinate-frame cell."
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "THE TRAP, measured: UIA published the tab at physical (588,358); the DPI-unaware executor was handed exactly that, its own GetCursorPos then REPORTED (588,358) — the virtualization lies to the process about its own miss — while the real cursor sat at (735,448) (=x1.25). Tab stayed [selected=False]: MISS. Calibration probe: ask (320,320), land (400,400) -> scale 1.25 measured (not assumed). Corrected hand-off (470.4,286.4) logical -> landed (588,358) physical exactly -> tab flipped [selected=True]: HIT, verified in-channel before any screenshot."
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "n/a."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": null,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Closes DEEPENING-PLAN P1-Windows: the trap is now DEMONSTRATED, not just encoded. Three lessons with numbers: (1) the naive miss is invisible from inside the unaware process (own GetCursorPos echoes the asked coords; LOGPIXELSX reads 96 under 120) — only an independent aware reader sees (735,448); (2) the calibration is one move-and-measure round-trip (~150 ms) and yields the exact scale, mirroring the sandbox click-dpr.html finding: MEASURE the box->input scale, never hardcode /DPR; (3) the safety precondition (predicted-landing-inside-harmless-zone) aborted the first attempt against Calculator — mis-scaled clicks land 25% down-right of target, far enough to leave the window entirely; routers must bound the blast radius before any uncalibrated click. Scaling restored in a finally block: 96 DPI re-verified. Windows-vs-macOS symmetry now complete: same trap class, opposite direction (macOS CDP: device-px boxes fed to CSS-px input, divide; Windows: physical-px boxes fed to a virtualized executor, divide) — one self-calibration probe covers both."
+      },
+      "runtime_verification": {
+        "method": "in-channel selected-state before/after each click + independent aware-process GetCursorPos as ground truth for where clicks actually landed",
+        "agreement": "naive: channel and cursor agree it missed; calibrated: landed exactly on target, state flipped"
+      },
+      "permissions_required": [
+        "ability to change display scaling (SystemParametersInfo, reverted immediately)"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/windows/scaling-trap-log.json",
+        "campaign/results/artifacts/windows/scaling-trap-shot.png",
+        "campaign/windows/unaware_clicker.py",
+        "campaign/windows/run_scaling_trap.py"
+      ]
+    },
+    {
+      "os": "windows",
+      "os_version": "Windows 11 Pro 26100, portable Temurin JDK 21 (no admin), live in-use machine",
+      "app": "Swing probe app — the Java tier (DEEPENING-PLAN P2): UIA shape + coverage-guard + the Java Access Bridge channel end-to-end",
+      "stack": "swing",
+      "stack_detection": {
+        "method": "window class + JAB handshake",
+        "signature": "SunAwtFrame window class (=Java/AWT, a-priori); channel signature: jabswitch enabled + windowsaccessbridge-64.dll present + isJavaWindow(hwnd)=TRUE answers immediately once the JVM runs with the AccessBridge AT loaded",
+        "detected_before_use": true
+      },
+      "channel": "java-access-bridge",
+      "channel_setup": "jabswitch -enable (per-user, no admin) + JVM flag -Djavax.accessibility.assistive_technologies=com.sun.java.accessibility.AccessBridge; client = 60-line ctypes over windowsaccessbridge-64.dll (Windows_run + full message pump + isJavaWindow/getAccessibleContextFromHWND/getAccessibleContextInfo walk).",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Full Swing tree via JAB in 21.7 ms: frame > root/layered panes > panels > label/text/push-button/label, names + roles + rects. Honest caveat from our own probe design: we overrode the labels' accessible NAMES (setAccessibleName('sentinel-label')), which MASKS their text in the name field — the un-renamed button shows its text ('Increment') as expected; deeper text needs the AccessibleText API (not driven here)."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "10 nodes with roles (frame, root pane, layered pane, panel, label, text, push button) and bounding boxes."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "AccessibleText/value APIs not driven in the minimal client — recorded as the known next step, not a channel limit."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Not exercised."
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "JAB exposes boxes (clickable via SendInput) and accessibleAction; not exercised in the minimal client."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "The DUAL story is the cell's value. UIA sees a Swing window as the Heaven shape: 7 nodes of pure window chrome, 4.6% coverage, content invisible. Coverage-guard initially found NO suspect — a frame-only tree offers no container to check, the guard's own blind spot, FOUND AND FIXED here: when coverage ~0 the router synthesizes the whole client area as suspect; energy 0.186 -> '[pixels] group ... client-area [unverified: pixels show content]'. So even before JAB, the blind spot is explicit; with JAB, it becomes structured."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": 52,
+        "screenshot_tokens_est": 167,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": 22,
+        "notes": "The Java tier, measured on both sides. UIA: 52 tok of window chrome, content-blind (the third custom-renderer family after Delphi/JUCE — except Java SHIPS its own structured channel). JAB: detection is a-priori (SunAwtFrame + dll + jabswitch state), the handshake needs two things our first attempt missed and the cell now documents: the JVM must load the AccessBridge AT (the explicit -Djavax.accessibility flag is more reliable than .accessibility.properties), and the client must pump ALL window messages, not just the bridge's private range (first run: isJavaWindow=false from a starved pump). Guard improvement shipped: synthesize_client_suspect for frame-only trees — Heaven-class windows now also get their client area declared instead of merely being 'unambiguously empty'."
+      },
+      "runtime_verification": {
+        "method": "PrintWindow capture vs UIA view (chrome-only confirmed) vs JAB tree (content confirmed); guard crop saved",
+        "agreement": "three-way consistent: pixels show content, UIA honestly shows none, JAB shows the structure the pixels paint"
+      },
+      "permissions_required": [
+        "none (jabswitch is per-user; portable JDK, no admin)"
+      ],
+      "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/windows/swing-uia-view.txt",
+        "campaign/results/artifacts/windows/swing-jab-tree.json",
+        "campaign/results/artifacts/windows/swing-jab-report.json",
+        "campaign/results/artifacts/windows/swing-uia-shot.png",
+        "campaign/results/artifacts/windows/guard-swing-region0.png",
+        "campaign/windows/jab_client.py",
+        "campaign/windows/SwingProbe.java"
       ]
     },
     {
@@ -3549,6 +3769,68 @@
         "campaign/results/artifacts/windows/word-com-doc-text.txt",
         "campaign/results/artifacts/windows/word-uia-view.txt",
         "campaign/results/artifacts/windows/word-com-shot.png"
+      ]
+    },
+    {
+      "os": "windows",
+      "os_version": "Windows 11 Pro 26100, 1920x1080 @ 100% (96 DPI), live in-use machine",
+      "app": "WPF probe app (PresentationFramework hosted via PowerShell/XamlReader — no SDK needed): TextBox, Button+counter, CheckBox, Canvas subtree",
+      "stack": "wpf",
+      "stack_detection": {
+        "method": "loaded-module enumeration",
+        "signature": "PresentationCore.ni.dll + PresentationFramework.ni.dll + wpfgfx_v0400.dll mapped; UIA answers with the full 18-node element tree on first query (WPF is UIA's first-class citizen)",
+        "detected_before_use": true
+      },
+      "channel": "accessibility-api",
+      "channel_setup": "Throwaway WPF window (campaign/windows/wpf_app.ps1) probed with the standard UIA battery. Closes the DEEPENING-PLAN P2 'WPF tier absent' gap.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "Sentinel char-exact ('WPF-TAP-SENTINEL café naïve 日本語 END') — after an instructive round-1 harness bug kept as data: the .ps1 was written UTF-8 without BOM, PowerShell 5.1 read it as ANSI, the APP displayed mojibake ('cafÃ©') and UIA reported that mojibake faithfully. The screen lied, the channel didn't — text fidelity is bounded by what the app painted, on every channel."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "6 interactive elements with boxes, values, toggle states — matches the window exactly."
+        },
+        "t3_live_value": {
+          "pass": true,
+          "detail": "Typed 'WPF-LIVE-5j1q'; value line updates immediately (ValuePattern native on WPF TextBox)."
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "Idle: two distills 1 s apart byte-identical (0)."
+        },
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "Blind click on 'Increment' from the view line (guarded); counter flipped to 'count=1' IN CHANNEL, diff 324 B."
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "Even the Canvas-hosted TextBlock stays a structured text node ('painted-in-canvas' readable) — WPF's retained element tree means nothing is rasterized away until an actual bitmap (which would surface as an ImageControl rect). The anti-FL-Studio: same 'custom drawing surface' concept, fully structured because the framework retains elements."
+        }
+      },
+      "measurements": {
+        "view_bytes": 530,
+        "view_tokens_est": 130,
+        "screenshot_tokens_est": 314,
+        "diff_bytes_per_interaction": 324,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": 35,
+        "notes": "The WPF tier verdict is unambiguous: full T-battery green, 130 tok vs 314 shot (2.4x), capture 28-44 ms, everything named/valued out of the box because WPF's UIA provider ships with the framework. Together with WinUI/XAML (Calculator/Notepad/Paint cells) this closes the 'Microsoft-framework' half of the matrix: every first-party UI framework is structurally first-class; the silent risks live exclusively in third-party custom renderers (Qt gaps, Delphi, JUCE lists)."
+      },
+      "runtime_verification": {
+        "method": "window screenshot after the battery vs final channel state",
+        "agreement": "full agreement (sentinel, field value, count=1, checkbox state)"
+      },
+      "permissions_required": [],
+      "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+      "date": "2026-08-17",
+      "raw_artifacts": [
+        "campaign/results/artifacts/windows/wpf-uia-view.txt",
+        "campaign/results/artifacts/windows/wpf-uia-shot.png",
+        "campaign/windows/wpf_app.ps1"
       ]
     }
   ]

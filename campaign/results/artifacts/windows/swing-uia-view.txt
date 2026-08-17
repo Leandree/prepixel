@@ -1,0 +1,6 @@
+window 240,180,480,260 "pipeline-tap Swing probe"
+menubar 248,188,22,22 "Système"
+menuitem 248,188,22,22 "Système"
+button 573,181,47,30 "Réduire"
+button 620,181,46,30 "Agrandir"
+button 666,181,47,30 "Fermer"

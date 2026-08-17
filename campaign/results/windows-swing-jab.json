@@ -1,0 +1,48 @@
+{
+  "os": "windows",
+  "os_version": "Windows 11 Pro 26100, portable Temurin JDK 21 (no admin), live in-use machine",
+  "app": "Swing probe app — the Java tier (DEEPENING-PLAN P2): UIA shape + coverage-guard + the Java Access Bridge channel end-to-end",
+  "stack": "swing",
+  "stack_detection": {
+    "method": "window class + JAB handshake",
+    "signature": "SunAwtFrame window class (=Java/AWT, a-priori); channel signature: jabswitch enabled + windowsaccessbridge-64.dll present + isJavaWindow(hwnd)=TRUE answers immediately once the JVM runs with the AccessBridge AT loaded",
+    "detected_before_use": true
+  },
+  "channel": "java-access-bridge",
+  "channel_setup": "jabswitch -enable (per-user, no admin) + JVM flag -Djavax.accessibility.assistive_technologies=com.sun.java.accessibility.AccessBridge; client = 60-line ctypes over windowsaccessbridge-64.dll (Windows_run + full message pump + isJavaWindow/getAccessibleContextFromHWND/getAccessibleContextInfo walk).",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Full Swing tree via JAB in 21.7 ms: frame > root/layered panes > panels > label/text/push-button/label, names + roles + rects. Honest caveat from our own probe design: we overrode the labels' accessible NAMES (setAccessibleName('sentinel-label')), which MASKS their text in the name field — the un-renamed button shows its text ('Increment') as expected; deeper text needs the AccessibleText API (not driven here)." },
+    "t2_enumerate": { "pass": true, "detail": "10 nodes with roles (frame, root pane, layered pane, panel, label, text, push button) and bounding boxes." },
+    "t3_live_value": { "pass": null, "detail": "AccessibleText/value APIs not driven in the minimal client — recorded as the known next step, not a channel limit." },
+    "t4_living_screen": { "pass": null, "detail": "Not exercised." },
+    "t5_blind_action": { "pass": null, "detail": "JAB exposes boxes (clickable via SendInput) and accessibleAction; not exercised in the minimal client." },
+    "t6_pictorial": { "pass": true, "detail": "The DUAL story is the cell's value. UIA sees a Swing window as the Heaven shape: 7 nodes of pure window chrome, 4.6% coverage, content invisible. Coverage-guard initially found NO suspect — a frame-only tree offers no container to check, the guard's own blind spot, FOUND AND FIXED here: when coverage ~0 the router synthesizes the whole client area as suspect; energy 0.186 -> '[pixels] group ... client-area [unverified: pixels show content]'. So even before JAB, the blind spot is explicit; with JAB, it becomes structured." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": 52,
+    "screenshot_tokens_est": 167,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": 22,
+    "notes": "The Java tier, measured on both sides. UIA: 52 tok of window chrome, content-blind (the third custom-renderer family after Delphi/JUCE — except Java SHIPS its own structured channel). JAB: detection is a-priori (SunAwtFrame + dll + jabswitch state), the handshake needs two things our first attempt missed and the cell now documents: the JVM must load the AccessBridge AT (the explicit -Djavax.accessibility flag is more reliable than .accessibility.properties), and the client must pump ALL window messages, not just the bridge's private range (first run: isJavaWindow=false from a starved pump). Guard improvement shipped: synthesize_client_suspect for frame-only trees — Heaven-class windows now also get their client area declared instead of merely being 'unambiguously empty'."
+  },
+  "runtime_verification": {
+    "method": "PrintWindow capture vs UIA view (chrome-only confirmed) vs JAB tree (content confirmed); guard crop saved",
+    "agreement": "three-way consistent: pixels show content, UIA honestly shows none, JAB shows the structure the pixels paint"
+  },
+  "permissions_required": ["none (jabswitch is per-user; portable JDK, no admin)"],
+  "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "campaign/results/artifacts/windows/swing-uia-view.txt",
+    "campaign/results/artifacts/windows/swing-jab-tree.json",
+    "campaign/results/artifacts/windows/swing-jab-report.json",
+    "campaign/results/artifacts/windows/swing-uia-shot.png",
+    "campaign/results/artifacts/windows/guard-swing-region0.png",
+    "campaign/windows/jab_client.py",
+    "campaign/windows/SwingProbe.java"
+  ]
+}

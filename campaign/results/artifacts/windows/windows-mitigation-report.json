@@ -1,0 +1,170 @@
+{
+ "obs": {
+  "window_rect": [
+   417,
+   151,
+   1311,
+   729
+  ],
+  "structural_coverage_pct": 46.5,
+  "suspects_checked": 1,
+  "guard_a": [
+   {
+    "label": "OBSBasicPreview",
+    "rect": [
+     421,
+     175,
+     522,
+     351
+    ],
+    "hasReadableContent": false,
+    "node_type": "GroupControl",
+    "depth": 3,
+    "energy": 0.245,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]",
+    "crop_artifact": "guard-obs-region0.png"
+   }
+  ],
+  "guard_b_flags": [],
+  "walk_ms": 291.5,
+  "printwindow_ms": 30.1,
+  "guard_ms": 2.5,
+  "crop_cost_tokens": 245,
+  "full_screenshot_tokens": 1275,
+  "explicit_lines": [
+   "[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]"
+  ]
+ },
+ "flstudio": {
+  "window_rect": [
+   0,
+   0,
+   1920,
+   1032
+  ],
+  "structural_coverage_pct": 28.6,
+  "suspects_checked": 5,
+  "guard_a": [
+   {
+    "label": "TQuickStringGrid",
+    "rect": [
+     965,
+     322,
+     402,
+     374
+    ],
+    "hasReadableContent": false,
+    "node_type": "PaneControl",
+    "depth": 4,
+    "energy": 0.201,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 965,322,402,374 \"TQuickStringGrid\" [unverified: pixels show content]",
+    "crop_artifact": "guard-flstudio-region0.png"
+   },
+   {
+    "label": "TQuickStringGrid",
+    "rect": [
+     545,
+     322,
+     402,
+     421
+    ],
+    "hasReadableContent": false,
+    "node_type": "PaneControl",
+    "depth": 4,
+    "energy": 0.31,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 545,322,402,421 \"TQuickStringGrid\" [unverified: pixels show content]",
+    "crop_artifact": "guard-flstudio-region1.png"
+   },
+   {
+    "label": "TDataBrowserTree",
+    "rect": [
+     13,
+     142,
+     187,
+     860
+    ],
+    "hasReadableContent": false,
+    "node_type": "PaneControl",
+    "depth": 3,
+    "energy": 0.621,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 13,142,187,860 \"TDataBrowserTree\" [unverified: pixels show content]",
+    "crop_artifact": "guard-flstudio-region2.png"
+   },
+   {
+    "label": "TVectorPanel",
+    "rect": [
+     329,
+     494,
+     1499,
+     465
+    ],
+    "hasReadableContent": false,
+    "node_type": "PaneControl",
+    "depth": 3,
+    "energy": 0.085,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 329,494,1499,465 \"TVectorPanel\" [unverified: pixels show content]",
+    "crop_artifact": "guard-flstudio-region3.png"
+   },
+   {
+    "label": "TQuickControlBar",
+    "rect": [
+     0,
+     0,
+     1920,
+     82
+    ],
+    "hasReadableContent": false,
+    "node_type": "PaneControl",
+    "depth": 1,
+    "energy": 0.304,
+    "verdict": "SILENT->declare-opaque",
+    "line": "[pixels] group 0,0,1920,82 \"TQuickControlBar\" [unverified: pixels show content]",
+    "crop_artifact": "guard-flstudio-region4.png"
+   }
+  ],
+  "guard_b_flags": [],
+  "walk_ms": 274.9,
+  "printwindow_ms": 40.9,
+  "guard_ms": 15.4,
+  "crop_cost_tokens": 1780,
+  "full_screenshot_tokens": 2642,
+  "explicit_lines": [
+   "[pixels] group 965,322,402,374 \"TQuickStringGrid\" [unverified: pixels show content]",
+   "[pixels] group 545,322,402,421 \"TQuickStringGrid\" [unverified: pixels show content]",
+   "[pixels] group 13,142,187,860 \"TDataBrowserTree\" [unverified: pixels show content]",
+   "[pixels] group 329,494,1499,465 \"TVectorPanel\" [unverified: pixels show content]",
+   "[pixels] group 0,0,1920,82 \"TQuickControlBar\" [unverified: pixels show content]"
+  ]
+ },
+ "rekordbox": {
+  "window_rect": [
+   0,
+   23,
+   1920,
+   1009
+  ],
+  "structural_coverage_pct": 15.1,
+  "suspects_checked": 0,
+  "guard_a": [],
+  "guard_b_flags": [
+   {
+    "claim": "32 Tracks",
+    "rowsExposed": 0,
+    "line": "text 1521,1012,330,16 \"32 Tracks, 1 hours 51 minutes, 818.4 MB\"  [inconsistent: count>0 but 0 rows -> unexposed list, crop]"
+   }
+  ],
+  "walk_ms": 1750.7,
+  "printwindow_ms": 58.7,
+  "guard_ms": 0.0,
+  "crop_cost_tokens": 0,
+  "full_screenshot_tokens": 2584,
+  "explicit_lines": [
+   "text 1521,1012,330,16 \"32 Tracks, 1 hours 51 minutes, 818.4 MB\"  [inconsistent: count>0 but 0 rows -> unexposed list, crop]"
+  ]
+ }
+}
