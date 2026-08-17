@@ -1,0 +1,31 @@
+{
+ "task_id": "030eeff7-b492-4218-b312-701ec99ee0cc",
+ "domain": "chrome",
+ "condition": "A",
+ "model": "claude-code-subagent:sonnet (pilot 2026-08-18)",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 10,
+ "termination": "DONE",
+ "input_tokens": null,
+ "output_tokens": null,
+ "wall_clock_s": 658.5,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(35, 65)",
+  "import pyautogui; pyautogui.click(700, 90); pyautogui.write('chrome://settings/privacy', interval=0.02); pyautogui.press('enter')",
+  "import pyautogui; pyautogui.click(994, 141); pyautogui.write('do not track', interval=0.02)",
+  "import pyautogui; pyautogui.click(1320, 141)",
+  "import pyautogui; pyautogui.click(197, 277)",
+  "import pyautogui; pyautogui.click(994, 141); pyautogui.write('do not track', interval=0.02)",
+  "import pyautogui; pyautogui.click(900, 396)",
+  "import pyautogui; pyautogui.click(1294, 878)",
+  "import pyautogui; pyautogui.click(1195, 704)",
+  "DONE"
+ ]
+}

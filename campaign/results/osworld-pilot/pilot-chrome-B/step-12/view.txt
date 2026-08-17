@@ -1,0 +1,102 @@
+[pixels] icon 1821,969,64,64
+text 1833,1037,40,17 "Home"
+push-button 1802,27,30,35 "Minimise"
+push-button 1842,27,30,35 "Restore"
+push-button 1882,27,38,35 "Close"
+push-button 76,27,28,41 "Search tabs"
+page-tab 98,27,256,41 "Settings – Third-party cookies"
+push-button 312,33,28,28 "Close"
+push-button 348,27,28,41 "New Tab"
+push-button 70,73,39,34 "Back"
+push-button 111,73,34,34 "Forward"
+push-button 147,73,34,34 "Reload"
+push-button 195,78,88,24 "Chrome"
+entry 291,78,1335,24 "Address and search bar"
+push-button 1634,78,24,24 "Bookmark this tab"
+push-button 1679,73,34,34 "You"
+push-button 1718,73,202,34 "New Chrome available"
+document-web 70,114,1850,966 "Settings – Third-party cookies"
+text 137,129,183,26 "Settings"
+text 137,129,85,26 "Settings"
+entry 683,130,652,24 "Search settings"
+menu 70,178,250,634 "You and Google"
+[pixels] image 94,188,20,20
+menu-item 71,218,247,40 "Autofill and passwords"
+[pixels] image 94,228,20,20
+menu-item 71,258,247,40 "Privacy and security"
+[pixels] image 94,268,20,20
+menu-item 71,298,247,40 "Performance"
+[pixels] image 94,308,20,20
+menu-item 71,338,247,40 "Appearance"
+[pixels] image 94,348,20,20
+menu-item 71,378,247,40 "Search engine"
+[pixels] image 94,388,20,20
+menu-item 71,418,247,40 "Default browser"
+[pixels] image 94,428,20,20
+menu-item 71,458,247,40 "On start-up"
+[pixels] image 94,468,20,20
+menu-item 71,515,247,40 "Languages"
+[pixels] image 94,525,20,20
+menu-item 71,555,247,40 "Downloads"
+[pixels] image 94,565,20,20
+menu-item 71,595,247,40 "Accessibility"
+[pixels] image 94,605,20,20
+menu-item 71,635,247,40 "System"
+[pixels] image 94,645,20,20
+menu-item 71,675,247,40 "Reset settings"
+[pixels] image 94,685,20,20
+menu-item 71,732,247,40 "Extensions"
+[pixels] image 94,742,20,20
+menu-item 71,772,247,40 "About Chrome"
+[pixels] image 94,782,20,20
+text 647,170,681,1045 "No sites added"
+push-button 657,182,33,32 "Third-party cookies sub-page back button"
+text 699,187,369,21 "Third-party cookies"
+text 699,189,124,17 "Third-party cookies"
+push-button 1083,182,33,32 "Learn more about: Third-party cookies"
+[pixels] image 1127,190,17,16
+text 1147,186,161,24 "Search"
+entry 1147,184,161,24 "Search"
+text 647,468,681,49 "Manage the types of information that sites can use to track you as you browse."
+text 667,486,461,15 "Manage the types of information that sites can use to track you as you browse."
+radio-button 667,532,17,17 "Allow third-party cookies"
+push-button 1279,522,37,37 "More about allowing third-party cookies"
+radio-button 667,580,17,17 "Block third-party cookies in Incognito mode"
+push-button 1279,571,37,37 "More about blocking third-party cookies in Incognito mode"
+[pixels] image 703,635,21,21
+text 723,625,585,41 "Sites can use cookies to improve your browsing experience, for example to keep you signed in or to remember items in your shopping basket"
+text 739,627,561,36 "Sites can use cookies to improve your browsing experience, for example to keep you signed in or to remember items in your shopping basket"
+[pixels] image 703,699,21,21
+text 723,678,585,62 "While in Incognito, sites can't use your cookies to see your browsing activity across sites, even related sites. Your browsing activity isn't used for things like personalising ads. Features on some sites may not work."
+text 739,680,569,57 "While in Incognito, sites can't use your cookies to see your browsing activity across sites, even related sites. Your browsing activity isn't used for things like personalising ads. Features on some sites may not work."
+radio-button 667,769,17,17 "Block third-party cookies"
+push-button 1279,760,37,37 "More about blocking third-party cookies"
+text 647,802,681,45 "Advanced"
+text 667,820,58,16 "Advanced"
+toggle-button 1281,870,27,17 "Send a ‘Do Not Track’ request with your browsing traffic"
+link 1283,930,33,33 "See all site data and permissions"
+text 667,970,641,65 "Sites allowed to use third-party cookies"
+text 667,1004,232,16 "Sites allowed to use third-party cookies"
+text 667,1002,562,105 "Affects the sites listed here. Inserting “[*.]” before a domain name creates an exception for the entire domain. For example, adding “[*.]google.co.uk” means that third-party cookies can also be active for mail.google.co.uk, because it’s part of google.co.uk."
+text 667,1036,546,56 "Affects the sites listed here. Inserting “[*.]” before a domain name creates an exception for the entire domain. For example, adding “[*.]google.co.uk” means that third-party cookies can also be active for mail.google.co.uk, because it’s part of google.co.uk."
+push-button 1240,1042,68,37 "Add site to allowed list"
+text 1262,1052,24,16 "Add"
+toggle-button 0,0,99,27 "Activities"
+menu 99,0,162,27 "Google Chrome"
+menu 906,0,178,27 "Aug 18 03‎∶14"
+menu 1814,0,106,27 "System"
+push-button 0,840,70,8
+push-button 62,33,8,815
+push-button 0,33,70,64 "Google Chrome"
+push-button 0,101,70,64 "Thunderbird Mail"
+push-button 0,169,70,64 "Visual Studio Code"
+push-button 0,237,70,64 "VLC media player"
+push-button 0,305,70,64 "LibreOffice Writer"
+push-button 0,373,70,64 "LibreOffice Calc"
+push-button 0,441,70,64 "LibreOffice Impress"
+push-button 0,509,70,64 "GNU Image Manipulation Program"
+push-button 0,577,70,64 "Files"
+push-button 0,645,70,64 "Ubuntu Software"
+push-button 0,713,70,64 "Help"
+push-button 0,784,70,64 "Trash"
+toggle-button 0,1010,70,70 "Show Applications"

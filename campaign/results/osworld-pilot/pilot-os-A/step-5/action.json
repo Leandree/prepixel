@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.tripleClick(1332, 193); pyautogui.typewrite('132', interval=0.05); pyautogui.press('tab'); pyautogui.tripleClick(1522, 193); pyautogui.typewrite('43', interval=0.05); pyautogui.press('tab')"}

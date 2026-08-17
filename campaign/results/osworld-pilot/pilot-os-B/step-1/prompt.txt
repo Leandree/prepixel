@@ -1,0 +1,53 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I click in terminal: terminal->132x43 to change terminal size but after each reboot terminal size is set to default setting and I have to change it again. Help me set it permanently
+
+STEP 1 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+(none)
+
+The current screen as a structured view (grammar: `type x,y,w,h "content"`;
+`[pixels] ...` lines are DECLARED opaque regions whose content the structure
+cannot read; a line `[pixels] group x,y,w,h "..." [unverified: pixels show
+content]` means the coverage guard detected painted content in a
+structure-empty region — you may request that region's pixels by replying
+{"action": "CROP x,y,w,h"} which costs one step):
+[pixels] icon 1821,969,64,64
+text 1833,1037,40,17 "Home"
+toggle-button 0,0,99,27 "Activities"
+menu 99,0,43,27
+menu 906,0,178,27 "Aug 18 02‎∶31"
+menu 1814,0,106,27 "System"
+push-button 0,840,70,8
+push-button 62,33,8,815
+push-button 0,33,70,64 "Google Chrome"
+push-button 0,101,70,64 "Thunderbird Mail"
+push-button 0,169,70,64 "Visual Studio Code"
+push-button 0,237,70,64 "VLC media player"
+push-button 0,305,70,64 "LibreOffice Writer"
+push-button 0,373,70,64 "LibreOffice Calc"
+push-button 0,441,70,64 "LibreOffice Impress"
+push-button 0,509,70,64 "GNU Image Manipulation Program"
+push-button 0,577,70,64 "Files"
+push-button 0,645,70,64 "Ubuntu Software"
+push-button 0,713,70,64 "Help"
+push-button 0,784,70,64 "Trash"
+toggle-button 0,1010,70,70 "Show Applications"
+
+Previous views are in your action history context (up to 3, oldest first) at:
+(none)
+
+ACTION SPACE — reply by writing the file /tmp/claude-1000/-home-leandre-prepixel/9bba0e20-2c15-49e3-bd6a-3be97e66b3d4/scratchpad/osworld-runs/pilot-os-B/step-1/action.json as JSON:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+
+Rules: exactly one JSON object, no commentary in the file. Coordinates are
+absolute screen pixels. Prefer keyboard shortcuts where reliable. Do not
+guess coordinates you cannot ground in the observation. Write the file with
+the Write tool, then stop.

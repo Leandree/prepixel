@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(700, 90); pyautogui.write('chrome://settings/privacy', interval=0.02); pyautogui.press('enter')"}

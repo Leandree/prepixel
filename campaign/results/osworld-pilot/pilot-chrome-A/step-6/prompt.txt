@@ -1,0 +1,34 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Can you enable the 'Do Not Track' feature in Chrome to enhance my online privacy?
+
+STEP 6 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(35, 65)
+2. import pyautogui; pyautogui.click(700, 90); pyautogui.write('chrome://settings/privacy', interval=0.02); pyautogui.press('enter')
+3. import pyautogui; pyautogui.click(994, 141); pyautogui.write('do not track', interval=0.02)
+4. import pyautogui; pyautogui.click(1320, 141)
+5. import pyautogui; pyautogui.click(197, 277)
+
+The current screen is the screenshot image at:
+/tmp/claude-1000/-home-leandre-prepixel/9bba0e20-2c15-49e3-bd6a-3be97e66b3d4/scratchpad/osworld-runs/pilot-chrome-A/step-6/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/tmp/claude-1000/-home-leandre-prepixel/9bba0e20-2c15-49e3-bd6a-3be97e66b3d4/scratchpad/osworld-runs/pilot-chrome-A/step-3/screenshot.png
+/tmp/claude-1000/-home-leandre-prepixel/9bba0e20-2c15-49e3-bd6a-3be97e66b3d4/scratchpad/osworld-runs/pilot-chrome-A/step-4/screenshot.png
+/tmp/claude-1000/-home-leandre-prepixel/9bba0e20-2c15-49e3-bd6a-3be97e66b3d4/scratchpad/osworld-runs/pilot-chrome-A/step-5/screenshot.png
+
+ACTION SPACE — reply by writing the file /tmp/claude-1000/-home-leandre-prepixel/9bba0e20-2c15-49e3-bd6a-3be97e66b3d4/scratchpad/osworld-runs/pilot-chrome-A/step-6/action.json as JSON:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+
+Rules: exactly one JSON object, no commentary in the file. Coordinates are
+absolute screen pixels. Prefer keyboard shortcuts where reliable. Do not
+guess coordinates you cannot ground in the observation. Write the file with
+the Write tool, then stop.

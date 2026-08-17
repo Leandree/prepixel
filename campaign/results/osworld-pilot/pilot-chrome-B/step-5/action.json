@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.press('down'); time.sleep(0.3); pyautogui.press('enter')"}

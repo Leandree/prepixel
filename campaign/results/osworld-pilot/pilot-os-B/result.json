@@ -1,0 +1,39 @@
+{
+ "task_id": "13584542-872b-42d8-b299-866967b5c3ef",
+ "domain": "os",
+ "condition": "B",
+ "model": "claude-code-subagent:sonnet (pilot 2026-08-18)",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 9,
+ "termination": "DONE",
+ "input_tokens": null,
+ "output_tokens": null,
+ "wall_clock_s": 562.9,
+ "pixel_fallbacks": 0,
+ "guard_hits": 0,
+ "guard_suspects_checked": 13,
+ "act_verdicts": [
+  "CONFIRMED (view changed)",
+  "CONFIRMED (view changed)",
+  "CONFIRMED (view changed)",
+  "CONFIRMED (view changed)",
+  "CONFIRMED (view changed)",
+  "CONFIRMED (view changed)",
+  "CONFIRMED (view changed)",
+  "CONFIRMED (view changed)"
+ ],
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.hotkey('ctrl','alt','t')",
+  "import pyautogui; pyautogui.click(843, 79)",
+  "import pyautogui; pyautogui.click(843, 302)",
+  "import pyautogui; pyautogui.click(995, 296)",
+  "import pyautogui; pyautogui.click(1315, 176); pyautogui.hotkey('ctrl','a'); pyautogui.typewrite('132'); pyautogui.press('tab'); pyautogui.click(1507, 176); pyautogui.hotkey('ctrl','a'); pyautogui.typewrite('43'); pyautogui.press('tab')",
+  "import pyautogui; pyautogui.click(1337, 193); pyautogui.hotkey('ctrl','a'); pyautogui.typewrite('132'); pyautogui.press('tab'); pyautogui.click(1525, 193); pyautogui.hotkey('ctrl','a'); pyautogui.typewrite('43'); pyautogui.press('tab')",
+  "import pyautogui; pyautogui.click(1754, 64)",
+  "import pyautogui; pyautogui.click(1771, 79)",
+  "DONE"
+ ]
+}
