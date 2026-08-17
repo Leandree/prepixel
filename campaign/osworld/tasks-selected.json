@@ -1,0 +1,101 @@
+{
+ "protocol": "OSWORLD-PROTOCOL.md v1 \u00a71",
+ "source": "evaluation_examples/test_all.json @ OSWorld main (cloned 2026-08-17)",
+ "seed": 42,
+ "n_target": 50,
+ "min_per_domain": 3,
+ "domain_sizes": {
+  "chrome": 46,
+  "gimp": 26,
+  "libreoffice_calc": 47,
+  "libreoffice_impress": 47,
+  "libreoffice_writer": 23,
+  "multi_apps": 101,
+  "os": 24,
+  "thunderbird": 15,
+  "vlc": 17
+ },
+ "quotas": {
+  "chrome": 6,
+  "gimp": 4,
+  "libreoffice_calc": 7,
+  "libreoffice_impress": 7,
+  "libreoffice_writer": 3,
+  "multi_apps": 14,
+  "os": 3,
+  "thunderbird": 3,
+  "vlc": 3
+ },
+ "n_selected": 50,
+ "tasks": {
+  "chrome": [
+   "06fe7178-4491-4589-810f-2e2bc9502122",
+   "2ad9387a-65d8-4e33-ad5b-7580065a27ca",
+   "47543840-672a-467d-80df-8f7c3b9788c9",
+   "480bcfea-d68f-4aaa-a0a9-2589ef319381",
+   "6766f2b8-8a72-417f-a9e5-56fcaa735837",
+   "e1e75309-3ddb-4d09-92ec-de869c928143"
+  ],
+  "gimp": [
+   "2e6f678f-472d-4c55-99cc-8e7c5c402a71",
+   "38f48d40-764e-4e77-a7cf-51dfce880291",
+   "e19bd559-633b-4b02-940f-d946248f088e",
+   "f4aec372-4fb0-4df5-a52b-79e0e2a5d6ce"
+  ],
+  "libreoffice_calc": [
+   "0326d92d-d218-48a8-9ca1-981cd6d064c7",
+   "035f41ba-6653-43ab-aa63-c86d449d62e5",
+   "0bf05a7d-b28b-44d2-955a-50b41e24012a",
+   "4de54231-e4b5-49e3-b2ba-61a0bec721c0",
+   "6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5",
+   "7efeb4b1-3d19-4762-b163-63328d66303b",
+   "ecb0df7a-4e8d-4a03-b162-053391d3afaf"
+  ],
+  "libreoffice_impress": [
+   "05dd4c1d-c489-4c85-8389-a7836c4f0567",
+   "3b27600c-3668-4abd-8f84-7bcdebbccbdb",
+   "455d3c66-7dc6-4537-a39a-36d3e9119df7",
+   "4ed5abd0-8b5d-47bd-839f-cacfa15ca37a",
+   "a669ef01-ded5-4099-9ea9-25e99b569840",
+   "af23762e-2bfd-4a1d-aada-20fa8de9ce07",
+   "bf4e9888-f10f-47af-8dba-76413038b73c"
+  ],
+  "libreoffice_writer": [
+   "bb8ccc78-479f-4a2f-a71e-d565e439436b",
+   "e528b65e-1107-4b8c-8988-490e4fece599",
+   "f178a4a9-d090-4b56-bc4c-4b72a61a035d"
+  ],
+  "multi_apps": [
+   "00fa164e-2612-4439-992e-157d019a8436",
+   "26660ad1-6ebb-4f59-8cba-a8432dfe8d38",
+   "36037439-2044-4b50-b9d1-875b5a332143",
+   "3680a5ee-6870-426a-a997-eba929a0d25c",
+   "42f4d1c7-4521-4161-b646-0a8934e36081",
+   "46407397-a7d5-4c6b-92c6-dbe038b1457b",
+   "51f5801c-18b3-4f25-b0c3-02f85507a078",
+   "6d72aad6-187a-4392-a4c4-ed87269c51cf",
+   "81c425f5-78f3-4771-afd6-3d2973825947",
+   "82e3c869-49f6-4305-a7ce-f3e64a0618e7",
+   "881deb30-9549-4583-a841-8270c65f2a17",
+   "b52b40a5-ad70-4c53-b5b0-5650a8387052",
+   "df67aebb-fb3a-44fd-b75b-51b6012df509",
+   "f7dfbef3-7697-431c-883a-db8583a4e4f9"
+  ],
+  "os": [
+   "28cc3b7e-b194-4bc9-8353-d04c0f4d56d2",
+   "37887e8c-da15-4192-923c-08fa390a176d",
+   "6f56bf42-85b8-4fbb-8e06-6c44960184ba"
+  ],
+  "thunderbird": [
+   "5203d847-2572-4150-912a-03f062254390",
+   "dfac9ee8-9bc4-4cdc-b465-4a4bfcd2f397",
+   "f201fbc3-44e6-46fc-bcaa-432f9815454c"
+  ],
+  "vlc": [
+   "386dbd0e-0241-4a0a-b6a2-6704fba26b1c",
+   "9195653c-f4aa-453d-aa95-787f6ccfaae9",
+   "bba3381f-b5eb-4439-bd9e-80c22218d5a7"
+  ]
+ },
+ "amendment_rule": "No task may be added or removed after commit. Infra-broken tasks are marked infra_failure with evidence, never replaced."
+}
