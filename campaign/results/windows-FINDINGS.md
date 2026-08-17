@@ -8,7 +8,11 @@ Windows delivered what the other two OSes didn't: **the first genuinely
 silent-class divergences of the campaign** (3), plus a boundary neither macOS
 nor Linux has — the **integrity level (elevation) wall** — and, on the way,
 live demonstrations of nearly every failure mode the briefs warned about. It
-also delivered the study's strongest positive: **Word via COM at 80x**.
+also delivered the study's strongest structured-cost win: **the Word
+document read as 18 tokens** — against a window screenshot whose cost scales
+with size, so ~80–150x depending on window geometry (80x non-maximized, 150x
+maximized per the 2026-08-17 replication). The 18-token invariant is the
+headline; the multiplier is the caveat.
 
 ## The two silent cells — found where the brief said to look
 
@@ -80,9 +84,13 @@ granted to an orphaned request installs nothing, silently**. After any elevated
 step, verify the artifact, never the click.
 
 The object-model family on Windows, now measured end to end:
-- **Word via COM — the Tier C star, and the strongest number in the study**:
-  the document read in **4.6 ms / 18 tokens** against a 1446-token window
-  screenshot (**80x**; Linux UNO was ~65x), writes in 14.5 ms, char-exact
+- **Word via COM — the Tier C star, and the strongest structured-cost win in
+  the study**: the document read in **4.6 ms / 18 tokens** — the invariant to
+  quote — against a window screenshot whose cost scales with window area, so the
+  ratio is geometry-dependent: 1446 tokens / **~80x** at the non-maximized window
+  measured here, **~2706 tokens / ~150x** when the 2026-08-17 replication reopened
+  Word maximized (Linux UNO was ~65x). Read it as "18 tokens vs a window
+  screenshot, ~80–150x by window size". Writes in 14.5 ms, char-exact
   unicode, live in both directions (keyboard-typed text appears in
   `Range().Text`; COM-written text appears in UIA's TextPattern), and inserted
   pictures are **first-class objects** (InlineShape, type+dimensions) rather
@@ -302,7 +310,8 @@ by the measured coverage-guard run against the real apps, at sub-screenshot
 cost. The coordinate trap is demonstrated, not just encoded. Every tier is
 measured or explicitly signatured — including WPF (fully structured) and
 Java (UIA-blind but with its own 21-ms structured channel). The annotation
-counter-example (rekordbox's chrome) and the 80x star case (Word) complete
+counter-example (rekordbox's chrome) and the 18-token star case (Word, ~80–150x
+vs a window screenshot by size) complete
 the picture: where developers or document models speak, structure is
 unbeatable; where they are silent, the router's documented guards convert
 the blind spot to an explicit declaration.**
