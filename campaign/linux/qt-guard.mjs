@@ -1,3 +1,7 @@
+// NOTE (2026-08-17, post-recalibration): this is the HISTORICAL harness whose 0.03
+// single-vote run produced the false negative recorded in the qBittorrent cell.
+// Kept as-run. The current decision path is coverage-guard v2 (judgeCrop: 0.01 +
+// edge vote) — see campaign/linux/recalibration-check.mjs for the corpus run.
 // Run coverage-guard's contentEnergy on the qBittorrent suspect region
 // (SpeedPlotView custom-paint = the OBS mimicry shape) + a genuinely-empty control.
 import sharp from 'sharp';

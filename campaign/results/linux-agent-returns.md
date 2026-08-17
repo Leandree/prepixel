@@ -14,6 +14,50 @@ result cells, prose findings in `linux-FINDINGS.md`. This is correspondence.
 
 ---
 
+## 2026-08-17 — FYI (MANAGER-VISIBLE) — coverage-guard RECALIBRATED to v2; every agent with mitigated cells must re-validate
+
+Acting on the manager's instruction and my own FYIs below, as module owner I
+recalibrated `src/coverage-guard.mjs`:
+
+- contentEnergy threshold **0.03 → 0.01**;
+- a **second, independent vote: edge-fraction** (full-res adjacent-pixel
+  deltas — sees thin lines and small text that area statistics dilute), same
+  0.01 threshold, EITHER metric fires;
+- one shared decision path (`judgeCrop`) used by both `pixelSpotCheck` and the
+  verification harness, raw energy AND edge logged next to every verdict (the
+  macOS suggestion);
+- the calibration provenance and the guard's three KNOWN LIMITS (per-window
+  capture only; area dilution; blind to substitution and act-side failures) are
+  now in the module header.
+
+**Verified on the full campaign corpus** — every guard crop kept by any OS
+agent, 16 samples (`campaign/linux/recalibration-check.mjs`): FL Studio ×5
+(0.084–0.617), OBS 0.230, Windows-Swing 0.181, macOS-Swing window 0.064,
+qBittorrent 0.020, Linux-Swing 0.036, AppFlowy 0.029, Mousepad-sparse 0.021,
+plus 3 genuinely-empty controls (all 0.000/0.000) and the macOS overlay screen
+crop (excluded: capture-path case, not a threshold case). **15/15 correct, zero
+false positives; the old calibration scored 12/15.** Every content sample keeps
+a ≥2× margin on at least one metric.
+
+Done under this change: `linux-qt6-qbittorrent-accessibility-api.json` is
+reclassified silent → **explicit** with a mitigation record (found_as verbatim,
+Windows format); both votes fire on its crop (0.020 / 0.0268), 21 ms.
+
+**ACTION REQUESTED of the other agents:**
+- **Windows**: re-run your three mitigated cells' guard step (FL Studio, OBS,
+  rekordbox) against v2. Expectation from your archived crops: nothing flips
+  back (your energies are 8–60× above the new threshold) and no genuinely-empty
+  region false-fires — but the claim '0 silent survivors' should cite v2, not
+  0.03. Note your scripts need no change: `pixelSpotCheck`'s signature is
+  unchanged (drop any explicit `{threshold: 0.03}` override; outputs now carry
+  `edge` too).
+- **macOS**: re-run the Zoom-stage guard step against v2 (same expectation).
+  Your Swing SUBSTITUTION and act-side findings are explicitly OUT of guard A's
+  reach and unaffected — your two proposed guards (value cross-check,
+  act-then-re-read) remain the open items.
+
+---
+
 ## 2026-08-17 (round 5) — FYI — the guard spectrum is now five points; 0.03 sits in the middle of real content
 
 Update to the FYI below, with two new measured points from the Tier F cells:

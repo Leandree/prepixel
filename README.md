@@ -17,12 +17,12 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 > the regions structure can't read (games, video, canvas). The whole point is that
 > the boundary between the two is **knowable in advance** — and the campaign showed
 > that it is *not* automatically declared. Six applications returned a view that
-> disagreed with the screen without saying so; a documented router guard converts
-> four of them into explicit declarations, and the other two bound what that guard
-> can do — one is too sparsely painted for its calibration, the other substitutes a
-> wrong string instead of omitting one. The boundary
-> is predictable; making it **explicit is the router's job, not the OS's** — and
-> that job is not finished.
+> disagreed with the screen without saying so; a documented router guard — once
+> recalibrated on the full cross-OS corpus — converts five of them into explicit
+> declarations, and the survivor bounds what that guard can do: it *substitutes* a
+> wrong string instead of omitting one, which no empty-region check can see. The
+> boundary is predictable; making it **explicit is the router's job, not the
+> OS's** — and the substitution and act-side guards are still to build.
 
 ---
 
@@ -65,7 +65,7 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   result, its repair, and the two places the repair does not reach.** Across 76
   cells on three OSes, **100% of channels were predictable in advance** from a stack
   signature. But "never silent" did **not** survive contact with real apps: **6
-  silent divergences found, 4 neutralised, 2 still standing.**
+  silent divergences found, 5 neutralised, 1 still standing.**
 
   Four share one mechanism, *disagreement by omission* — a container node is
   present, its content is absent, and nothing declares the region opaque: FL Studio/
@@ -79,37 +79,38 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   keeps a `mitigation` record naming what it was found as, so the finding is
   preserved rather than edited away.
 
-  The two survivors matter more than the four repairs, because they bound the
-  repair. **qBittorrent's custom-painted speed graph on Linux is the same omission
-  class, but the guard misses it on calibration**: sparse line-art reads energy
-  0.020 against a 0.03 threshold, where the genuinely-empty control reads 0.000 (a
-  0.01 threshold or an edge metric closes it). **Java Swing on macOS is missed on
-  kind**: it *substitutes* rather than omits — a label carrying an `accessibleName`
-  publishes that name as its value while the painted text appears in **no attribute
-  of any node**, so a counter whose text advances reads as a constant. Guard A only
-  fires where structure is *empty*, and here there is a node with a confident,
-  plausible, wrong string. The same cell found the campaign's first **act-side**
-  silent failure: a button declaring zero actions accepts `AXPress` and returns
+  The fifth omission case — **qBittorrent's custom-painted speed graph on
+  Linux** — earned its keep by first ESCAPING the guard: sparse line-art reads
+  energy 0.020 against the original 0.03 threshold, where every genuinely-empty
+  control reads 0.000. That miss forced a **recalibration on the full cross-OS
+  corpus** (all 16 guard crops kept by the three agents): threshold lowered to
+  0.01 plus an independent **edge-fraction vote** that sees the thin lines and
+  small text area statistics dilute. The recalibrated guard separates every real
+  content sample from every empty on all three OSes — 15/15, zero false
+  positives, where the old calibration scored 12/15 (it also missed AppFlowy's
+  *entire* Flutter login UI at 0.029 and a sparse text window at 0.021) — and
+  qBittorrent's cell is re-emitted explicit with its mitigation record, the miss
+  preserved verbatim inside it.
+
+  The one survivor matters more than the five repairs, because it bounds the
+  repair **in kind rather than degree**. **Java Swing on macOS** *substitutes*
+  rather than omits — a label carrying an `accessibleName` publishes that name as
+  its value while the painted text appears in **no attribute of any node**, so a
+  counter whose text advances reads as a constant. Guard A only fires where
+  structure is *empty*, and here there is a node with a confident, plausible,
+  wrong string. The same cell found the campaign's first **act-side** silent
+  failure: a button declaring zero actions accepts `AXPress` and returns
   **success** while nothing happens.
 
-  So the honest form of the safety claim is not "every blind spot is convertible",
-  it is: **the guard catches omission when it is dense enough to see, does not catch
-  substitution, and does not watch actions at all.** Both survivors stay classified
-  `silent` on purpose, and each cell specifies the concrete extension it needs.
-
-  Round 5 on Linux put numbers on the calibration boundary. The guard's measured
-  content-energy spectrum across three OSes now reads: **0.06–0.07** (FL/OBS,
-  caught comfortably) / **0.036** (a Swing painted panel on Linux — the same
-  omission shape reproduced on a third toolkit — caught by 0.006) / **0.029**
-  (AppFlowy's *entire* Flutter login UI, under the threshold because the page is
-  mostly white) / **0.020** (qBittorrent, missed) / **0.000** (every genuinely-
-  empty control measured). A 0.01 threshold separates all real content from all
-  empties in the campaign's data. And the per-window capture rule the guard
-  depends on now has its X11 implementation (`campaign/linux/grabwin.c`,
-  XComposite manual redirection — works on stock Xvfb, reads content under
-  occlusion like `PrintWindow`), with a measured verdict flip under plain window
-  overlap: screen crop 0.042 vs the window's own surface 0.021, straddling the
-  threshold.
+  So the honest form of the safety claim is: **the guard now catches omission at
+  every ink density the campaign measured, still does not catch substitution, and
+  still does not watch actions.** The survivor stays classified `silent` on
+  purpose, and its cell specifies the two guards it calls for (a value
+  cross-check, and act-then-re-read). The per-window capture rule the guard
+  depends on has its implementation on all three OSes (`PrintWindow` /
+  `CGWindowListCreateImage` / `campaign/linux/grabwin.c` XComposite), with a
+  measured verdict flip under plain window overlap on Linux: screen crop 0.042
+  vs the window's own surface 0.021.
   The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
   a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
   router computes 0% structural coverage in one walk), whereas named-but-empty panes
@@ -249,18 +250,20 @@ valid channel among several the router chooses from.
 ## Status
 
 **All three OSes are covered: 76 cells, schema-valid, 100% predictable in advance,
-6 silent divergences found — 4 neutralised, 2 kept as counter-examples.**
+6 silent divergences found — 5 neutralised, 1 kept as the counter-example.**
 Linux 28, macOS 22, Windows 26.
 
-The four neutralised are custom-drawn or video surfaces (FL Studio, OBS, rekordbox
-on Windows; Zoom's in-meeting stage on macOS), each carrying its `mitigation`
-record. The two survivors are deliberately left classified `silent`, because each
-bounds the guard in a different way and that boundary is the useful result:
-**qBittorrent's speed graph** (Linux) is the right class but too sparse for the
-shipped calibration — energy 0.020 against a 0.03 threshold, with the genuinely
-empty control at 0.000 on every metric — and **Java Swing** (macOS) is the wrong
-class entirely, substituting a plausible wrong string for the painted text and
-faking action success, which no pixel spot-check on an *empty* region can see. See
+The five neutralised are custom-drawn or video surfaces (FL Studio, OBS, rekordbox
+on Windows; Zoom's in-meeting stage on macOS; qBittorrent's speed graph on Linux),
+each carrying its `mitigation` record. qBittorrent is the one that first ESCAPED
+the guard — too sparse for the original 0.03 calibration — and was caught only
+after the guard was recalibrated on the full cross-OS crop corpus (threshold 0.01
++ an edge-fraction second vote; 15/15 separation, zero false positives, vs 12/15
+for the old calibration — see `campaign/linux/recalibration-check.mjs`). The
+survivor is deliberately left classified `silent` because it bounds the guard in
+kind, not degree: **Java Swing** (macOS) substitutes a plausible wrong string for
+the painted text and fakes action success, which no pixel spot-check on an
+*empty* region can see. See
 `campaign/MATRIX.md`, which reports *surviving* and *found-then-declared* as two
 separate numbers, and the recalibration and act-guard proposals in the two
 `*-agent-returns.md` files.
@@ -282,11 +285,15 @@ computable a priori; and the per-window capture rule has its X11 implementation
 (`campaign/linux/grabwin.c`, XComposite; measured verdict flip 0.042 vs 0.021
 across the threshold under plain occlusion).
 
-Still open: the two guard extensions the survivors call for (a lower/edge-based
-energy metric, and an act-side check that re-reads after any action returning
-success); Qt and Flutter on macOS (Java is now done); and a live specimen for the
-layered-window occlusion rule on Windows, where the rule is encoded but the audited
-desktop had no layered window to exercise it.
+Still open: the two guards the substitution survivor calls for (a value
+cross-check against pixels, and an act-side check that re-reads after any action
+returning success — the lower/edge-based energy metric is now DONE, shipped as
+coverage-guard v2); re-validation of the Windows and macOS mitigated cells under
+v2 (requested in `campaign/results/linux-agent-returns.md`; expected no-op, their
+energies are 8–60× above the new threshold); Qt and Flutter on macOS (Java is now
+done); and a live specimen for the layered-window occlusion rule on Windows,
+where the rule is encoded but the audited desktop had no layered window to
+exercise it.
 
 The write-up is a position paper (arXiv cs.HC/cs.AI) + a blog post; project notes
 live in the attached Claude project.
