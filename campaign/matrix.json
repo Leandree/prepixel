@@ -1380,7 +1380,16 @@
       "channel": "accessibility-api",
       "channel_setup": "Same no-root Xvfb environment. Launched with --confirm-legal-notice (fresh profile). Read-only: no torrent added; the only traffic is the client's own DHT bootstrap, which conveniently animates the speed graph with REAL live data.",
       "verdict": "partial",
-      "failure_class": "silent",
+      "failure_class": "explicit",
+      "mitigation": {
+        "module": "coverage-guard (guard A: per-region pixel spot-check) — RECALIBRATED v2: threshold 0.03→0.01 + edge-fraction second vote (either metric fires)",
+        "date": "2026-08-17",
+        "found_as": "silent (2026-08-17): THE HEADLINE, and it is the Windows OBS finding replicated on Linux with a stock Debian app: the speed graph on screen is a live painted chart (axis labels '6,0 Kio/s'..'0,0 Kio/s', two-entry legend, dashed grid, moving DHT-traffic curves — screenshot kept), but its AT-SPI node is `filler [154,313,1038,407] \"\" kids=0` — nameless, childless, no Text interface, no image/canvas role, NOTHING declaring an unreadable region. Under the ORIGINAL 0.03 single-vote calibration the guard MISSED it (energy 0.020) — this cell is what forced the recalibration.",
+        "trigger_signature": "libQt6Gui mapped + structure-empty region >150k px² (nameless kids=0 filler at 154,313,1038,407, no Text/Image interface, inside fully-exposed panel chrome); a-priori class: QGraphicsView/QWidget::paintEvent surface",
+        "result": "recalibrated guard: content-energy 0.020 (>= 0.01) AND edge-fraction 0.0268 (>= 0.01) — both votes fire independently; region re-emitted as '[pixels] group 154,313,1038,407 \"SpeedPlotView\" [unverified: pixels show content]'. Verified against the full campaign corpus (campaign/linux/recalibration-check.mjs): 15/15 correct — every real-content crop on all three OSes flags, every genuinely-empty control (all at 0.000/0.000) stays clean; the old calibration scored 12/15.",
+        "cost": "judgeCrop (energy + edge, full-res) 21 ms on the 1038x407 crop; pixel-fallback crop 564 tokens vs 1365 for a full-viewport shot",
+        "evidence": "campaign/results/artifacts/linux-atspi/guard-crop-graph.png (the crop plainly shows axes, legend and live curves); campaign/linux/recalibration-check.mjs (the 16-crop corpus run)"
+      },
       "tests": {
         "t1_read_text": {
           "pass": true,
@@ -1414,11 +1423,11 @@
         "diff_bytes_per_interaction": 15,
         "idle_cost_bytes": 0,
         "capture_latency_ms": 600,
-        "notes": "MITIGATION TESTED ON THE REAL SUSPECT — AND THE SHIPPED CALIBRATION MISSES IT, WHICH IS THE CELL'S MOST USEFUL NUMBER. coverage-guard contentEnergy on the graph crop = 0.020, UNDER the 0.03 threshold that was calibrated on the Windows shapes (FL Studio 0.07, OBS 0.06 vs genuinely-empty 0.00): as shipped, guard A declares the painted chart 'genuinely-empty' — a false negative. Cause: sparse line-art (thin 1px curves, dashed grid, small axis text on white) leaves only ~2% of pixels off the modal colour, where the Windows panes were densely painted. The margin data says the miss is a THRESHOLD artifact, not a detector limit: the genuinely-empty control (transfer-table body, which structure ALSO declares empty: 'Tous (0)') measures 0.000 on every metric — energy 64x64 0.000, full-res 0.000, edge-fraction 0.000 — while the chart measures 0.020 / 0.025 / 0.0268. Separation is total; threshold 0.01, or an edge-density metric, catches this instance with zero false positives on every sample measured so far in the campaign (Windows 0.06-0.07 and 0.00; here 0.02 and 0.000). The honest generalization for the paper: 'catchable at runtime' is not a property of the guard's existence but of its CALIBRATION, and line-art charts sit in a regime the first calibration never saw. Also note guard B (self-consistency) correctly stays silent here: the sidebar declares counts of 0 and shows 0 rows — consistent."
+        "notes": "MITIGATION TESTED ON THE REAL SUSPECT — AND THE SHIPPED CALIBRATION MISSES IT, WHICH IS THE CELL'S MOST USEFUL NUMBER. coverage-guard contentEnergy on the graph crop = 0.020, UNDER the 0.03 threshold that was calibrated on the Windows shapes (FL Studio 0.07, OBS 0.06 vs genuinely-empty 0.00): as shipped, guard A declares the painted chart 'genuinely-empty' — a false negative. Cause: sparse line-art (thin 1px curves, dashed grid, small axis text on white) leaves only ~2% of pixels off the modal colour, where the Windows panes were densely painted. The margin data says the miss is a THRESHOLD artifact, not a detector limit: the genuinely-empty control (transfer-table body, which structure ALSO declares empty: 'Tous (0)') measures 0.000 on every metric — energy 64x64 0.000, full-res 0.000, edge-fraction 0.000 — while the chart measures 0.020 / 0.025 / 0.0268. Separation is total; threshold 0.01, or an edge-density metric, catches this instance with zero false positives on every sample measured so far in the campaign (Windows 0.06-0.07 and 0.00; here 0.02 and 0.000). The honest generalization for the paper: 'catchable at runtime' is not a property of the guard's existence but of its CALIBRATION, and line-art charts sit in a regime the first calibration never saw. Also note guard B (self-consistency) correctly stays silent here: the sidebar declares counts of 0 and shows 0 rows — consistent. UPDATE 2026-08-17 (manager-approved recalibration, same day): coverage-guard v2 (threshold 0.01 + edge-fraction second vote) NOW CATCHES this region — both metrics fire (0.020 >= 0.01, 0.0268 >= 0.01) — and was verified against the full 16-crop campaign corpus with zero false positives (15/15 vs the old calibration's 12/15). failure_class flips to explicit with the mitigation record; the paragraphs above are preserved verbatim as the finding that forced the recalibration."
       },
       "runtime_verification": {
         "method": "Root-window screenshot captured in the same probe run as the tree walk (qbt-speed-panel.png); the graph region cropped (guard-crop-graph.png) and fed to src/coverage-guard.mjs contentEnergy, plus full-res energy and edge-fraction re-measurements (campaign/linux/guard-metrics.mjs); genuinely-empty control region cropped from the same frame.",
-        "agreement": "Standard widgets: full agreement between view and pixels. The SpeedPlotView region: pixels show a live chart, structure shows an anonymous empty filler, nothing declares the gap — SILENT divergence, confirmed by inspection of both artifacts. The mitigation as shipped does NOT convert it (energy 0.020 < 0.03); recalibrated (0.01 or edge metric) it does."
+        "agreement": "Standard widgets: full agreement between view and pixels. The SpeedPlotView region: pixels show a live chart, structure shows an anonymous empty filler, nothing declares the gap — SILENT divergence at discovery, confirmed by inspection of both artifacts. The mitigation as ORIGINALLY shipped did NOT convert it (energy 0.020 < 0.03); the recalibrated guard (0.01 + edge vote, see mitigation record) does — the region is re-emitted as an explicit [pixels] declaration."
       },
       "permissions_required": [
         "None beyond a session bus. --confirm-legal-notice to skip the first-run dialog; the client's own DHT traffic is the only network activity."
@@ -3701,7 +3710,8 @@
         "trigger_signature": "TFruityLoopsMainForm + all-Pane tree; 5 structure-empty regions >150k px² auto-detected (2x TQuickStringGrid incl. the Recent-projects grid, TDataBrowserTree, TVectorPanel, TQuickControlBar)",
         "result": "energies 0.085-0.621, 5/5 above threshold -> all five re-emitted as '[pixels] group … [unverified: pixels show content]'; structural coverage measured at 28.6%",
         "cost": "PrintWindow + guard ~35 ms total; crops 1780 tokens vs 2642 for the full window — sub-full-screenshot even in the worst case (whole app painted)",
-        "evidence": "campaign/results/artifacts/windows/guard-flstudio-region0..4.png"
+        "evidence": "campaign/results/artifacts/windows/guard-flstudio-region0..4.png",
+        "recalibration_rerun": "2026-08-17, threshold 0.01 + edge-fraction second vote (Linux calibration): 5/5 regions re-flagged, energies 0.085-0.621 / edge-fractions 0.0237-0.1208, BOTH votes positive on every region — verdict unchanged, no flip"
       },
       "tests": {
         "t1_read_text": {
@@ -3740,7 +3750,7 @@
       },
       "runtime_verification": {
         "method": "PrintWindow(PW_RENDERFULLCONTENT) of FL's own surface vs the distilled view and raw node dump",
-        "agreement": "DISAGREEMENT by omission at whole-app scale: screen dense with text/controls, channel offers empty named panes — recorded as the silent class"
+        "agreement": "the channel alone under-reports at whole-app scale (screen dense with text/controls, channel offers empty named panes — found as the silent class on 2026-08-15); with coverage-guard in the loop all five painted regions re-emit as explicit [pixels] declarations, which is why failure_class reads explicit"
       },
       "permissions_required": [],
       "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
@@ -3897,7 +3907,8 @@
         "trigger_signature": "Qt6*.dll mapped + structure-empty region >150k px² in the client area (auto-detected: 'OBSBasicPreview' 421,175,522,351)",
         "result": "content-energy 0.245 (threshold 0.03) -> region re-emitted as '[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]'",
         "cost": "PrintWindow 30 ms + guard 2.5 ms; crop 245 tokens vs 1275 for a full-window shot; structural coverage of client area measured at 46.5%",
-        "evidence": "campaign/results/artifacts/windows/guard-obs-region0.png (the crop plainly shows the painted 'On arrive bientôt')"
+        "evidence": "campaign/results/artifacts/windows/guard-obs-region0.png (the crop plainly shows the painted 'On arrive bientôt')",
+        "recalibration_rerun": "2026-08-17, threshold 0.01 + edge-fraction second vote (Linux calibration): OBSBasicPreview energy 0.245 / edge-fraction 0.0245, BOTH votes positive, margin >2x on the weaker vote — verdict unchanged, no flip"
       },
       "tests": {
         "t1_read_text": {
@@ -3936,7 +3947,7 @@
       },
       "runtime_verification": {
         "method": "PrintWindow capture of OBS's own surface (no foreground needed) compared line-by-line with the view: mixer dB values, dock titles, scene/source lists, and the preview region content",
-        "agreement": "dock semantics: full agreement, value-exact. Preview region: DISAGREEMENT — screen shows text, channel shows an unnamed container with no opacity declaration (the recorded silent class)"
+        "agreement": "dock semantics: full agreement, value-exact. Preview region: the channel alone under-reports (unnamed container over painted text — found as the silent class on 2026-08-15); with coverage-guard in the loop the region re-emits as an explicit [pixels] declaration, which is why failure_class reads explicit"
       },
       "permissions_required": [],
       "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
@@ -4150,7 +4161,8 @@
         "trigger_signature": "in-view contradiction: a count line ('32 Tracks, 1 hours 51 minutes, 818.4 MB') with 0 row/listitem lines in the same view",
         "result": "flagged view-only in 0.0 ms: 'text 1521,1012,330,16 \"32 Tracks, …\" [inconsistent: count>0 but 0 rows -> unexposed list, crop]' — the router now knows to crop the table region instead of reading 'empty'",
         "cost": "free (no pixels); guard A found 0 structure-empty regions here because the table rect contains named headers — the case that shows why the two guards are independent and BOTH required",
-        "evidence": "campaign/results/artifacts/windows/windows-mitigation-report.json"
+        "evidence": "campaign/results/artifacts/windows/windows-mitigation-report.json",
+        "recalibration_rerun": "2026-08-17, threshold 0.01 + edge-fraction second vote (Linux calibration): guard B still catches the count/rows contradiction view-only; guard A still finds 0 structure-empty suspects (the table rect contains named headers) — verdict unchanged, no flip. The headers-without-rows shape remains guard B's case, confirming the two guards' complementarity under the new calibration"
       },
       "tests": {
         "t1_read_text": {
@@ -4189,7 +4201,7 @@
       },
       "runtime_verification": {
         "method": "PrintWindow capture of the main window vs the distilled view and raw node dump; state values (deck titles, BPM, track count) compared against pixels",
-        "agreement": "chrome and states: full agreement, value-exact. Track browser: DISAGREEMENT by omission (headers + '32 Tracks' in channel, zero rows vs 11+ on screen) — recorded as the silent class"
+        "agreement": "chrome and states: full agreement, value-exact. Track browser: the channel alone under-reports (headers + '32 Tracks' in channel, zero rows vs 11+ on screen — found as the silent class on 2026-08-15); the self-consistency guard flags it from the view alone, which is why failure_class reads explicit"
       },
       "permissions_required": [],
       "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
@@ -4409,7 +4421,7 @@
       "tests": {
         "t1_read_text": {
           "pass": true,
-          "detail": "Full Swing tree via JAB in 21.7 ms: frame > root/layered panes > panels > label/text/push-button/label, names + roles + rects. Honest caveat from our own probe design: we overrode the labels' accessible NAMES (setAccessibleName('sentinel-label')), which MASKS their text in the name field — the un-renamed button shows its text ('Increment') as expected; deeper text needs the AccessibleText API (not driven here)."
+          "detail": "ROUND 2 (2026-08-17, probe WITHOUT setAccessibleName overrides — round 1 had masked its own labels): JAB exposes the labels' REAL PAINTED TEXT char-exact including unicode — label 'SWING-TAP-SENTINEL café naïve 日本語 END' (accents+CJK intact), label 'count=0', push button 'Increment' — full tree in 20.7 ms. This answers the cross-OS question macOS raised: where macOS AX substitutes/thins, JAB hands over the painted string as the default accessible name for labels, no developer annotation needed. Honest boundary: JTextField's NAME is empty — field CONTENT lives in the separate AccessibleText API (not driven by this minimal client); Swing's default name covers labels/buttons, not value-bearing fields."
         },
         "t2_enumerate": {
           "pass": true,
@@ -4451,6 +4463,7 @@
       "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
       "date": "2026-08-17",
       "raw_artifacts": [
+        "campaign/results/artifacts/windows/swing-jab-round2.json",
         "campaign/results/artifacts/windows/swing-uia-view.txt",
         "campaign/results/artifacts/windows/swing-jab-tree.json",
         "campaign/results/artifacts/windows/swing-jab-report.json",

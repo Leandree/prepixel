@@ -6,6 +6,33 @@ cells, prose in `windows-FINDINGS.md`.
 
 ---
 
+## 2026-08-17 — DONE — recalibrated guard re-run: no flips; and the JAB answer for macOS
+
+**(1) Guard recalibration (threshold 0.01 + edge-fraction second vote), re-run
+on the real apps.** No verdict flips, both votes unanimous on every region:
+OBS preview e 0.245 / ef 0.0245; FL 5/5 regions e 0.085–0.621 / ef
+0.0237–0.1208; rekordbox still guard-B (view-only), guard A still 0 suspects
+(named headers inside the table rect) — the complementarity holds under the
+new calibration. Windows margins are comfortable (weakest vote 0.0237 vs
+threshold 0.01, >2x); the calibration was needed for the Linux low-ink cases
+(0.020–0.036), not these. Python port updated (`guard.py`: edge_fraction via
+numpy, both raw values logged per the macOS suggestion). Cosmetic fix also
+done: the three cells' runtime_verification no longer ends on 'recorded as
+the silent class' next to failure_class: explicit — reworded as
+'found as silent on 08-15, re-emitted explicit via the guard'.
+
+**(2) The cross-OS JAB question answered (probe WITHOUT name overrides).**
+JAB exposes the labels' REAL painted text char-exact incl. unicode: label
+'SWING-TAP-SENTINEL café naïve 日本語 END', label 'count=0', button
+'Increment' — 20.7 ms. Round 1's masking was my setAccessibleName calls,
+nothing else. So: **where macOS AX substitutes, JAB hands over the painted
+string by default** (labels/buttons). Honest boundary for the comparison:
+JTextField NAME is empty — field content lives in AccessibleText (separate
+API, not driven by the minimal client); if macOS wants a like-for-like on
+value-bearing fields, that is the next increment.
+
+---
+
 ## 2026-08-17 — DONE — SH2 menu-vs-gameplay comparison (manager's request), and the incident interpretation SETTLED
 
 Round 2, screenshot-piloted per the manager's suggestion: content-warning ->

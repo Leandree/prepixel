@@ -1,0 +1,51 @@
+{
+ "isJavaWindow": true,
+ "node_count": 10,
+ "walk_ms": 20.7,
+ "sentinel_as_label_name": true,
+ "counter_as_label_name": true,
+ "button_text": true,
+ "textfield_name": "",
+ "all_names": [
+  [
+   "frame",
+   "pipeline-tap Swing probe 2"
+  ],
+  [
+   "root pane",
+   ""
+  ],
+  [
+   "panel",
+   ""
+  ],
+  [
+   "layered pane",
+   ""
+  ],
+  [
+   "panel",
+   ""
+  ],
+  [
+   "panel",
+   ""
+  ],
+  [
+   "label",
+   "SWING-TAP-SENTINEL café naïve 日本語 END"
+  ],
+  [
+   "text",
+   ""
+  ],
+  [
+   "push button",
+   "Increment"
+  ],
+  [
+   "label",
+   "count=0"
+  ]
+ ]
+}

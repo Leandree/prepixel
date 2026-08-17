@@ -19,7 +19,8 @@
     "trigger_signature": "Qt6*.dll mapped + structure-empty region >150k px² in the client area (auto-detected: 'OBSBasicPreview' 421,175,522,351)",
     "result": "content-energy 0.245 (threshold 0.03) -> region re-emitted as '[pixels] group 421,175,522,351 \"OBSBasicPreview\" [unverified: pixels show content]'",
     "cost": "PrintWindow 30 ms + guard 2.5 ms; crop 245 tokens vs 1275 for a full-window shot; structural coverage of client area measured at 46.5%",
-    "evidence": "campaign/results/artifacts/windows/guard-obs-region0.png (the crop plainly shows the painted 'On arrive bientôt')"
+    "evidence": "campaign/results/artifacts/windows/guard-obs-region0.png (the crop plainly shows the painted 'On arrive bientôt')",
+    "recalibration_rerun": "2026-08-17, threshold 0.01 + edge-fraction second vote (Linux calibration): OBSBasicPreview energy 0.245 / edge-fraction 0.0245, BOTH votes positive, margin >2x on the weaker vote — verdict unchanged, no flip"
   },
   "tests": {
     "t1_read_text": { "pass": true, "detail": "Dock semantics are RICH and exact: mixer channels with live values ('Desktop Audio' -3.2 dB, 'Mic/Aux' -15.0 dB '(actuellement muet)', 'nvidia broadcast' -9.8 dB), scene list ('comming soon' [selected=True] …), sources, transition, controls — every value cross-checked against the pixels." },
@@ -40,7 +41,7 @@
   },
   "runtime_verification": {
     "method": "PrintWindow capture of OBS's own surface (no foreground needed) compared line-by-line with the view: mixer dB values, dock titles, scene/source lists, and the preview region content",
-    "agreement": "dock semantics: full agreement, value-exact. Preview region: DISAGREEMENT — screen shows text, channel shows an unnamed container with no opacity declaration (the recorded silent class)"
+    "agreement": "dock semantics: full agreement, value-exact. Preview region: the channel alone under-reports (unnamed container over painted text — found as the silent class on 2026-08-15); with coverage-guard in the loop the region re-emits as an explicit [pixels] declaration, which is why failure_class reads explicit"
   },
   "permissions_required": [],
   "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",

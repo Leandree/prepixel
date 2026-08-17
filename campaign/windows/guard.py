@@ -25,6 +25,18 @@ def content_energy(img):
     return ink / len(px)
 
 
+def edge_fraction(img):
+    """Second vote per the Linux recalibration (guard-metrics.mjs): fraction of
+    adjacent pixel pairs (horizontal+vertical, full resolution) whose delta
+    exceeds 24 on any channel. Catches low-ink structured content (thin chart
+    lines) that modal-color energy dilutes."""
+    import numpy as np
+    a = np.asarray(img.convert("RGB"), dtype=np.int16)
+    dh = np.abs(a[:, 1:, :] - a[:, :-1, :]).max(axis=2) > 24
+    dv = np.abs(a[1:, :, :] - a[:-1, :, :]).max(axis=2) > 24
+    return float((dh.sum() + dv.sum()) / (dh.size + dv.size))
+
+
 COUNT_RE = re.compile(r"(\d+)\s+(tracks?|items?|results?|rows?|files?|messages?|projects?|élément)", re.I)
 ROW_RE = re.compile(r"^(row|listitem|cell|treeitem|dataitem)\b", re.I)
 
@@ -42,9 +54,16 @@ def self_consistency(view_text):
     return flags
 
 
-def spot_check(window_img, wrect, suspects, threshold=0.03):
+def spot_check(window_img, wrect, suspects, threshold=0.01, edge_threshold=0.01):
     """suspects: [{label, rect:[x,y,w,h] screen coords, hasReadableContent}].
-    Crops each suspect from the PrintWindow image (window-relative) and flags."""
+    Crops each suspect from the PrintWindow image (window-relative) and flags.
+
+    Recalibrated per the Linux agent (2026-08-17): threshold 0.01 (was 0.03 —
+    which missed/near-missed qBittorrent chart 0.020, AppFlowy full UI 0.029,
+    Swing waveform 0.036), plus EDGE-FRACTION as an independent second vote.
+    Both raw values are logged (macOS suggestion), a region is content if
+    EITHER metric crosses its threshold; every genuinely-empty control in the
+    campaign's data measures 0.000 on both."""
     wx, wy = wrect[0], wrect[1]
     out = []
     for s in suspects:
@@ -60,8 +79,11 @@ def spot_check(window_img, wrect, suspects, threshold=0.03):
             continue
         crop = window_img.crop((lx, ly, lx2, ly2))
         e = content_energy(crop)
-        silent = e >= threshold
-        out.append({**s, "energy": round(e, 3), "crop": crop,
+        ef = edge_fraction(crop)
+        silent = e >= threshold or ef >= edge_threshold
+        out.append({**s, "energy": round(e, 3), "edge_fraction": round(ef, 4),
+                    "votes": {"energy": e >= threshold, "edges": ef >= edge_threshold},
+                    "crop": crop,
                     "verdict": "SILENT->declare-opaque" if silent else "genuinely-empty",
                     "line": (f'[pixels] group {x},{y},{w},{h} "{s["label"]}" [unverified: pixels show content]'
                              if silent else

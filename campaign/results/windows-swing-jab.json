@@ -13,7 +13,7 @@
   "verdict": "works",
   "failure_class": "explicit",
   "tests": {
-    "t1_read_text": { "pass": true, "detail": "Full Swing tree via JAB in 21.7 ms: frame > root/layered panes > panels > label/text/push-button/label, names + roles + rects. Honest caveat from our own probe design: we overrode the labels' accessible NAMES (setAccessibleName('sentinel-label')), which MASKS their text in the name field — the un-renamed button shows its text ('Increment') as expected; deeper text needs the AccessibleText API (not driven here)." },
+    "t1_read_text": { "pass": true, "detail": "ROUND 2 (2026-08-17, probe WITHOUT setAccessibleName overrides — round 1 had masked its own labels): JAB exposes the labels' REAL PAINTED TEXT char-exact including unicode — label 'SWING-TAP-SENTINEL café naïve 日本語 END' (accents+CJK intact), label 'count=0', push button 'Increment' — full tree in 20.7 ms. This answers the cross-OS question macOS raised: where macOS AX substitutes/thins, JAB hands over the painted string as the default accessible name for labels, no developer annotation needed. Honest boundary: JTextField's NAME is empty — field CONTENT lives in the separate AccessibleText API (not driven by this minimal client); Swing's default name covers labels/buttons, not value-bearing fields." },
     "t2_enumerate": { "pass": true, "detail": "10 nodes with roles (frame, root pane, layered pane, panel, label, text, push button) and bounding boxes." },
     "t3_live_value": { "pass": null, "detail": "AccessibleText/value APIs not driven in the minimal client — recorded as the known next step, not a channel limit." },
     "t4_living_screen": { "pass": null, "detail": "Not exercised." },
@@ -37,6 +37,7 @@
   "agent": "claude-code (Fable 5) on leandre-pc, live Windows 11 desktop",
   "date": "2026-08-17",
   "raw_artifacts": [
+    "campaign/results/artifacts/windows/swing-jab-round2.json",
     "campaign/results/artifacts/windows/swing-uia-view.txt",
     "campaign/results/artifacts/windows/swing-jab-tree.json",
     "campaign/results/artifacts/windows/swing-jab-report.json",
