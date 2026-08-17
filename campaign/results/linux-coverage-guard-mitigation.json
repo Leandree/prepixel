@@ -1,0 +1,61 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium/CDP + sharp",
+  "app": "MITIGATION: converting silent divergences to explicit (answers Windows FL Studio/OBS/rekordbox)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "n/a (cross-OS router module)",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "src/coverage-guard.mjs: (A) per-region pixel spot-check via content-energy (sharp), (B) view self-consistency. Fed NATIVE-STYLE structure (labeled panes, no content children) mimicking UIA/Qt on FL Studio/OBS; verified on pages/silent-mimicry.html.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t1_read_text": {
+      "pass": true,
+      "detail": "The guard does NOT read hidden content \u2014 it makes the blind spot DECLARED. Guard A: 'Recent projects' pane painting 4 .flp rows -> energy 0.072 -> flagged [pixels] group ... [unverified: pixels show content]; 'Preview' pane painting 'On arrive bient\u00f4t' -> 0.063 -> flagged; genuinely-empty labeled dock -> 0.000 -> NOT flagged (no false positive). Guard B: a 'columnheaders + \"32 Tracks\" + 0 rows' view (the rekordbox shape) flagged inconsistent from the view alone, no pixels. Together they convert all three Windows silent shapes to explicit."
+    },
+    "t2_enumerate": {
+      "pass": true,
+      "detail": "Region-level: suspect = any structure-empty rect; router pairs it with a per-region pixel crop (Windows: PrintWindow PW_RENDERFULLCONTENT; browser/AX/AT-SPI: clip). Threshold 0.03 ink-ratio separated painted (0.06-0.07) from empty (0.00) cleanly here."
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t5_blind_action": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t6_pictorial": {
+      "pass": true,
+      "detail": "This IS the pictorial-blind-spot guarantee generalized to native named-but-empty containers, where the toolkit gives no canvas/img element to declare. The declaration now comes from a pixel spot-check, not from the element type."
+    }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": 1366,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "THE paper-critical mitigation. Cost model: the guard only crops regions structure flags empty (rare), so it adds pixels sub-linearly, not a full screenshot. Turns the campaign message from 'we found 3 silent cells' into 'found AND neutralized by a documented, cross-OS router guard' \u2014 the difference between 'not safe' and 'safe with this guard'. Two guards, independent: pixel spot-check (needs a per-region crop) + self-consistency (view-only, free)."
+  },
+  "runtime_verification": {
+    "method": "content-energy vs known painted/empty regions; self-consistency vs known count/rows",
+    "agreement": "3/3 silent shapes flagged, 1/1 empty control not flagged, 1/1 inconsistency caught"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "src/coverage-guard.mjs",
+    "pages/silent-mimicry.html"
+  ]
+}

@@ -125,6 +125,127 @@
     },
     {
       "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium headless, DPR emulation",
+      "app": "Coordinate-frame trap: calibrate, don't assume (generalizes the macOS Retina miss)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (controlled)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "Button clicked via raw CDP Input.dispatchMouseEvent at the DOMSnapshot box center, at DPR=1 and DPR=2, as-is vs divided-by-DPR.",
+      "verdict": "works",
+      "failure_class": "explicit",
+      "tests": {
+        "t5_blind_action": {
+          "pass": true,
+          "detail": "KEY nuance: in headless Chromium, DOMSnapshot bounds AND Input.dispatchMouseEvent are BOTH CSS pixels — they agree at DPR=1 and DPR=2 (as-is hits, /DPR MISSES). macOS found the opposite (Retina DOMSnapshot device-px vs input CSS-px, so /DPR was the fix). Conclusion for the router: the box-to-input scale is PLATFORM/CONFIG-DEPENDENT and must be CALIBRATED (one probe click on a known element, verify, derive the factor), never hardcoded. A blind '/devicePixelRatio' is correct on macOS-CDP and wrong here."
+        },
+        "t1_read_text": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "n/a"
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": null,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "Closes the 'coordinate trap encoded but not demonstrated' open item from the Windows brief — demonstrated the trap's TWO regimes (agree vs disagree) and the only safe mitigation (self-calibrating click). Windows adds a third regime: UIA physical-px vs a DPI-unaware client's virtualized-px. Same rule: calibrate."
+      },
+      "runtime_verification": {
+        "method": "click result (CLICKED/idle) at both DPRs, both scalings",
+        "agreement": "DPR=2 as-is hits, /DPR misses — frames agree in headless Chromium"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "pages/click-dpr.html"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium/CDP + sharp",
+      "app": "MITIGATION: converting silent divergences to explicit (answers Windows FL Studio/OBS/rekordbox)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a (cross-OS router module)",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "src/coverage-guard.mjs: (A) per-region pixel spot-check via content-energy (sharp), (B) view self-consistency. Fed NATIVE-STYLE structure (labeled panes, no content children) mimicking UIA/Qt on FL Studio/OBS; verified on pages/silent-mimicry.html.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t1_read_text": {
+          "pass": true,
+          "detail": "The guard does NOT read hidden content — it makes the blind spot DECLARED. Guard A: 'Recent projects' pane painting 4 .flp rows -> energy 0.072 -> flagged [pixels] group ... [unverified: pixels show content]; 'Preview' pane painting 'On arrive bientôt' -> 0.063 -> flagged; genuinely-empty labeled dock -> 0.000 -> NOT flagged (no false positive). Guard B: a 'columnheaders + \"32 Tracks\" + 0 rows' view (the rekordbox shape) flagged inconsistent from the view alone, no pixels. Together they convert all three Windows silent shapes to explicit."
+        },
+        "t2_enumerate": {
+          "pass": true,
+          "detail": "Region-level: suspect = any structure-empty rect; router pairs it with a per-region pixel crop (Windows: PrintWindow PW_RENDERFULLCONTENT; browser/AX/AT-SPI: clip). Threshold 0.03 ink-ratio separated painted (0.06-0.07) from empty (0.00) cleanly here."
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t4_living_screen": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": true,
+          "detail": "This IS the pictorial-blind-spot guarantee generalized to native named-but-empty containers, where the toolkit gives no canvas/img element to declare. The declaration now comes from a pixel spot-check, not from the element type."
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": null,
+        "screenshot_tokens_est": 1366,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": null,
+        "capture_latency_ms": null,
+        "notes": "THE paper-critical mitigation. Cost model: the guard only crops regions structure flags empty (rare), so it adds pixels sub-linearly, not a full screenshot. Turns the campaign message from 'we found 3 silent cells' into 'found AND neutralized by a documented, cross-OS router guard' — the difference between 'not safe' and 'safe with this guard'. Two guards, independent: pixel spot-check (needs a per-region crop) + self-consistency (view-only, free)."
+      },
+      "runtime_verification": {
+        "method": "content-energy vs known painted/empty regions; self-consistency vs known count/rows",
+        "agreement": "3/3 silent shapes flagged, 1/1 empty control not flagged, 1/1 inconsistency caught"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "src/coverage-guard.mjs",
+        "pages/silent-mimicry.html"
+      ]
+    },
+    {
+      "os": "linux",
       "os_version": "Ubuntu 24.04, Xvfb :9 1920x1080 + openbox (EWMH)",
       "app": "Whole desktop — 4 concurrent windows, 4 toolkits (Chromium, GTK4, Qt, LibreOffice)",
       "stack": "other",
@@ -189,6 +310,66 @@
         "campaign/desktop/desktop-evidence.png",
         "campaign/desktop/router.py",
         "campaign/desktop/cdp_extract.mjs"
+      ]
+    },
+    {
+      "os": "linux",
+      "os_version": "Ubuntu 24.04, Chromium/CDP",
+      "app": "Diff-streaming session simulation (the per-session efficiency story)",
+      "stack": "chromium",
+      "stack_detection": {
+        "method": "n/a",
+        "signature": "n/a",
+        "detected_before_use": true
+      },
+      "channel": "cdp",
+      "channel_setup": "20-step interactive session (add row / type / status change / idle), send-once-then-deltas structured vs one screenshot per step.",
+      "verdict": "works",
+      "failure_class": "none",
+      "tests": {
+        "t4_living_screen": {
+          "pass": true,
+          "detail": "20-step session: structured send-once+deltas = 626 tokens total vs 28,686 for per-step screenshots = 45.8x cheaper over the session. Per-step deltas: 94 tok (add row), 19 (type), 15 (status flip), 0 (idle). This is the resolution of the real-web ~parity: per single screen structure ties screenshots, but a screenshot pays its full ~1366 EVERY step while structure pays only for what changed and 0 when idle — and its stable identity reuses the prompt cache a per-pixel-changing screenshot cannot. The win is a property of the SESSION, not the screen."
+        },
+        "t1_read_text": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t2_enumerate": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t3_live_value": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t5_blind_action": {
+          "pass": null,
+          "detail": "n/a"
+        },
+        "t6_pictorial": {
+          "pass": null,
+          "detail": "n/a"
+        }
+      },
+      "measurements": {
+        "view_bytes": null,
+        "view_tokens_est": 626,
+        "screenshot_tokens_est": 28686,
+        "diff_bytes_per_interaction": null,
+        "idle_cost_bytes": 0,
+        "capture_latency_ms": null,
+        "notes": "Closes definition-of-done item 5. The single strongest efficiency lever and the honest reframe of the cost claim: 'per-screen parity, per-session 45x'. Screenshots do not amortize; structure does."
+      },
+      "runtime_verification": {
+        "method": "cumulative token accounting over 20 mechanical steps",
+        "agreement": "results/session-sim.json"
+      },
+      "permissions_required": [],
+      "agent": "claude (sandbox Linux)",
+      "date": "2026-08-15",
+      "raw_artifacts": [
+        "results/session-sim.json"
       ]
     },
     {

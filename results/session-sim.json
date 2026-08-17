@@ -1,0 +1,130 @@
+{
+  "rows": [
+    {
+      "step": 0,
+      "struct": 46,
+      "shot": 1366
+    },
+    {
+      "step": 1,
+      "dstruct": 94,
+      "struct": 140,
+      "shot": 2732
+    },
+    {
+      "step": 2,
+      "dstruct": 19,
+      "struct": 159,
+      "shot": 4098
+    },
+    {
+      "step": 3,
+      "dstruct": 15,
+      "struct": 174,
+      "shot": 5464
+    },
+    {
+      "step": 4,
+      "dstruct": 0,
+      "struct": 174,
+      "shot": 6830
+    },
+    {
+      "step": 5,
+      "dstruct": 74,
+      "struct": 248,
+      "shot": 8196
+    },
+    {
+      "step": 6,
+      "dstruct": 23,
+      "struct": 271,
+      "shot": 9562
+    },
+    {
+      "step": 7,
+      "dstruct": 16,
+      "struct": 287,
+      "shot": 10928
+    },
+    {
+      "step": 8,
+      "dstruct": 0,
+      "struct": 287,
+      "shot": 12294
+    },
+    {
+      "step": 9,
+      "dstruct": 74,
+      "struct": 361,
+      "shot": 13660
+    },
+    {
+      "step": 10,
+      "dstruct": 23,
+      "struct": 384,
+      "shot": 15026
+    },
+    {
+      "step": 11,
+      "dstruct": 16,
+      "struct": 400,
+      "shot": 16392
+    },
+    {
+      "step": 12,
+      "dstruct": 0,
+      "struct": 400,
+      "shot": 17758
+    },
+    {
+      "step": 13,
+      "dstruct": 74,
+      "struct": 474,
+      "shot": 19124
+    },
+    {
+      "step": 14,
+      "dstruct": 23,
+      "struct": 497,
+      "shot": 20490
+    },
+    {
+      "step": 15,
+      "dstruct": 16,
+      "struct": 513,
+      "shot": 21856
+    },
+    {
+      "step": 16,
+      "dstruct": 0,
+      "struct": 513,
+      "shot": 23222
+    },
+    {
+      "step": 17,
+      "dstruct": 74,
+      "struct": 587,
+      "shot": 24588
+    },
+    {
+      "step": 18,
+      "dstruct": 23,
+      "struct": 610,
+      "shot": 25954
+    },
+    {
+      "step": 19,
+      "dstruct": 16,
+      "struct": 626,
+      "shot": 27320
+    },
+    {
+      "step": 20,
+      "dstruct": 0,
+      "struct": 626,
+      "shot": 28686
+    }
+  ],
+  "ratio": 45.82428115015974
+}

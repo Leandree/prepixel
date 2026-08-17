@@ -1,0 +1,60 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium headless, DPR emulation",
+  "app": "Coordinate-frame trap: calibrate, don't assume (generalizes the macOS Retina miss)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "n/a (controlled)",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Button clicked via raw CDP Input.dispatchMouseEvent at the DOMSnapshot box center, at DPR=1 and DPR=2, as-is vs divided-by-DPR.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t5_blind_action": {
+      "pass": true,
+      "detail": "KEY nuance: in headless Chromium, DOMSnapshot bounds AND Input.dispatchMouseEvent are BOTH CSS pixels \u2014 they agree at DPR=1 and DPR=2 (as-is hits, /DPR MISSES). macOS found the opposite (Retina DOMSnapshot device-px vs input CSS-px, so /DPR was the fix). Conclusion for the router: the box-to-input scale is PLATFORM/CONFIG-DEPENDENT and must be CALIBRATED (one probe click on a known element, verify, derive the factor), never hardcoded. A blind '/devicePixelRatio' is correct on macOS-CDP and wrong here."
+    },
+    "t1_read_text": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t2_enumerate": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t4_living_screen": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t6_pictorial": {
+      "pass": null,
+      "detail": "n/a"
+    }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": null,
+    "screenshot_tokens_est": null,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": null,
+    "capture_latency_ms": null,
+    "notes": "Closes the 'coordinate trap encoded but not demonstrated' open item from the Windows brief \u2014 demonstrated the trap's TWO regimes (agree vs disagree) and the only safe mitigation (self-calibrating click). Windows adds a third regime: UIA physical-px vs a DPI-unaware client's virtualized-px. Same rule: calibrate."
+  },
+  "runtime_verification": {
+    "method": "click result (CLICKED/idle) at both DPRs, both scalings",
+    "agreement": "DPR=2 as-is hits, /DPR misses \u2014 frames agree in headless Chromium"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "pages/click-dpr.html"
+  ]
+}

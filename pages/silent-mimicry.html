@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Silent mimicry</title>
+<style>body{margin:0;font-family:sans-serif}.pane{position:absolute;border:1px solid #ccc}</style></head>
+<body>
+  <!-- R1: "Recent projects" pane with painted rows (canvas) — mimics FL Studio -->
+  <div class="pane" style="left:20px;top:20px;width:300px;height:200px" aria-label="Recent projects">
+    <canvas id="c1" width="300" height="200"></canvas></div>
+  <!-- R2: "Preview" pane painting text — mimics OBS anonymous preview -->
+  <div class="pane" style="left:340px;top:20px;width:300px;height:200px" aria-label="Preview">
+    <canvas id="c2" width="300" height="200"></canvas></div>
+  <!-- R3: genuinely EMPTY labeled pane (control - must NOT be flagged) -->
+  <div class="pane" style="left:660px;top:20px;width:300px;height:200px" aria-label="Empty dock"></div>
+<script>
+  const a=document.getElementById('c1').getContext('2d');
+  a.fillStyle='#fff';a.fillRect(0,0,300,200);a.fillStyle='#222';a.font='14px monospace';
+  ['track_idea_01.flp','bassline_v3.flp','live_set_final.flp','remix_stems.flp'].forEach((t,i)=>a.fillText(t,10,30+i*28));
+  const b=document.getElementById('c2').getContext('2d');
+  b.fillStyle='#101018';b.fillRect(0,0,300,200);b.fillStyle='#0f0';b.font='bold 20px sans-serif';
+  b.fillText('On arrive bientôt',40,110);
+</script></body></html>

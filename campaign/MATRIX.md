@@ -1,12 +1,15 @@
 # Coverage matrix & predictability (aggregated)
 
-54 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+57 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
 | OS | App | Stack | Channel | Verdict | Failure | View tok | Shot tok | Predictable a priori? |
 |----|-----|-------|---------|---------|---------|---------:|---------:|:---------------------:|
 | linux | Chromium / Chrome DevTools Protocol (covers all Electron apps: VS Code, Slack, Discord, Teams) | chromium | cdp | ✅ works | explicit | 308 | 1,366 | ✅ |
+| linux | Coordinate-frame trap: calibrate, don't assume (generalizes the macOS Retina miss) | chromium | cdp | ✅ works | explicit |  |  | ✅ |
+| linux | MITIGATION: converting silent divergences to explicit (answers Windows FL Studio/OBS/rekordbox) | chromium | cdp | ✅ works | — |  | 1,366 | ✅ |
+| linux | Diff-streaming session simulation (the per-session efficiency story) | chromium | cdp | ✅ works | — | 626 | 28,686 | ✅ |
 | linux | Hard-text battery via the CDP structured channel (mirror of macOS AX hard-text) | chromium | cdp | ✅ works | — |  | 1,366 | ✅ |
 | linux | Adversarial round 2: leak audit of our own hardened distiller (mirror+extension of the macOS self-audit) | chromium | cdp | ✅ works | explicit |  | 1,366 | ✅ |
 | linux | Native OS-level blind click driven by structured coordinates | chromium | cdp | 🟡 partial | blocked |  | 1,366 | ✅ |
@@ -73,7 +76,7 @@ The production-safety question: could a router know the channel in advance, and 
 | com.apple.Safari; AXWindows returns a standard window; AXWebArea appears under the tab group only after the AT latch flips | accessibility-api | ✅ works | explicit |
 | bundle com.apple.TextEdit; AXUIElementCreateApplication(pid) returns full window tree (45 nodes) in 41 ms | accessibility-api | ✅ works | explicit |
 | --remote-debugging-port responds on the target process (Electron apps expose the same) | cdp | ✅ works | explicit |
-| n/a | cdp | ✅ works | — |
+| n/a | cdp | ✅ works | explicit |
 | CDP responds | cdp | 🟡 partial | blocked |
 | AXUIElementCreateApplication(pid) answers, but see notes: content is LAZY — first shallow probe returned 72 nodes of window chrome only (page text absent) | accessibility-api | 🟡 partial | explicit |
 | http://127.0.0.1:9223/json/version → Chrome/151.0.7922.138, Protocol 1.3 | cdp | ✅ works | explicit |
@@ -114,8 +117,8 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 39/54.
-- **Silent divergences** (disqualifying): 3/54 ❗ FL Studio 2025 (Producer Edition v25.1.6) — fully custom-drawn UI (Delphi, TFruityLoopsMainForm), READ-ONLY probe, zero input sent, OBS Studio 31.0.3 (Qt 6 Widgets) — user's real config, READ-ONLY probe, rekordbox 7.0.9 (Pioneer DJ, JUCE framework — fully custom-drawn like FL Studio), user's real library, READ-ONLY probe
-- Cells **not** predictable in advance: 0/54 ✅ none
+- Cells where structure **works**: 42/57.
+- **Silent divergences** (disqualifying): 3/57 ❗ FL Studio 2025 (Producer Edition v25.1.6) — fully custom-drawn UI (Delphi, TFruityLoopsMainForm), READ-ONLY probe, zero input sent, OBS Studio 31.0.3 (Qt 6 Widgets) — user's real config, READ-ONLY probe, rekordbox 7.0.9 (Pioneer DJ, JUCE framework — fully custom-drawn like FL Studio), user's real library, READ-ONLY probe
+- Cells **not** predictable in advance: 0/57 ✅ none
 
 Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **FL Studio 2025** (windows); **OBS Studio 31.0.3** (windows); **rekordbox 7.0.9** (windows). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.

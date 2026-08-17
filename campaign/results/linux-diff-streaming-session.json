@@ -1,0 +1,60 @@
+{
+  "os": "linux",
+  "os_version": "Ubuntu 24.04, Chromium/CDP",
+  "app": "Diff-streaming session simulation (the per-session efficiency story)",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "n/a",
+    "signature": "n/a",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "20-step interactive session (add row / type / status change / idle), send-once-then-deltas structured vs one screenshot per step.",
+  "verdict": "works",
+  "failure_class": "none",
+  "tests": {
+    "t4_living_screen": {
+      "pass": true,
+      "detail": "20-step session: structured send-once+deltas = 626 tokens total vs 28,686 for per-step screenshots = 45.8x cheaper over the session. Per-step deltas: 94 tok (add row), 19 (type), 15 (status flip), 0 (idle). This is the resolution of the real-web ~parity: per single screen structure ties screenshots, but a screenshot pays its full ~1366 EVERY step while structure pays only for what changed and 0 when idle \u2014 and its stable identity reuses the prompt cache a per-pixel-changing screenshot cannot. The win is a property of the SESSION, not the screen."
+    },
+    "t1_read_text": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t2_enumerate": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t3_live_value": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t5_blind_action": {
+      "pass": null,
+      "detail": "n/a"
+    },
+    "t6_pictorial": {
+      "pass": null,
+      "detail": "n/a"
+    }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": 626,
+    "screenshot_tokens_est": 28686,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": null,
+    "notes": "Closes definition-of-done item 5. The single strongest efficiency lever and the honest reframe of the cost claim: 'per-screen parity, per-session 45x'. Screenshots do not amortize; structure does."
+  },
+  "runtime_verification": {
+    "method": "cumulative token accounting over 20 mechanical steps",
+    "agreement": "results/session-sim.json"
+  },
+  "permissions_required": [],
+  "agent": "claude (sandbox Linux)",
+  "date": "2026-08-15",
+  "raw_artifacts": [
+    "results/session-sim.json"
+  ]
+}

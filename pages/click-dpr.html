@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"><title>DPR click</title>
+<style>body{margin:0;font:18px sans-serif}#b{position:absolute;left:400px;top:300px;width:160px;height:60px}</style></head>
+<body><button id="b" onclick="document.title='HIT:'+event.clientX+','+event.clientY">Target</button>
+<div style="position:absolute;top:10px;left:10px">state: <span id="s">idle</span></div>
+<script>document.getElementById('b').addEventListener('click',()=>document.getElementById('s').textContent='CLICKED')</script>
+</body></html>
