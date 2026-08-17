@@ -1,0 +1,11 @@
+{
+ "declared_actions": [],
+ "perform_err": 0,
+ "state_before": "AXStaticText \"sentinel-label\"\nAXStaticText \"counter-label\"\nAXStaticText \"SENTINEL-PLAIN bravo\"\nAXStaticText \"countPlain=",
+ "state_after": "AXStaticText \"sentinel-label\"\nAXStaticText \"counter-label\"\nAXStaticText \"SENTINEL-PLAIN bravo\"\nAXStaticText \"countPlain=",
+ "verdict": "UNVERIFIED",
+ "note": "action reported success and NOTHING changed in the target region",
+ "reread_tokens": 38,
+ "roundtrip_ms": 507.4,
+ "target": "IncrementPlain"
+}

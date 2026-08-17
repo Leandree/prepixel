@@ -18,7 +18,91 @@ the history of what was asked and decided is part of the record.
 
 ---
 
-## 2026-08-17 — FYI — the guard has a boundary, and I found where: Java Swing on macOS
+## 2026-08-17 — DONE + RETRACTION — the Swing substitution result was my own probe
+
+The manager was right to push back. I re-ran `macos-swing-accessibility-api` with a
+controlled probe (`SwingProbe2.java`) putting both variants in one window — some
+components with `setAccessibleName`, some untouched — and the answer is unambiguous:
+
+| component | painted text reachable through AX? |
+|---|---|
+| untouched (`SENTINEL-PLAIN bravo`, `countPlain=0`, `IncrementPlain`) | **yes, exact, in AXValue and AXDescription** |
+| `setAccessibleName` called (`SENTINEL-NAMED`, `countNamed=`) | no — absent from every attribute of every node |
+
+**So I retract the substitution finding.** The channel faithfully relays what the
+application declares; the divergence was mine to cause. What remains is a real but
+much smaller point — an *app-annotation hazard*: calling `setAccessibleName` on a
+JLabel makes its visible text unrecoverable through AX, which any app on any
+platform can do to itself. That is a line in the paper, not a silent classification.
+T1 and T4 now pass and the cell is `explicit`.
+
+This is the third time this campaign that an apparent channel failure turned out to
+be the probe. I would suggest the pattern is worth stating in the paper itself, not
+just in these files: **a probe that configures the thing it measures cannot
+distinguish the platform's behaviour from its own.** The control has to be
+within-subject, in the same window, in the same run.
+
+**The act-side finding survives the control and is now clean.** An untouched Swing
+JButton declares zero actions (`AXUIElementCopyActionNames` → `[]`) and
+`AXUIElementPerformAction(..., 'AXPress')` still returns **0 = success** while the
+application never sees the press — six presses across both buttons, app frontmost,
+window raised, counters unchanged, confirmed on the window's own surface. The
+precise reading matters: **the element is explicit, the perform call is the liar.**
+`kAXErrorActionUnsupported` exists and is not used. A router that reads declarations
+is safe; one that trusts return codes is not, and trusting return codes is the
+default posture of every agent framework I know of.
+
+## 2026-08-17 — DONE — act-guard prototyped and measured (campaign/macos/act_guard.py)
+
+The contract is channel-agnostic and applies as-is to UIA `Invoke()`, AT-SPI
+`do_action` and CDP `dispatchMouseEvent`: read the target region, perform, re-read.
+`err != 0` → **EXPLICIT_FAILURE** (believe it); success with an unchanged state →
+**UNVERIFIED**; success with a changed state → **CONFIRMED**.
+
+Measured on both sides of the boundary in one session:
+
+| target | declared actions | err | state | verdict | re-read cost |
+|---|---|---|---|---|---|
+| Swing `IncrementPlain` (the liar) | `[]` | 0 | unchanged | **UNVERIFIED** ✅ caught | 38 tok |
+| Calculator `7` (native control) | `['AXPress']` | 0 | changed | **CONFIRMED** ✅ no false alarm | 5 tok |
+
+Cost is the reason it is practical: **5–38 tokens against 168 for a screenshot of
+that same small window** (4.4×–34× cheaper), and the gap widens with window size,
+because the re-read scales with the affected region while a capture scales with the
+whole surface. Round-trip 507–517 ms, dominated by my deliberate repaint wait.
+
+Use both signals, they answer different questions: the empty action list is the free
+a-priori predictor (never call `AXPress` on an element declaring no actions — fall
+back to a synthetic click), and the state re-read is the runtime verification for
+when you do act. Neither alone suffices — the declaration cannot tell you the press
+landed, and the verification costs a round-trip you can skip when the declaration
+already says no.
+
+**For the Windows and Linux agents:** please run the same two-line check on your
+tiers. Does `Invoke()` / `do_action` return success on a control that declares no
+action pattern? Linux's Swing cell reports a blind click that *worked* (`clicks: 0`
+→ `clicks: 1`), so AT-SPI may well be honest here — if so, that is a clean
+three-way contrast and it localises the defect to the macOS AWT peer specifically.
+
+I also made `campaign/aggregate.py` module-aware, because it was crediting my cell
+to coverage-guard: the verdict now reports view divergences (coverage-guard, 4) and
+action divergences (act-guard, 1) as separate lines. They answer different questions
+and lumping them loses exactly the distinction this round established.
+
+## 2026-08-17 — BLOCKED (minor) — Qt and Flutter on macOS
+
+Neither toolkit is installed and neither has a trivial no-decision install path: no
+app in `/Applications` links `QtCore`/`Qt6*` or bundles `FlutterMacOS.framework`,
+and there is no Homebrew cask already present that would bring one in. Left undone
+rather than installing software on Léandre's machine for a Tier F data point that
+Linux and Windows have both already covered (`linux-qt6-qbittorrent`,
+`linux-flutter-appflowy`, `windows-obs-qt-uia`). If the manager wants the macOS row
+filled, the cheapest specimens are VLC (Qt) or any Flutter desktop demo — say the
+word and it is a 20-minute cell.
+
+---
+
+## 2026-08-17 — SUPERSEDED — the guard has a boundary, and I found where: Java Swing on macOS
 
 The last two macOS tasks are done and one of them broke the clean story, so it needs
 flagging rather than filing. **`macos-swing-accessibility-api` is classified `silent`

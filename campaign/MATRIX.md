@@ -55,7 +55,7 @@
 | macos | Zoom Workplace — IN-MEETING surfaces during a real meeting on the user's own account (read-only, run at the user's explicit request). Completes macos-zoom-accessibility-api, which covered the home window only. | other | accessibility-api | 🟡 partial | explicit | 54 | 1,914 | ✅ |
 | macos | Clock/Horloge (com.apple.clock, system SwiftUI app) — world clock + stopwatch | swiftui | accessibility-api | ✅ works | — | 634 | 1,049 | ✅ |
 | macos | Vibe Island (app.vibeisland.macos) — THIRD-PARTY SwiftUI notch-overlay app, the README's prime thin-tree suspect. Read-only probe, no input sent. | swiftui | accessibility-api | ✅ works | explicit | 24 | 526 | ✅ |
-| macos | Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab. | swing | accessibility-api | 🟡 partial | ❗SILENT | 97 | 333 | ✅ |
+| macos | Java Swing (Tier F) on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Re-run 2026-08-17 with a CONTROLLED probe after the first version's confound was caught. Cross-OS counterpart of windows-swing-jab and linux-java-swing-accessibility-api. | swing | accessibility-api | ✅ works | explicit | 97 | 168 | ✅ |
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile, repo test pages) | chromium | cdp | ✅ works | explicit | 273 | 1,366 | ✅ |
 | windows | Google Chrome 151.0.7922.138 (isolated instance, temp profile) — DUAL channel of windows-chrome-cdp, same page | chromium | accessibility-api | ✅ works | explicit | 969 | 1,560 | ✅ |
 | windows | Precision-vs-pixels duel (20 randomized order-console pages) — Windows replication of the Linux/macOS cells, same generator, same seeds | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
@@ -141,7 +141,7 @@ The production-safety question: could a router know the channel in advance, and 
 | com.apple.clock; window tree 25 nodes with labeled toolbar tabs on first query | accessibility-api | ✅ works | — |
 | otool -L links SwiftUI.framework + AppKit.framework; bundle app.vibeisland.macos; window is kCGWindowLayer 27 (overlay layer, not a normal document window) | accessibility-api | ✅ works | explicit |
 | AT-SPI desktop lists 'SwingProbe' with toolkit 'J2SE-access-bridge' (java-atk-wrapper); JVM signature: libjvm.so mapped, /usr/share/java/java-atk-wrapper.jar present | accessibility-api | ✅ works | explicit |
-| Android Studio ships Contents/jbr (OpenJDK 21.0.10); the probe's window is owned by a java process and answers AX directly — no bridge process, no jabswitch equivalent | accessibility-api | 🟡 partial | ❗SILENT |
+| Android Studio ships Contents/jbr (OpenJDK 21.0.10); the probe window is owned by a java process and answers AX directly — no bridge process, no jabswitch equivalent, no assistive-technology flag | accessibility-api | ✅ works | explicit |
 | SunAwtFrame window class (=Java/AWT, a-priori); channel signature: jabswitch enabled + windowsaccessbridge-64.dll present + isJavaWindow(hwnd)=TRUE answers immediately once the JVM runs with the AccessBridge AT loaded | java-access-bridge | ✅ works | explicit |
 | CreateObject('Shell.Application') succeeds (always present on Windows); Windows() enumerates open Explorer windows with LocationURL | object-model | ✅ works | — |
 | CabinetWClass; UIA responds with a full 188-node tree on first query | accessibility-api | ✅ works | — |
@@ -155,9 +155,11 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 56/76.
-- **Silent divergences surviving** (disqualifying): 2/76 ❗ qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView), Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab.
-- Silent divergences **found, then caught-and-declared** by coverage-guard: 4 — Zoom Workplace, FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
+- Cells where structure **works**: 57/76.
+- **Silent divergences surviving** (disqualifying): 1/76 ❗ qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView)
+- View divergences **found, then caught-and-declared** by coverage-guard: 4 — Zoom Workplace, FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9
+- **Action** divergences (an action reporting success without effect) caught by act-guard: 1 — Java Swing
+  (each mitigated cell carries its `mitigation` record naming the module and what it was found as)
 - Cells **not** predictable in advance: 0/76 ✅ none
 
-Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **qBittorrent 5.1.0** (linux); **Java Swing** (macos). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.
+Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **qBittorrent 5.1.0** (linux). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.

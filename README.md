@@ -16,13 +16,13 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 > you don't need."* Structure is the backbone; pixels are a targeted fallback for
 > the regions structure can't read (games, video, canvas). The whole point is that
 > the boundary between the two is **knowable in advance** — and the campaign showed
-> that it is *not* automatically declared. Six applications returned a view that
-> disagreed with the screen without saying so; a documented router guard converts
-> four of them into explicit declarations, and the other two bound what that guard
-> can do — one is too sparsely painted for its calibration, the other substitutes a
-> wrong string instead of omitting one. The boundary
-> is predictable; making it **explicit is the router's job, not the OS's** — and
-> that job is not finished.
+> that it is *not* automatically declared. Six applications diverged from the screen
+> without saying so, on two axes: five returned a view that omitted what was
+> painted, and one accepted an action, reported **success**, and did nothing. Two
+> documented guards convert five of the six into explicit declarations; the sixth is
+> kept as the counter-example that shows where the calibration runs out. The
+> boundary is predictable; making it **explicit is the router's job, not the OS's**
+> — and that job is not finished.
 
 ---
 
@@ -62,54 +62,41 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
 - **Safety (the production question) — the campaign's most important negative
-  result, its repair, and the two places the repair does not reach.** Across 76
-  cells on three OSes, **100% of channels were predictable in advance** from a stack
-  signature. But "never silent" did **not** survive contact with real apps: **6
-  silent divergences found, 4 neutralised, 2 still standing.**
+  result, its repair, and the two axes the repair runs along.** Across 76 cells on
+  three OSes, **100% of channels were predictable in advance** from a stack
+  signature. But "never silent" did **not** survive contact with real apps.
 
-  Four share one mechanism, *disagreement by omission* — a container node is
-  present, its content is absent, and nothing declares the region opaque: FL Studio/
-  Delphi, OBS/Qt6 and rekordbox/JUCE on Windows, plus Zoom's in-meeting stage on
-  macOS, where an `AXTabGroup` claims 89.6% of the window and holds one 115×22
-  label. That the same shape appears through **two different accessibility APIs on
-  two different OSes** is what makes it a finding rather than a UIA quirk. All four
-  are **caught and declared** by a documented router guard (`src/coverage-guard.mjs`:
-  a pixel spot-check on structure-empty regions, plus a self-consistency check
-  needing no pixels that catches "32 tracks declared, 0 rows exposed"), and each
-  keeps a `mitigation` record naming what it was found as, so the finding is
-  preserved rather than edited away.
+  **Read side — 5 view divergences, 4 neutralised, 1 standing.** All five share one
+  mechanism, *disagreement by omission*: a container node is present, its content is
+  absent, and nothing declares the region opaque. FL Studio/Delphi, OBS/Qt6 and
+  rekordbox/JUCE on Windows, plus Zoom's in-meeting stage on macOS, where an
+  `AXTabGroup` claims 89.6% of the window and holds one 115×20 label — the same
+  shape through **two different accessibility APIs on two different OSes**, which is
+  what makes it a finding rather than a UIA quirk. Those four are caught and declared
+  by `src/coverage-guard.mjs` (a pixel spot-check on structure-empty regions plus a
+  self-consistency check needing no pixels). The fifth, **qBittorrent's
+  custom-painted speed graph on Linux, is deliberately left classified `silent`**
+  because it bounds the repair: sparse line-art reads energy 0.020 against a 0.03
+  threshold, where the genuinely-empty control reads 0.000. Catchability is a
+  property of the guard's *calibration*, not of its existence.
 
-  The two survivors matter more than the four repairs, because they bound the
-  repair. **qBittorrent's custom-painted speed graph on Linux is the same omission
-  class, but the guard misses it on calibration**: sparse line-art reads energy
-  0.020 against a 0.03 threshold, where the genuinely-empty control reads 0.000 (a
-  0.01 threshold or an edge metric closes it). **Java Swing on macOS is missed on
-  kind**: it *substitutes* rather than omits — a label carrying an `accessibleName`
-  publishes that name as its value while the painted text appears in **no attribute
-  of any node**, so a counter whose text advances reads as a constant. Guard A only
-  fires where structure is *empty*, and here there is a node with a confident,
-  plausible, wrong string. The same cell found the campaign's first **act-side**
-  silent failure: a button declaring zero actions accepts `AXPress` and returns
-  **success** while nothing happens.
+  **Act side — a different axis entirely, found on macOS.** A Java Swing button
+  declares **zero** actions and `AXUIElementPerformAction` still returns **success**
+  while the application never sees the press. Every divergence above is a bad *read*;
+  this is an *act* that reports success and does nothing, which is worse, because the
+  agent proceeds reasoning from a false premise. The element is honest — the empty
+  action list is a free a-priori signal — but **the perform call fabricates its
+  return code**, and trusting return codes is the default posture of every agent
+  framework we know of. `campaign/macos/act_guard.py` closes it by re-reading the
+  target after any action that returns success and refusing to report success if
+  nothing changed: **UNVERIFIED** on the liar, **CONFIRMED** on a native control, at
+  **5–38 tokens against 168** for a screenshot of the same window.
 
-  So the honest form of the safety claim is not "every blind spot is convertible",
-  it is: **the guard catches omission when it is dense enough to see, does not catch
-  substitution, and does not watch actions at all.** Both survivors stay classified
-  `silent` on purpose, and each cell specifies the concrete extension it needs.
-
-  Round 5 on Linux put numbers on the calibration boundary. The guard's measured
-  content-energy spectrum across three OSes now reads: **0.06–0.07** (FL/OBS,
-  caught comfortably) / **0.036** (a Swing painted panel on Linux — the same
-  omission shape reproduced on a third toolkit — caught by 0.006) / **0.029**
-  (AppFlowy's *entire* Flutter login UI, under the threshold because the page is
-  mostly white) / **0.020** (qBittorrent, missed) / **0.000** (every genuinely-
-  empty control measured). A 0.01 threshold separates all real content from all
-  empties in the campaign's data. And the per-window capture rule the guard
-  depends on now has its X11 implementation (`campaign/linux/grabwin.c`,
-  XComposite manual redirection — works on stock Xvfb, reads content under
-  occlusion like `PrintWindow`), with a measured verdict flip under plain window
-  overlap: screen crop 0.042 vs the window's own surface 0.021, straddling the
-  threshold.
+  So the honest form of the claim is not "structure never lies". It is: **every
+  blind spot is predictable a priori; a documented read-side guard converts view
+  omissions into explicit declarations when they are dense enough to see, and a
+  documented act-side guard catches actions that lie about their effect — and the
+  one surviving cell tells you exactly where the calibration runs out.**
   The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
   a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
   router computes 0% structural coverage in one walk), whereas named-but-empty panes
@@ -248,22 +235,31 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 76 cells, schema-valid, 100% predictable in advance,
-6 silent divergences found — 4 neutralised, 2 kept as counter-examples.**
+**All three OSes are covered: 76 cells, schema-valid, 100% predictable in advance.
+6 divergences found on two axes — 5 neutralised, 1 kept as a counter-example.**
 Linux 28, macOS 22, Windows 26.
 
-The four neutralised are custom-drawn or video surfaces (FL Studio, OBS, rekordbox
-on Windows; Zoom's in-meeting stage on macOS), each carrying its `mitigation`
-record. The two survivors are deliberately left classified `silent`, because each
-bounds the guard in a different way and that boundary is the useful result:
-**qBittorrent's speed graph** (Linux) is the right class but too sparse for the
-shipped calibration — energy 0.020 against a 0.03 threshold, with the genuinely
-empty control at 0.000 on every metric — and **Java Swing** (macOS) is the wrong
-class entirely, substituting a plausible wrong string for the painted text and
-faking action success, which no pixel spot-check on an *empty* region can see. See
-`campaign/MATRIX.md`, which reports *surviving* and *found-then-declared* as two
-separate numbers, and the recalibration and act-guard proposals in the two
-`*-agent-returns.md` files.
+Five are **read-side** view omissions: four (FL Studio, OBS, rekordbox on Windows;
+Zoom's in-meeting stage on macOS) are neutralised by `coverage-guard` and carry a
+`mitigation` record. The fifth, **qBittorrent's custom-painted speed graph** on
+Linux, is deliberately left classified `silent` because it is the right class but
+too sparse for the shipped calibration (energy 0.020 vs a 0.03 threshold, with the
+genuinely empty control at 0.000 on every metric) — the boundary is the useful
+result, not the miss.
+
+The sixth is **act-side** and was found on macOS: a Swing button that declares zero
+actions still returns *success* from `AXUIElementPerformAction` while nothing
+happens. It is caught by `act_guard`, which re-reads the target after any successful
+action and refuses to report success on an unchanged state. `campaign/MATRIX.md`
+reports the two axes as separate lines, since they answer different questions.
+
+One correction worth recording, because it shaped the round: an earlier version of
+the Swing cell also claimed the channel *substituted* a wrong string for label text.
+A controlled re-run — named and untouched components in the same window — showed
+that was the probe's own `setAccessibleName` call, and the claim was retracted.
+Untouched Swing components expose their painted text exactly. **A probe that
+configures the thing it measures cannot separate the platform's behaviour from its
+own**; the control has to be within-subject.
 
 The real-web battery has now been run on all three OSes and the result is
 essentially OS-invariant (macOS 0.98x, Linux 1.00x, Windows 0.99x on the ratio of
@@ -275,18 +271,18 @@ closed the native blind click end-to-end on three stacks.
 Round 5 (Linux) filled that OS's last empty tiers and closed the capture rule on
 the third OS: Java/Swing works via java-atk-wrapper (and reproduces the OBS
 omission shape on a third toolkit, caught at energy 0.036 — the same toolkit
-whose macOS twin exhibits the *substitution* class, so Java has now shown both
-failure kinds); Flutter (AppFlowy, real third-party app) is
+whose macOS twin exhibits the *act-side* class, so Java has now shown both failure
+axes: a view that omits, and an action that lies about its effect); Flutter (AppFlowy, real third-party app) is
 unavailable/explicit-by-shape — a 5-node tree for a full login UI, 0% coverage
 computable a priori; and the per-window capture rule has its X11 implementation
 (`campaign/linux/grabwin.c`, XComposite; measured verdict flip 0.042 vs 0.021
 across the threshold under plain occlusion).
 
-Still open: the two guard extensions the survivors call for (a lower/edge-based
-energy metric, and an act-side check that re-reads after any action returning
-success); Qt and Flutter on macOS (Java is now done); and a live specimen for the
-layered-window occlusion rule on Windows, where the rule is encoded but the audited
-desktop had no layered window to exercise it.
+Still open: recalibrating the read-side guard for sparse line-art (a lower threshold
+or an edge metric — the act-side check is now built and measured); Qt and Flutter on
+macOS, where neither toolkit is installed and both are already covered on the other
+two OSes; and a live specimen for the layered-window occlusion rule on Windows, where
+the rule is encoded but the audited desktop had no layered window to exercise it.
 
 The write-up is a position paper (arXiv cs.HC/cs.AI) + a blog post; project notes
 live in the attached Claude project.
