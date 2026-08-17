@@ -1,0 +1,46 @@
+{
+  "os": "linux",
+  "os_version": "Debian 13 (trixie), kernel 6.12.95+deb13-amd64, headless server — Chrome headed under Xvfb 1280x800 (X11)",
+  "app": "Blind navigation on 5 live sites in Chromium 148 (Hacker News, Wikipedia, GitHub, MDN, DuckDuckGo) — Linux confirmation run of the macOS cell",
+  "stack": "chromium",
+  "stack_detection": {
+    "method": "open debug port answers /json/version",
+    "signature": "http://127.0.0.1:9223/json/version → Chrome/148.0.7778.96, Protocol 1.3",
+    "detected_before_use": true
+  },
+  "channel": "cdp",
+  "channel_setup": "Same Chrome-under-Xvfb + hardened distiller as linux-web-battery-cdp, viewport 1280x800 CSS. Same router and steps as macOS (campaign/linux/web-navigate.mjs, paths-only diff): every decision — which line to target, where to click, whether to refuse — is taken from the published view lines alone. No screenshot is read anywhere in the loop; screenshots are taken after each step only as evidence.",
+  "verdict": "works",
+  "failure_class": "explicit",
+  "tests": {
+    "t1_read_text": { "pass": true, "detail": "Targets located by text in the structured view on all steps that had one, first view except the deliberate below-the-fold step." },
+    "t2_enumerate": { "pass": true, "detail": "The geometric text→control join (smallest interactive box containing the matched text's centre) worked on every step, including reading the affordance off the joined tag: <a> → navigate, <summary> → toggle. Wikipedia's 'Rasterization' had exactly one un-occluded candidate in view; the router picked it without disambiguation logic." },
+    "t3_live_value": { "pass": null, "detail": "No form filled on third-party sites (read-only discipline)." },
+    "t4_living_screen": { "pass": null, "detail": "Not applicable to a navigation probe." },
+    "t5_blind_action": { "pass": true, "detail": "8/8 steps, first attempt each: 6/6 navigate (HN 'new' → /newest; Wikipedia in-article 'Rasterization' → #Rasterization anchor; GitHub 'Insights' on the hydrated app shell → /pulse; MDN sidebar 'Canvas tutorial' → /Canvas_API/Tutorial; DuckDuckGo 'Images' filter → &ia=images; HN 'More' below the fold → /?p=2 after one 90%-viewport scroll), 1/1 toggle (MDN 'Tutorial' disclosure widget), 1/1 correct refusal (no 'Pull requests' tab offered on torvalds/linux, where PRs are disabled — the negative control)." },
+    "t6_pictorial": { "pass": null, "detail": "No pictorial target was aimed at." }
+  },
+  "measurements": {
+    "view_bytes": null,
+    "view_tokens_est": 16654,
+    "screenshot_tokens_est": 12294,
+    "diff_bytes_per_interaction": null,
+    "idle_cost_bytes": 0,
+    "capture_latency_ms": 61,
+    "notes": "SESSION COST: 16654 structured tokens across 9 view reads vs 12294 for 9 CSS-resolution screenshots — structured 1.35x MORE expensive (macOS: 16826 vs 12294, 1.37x). Same honest conclusion: at CSS resolution on these text-bearing pages the structured route costs more per look; it flips decisively at Retina/high-DPI (4784 tokens per 2x screenshot). SCROLL-AND-SEARCH replicated: the HN 'More' target needed 2 views (1 scroll), exactly as on macOS. THE DETERMINISM DETAIL WORTH PUBLISHING: the MDN disclosure toggle changed the structured view by +16 lines — the SAME +16 lines as on macOS, on a different OS, CPU architecture and Chromium major (148 vs 151), two days apart. The channel did not just agree qualitatively; the in-channel effect of the same action on the same page is byte-countably identical. The toggle step again needed no screenshot to confirm its own effect: URL unchanged, view changed — self-verification inside the channel. Router logic (the text→control geometric join, affordance read off the tag, absent-as-first-class-expectation) transferred with zero Linux-specific modification, which is the point of a browser-level channel: the router is OS-invariant." },
+  "runtime_verification": {
+    "method": "Outcome judged by the browser's own resulting URL and title (not by the view that chose the click), plus a post-click screenshot per step kept under nav-shots/.",
+    "agreement": "8/8. URLs land exactly where the macOS run landed (same /newest, /pulse, #Rasterization, /Canvas_API/Tutorial, &ia=images, /?p=2). The toggle's +16-line view delta doubles as a cross-OS determinism check against the macOS value."
+  },
+  "permissions_required": [
+    "None (loopback CDP socket). No login on any site."
+  ],
+  "agent": "claude-code (Fable 5) on debian-server (headless), Chrome under Xvfb",
+  "date": "2026-08-17",
+  "raw_artifacts": [
+    "results/web-battery-linux/web-navigation.json",
+    "results/web-battery-linux/nav-views/",
+    "results/web-battery-linux/nav-shots/",
+    "campaign/linux/web-navigate.mjs"
+  ]
+}

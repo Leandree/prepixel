@@ -1,0 +1,641 @@
+a 104,10,20,20 href=https://news.ycombinator.com
+[pixels] img 104,10,20,20 src=y18.svg
+a 129,12,97,15 href=news
+text 129,12,97,15 "Hacker News"
+a 231,12,28,15 href=newest
+text 231,12,28,15 "new"
+text 258,12,13,15 "|"
+a 271,12,29,15 href=front
+text 271,12,29,15 "past"
+text 300,12,13,15 "|"
+a 313,12,70,15 href=newcomments
+text 313,12,70,15 "comments"
+text 384,12,13,15 "|"
+a 396,12,23,15 href=ask
+text 396,12,23,15 "ask"
+text 419,12,13,15 "|"
+a 432,12,34,15 href=show
+text 432,12,34,15 "show"
+text 467,12,13,15 "|"
+a 480,12,27,15 href=jobs
+text 480,12,27,15 "jobs"
+text 507,12,13,15 "|"
+a 520,12,46,15 href=submit
+text 520,12,46,15 "submit"
+a 1125,12,32,15 href=login?goto=news
+text 1125,12,32,15 "login"
+text 110,42,13,15 "1."
+a 123,45,14,10 id=up_49329575 href=vote?id=49329575&how=up&goto=news
+a 137,44,400,15 href=https://blog.roboflow.com/openai-gpt-5-6/
+text 137,44,400,15 "GPT 5.6 Sol is the best "vision" model OpenAI ever released"
+text 537,46,8,13 "("
+a 544,46,71,13 href=from?site=roboflow.com
+text 544,46,71,13 "roboflow.com"
+text 615,46,4,13 ")"
+text 137,61,43,11 "95 points"
+text 180,61,17,11 "by"
+a 198,61,30,11 href=user?id=plurby
+text 198,61,30,11 "plurby"
+a 230,61,55,11 href=item?id=49329575
+text 230,61,55,11 "2 hours ago"
+text 289,61,6,11 "|"
+a 295,61,20,11 href=hide?id=49329575&goto=news
+text 295,61,20,11 "hide"
+text 315,61,9,11 "|"
+a 324,61,64,11 href=item?id=49329575
+text 324,61,64,11 "52 comments"
+text 110,77,13,15 "2."
+a 123,80,14,10 id=up_49330684 href=vote?id=49330684&how=up&goto=news
+a 137,79,168,15 href=https://www.githubstatus.com/incidents/zkxwbgr0cnmx
+text 137,79,168,15 "Incident with Github.com"
+text 305,81,8,13 "("
+a 312,81,93,13 href=from?site=githubstatus.com
+text 312,81,93,13 "githubstatus.com"
+text 405,81,4,13 ")"
+text 137,96,49,11 "272 points"
+text 186,96,17,11 "by"
+a 204,96,48,11 href=user?id=kevcampb
+text 204,96,48,11 "kevcampb"
+a 255,96,73,11 href=item?id=49330684
+text 255,96,73,11 "36 minutes ago"
+text 331,96,6,11 "|"
+a 337,96,20,11 href=hide?id=49330684&goto=news
+text 337,96,20,11 "hide"
+text 357,96,9,11 "|"
+a 366,96,70,11 href=item?id=49330684
+text 366,96,70,11 "214 comments"
+text 110,112,13,15 "3."
+a 123,115,14,10 id=up_49330215 href=vote?id=49330215&how=up&goto=news
+a 137,114,189,15 href=https://mkornreich.me/projects/sokoban/
+text 137,114,189,15 "Show HN: Sokoban AI Solver"
+text 326,116,8,13 "("
+a 334,116,80,13 href=from?site=mkornreich.me
+text 334,116,80,13 "mkornreich.me"
+text 414,116,4,13 ")"
+text 137,131,43,11 "20 points"
+text 180,131,17,11 "by"
+a 198,131,61,11 href=user?id=enjoyyourlife
+text 198,131,61,11 "enjoyyourlife"
+a 261,131,51,11 href=item?id=49330215
+text 261,131,51,11 "1 hour ago"
+text 315,131,6,11 "|"
+a 321,131,20,11 href=hide?id=49330215&goto=news
+text 321,131,20,11 "hide"
+text 341,131,9,11 "|"
+a 350,131,58,11 href=item?id=49330215
+text 350,131,58,11 "9 comments"
+text 110,147,13,15 "4."
+a 123,150,14,10 id=up_49330632 href=vote?id=49330632&how=up&goto=news
+a 137,149,226,15 href=item?id=49330632
+text 137,149,226,15 "GitHub down again? no PR access"
+text 137,166,43,11 "62 points"
+text 180,166,17,11 "by"
+a 198,166,29,11 href=user?id=yodon
+text 198,166,29,11 "yodon"
+a 229,166,73,11 href=item?id=49330632
+text 229,166,73,11 "39 minutes ago"
+text 305,166,6,11 "|"
+a 311,166,20,11 href=hide?id=49330632&goto=news
+text 311,166,20,11 "hide"
+text 332,166,9,11 "|"
+a 341,166,64,11 href=item?id=49330632
+text 341,166,64,11 "18 comments"
+text 110,182,13,15 "5."
+a 123,185,14,10 id=up_49330597 href=vote?id=49330597&how=up&goto=news
+a 137,184,365,15 href=item?id=49330597
+text 137,184,365,15 "Tell HN: GitHub Is Experiencing Degraded Performance"
+text 137,201,43,11 "67 points"
+text 180,201,17,11 "by"
+a 198,201,57,11 href=user?id=SpyCoder77
+text 198,201,57,11 "SpyCoder77"
+a 258,201,73,11 href=item?id=49330597
+text 258,201,73,11 "42 minutes ago"
+text 334,201,6,11 "|"
+a 340,201,20,11 href=hide?id=49330597&goto=news
+text 340,201,20,11 "hide"
+text 360,201,9,11 "|"
+a 369,201,64,11 href=item?id=49330597
+text 369,201,64,11 "20 comments"
+text 110,217,13,15 "6."
+a 123,220,14,10 id=up_49324985 href=vote?id=49324985&how=up&goto=news
+a 137,219,426,15 href=https://simonwillison.net/2026/Aug/16/qwen-38-27b/
+text 137,219,426,15 "Qwen 3.8 27B is excellent, but it defaults to overthinking things"
+text 563,221,8,13 "("
+a 571,221,92,13 href=from?site=simonwillison.net
+text 571,221,92,13 "simonwillison.net"
+text 663,221,4,13 ")"
+text 137,236,49,11 "648 points"
+text 186,236,17,11 "by"
+a 204,236,30,11 href=user?id=bilsbie
+text 204,236,30,11 "bilsbie"
+a 237,236,61,11 href=item?id=49324985
+text 237,236,61,11 "14 hours ago"
+text 301,236,6,11 "|"
+a 307,236,20,11 href=hide?id=49324985&goto=news
+text 307,236,20,11 "hide"
+text 327,236,9,11 "|"
+a 337,236,70,11 href=item?id=49324985
+text 337,236,70,11 "307 comments"
+text 110,252,13,15 "7."
+a 123,255,14,10 id=up_49330604 href=vote?id=49330604&how=up&goto=news
+a 137,254,467,15 href=https://1667.ai/
+text 137,254,467,15 "Show HN: 1667, a terminal UI for writing fiction with language models"
+text 604,256,8,13 "("
+a 611,256,40,13 href=from?site=1667.ai
+text 611,256,40,13 "1667.ai"
+text 651,256,4,13 ")"
+text 137,271,43,11 "24 points"
+text 180,271,17,11 "by"
+a 198,271,29,11 href=user?id=refsab
+text 198,271,29,11 "refsab"
+a 230,271,73,11 href=item?id=49330604
+text 230,271,73,11 "41 minutes ago"
+text 306,271,6,11 "|"
+a 312,271,20,11 href=hide?id=49330604&goto=news
+text 312,271,20,11 "hide"
+text 332,271,9,11 "|"
+a 341,271,64,11 href=item?id=49330604
+text 341,271,64,11 "38 comments"
+text 110,287,13,15 "8."
+a 123,290,14,10 id=up_49284983 href=vote?id=49284983&how=up&goto=news
+a 137,289,318,15 href=https://func25.dev/posts/go-sync-nocopy/
+text 137,289,318,15 "How Go detects struct copies with sync.noCopy"
+text 454,291,8,13 "("
+a 462,291,60,13 href=from?site=func25.dev
+text 462,291,60,13 "func25.dev"
+text 522,291,4,13 ")"
+text 137,306,43,11 "26 points"
+text 180,306,17,11 "by"
+a 198,306,32,11 href=user?id=func25
+text 198,306,32,11 "func25"
+a 233,306,55,11 href=item?id=49284983
+text 233,306,55,11 "3 hours ago"
+text 291,306,6,11 "|"
+a 297,306,20,11 href=hide?id=49284983&goto=news
+text 297,306,20,11 "hide"
+text 318,306,9,11 "|"
+a 327,306,64,11 href=item?id=49284983
+text 327,306,64,11 "24 comments"
+text 110,322,13,15 "9."
+a 123,325,14,10 id=up_49278577 href=vote?id=49278577&how=up&goto=news
+a 137,324,195,15 href=https://nmsspot.com/2026/08/09/my-ten-years-in-no-mans-sky/
+text 137,324,195,15 "My Ten Years in No Man's Sky"
+text 332,326,8,13 "("
+a 340,326,72,13 href=from?site=nmsspot.com
+text 340,326,72,13 "nmsspot.com"
+text 411,326,4,13 ")"
+text 137,341,43,11 "14 points"
+text 180,341,17,11 "by"
+a 198,341,45,11 href=user?id=blakespot
+text 198,341,45,11 "blakespot"
+a 246,341,51,11 href=item?id=49278577
+text 246,341,51,11 "1 hour ago"
+text 299,341,6,11 "|"
+a 306,341,20,11 href=hide?id=49278577&goto=news
+text 306,341,20,11 "hide"
+text 326,341,9,11 "|"
+a 335,341,58,11 href=item?id=49278577
+text 335,341,58,11 "4 comments"
+text 102,357,21,15 "10."
+a 123,360,14,10 id=up_49325789 href=vote?id=49325789&how=up&goto=news
+a 137,359,222,15 href=https://twitter.com/DarioAmodei/status/2088758816376807762
+text 137,359,222,15 "On A.I. regulation and messaging"
+text 359,361,8,13 "("
+a 367,361,131,13 href=from?site=twitter.com/darioamodei
+text 367,361,131,13 "twitter.com/darioamodei"
+text 497,361,4,13 ")"
+text 137,376,49,11 "160 points"
+text 186,376,17,11 "by"
+a 204,376,45,11 href=user?id=jacquesm
+text 204,376,45,11 "jacquesm"
+a 252,376,55,11 href=item?id=49325789
+text 252,376,55,11 "7 hours ago"
+text 310,376,6,11 "|"
+a 316,376,20,11 href=hide?id=49325789&goto=news
+text 316,376,20,11 "hide"
+text 336,376,9,11 "|"
+a 345,376,70,11 href=item?id=49325789
+text 345,376,70,11 "313 comments"
+text 102,392,21,15 "11."
+a 123,395,14,10 id=up_49330139 href=vote?id=49330139&how=up&goto=news
+a 137,394,224,15 href=https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion
+text 137,394,224,15 "Stripe to Buy OpenRouter for $7B"
+text 361,396,8,13 "("
+a 368,396,84,13 href=from?site=bloomberg.com
+text 368,396,84,13 "bloomberg.com"
+text 452,396,4,13 ")"
+text 137,411,43,11 "52 points"
+text 180,411,17,11 "by"
+a 198,411,55,11 href=user?id=FinnLobsien
+text 198,411,55,11 "FinnLobsien"
+a 256,411,51,11 href=item?id=49330139
+text 256,411,51,11 "1 hour ago"
+text 309,411,6,11 "|"
+a 315,411,20,11 href=hide?id=49330139&goto=news
+text 315,411,20,11 "hide"
+text 335,411,9,11 "|"
+a 344,411,64,11 href=item?id=49330139
+text 344,411,64,11 "20 comments"
+text 102,427,21,15 "12."
+a 123,430,14,10 id=up_49324087 href=vote?id=49324087&how=up&goto=news
+a 137,429,511,15 href=https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing
+text 137,429,511,15 "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing"
+text 648,431,8,13 "("
+a 656,431,92,13 href=from?site=daringfireball.net
+text 656,431,92,13 "daringfireball.net"
+text 747,431,4,13 ")"
+text 137,446,49,11 "503 points"
+text 186,446,17,11 "by"
+a 204,446,36,11 href=user?id=ropbear
+text 204,446,36,11 "ropbear"
+a 243,446,61,11 href=item?id=49324087
+text 243,446,61,11 "16 hours ago"
+text 307,446,6,11 "|"
+a 314,446,20,11 href=hide?id=49324087&goto=news
+text 314,446,20,11 "hide"
+text 334,446,9,11 "|"
+a 343,446,70,11 href=item?id=49324087
+text 343,446,70,11 "459 comments"
+text 102,462,21,15 "13."
+a 123,465,14,10 id=up_49327643 href=vote?id=49327643&how=up&goto=news
+a 137,464,556,15 href=https://desktopcolors.com
+text 137,464,556,15 "Show HN: Desktopcolors.com – A museum for solid background colors of classic OS"
+text 693,466,8,13 "("
+a 701,466,100,13 href=from?site=desktopcolors.com
+text 701,466,100,13 "desktopcolors.com"
+text 801,466,4,13 ")"
+text 137,481,43,11 "69 points"
+text 180,481,17,11 "by"
+a 198,481,40,11 href=user?id=vlowrian
+text 198,481,40,11 "vlowrian"
+a 240,481,55,11 href=item?id=49327643
+text 240,481,55,11 "6 hours ago"
+text 299,481,6,11 "|"
+a 305,481,20,11 href=hide?id=49327643&goto=news
+text 305,481,20,11 "hide"
+text 325,481,9,11 "|"
+a 334,481,64,11 href=item?id=49327643
+text 334,481,64,11 "30 comments"
+text 102,497,21,15 "14."
+a 123,500,14,10 id=up_49330456 href=vote?id=49330456&how=up&goto=news
+a 137,499,476,15 href=https://www.npr.org/2026/08/17/nx-s1-5928263/cialis-viagra-tadalafil-longevity-heart-health
+text 137,499,476,15 "Cialis is an erectile dysfunction drug. Could it also help you live longer?"
+text 613,501,8,13 "("
+a 621,501,38,13 href=from?site=npr.org
+text 621,501,38,13 "npr.org"
+text 659,501,4,13 ")"
+text 137,516,43,11 "26 points"
+text 180,516,17,11 "by"
+a 198,516,45,11 href=user?id=brandonb
+text 198,516,45,11 "brandonb"
+a 246,516,73,11 href=item?id=49330456
+text 246,516,73,11 "52 minutes ago"
+text 321,516,6,11 "|"
+a 328,516,20,11 href=hide?id=49330456&goto=news
+text 328,516,20,11 "hide"
+text 348,516,9,11 "|"
+a 357,516,58,11 href=item?id=49330456
+text 357,516,58,11 "7 comments"
+text 102,532,21,15 "15."
+a 123,535,14,10 id=up_49329583 href=vote?id=49329583&how=up&goto=news
+a 137,534,365,15 href=https://yucatanmagazine.com/mexico-crackdown-on-coastal-development/
+text 137,534,365,15 "Mexico Crackdown on Coastal Development Underway"
+text 502,536,8,13 "("
+a 509,536,121,13 href=from?site=yucatanmagazine.com
+text 509,536,121,13 "yucatanmagazine.com"
+text 631,536,4,13 ")"
+text 137,551,43,11 "36 points"
+text 180,551,17,11 "by"
+a 198,551,63,11 href=user?id=untiledsource
+text 198,551,63,11 "untiledsource"
+a 264,551,55,11 href=item?id=49329583
+text 264,551,55,11 "2 hours ago"
+text 322,551,6,11 "|"
+a 329,551,20,11 href=hide?id=49329583&goto=news
+text 329,551,20,11 "hide"
+text 349,551,9,11 "|"
+a 358,551,58,11 href=item?id=49329583
+text 358,551,58,11 "6 comments"
+text 102,567,21,15 "16."
+a 123,570,14,10 id=up_49321717 href=vote?id=49321717&how=up&goto=news
+a 137,569,512,15 href=https://rvembedded.com/blog_post/12/
+text 137,569,512,15 "A third world engineer responds to “RISC-V: They should have known better”"
+text 649,571,8,13 "("
+a 657,571,94,13 href=from?site=rvembedded.com
+text 657,571,94,13 "rvembedded.com"
+text 751,571,4,13 ")"
+text 137,586,49,11 "569 points"
+text 186,586,17,11 "by"
+a 204,586,45,11 href=user?id=Narishma
+text 204,586,45,11 "Narishma"
+a 251,586,61,11 href=item?id=49321717
+text 251,586,61,11 "21 hours ago"
+text 316,586,6,11 "|"
+a 322,586,20,11 href=hide?id=49321717&goto=news
+text 322,586,20,11 "hide"
+text 342,586,9,11 "|"
+a 351,586,70,11 href=item?id=49321717
+text 351,586,70,11 "291 comments"
+text 102,602,21,15 "17."
+a 123,605,14,10 id=up_49323474 href=vote?id=49323474&how=up&goto=news
+a 137,604,395,15 href=https://nanochess.org/am29000_c_compiler_web_browser.html
+text 137,604,395,15 "How I developed an Am29000 C compiler and web browser"
+text 532,606,8,13 "("
+a 540,606,78,13 href=from?site=nanochess.org
+text 540,606,78,13 "nanochess.org"
+text 617,606,4,13 ")"
+text 137,621,38,11 "4 points"
+text 174,621,17,11 "by"
+a 192,621,50,11 href=user?id=nanochess
+text 192,621,50,11 "nanochess"
+a 245,621,51,11 href=item?id=49323474
+text 245,621,51,11 "1 hour ago"
+text 298,621,6,11 "|"
+a 304,621,20,11 href=hide?id=49323474&goto=news
+text 304,621,20,11 "hide"
+text 324,621,9,11 "|"
+a 333,621,34,11 href=item?id=49323474
+text 333,621,34,11 "discuss"
+text 102,637,21,15 "18."
+a 123,640,14,10 id=up_49325061 href=vote?id=49325061&how=up&goto=news
+a 137,639,273,15 href=https://reticulum.network/
+text 137,639,273,15 "Reticulum – Decentralized Mesh Network"
+text 410,641,8,13 "("
+a 418,641,97,13 href=from?site=reticulum.network
+text 418,641,97,13 "reticulum.network"
+text 515,641,4,13 ")"
+text 137,656,49,11 "172 points"
+text 186,656,17,11 "by"
+a 204,656,62,11 href=user?id=sudo_cowsay
+text 204,656,62,11 "sudo_cowsay"
+a 268,656,61,11 href=item?id=49325061
+text 268,656,61,11 "14 hours ago"
+text 333,656,6,11 "|"
+a 339,656,20,11 href=hide?id=49325061&goto=news
+text 339,656,20,11 "hide"
+text 359,656,9,11 "|"
+a 368,656,64,11 href=item?id=49325061
+text 368,656,64,11 "59 comments"
+text 102,672,21,15 "19."
+a 123,675,14,10 id=up_49319556 href=vote?id=49319556&how=up&goto=news
+a 137,674,164,15 href=https://platform.claude.com/docs/en/release-notes/system-prompts
+text 137,674,164,15 "Claude: System Prompts"
+text 301,676,8,13 "("
+a 308,676,62,13 href=from?site=claude.com
+text 308,676,62,13 "claude.com"
+text 370,676,4,13 ")"
+text 137,691,49,11 "714 points"
+text 186,691,17,11 "by"
+a 204,691,20,11 href=user?id=tosh
+text 204,691,20,11 "tosh"
+a 227,691,46,11 href=item?id=49319556
+text 227,691,46,11 "1 day ago"
+text 276,691,6,11 "|"
+a 282,691,20,11 href=hide?id=49319556&goto=news
+text 282,691,20,11 "hide"
+text 302,691,9,11 "|"
+a 311,691,70,11 href=item?id=49319556
+text 311,691,70,11 "271 comments"
+text 102,707,21,15 "20."
+a 123,710,14,10 id=up_49326816 href=vote?id=49326816&how=up&goto=news
+a 137,709,169,15 href=https://linear.axler.net/
+text 137,709,169,15 "Linear algebra done right"
+text 306,711,8,13 "("
+a 314,711,47,13 href=from?site=axler.net
+text 314,711,47,13 "axler.net"
+text 360,711,4,13 ")"
+text 137,726,49,11 "146 points"
+text 186,726,17,11 "by"
+a 204,726,38,11 href=user?id=the-mitr
+text 204,726,38,11 "the-mitr"
+a 245,726,55,11 href=item?id=49326816
+text 245,726,55,11 "8 hours ago"
+text 303,726,6,11 "|"
+a 309,726,20,11 href=hide?id=49326816&goto=news
+text 309,726,20,11 "hide"
+text 329,726,9,11 "|"
+a 338,726,64,11 href=item?id=49326816
+text 338,726,64,11 "56 comments"
+text 102,742,21,15 "21."
+a 123,745,14,10 id=up_49325714 href=vote?id=49325714&how=up&goto=news
+a 137,744,366,15 href=https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64
+text 137,744,366,15 "AGI-64 Brings Sierra Adventures to the Commodore 64"
+text 503,746,8,13 "("
+a 510,746,100,13 href=from?site=meanhamster.com
+text 510,746,100,13 "meanhamster.com"
+text 610,746,4,13 ")"
+text 137,761,49,11 "113 points"
+text 186,761,17,11 "by"
+a 204,761,36,11 href=user?id=erickhill
+text 204,761,36,11 "erickhill"
+a 243,761,61,11 href=item?id=49325714
+text 243,761,61,11 "12 hours ago"
+text 307,761,6,11 "|"
+a 313,761,20,11 href=hide?id=49325714&goto=news
+text 313,761,20,11 "hide"
+text 334,761,9,11 "|"
+a 343,761,64,11 href=item?id=49325714
+text 343,761,64,11 "15 comments"
+text 102,777,21,15 "22."
+a 123,780,14,10 id=up_49303380 href=vote?id=49303380&how=up&goto=news
+a 137,779,385,15 href=https://www.outsideonline.com/health/training-performance/running-empty/
+text 137,779,385,15 "The Mysterious Syndrome Destroying Endurance Athletes"
+text 522,781,8,13 "("
+a 529,781,98,13 href=from?site=outsideonline.com
+text 529,781,98,13 "outsideonline.com"
+text 627,781,4,13 ")"
+text 137,796,43,11 "61 points"
+text 180,796,17,11 "by"
+a 198,796,26,11 href=user?id=cwwc
+text 198,796,26,11 "cwwc"
+a 226,796,55,11 href=item?id=49303380
+text 226,796,55,11 "7 hours ago"
+text 285,796,6,11 "|"
+a 291,796,20,11 href=hide?id=49303380&goto=news
+text 291,796,20,11 "hide"
+text 311,796,9,11 "|"
+a 320,796,64,11 href=item?id=49303380
+text 320,796,64,11 "42 comments"
+text 102,812,21,15 "23."
+a 123,815,14,10 id=up_49331033 href=vote?id=49331033&how=up&goto=news
+a 137,814,205,15 href=item?id=49331033
+text 137,814,205,15 "Ask HN: Alternatives to GitHub"
+text 137,831,38,11 "6 points"
+text 174,831,17,11 "by"
+a 192,831,51,11 href=user?id=dhruv3006
+text 192,831,51,11 "dhruv3006"
+a 246,831,73,11 href=item?id=49331033
+text 246,831,73,11 "18 minutes ago"
+text 322,831,6,11 "|"
+a 328,831,20,11 href=hide?id=49331033&goto=news
+text 328,831,20,11 "hide"
+text 348,831,9,11 "|"
+a 357,831,58,11 href=item?id=49331033
+text 357,831,58,11 "3 comments"
+text 102,847,21,15 "24."
+a 123,850,14,10 id=up_49290545 href=vote?id=49290545&how=up&goto=news
+a 137,849,577,15 href=https://support.google.com/photos/thread/256212140/how-do-i-permanently-disable-google-photos-pop-up-prompt-to-backup-my-photos-i?hl=en
+text 137,849,577,15 "How do I permanently disable random Google Photos popup to backup photos? (2024)"
+text 714,851,8,13 "("
+a 721,851,107,13 href=from?site=support.google.com
+text 721,851,107,13 "support.google.com"
+text 828,851,4,13 ")"
+text 137,866,49,11 "178 points"
+text 186,866,17,11 "by"
+a 204,866,22,11 href=user?id=dt3ft
+text 204,866,22,11 "dt3ft"
+a 229,866,61,11 href=item?id=49290545
+text 229,866,61,11 "16 hours ago"
+text 293,866,6,11 "|"
+a 299,866,20,11 href=hide?id=49290545&goto=news
+text 299,866,20,11 "hide"
+text 320,866,9,11 "|"
+a 329,866,70,11 href=item?id=49290545
+text 329,866,70,11 "121 comments"
+text 102,882,21,15 "25."
+a 123,885,14,10 id=up_49286211 href=vote?id=49286211&how=up&goto=news
+a 137,884,323,15 href=https://opscode.io/posts/ptp-grandmaster-cm4-sr1723u10/
+text 137,884,323,15 "Build a Stratum 1 PTP Grandmaster on a Budget"
+text 460,886,8,13 "("
+a 467,886,57,13 href=from?site=opscode.io
+text 467,886,57,13 "opscode.io"
+text 525,886,4,13 ")"
+text 137,901,43,11 "33 points"
+text 180,901,17,11 "by"
+a 198,901,70,11 href=user?id=malcolmfrazier
+text 198,901,70,11 "malcolmfrazier"
+a 271,901,55,11 href=item?id=49286211
+text 271,901,55,11 "6 hours ago"
+text 329,901,6,11 "|"
+a 335,901,20,11 href=hide?id=49286211&goto=news
+text 335,901,20,11 "hide"
+text 355,901,9,11 "|"
+a 364,901,58,11 href=item?id=49286211
+text 364,901,58,11 "8 comments"
+text 102,917,21,15 "26."
+a 123,920,14,10 id=up_49329430 href=vote?id=49329430&how=up&goto=news
+a 137,919,531,15 href=https://www.bgr.com/2233625/who-owns-commodore-retro-brand/
+text 137,919,531,15 "Who Owns Commodore? The Retro PC Brand Still Exists, but a Lot Has Changed"
+text 668,921,8,13 "("
+a 676,921,43,13 href=from?site=bgr.com
+text 676,921,43,13 "bgr.com"
+text 719,921,4,13 ")"
+text 137,936,43,11 "18 points"
+text 180,936,17,11 "by"
+a 198,936,87,11 href=user?id=theanonymousone
+text 198,936,87,11 "theanonymousone"
+a 288,936,55,11 href=item?id=49329430
+text 288,936,55,11 "2 hours ago"
+text 346,936,6,11 "|"
+a 352,936,20,11 href=hide?id=49329430&goto=news
+text 352,936,20,11 "hide"
+text 372,936,9,11 "|"
+a 381,936,53,11 href=item?id=49329430
+text 381,936,53,11 "1 comment"
+text 102,952,21,15 "27."
+a 123,955,14,10 id=up_49325384 href=vote?id=49325384&how=up&goto=news
+a 137,954,199,15 href=https://blog.racket-lang.org/2026/08/rhombus-v1.1.html
+text 137,954,199,15 "Rhombus 1.1 is now available"
+text 336,956,8,13 "("
+a 344,956,81,13 href=from?site=racket-lang.org
+text 344,956,81,13 "racket-lang.org"
+text 425,956,4,13 ")"
+text 137,971,49,11 "104 points"
+text 186,971,17,11 "by"
+a 204,971,63,11 href=user?id=spdegabrielle
+text 204,971,63,11 "spdegabrielle"
+a 270,971,61,11 href=item?id=49325384
+text 270,971,61,11 "13 hours ago"
+text 334,971,6,11 "|"
+a 340,971,20,11 href=hide?id=49325384&goto=news
+text 340,971,20,11 "hide"
+text 360,971,9,11 "|"
+a 369,971,64,11 href=item?id=49325384
+text 369,971,64,11 "30 comments"
+text 102,987,21,15 "28."
+a 123,990,14,10 id=up_49288449 href=vote?id=49288449&how=up&goto=news
+a 137,989,87,15 href=https://en.wikipedia.org/wiki/Gakutensoku
+text 137,989,87,15 "Gakutensoku"
+text 224,991,8,13 "("
+a 231,991,71,13 href=from?site=wikipedia.org
+text 231,991,71,13 "wikipedia.org"
+text 303,991,4,13 ")"
+text 137,1006,43,11 "54 points"
+text 180,1006,17,11 "by"
+a 198,1006,45,11 href=user?id=benbreen
+text 198,1006,45,11 "benbreen"
+a 245,1006,55,11 href=item?id=49288449
+text 245,1006,55,11 "9 hours ago"
+text 304,1006,6,11 "|"
+a 310,1006,20,11 href=hide?id=49288449&goto=news
+text 310,1006,20,11 "hide"
+text 330,1006,9,11 "|"
+a 339,1006,64,11 href=item?id=49288449
+text 339,1006,64,11 "10 comments"
+text 102,1022,21,15 "29."
+a 123,1025,14,10 id=up_49285096 href=vote?id=49285096&how=up&goto=news
+a 137,1024,343,15 href=https://pikuma.com/blog/programming-intel-pentium-mmx-simd
+text 137,1024,343,15 "SIMD in the 90s: Programming Intel's Pentium MMX"
+text 480,1026,8,13 "("
+a 487,1026,65,13 href=from?site=pikuma.com
+text 487,1026,65,13 "pikuma.com"
+text 553,1026,4,13 ")"
+text 137,1041,49,11 "134 points"
+text 186,1041,17,11 "by"
+a 204,1041,31,11 href=user?id=ibobev
+text 204,1041,31,11 "ibobev"
+a 238,1041,61,11 href=item?id=49285096
+text 238,1041,61,11 "19 hours ago"
+text 302,1041,6,11 "|"
+a 309,1041,20,11 href=hide?id=49285096&goto=news
+text 309,1041,20,11 "hide"
+text 329,1041,9,11 "|"
+a 338,1041,64,11 href=item?id=49285096
+text 338,1041,64,11 "58 comments"
+text 102,1057,21,15 "30."
+a 123,1060,14,10 id=up_49330742 href=vote?id=49330742&how=up&goto=news
+a 137,1059,538,15 href=https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/
+text 137,1059,538,15 "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility"
+text 674,1061,8,13 "("
+a 682,1061,69,13 href=from?site=404media.co
+text 682,1061,69,13 "404media.co"
+text 751,1061,4,13 ")"
+text 137,1076,38,11 "8 points"
+text 174,1076,17,11 "by"
+a 192,1076,59,11 href=user?id=amarcheschi
+text 192,1076,59,11 "amarcheschi"
+a 254,1076,73,11 href=item?id=49330742
+text 254,1076,73,11 "32 minutes ago"
+text 330,1076,6,11 "|"
+a 336,1076,20,11 href=hide?id=49330742&goto=news
+text 336,1076,20,11 "hide"
+text 356,1076,9,11 "|"
+a 365,1076,58,11 href=item?id=49330742
+text 365,1076,58,11 "8 comments"
+a 137,1102,33,15 href=?p=2
+text 137,1102,33,15 "More"
+a 450,1144,56,13 href=newsguidelines.html
+text 450,1144,56,13 "Guidelines"
+text 506,1144,10,13 "|"
+a 516,1144,21,13 href=newsfaq.html
+text 516,1144,21,13 "FAQ"
+text 537,1144,10,13 "|"
+a 547,1144,24,13 href=lists
+text 547,1144,24,13 "Lists"
+text 572,1144,10,13 "|"
+a 582,1144,17,13 href=https://github.com/HackerNews/API
+text 582,1144,17,13 "API"
+text 599,1144,10,13 "|"
+a 609,1144,44,13 href=security.html
+text 609,1144,44,13 "Security"
+text 653,1144,10,13 "|"
+a 663,1144,29,13 href=https://www.ycombinator.com/legal/
+text 663,1144,29,13 "Legal"
+text 692,1144,10,13 "|"
+a 702,1144,61,13 href=https://www.ycombinator.com/apply/
+text 702,1144,61,13 "Apply to YC"
+text 763,1144,10,13 "|"
+a 774,1144,41,13 href=mailto:hn@ycombinator.com
+text 774,1144,41,13 "Contact"
+text 528,1175,55,15 "Search:"
+input 583,1172,154,21 type=text name=q value=""

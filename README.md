@@ -16,9 +16,11 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 > you don't need."* Structure is the backbone; pixels are a targeted fallback for
 > the regions structure can't read (games, video, canvas). The whole point is that
 > the boundary between the two is **knowable in advance** — and the campaign showed
-> that it is *not* automatically declared. Five applications returned a view that
+> that it is *not* automatically declared. Six applications returned a view that
 > disagreed with the screen without saying so; a documented router guard converts
-> four of them into explicit declarations, and the fifth is still open. The boundary
+> four of them into explicit declarations, and the other two bound what that guard
+> can do — one is too sparsely painted for its calibration, the other substitutes a
+> wrong string instead of omitting one. The boundary
 > is predictable; making it **explicit is the router's job, not the OS's** — and
 > that job is not finished.
 
@@ -59,28 +61,41 @@ continuous — and, crucially, whether it works *predictably enough to ship*.
 - **The wrong level is the literal GPU stream.** By the Vulkan/Skia layer, text is
   already rasterized to glyph atlases — semantics are gone. The **sweet spot is one
   rung up**: the toolkit render tree / display list / document model.
-- **Safety (the production question) — and the campaign's most important negative
-  result — followed by its partial repair.** Across 67 cells on three OSes, **100%
-  of channels were predictable in advance** from a stack signature. But "never
-  silent" did not survive contact with reality: **5 silent divergences found, 4
-  neutralised, 1 still standing.** Four share one mechanism, *disagreement by
-  omission* — a container node is present, its content is absent, and nothing
-  declares the region opaque (FL Studio/Delphi, OBS/Qt6, rekordbox/JUCE on Windows;
-  Zoom's in-meeting stage on macOS, where an `AXTabGroup` claims 89.6% of the window
-  and holds one 115x22 label). Those four are **caught and declared** by a documented
-  router guard (`src/coverage-guard.mjs`: a pixel spot-check on structure-empty
-  regions plus a self-consistency check needing no pixels), and each keeps a
-  `mitigation` record naming what it was found as, so the finding is preserved
-  rather than edited away.
-  The fifth is different in kind and **the guard cannot catch it**: Java Swing on
-  macOS *substitutes* rather than omits. A label carrying an `accessibleName`
-  publishes that name as its value and the painted text appears in **no attribute of
-  any node** — the channel returns a confident, plausible, wrong string, and a
-  counter whose text advances reads as a constant. The same cell found the first
-  **act-side** silent failure of the campaign: a button that declares zero actions
-  accepts `AXPress` and returns **success** while nothing happens. The honest
-  summary is therefore: **the guard catches omission, not substitution, and it does
-  not watch actions** — two concrete extensions are specified in that cell.
+- **Safety (the production question) — the campaign's most important negative
+  result, its repair, and the two places the repair does not reach.** Across 71
+  cells on three OSes, **100% of channels were predictable in advance** from a stack
+  signature. But "never silent" did **not** survive contact with real apps: **6
+  silent divergences found, 4 neutralised, 2 still standing.**
+
+  Four share one mechanism, *disagreement by omission* — a container node is
+  present, its content is absent, and nothing declares the region opaque: FL Studio/
+  Delphi, OBS/Qt6 and rekordbox/JUCE on Windows, plus Zoom's in-meeting stage on
+  macOS, where an `AXTabGroup` claims 89.6% of the window and holds one 115×22
+  label. That the same shape appears through **two different accessibility APIs on
+  two different OSes** is what makes it a finding rather than a UIA quirk. All four
+  are **caught and declared** by a documented router guard (`src/coverage-guard.mjs`:
+  a pixel spot-check on structure-empty regions, plus a self-consistency check
+  needing no pixels that catches "32 tracks declared, 0 rows exposed"), and each
+  keeps a `mitigation` record naming what it was found as, so the finding is
+  preserved rather than edited away.
+
+  The two survivors matter more than the four repairs, because they bound the
+  repair. **qBittorrent's custom-painted speed graph on Linux is the same omission
+  class, but the guard misses it on calibration**: sparse line-art reads energy
+  0.020 against a 0.03 threshold, where the genuinely-empty control reads 0.000 (a
+  0.01 threshold or an edge metric closes it). **Java Swing on macOS is missed on
+  kind**: it *substitutes* rather than omits — a label carrying an `accessibleName`
+  publishes that name as its value while the painted text appears in **no attribute
+  of any node**, so a counter whose text advances reads as a constant. Guard A only
+  fires where structure is *empty*, and here there is a node with a confident,
+  plausible, wrong string. The same cell found the campaign's first **act-side**
+  silent failure: a button declaring zero actions accepts `AXPress` and returns
+  **success** while nothing happens.
+
+  So the honest form of the safety claim is not "every blind spot is convertible",
+  it is: **the guard catches omission when it is dense enough to see, does not catch
+  substitution, and does not watch actions at all.** Both survivors stay classified
+  `silent` on purpose, and each cell specifies the concrete extension it needs.
   The taxonomy that forces itself on us is **explicit-by-shape vs silent-by-mimicry**:
   a 3D game exposing a 7-node frame-only tree cannot be mistaken for coverage (a
   router computes 0% structural coverage in one walk), whereas named-but-empty panes
@@ -219,23 +234,35 @@ valid channel among several the router chooses from.
 
 ## Status
 
-**All three OSes are covered: 67 cells, schema-valid, 100% predictable in advance,
-5 silent divergences found — 4 neutralised, 1 surviving.** Linux 21, macOS 22,
-Windows 24. The four neutralised ones are custom-drawn or video
-surfaces (FL Studio, OBS, rekordbox, Zoom in-meeting) and the guard that converts
-each into an explicit declaration is the answer to them. The surviving one — Java
-Swing on macOS — is the campaign's sharpest open problem, because it substitutes
-text rather than omitting it and it fakes action success. See `campaign/MATRIX.md`, which reports *surviving* and
-*found-then-declared* as two separate numbers, and each cell's `mitigation` record.
+**All three OSes are covered: 71 cells, schema-valid, 100% predictable in advance,
+6 silent divergences found — 4 neutralised, 2 kept as counter-examples.**
+Linux 25, macOS 22, Windows 24.
+
+The four neutralised are custom-drawn or video surfaces (FL Studio, OBS, rekordbox
+on Windows; Zoom's in-meeting stage on macOS), each carrying its `mitigation`
+record. The two survivors are deliberately left classified `silent`, because each
+bounds the guard in a different way and that boundary is the useful result:
+**qBittorrent's speed graph** (Linux) is the right class but too sparse for the
+shipped calibration — energy 0.020 against a 0.03 threshold, with the genuinely
+empty control at 0.000 on every metric — and **Java Swing** (macOS) is the wrong
+class entirely, substituting a plausible wrong string for the painted text and
+faking action success, which no pixel spot-check on an *empty* region can see. See
+`campaign/MATRIX.md`, which reports *surviving* and *found-then-declared* as two
+separate numbers, and the recalibration and act-guard proposals in the two
+`*-agent-returns.md` files.
 
 The real-web battery has now been run on all three OSes and the result is
-essentially OS-invariant (macOS 0.98x, Windows 0.99x on the ratio of totals) —
-unsurprising, since all three drive the same Chromium, but worth having measured
-rather than assumed.
+essentially OS-invariant (macOS 0.98x, Linux 1.00x, Windows 0.99x on the ratio of
+totals) — unsurprising, since all three drive the same Chromium, but worth having
+measured rather than assumed. The Linux desktop round also exercised AT-SPI in
+session on GTK3 and Qt6 (the old headless `blocked` was a sandbox artifact) and
+closed the native blind click end-to-end on three stacks.
 
-Still open: Tier F toolkits (Qt/Java/Flutter) on macOS, Zoom's in-meeting surfaces,
-and a live specimen for the layered-window occlusion rule on Windows (the rule is
-encoded there but the audited desktop had no layered window to exercise it).
+Still open: the two guard extensions the survivors call for (a lower/edge-based
+energy metric, and an act-side check that re-reads after any action returning
+success); Qt and Flutter on macOS (Java is now done); and a live specimen for the
+layered-window occlusion rule on Windows, where the rule is encoded but the audited
+desktop had no layered window to exercise it.
 
 The write-up is a position paper (arXiv cs.HC/cs.AI) + a blog post; project notes
 live in the attached Claude project.

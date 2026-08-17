@@ -1,0 +1,117 @@
+frame 20,20,1180,760 "qBittorrent v5.1.0"
+filler 20,78,1180,679
+filler 27,81,1168,676
+layered pane 29,83,1164,672
+split pane 29,83,1164,672
+filler 29,83,120,672
+filler 29,83,120,672
+filler 29,83,120,672
+filler 29,83,120,672
+check box 29,86,74,18 "Statut"
+list 29,107,120,261
+list item 29,107,120,18 "Tous (0)"
+list item 29,125,120,18 "En téléchargement (0)"
+list item 29,143,120,18 "En partage (0)"
+list item 29,161,120,18 "Complétés (0)"
+list item 29,179,120,18 "En cours (0)"
+list item 29,197,120,18 "Arrêtés (0)"
+list item 29,215,120,18 "Actifs (0)"
+list item 29,233,120,18 "Inactifs (0)"
+list item 29,251,120,18 "Bloqués (0)"
+list item 29,269,120,18 "Bloqués en envoi (0)"
+list item 29,287,120,18 "Bloqués en réception (0)"
+list item 29,305,120,18 "En vérification (0)"
+list item 29,323,120,18 "En déplacement (0)"
+list item 29,341,120,18 "Erronés (0)"
+check box 29,371,107,18 "Catégories"
+tree 29,392,120,45
+table cell 29,392,120,18 "Toutes (0)"
+table cell 29,410,120,18 "Sans catégorie (0)"
+check box 29,440,105,18 "Étiquettes"
+tree 29,461,120,45
+table cell 29,461,120,18 "Toutes (0)"
+table cell 29,479,120,18 "Sans étiquette (0)"
+check box 29,509,93,18 "Trackers"
+list 29,530,120,99
+list item 29,530,142,18 "Tous (0)"
+list item 29,548,142,18 "Sans tracker (0)"
+list item 29,566,142,18 "Erreur du tracker (0)"
+list item 29,584,142,18 "Autre erreur (0)"
+list item 29,602,142,18 "Avertissements (0)"
+split pane 153,83,1040,672
+tree 153,83,1040,200
+table column header 154,84,100,18 "Nom"
+table column header 254,84,100,18 "Taille"
+table column header 354,84,100,18 "Progression"
+table column header 454,84,100,18 "État"
+table column header 554,84,100,18 "Sources"
+table column header 654,84,100,18 "Pairs"
+table column header 754,84,100,18 "Réception"
+table column header 854,84,100,18 "Envoi"
+table column header 954,84,100,18 "Temps restant estimé"
+table column header 1054,84,100,18 "Ratio"
+table column header 1154,84,100,18 "Catégorie"
+table column header 1254,84,100,18 "Étiquettes"
+table column header 1354,84,100,18 "Disponibilité"
+filler 153,287,1040,468
+layered pane 153,287,1040,434
+filler 153,287,1040,434
+filler 153,287,1040,434
+combo box 996,287,197,22 "Sélectionner les graphiques"
+list item 0,0,707,22 "Sélectionner les graphiques"
+filler 153,312,1040,409
+filler 154,313,1038,407
+label 153,287,61,22 "Période :"
+combo box 217,287,98,22 "5 minutes"
+list item 0,0,707,22 "1 minute"
+list item 0,22,707,22 "5 minutes"
+list item 0,44,707,22 "30 minutes"
+list item 0,66,707,22 "3 heures"
+list item 0,88,707,22 "6 heures"
+list item 0,110,707,22 "12 heures"
+list item 0,132,707,22 "24 heures"
+button 153,726,80,24 "Général"
+button 236,726,80,24 "Trackers"
+button 319,726,80,24 "Pairs"
+button 402,726,110,24 "Sources HTTP"
+button 515,726,80,24 "Contenu"
+button 1113,726,80,24 "Vitesse"
+unknown 153,283,1040,4
+unknown 149,83,4,672
+menu bar 20,20,1180,19
+menu item 26,20,48,19 "Fichier"
+menu item 80,20,50,19 "Edition"
+menu item 136,20,65,19 "Affichage"
+menu item 207,20,43,19 "Outils"
+menu item 256,20,35,19 "Aide"
+tool bar 20,39,1180,39
+button 24,43,32,31 "Ouvrir URL"
+button 57,43,32,31 "Ouvrir"
+button 90,43,32,31 "Retirer"
+filler 123,43,6,31
+button 130,43,32,31 "Démarrer"
+button 163,43,32,31 "Arrêter"
+filler 196,43,6,31
+button 203,43,32,31 "Préférences"
+filler 717,43,479,31
+filler 717,58,14,0
+text 737,47,200,22
+button 741,49,22,18
+label 943,43,66,31 "Filtrer par :"
+combo box 1015,47,181,22 "Nom"
+list item 0,0,707,22 "Nom"
+list item 0,22,707,22 "Répertoire de destination"
+filler 236,58,480,0
+status bar 20,757,1180,23
+unknown 1183,763,17,17
+filler 549,760,627,18
+panel 549,760,3,18
+label 558,760,106,18 "DHT : 225 nœuds"
+panel 670,760,3,18
+button 679,760,22,18
+panel 707,760,3,18
+button 716,760,30,18
+panel 752,760,3,18
+button 761,760,200,18 "0 Oct/s (0 Oct)"
+panel 967,760,3,18
+button 976,760,200,18 "0 Oct/s (0 Oct)"

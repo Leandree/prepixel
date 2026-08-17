@@ -1,6 +1,6 @@
 # Coverage matrix & predictability (aggregated)
 
-67 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
+71 result cells. Legend: ✅ works · 🟡 partial · ⬜ unavailable (structure yields nothing) · ⛔ blocked (OS/env).
 
 ## Coverage matrix
 
@@ -12,11 +12,12 @@
 | linux | Diff-streaming session simulation (the per-session efficiency story) | chromium | cdp | ✅ works | — | 626 | 28,686 | ✅ |
 | linux | Hard-text battery via the CDP structured channel (mirror of macOS AX hard-text) | chromium | cdp | ✅ works | — |  | 1,366 | ✅ |
 | linux | Adversarial round 2: leak audit of our own hardened distiller (mirror+extension of the macOS self-audit) | chromium | cdp | ✅ works | explicit |  | 1,366 | ✅ |
-| linux | Native OS-level blind click driven by structured coordinates | chromium | cdp | 🟡 partial | blocked |  | 1,366 | ✅ |
+| linux | Native OS-level blind click driven by structured coordinates — completed on three stacks (was: partial/blocked in the old sandbox) | chromium | cdp | ✅ works | — |  | 1,365 | ✅ |
 | linux | Precision-vs-pixels duel (20 randomized order-console pages) | chromium | cdp | ✅ works | — | 391 | 1,366 | ✅ |
 | linux | Retina/DPR image-token two-tier replication (mirror of macOS finding) | chromium | cdp | ✅ works | — | 438 | 4,784 | ✅ |
 | linux | Adversarial: occlusion & visibility tricks (the safety-claim stress test) | chromium | cdp | ✅ works | explicit |  | 1,366 | ✅ |
-| linux | Real-web battery + blind navigation (macOS cells) — Linux replication attempt | chromium | cdp | ⛔ blocked | blocked |  |  | ✅ |
+| linux | 16 live public websites in Chromium 148 (6 categories: vitrine, presse, commerce, media, reference, webapp, webapp-canvas) — Linux confirmation run of the macOS cell | chromium | cdp | ✅ works | explicit | 1,372 | 1,366 | ✅ |
+| linux | Blind navigation on 5 live sites in Chromium 148 (Hacker News, Wikipedia, GitHub, MDN, DuckDuckGo) — Linux confirmation run of the macOS cell | chromium | cdp | ✅ works | explicit | 16,654 | 12,294 | ✅ |
 | linux | All-canvas 'game' page (perimeter-law control) | custom-canvas | pixels-baseline | ⬜ unavailable | explicit | 7 | 1,366 | ✅ |
 | linux | GNOME Text Editor — hard-text stress (ligatures, accents, RTL Arabic, emoji, CJK) | gtk4 | render-tree-tap | ✅ works | explicit |  | 1,366 | ✅ |
 | linux | GNOME Calculator 46.3 | gtk4 | accessibility-api | ⛔ blocked | blocked |  | 1,366 | ✅ |
@@ -26,7 +27,10 @@
 | linux | LibreOffice Writer — object-model WRITE path (mirror of macOS Pages read+write) | office-native | object-model | ✅ works | — |  | 1,366 | ✅ |
 | linux | LibreOffice Writer | office-native | object-model | ✅ works | — | 21 | 1,366 | ✅ |
 | linux | Whole desktop — 4 concurrent windows, 4 toolkits (Chromium, GTK4, Qt, LibreOffice) | other | render-tree-tap | ✅ works | explicit | 30 | 3,110 | ✅ |
+| linux | Mousepad 0.6.3 (Xfce text editor, GTK3) | other | accessibility-api | ✅ works | — | 68 | 1,365 | ✅ |
 | linux | Qt Widgets (examples/widgets/calculator) — representative Qt app | qt | render-tree-tap | ⬜ unavailable | explicit |  | 1,366 | ✅ |
+| linux | FeatherPad 1.6.1 (Qt 6.8.2 widgets text editor) | qt | accessibility-api | ✅ works | — | 331 | 1,365 | ✅ |
+| linux | qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView) | qt | accessibility-api | 🟡 partial | ❗SILENT | 960 | 1,365 | ✅ |
 | macos | Finder (system file manager), probe folder with 3 throwaway files | appkit | accessibility-api | ✅ works | — | 4,345 | 1,049 | ✅ |
 | macos | TextEdit — hard-text stress (ligatures, combining accents, CJK, RTL Arabic/Hebrew, bidi, ZWJ emoji) | appkit | accessibility-api | ✅ works | — | 35 | 1,477 | ✅ |
 | macos | Pages 14.x (iWork word processor) | appkit | object-model | ✅ works | — | 21 | 1,285 | ✅ |
@@ -87,7 +91,8 @@ The production-safety question: could a router know the channel in advance, and 
 | bundle com.apple.TextEdit; AXUIElementCreateApplication(pid) returns full window tree (45 nodes) in 41 ms | accessibility-api | ✅ works | explicit |
 | --remote-debugging-port responds on the target process (Electron apps expose the same) | cdp | ✅ works | explicit |
 | n/a | cdp | ✅ works | explicit |
-| CDP responds | cdp | 🟡 partial | blocked |
+| CDP :9223 responds; apps registered on org.a11y bus | cdp | ✅ works | — |
+| http://127.0.0.1:9223/json/version → Chrome/148.0.7778.96, Protocol 1.3 | cdp | ✅ works | explicit |
 | AXUIElementCreateApplication(pid) answers, but see notes: content is LAZY — first shallow probe returned 72 nodes of window chrome only (page text absent) | accessibility-api | 🟡 partial | explicit |
 | http://127.0.0.1:9223/json/version → Chrome/151.0.7922.138, Protocol 1.3 | cdp | ✅ works | explicit |
 | http://127.0.0.1:9231/json/version -> Chrome/151.0.7922.138, Protocol 1.3 | cdp | ✅ works | explicit |
@@ -112,6 +117,7 @@ The production-safety question: could a router know the channel in advance, and 
 | New-Object -ComObject Word.Application -> REGDB_E_CLASSNOTREG 0x80040154 (no Office installed; Excel likewise); no LibreOffice present | object-model | ⛔ blocked | blocked |
 | Dispatch('Word.Application') answers in 10 ms (REGDB check is a registry read — free and a-priori) | object-model | ✅ works | — |
 | libgtk-4.so | libQt5*.so | soffice | chromium binary — one per window | render-tree-tap | ✅ works | explicit |
+| libgtk-3.so.0 mapped; AT-SPI desktop lists 'mousepad' (toolkit gtk); a11y bus auto-activated via D-Bus service org.a11y.Bus | accessibility-api | ✅ works | — |
 | CGWindowListCopyWindowInfo returns 37 on-screen windows front-to-back with pid/owner/rect/layer/alpha; each pid then answers (or refuses) its channel probe | accessibility-api | ✅ works | explicit |
 | csrutil status = enabled; Chrome CodeDirectory flags=0x12a00 (kill, restrict, library-validation, runtime); TextEdit is a platform binary under /System | render-tree-tap | ⛔ blocked | blocked |
 | us.zoom.xos; home window exposes 100+ nodes incl. 3 embedded AXWebArea (hybrid native+web UI) | accessibility-api | ✅ works | — |
@@ -120,6 +126,8 @@ The production-safety question: could a router know the channel in advance, and 
 | n/a | accessibility-api | ✅ works | — |
 | LOGPIXELSX=96, HORZRES=DESKTOPHORZRES=1920x1080 (no DPI virtualization); ImageGrab returns exactly 1920x1080 | pixels-baseline | ✅ works | — |
 | libQt5Gui.so / libQt5Widgets.so mapped (or Qt6 equivalents) | render-tree-tap | ⬜ unavailable | explicit |
+| libQt6Gui.so.6 mapped + QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 exported; AT-SPI desktop lists 'FeatherPad' (toolkit Qt) | accessibility-api | ✅ works | — |
+| AT-SPI desktop lists 'qBittorrent' (toolkit Qt); a priori suspect: the Speed tab hosts a SpeedPlotView (custom QGraphicsView painting) | accessibility-api | 🟡 partial | ❗SILENT |
 | Qt6Widgets.dll / Qt6Svg.dll / Qt6Network.dll mapped in obs64.exe; UIA answers through Qt's QAccessible->UIA bridge with a 185-node tree on first query | accessibility-api | 🟡 partial | explicit |
 | com.apple.clock; window tree 25 nodes with labeled toolbar tabs on first query | accessibility-api | ✅ works | — |
 | otool -L links SwiftUI.framework + AppKit.framework; bundle app.vibeisland.macos; window is kCGWindowLayer 27 (overlay layer, not a normal document window) | accessibility-api | ✅ works | explicit |
@@ -137,9 +145,9 @@ The production-safety question: could a router know the channel in advance, and 
 
 ## Safety verdict
 
-- Cells where structure **works**: 49/67.
-- **Silent divergences surviving** (disqualifying): 1/67 ❗ Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab.
+- Cells where structure **works**: 54/71.
+- **Silent divergences surviving** (disqualifying): 2/71 ❗ qBittorrent 5.1.0 (Qt 6.8.2) — the Linux mirror of the Windows OBS/Qt6 silent cell: standard widgets + one custom-painted surface (SpeedPlotView), Java Swing (Tier F) — the same throwaway SwingProbe the Windows agent used, run on the JetBrains Runtime (OpenJDK 21.0.10) bundled with Android Studio. Direct cross-OS counterpart of windows-swing-jab.
 - Silent divergences **found, then caught-and-declared** by coverage-guard: 4 — Zoom Workplace, FL Studio 2025, OBS Studio 31.0.3, rekordbox 7.0.9 (each cell carries its `mitigation` record)
-- Cells **not** predictable in advance: 0/67 ✅ none
+- Cells **not** predictable in advance: 0/71 ✅ none
 
-Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **Java Swing** (macos). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.
+Reading: the campaign FOUND silent cells — a channel returning a view that disagrees with the screen without declaring it: **qBittorrent 5.1.0** (linux); **Java Swing** (macos). See each cell and the per-OS FINDINGS for the mechanism, the a-priori signature that predicts it, and the router mitigations (WM-map pairing + per-window pixel spot-check). Every other failure is **explicit** or **blocked**, and every channel was detectable from a stack signature before use.

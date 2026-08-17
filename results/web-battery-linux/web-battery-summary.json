@@ -1,0 +1,26 @@
+{
+  "n_sites": 16,
+  "n_ok": 16,
+  "avg_hardened_tokens": 1372,
+  "avg_naive_tokens": 14239,
+  "viewport_shot_tokens": 1366,
+  "avg_ratio_viewport": 1.28,
+  "avg_screens_to_cover": 7.6,
+  "avg_ratio_fullpage": 1.36,
+  "sites_with_consent_banner": [
+    "stripe",
+    "vercel",
+    "youtube-home",
+    "bbc-news",
+    "amazon-fr",
+    "leboncoin"
+  ],
+  "sites_with_canvas_or_video": [
+    "excalidraw",
+    "apple",
+    "stripe",
+    "youtube-home",
+    "youtube-watch",
+    "amazon-fr"
+  ]
+}
