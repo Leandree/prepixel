@@ -1,0 +1,74 @@
+{
+ "n_windows": 39,
+ "map_latency_ms": 32.3,
+ "merged_map_bytes": 3649,
+ "merged_map_tokens": 913,
+ "screen": [
+  1512,
+  982
+ ],
+ "fullscreen_shot_tokens": 1980,
+ "fullscreen_shot_tokens_retina2x": 4784,
+ "channels": {
+  "accessibility-api": 20,
+  "pixels-baseline": 14,
+  "accessibility-api+object-model": 5
+ },
+ "predicted_before_read": "39/39",
+ "occlusion": {
+  "points_probed": 40,
+  "zorder_wrong": 3,
+  "zorder_accuracy": 0.925
+ },
+ "occlusion_disagreements": [
+  {
+   "point": [
+    943,
+    148
+   ],
+   "zorder_owner": "Kestro",
+   "zorder_layer": 1000,
+   "zorder_rect": [
+    382,
+    0,
+    748,
+    264
+   ],
+   "window_server_owner": "Code",
+   "window_server_role": "AXScrollArea"
+  },
+  {
+   "point": [
+    766,
+    228
+   ],
+   "zorder_owner": "Kestro",
+   "zorder_layer": 1000,
+   "zorder_rect": [
+    382,
+    0,
+    748,
+    264
+   ],
+   "window_server_owner": "Code",
+   "window_server_role": "AXScrollArea"
+  },
+  {
+   "point": [
+    756,
+    507
+   ],
+   "zorder_owner": "Code",
+   "zorder_layer": 0,
+   "zorder_rect": [
+    0,
+    33,
+    1512,
+    949
+   ],
+   "window_server_owner": "Kestro",
+   "window_server_role": "AXWindow"
+  }
+ ],
+ "note": "aggregate only; per-window rows and window titles of the user desktop deliberately omitted"
+}

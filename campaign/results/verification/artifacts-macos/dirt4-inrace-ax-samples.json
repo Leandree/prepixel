@@ -1,0 +1,66 @@
+[
+ {
+  "axwindows_err": 0,
+  "n_axwindows": 1,
+  "n_nodes": 1,
+  "roles": {
+   "AXWindow": 1
+  },
+  "nodes_with_text": 1,
+  "child_nodes_with_geometry": 0,
+  "max_depth": 0,
+  "sample_text": [
+   "title=DiRT 4"
+  ],
+  "probe_ms": 26.2,
+  "t": 1.6
+ },
+ {
+  "axwindows_err": 0,
+  "n_axwindows": 1,
+  "n_nodes": 1,
+  "roles": {
+   "AXWindow": 1
+  },
+  "nodes_with_text": 1,
+  "child_nodes_with_geometry": 0,
+  "max_depth": 0,
+  "sample_text": [
+   "title=DiRT 4"
+  ],
+  "probe_ms": 0.8,
+  "t": 3.2
+ },
+ {
+  "axwindows_err": 0,
+  "n_axwindows": 1,
+  "n_nodes": 1,
+  "roles": {
+   "AXWindow": 1
+  },
+  "nodes_with_text": 1,
+  "child_nodes_with_geometry": 0,
+  "max_depth": 0,
+  "sample_text": [
+   "title=DiRT 4"
+  ],
+  "probe_ms": 0.8,
+  "t": 4.8
+ },
+ {
+  "axwindows_err": 0,
+  "n_axwindows": 1,
+  "n_nodes": 1,
+  "roles": {
+   "AXWindow": 1
+  },
+  "nodes_with_text": 1,
+  "child_nodes_with_geometry": 0,
+  "max_depth": 0,
+  "sample_text": [
+   "title=DiRT 4"
+  ],
+  "probe_ms": 0.7,
+  "t": 6.4
+ }
+]

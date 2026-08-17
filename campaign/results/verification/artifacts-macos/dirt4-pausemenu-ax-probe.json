@@ -1,0 +1,66 @@
+{
+ "window": {
+  "wid": 5171,
+  "pid": 69480,
+  "owner": "DiRT 4",
+  "title": "DiRT 4",
+  "rect": [
+   0,
+   0,
+   1512,
+   982
+  ],
+  "layer": 0,
+  "alpha": 1.0,
+  "area": 1484784.0
+ },
+ "ax": {
+  "axwindows_err": 0,
+  "n_axwindows": 1,
+  "window_attributes": [
+   "AXFocused",
+   "AXFullScreen",
+   "AXTitle",
+   "AXChildrenInNavigationOrder",
+   "AXFrame",
+   "AXPosition",
+   "AXGrowArea",
+   "AXMinimizeButton",
+   "AXDocument",
+   "AXSections",
+   "AXCloseButton",
+   "AXMain",
+   "AXActivationPoint",
+   "AXFullScreenButton",
+   "AXProxy",
+   "AXDefaultButton",
+   "AXMinimized",
+   "AXChildren",
+   "AXRole",
+   "AXParent",
+   "AXTitleUIElement",
+   "AXCancelButton",
+   "AXModal",
+   "AXSubrole",
+   "AXZoomButton",
+   "AXRoleDescription",
+   "AXSize",
+   "AXToolbarButton"
+  ]
+ },
+ "n_nodes": 1,
+ "roles": {
+  "AXWindow": 1
+ },
+ "nodes_with_text": 1,
+ "sample_text": [
+  "title=DiRT 4"
+ ],
+ "max_depth": 0,
+ "child_nodes_with_geometry": 0,
+ "screenshot_tokens_window": 1980,
+ "artifacts": {
+  "screen_region": "/private/tmp/claude-501/-Users-leandre-dev-prepixel/b357dd9f-2081-4a28-aa71-45d383d0a8b3/scratchpad/../results/artifacts/macos/dirt-screen-region.png",
+  "window_surface": "/private/tmp/claude-501/-Users-leandre-dev-prepixel/b357dd9f-2081-4a28-aa71-45d383d0a8b3/scratchpad/../results/artifacts/macos/dirt-window-surface.png"
+ }
+}
