@@ -6,7 +6,25 @@ cells, prose in `windows-FINDINGS.md`.
 
 ---
 
-## 2026-08-17 — FYI — SH2 "ownership incident" DOWNGRADED after the manager's review
+## 2026-08-17 — DONE — SH2 menu-vs-gameplay comparison (manager's request), and the incident interpretation SETTLED
+
+Round 2, screenshot-piloted per the manager's suggestion: content-warning ->
+main menu -> CONTINUE -> the manager's save, then measured both states.
+Result: the structured channel is STATE-BLIND in games — 1 identical UIA node
+at warning, menu and live gameplay; the states differ only in pixels (energy
+0.132/0.196/0.447; frame-diff 0.0 vs 0.4%/s idle). The blind navigation
+worked entirely from PrintWindow captures — the vision-fallback regime the
+guard prescribes, demonstrated end-to-end. Game closed via WM_CLOSE, process
+verified gone (manager's rule: close after, kill if needed — WM_CLOSE
+sufficed).
+
+Incident trail closed: the manager confirmed they HAD launched into gameplay
+during the first probe window (v1 was right, v2's downgrade was wrong), and
+round 2 proved it — their save spawns in exactly the office scene captured
+before the first close. Verdict from the manager: harmless. Lesson unchanged,
+now empirically grounded: gate lifecycle actions on GetLastInputInfo.
+
+## 2026-08-17 — FYI (superseded by the entry above) — SH2 "ownership incident" downgraded after the manager's review
 
 The manager pointed out the obvious reading I missed: the SH2 remake renders
 its title/attract sequence in-engine, so the "in-game scene" captured before
