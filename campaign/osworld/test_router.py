@@ -51,18 +51,18 @@ print("router signature:")
 
 # The normal case: a Chromium window with a web document below the toolbar.
 t = tree([app("Chromium", node("document-web", 0, 121, 1920, 959))])
-rect, why = rc._chromium_content_rect(t)
+rect, why, tab = rc._chromium_content_rect(t)
 check(rect == (0, 121, 1920, 959), "finds the content rect of a Chromium",
       (rect, why))
 
 # Google Chrome is the other name the same browser ships under.
 t = tree([app("Google Chrome", node("document-frame", 0, 121, 1920, 959))])
-rect, _ = rc._chromium_content_rect(t)
+rect, _, tab = rc._chromium_content_rect(t)
 check(rect == (0, 121, 1920, 959), "recognises Google Chrome too")
 
 # Not a browser: the router must decline, with a reason.
 t = tree([app("libreoffice-calc", node("document-spreadsheet", 0, 0, 800, 600))])
-rect, why = rc._chromium_content_rect(t)
+rect, why, tab = rc._chromium_content_rect(t)
 check(rect is None and "no chromium" in why,
       "declines on a non-browser window, with a reason", why)
 
@@ -70,13 +70,13 @@ check(rect is None and "no chromium" in why,
 # strip, devtools-only window): decline rather than route into nothing.
 t = tree([app("Chromium", node("document-web", 0, 121, 1920, 959,
                                showing="false"))])
-rect, why = rc._chromium_content_rect(t)
+rect, why, tab = rc._chromium_content_rect(t)
 check(rect is None and "no on-screen web document" in why,
       "declines when the web document is not showing", why)
 
 # Off-screen document (window scrolled off the desktop): also declines.
 t = tree([app("Chromium", node("document-web", 3000, 121, 800, 600))])
-rect, why = rc._chromium_content_rect(t)
+rect, why, tab = rc._chromium_content_rect(t)
 check(rect is None, "declines when the document is off the viewport", why)
 
 # Two windows: the LARGEST on-screen document wins — the small one is a
@@ -84,14 +84,28 @@ check(rect is None, "declines when the document is off the viewport", why)
 t = tree([app("Chromium",
               node("document-web", 0, 121, 1920, 959)
               + node("document-web", 10, 200, 300, 200))])
-rect, _ = rc._chromium_content_rect(t)
+rect, _, tab = rc._chromium_content_rect(t)
 check(rect == (0, 121, 1920, 959), "picks the largest on-screen document")
 
 # Malformed payload must not take the driver down.
-rect, why = rc._chromium_content_rect("<not-xml")
+rect, why, tab = rc._chromium_content_rect("<not-xml")
 check(rect is None and "tree-parse" in why, "survives an unparseable tree", why)
-rect, why = rc._chromium_content_rect("")
+rect, why, tab = rc._chromium_content_rect("")
 check(rect is None, "survives an empty tree", why)
+
+# The selected tab, which is what stops the web channel reading a stale page.
+t = tree([app("Chromium",
+              '<page-tab xmlns:st="%s" st:selected="false" name="Old Tab"/>'
+              '<page-tab xmlns:st="%s" st:selected="true" name="Dota 2 on Steam"/>'
+              % (S, S)
+              + node("document-web", 0, 121, 1920, 959))])
+rect, _, tab = rc._chromium_content_rect(t)
+check(tab == "Dota 2 on Steam", "reports the SELECTED tab, not the first one",
+      repr(tab))
+
+t = tree([app("Chromium", node("document-web", 0, 121, 1920, 959))])
+_, _, tab = rc._chromium_content_rect(t)
+check(tab == "", "no selected tab -> empty needle, channel falls back", repr(tab))
 
 print("\ngeometric composition:")
 box = (0, 121, 1920, 959)

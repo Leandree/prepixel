@@ -155,6 +155,42 @@ const cbLine = find((r) => r.role === 'check-box' &&
 check(/^check-box \d+,\d+,\d+,\d+.* state=checked:true$/.test(cbLine),
       'state string matches _state_str spelling', cbLine);
 
+// ---------------------------------------------------- tab selection (P1 bug)
+// Dev iteration 2: the web channel read the PREVIOUS tab's page for ten
+// straight steps after the model navigated, because more than one page
+// reported visibilityState 'visible' and the first one won. The AT-SPI tab
+// title is the authority; this reproduces the two-page situation and checks
+// the needle decides.
+console.log('\ntab selection:');
+const second = await browser.newPage();
+await second.goto('data:text/html,<title>The Other Tab</title><h1>other</h1>');
+await second.bringToFront();
+
+const pick = (needle) => JSON.parse(execFileSync('node', [
+  path.join(HERE, 'cdp_view.mjs'),
+  '--endpoint', `http://127.0.0.1:${PORT}`,
+  ...(needle ? ['--title-needle', needle] : []),
+], { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }));
+
+const p1 = pick('Fixture');
+check(p1.meta.title === 'Fixture',
+      'the tab named by AT-SPI is the one read, even when another is in front',
+      `${p1.meta.title} via ${p1.meta.picked_by}`);
+check(p1.meta.picked_by === 'title-exact', 'and it was picked by title',
+      p1.meta.picked_by);
+
+// Chrome decorates titles (" - Memory usage - 127 MB"), so a partial match
+// has to work or the needle would silently fall through to the old path.
+const p2 = pick('Fixture - Memory usage - 127 MB');
+check(p2.meta.title === 'Fixture', 'a decorated tab title still matches',
+      `${p2.meta.title} via ${p2.meta.picked_by}`);
+
+const p3 = pick('No Such Tab Anywhere');
+check(p3.ok && p3.meta.picked_by === 'visible',
+      'an unmatched needle falls back to visibility, and says so',
+      p3.meta.picked_by);
+await second.close();
+
 // Chrome must survive the visit — the driver calls this every step.
 const stillAlive = await page.evaluate(() => 1 + 1).catch(() => null);
 check(stillAlive === 2, 'the page survives cdp_view disconnecting');

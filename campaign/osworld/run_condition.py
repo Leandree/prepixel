@@ -103,21 +103,33 @@ def _chromium_content_rect(tree_xml):
     largest such rect is the content area, everything outside it is browser
     chrome and stays on AT-SPI.
 
-    Returns (rect, app_name) or (None, reason) so the reason can be logged —
-    a router that silently declines is indistinguishable from one that never
-    ran.
+    Also returns the SELECTED TAB's title, because the DOM side cannot be
+    trusted to know which tab the user is looking at: measured on
+    chrome-121ba48f-B in dev iteration 2, the web channel read the previous
+    tab's page for ten consecutive steps after the model navigated, since
+    `document.visibilityState` reported 'visible' for more than one page.
+    The router already trusts this tree to say which window is a browser; it
+    trusts the same tree to say which tab is in front.
+
+    Returns (rect, app_name_or_reason, tab_title) so a decline can be
+    logged — a router that silently declines is indistinguishable from one
+    that never ran.
     """
     try:
         root = ET.fromstring(tree_xml or "<desktop-frame/>")
     except Exception as e:
-        return None, "tree-parse: %s" % str(e)[:80]
-    best, app_seen = None, None
+        return None, "tree-parse: %s" % str(e)[:80], ""
+    best, app_seen, tab = None, None, ""
     for app in root.iter("application"):
         name = (app.get("name") or "").strip().lower()
         if not any(c in name for c in CHROMIUM_APPS):
             continue
         app_seen = name
         for node in app.iter():
+            if node.tag == "page-tab" and distill_osworld._get(
+                    node, distill_osworld.NS_STATE, "selected",
+                    "false") == "true":
+                tab = (node.get("name") or "").strip() or tab
             if node.tag not in WEB_DOC_ROLES:
                 continue
             if distill_osworld._position(node, VW, VH) != "on":
@@ -126,9 +138,9 @@ def _chromium_content_rect(tree_xml):
             if w * h > 0 and (best is None or w * h > best[2] * best[3]):
                 best = (x, y, w, h)
     if best:
-        return best, app_seen
+        return best, app_seen, tab
     return None, ("no on-screen web document in %r" % app_seen
-                  if app_seen else "no chromium application in the tree")
+                  if app_seen else "no chromium application in the tree"), tab
 
 
 def _cost_accounting(out, model):
@@ -612,7 +624,7 @@ class Driver:
         get a better channel would hand condition B an environment condition
         A never had, which would not be a measurement any more.
         """
-        rect, why = _chromium_content_rect(tree)
+        rect, why, tab = _chromium_content_rect(tree)
         mech["channel"] = "atspi"
         if rect is None:
             mech["cdp"] = {"used": False, "reason": why}
@@ -627,7 +639,8 @@ class Driver:
             p = subprocess.run(
                 ["node", os.path.join(HERE, "cdp_view.mjs"),
                  "--endpoint", "http://localhost:%d" % port,
-                 "--offset", "%d,%d" % (x, y)],
+                 "--offset", "%d,%d" % (x, y)]
+                + (["--title-needle", tab] if tab else []),
                 capture_output=True, text=True, timeout=CDP_TIMEOUT)
             out = json.loads(p.stdout or "{}")
         except Exception as e:
@@ -660,7 +673,11 @@ class Driver:
                        "url": out.get("meta", {}).get("url", "")[:200],
                        "scroll": out.get("meta", {}).get("scroll"),
                        "scroll_height": out.get("meta", {}).get(
-                           "scrollHeight")}
+                           "scrollHeight"),
+                       "picked_by": out.get("meta", {}).get("picked_by"),
+                       "tab": tab,
+                       "picked_title": out.get("meta", {}).get(
+                           "picked_title")}
         skipped = out.get("meta", {}).get("offscreen_skipped", 0)
         if skipped:
             # No silent caps — the AT-SPI channel already declares its

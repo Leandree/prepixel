@@ -43,6 +43,9 @@ const arg = (k, d) => {
 const ENDPOINT = arg('--endpoint', 'http://localhost:9222');
 const [OFFX, OFFY] = arg('--offset', '0,0').split(',').map(Number);
 const URL_NEEDLE = arg('--url-needle', '');
+// Title of the tab AT-SPI reports as selected. This is the authority on
+// which page is on screen; visibilityState is not (see pickPage).
+const TITLE_NEEDLE = arg('--title-needle', '');
 const MAX_OFFSCREEN = Number(arg('--max-offscreen', '60'));
 const CONNECT_TIMEOUT = Number(arg('--timeout-ms', '8000'));
 
@@ -371,9 +374,36 @@ async function main() {
       } catch (e) { /* target gone mid-enumeration */ }
       cands.push({ page: p, url, title, visible: vis === 'visible' });
     }
-    let pick = cands.find((c) => c.visible &&
-      (!URL_NEEDLE || c.url.includes(URL_NEEDLE)));
-    if (!pick) pick = cands.find((c) => c.visible) || cands[0];
+    // Page selection, most authoritative first. visibilityState alone was
+    // WRONG: in dev iteration 2 two pages reported 'visible' at once and
+    // this picked the stale one for ten straight steps while the model kept
+    // saying the view did not match the tab it had opened. The AT-SPI tab
+    // title is the ground truth for what is on screen, so it leads.
+    const norm = (s) => (s || '').replace(/\s+/g, ' ').trim().toLowerCase();
+    const needle = norm(TITLE_NEEDLE);
+    let pick = null, how = '';
+    if (needle) {
+      pick = cands.find((c) => norm(c.title) === needle);
+      how = pick ? 'title-exact' : '';
+      if (!pick) {
+        // Chrome decorates tab titles (" - Memory usage - 127 MB", audio
+        // markers), so containment either way is the honest comparison.
+        pick = cands.find((c) => {
+          const t = norm(c.title);
+          return t && (needle.includes(t) || t.includes(needle));
+        });
+        how = pick ? 'title-partial' : '';
+      }
+    }
+    if (!pick && URL_NEEDLE) {
+      pick = cands.find((c) => c.url.includes(URL_NEEDLE));
+      how = pick ? 'url-needle' : '';
+    }
+    if (!pick) {
+      pick = cands.find((c) => c.visible);
+      how = pick ? 'visible' : '';
+    }
+    if (!pick) { pick = cands[0]; how = 'first'; }
 
     const { records, meta } = await pick.page.evaluate(inPage, MAX_OFFSCREEN);
     for (const r of records) {
@@ -384,6 +414,11 @@ async function main() {
       r.line = r.line.replace(/^(\[pixels\] \S+|\S+) \S+/, (m, head) =>
         `${head} ${bs}`);
     }
+    meta.picked_by = how;
+    meta.tab_needle = TITLE_NEEDLE;
+    // A partial or fallback match is not an error, but it must be visible:
+    // silently reading the wrong tab is exactly the failure this replaced.
+    meta.picked_title = pick.title;
     console.log(JSON.stringify({
       ok: true, meta, records,
       pages: cands.map((c) => ({ url: c.url, title: c.title,

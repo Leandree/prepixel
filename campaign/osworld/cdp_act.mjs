@@ -121,13 +121,31 @@ async function main() {
   try {
     const pages = [];
     for (const c of browser.contexts()) for (const p of c.pages()) pages.push(p);
+    // Find the page the VIEW ran on, by asking which one is holding the
+    // handle. The handles are self-identifying, so this needs no needle and
+    // cannot drift from the view the way a second selection heuristic would.
+    //
+    // The earlier version picked by document.visibilityState, the same
+    // mistake the view side made: in dev iteration 2 two pages reported
+    // 'visible' and the stale one won. Here it would have been safe but
+    // useless — the wrong page has no __prepixel, so the action would have
+    // reported stale-handle and fallen to the pointer on every web click.
     let target = null;
     for (const p of pages) {
       try {
-        if (URL_NEEDLE && !p.url().includes(URL_NEEDLE)) continue;
-        const vis = await p.evaluate(() => document.visibilityState);
-        if (vis === 'visible') { target = p; break; }
-      } catch (e) { /* target gone */ }
+        const has = await p.evaluate(
+          (h) => !!(window.__prepixel && window.__prepixel[h]), HANDLE);
+        if (has) { target = p; break; }
+      } catch (e) { /* target gone mid-enumeration */ }
+    }
+    if (!target) {
+      for (const p of pages) {
+        try {
+          if (URL_NEEDLE && !p.url().includes(URL_NEEDLE)) continue;
+          const vis = await p.evaluate(() => document.visibilityState);
+          if (vis === 'visible') { target = p; break; }
+        } catch (e) { /* target gone */ }
+      }
     }
     if (!target) target = pages[0];
     if (!target) {
