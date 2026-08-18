@@ -54,7 +54,12 @@ TASKS = os.path.join(HERE, "tasks-dev.json")
 # Everything the driver reads at import or run time. prompt-template.md is in
 # the list because it IS the experiment's frozen text.
 PINNED = ("run_condition.py", "distill-osworld.py", "answer_loop.py",
-          "prompt-template.md", "judge-crop.mjs")
+          "prompt-template.md", "judge-crop.mjs",
+          # The web channel. Left out of the first version of this list, and
+          # the router would then have been silently absent from a pinned
+          # iteration while the code said it was there — the exact failure
+          # the pin is supposed to prevent.
+          "cdp_view.mjs", "cdp_act.mjs")
 
 # A fresh DesktopEnv boot is the one moment two workers genuinely compete
 # (image start, VM boot, server handshake). Staggering the second worker
@@ -84,6 +89,19 @@ def pin_driver(runs):
     os.makedirs(d, exist_ok=True)
     for f in PINNED:
         shutil.copy2(os.path.join(HERE, f), os.path.join(d, f))
+    # Node resolves a bare ESM import by walking node_modules up from the
+    # IMPORTING FILE, and the pinned copy lives outside the repo — so
+    # `import 'playwright-core'` finds nothing there. Verified: it raised
+    # ERR_MODULE_NOT_FOUND. A symlink fixes it for every future dependency
+    # without hard-coding repo paths into the sources.
+    link = os.path.join(d, "node_modules")
+    if not os.path.exists(link):
+        try:
+            os.symlink(os.path.join(os.path.dirname(HERE), "..",
+                                    "node_modules"), link)
+        except OSError as e:
+            say("WARNING: could not link node_modules (%s); JS channels "
+                "will fail on the pinned copy" % e)
     head = subprocess.run(["git", "-C", HERE, "rev-parse", "HEAD"],
                           capture_output=True, text=True).stdout.strip()
     dirty = subprocess.run(["git", "-C", HERE, "status", "--porcelain"] +
