@@ -47,6 +47,25 @@ import time
 CALL_TIMEOUT = 420          # s per answer; a stuck call ends the step
 MAX_ATTEMPTS = 3            # unparseable reply -> fresh process, same prompt
 
+# This host answers on a Claude Max SUBSCRIPTION, with overflow billing off:
+# when the account's limit is reached the call is refused, it does not
+# silently become pay-as-you-go. A refusal is an infrastructure fact about
+# the host, not the model failing the task, and burning MAX_ATTEMPTS on it
+# would turn one refusal into three and then into a "task failure". The loop
+# raises a marker the driver reads, and the cell is recorded infra_failure.
+RATE_LIMIT_MARKS = ("rate limit", "rate_limit", "429", "usage limit",
+                    "quota", "resets at", "too many requests")
+
+
+def looks_rate_limited(info, reply):
+    if str(info.get("api_error_status") or "") == "429":
+        return "api_error_status=429"
+    hay = ((info.get("stderr") or "") + " " + (reply or "")[:500]).lower()
+    for m in RATE_LIMIT_MARKS:
+        if m in hay:
+            return m
+    return None
+
 
 def extract_action(text):
     """First JSON object in the reply that carries an "action" key."""
@@ -153,6 +172,20 @@ def main():
             action = extract_action(raw)
             if action is not None:
                 break
+            # Only now: a call that returned a usable action cannot have been
+            # refused, and testing the reply text unconditionally would trip
+            # on a task that asks the model to TYPE "429" or "rate limit"
+            # into a document — discarding a good cell as infrastructure.
+            hit = looks_rate_limited(info, raw)
+            if hit:
+                meta["rate_limited"] = hit
+                json.dump(meta, open(os.path.join(sd, "answer-meta.json"), "w"),
+                          indent=1)
+                open(os.path.join(sd, "answer.txt"), "w").write(raw)
+                open(os.path.join(args.run, "RATE_LIMITED"), "w").write(
+                    f"step {step}, attempt {attempt}: {hit}")
+                print(f"step {step}: rate limited ({hit}) — stopping the cell")
+                return
             print(f"step {step}: no JSON in reply, attempt {attempt}")
 
         open(os.path.join(sd, "answer.txt"), "w").write(raw)
