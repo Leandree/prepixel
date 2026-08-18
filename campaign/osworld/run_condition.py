@@ -357,7 +357,47 @@ def _run():
                         "method": "EditableText.setTextContents"
                                   + ("+" + committed if committed else "")}
             except Exception as e:
-                return {"ok": False, "err": "no-settable-interface: %s" % e}
+                # Python 3 unbinds the exception name at the end of the
+                # block; keep the message for the final report.
+                settable_err = str(e)
+            # P7, from the dev-set fallback log: `no-settable-interface`
+            # fired 5 times, and the case behind it was a chrome://flags
+            # dropdown asked to become "Disabled". A combo-box has no
+            # settable text and no numeric value — its value IS which child
+            # is selected. Generic by interface: Selection, matching the
+            # child by its name.
+            try:
+                sel = acc.querySelection()
+                want = str(VALUE).strip().lower()
+                for i in range(acc.childCount):
+                    ch = acc.getChildAtIndex(i)
+                    if (ch.name or "").strip().lower() == want:
+                        if sel.selectChild(i):
+                            return {"ok": True,
+                                    "method": "Selection.selectChild(name)"}
+                        break
+                # A collapsed combo-box often keeps its options one level
+                # down, in a menu/list child that is the real Selection.
+                for i in range(acc.childCount):
+                    kid = acc.getChildAtIndex(i)
+                    try:
+                        ksel = kid.querySelection()
+                    except Exception:
+                        continue
+                    for j in range(kid.childCount):
+                        gc = kid.getChildAtIndex(j)
+                        if (gc.name or "").strip().lower() == want:
+                            if ksel.selectChild(j):
+                                return {
+                                    "ok": True,
+                                    "method": "Selection.selectChild(child)"}
+                            break
+                return {"ok": False,
+                        "err": "no-option-named: %r" % str(VALUE)[:40]}
+            except Exception:
+                pass
+            return {"ok": False,
+                    "err": "no-settable-interface: %s" % settable_err}
         if VERB in ("click", "toggle"):
             if P["text_input"]:
                 # On a text field, AT-SPI's "activate" means SUBMIT, not
@@ -384,7 +424,13 @@ def _run():
             try:
                 ai = acc.queryAction()
                 names = [ai.getName(i).lower() for i in range(ai.nActions)]
-                for pref in ("click", "press", "toggle", "activate", "jump"):
+                # `dodefault` leads because the dev-set log says so: Chrome
+                # exposes exactly ['doDefault', 'showContextMenu'] on its web
+                # content nodes, and without it rung 1 declined on every one
+                # of them. It is also the AT-SPI action that MEANS "do the
+                # thing this element does", so it belongs first on merit.
+                for pref in ("dodefault", "click", "press", "toggle",
+                             "activate", "jump"):
                     if pref in names:
                         done = ai.doAction(names.index(pref))
                         if done:
