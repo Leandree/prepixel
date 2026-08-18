@@ -1128,7 +1128,37 @@ def main():
     env = DesktopEnv(provider_name="docker", os_type="Ubuntu",
                      action_space="pyautogui", headless=True,
                      require_a11y_tree=(args.condition == "B"))
-    obs = env.reset(task_config=task)
+    try:
+        obs = env.reset(task_config=task)
+    except Exception as e:
+        # A setup that cannot run is a fact about the cell, and a cell with
+        # no result.json is indistinguishable from one that was never
+        # launched. Measured on the dev set: two multi_apps tasks need Google
+        # Drive credentials this host does not have, and they failed leaving
+        # nothing behind. Write the record, then get out.
+        json.dump({
+            "task_id": args.task_id, "domain": args.domain,
+            "condition": args.condition,
+            "model": os.environ.get("CAMPAIGN_MODEL", "UNSET"),
+            "driver": "v3-dev", "phase": args.phase,
+            "driver_commit": _git_head(),
+            "success": False, "score_raw": None, "steps": 0,
+            "termination": "setup_error", "wall_clock_s": round(
+                time.time() - t0, 1),
+            "infra_failure": True,
+            "notes": "env.reset failed before step 1: %s" % str(e)[:400],
+            "actions": [],
+        }, open(os.path.join(args.out, "result.json"), "w"), indent=1)
+        open(os.path.join(args.out, "CURRENT_STEP"), "w").write("FINISHED")
+        try:
+            env.close()
+        except Exception:
+            pass
+        print(json.dumps({"task_id": args.task_id,
+                          "condition": args.condition,
+                          "termination": "setup_error",
+                          "infra_failure": True}))
+        return
     drv = Driver(env, args.condition, args.out)
     if args.condition == "B":
         drv.probe_platform()
