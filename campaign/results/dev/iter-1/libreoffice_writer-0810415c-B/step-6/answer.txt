@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e51","memo":"Para1 now double-spaced (height 74->129). Just clicked into para2 ('A novel may have any number of climaxes...'). NEXT: click Line Spacing button (e143) then 'Spacing: 2'. Then ctrl+s and choose 'Use Word 2007-365!' to keep format."}
+```

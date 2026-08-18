@@ -1,0 +1,5 @@
+The palette is open. Red is in the bright-colors row (row 2), 5th swatch.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1616, 447)", "memo": "Clicked Red (row2,col5 @1616,447) in Font Color palette for slide1 slide-number frame 'Google Shape;276;p1' (was selected as object, so applies to all its text). NEXT: verify the '1' at (1434,967) is red. If yes, likely need to repeat for all 15 slides (Tab-select number frame per slide) - or check if only slide1 matters."}
+```

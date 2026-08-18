@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+shift+down", "memo": "Extended selection down one paragraph: covers para2 either way (if click into para2 worked -> selects para2; if old para1 selection persisted -> now spans para1+para2). NEXT: click e143 Line Spacing, then 'Spacing: 2'; verify para2 height goes 74->~92; then ctrl+s and 'Use Word 2007-365!'."}

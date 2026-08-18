@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "Playlist pane confirmed: 'Play and exit' is UNCHECKED (desired). Just clicked Save (1210,903) to persist vlcrc. Next: verify dialog closed / prefs saved. If needed, reopen Tools>Preferences>All>Playlist to confirm 'Play and exit' still unchecked, then DONE."}
+```

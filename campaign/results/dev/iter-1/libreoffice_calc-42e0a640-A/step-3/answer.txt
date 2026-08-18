@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.click(902, 557); time.sleep(2)", "memo": "NetIncome.xlsx Sheet1: A1='Revenue' B1='Total Expenses', data rows 2-20. Clicked Tools>Macros>Edit Macros to open Basic IDE. Next: click in code editor area (~center, e.g. 900,600), Ctrl+A, type macro: create Sheet2, A1='Total Revenue', B1='Total Expenses', A2=sum(A2:A20), B2=sum(B2:B20), then doc.store(); press F5 to run."}
+```

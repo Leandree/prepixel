@@ -1,0 +1,1 @@
+{"action": "click", "target": "e75", "memo": "'All' shows checked but panel still renders Simple Preferences widgets after a wait; clicking All again to force the advanced view. If still Simple next step, click 'Simple' (e74) then 'All' to force the toggle. Goal: Playlist section -> uncheck 'Play and exit' -> Save."}

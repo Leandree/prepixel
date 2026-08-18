@@ -1,0 +1,7 @@
+The Dota 2 store page loaded. Now I need to scroll down to find the DLC section.
+
+```json
+{"action": "import pyautogui, time; pyautogui.moveTo(960, 700); pyautogui.scroll(-12); time.sleep(1.5)"}
+```
+
+{"action": "import pyautogui, time; pyautogui.moveTo(960, 700); pyautogui.scroll(-12); time.sleep(1.5)", "memo": "Step5: Dota 2 store page (app/570) loaded, no age gate. Scrolled down ~12 notches looking for 'Downloadable Content for this game' / 'Content For This Game' section. Next: keep scrolling until DLC list visible, then click each 'Add to Cart' button (there may be a 'Add all DLC to Cart' button)."}

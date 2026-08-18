@@ -1,0 +1,1 @@
+{"action": "click", "target": "e143", "memo": "Selection = para1+para2 (545 chars = 349+196), confirmed by status bar (lags one step). Dropdown should now be open: click 'Spacing: 2' (was at 1398,246). Then verify e51 height grows 74->~92 (3 lines double); then ctrl+s and 'Use Word 2007-365!'."}

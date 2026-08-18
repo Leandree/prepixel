@@ -1,0 +1,18 @@
+Verified against the spreadsheet data. Words/day (G ÷ H, and I confirms):
+
+| Book | Words | Days | Words/day |
+|---|---|---|---|
+| Fire and Blood | 211094 | 44 | 4797.6 |
+| Song of Solomon | 101062 | 48 | 2105.5 |
+| The Lost Symbol | 152191 | 66 | 2305.9 |
+| 2001: A Space Odyssey | 88803 | 23 | 3861.0 |
+| American Gods | 189865 | 50 | 3797.3 |
+| **Out of the Silent Planet** | 47840 | 36 | **1328.9** ← slowest |
+| The Andromeda Strain | 97773 | 30 | 3259.1 |
+| Brave New World | 80132 | 19 | 4217.5 |
+| Silence | 65481 | 33 | 1984.3 |
+| The Shining | 148603 | 6 | 24767.2 |
+
+I independently checked the day spans (8/25→9/30 = 36 days) and the division. "Out of the Silent Planet" is the slowest by a wide margin (1329 vs 1984 next). The text typed earlier is correct — now confirmed rather than assumed. Switching to Writer to ensure it's saved.
+
+{"action": "import pyautogui; pyautogui.click(35, 337); pyautogui.sleep(2); pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(1.5)", "memo": "VERIFIED from spreadsheet: Out of the Silent Planet = 47840 words/36 days = 1328.9 wpd, lowest (next: Silence 1984.3). Doc book_list_result.docx already contains that exact text (5 words, 24 chars) + a stray empty 2nd paragraph. Just pressed Ctrl+S in Writer. NEXT: if 'Keep current format' dialog is shown, press Enter (Use Word!); if no dialog, doc is saved -> DONE."}

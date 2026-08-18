@@ -1,0 +1,5 @@
+The color profile dialog is now dismissed and the image is loaded. Opening the Filters menu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(475, 77)", "memo": "Step 4: Dialog gone, image loaded. Clicked Filters menu (475,77). Next: hover/click 'Light and Shadow' submenu in the dropdown, then click 'Vignette...'. Verify menu opened in next screenshot before clicking blindly."}
+```

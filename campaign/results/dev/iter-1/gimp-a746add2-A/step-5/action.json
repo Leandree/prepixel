@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(535, 266)", "memo": "Step 5: Filters menu open; clicked 'Light and Shadow' (535,266). Next: submenu should appear to the right (~x 760-900); find 'Vignette...' entry and click it. Verify submenu in screenshot before clicking."}

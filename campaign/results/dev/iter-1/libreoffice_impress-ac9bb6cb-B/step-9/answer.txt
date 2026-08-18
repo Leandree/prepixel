@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e14","memo":"Clicked Start in Document Recovery to recover saa-format-guide.pptx. NEXT: wait for recovery to finish, close recovery summary (Finish), then in Impress use View>Master Slide (or Insert>Header&Footer? no) -> select slide-number placeholder in master, select all text, Format>Character>Font Color=Red. AVOID Basic IDE New (crashed)."}
+```

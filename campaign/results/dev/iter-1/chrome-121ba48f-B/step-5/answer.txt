@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e143","memo":"Steam Dota 2 store page IS loaded (breadcrumb Dota 2, tab 'Dota 2 on Steam'). Just clicked 'Reject All' on cookie banner to dismiss it (it overlays bottom of page). NEXT: scroll down repeatedly to the 'Downloadable Content for Dota 2' section and click 'Add all DLC to Cart' button."}
+```

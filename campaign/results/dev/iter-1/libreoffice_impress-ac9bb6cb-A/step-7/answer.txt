@@ -1,0 +1,5 @@
+All 15 slides now show a red slide number (slide 15 confirmed, thumbnails consistent). Saving in PowerPoint format.
+
+```json
+{"action": "import pyautogui, time\npyautogui.press('escape'); time.sleep(0.5)\npyautogui.hotkey('ctrl', 's'); time.sleep(2.0)\npyautogui.press('enter'); time.sleep(1.5)", "memo": "All 15 slides' numbers set to red. Just pressed Esc -> Ctrl+S -> Enter (Use PowerPoint Format!). NEXT: verify no dialog remains and title bar has no modified marker; if dialog still open, press Enter again. Then DONE."}
+```

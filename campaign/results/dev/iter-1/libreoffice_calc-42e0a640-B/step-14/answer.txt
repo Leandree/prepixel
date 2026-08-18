@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"Total Revenue\tTotal Expenses\n=SUM(Sheet1.A2:A1000)\t=SUM(Sheet1.B2:B1000)\n","memo":"Typed headers into A1:B1 and SUM formulas into A2:B2 of Sheet2 (cursor was at A1, selection collapsed). Junk remains at C2:D3 (headers+sums) - no steps left to clear. STEP15: key ctrl+s to save; if Keep-current-format dialog appears it would need enter but no steps remain."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.click(1890, 139); time.sleep(0.6); pyautogui.click(500, 90); time.sleep(0.4); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('chrome://settings/appearance'); time.sleep(0.3); pyautogui.press('enter')", "memo": "Step2 nav failed (still New Tab). Closed 'Can't update Chrome' bubble, clicked omnibox at (500,90), typed chrome://settings/appearance + Enter. Next: verify Appearance page loaded, then click 'Light' under Mode."}
+```

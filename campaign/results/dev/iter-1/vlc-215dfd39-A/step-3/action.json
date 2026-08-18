@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(637, 898)", "memo": "Clicked 'All' radio in Simple Preferences to show Advanced Preferences tree. Next: in left tree expand Interface -> Main interfaces -> click 'Qt', then uncheck 'Display background cone or art' (qt-bgcone) on right pane, then click Save (~1210,903). Can also type 'cone' in the search box at top of advanced prefs."}

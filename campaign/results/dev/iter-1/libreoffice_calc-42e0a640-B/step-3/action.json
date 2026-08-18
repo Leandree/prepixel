@@ -1,0 +1,1 @@
+{"action": "click", "target": "e33", "memo": "Add button (tab bar) not working; using Sheet menu. Next: choose 'Insert Sheet at End...' (or 'Insert Sheet...'), accept name Sheet2 with Enter. Then Name Box->A1, type 'Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A2:A20)\\t=SUM(Sheet1.B2:B20)\\n', then Ctrl+S + Keep current format."}

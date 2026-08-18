@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e11","memo":"Verifying e11 output shows '[qt]' line then 'qt-bgcone=0' in ~/.config/vlc/vlcrc. If confirmed -> done (do NOT reopen VLC Preferences; VLC would rewrite the file). If the [qt] header is missing or grep printed nothing, retry the printf append."}
+```

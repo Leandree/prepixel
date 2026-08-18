@@ -1,0 +1,1 @@
+{"action": "click", "target": "e106", "memo": "Clicked 'Match all messages' radio. NEXT: set_value combo e116 (currently 'Move Message to') := 'Forward Message to', then type anonym-x2024@gmail.com into the field right of it (~x=1035,y=680), then click OK (e121). Verify name entry still 'Forward to gmail'."}

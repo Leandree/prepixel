@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+shift+down", "memo": "Caret was in para1; extended selection to start of next para. Next: shift+down twice to reach into para2 text, then click 'Line Spacing' toolbar button (e147) and pick Double Spacing. Do NOT use ctrl+2 (=Heading 2 in Writer). Then ctrl+s and Enter to Keep current format."}

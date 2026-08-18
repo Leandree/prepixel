@@ -1,0 +1,5 @@
+Confirmed: slide 1's number is still black while the fix worked elsewhere. Applying red to the actually-selected field text now.
+
+```json
+{"action": "import pyautogui, time\npyautogui.press('escape'); time.sleep(0.4)\npyautogui.tripleClick(1441, 942); time.sleep(0.8)\npyautogui.hotkey('ctrl', 'a'); time.sleep(0.6)\npyautogui.click(1575, 328); time.sleep(1.0)\npyautogui.click(1616, 447); time.sleep(1.0)\npyautogui.press('escape'); time.sleep(0.4)\npyautogui.press('escape'); time.sleep(0.5)", "memo": "Confirmed slide1 '1' was still BLACK in steps 9/10/12 (earlier clicks only placed cursor, no selection). Step12: tripleClick(1441,942)+Ctrl+A to select field text, then sidebar font-color dropdown(1575,328)->red(1616,447), Esc x2. NEXT: verify '1' is red; then Ctrl+S + Enter (Keep PPTX format)."}
+```

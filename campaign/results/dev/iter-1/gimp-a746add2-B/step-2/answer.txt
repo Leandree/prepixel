@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e161","memo":"GIMP opened with dog_with_background.png; dismissed color-profile dialog via 'Keep'. Next: menu Filters (was e44 at 448,64) > Light and Shadow > Vignette."}
+```

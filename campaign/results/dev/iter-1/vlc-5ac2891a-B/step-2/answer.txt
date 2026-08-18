@@ -1,0 +1,1 @@
+{"action":"click","target":"e19","memo":"Clicked Tools > Preferences. Next: in Preferences dialog, set 'Show settings' radio to All (bottom-left), then navigate to Playlist section and uncheck 'Play and exit' (play-and-exit), then Save."}

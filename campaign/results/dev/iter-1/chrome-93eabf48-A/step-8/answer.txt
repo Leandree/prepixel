@@ -1,0 +1,5 @@
+The flag page after relaunch shows **Auto Dark Mode for Web Contents (#enable-force-dark) = Disabled**, and the "Relaunch" bar is gone — confirming Chrome restarted with the setting applied. The remaining popup is an unrelated Chrome-update notice.
+
+```json
+{"action": "DONE", "memo": "Verified after relaunch: #enable-force-dark = Disabled. Chrome dark mode for web contents is off. Task complete."}
+```

@@ -1,0 +1,1 @@
+{"action": "key", "keys": "enter", "memo": "In edit mode A1 w/ 'Total Revenue' -> Enter commits it. Driver 'type' sets focused cell buffer (tabs/newlines are segment splits, don't navigate). NEXT: use set_value directly on cell targets: B1='Total Expenses', A2='=SUM(Sheet1.A2:A20)' (867786), B2='=SUM(Sheet1.B2:B20)' (411686), then ctrl+s and Enter for Keep-format dialog."}

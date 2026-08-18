@@ -1,0 +1,1 @@
+{"action": "click", "target": "e931", "memo": "Clicked Add-sheet button to create Sheet2. Next: verify Sheet2 tab active + cursor at A1, then type headers 'Total Revenue'\\t'Total Expenses' then =SUM(Sheet1.A:A)\\t=SUM(Sheet1.B:B). Data lives in Sheet1 A2:A20,B2:B20. Finally Ctrl+S and Keep current format."}

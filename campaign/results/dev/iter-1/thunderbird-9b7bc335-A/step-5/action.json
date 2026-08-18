@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(648, 697)", "memo": "Filter Rules dialog: name='Forward All to Gmail', 'Match all messages' selected, 'Getting New Mail' checked. Just clicked action dropdown (648,697) to open it. Next: select 'Forward Message to' from the list, then type anonym-x2024@gmail.com in the field to its right (~1035,697), then click OK (1389,862)."}

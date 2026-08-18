@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1389, 862)", "memo": "Clicked OK on Filter Rules dialog (filter 'Forward All to Gmail': Match all messages, Getting New Mail + Manually Run, Forward Message to anonym-x2024@gmail.com). Next: verify filter appears in Message Filters list with checkbox ENABLED, then close that window (X or Escape)."}

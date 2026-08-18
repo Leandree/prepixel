@@ -1,0 +1,5 @@
+The reminder's only requirement is the 10-sheet ordering — which step 5 confirmed is already applied and saved. I'll dismiss the dialog and switch to the Calc document to visually verify the tabs.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(993, 727); time.sleep(1); pyautogui.click(388, 76); time.sleep(1)", "memo": "reminder.docx requires ONLY sheet order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Already applied+saved (step5 msgbox). Just clicked OK + opened Window menu -> click 'workbook-with-sample-database.xlsx' entry to visually verify tabs, then DONE."}
+```

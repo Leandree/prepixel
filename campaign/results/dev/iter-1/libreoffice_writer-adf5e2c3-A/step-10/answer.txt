@@ -1,0 +1,5 @@
+The step-9 screenshot shows the Steinberg text was present in [14] **and still selected**. My action 9 (Ctrl+S then blind Enter) clearly went into the document instead of a dialog — the Enter replaced the selected text with a paragraph break, which is why [14] is now empty and an extra empty [15] appeared. I need to undo that.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 'z'); pyautogui.sleep(1.0)", "memo": "BUG FOUND: action 9's blind Enter after Ctrl+S landed in the document, replacing the SELECTED [14] Steinberg text with a paragraph break -> [14] and [15] both empty. Just pressed Ctrl+Z once. CHECK: if [14] text restored and [15] gone, good; if only paragraph break undone, press Ctrl+Z again. Do NOT press blind Enter after Ctrl+S again - screenshot the dialog and click 'Use Word 2007-365!' button instead."}
+```

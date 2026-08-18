@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+s","memo":"Pressed Ctrl+S. Expect 'Keep current format?' dialog -> click 'Use Word 2007-365!' (or Enter). Then verify reference [14] line exists at doc end (Ctrl+End)."}
+```

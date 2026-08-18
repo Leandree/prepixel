@@ -1,0 +1,8 @@
+The screen confirms the work is complete:
+
+- **Tab order** (left to right): ReadMe → Raw_data → Beans → Millet → Sorghum → Mkt Gotheye → Mkt Mangaize → Mkt Ouallam → Mkt Tera → Millet spatial integration — matching the required order from reminder.docx, with "Sheet 9 of 10" confirming all 10 sheets intact.
+- **No dialogs remain** — the Keep-current-format prompt is gone, and the workbook was persisted (both by the macro's `store()` call and the subsequent Ctrl+S).
+
+```json
+{"action": "DONE"}
+```

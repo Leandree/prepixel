@@ -1,0 +1,5 @@
+Step 7 confirms the working method (object selected → sidebar font-color button at ~1548,328). Applying the same to slide 1's number placeholder.
+
+```json
+{"action": "import pyautogui, time\npyautogui.press('escape'); time.sleep(0.3)\npyautogui.moveTo(1490, 1002); pyautogui.mouseDown(); time.sleep(0.3); pyautogui.moveTo(1350, 886, duration=0.5); time.sleep(0.3); pyautogui.mouseUp(); time.sleep(0.8)\npyautogui.click(1548, 328); time.sleep(1.0)\npyautogui.press('escape'); time.sleep(0.4)\npyautogui.hotkey('ctrl', 's'); time.sleep(2.0)\npyautogui.press('enter'); time.sleep(1.5)", "memo": "Slide 15 number confirmed RED but slide 1's '1' was still dark -> re-applied red on slide 1 via rubber-band drag (1490,1002)->(1350,886) + sidebar font color (1548,328), then Ctrl+S + Enter (Keep PowerPoint format). NEXT: verify slide 1 number is now red in main view; if yes, DONE."}
+```

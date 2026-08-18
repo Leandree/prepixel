@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(1.5); pyautogui.press('enter')", "memo": "Typed 'Out of the Silent Planet' in book_list_result.docx; pressed Ctrl+S then Enter for 'Use Word 2007-365!' keep-format dialog. NEXT: verify no dialog remains and title bar shows no unsaved marker, then DONE."}

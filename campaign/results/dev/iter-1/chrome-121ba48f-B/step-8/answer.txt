@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e46","memo":"Modal confirmed 'Added to your cart!' with The Dota 2 Official Soundtrack (8,19€); Remixes EP is free so not cart-eligible. Clicked 'View My Cart (1)' to verify cart contents. Next: confirm cart page lists the DLC, then done."}
+```

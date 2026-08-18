@@ -1,0 +1,1 @@
+{"action":"type","text":"gsettings get org.gnome.shell favorite-apps\n","memo":"Terminal open. Just ran `gsettings get org.gnome.shell favorite-apps`. Next: read output list, then set the same list minus the vim entry (likely 'vim.desktop') via `gsettings set org.gnome.shell favorite-apps \"[...]\"`. Dash currently shows Thunderbird, Vim, Chrome, Terminal."}

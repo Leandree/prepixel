@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1017, 210)", "memo": "Clicked 'Manage message filters' on anonym-x2024@outlook.com account page. Next: in Message Filters dialog verify filter list is for outlook.com account, click 'New...' to create filter. Then: name it, choose 'Getting New Mail', condition 'Match all messages', action 'Forward Message to' anonym-x2024@gmail.com."}

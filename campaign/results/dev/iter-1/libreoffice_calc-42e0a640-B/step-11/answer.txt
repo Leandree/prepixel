@@ -1,0 +1,1 @@
+{"action":"click","target":"e47","memo":"Sheet2 was fully selected & appears EMPTY (whole-sheet Sum=0, no formulas). Just clicked A1. NEXT (step12): type \"Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A2:A1000)\\t=SUM(Sheet1.B2:B1000)\\n\" in ONE type action. Then step13 ctrl+s, step14 key enter (Keep current format), step15 done."}

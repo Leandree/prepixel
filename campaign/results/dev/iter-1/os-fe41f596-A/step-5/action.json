@@ -1,0 +1,1 @@
+{"action": "DONE", "memo": "Terminal closed, desktop clean. gsettings org.gnome.desktop.interface show-battery-percentage = true (verified in step 3). No battery icon in top bar since this VM has no battery hardware, but the display setting is enabled."}

@@ -1,0 +1,556 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find Dota 2 game and add all DLC to cart.
+
+STEP 6 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click page-tab "Dota 2"
+2. set_value entry "Address and search bar" := "https://store.steampowered.com/app/570/Dota_2/"
+3. click page-tab "Dota 2 - Memory usage - 81.9 MB"
+4. set_value entry "Address and search bar" := "https://store.steampowered.com/app/570/Dota_2/"
+5. click section "Reject All"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Steam Dota 2 store page IS loaded (breadcrumb Dota 2, tab 'Dota 2 on Steam'). Just clicked 'Reject All' on cookie banner to dismiss it (it overlays bottom of page). NEXT: scroll down repeatedly to the 'Downloadable Content for Dota 2' section and click 'Add all DLC to Cart' button.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 toggle-button 0,0,99,27 "Activities" state=checked:false
+e14 menu 99,0,162,27 "Google Chrome"
+e15 menu 906,0,178,27 "Aug 18 21‎∶37"
+e16 menu 1814,0,106,27 "System"
+e17 push-button 0,840,70,8
+e18 push-button 62,33,8,815
+e19 push-button 0,33,70,64 "Google Chrome"
+e20 push-button 0,101,70,64 "Thunderbird Mail"
+e21 push-button 0,169,70,64 "Visual Studio Code"
+e22 push-button 0,237,70,64 "VLC media player"
+e23 push-button 0,305,70,64 "LibreOffice Writer"
+e24 push-button 0,373,70,64 "LibreOffice Calc"
+e25 push-button 0,441,70,64 "LibreOffice Impress"
+e26 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e27 push-button 0,577,70,64 "Files"
+e28 push-button 0,645,70,64 "Ubuntu Software"
+e29 push-button 0,713,70,64 "Help"
+e30 push-button 0,784,70,64 "Trash"
+e31 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e32 push-button 1802,27,30,35 "Minimise"
+e33 push-button 1842,27,30,35 "Restore"
+e34 push-button 1882,27,38,35 "Close"
+e35 push-button 76,27,28,41 "Search tabs"
+e36 page-tab 98,27,256,41 "Dota 2 on Steam - Memory usage - 268 MB" state=selected
+e37 push-button 312,33,28,28 "Close"
+e38 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 64.2 MB"
+e39 push-button 550,33,28,28 "Close"
+e40 push-button 586,27,28,41 "New Tab"
+e41 push-button 70,73,39,34 "Back"
+e42 push-button 111,73,34,34 "Forward"
+e43 push-button 147,73,34,34 "Reload"
+e44 push-button 195,78,24,24 "View site information"
+e45 entry 227,78,1418,24 "Address and search bar"
+e46 push-button 1653,78,24,24 "Bookmark this tab"
+e47 push-button 1698,73,34,34 "You"
+e48 push-button 1737,73,183,34 "Relaunch to update"
+e49 document-web 70,114,1850,966 "Dota 2 on Steam" state=focused
+e50 link 388,144,145,47 "Link to the Steam Homepage"
+e51 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+e52 text 588,114,335,73 "Global Menu"
+e53 link 588,114,66,73 "STORE"
+e54 link 653,114,114,73 "COMMUNITY"
+e55 link 766,114,71,68 "ABOUT"
+e56 link 836,114,87,68 "SUPPORT"
+e57 text 1339,120,249,24 "|"
+e58 link 1339,120,111,21 "Install Steam"
+e59 link 1455,125,43,14 "sign in"
+e60 text 1497,125,16,14 "|"
+e61 text 1512,125,71,14 "language"
+e62 text 1517,125,48,14 "language"
+e63 text 380,218,1216,46 "Store menu"
+e64 push-button 380,218,83,46 "Browse"
+e65 push-button 462,218,153,46 "Recommendations"
+e66 push-button 614,218,105,46 "Categories"
+e67 push-button 718,218,98,46 "Hardware"
+e68 push-button 815,218,118,46 "Ways to Play"
+e69 push-button 932,218,139,46 "Special Sections"
+e70 combo-box 1111,224,446,34 "Search the store"
+e71 push-button 1557,224,34,34 "Search"
+e72 [pixels] image 1565,232,18,18 alt=Search
+e73 text 398,274,182,36 "Open in Desktop App"
+e74 text 418,284,142,16 "Open in Desktop App"
+e75 text 599,275,587,34 "You're not signed in!
+Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+e76 text 599,274,147,19 "You're not signed in!"
+e77 text 599,292,587,17 "Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+e78 text 388,340,1200,17 ">  >  >"
+e79 link 388,341,57,15 "All Games"
+e80 text 444,341,15,15 ">"
+e81 link 458,341,110,15 "Free To Play Games"
+e82 text 567,341,15,15 ">"
+e83 link 581,341,84,15 "Dota Franchise"
+e84 text 664,341,15,15 ">"
+e85 link 678,341,39,15 "Dota 2"
+e86 link 1448,357,140,32 "Community Hub"
+e87 text 388,357,1200,32 "Dota 2"
+e88 text 388,357,82,32 "Dota 2"
+e89 text 1213,593,375,115 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+e90 text 1213,594,344,112 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+e91 link 1213,727,375,19 "RECENT REVIEWS: Mixed (21,640)"
+e92 text 1213,727,142,19 "RECENT REVIEWS:"
+e93 text 1213,730,102,13 "RECENT REVIEWS:"
+e94 text 1354,727,188,19 "Mixed (21,640)"
+e95 text 1354,728,35,16 "Mixed"
+e96 text 1392,728,49,16 "(21,640)"
+e97 link 1213,745,375,19 "ENGLISH REVIEWS: Very Positive (835,675)"
+e98 text 1213,745,142,19 "ENGLISH REVIEWS:"
+e99 text 1213,748,106,13 "ENGLISH REVIEWS:"
+e100 text 1354,745,188,19 "Very Positive (835,675)"
+e101 text 1354,746,76,16 "Very Positive"
+e102 text 1433,746,56,16 "(835,675)"
+e103 text 1213,772,142,19 "RELEASE DATE:"
+e104 text 1213,775,86,13 "RELEASE DATE:"
+e105 text 1354,772,72,19 "10 Jul, 2013"
+e106 text 1354,773,72,16 "10 Jul, 2013"
+e107 text 1213,803,142,19 "DEVELOPER:"
+e108 text 1213,806,71,13 "DEVELOPER:"
+e109 link 1354,804,32,16 "Valve"
+e110 text 1213,821,142,19 "PUBLISHER:"
+e111 text 1213,824,66,13 "PUBLISHER:"
+e112 link 1354,822,32,16 "Valve"
+e113 text 1213,891,375,20 "Popular user-defined tags for this product:"
+e114 text 1213,893,224,15 "Popular user-defined tags for this product:"
+e115 link 1213,910,74,20 "Free to Play"
+e116 link 1288,910,47,20 "MOBA"
+e117 link 1336,910,68,20 "Multiplayer"
+e118 link 1405,910,56,20 "Strategy"
+e119 link 1462,910,53,20 "eSports"
+e120 push-button 1516,910,22,20 "+"
+e121 text 389,403,808,456 "0:00 / 0:42"
+e122 [pixels] video 389,403,808,456 alt=Unable to play media.
+~e123 text 389,403,808,456 "0:02 / 0:42"
+e124 [pixels] image 397,609,25,40
+e125 [pixels] image 1164,609,25,40
+e126 [pixels] image 389,864,116,66
+e127 [pixels] image 436,885,22,23
+e128 [pixels] image 509,864,116,66
+e129 [pixels] image 556,885,22,23
+e130 [pixels] image 629,864,116,66
+e131 [pixels] image 749,864,116,66
+e132 [pixels] image 869,864,116,66
+e133 [pixels] image 989,864,116,66
+e134 [pixels] image 1109,864,116,66
+e135 [pixels] image 405,939,6,11
+e136 [pixels] image 1175,939,6,10
+e137 text 404,982,367,33 "to add this item to your wishlist, follow it, or mark it as ignored"
+e138 link 404,982,37,15 "Sign in"
+e139 text 440,982,331,15 "to add this item to your wishlist, follow it, or mark it as ignored"
+e140 link 1524,982,48,33 "To get missing image descriptions, open the context menu."
+e141 [pixels] image 1540,989,16,20 alt=To get missing image descriptions, open the context menu.
+e142 link 1208,1078,364,27 "Co-op"
+e143 link 393,1062,780,55 "Check out the entire Dota collection on Steam"
+[act-guard] previous action: CONFIRMED (element no longer present — view changed)
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 3 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+~e3 text 94,54,1252,852 "Software"
+~e4 toggle-button 126,77,36,46 "Search" state=checked:true
+~e5 radio-button 532,77,125,46 "Explore" state=checked:false
+~e6 radio-button 657,77,125,46 "Installed" state=checked:false
+~e7 radio-button 782,77,125,46 "Updates" state=checked:false
+~e8 text 470,130,500,34 "Search" state=focused
+~e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+~e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+~e11 text 120,171,1200,1 "Information"
+~e12 text 120,171,1200,706 "Search page"
+e13 toggle-button 0,0,99,27 "Activities" state=checked:false
+e14 menu 99,0,172,27 "Ubuntu Software"
+e15 menu 906,0,178,27 "Aug 18 21‎∶36"
+e16 menu 1814,0,106,27 "System"
+e17 push-button 0,840,70,8
+e18 push-button 62,33,8,815
+e19 push-button 0,33,70,64 "Google Chrome"
+e20 push-button 0,101,70,64 "Thunderbird Mail"
+e21 push-button 0,169,70,64 "Visual Studio Code"
+e22 push-button 0,237,70,64 "VLC media player"
+e23 push-button 0,305,70,64 "LibreOffice Writer"
+e24 push-button 0,373,70,64 "LibreOffice Calc"
+e25 push-button 0,441,70,64 "LibreOffice Impress"
+e26 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e27 push-button 0,577,70,64 "Files"
+e28 push-button 0,645,70,64 "Ubuntu Software"
+e29 push-button 0,713,70,64 "Help"
+e30 push-button 0,784,70,64 "Trash"
+e31 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e32 push-button 1802,27,30,35 "Minimise"
+e33 push-button 1842,27,30,35 "Restore"
+e34 push-button 1882,27,38,35 "Close"
+e35 push-button 76,27,28,41 "Search tabs"
+e36 page-tab 98,27,256,41 "Dota 2 - Memory usage - 81.9 MB"
+e37 push-button 312,33,28,28 "Close"
+e38 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 108 MB"
+e39 push-button 550,33,28,28 "Close"
+e40 push-button 586,27,28,41 "New Tab"
+e41 push-button 70,73,39,34 "Back"
+e42 push-button 111,73,34,34 "Forward"
+e43 push-button 147,73,34,34 "Reload"
+e44 push-button 195,78,24,24 "View site information"
+e45 entry 227,78,1418,24 "Address and search bar"
+e46 push-button 1653,78,24,24 "Bookmark this tab"
+e47 push-button 1698,73,34,34 "You"
+e48 push-button 1737,73,183,34 "Relaunch to update"
+e49 document-web 70,114,1850,966 "Dota 2" state=focused
+e50 text 70,114,1835,80 "SELECT LANGUAGE"
+e51 link 100,129,200,50
+e52 text 340,127,129,54 "GAME"
+e53 text 362,141,70,26 "GAME"
+e54 [pixels] image 436,151,11,6
+e55 link 342,195,177,17 "PATCHES"
+e56 link 342,221,177,17 "GAMEPLAY UPDATES"
+e57 link 342,247,177,17 "PREVIOUS UPDATES"
+e58 link 488,135,94,38 "HEROES"
+e59 link 621,135,68,38 "NEWS"
+e60 link 729,135,104,38 "ESPORTS"
+e61 link 1556,135,53,17 "LOGIN"
+e62 text 1448,157,146,14 "SELECT LANGUAGE"
+e63 [pixels] image 1598,161,11,7
+e64 link 1608,114,267,80 "PLAY FOR FREE"
+e65 [pixels] video 70,114,1850,725
+e66 text 253,294,918,204 "“A MODERN MULTIPLAYER MASTERPIECE.”"
+e67 text 253,284,533,223 "“A MODERN MULTIPLAYER MASTERPIECE.”"
+e68 text 253,502,918,25 "- DESTRUCTOID"
+e69 text 253,504,168,21 "- DESTRUCTOID"
+e70 link 253,549,918,109 "PLAY FOR FREE DOWNLOAD ON STEAM"
+e71 text 320,594,207,32 "PLAY FOR FREE"
+e72 text 320,594,194,32 "PLAY FOR FREE"
+e73 text 320,625,207,19 "DOWNLOAD ON STEAM"
+e74 text 320,626,192,16 "DOWNLOAD ON STEAM"
+e75 text 402,750,133,20 "LATEST NEWS"
+e76 text 402,751,133,17 "LATEST NEWS"
+e77 link 554,748,126,24 "VIEW ALL"
+e78 link 402,796,371,246 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks. The International: Streams, Secret Shop, and More 12 AUGUST 2026"
+e79 text 422,1061,339,85 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks."
+e80 text 422,976,341,56 "The International: Streams, Secret Shop, and More"
+e81 text 422,972,312,62 "The International: Streams, Secret Shop, and More"
+e82 text 422,949,351,20 "12 AUGUST 2026"
+e83 text 422,950,145,17 "12 AUGUST 2026"
+e84 link 802,796,371,246 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and... Gameplay Patch 7.41e and Summer Scrub 31 JULY 2026"
+e85 text 822,1061,338,85 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and..."
+e86 text 822,976,341,56 "Gameplay Patch 7.41e and Summer Scrub"
+e87 text 822,972,294,62 "Gameplay Patch 7.41e and Summer Scrub"
+e88 text 822,949,351,20 "31 JULY 2026"
+e89 text 822,950,113,17 "31 JULY 2026"
+e90 link 1202,796,371,246 "Nearly a year has passed since Team Falcons hoisted the Aegis of Champions as the final team standing in Hamburg. The International: Predictions, Fantasy, and Supporter Bundles 31 JULY 2026"
+e91 text 1222,1061,328,63 "Nearly a year has passed since Team Falcons hoisted the Aegis of Champions as the final team standing in Hamburg."
+e92 text 1222,948,341,84 "The International: Predictions, Fantasy, and Supporter Bundles"
+e93 text 1222,944,282,90 "The International: Predictions, Fantasy, and Supporter Bundles"
+e94 text 1222,921,351,20 "31 JULY 2026"
+e95 text 1222,922,113,17 "31 JULY 2026"
+e96 [pixels] image 70,906,1835,772 alt=To get missing image descriptions, open the context menu.
+
+--- view at step 4 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 toggle-button 0,0,99,27 "Activities" state=checked:false
+e14 menu 99,0,162,27 "Google Chrome"
+e15 menu 906,0,178,27 "Aug 18 21‎∶36"
+e16 menu 1814,0,106,27 "System"
+e17 push-button 0,840,70,8
+e18 push-button 62,33,8,815
+e19 push-button 0,33,70,64 "Google Chrome"
+e20 push-button 0,101,70,64 "Thunderbird Mail"
+e21 push-button 0,169,70,64 "Visual Studio Code"
+e22 push-button 0,237,70,64 "VLC media player"
+e23 push-button 0,305,70,64 "LibreOffice Writer"
+e24 push-button 0,373,70,64 "LibreOffice Calc"
+e25 push-button 0,441,70,64 "LibreOffice Impress"
+e26 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e27 push-button 0,577,70,64 "Files"
+e28 push-button 0,645,70,64 "Ubuntu Software"
+e29 push-button 0,713,70,64 "Help"
+e30 push-button 0,784,70,64 "Trash"
+e31 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e32 push-button 1802,27,30,35 "Minimise"
+e33 push-button 1842,27,30,35 "Restore"
+e34 push-button 1882,27,38,35 "Close"
+e35 push-button 76,27,28,41 "Search tabs"
+e36 page-tab 98,27,256,41 "Dota 2 - Memory usage - 81.9 MB" state=selected
+e37 push-button 312,33,28,28 "Close"
+e38 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 108 MB"
+e39 push-button 550,33,28,28 "Close"
+e40 push-button 586,27,28,41 "New Tab"
+e41 push-button 70,73,39,34 "Back"
+e42 push-button 111,73,34,34 "Forward"
+e43 push-button 147,73,34,34 "Reload"
+e44 push-button 195,78,24,24 "View site information"
+e45 entry 227,78,1418,24 "Address and search bar"
+e46 push-button 1653,78,24,24 "Bookmark this tab"
+e47 push-button 1698,73,34,34 "You"
+e48 push-button 1737,73,183,34 "Relaunch to update"
+e49 document-web 70,114,1850,966 "Dota 2" state=focused
+e50 text 70,114,1835,80 "SELECT LANGUAGE"
+e51 link 100,129,200,50
+e52 text 340,127,129,54 "GAME"
+e53 text 362,141,70,26 "GAME"
+e54 [pixels] image 436,151,11,6
+e55 link 342,195,177,17 "PATCHES"
+e56 link 342,221,177,17 "GAMEPLAY UPDATES"
+e57 link 342,247,177,17 "PREVIOUS UPDATES"
+e58 link 488,135,94,38 "HEROES"
+e59 link 621,135,68,38 "NEWS"
+e60 link 729,135,104,38 "ESPORTS"
+e61 link 1556,135,53,17 "LOGIN"
+e62 text 1448,157,146,14 "SELECT LANGUAGE"
+e63 [pixels] image 1598,161,11,7
+e64 link 1608,114,267,80 "PLAY FOR FREE"
+e65 [pixels] video 70,114,1850,725
+e66 text 253,294,918,204 "“A MODERN MULTIPLAYER MASTERPIECE.”"
+e67 text 253,284,533,223 "“A MODERN MULTIPLAYER MASTERPIECE.”"
+e68 text 253,502,918,25 "- DESTRUCTOID"
+e69 text 253,504,168,21 "- DESTRUCTOID"
+e70 link 253,549,918,109 "PLAY FOR FREE DOWNLOAD ON STEAM"
+e71 text 320,594,207,32 "PLAY FOR FREE"
+e72 text 320,594,194,32 "PLAY FOR FREE"
+e73 text 320,625,207,19 "DOWNLOAD ON STEAM"
+e74 text 320,626,192,16 "DOWNLOAD ON STEAM"
+e75 text 402,750,133,20 "LATEST NEWS"
+e76 text 402,751,133,17 "LATEST NEWS"
+e77 link 554,748,126,24 "VIEW ALL"
+e78 link 402,796,371,246 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks. The International: Streams, Secret Shop, and More 12 AUGUST 2026"
+e79 text 422,1061,339,85 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks."
+e80 text 422,976,341,56 "The International: Streams, Secret Shop, and More"
+e81 text 422,972,312,62 "The International: Streams, Secret Shop, and More"
+e82 text 422,949,351,20 "12 AUGUST 2026"
+e83 text 422,950,145,17 "12 AUGUST 2026"
+e84 link 802,796,371,246 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and... Gameplay Patch 7.41e and Summer Scrub 31 JULY 2026"
+e85 text 822,1061,338,85 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and..."
+e86 text 822,976,341,56 "Gameplay Patch 7.41e and Summer Scrub"
+e87 text 822,972,294,62 "Gameplay Patch 7.41e and Summer Scrub"
+e88 text 822,949,351,20 "31 JULY 2026"
+e89 text 822,950,113,17 "31 JULY 2026"
+e90 link 1202,796,371,246 "Nearly a year has passed since Team Falcons hoisted the Aegis of Champions as the final team standing in Hamburg. The International: Predictions, Fantasy, and Supporter Bundles 31 JULY 2026"
+e91 text 1222,1061,328,63 "Nearly a year has passed since Team Falcons hoisted the Aegis of Champions as the final team standing in Hamburg."
+e92 text 1222,948,341,84 "The International: Predictions, Fantasy, and Supporter Bundles"
+e93 text 1222,944,282,90 "The International: Predictions, Fantasy, and Supporter Bundles"
+e94 text 1222,921,351,20 "31 JULY 2026"
+e95 text 1222,922,113,17 "31 JULY 2026"
+e96 [pixels] image 70,906,1835,772 alt=To get missing image descriptions, open the context menu.
+
+--- view at step 5 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 push-button 1802,27,30,35 "Minimise"
+e14 push-button 1842,27,30,35 "Restore"
+e15 push-button 1882,27,38,35 "Close"
+e16 push-button 76,27,28,41 "Search tabs"
+e17 page-tab 98,27,256,41 "Dota 2 on Steam" state=selected
+e18 push-button 312,33,28,28 "Close"
+e19 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 108 MB"
+e20 push-button 550,33,28,28 "Close"
+e21 push-button 586,27,28,41 "New Tab"
+e22 push-button 70,73,39,34 "Back"
+e23 push-button 111,73,34,34 "Forward"
+e24 push-button 147,73,34,34 "Reload"
+e25 push-button 195,78,24,24 "View site information"
+e26 entry 227,78,1418,24 "Address and search bar"
+e27 push-button 1653,78,24,24 "Bookmark this tab"
+e28 push-button 1698,73,34,34 "You"
+e29 push-button 1737,73,183,34 "Relaunch to update"
+~e30 document-web 70,114,1850,966 "Dota 2 on Steam" state=focused
+~e31 link 388,144,145,47 "Link to the Steam Homepage"
+~e32 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+~e33 text 588,114,335,73 "Global Menu"
+~e34 link 588,114,66,73 "STORE"
+~e35 link 653,114,114,73 "COMMUNITY"
+~e36 link 766,114,71,68 "ABOUT"
+~e37 link 836,114,87,68 "SUPPORT"
+~e38 text 1339,120,249,24 "|"
+~e39 link 1339,120,111,21 "Install Steam"
+~e40 link 1455,125,43,14 "sign in"
+~e41 text 1497,125,16,14 "|"
+~e42 text 1512,125,71,14 "language"
+~e43 text 1517,125,48,14 "language"
+~e44 text 380,218,1216,46 "Store menu"
+~e45 push-button 380,218,83,46 "Browse"
+~e46 push-button 462,218,153,46 "Recommendations"
+~e47 push-button 614,218,105,46 "Categories"
+~e48 push-button 718,218,98,46 "Hardware"
+~e49 push-button 815,218,118,46 "Ways to Play"
+~e50 push-button 932,218,139,46 "Special Sections"
+~e51 combo-box 1111,224,446,34 "Search the store"
+~e52 push-button 1557,224,34,34 "Search"
+~e53 [pixels] image 1565,232,18,18 alt=Search
+~e54 text 398,274,182,36 "Open in Desktop App"
+~e55 text 418,284,142,16 "Open in Desktop App"
+~e56 text 599,275,587,34 "You're not signed in!
+Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+~e57 text 599,274,147,19 "You're not signed in!"
+~e58 text 599,292,587,17 "Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+~e59 text 388,340,1200,17 ">  >  >"
+~e60 link 388,341,57,15 "All Games"
+~e61 text 444,341,15,15 ">"
+~e62 link 458,341,110,15 "Free To Play Games"
+~e63 text 567,341,15,15 ">"
+~e64 link 581,341,84,15 "Dota Franchise"
+~e65 text 664,341,15,15 ">"
+~e66 link 678,341,39,15 "Dota 2"
+~e67 link 1448,357,140,32 "Community Hub"
+~e68 text 388,357,1200,32 "Dota 2"
+~e69 text 388,357,82,32 "Dota 2"
+~e70 text 1213,593,375,115 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+~e71 text 1213,594,344,112 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+~e72 link 1213,727,375,19 "RECENT REVIEWS: Mixed (21,640)"
+~e73 text 1213,727,142,19 "RECENT REVIEWS:"
+~e74 text 1213,730,102,13 "RECENT REVIEWS:"
+~e75 text 1354,727,188,19 "Mixed (21,640)"
+~e76 text 1354,728,35,16 "Mixed"
+~e77 text 1392,728,49,16 "(21,640)"
+~e78 link 1213,745,375,19 "ENGLISH REVIEWS: Very Positive (835,675)"
+~e79 text 1213,745,142,19 "ENGLISH REVIEWS:"
+~e80 text 1213,748,106,13 "ENGLISH REVIEWS:"
+~e81 text 1354,745,188,19 "Very Positive (835,675)"
+~e82 text 1354,746,76,16 "Very Positive"
+~e83 text 1433,746,56,16 "(835,675)"
+~e84 text 1213,772,142,19 "RELEASE DATE:"
+~e85 text 1213,775,86,13 "RELEASE DATE:"
+~e86 text 1354,772,72,19 "10 Jul, 2013"
+~e87 text 1354,773,72,16 "10 Jul, 2013"
+~e88 text 1213,803,142,19 "DEVELOPER:"
+~e89 text 1213,806,71,13 "DEVELOPER:"
+~e90 link 1354,804,32,16 "Valve"
+~e91 text 1213,821,142,19 "PUBLISHER:"
+~e92 text 1213,824,66,13 "PUBLISHER:"
+~e93 link 1354,822,32,16 "Valve"
+~e94 text 1213,891,375,20 "Popular user-defined tags for this product:"
+~e95 text 1213,893,224,15 "Popular user-defined tags for this product:"
+~e96 link 1213,910,74,20 "Free to Play"
+~e97 link 1288,910,47,20 "MOBA"
+~e98 link 1336,910,68,20 "Multiplayer"
+~e99 link 1405,910,56,20 "Strategy"
+~e100 link 1462,910,53,20 "eSports"
+~e101 push-button 1516,910,22,20 "+"
+~e102 text 389,403,808,456 "0:00 / 0:42"
+~e103 [pixels] video 389,403,808,456 alt=Unable to play media.
+~e104 text 389,794,808,65 "0:01/0:42"
+~e105 [pixels] image 399,826,26,27
+~e106 [pixels] image 439,826,26,27
+~e107 text 479,830,30,18 "0:01"
+~e108 text 513,830,5,18 "/"
+~e109 text 521,830,32,18 "0:42"
+~e110 [pixels] image 1081,826,26,27
+~e111 [pixels] image 1121,826,26,27
+~e112 [pixels] image 1161,826,26,27
+~e113 [pixels] image 397,609,25,40
+~e114 [pixels] image 1164,609,25,40
+~e115 [pixels] image 389,864,116,66
+~e116 [pixels] image 436,885,22,23
+~e117 [pixels] image 509,864,116,66
+~e118 [pixels] image 556,885,22,23
+~e119 [pixels] image 629,864,116,66
+~e120 [pixels] image 749,864,116,66
+~e121 [pixels] image 869,864,116,66
+~e122 [pixels] image 989,864,116,66
+~e123 [pixels] image 1109,864,116,66
+~e124 [pixels] image 405,939,6,11
+~e125 [pixels] image 1175,939,6,10
+~e126 text 404,982,367,33 "to add this item to your wishlist, follow it, or mark it as ignored"
+~e127 link 404,982,37,15 "Sign in"
+~e128 text 440,982,331,15 "to add this item to your wishlist, follow it, or mark it as ignored"
+~e129 link 1524,982,48,33 "To get missing image descriptions, open the context menu."
+~e130 [pixels] image 1540,989,16,20 alt=To get missing image descriptions, open the context menu.
+~e131 link 1208,1078,364,27 "Co-op"
+~e132 link 393,1062,780,55 "Check out the entire Dota collection on Steam"
+~e133 text 516,978,765,28 "Do you mind if we use optional cookies to provide you personalized content and to analyze site traffic?"
+~e134 text 516,979,588,16 "Do you mind if we use optional cookies to provide you personalized content and to analyze site traffic?"
+~e135 text 516,1005,765,45 "We don't use a lot of cookies; you can see and manage them at any time on our . If you click 'Accept All,' you consent to the use of cookies on Steam websites. Learn more about cookies in our ."
+~e136 text 516,1006,463,16 "We don't use a lot of cookies; you can see and manage them at any time on our"
+~e137 link 978,1006,125,16 "Cookie Settings page"
+~e138 text 516,1006,748,33 ". If you click 'Accept All,' you consent to the use of cookies on Steam websites. Learn more about cookies in our"
+~e139 link 995,1023,81,16 "Privacy Policy"
+~e140 text 1075,1023,4,16 "."
+~e141 text 1300,978,164,32 "Accept All"
+~e142 text 1349,985,67,17 "Accept All"
+~e143 text 1300,1014,164,32 "Reject All"
+~e144 text 1350,1021,64,17 "Reject All"
+e145 toggle-button 0,0,99,27 "Activities" state=checked:false
+e146 menu 99,0,162,27 "Google Chrome"
+e147 menu 906,0,178,27 "Aug 18 21‎∶37"
+e148 menu 1814,0,106,27 "System"
+e149 push-button 0,840,70,8
+e150 push-button 62,33,8,815
+e151 push-button 0,33,70,64 "Google Chrome"
+e152 push-button 0,101,70,64 "Thunderbird Mail"
+e153 push-button 0,169,70,64 "Visual Studio Code"
+e154 push-button 0,237,70,64 "VLC media player"
+e155 push-button 0,305,70,64 "LibreOffice Writer"
+e156 push-button 0,373,70,64 "LibreOffice Calc"
+e157 push-button 0,441,70,64 "LibreOffice Impress"
+e158 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e159 push-button 0,577,70,64 "Files"
+e160 push-button 0,645,70,64 "Ubuntu Software"
+e161 push-button 0,713,70,64 "Help"
+e162 push-button 0,784,70,64 "Trash"
+e163 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

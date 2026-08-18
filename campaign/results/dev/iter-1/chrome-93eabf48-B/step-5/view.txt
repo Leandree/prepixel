@@ -1,0 +1,106 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 list-item 294,195,852,90 "Vessel Browser"
+e14 [pixels] icon 307,208,64,64
+e15 text 516,233,587,17 "AI-Powered Web Browser for Linux"
+e16 push-button 1802,27,30,35 "Minimise"
+e17 push-button 1842,27,30,35 "Restore"
+e18 push-button 1882,27,38,35 "Close"
+e19 push-button 76,27,28,41 "Search tabs"
+e20 page-tab 98,27,256,41 "Settings – Appearance - Memory usage - 52.5 MB" state=selected
+e21 push-button 312,33,28,28 "Close"
+e22 push-button 348,27,28,41 "New Tab"
+e23 push-button 70,73,39,34 "Back"
+e24 push-button 111,73,34,34 "Forward"
+e25 push-button 147,73,34,34 "Reload"
+~e26 push-button 195,78,88,24 "Chrome"
+~e27 entry 291,78,1335,24 "Address and search bar"
+e28 push-button 1634,78,24,24 "Bookmark this tab"
+e29 push-button 1679,73,34,34 "You"
+e30 push-button 1718,73,202,34 "New Chrome available"
+~e31 document-web 70,114,1850,966 "Settings – Appearance"
+~e32 text 137,129,183,26 "Settings"
+~e33 text 137,129,85,26 "Settings"
+~e34 entry 683,130,652,24 "Search settings" state=focused
+~e35 menu 70,178,250,634 "You and Google"
+~e36 [pixels] image 94,188,20,20
+~e37 menu-item 71,218,247,40 "Autofill and passwords"
+~e38 [pixels] image 94,228,20,20
+~e39 menu-item 71,258,247,40 "Privacy and security"
+~e40 [pixels] image 94,268,20,20
+~e41 menu-item 71,298,247,40 "Performance"
+~e42 [pixels] image 94,308,20,20
+~e43 menu-item 71,338,247,40 "Appearance"
+~e44 [pixels] image 94,348,20,20
+~e45 menu-item 71,378,247,40 "Search engine"
+~e46 [pixels] image 94,388,20,20
+~e47 menu-item 71,418,247,40 "Default browser"
+~e48 [pixels] image 94,428,20,20
+~e49 menu-item 71,458,247,40 "On start-up"
+~e50 [pixels] image 94,468,20,20
+~e51 menu-item 71,515,247,40 "Languages"
+~e52 [pixels] image 94,525,20,20
+~e53 menu-item 71,555,247,40 "Downloads"
+~e54 [pixels] image 94,565,20,20
+~e55 menu-item 71,595,247,40 "Accessibility"
+~e56 [pixels] image 94,605,20,20
+~e57 menu-item 71,635,247,40 "System"
+~e58 [pixels] image 94,645,20,20
+~e59 menu-item 71,675,247,40 "Reset settings"
+~e60 [pixels] image 94,685,20,20
+~e61 menu-item 71,732,247,40 "Extensions"
+~e62 [pixels] image 94,742,20,20
+~e63 menu-item 71,772,247,40 "About Chrome"
+~e64 [pixels] image 94,782,20,20
+~e65 text 655,191,78,33 "Appearance"
+~e66 text 655,201,78,16 "Appearance"
+~e67 text 655,235,680,716 "Tab hover preview card"
+~e68 link 1055,251,33,33 "Theme GTK"
+~e69 push-button 1116,249,103,37 "Use Classic"
+~e70 push-button 1238,249,77,37 "Use QT"
+~e71 link 1291,308,32,33 "Customise your toolbar"
+~e72 toggle-button 1289,373,26,17 "Show Home button" state=checked:false
+~e73 toggle-button 1289,430,26,17 "Show bookmarks bar" state=checked:false
+~e74 toggle-button 1289,479,26,17 "Show tab groups in bookmarks bar" state=checked:true,pressed
+~e75 toggle-button 1289,528,26,17 "Automatically pin new tab groups created on any device to the bookmarks bar" state=checked:true,pressed
+~e76 combo-box 1115,567,200,37 "Side panel position"
+~e77 menu-item 1115,567,200,11 "Show on right" state=selected
+~e78 text 675,626,135,16 "Tab hover preview card"
+~e79 toggle-button 1289,674,26,17 "Show tab preview images" state=checked:true,pressed
+~e80 toggle-button 1289,723,26,17 "Show tab memory usage" state=checked:true,pressed
+~e81 toggle-button 1289,772,26,17 "Use system title bar and borders" state=checked:false
+~e82 combo-box 1115,811,200,37 "Font size"
+~e83 menu-item 1115,811,200,11 "Medium (Recommended)" state=selected
+~e84 link 1291,861,32,33 "Customise fonts"
+~e85 combo-box 1115,908,200,37 "Page zoom"
+~e86 menu-item 1115,908,200,11 "100%" state=selected
+e87 toggle-button 0,0,99,27 "Activities" state=checked:false
+e88 menu 99,0,162,27 "Google Chrome"
+e89 menu 906,0,178,27 "Aug 18 21‎∶40"
+e90 menu 1814,0,106,27 "System"
+e91 push-button 0,908,70,8
+e92 push-button 62,33,8,883
+e93 push-button 0,33,70,64 "Google Chrome"
+e94 push-button 0,101,70,64 "Thunderbird Mail"
+e95 push-button 0,169,70,64 "Visual Studio Code"
+e96 push-button 0,237,70,64 "VLC media player"
+e97 push-button 0,305,70,64 "LibreOffice Writer"
+e98 push-button 0,373,70,64 "LibreOffice Calc"
+e99 push-button 0,441,70,64 "LibreOffice Impress"
+e100 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e101 push-button 0,577,70,64 "Files"
+e102 push-button 0,645,70,64 "Ubuntu Software"
+e103 push-button 0,713,70,64 "Help"
+e104 push-button 0,784,70,64 "Snap Store"
+e105 push-button 0,852,70,64 "Trash"
+e106 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

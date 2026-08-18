@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "Step13: 'Play and exit' (play-and-exit) confirmed UNCHECKED in Advanced Prefs > Playlist; clicked Save (1210,903) to persist to ~/.config/vlc/vlcrc. NEXT: verify dialog closed in screenshot; if closed and no dialog remains, answer DONE. If still open, click Save again."}
+```

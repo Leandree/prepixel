@@ -1,0 +1,1 @@
+{"action":"click","target":"e16","memo":"Recovery succeeded; clicked Finish. Next: Impress should open saa-format-guide.pptx. Then View > Master Slide, select slide-number placeholder field, set font color red, close master view, save with Ctrl+S (Keep current format)."}

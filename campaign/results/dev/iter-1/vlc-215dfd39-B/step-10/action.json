@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e11", "memo": "Cropping terminal to verify grep output shows 'qt-bgcone=0' in ~/.config/vlc/vlcrc. If line absent/wrong, re-run command. If present, task done (VLC won't rewrite vlcrc unless Save pressed)."}

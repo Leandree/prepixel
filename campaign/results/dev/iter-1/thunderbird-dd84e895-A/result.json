@@ -1,0 +1,37 @@
+{
+ "task_id": "dd84e895-72fd-4023-a336-97689ded257c",
+ "domain": "thunderbird",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "2ffa67b023831a0949446425f5640a6a40ad56e2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 4,
+ "termination": "DONE",
+ "wall_clock_s": 108.0,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 855,
+  "cache_creation_input_tokens": 30340,
+  "cache_read_input_tokens": 504670,
+  "output_tokens": 1985,
+  "cost_usd": 0.609635,
+  "attempts": 4,
+  "steps_with_usage": 4,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(34, 133)",
+  "import pyautogui; pyautogui.click(195, 509)",
+  "import pyautogui; pyautogui.click(700, 170); pyautogui.hotkey('ctrl','a'); pyautogui.press('s')",
+  "DONE"
+ ]
+}

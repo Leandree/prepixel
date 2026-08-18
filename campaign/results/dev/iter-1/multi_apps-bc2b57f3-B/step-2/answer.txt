@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e679","memo":"Desktop icon click didn't open reminder.docx (Calc still foreground). Now using Calc's Open toolbar button; next: type path ~/Desktop/reminder.docx in the Open dialog to read requirements. Target workbook: workbook-with-sample-database.xlsx (sheet Mkt Tera active, 10 sheets)."}
+```

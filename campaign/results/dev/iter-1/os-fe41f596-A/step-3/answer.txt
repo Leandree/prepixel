@@ -1,0 +1,5 @@
+The command ran cleanly with no error. Let me verify the setting actually took effect.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(620, 300); time.sleep(1); pyautogui.write('gsettings get org.gnome.desktop.interface show-battery-percentage', interval=0.02); time.sleep(1); pyautogui.press('enter'); time.sleep(2)", "memo": "gsettings set ran with no error (terminal at /tmp, prompt returned clean). Now ran 'gsettings get org.gnome.desktop.interface show-battery-percentage' to verify it prints 'true'. Next: read output; if true, close terminal (click X at 969,79) and DONE. Note: VM may have no battery so top bar may not show %."}
+```

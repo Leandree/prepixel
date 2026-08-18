@@ -1,0 +1,18 @@
+{
+ "memo_in": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  926,
+  90
+ ],
+ "settle_ms": 4976,
+ "settle_captures": 3,
+ "guard_ms": 29
+}

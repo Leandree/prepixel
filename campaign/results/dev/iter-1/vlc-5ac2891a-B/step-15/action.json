@@ -1,0 +1,1 @@
+{"action": "done", "memo": "Set play-and-exit=0 (uncommented) in ~/.config/vlc/vlcrc via sed with append fallback; grep re-run for verification. VLC will no longer quit when playback ends."}

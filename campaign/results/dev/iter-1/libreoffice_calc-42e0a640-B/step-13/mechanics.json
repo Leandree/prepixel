@@ -1,0 +1,10 @@
+{
+ "reprobes": 1,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 7562,
+ "settle_captures": 2,
+ "guard_ms": 84
+}

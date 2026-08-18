@@ -1,0 +1,1 @@
+{"action":"click","target":"e1041","memo":"Clicked OK on Append Sheet dialog (name Sheet2). Next: click Name Box (e950 area) or use Ctrl+Home, then type 'Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A2:A20)\\t=SUM(Sheet1.B2:B20)\\n'. Then Ctrl+S + Enter (Keep current format)."}

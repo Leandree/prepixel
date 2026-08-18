@@ -1,0 +1,3 @@
+Zoom is now 100% (was 260%) — cells are much smaller. I'll save so the zoom level persists in the file.
+
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(1.5); pyautogui.press('enter')", "memo": "Zoom set to 100% (status bar confirms). Just pressed Ctrl+S + Enter to keep xlsx format. Next: verify no dialog remains and title has no modification marker; then DONE."}

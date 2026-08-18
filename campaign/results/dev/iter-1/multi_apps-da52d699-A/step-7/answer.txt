@@ -1,0 +1,7 @@
+The document shows exactly "Out of the Silent Planet" (5 words, 24 characters — an exact match for the title), no format dialog is pending, and the Ctrl+S in step 6 produced no dialog, which confirms the file was already saved in .docx format from step 4.
+
+Verification recap: from the spreadsheet cross-referenced with howlongtoread.com word counts, *Out of the Silent Planet* = 47,840 words over 36 days ≈ 1,329 words/day, the slowest pace (next slowest: *Silence* at ≈1,984 wpd).
+
+I'm deliberately not touching the trailing empty paragraph — it's harmless to any text extraction, and a Backspace would risk deleting a real character if my earlier read of the document structure was off.
+
+{"action": "DONE", "memo": "Task complete: book_list_result.docx contains 'Out of the Silent Planet' (5 words/24 chars), saved as .docx (step 6 Ctrl+S showed no dialog = already saved). Answer verified: 47840 words/36 days = 1328.9 wpd, slowest vs next-lowest Silence 1984.3."}

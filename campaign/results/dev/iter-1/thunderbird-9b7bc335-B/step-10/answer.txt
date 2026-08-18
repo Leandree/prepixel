@@ -1,0 +1,1 @@
+{"action":"set_value","target":"e95","value":"Forward to gmail","memo":"Filter Rules dialog IS open now (opened by alt+n). Set name. NEXT: click e106 'Match all messages' radio, then set action combo e116 to 'Forward Message to', type anonym-x2024@gmail.com in the address field that appears (right of combo, ~x=739,y=680), then click OK (e121). Only ~4 steps left - be efficient."}

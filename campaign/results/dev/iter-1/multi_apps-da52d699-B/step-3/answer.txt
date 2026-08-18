@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+o","memo":"CONFIRMED: A7='Out of the Silent Planet' (G7=47840 words, H7=36 days, I7=1328.9 = min words/day across rows 2-11). Next: in the Open dialog type ~/Desktop/book_list_result.docx + Enter, then type the title in Writer and ctrl+S (Keep current format)."}
+```

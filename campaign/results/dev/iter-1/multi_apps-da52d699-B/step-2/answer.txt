@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"down","memo":"Layout shifted 25px; my earlier click landed on A6 (='American Gods'). Now pressed Down -> should be A7, the min words/day row (G7=47840, H7=36, I7=1328.9). Read title from formula bar text elem (~e742), then open book_list_result.docx on desktop (icon e4 area, 1821,735) and type the title."}
+```

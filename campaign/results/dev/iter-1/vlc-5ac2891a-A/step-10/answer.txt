@@ -1,0 +1,5 @@
+I reviewed the history: at step 7 the Advanced → Playlist page already showed "Play and exit" unchecked, and I then clicked Save (which rewrites vlcrc). To be certain I didn't misread that small checkbox, I'll re-open the All → Playlist page and explicitly confirm/uncheck before saving again.
+
+```json
+{"action": "import pyautogui; pyautogui.click(637, 898)", "memo": "Step10: clicked 'All' radio in Simple Prefs to get Advanced Preferences. NEXT: scroll tree (715,650 scroll -8), click 'Playlist' (639,471), then CONFIRM checkbox 'Play and exit' at ~(906,395) is UNCHECKED (click only if checked), then click Save (1210,903). Task = play-and-exit must be 0."}
+```

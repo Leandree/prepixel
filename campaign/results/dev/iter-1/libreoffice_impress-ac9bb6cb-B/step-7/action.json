@@ -1,0 +1,1 @@
+{"action": "click", "target": "e196", "memo": "Clicked New -> expect Basic IDE with Module1. NEXT: click code area, ctrl+a, type macro: Sub FixNum -> loop d.DrawPages + d.MasterPages, each shape: if supportsService(\"com.sun.star.presentation.SlideNumberShape\") or its text has a PageNumber TextField -> s.CharColor=RGB(255,0,0); end with d.store(). Then F5 to run."}

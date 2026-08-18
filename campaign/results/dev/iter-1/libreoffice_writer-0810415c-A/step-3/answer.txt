@@ -1,0 +1,5 @@
+Selection verified (94 words, 545 chars = paragraphs 1 and 2 only). Now opening Format menu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(290, 76)", "memo": "Selection of para1+2 confirmed (94 words/545 chars). Opened Format menu at (290,76). Next: click 'Paragraph...' item in dropdown, then Indents & Spacing tab > Line Spacing combo > Double > OK, then Ctrl+S and Keep current format (Use Word 2007-365!)."}
+```

@@ -1,0 +1,1 @@
+{"action":"done","memo":"Applied red font color to slide-number shape 'Google Shape;276;p1' on slide 1 and saved with Ctrl+S; no format dialog appeared, so the save completed in PowerPoint format."}

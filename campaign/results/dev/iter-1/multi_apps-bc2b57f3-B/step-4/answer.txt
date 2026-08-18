@@ -1,0 +1,1 @@
+{"action":"key","keys":"Return","memo":"Pressed Enter in Calc Open dialog with ~/Desktop/reminder.docx. Expect Writer to open reminder.docx; then read the requirements. Target workbook: workbook-with-sample-database.xlsx, sheet 'Mkt Tera' active, 10 sheets."}

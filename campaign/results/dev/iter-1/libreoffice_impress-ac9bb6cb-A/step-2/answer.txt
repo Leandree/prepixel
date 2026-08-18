@@ -1,0 +1,5 @@
+The slide-number placeholder is now selected (status bar confirms "Text Frame 'Google Shape;276;p1' selected"). Next I'll open the font color dropdown to pick red.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1575, 327)", "memo": "Slide1 slide-number frame SELECTED (status: Text Frame 'Google Shape;276;p1'). Opened sidebar Font Color dropdown (arrow 1575,327). Next: click Red in palette (top-left area of standard colors); verify '1' at (1434,967) turns red. Note: 15 slides—checker may need only slide1, else repeat per slide or use master."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e1","memo":"Task: 'translate the hidden audio conversation into French'. No image was actually provided to me — only heron.jpeg on the desktop. Cropping its thumbnail to see if the 'conversation' is visible text (comic/speech bubbles) vs. real audio. NOTE: I have no audio perception, so if it is genuinely audio, this is impossible -> fail."}
+```

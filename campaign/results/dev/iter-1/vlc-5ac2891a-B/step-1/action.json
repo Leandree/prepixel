@@ -1,0 +1,1 @@
+{"action": "click", "target": "e9", "memo": "Goal: disable VLC auto-close at video end (play-and-exit). Opened Tools menu; next pick Preferences (Ctrl+P), switch 'Show settings' to All, go to Playlist, uncheck 'Play and exit', Save."}

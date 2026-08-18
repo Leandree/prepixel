@@ -1,0 +1,5 @@
+There's already a "Dota 2" tab open. Let me switch to it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(200, 46)"}
+```

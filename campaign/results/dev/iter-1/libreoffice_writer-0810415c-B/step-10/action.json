@@ -1,0 +1,1 @@
+{"action": "click", "target": "e51", "memo": "Para1 (e50) confirmed double (block 166 = 4 lines x 36.8 + spacing). Para2 (e51) ambiguous. Now cursor in para2: next click e143 Line Spacing, read which preset is focused, then click 'Spacing: 2' (re-apply, harmless). Then ctrl+s and 'Use Word 2007-365!'."}

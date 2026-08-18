@@ -1,0 +1,620 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find Dota 2 game and add all DLC to cart.
+
+STEP 9 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click page-tab "Dota 2"
+2. set_value entry "Address and search bar" := "https://store.steampowered.com/app/570/Dota_2/"
+3. click page-tab "Dota 2 - Memory usage - 81.9 MB"
+4. set_value entry "Address and search bar" := "https://store.steampowered.com/app/570/Dota_2/"
+5. click section "Reject All"
+6. scroll down
+7. click link "Add all DLC to Cart"
+8. click push-button "View My Cart (1)"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Modal confirmed 'Added to your cart!' with The Dota 2 Official Soundtrack (8,19€); Remixes EP is free so not cart-eligible. Clicked 'View My Cart (1)' to verify cart contents. Next: confirm cart page lists the DLC, then done.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 push-button 1802,27,30,35 "Minimise"
+e14 push-button 1842,27,30,35 "Restore"
+e15 push-button 1882,27,38,35 "Close"
+e16 push-button 76,27,28,41 "Search tabs"
+e17 page-tab 98,27,256,41 "Shopping Cart - Memory usage - 299 MB" state=selected
+e18 push-button 312,33,28,28 "Close"
+e19 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 64.2 MB"
+e20 push-button 550,33,28,28 "Close"
+e21 push-button 586,27,28,41 "New Tab"
+e22 push-button 70,73,39,34 "Back"
+e23 push-button 111,73,34,34 "Forward"
+e24 push-button 147,73,34,34 "Reload"
+e25 push-button 195,78,24,24 "View site information"
+e26 entry 227,78,1418,24 "Address and search bar"
+e27 push-button 1653,78,24,24 "Bookmark this tab"
+e28 push-button 1698,73,34,34 "You"
+e29 push-button 1737,73,183,34 "Relaunch to update"
+~e30 document-web 70,114,1850,966 "Shopping Cart" state=focused
+~e31 link 388,144,145,47 "Link to the Steam Homepage"
+~e32 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+~e33 text 588,114,335,73 "Global Menu"
+~e34 link 588,114,66,73 "STORE"
+~e35 link 653,114,114,73 "COMMUNITY"
+~e36 link 766,114,71,68 "ABOUT"
+~e37 link 836,114,87,68 "SUPPORT"
+~e38 text 1339,120,249,24 "|"
+~e39 link 1339,120,111,21 "Install Steam"
+~e40 link 1455,125,43,14 "sign in"
+~e41 text 1497,125,16,14 "|"
+~e42 text 1512,125,71,14 "language"
+~e43 text 1517,125,48,14 "language"
+~e44 text 380,218,1216,46 "Store menu"
+~e45 push-button 380,218,83,46 "Browse"
+~e46 push-button 462,218,153,46 "Recommendations"
+~e47 push-button 614,218,105,46 "Categories"
+~e48 push-button 718,218,98,46 "Hardware"
+~e49 push-button 815,218,118,46 "Ways to Play"
+~e50 push-button 932,218,139,46 "Special Sections"
+~e51 combo-box 1086,224,364,34 "Search the store"
+~e52 push-button 1449,224,35,34 "Search"
+~e53 [pixels] image 1457,232,19,18 alt=Search
+~e54 link 1507,226,76,30 "Cart 1"
+~e55 [pixels] image 1517,234,15,14
+~e56 text 1536,231,27,20 "Cart"
+~e57 text 1536,232,27,17 "Cart"
+~e58 text 1567,231,6,20 "1"
+~e59 text 1567,235,6,13 "1"
+~e60 text 388,289,1200,17 "> Your Shopping Cart (1 item)"
+~e61 link 388,290,34,15 "Home"
+~e62 text 425,290,11,15 ">"
+~e63 text 435,290,156,15 "Your Shopping Cart (1 item)"
+~e64 text 388,306,1200,31 "Your Shopping Cart (1 item)"
+~e65 text 388,308,300,27 "Your Shopping Cart (1 item)"
+~e66 text 388,362,792,124 "The Dota 2 Official Soundtrack The Dota 2 Official Soundtrack Windows macOS Linux / SteamOS 8,19€ For my account Remove The Dota 2 Official Soundtrack"
+~e67 push-button 388,362,792,124 "The Dota 2 Official Soundtrack The Dota 2 Official Soundtrack Windows macOS Linux / SteamOS 8,19€ For my account Remove The Dota 2 Official Soundtrack"
+~e68 link 403,377,200,97 "The Dota 2 Official Soundtrack"
+~e69 [pixels] image 403,377,200,94 alt=The Dota 2 Official Soundtrack
+~e70 text 618,377,234,20 "The Dota 2 Official Soundtrack"
+~e71 [pixels] image 618,412,15,16 alt=Windows
+~e72 [pixels] image 637,411,16,16 alt=macOS
+~e73 [pixels] image 657,412,16,16 alt=Linux / SteamOS
+~e74 text 1126,411,39,17 "8,19€"
+~e75 combo-box 618,443,128,28 "For my account"
+~e76 push-button 1119,448,46,18 "Remove The Dota 2 Official Soundtrack"
+~e77 push-button 388,508,173,32 "Continue Shopping"
+~e78 push-button 575,508,186,32 "Continue to payment"
+~e79 push-button 1084,515,96,18 "Remove all items"
+~e80 text 388,610,792,28 "RECOMMENDATIONS FOR YOU"
+~e81 text 388,613,295,21 "RECOMMENDATIONS FOR YOU"
+~e82 push-button 388,654,251,156 "Big Walk and PEAK 32% off. 23,83€ normally, discounted to 16,19€"
+~e83 text 388,654,251,118 "Big Walk and PEAK"
+~e84 [pixels] image 388,654,251,118 alt=Big Walk and PEAK
+~e85 text 492,771,147,39 "-32%"
+~e86 text 500,774,66,33 "-32%"
+~e87 text 573,773,66,34 "16,19€"
+~e88 text 586,775,45,12 "23,83€"
+~e89 text 586,773,45,15 "23,83€"
+~e90 text 581,786,50,20 "16,19€"
+~e91 push-button 658,654,252,156 "Big Walk 25% off. 18,99€ normally, discounted to 14,24€"
+~e92 text 658,654,252,118 "Big Walk"
+~e93 [pixels] image 658,654,252,118 alt=Big Walk
+~e94 text 760,771,150,39 "-25%"
+~e95 text 768,774,66,33 "-25%"
+~e96 text 841,773,69,34 "14,24€"
+~e97 text 858,775,44,12 "18,99€"
+~e98 text 858,773,44,15 "18,99€"
+~e99 text 849,786,53,20 "14,24€"
+~e100 push-button 929,654,252,156 "No More Room in Hell 2 35% off. 28,99€ normally, discounted to 18,84€"
+~e101 text 929,654,252,118 "No More Room in Hell 2"
+~e102 [pixels] image 929,654,252,118 alt=No More Room in Hell 2
+~e103 text 1031,771,150,39 "-35%"
+~e104 text 1039,774,66,33 "-35%"
+~e105 text 1112,773,69,34 "18,84€"
+~e106 text 1128,775,45,12 "28,99€"
+~e107 text 1128,773,45,15 "28,99€"
+~e108 text 1120,786,53,20 "18,84€"
+~e109 text 1215,378,92,20 "Estimated total"
+~e110 text 1215,379,92,17 "Estimated total"
+~e111 text 1530,377,43,22 "8,19€"
+~e112 text 1530,378,43,19 "8,19€"
+~e113 text 1215,409,358,17 "Sales tax will be calculated during checkout where applicable"
+~e114 text 1215,410,342,15 "Sales tax will be calculated during checkout where applicable"
+~e115 push-button 1215,438,358,32 "Continue to payment"
+~e116 text 1221,692,346,37 "A purchase of a digital product grants a license for the product on Steam."
+~e117 text 1221,691,327,38 "A purchase of a digital product grants a license for the product on Steam."
+~e118 text 1221,736,346,35 "For full terms and conditions, please see the"
+~e119 text 1221,737,251,16 "For full terms and conditions, please see the"
+~e120 link 1221,737,286,33 "Steam Subscriber Agreement"
+~e121 text 1215,822,358,24 "Follow the creators"
+~e122 text 1215,823,143,21 "Follow the creators"
+~e123 text 1215,849,358,41 "Follow the creators of your purchase and get notified when they release their next game."
+~e124 text 1215,850,347,38 "Follow the creators of your purchase and get notified when they release their next game."
+~e125 text 1215,906,358,59 "Followers:1,004,112"
+~e126 link 1215,906,54,59
+~e127 [pixels] image 1215,906,54,55
+~e128 link 1281,906,292,23 "Valve"
+~e129 push-button 1281,932,52,29 "Follow"
+~e130 text 1338,932,52,15 "Followers:"
+~e131 text 1338,943,73,20 "1,004,112"
+~e132 text 1215,976,358,59 "Followers:147,561"
+~e133 link 1215,976,54,59
+~e134 [pixels] image 1215,976,54,55
+~e135 link 1281,976,292,23 "Dota"
+~e136 push-button 1281,1002,52,29 "Follow"
+~e137 text 1338,1002,52,15 "Followers:"
+~e138 text 1338,1013,59,20 "147,561"
+e139 toggle-button 0,0,99,27 "Activities" state=checked:false
+e140 menu 99,0,162,27 "Google Chrome"
+e141 menu 906,0,178,27 "Aug 18 21‎∶38"
+e142 menu 1814,0,106,27 "System"
+e143 push-button 0,840,70,8
+e144 push-button 62,33,8,815
+e145 push-button 0,33,70,64 "Google Chrome"
+e146 push-button 0,101,70,64 "Thunderbird Mail"
+e147 push-button 0,169,70,64 "Visual Studio Code"
+e148 push-button 0,237,70,64 "VLC media player"
+e149 push-button 0,305,70,64 "LibreOffice Writer"
+e150 push-button 0,373,70,64 "LibreOffice Calc"
+e151 push-button 0,441,70,64 "LibreOffice Impress"
+e152 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e153 push-button 0,577,70,64 "Files"
+e154 push-button 0,645,70,64 "Ubuntu Software"
+e155 push-button 0,713,70,64 "Help"
+e156 push-button 0,784,70,64 "Trash"
+e157 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e158 [pixels] group 70,264,1836,798 declares=1 exposes=87
+~e159 [pixels] group 388,289,1200,17 declares=1 exposes=4
+[act-guard] previous action: CONFIRMED (element no longer present — view changed)
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 6 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 toggle-button 0,0,99,27 "Activities" state=checked:false
+e14 menu 99,0,162,27 "Google Chrome"
+e15 menu 906,0,178,27 "Aug 18 21‎∶37"
+e16 menu 1814,0,106,27 "System"
+e17 push-button 0,840,70,8
+e18 push-button 62,33,8,815
+e19 push-button 0,33,70,64 "Google Chrome"
+e20 push-button 0,101,70,64 "Thunderbird Mail"
+e21 push-button 0,169,70,64 "Visual Studio Code"
+e22 push-button 0,237,70,64 "VLC media player"
+e23 push-button 0,305,70,64 "LibreOffice Writer"
+e24 push-button 0,373,70,64 "LibreOffice Calc"
+e25 push-button 0,441,70,64 "LibreOffice Impress"
+e26 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e27 push-button 0,577,70,64 "Files"
+e28 push-button 0,645,70,64 "Ubuntu Software"
+e29 push-button 0,713,70,64 "Help"
+e30 push-button 0,784,70,64 "Trash"
+e31 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e32 push-button 1802,27,30,35 "Minimise"
+e33 push-button 1842,27,30,35 "Restore"
+e34 push-button 1882,27,38,35 "Close"
+e35 push-button 76,27,28,41 "Search tabs"
+e36 page-tab 98,27,256,41 "Dota 2 on Steam - Memory usage - 268 MB" state=selected
+e37 push-button 312,33,28,28 "Close"
+e38 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 64.2 MB"
+e39 push-button 550,33,28,28 "Close"
+e40 push-button 586,27,28,41 "New Tab"
+e41 push-button 70,73,39,34 "Back"
+e42 push-button 111,73,34,34 "Forward"
+e43 push-button 147,73,34,34 "Reload"
+e44 push-button 195,78,24,24 "View site information"
+e45 entry 227,78,1418,24 "Address and search bar"
+e46 push-button 1653,78,24,24 "Bookmark this tab"
+e47 push-button 1698,73,34,34 "You"
+e48 push-button 1737,73,183,34 "Relaunch to update"
+e49 document-web 70,114,1850,966 "Dota 2 on Steam" state=focused
+e50 link 388,144,145,47 "Link to the Steam Homepage"
+e51 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+e52 text 588,114,335,73 "Global Menu"
+e53 link 588,114,66,73 "STORE"
+e54 link 653,114,114,73 "COMMUNITY"
+e55 link 766,114,71,68 "ABOUT"
+e56 link 836,114,87,68 "SUPPORT"
+e57 text 1339,120,249,24 "|"
+e58 link 1339,120,111,21 "Install Steam"
+e59 link 1455,125,43,14 "sign in"
+e60 text 1497,125,16,14 "|"
+e61 text 1512,125,71,14 "language"
+e62 text 1517,125,48,14 "language"
+e63 text 380,218,1216,46 "Store menu"
+e64 push-button 380,218,83,46 "Browse"
+e65 push-button 462,218,153,46 "Recommendations"
+e66 push-button 614,218,105,46 "Categories"
+e67 push-button 718,218,98,46 "Hardware"
+e68 push-button 815,218,118,46 "Ways to Play"
+e69 push-button 932,218,139,46 "Special Sections"
+e70 combo-box 1111,224,446,34 "Search the store"
+e71 push-button 1557,224,34,34 "Search"
+e72 [pixels] image 1565,232,18,18 alt=Search
+e73 text 398,274,182,36 "Open in Desktop App"
+e74 text 418,284,142,16 "Open in Desktop App"
+e75 text 599,275,587,34 "You're not signed in!
+Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+e76 text 599,274,147,19 "You're not signed in!"
+e77 text 599,292,587,17 "Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+e78 text 388,340,1200,17 ">  >  >"
+e79 link 388,341,57,15 "All Games"
+e80 text 444,341,15,15 ">"
+e81 link 458,341,110,15 "Free To Play Games"
+e82 text 567,341,15,15 ">"
+e83 link 581,341,84,15 "Dota Franchise"
+e84 text 664,341,15,15 ">"
+e85 link 678,341,39,15 "Dota 2"
+e86 link 1448,357,140,32 "Community Hub"
+e87 text 388,357,1200,32 "Dota 2"
+e88 text 388,357,82,32 "Dota 2"
+e89 text 1213,593,375,115 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+e90 text 1213,594,344,112 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+e91 link 1213,727,375,19 "RECENT REVIEWS: Mixed (21,640)"
+e92 text 1213,727,142,19 "RECENT REVIEWS:"
+e93 text 1213,730,102,13 "RECENT REVIEWS:"
+e94 text 1354,727,188,19 "Mixed (21,640)"
+e95 text 1354,728,35,16 "Mixed"
+e96 text 1392,728,49,16 "(21,640)"
+e97 link 1213,745,375,19 "ENGLISH REVIEWS: Very Positive (835,675)"
+e98 text 1213,745,142,19 "ENGLISH REVIEWS:"
+e99 text 1213,748,106,13 "ENGLISH REVIEWS:"
+e100 text 1354,745,188,19 "Very Positive (835,675)"
+e101 text 1354,746,76,16 "Very Positive"
+e102 text 1433,746,56,16 "(835,675)"
+e103 text 1213,772,142,19 "RELEASE DATE:"
+e104 text 1213,775,86,13 "RELEASE DATE:"
+e105 text 1354,772,72,19 "10 Jul, 2013"
+e106 text 1354,773,72,16 "10 Jul, 2013"
+e107 text 1213,803,142,19 "DEVELOPER:"
+e108 text 1213,806,71,13 "DEVELOPER:"
+e109 link 1354,804,32,16 "Valve"
+e110 text 1213,821,142,19 "PUBLISHER:"
+e111 text 1213,824,66,13 "PUBLISHER:"
+e112 link 1354,822,32,16 "Valve"
+e113 text 1213,891,375,20 "Popular user-defined tags for this product:"
+e114 text 1213,893,224,15 "Popular user-defined tags for this product:"
+e115 link 1213,910,74,20 "Free to Play"
+e116 link 1288,910,47,20 "MOBA"
+e117 link 1336,910,68,20 "Multiplayer"
+e118 link 1405,910,56,20 "Strategy"
+e119 link 1462,910,53,20 "eSports"
+e120 push-button 1516,910,22,20 "+"
+e121 text 389,403,808,456 "0:00 / 0:42"
+e122 [pixels] video 389,403,808,456 alt=Unable to play media.
+~e123 text 389,403,808,456 "0:02 / 0:42"
+e124 [pixels] image 397,609,25,40
+e125 [pixels] image 1164,609,25,40
+e126 [pixels] image 389,864,116,66
+e127 [pixels] image 436,885,22,23
+e128 [pixels] image 509,864,116,66
+e129 [pixels] image 556,885,22,23
+e130 [pixels] image 629,864,116,66
+e131 [pixels] image 749,864,116,66
+e132 [pixels] image 869,864,116,66
+e133 [pixels] image 989,864,116,66
+e134 [pixels] image 1109,864,116,66
+e135 [pixels] image 405,939,6,11
+e136 [pixels] image 1175,939,6,10
+e137 text 404,982,367,33 "to add this item to your wishlist, follow it, or mark it as ignored"
+e138 link 404,982,37,15 "Sign in"
+e139 text 440,982,331,15 "to add this item to your wishlist, follow it, or mark it as ignored"
+e140 link 1524,982,48,33 "To get missing image descriptions, open the context menu."
+e141 [pixels] image 1540,989,16,20 alt=To get missing image descriptions, open the context menu.
+e142 link 1208,1078,364,27 "Co-op"
+e143 link 393,1062,780,55 "Check out the entire Dota collection on Steam"
+
+--- view at step 7 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 push-button 1802,27,30,35 "Minimise"
+e14 push-button 1842,27,30,35 "Restore"
+e15 push-button 1882,27,38,35 "Close"
+e16 push-button 76,27,28,41 "Search tabs"
+e17 page-tab 98,27,256,41 "Dota 2 on Steam - Memory usage - 268 MB" state=selected
+e18 push-button 312,33,28,28 "Close"
+e19 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 64.2 MB"
+e20 push-button 550,33,28,28 "Close"
+e21 push-button 586,27,28,41 "New Tab"
+e22 push-button 70,73,39,34 "Back"
+e23 push-button 111,73,34,34 "Forward"
+e24 push-button 147,73,34,34 "Reload"
+e25 push-button 195,78,24,24 "View site information"
+e26 entry 227,78,1418,24 "Address and search bar"
+e27 push-button 1653,78,24,24 "Bookmark this tab"
+e28 push-button 1698,73,34,34 "You"
+e29 push-button 1737,73,183,34 "Relaunch to update"
+e30 document-web 70,114,1850,966 "Dota 2 on Steam" state=focused
+~e31 link 1213,127,375,19 "RECENT REVIEWS: Mixed (21,640)"
+~e32 text 1213,127,142,19 "RECENT REVIEWS:"
+~e33 text 1213,130,102,13 "RECENT REVIEWS:"
+~e34 text 1354,127,188,19 "Mixed (21,640)"
+~e35 text 1354,128,35,16 "Mixed"
+~e36 text 1392,128,49,16 "(21,640)"
+~e37 link 1213,145,375,19 "ENGLISH REVIEWS: Very Positive (835,675)"
+~e38 text 1213,145,142,19 "ENGLISH REVIEWS:"
+~e39 text 1213,148,106,13 "ENGLISH REVIEWS:"
+~e40 text 1354,145,188,19 "Very Positive (835,675)"
+~e41 text 1354,146,76,16 "Very Positive"
+~e42 text 1433,146,56,16 "(835,675)"
+~e43 text 1213,172,142,19 "RELEASE DATE:"
+~e44 text 1213,175,86,13 "RELEASE DATE:"
+~e45 text 1354,172,72,19 "10 Jul, 2013"
+~e46 text 1354,173,72,16 "10 Jul, 2013"
+~e47 text 1213,203,142,19 "DEVELOPER:"
+~e48 text 1213,206,71,13 "DEVELOPER:"
+~e49 link 1354,204,32,16 "Valve"
+~e50 text 1213,221,142,19 "PUBLISHER:"
+~e51 text 1213,224,66,13 "PUBLISHER:"
+~e52 link 1354,222,32,16 "Valve"
+~e53 text 1213,291,375,20 "Popular user-defined tags for this product:"
+~e54 text 1213,293,224,15 "Popular user-defined tags for this product:"
+~e55 link 1213,310,74,20 "Free to Play"
+~e56 link 1288,310,47,20 "MOBA"
+~e57 link 1336,310,68,20 "Multiplayer"
+~e58 link 1405,310,56,20 "Strategy"
+~e59 link 1462,310,53,20 "eSports"
+~e60 push-button 1516,310,22,20 "+"
+~e61 text 389,-197,808,456 "0:00 / 0:42"
+~e62 [pixels] video 389,-197,808,456 alt=Unable to play media.
+~e63 text 389,-197,808,456 "0:33 / 0:42"
+~e64 [pixels] image 389,264,116,66
+~e65 [pixels] image 436,285,22,23
+~e66 [pixels] image 509,264,116,66
+~e67 [pixels] image 556,285,22,23
+~e68 [pixels] image 629,264,116,66
+~e69 [pixels] image 749,264,116,66
+~e70 [pixels] image 869,264,116,66
+~e71 [pixels] image 989,264,116,66
+~e72 [pixels] image 1109,264,116,66
+~e73 [pixels] image 405,339,6,11
+~e74 [pixels] image 1175,339,6,10
+~e75 text 404,382,367,33 "to add this item to your wishlist, follow it, or mark it as ignored"
+~e76 link 404,382,37,15 "Sign in"
+~e77 text 440,382,331,15 "to add this item to your wishlist, follow it, or mark it as ignored"
+~e78 link 1524,382,48,33 "To get missing image descriptions, open the context menu."
+~e79 [pixels] image 1540,389,16,20 alt=To get missing image descriptions, open the context menu.
+~e80 link 1208,478,364,27 "Co-op"
+~e81 link 1208,506,364,27 "Steam Trading Cards"
+~e82 link 1208,534,364,27 "Steam Workshop"
+~e83 link 1208,562,364,27 "SteamVR Collectibles"
+~e84 link 1208,590,364,27 "In-App Purchases"
+~e85 link 1208,618,364,27 "Steam Timeline"
+~e86 toggle-button 1208,646,364,27 "Accessibility Features (3) ?" state=checked:false
+~e87 [pixels] image 1214,651,26,17
+~e88 text 1246,646,326,27 "Accessibility Features (3)"
+~e89 text 1254,652,135,15 "Accessibility Features (3)"
+~e90 link 1545,649,19,20 "?"
+~e91 text 1216,688,348,18 "Uses Anti-Cheat Software"
+~e92 text 1216,689,138,15 "Uses Anti-Cheat Software"
+~e93 text 1216,709,348,18 "VAC (Valve Anti-Cheat)"
+~e94 text 1216,710,124,15 "VAC (Valve Anti-Cheat)"
+~e95 text 1208,742,364,15 "Languages:"
+~e96 text 1208,742,60,15 "Languages"
+~e97 text 1267,742,4,15 ":"
+~e98 text 1330,758,81,15 "Interface"
+~e99 text 1347,758,47,15 "Interface"
+~e100 text 1410,758,82,15 "Full Audio"
+~e101 text 1424,758,54,15 "Full Audio"
+~e102 text 1491,758,81,15 "Subtitles"
+~e103 text 1508,758,47,15 "Subtitles"
+~e104 table-cell 1208,772,123,22 "English"
+~e105 table-cell 1330,772,81,22 "✔"
+~e106 table-cell 1410,772,82,22 "✔"
+~e107 table-cell 1491,772,81,22
+~e108 table-cell 1208,793,123,22 "Bulgarian"
+~e109 table-cell 1330,793,81,22 "✔"
+~e110 table-cell 1410,793,82,22
+~e111 table-cell 1491,793,81,22
+~e112 table-cell 1208,814,123,22 "Czech"
+~e113 table-cell 1330,814,81,22 "✔"
+~e114 table-cell 1410,814,82,22
+~e115 table-cell 1491,814,81,22
+~e116 table-cell 1208,835,123,22 "Danish"
+~e117 table-cell 1330,835,81,22 "✔"
+~e118 table-cell 1410,835,82,22
+~e119 table-cell 1491,835,81,22
+~e120 table-cell 1208,856,123,22 "Dutch"
+~e121 table-cell 1330,856,81,22 "✔"
+~e122 table-cell 1410,856,82,22
+~e123 table-cell 1491,856,81,22
+~e124 link 1208,883,169,15 "See all 28 supported languages"
+~e125 text 1192,949,396,110 "STEAM DECK COMPATIBILITY"
+~e126 text 1192,961,396,26 "STEAM DECK COMPATIBILITY"
+~e127 text 1192,962,203,18 "STEAM DECK COMPATIBILITY"
+~e128 text 1216,1006,82,21 "Playable"
+~e129 text 1244,1008,54,17 "Playable"
+~e130 push-button 1468,1002,96,29 "Learn more"
+~e131 text 1208,1074,364,15 "Points Shop Items Available"
+~e132 text 1208,1074,149,15 "Points Shop Items Available"
+~e133 link 393,462,780,55 "Check out the entire Dota collection on Steam"
+~e134 text 393,531,780,66 "Play Dota 2"
+~e135 text 409,547,748,24 "Play Dota 2"
+~e136 text 409,545,113,27 "Play Dota 2"
+~e137 text 950,579,98,33 "Free To Play"
+~e138 text 962,588,74,17 "Free To Play"
+~e139 link 1049,579,106,33 "Play Game"
+~e140 text 393,656,780,29 "Content For This Game"
+~e141 text 393,662,150,18 "Content For This Game"
+~e142 link 1086,662,71,15 "Browse all (2)"
+~e143 text 1086,662,57,15 "Browse all"
+~e144 text 1142,662,15,15 "(2)"
+~e145 link 393,685,780,23 "The Dota 2 Official Soundtrack 8,19€"
+~e146 text 397,689,177,15 "The Dota 2 Official Soundtrack"
+~e147 text 405,689,164,15 "The Dota 2 Official Soundtrack"
+~e148 text 1133,689,36,15 "8,19€"
+~e149 text 1133,689,31,15 "8,19€"
+~e150 link 393,708,780,23 "The Dota 2 Remixes EP Free"
+~e151 text 397,712,142,15 "The Dota 2 Remixes EP"
+~e152 text 405,712,129,15 "The Dota 2 Remixes EP"
+~e153 text 1139,712,30,15 "Free"
+~e154 text 1139,712,25,15 "Free"
+~e155 text 949,733,57,33 "8,19€"
+~e156 text 961,741,33,16 "8,19€"
+~e157 link 1007,733,162,33 "Add all DLC to Cart"
+~e158 text 393,815,780,29 "Recent Events & Announcements"
+~e159 text 393,821,218,18 "Recent Events & Announcements"
+~e160 push-button 1099,821,74,23 "View All"
+~e161 push-button 393,853,386,304 "NEWS It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks. The International: Streams, Secret Shop, and More Wed, August 12, 2026"
+~e162 text 413,873,346,18 "NEWS"
+~e163 text 413,874,36,16 "NEWS"
+~e164 text 413,900,346,68 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks."
+~e165 text 413,900,337,67 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks."
+~e166 text 393,853,386,304 "Wed, August 12, 2026"
+~e167 [pixels] image 393,853,386,218
+~e168 push-button 787,853,386,304 "REGULAR UPDATE The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and... Gameplay Patch 7.41e and Summer Scrub Fri, July 31, 2026"
+~e169 text 807,873,346,18 "REGULAR UPDATE"
+~e170 text 807,874,105,16 "REGULAR UPDATE"
+~e171 text 807,900,346,68 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and..."
+~e172 text 807,900,339,67 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and..."
+~e173 text 787,853,386,304 "Fri, July 31, 2026"
+~e174 [pixels] image 787,853,386,218
+e175 toggle-button 0,0,99,27 "Activities" state=checked:false
+e176 menu 99,0,162,27 "Google Chrome"
+e177 menu 906,0,178,27 "Aug 18 21‎∶37"
+e178 menu 1814,0,106,27 "System"
+e179 push-button 0,840,70,8
+e180 push-button 62,33,8,815
+e181 push-button 0,33,70,64 "Google Chrome"
+e182 push-button 0,101,70,64 "Thunderbird Mail"
+e183 push-button 0,169,70,64 "Visual Studio Code"
+e184 push-button 0,237,70,64 "VLC media player"
+e185 push-button 0,305,70,64 "LibreOffice Writer"
+e186 push-button 0,373,70,64 "LibreOffice Calc"
+e187 push-button 0,441,70,64 "LibreOffice Impress"
+e188 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e189 push-button 0,577,70,64 "Files"
+e190 push-button 0,645,70,64 "Ubuntu Software"
+e191 push-button 0,713,70,64 "Help"
+e192 push-button 0,784,70,64 "Trash"
+e193 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+
+--- view at step 8 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 push-button 1802,27,30,35 "Minimise"
+e14 push-button 1842,27,30,35 "Restore"
+e15 push-button 1882,27,38,35 "Close"
+e16 push-button 76,27,28,41 "Search tabs"
+e17 page-tab 98,27,256,41 "Dota 2 on Steam - Memory usage - 268 MB" state=selected
+e18 push-button 312,33,28,28 "Close"
+e19 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 64.2 MB"
+e20 push-button 550,33,28,28 "Close"
+e21 push-button 586,27,28,41 "New Tab"
+e22 push-button 70,73,39,34 "Back"
+e23 push-button 111,73,34,34 "Forward"
+e24 push-button 147,73,34,34 "Reload"
+e25 push-button 195,78,24,24 "View site information"
+e26 entry 227,78,1418,24 "Address and search bar"
+e27 push-button 1653,78,24,24 "Bookmark this tab"
+e28 push-button 1698,73,34,34 "You"
+e29 push-button 1737,73,183,34 "Relaunch to update"
+~e30 document-web 70,114,1850,966 "Dota 2 on Steam"
+~e31 [pixels] image 1297,462,14,15
+~e32 text 695,479,600,32 "Added to your cart!"
+~e33 text 695,481,211,28 "Added to your cart!"
+~e34 text 695,535,600,125 "The Dota 2 Official Soundtrack The Dota 2 Official Soundtrack Windows macOS Linux / SteamOS 8,19€ For my account Remove The Dota 2 Official Soundtrack"
+~e35 push-button 695,535,600,125 "The Dota 2 Official Soundtrack The Dota 2 Official Soundtrack Windows macOS Linux / SteamOS 8,19€ For my account Remove The Dota 2 Official Soundtrack"
+~e36 link 710,550,200,98 "The Dota 2 Official Soundtrack"
+~e37 [pixels] image 710,550,200,94 alt=The Dota 2 Official Soundtrack
+~e38 text 925,550,234,21 "The Dota 2 Official Soundtrack"
+~e39 [pixels] image 925,586,15,15 alt=Windows
+~e40 [pixels] image 944,584,16,17 alt=macOS
+~e41 [pixels] image 964,585,16,17 alt=Linux / SteamOS
+~e42 text 1241,584,39,18 "8,19€"
+~e43 combo-box 925,616,128,29 "For my account"
+~e44 push-button 1234,622,46,17 "Remove The Dota 2 Official Soundtrack"
+~e45 push-button 695,681,290,33 "Continue Shopping"
+~e46 push-button 1005,681,290,33 "View My Cart (1)"
+e47 toggle-button 0,0,99,27 "Activities" state=checked:false
+e48 menu 99,0,162,27 "Google Chrome"
+e49 menu 906,0,178,27 "Aug 18 21‎∶37"
+e50 menu 1814,0,106,27 "System"
+e51 push-button 0,840,70,8
+e52 push-button 62,33,8,815
+e53 push-button 0,33,70,64 "Google Chrome"
+e54 push-button 0,101,70,64 "Thunderbird Mail"
+e55 push-button 0,169,70,64 "Visual Studio Code"
+e56 push-button 0,237,70,64 "VLC media player"
+e57 push-button 0,305,70,64 "LibreOffice Writer"
+e58 push-button 0,373,70,64 "LibreOffice Calc"
+e59 push-button 0,441,70,64 "LibreOffice Impress"
+e60 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e61 push-button 0,577,70,64 "Files"
+e62 push-button 0,645,70,64 "Ubuntu Software"
+e63 push-button 0,713,70,64 "Help"
+e64 push-button 0,784,70,64 "Trash"
+e65 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

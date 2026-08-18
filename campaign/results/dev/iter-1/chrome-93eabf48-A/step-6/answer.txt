@@ -1,0 +1,5 @@
+The search shows only one dark-related flag: **Auto Dark Mode for Web Contents** (`#enable-force-dark`), currently on "Default". I'll set it explicitly to **Disabled**.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1257, 328); time.sleep(0.8); pyautogui.press('end'); time.sleep(0.4); pyautogui.press('enter'); time.sleep(1.0)", "memo": "chrome://flags search 'dark' => ONLY flag is 'Auto Dark Mode for Web Contents' (#enable-force-dark), was Default. Just opened its dropdown and pressed End+Enter to pick 'Disabled' (last option). NEXT: verify dropdown now reads 'Disabled'; if yes click the blue 'Relaunch' button that appears bottom-right of page."}
+```

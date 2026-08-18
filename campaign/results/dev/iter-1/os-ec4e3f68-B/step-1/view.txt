@@ -1,0 +1,13 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 toggle-button 0,0,99,27 "Activities" state=checked:false
+e4 menu 99,0,43,27
+e5 menu 906,0,178,27 "Aug 18 23‎∶04"
+e6 menu 1814,0,106,27 "System"
+e7 push-button 0,298,70,8
+e8 push-button 62,33,8,273
+e9 push-button 0,35,70,64 "Vim"
+e10 push-button 0,103,70,64 "Google Chrome"
+e11 push-button 0,171,70,64 "Thunderbird Mail"
+e12 push-button 0,242,70,64 "Trash"
+e13 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

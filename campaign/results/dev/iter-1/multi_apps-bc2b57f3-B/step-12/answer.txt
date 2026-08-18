@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"Return","memo":"Pressed Return to dismiss whatever dialog F5 raised (MsgBox DONE or Basic error). Current view wasn't rendered, so state unknown. NEXT: read the view carefully — check the Calc page-tabs (e638-e647 range) for order ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. If still old order, an error occurred — read dialog text."}
+```

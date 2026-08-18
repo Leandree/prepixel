@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.rightClick(35, 65)", "memo": "Right-clicked Vim dock icon at (35,65) to open context menu; next click 'Remove from Favorites'."}

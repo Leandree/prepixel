@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(946, 373)", "memo": "Prefs saved & dialog closed. Now VERIFYING: clicked Tools menu (946,373). Next: click Preferences (~991,604), then select 'All' radio (bottom-left ~637,898), scroll list, open Playlist, confirm 'Play and exit' UNCHECKED. Close with CANCEL (not Save) so verification can't change anything. Then DONE."}

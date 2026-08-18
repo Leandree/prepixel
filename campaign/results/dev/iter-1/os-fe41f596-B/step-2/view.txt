@@ -1,0 +1,26 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+~e3 text 865,61,290,17
+e4 toggle-button 0,0,99,27 "Activities" state=checked:true
+e5 menu 99,0,43,27
+e6 menu 906,0,178,27 "Aug 18 23‎∶06"
+e7 menu 1814,0,106,27 "System"
+~e8 text 810,41,274,28 "Software Updates Available to Download"
+~e9 text 810,49,274,20 "Software Updates Available to Download"
+~e10 push-button 1208,42,26,26
+~e11 text 810,73,291,17 "Please download waiting software updates."
+e12 push-button 0,840,70,8
+e13 push-button 62,33,8,815
+e14 push-button 0,33,70,64 "Google Chrome"
+e15 push-button 0,101,70,64 "Thunderbird Mail"
+e16 push-button 0,169,70,64 "Visual Studio Code"
+e17 push-button 0,237,70,64 "VLC media player"
+e18 push-button 0,305,70,64 "LibreOffice Writer"
+e19 push-button 0,373,70,64 "LibreOffice Calc"
+e20 push-button 0,441,70,64 "LibreOffice Impress"
+e21 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e22 push-button 0,577,70,64 "Files"
+e23 push-button 0,645,70,64 "Ubuntu Software"
+e24 push-button 0,713,70,64 "Help"
+e25 push-button 0,784,70,64 "Trash"
+e26 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

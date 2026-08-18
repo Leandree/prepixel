@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(906, 783)", "memo": "Clicked checkbox 'Display background cone or art' at (906,783) to UNCHECK it in Qt interface / Advanced Prefs. Next: verify it is now unchecked in screenshot, then click Save at (1210,903). If still checked, retry click on the label text instead."}

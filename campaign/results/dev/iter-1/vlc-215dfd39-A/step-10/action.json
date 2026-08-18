@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "Verified via step-9 vs step-10 diff: ONLY 'Display background cone or art' toggled checked->unchecked (qt-bgcone=0); no collateral changes. Just clicked Save (1210,903). Next: confirm Advanced Preferences dialog closed -> then DONE."}

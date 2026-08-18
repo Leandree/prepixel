@@ -1,0 +1,67 @@
+{
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "node-not-found",
+  "walk_s": 0.96,
+  "near": [
+   {
+    "rect": [
+     1183,
+     -13507,
+     151,
+     27
+    ],
+    "dist": 13716
+   },
+   {
+    "rect": [
+     1183,
+     -13399,
+     151,
+     27
+    ],
+    "dist": 13608
+   },
+   {
+    "rect": [
+     1183,
+     -13234,
+     151,
+     27
+    ],
+    "dist": 13443
+   },
+   {
+    "rect": [
+     1183,
+     -13070,
+     151,
+     27
+    ],
+    "dist": 13279
+   },
+   {
+    "rect": [
+     1183,
+     -12962,
+     151,
+     27
+    ],
+    "dist": 13171
+   }
+  ]
+ },
+ "rung1_error": "node-not-found",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1258,
+  222
+ ],
+ "settle_ms": 4900,
+ "settle_captures": 1,
+ "guard_ms": 69
+}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(900, 300); pyautogui.sleep(0.5); pyautogui.write('Out of the Silent Planet')", "memo": "ANSWER='Out of the Silent Planet' (47840w/36d=1329 w/day, MIN). Writer open on book_list_result.docx (was empty). Just clicked body + typed title. NEXT: verify text on screen, then Ctrl+S and press Enter to Keep current format (docx)."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1822, 1034); time.sleep(3.0)", "memo": "Auto Dark Mode for Web Contents (#enable-force-dark) set to 'Disabled'; clicked blue Relaunch button at (1822,1034). NEXT: wait for Chrome to restart, then verify chrome://flags/#enable-force-dark still shows 'Disabled' (search 'dark'). If confirmed -> DONE."}

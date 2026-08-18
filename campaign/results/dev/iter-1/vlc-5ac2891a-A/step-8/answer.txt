@@ -1,0 +1,3 @@
+Preferences dialog closed cleanly after Save — VLC is back to the main window. My note says "Play and exit" ended unchecked, but since the user's complaint implies it *was* enabled, I want to confirm the saved state rather than assume. I'll reopen preferences to verify (and close with Cancel, so verification can't alter anything).
+
+{"action": "import pyautogui; pyautogui.click(946, 373)", "memo": "Prefs saved & dialog closed. Now VERIFYING: clicked Tools menu (946,373). Next: click Preferences (~991,604), then select 'All' radio (bottom-left ~637,898), scroll list, open Playlist, confirm 'Play and exit' UNCHECKED. Close with CANCEL (not Save) so verification can't change anything. Then DONE."}

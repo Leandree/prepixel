@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Impress open, slide panel hidden. Clicked View menu at (177,76). Next: click 'Slide Pane' item in the dropdown to restore left panel."}

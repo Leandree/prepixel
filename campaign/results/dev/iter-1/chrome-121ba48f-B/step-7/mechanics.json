@@ -1,0 +1,14 @@
+{
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.jump"
+ },
+ "rung": 1,
+ "rung1_method": "Action.jump",
+ "settle_ms": 4615,
+ "settle_captures": 2,
+ "guard_ms": 25
+}

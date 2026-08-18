@@ -1,0 +1,5 @@
+The Vim icon is in the dock at the top-left. I'll right-click it to open its context menu.
+
+```json
+{"action": "import pyautogui; pyautogui.rightClick(35, 65)", "memo": "Right-clicked Vim dock icon at (35,65) to open context menu; next click 'Remove from Favorites'."}
+```

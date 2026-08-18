@@ -1,0 +1,1 @@
+{"action": "key", "keys": "enter", "memo": "Pressed Enter on gsettings set show-battery-percentage true. Terminal output isn't readable via structure \u2014 verify instead via top-bar System menu (e87, was 1814,0,106,27 'System'): if setting applied it should widen/show a % . If unchanged, retype command carefully or use GNOME Tweaks."}

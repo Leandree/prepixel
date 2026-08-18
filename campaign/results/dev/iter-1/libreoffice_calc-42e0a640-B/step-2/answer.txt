@@ -1,0 +1,1 @@
+{"action":"click","target":"e935","memo":"Add-sheet click #2 (first didn't take; still 'Sheet 1 of 1'). After Sheet2 exists: click Name Box, type A1, Enter, then type 'Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A:A)\\t=SUM(Sheet1.B:B)\\n'. Data in Sheet1 A2:A20,B2:B20. Then Ctrl+S + Keep current format."}

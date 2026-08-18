@@ -1,0 +1,3 @@
+I'm in Advanced Preferences. Now I need to scroll the settings tree down to reach the "Playlist" node.
+
+{"action": "import pyautogui; pyautogui.moveTo(715, 650); pyautogui.scroll(-8)", "memo": "Step11: in Advanced Prefs (All), scrolled tree down. NEXT: read screenshot, click 'Playlist' node in tree (it should now be visible, previously ~(639,471)), then check state of 'Play and exit' checkbox (~906,395) - UNCHECK it if checked, then Save (1210,903)."}

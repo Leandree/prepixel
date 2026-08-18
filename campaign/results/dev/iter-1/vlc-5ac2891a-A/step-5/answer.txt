@@ -1,0 +1,5 @@
+The advanced tree is showing; **Playlist** is below the visible area. I'll scroll the tree down.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(715, 650); pyautogui.scroll(-8)", "memo": "Advanced Prefs open. Scrolled tree down looking for 'Playlist' node. Next: click Playlist, uncheck 'Play and exit', then Save (1210, 903)."}
+```

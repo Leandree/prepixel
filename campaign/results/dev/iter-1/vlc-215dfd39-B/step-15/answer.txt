@@ -1,0 +1,1 @@
+{"action":"done","memo":"Set qt-bgcone=0 under the [qt] section of ~/.config/vlc/vlcrc via terminal (existing qt-bgcone lines removed first, so the edit is idempotent). Note: the final terminal crops were not readable enough to visually confirm the grep output, so the write is inferred from the command having executed, not visually verified."}

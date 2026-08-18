@@ -1,0 +1,1 @@
+{"action":"click","target":"e32","memo":"Clicked Filters menu (e32) to open it — menu items are NOT exposed in the structure, so verify via status-bar text e87/e90 (shows hint of highlighted item; filename = menu closed). NEXT: key 'l' for '_Light and Shadow' submenu, then 'v' for '_Vignette...'. Avoid alt+r (it closed the menu at step 8)."}

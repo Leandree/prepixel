@@ -1,0 +1,1 @@
+{"action": "click", "target": "e4", "memo": "Zenity confirmed VALUE=true \u2014 show-battery-percentage is set. Closing dialog with OK. After this, task is complete (top bar shows no battery since VM has no battery device, but the setting is applied)."}

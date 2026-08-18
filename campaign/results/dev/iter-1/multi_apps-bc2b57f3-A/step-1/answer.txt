@@ -1,0 +1,3 @@
+I see LibreOffice Calc open with a workbook. First I need to read the requirements in reminder.docx on the Desktop.
+
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','o'); time.sleep(2); pyautogui.write('~/Desktop/reminder.docx'); time.sleep(1); pyautogui.press('enter')", "memo": "Opened Ctrl+O in Calc and typed ~/Desktop/reminder.docx to read assignment requirements. Open workbook = workbook-with-sample-database.xlsx (10 sheets, currently on 'Mkt Tera'). Next: read reminder.docx contents, then apply changes to the workbook."}

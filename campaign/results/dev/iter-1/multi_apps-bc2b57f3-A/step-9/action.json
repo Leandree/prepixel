@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter'); time.sleep(2)", "memo": "Tab order verified correct in Calc (ReadMe...Millet spatial integration, 10 sheets). Just pressed Ctrl+S + Enter (Keep xlsx format). Next: screenshot to confirm no dialog remains, then DONE."}

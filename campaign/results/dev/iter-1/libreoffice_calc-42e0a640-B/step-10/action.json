@@ -1,0 +1,1 @@
+{"action": "set_value", "target": "e48", "value": "Total Expenses", "memo": "A1='Total Revenue' committed OK. NOW: B1 set_value 'Total Expenses' (this step). NEXT: A2(e69)='=SUM(Sheet1.A2:A20)', B2(e70)='=SUM(Sheet1.B2:B20)', then ctrl+s, then Enter for Keep-format dialog, then done. If set_value on cells fails, fall back: click cell then type then key enter."}

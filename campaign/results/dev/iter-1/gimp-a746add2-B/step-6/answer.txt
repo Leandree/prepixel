@@ -1,0 +1,1 @@
+{"action":"click","target":"e32","memo":"'/' search did not open (view unchanged). Falling back to menu: clicked Filters (e32). Next: look for 'Light and Shadow' submenu item in the opened menu, hover/click it, then click 'Vignette...'. If menu items don't appear in the structured view, crop the menu region to read them."}

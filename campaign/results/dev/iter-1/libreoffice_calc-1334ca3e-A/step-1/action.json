@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Opened View menu; next click 'Zoom...' item to open zoom dialog, then choose 50% (or Variable), OK. Zoom currently 100% (status bar bottom-right). May need Ctrl+S + 'Use Excel 2007-365!' to persist zoom in Zoom_Out_Oversized_Cells.xlsx."}

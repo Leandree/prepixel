@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+shift+down","memo":"Selection was 349 chars = para1 only. This 2nd ctrl+shift+down should extend to start of para3, covering para1+para2 (~540 chars, ~90 words). Verify status bar next step, then click 'Line Spacing' toolbar button (e143) -> Double Spacing. Do NOT use ctrl+2. Then ctrl+s, Enter to Keep current format."}

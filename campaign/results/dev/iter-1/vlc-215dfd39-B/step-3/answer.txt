@@ -1,0 +1,1 @@
+{"action":"click","target":"e75","memo":"Switched Preferences to 'All' settings view. Next: navigate tree Interface > Main interfaces > Qt, then uncheck 'Display background cone or art' (qt-bgcone), then Save."}

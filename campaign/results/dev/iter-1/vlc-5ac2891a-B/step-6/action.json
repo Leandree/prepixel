@@ -1,0 +1,1 @@
+{"action": "click", "target": "e74", "memo": "Tree still showed Simple widgets despite All=checked; clicking 'Simple' to force a real state change. NEXT: click 'All' (radio near 630,889) to rebuild into advanced tree, then find Playlist section -> uncheck 'Play and exit' -> Save."}

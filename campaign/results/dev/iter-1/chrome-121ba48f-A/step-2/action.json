@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(455, 46)", "memo": "Task: on Steam, find Dota 2 and add all DLC to cart. Step2: switched from dota2.com tab to 'Welcome to Steam' tab. Next: use Steam store search box for 'Dota 2', open the game page, scroll to DLC section, add each DLC to cart."}

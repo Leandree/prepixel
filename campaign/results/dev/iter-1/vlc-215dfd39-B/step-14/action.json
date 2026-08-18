@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e11", "memo": "Step 14: reading terminal to confirm ~/.config/vlc/vlcrc contains a [qt] section line and 'qt-bgcone=0'. Step 15 is last: if both shown -> done; if missing -> type: printf '[qt]\\nqt-bgcone=0\\n' >> ~/.config/vlc/vlcrc"}

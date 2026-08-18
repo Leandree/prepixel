@@ -1,0 +1,5 @@
+Confirmed the required order from the docx. Now creating a Basic macro to reorder the Calc sheets.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(762, 405); time.sleep(1); pyautogui.click(1259, 464); time.sleep(3)", "memo": "Target order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Calc doc = workbook-with-sample-database.xlsx (all 10 sheets present, just scrambled). Clicked My Macros>New in Basic Macros dialog; expect module-name prompt then Basic IDE. Next: paste macro using ThisComponent-independent loop over Components to find the Calc doc, moveByName each sheet to index i, then save with store()."}
+```

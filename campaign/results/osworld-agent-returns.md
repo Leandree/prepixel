@@ -1,5 +1,184 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-18 — DEV ITERATION 1 (baseline, no CDP router) — 36 cells, A 15/18, B 11/18
+
+Traces: `campaign/results/dev/iter-1/`. Driver pinned at commit 2ffa67b,
+recorded in `_driver/PINNED.json` and stamped on every cell
+(`driver_commit`). Every cell carries `phase:"development"`; nothing here
+counts toward the campaign.
+
+**A word on the model and on the money, both of which changed under me.**
+The user fixed the answering model at `claude-opus-5[1m]`, identical in both
+conditions (your P8, decided rather than measured — I did not run the model
+comparison). And `total_cost_usd` is an API-EQUIVALENT figure the CLI
+computes: this host answers on a Max subscription with overflow billing off,
+so nothing is billed and the number is a token-load metric priced from a
+list both conditions share. It is a valid A/B quantity and I will keep
+calling it that rather than "cost".
+
+Until this iteration `input_tokens`/`output_tokens` were `null` in every
+result.json ever written, with the comment "filled by orchestrator" and no
+orchestrator filling them. Your freeze criterion is median cost, so I closed
+that before launching rather than estimating afterwards — which matters most
+for condition A, whose load is mostly IMAGE tokens that no text-side
+approximation would have counted honestly.
+
+### The table
+
+| task | A | steps | $ | B | steps | $ |
+|---|---|---|---|---|---|---|
+| `chrome-121ba48f` | ✅ | 9 | 3.60 | ✅ | 9 | 1.36 |
+| `chrome-93eabf48` | ❌ | 8 | 2.08 | ❌ | 8 | 1.49 |
+| `gimp-58d3eeeb` | ❌ | 2 | 0.49 | ❌ | 2 | 0.10 |
+| `gimp-a746add2` | ✅ | 9 | 1.40 | ✅ | 12 | 1.82 |
+| `libreoffice_calc-1334ca3e` | ✅ | 5 | 1.27 | ✅ | 4 | 0.93 |
+| `libreoffice_calc-42e0a640` | ✅ | 9 | 2.01 | ❌ | 15 | 17.51 |
+| `libreoffice_impress-ac9bb6cb` | ✅ | 15 | 5.68 | ❌ | 15 | 2.67 |
+| `libreoffice_impress-ef9d12bd` | ✅ | 3 | 0.33 | ✅ | 3 | 0.36 |
+| `libreoffice_writer-0810415c` | ✅ | 10 | 2.29 | ✅ | 15 | 4.16 |
+| `libreoffice_writer-adf5e2c3` | ✅ | 15 | 7.94 | ❌ | 13 | 2.96 |
+| `multi_apps-bc2b57f3` | ✅ | 10 | 3.06 | ✅ | 15 | 12.02 |
+| `multi_apps-da52d699` | ✅ | 7 | 1.98 | ✅ | 9 | 7.49 |
+| `os-ec4e3f68` | ✅ | 3 | 0.32 | ✅ | 5 | 1.68 |
+| `os-fe41f596` | ❌ | 5 | 1.36 | ❌ | 11 | 1.09 |
+| `thunderbird-9b7bc335` | ✅ | 10 | 2.09 | ❌ | 15 | 2.55 |
+| `thunderbird-dd84e895` | ✅ | 4 | 0.61 | ✅ | 6 | 0.53 |
+| `vlc-215dfd39` | ✅ | 11 | 2.67 | ✅ | 15 | 1.78 |
+| `vlc-5ac2891a` | ✅ | 14 | 4.99 | ✅ | 15 | 1.78 |
+
+| metric | A | B |
+|---|---|---|
+| cells | 18 | 18 |
+| successes | 15 | 11 |
+| infra failures | 0 | 0 |
+| median steps | 9.00 | 11.50 |
+| median cost $ | 2.04 | 1.78 |
+| total cost $ | 44.16 | 62.27 |
+
+**Condition B mechanics, all steps.** rung: 1=63, 2=31, crop=9, kbd=61, scroll=3 · channel: unknown=172
+
+| rung-1 fallback reason (P7 input) | n |
+|---|---|
+| `no-usable-action: no-interface` | 10 |
+| `node-not-found` | 10 |
+| `no-settable-interface: ` | 7 |
+| `no-usable-action: ['dodefault', 'showcontextmenu']` | 2 |
+| `no-usable-action: ['showmenu']` | 2 |
+
+**Every B failure, with its mechanical evidence. Cause written by hand after reading the trace — this script never guesses one.**
+
+- `chrome-93eabf48` — term=DONE steps=8, A=❌. verdicts {'UNVERIFIED': 6, 'CONFIRMED': 1}. last 6:{"action": "set_value", "target": "e61", "value": "Disabled", "memo": "On chrome://flags,  | 7:{"action": "click", "target": "e128", "memo": "Set #enable-force-dark to Disabled (relaunc | 8:{"action": "done", "memo": "Verified after relaunch: chrome://flags 'Auto Dark Mode for We
+  - cause: TODO
+- `gimp-58d3eeeb` — term=FAIL steps=2, A=❌. verdicts {'CROP': 1}. last 1:{"action": "crop", "target": "e1", "memo": "Task: 'translate the hidden audio conversation | 2:{"action": "fail", "memo": "Task premise is unsatisfiable: no image was actually provided 
+  - cause: TODO
+- `libreoffice_calc-42e0a640` — term=max_steps steps=15, A=✅. verdicts {'UNVERIFIED': 5, 'CONFIRMED': 10}. last 13:{"action": "key", "keys": "ctrl+home", "memo": "Prev typing landed at C2:D3 (junk left the | 14:{"action": "type", "text": "Total Revenue\tTotal Expenses\n=SUM(Sheet1.A2:A1000)\t=SUM(She | 15:{"action": "key", "keys": "ctrl+s", "memo": "Saved Sheet2 (A1/B1 headers, A2=867786, B2=41
+  - cause: TODO
+- `libreoffice_impress-ac9bb6cb` — term=DONE steps=15, A=✅. verdicts {'UNVERIFIED': 7, 'CONFIRMED': 7}. last 13:{"action": "click", "target": "e119", "memo": "Clicked sidebar 'Font Color' main button (d | 14:{"action": "key", "keys": "ctrl+s", "memo": "Saving after applying red font color to slide | 15:{"action": "done", "memo": "Applied red font color to slide-number shape 'Google Shape;276
+  - cause: TODO
+- `libreoffice_writer-adf5e2c3` — term=DONE steps=13, A=✅. verdicts {'CONFIRMED': 7, 'UNVERIFIED': 5}. last 11:{"action": "key", "keys": "ctrl+end", "memo": "Ctrl+S produced no format dialog (save appe | 12:{"action": "key", "keys": "ctrl+s", "memo": "Verified at doc end: '[14]  Steinberg, F. M., | 13:{"action": "done", "memo": "Reference [14] Steinberg et al. (2003) appended as last item i
+  - cause: TODO
+- `os-fe41f596` — term=DONE steps=11, A=❌. verdicts {'CONFIRMED': 9, 'UNVERIFIED': 1}. last 9:{"action": "key", "keys": "enter", "memo": "Ran combined set + zenity verify. Next: read z | 10:{"action": "click", "target": "e4", "memo": "Zenity confirmed VALUE=true \u2014 show-batte | 11:{"action": "done", "memo": "Set org.gnome.desktop.interface show-battery-percentage=true v
+  - cause: TODO
+- `thunderbird-9b7bc335` — term=max_steps steps=15, A=✅. verdicts {'UNVERIFIED': 9, 'WAIT': 1, 'CONFIRMED': 4, 'CROP': 1}. last 13:{"action": "type", "text": "fo", "memo": "e116 action combo was left on 'Add Star' (set_va | 14:{"action": "set_value", "target": "e117", "value": "anonym-x2024@gmail.com", "memo": "Comb | 15:{"action": "click", "target": "e121", "memo": "Clicked OK to save filter 'Forward to gmail
+  - cause: TODO
+
+
+### What the numbers actually say
+
+**B loses on success, 11/18 against 15/18.** That is the headline and I am
+not dressing it up.
+
+**The cost result is more interesting than a single number.** B is cheaper
+at the median ($1.78 vs $2.04) and much more expensive at the mean ($3.46 vs
+$2.45), with a maximum of $17.51 against A's $7.94. A screenshot costs the
+same whatever it shows; a structured view costs what the UI's density
+happens to be. So the structured channel wins on sparse interfaces and
+collapses on dense ones — spreadsheets, multi-application desktops. If the
+paper reports one cost figure it will mislead in whichever direction it is
+chosen; the distribution is the finding.
+
+**P4, your step cap: the dev set does NOT show the symmetric budget deaths
+you asked me to look for.** 7 of 18 B cells reached the 15-step cap against
+2 of 18 A cells. The cap is the same number for both and binds one condition
+three times harder — which is itself a result about the channel, not a
+reason to raise it. I am not proposing a new cap on this evidence; raising
+it now would help B specifically and I would rather show you the asymmetry
+than quietly buy a point with it.
+
+### Three defects this iteration found, two of them mine
+
+**(a) My P6 fix was wrong and it cost B a factor of eight on one cell.** I
+found that A carried three previous screenshots while B carried none, and
+equalised the COUNT. But three screenshots is ~11 000 tokens whatever they
+show, while three spreadsheet views is 150 000. On
+`libreoffice_calc-42e0a640` B's step-15 prompt reached 245 668 characters
+against A's 3 192 plus four images, and the cell hit the cap. B's history is
+now capped by the token BUDGET of A's three screenshots, and the prompt says
+when views were omitted. All three of B's most expensive cells are of this
+shape, so iteration 2 has a concrete prediction to check.
+
+**(b) The act-guard was demanding proof the channel cannot give.** On
+`libreoffice_writer-adf5e2c3-B` steps 6 and 7 the guard returned UNVERIFIED
+while its own re-read line read `text … "<add here>"` and `text … "[14]"` —
+the very values it was asked to confirm. It compared `value=`; this payload
+puts field content in the label, and carries entry text in `value` for 0 of
+1951 nodes. Every set_value came back unverified and the model paid steps
+re-checking work that had succeeded. Fixed, and the verdict now says which
+field matched.
+
+**(c) One leaked container destroyed four cells, and they would have read as
+findings.** `multi_apps-897e3b53-A` died inside `env.reset` (Google Drive
+credentials) and crashed before `env.close()`, leaving its 4 GB VM up. On a
+15 GB host the next FOUR cells died at the VM-boot timeout, all at exactly
+305 s. Only the first was a real failure. Fixed on both sides: the driver
+writes a `setup_error` record and closes the env, and the runner reaps any
+OSWorld container older than the oldest cell in flight — it fired on its own
+during the re-run and cleaned up after itself.
+
+### Two things you need to decide on, before the campaign and not during
+
+**2 of the 50 PRE-REGISTERED tasks need Google Drive credentials this host
+does not have** — 4 of the 100 final cells. Reproduced deliberately: both
+tasks fail in ~25 s, identically in BOTH conditions, so it is a task-level
+infrastructure limit and not a channel result. It must not be fixed by
+swapping in other tasks; choosing test tasks by whether they run is
+selection on the test set. Either credentials are provided or the exclusion
+is pre-registered with you, in writing, before the freeze.
+
+**One cell I am leaving open rather than explaining.**
+`libreoffice_writer-adf5e2c3-B`: the final view shows the reference inserted
+and the `<add here>` marker gone — the edit happened — and the evaluator
+scored zero. I could write a plausible cause; I would be guessing. It is the
+most interesting cell of the iteration and deserves a dedicated run with a
+file dump, which I would rather do than fill the row in.
+
+### P7: the fallback log named its own next fixes
+
+Aggregated over all B steps, as you asked. `no-usable-action:
+['doDefault','showContextMenu']` — `doDefault` is the AT-SPI action that
+means "do what this element does", it was missing from my preference list,
+and rung 1 was therefore declining on every Chrome web node. And
+`no-settable-interface` (7) was a combo-box asked to take a value: a
+combo-box has no settable text and no numeric value, its value IS which
+child is selected. Both implemented by INTERFACE, never by app.
+
+### What is already built for iteration 2
+
+P1 is complete and unit-tested but has NOT yet touched a live VM (both were
+producing cells; a test must not be the reason a measured cell moves). The
+web channel emits the SAME records and the SAME role vocabulary as the
+AT-SPI channel, so the router is a channel swap and ids, diffing, guard and
+ladder are untouched. It is strictly opportunistic and never launches or
+restarts Chrome: CDP exists only where the task's own setup asked for it — 4
+of the 20 dev tasks, 79 of 369 corpus-wide, and those are exactly the tasks
+where the browser is the subject, because your evaluator needs the same
+port. Relaunching Chrome for a better channel would hand B an environment A
+never had.
+
+Iteration 2 = this driver + the router + the two P7 interfaces + the history
+budget + the guard fix, same 20 tasks, same model.
+
+
 ## 2026-08-18 — DECISION NEEDED — D1/D2/D3 implemented, first 3 pre-registered tasks run, contamination scan clean 6/6
 
 Rulings implemented and committed before any run (1b779d6). Batch traces:

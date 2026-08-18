@@ -1,0 +1,1 @@
+{"action":"crop","target":"e11","memo":"Reading e11 output of step-11 command: expect a line with '[qt]' and a line 'qt-bgcone=0' from ~/.config/vlc/vlcrc. If both present -> done. If grep printed nothing, re-run: printf '[qt]\\nqt-bgcone=0\\n' >> ~/.config/vlc/vlcrc. Do NOT reopen VLC Preferences."}

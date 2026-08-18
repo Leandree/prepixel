@@ -1,0 +1,3 @@
+```json
+{"action": "DONE", "memo": "Vignette filter dialog is open (title 'Vignette', with Vignette shape/Radius/Softness/Gamma sliders and Help/Reset/Cancel/OK). Task complete."}
+```

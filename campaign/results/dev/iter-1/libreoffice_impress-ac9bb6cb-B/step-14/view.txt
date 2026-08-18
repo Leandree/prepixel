@@ -1,0 +1,222 @@
+e1 [pixels] icon 1821,735,64,64
+e2 text 1793,803,120,34 ".​~lock.​saa-​format-​guide.​pptx#"
+e3 [pixels] icon 1821,852,64,64
+e4 text 1793,920,120,34 "saa-​format-​guide.​pptx"
+e5 [pixels] icon 1821,969,64,64
+e6 text 1833,1037,40,17 "Home"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,191,27 "LibreOffice Impress"
+e9 menu 906,0,178,27 "Aug 18 22‎∶10"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 text 70,457,159,31 "LibreOffice Impress"
+e27 text 83,464,133,17 "LibreOffice Impress"
+e28 push-button 1896,68,16,16
+e29 menu 70,64,40,25 "File"
+e30 menu 110,64,43,25 "Edit"
+e31 menu 153,64,49,25 "View"
+e32 menu 202,64,55,25 "Insert"
+e33 menu 257,64,66,25 "Format"
+e34 menu 323,64,49,25 "Slide"
+e35 menu 372,64,87,25 "Slide Show"
+e36 menu 459,64,52,25 "Tools"
+e37 menu 511,64,70,25 "Window"
+e38 menu 581,64,47,25 "Help"
+e39 menu 70,64,40,21 "File" value="0.0"
+e40 menu 110,64,43,21 "Edit" value="0.0"
+e41 menu 153,64,50,21 "View" value="0.0"
+e42 menu 203,64,56,21 "Insert" value="0.0"
+e43 menu 259,64,66,21 "Format" value="0.0"
+e44 menu 325,64,49,21 "Slide" value="0.0"
+e45 menu 374,64,90,21 "Slide Show" value="0.0"
+e46 menu 464,64,53,21 "Tools" value="0.0"
+e47 menu 517,64,73,21 "Window" value="0.0"
+e48 menu 590,64,48,21 "Help" value="0.0"
+e49 text 273,142,1225,879 "saa-format-guide - LibreOffice Presentation"
+e50 text 291,246,1181,664 "PageShape: SAA Format Guide"
+e51 text 691,456,381,205 "Google Shape;274;p1"
+e52 text 691,495,282,127 "SAA Format Guide"
+e53 text 691,668,381,91 "Google Shape;275;p1"
+e54 text 691,711,234,37 "FHSS Writing Lab"
+e55 text 1387,850,71,51 "Google Shape;276;p1"
+~e56 text 1399,866,75,20 "<number>"
+e57 scroll-bar 273,1022,1226,12 "Horizontal scroll bar" value="10504.0"
+e58 scroll-bar 1499,142,12,880 "Vertical scroll bar" value="5494.0"
+e59 push-button 242,150,20,22 "Close Pane" value="0.0"
+e60 document-frame 73,179,174,850 "Slides View"
+e61 text 81,187,158,82 "SAA Format Guide"
+e62 text 81,279,158,82 "Title Page"
+e63 text 81,371,158,82 "Slide 3"
+e64 text 81,463,158,82 "Headings"
+e65 text 81,555,158,82 "Slide 5"
+e66 text 81,647,158,82 "Numbers"
+e67 text 81,739,158,82 "Italics/Quotations"
+e68 text 81,831,158,82 "In-Text Citations"
+e69 text 81,923,158,82 "In-Text Citations (2)"
+e70 text 81,1015,158,15 "References Cited"
+e71 scroll-bar 247,179,12,850 "Vertical scroll bar" value="0.0"
+e72 text 1520,144,398,888 "Properties"
+e73 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e74 text 1870,210,44,42 "Properties"
+e75 toggle-button 1874,214,37,35 state=checked:true
+e76 text 1870,252,44,42 "Styles"
+e77 toggle-button 1874,256,37,35 state=checked:false
+e78 text 1870,294,44,42 "Gallery"
+e79 toggle-button 1874,298,37,35 state=checked:false
+e80 text 1870,336,44,42 "Navigator"
+e81 toggle-button 1874,340,37,35 state=checked:false
+e82 text 1870,378,44,42 "Shapes"
+e83 toggle-button 1874,382,37,35 state=checked:false
+e84 text 1870,420,44,42 "Slide Transition"
+e85 toggle-button 1874,424,37,35 state=checked:false
+e86 text 1870,462,44,42 "Animation"
+e87 toggle-button 1874,466,37,35 state=checked:false
+e88 text 1870,504,44,42 "Master Slides"
+e89 toggle-button 1874,508,37,35 state=checked:false
+e90 [pixels] drawing-area 1520,172,10,16
+e91 text 1536,172,305,17 "Properties"
+e92 text 1851,173,16,16 "Close Sidebar Deck"
+e93 push-button 1851,173,16,16
+e94 [offscreen] list-item -2147483647,-2147483648,87,66 "Blank Slide"
+e95 [offscreen] list-item -2147483560,-2147483648,87,66 "Title Slide"
+e96 [offscreen] list-item -2147483473,-2147483648,87,66 "Title, Content" state=selected
+e97 [offscreen] list-item -2147483386,-2147483648,87,66 "Title and 2 Content"
+e98 [offscreen] list-item -2147483647,-2147483582,87,66 "Title Only"
+e99 [offscreen] list-item -2147483560,-2147483582,87,66 "Centered Text"
+e100 [offscreen] list-item -2147483473,-2147483582,87,66 "Title, 2 Content and Content"
+e101 [offscreen] list-item -2147483386,-2147483582,87,66 "Title, Content and 2 Content"
+e102 [offscreen] list-item -2147483647,-2147483516,87,66 "Title, 2 Content over Content"
+e103 [offscreen] list-item -2147483560,-2147483516,87,66 "Title, Content over Content"
+e104 [offscreen] list-item -2147483473,-2147483516,87,66 "Title, 4 Content"
+e105 [offscreen] list-item -2147483386,-2147483516,87,66 "Title, 6 Content"
+e106 toggle-button 1520,193,358,17 "Character" state=checked:true,expanded
+e107 text 1530,221,211,34 "Liberation Serif"
+e108 toggle-button 1741,221,36,34 state=checked:false
+~e109 text 1791,221,65,34 "14 pt"
+e110 toggle-button 1856,221,36,34 state=checked:false
+e111 toggle-button 1530,266,37,35 "Bold" state=checked:false
+e112 toggle-button 1567,266,37,35 "Italic" state=checked:false
+e113 push-button 1604,266,36,34 "Underline"
+e114 toggle-button 1640,266,18,34 "Menu" state=checked:false
+e115 toggle-button 1659,266,37,35 "Strikethrough" state=checked:false
+e116 toggle-button 1696,266,37,35 "Shadow" state=checked:false
+e117 push-button 1819,266,37,35 "Increase"
+e118 push-button 1856,266,37,35 "Decrease"
+e119 push-button 1530,311,36,34 "Font Color"
+e120 toggle-button 1566,311,18,34 "Menu" state=checked:false
+e121 push-button 1598,311,36,34 "Character Highlighting Color"
+e122 toggle-button 1634,311,18,34 "Menu" state=checked:false
+e123 push-button 1666,311,37,35 "Clear"
+e124 toggle-button 1751,311,37,35 "Superscript" state=checked:false
+e125 toggle-button 1788,311,37,35 "Subscript" state=checked:false
+e126 push-button 1838,311,36,34 "Character Spacing"
+e127 toggle-button 1520,356,358,17 "Lists" state=checked:false
+e128 toggle-button 1520,375,358,17 "Paragraph" state=checked:true,expanded
+e129 text 1714,451,182,17 "Indent:"
+e130 push-button 1718,475,37,35 "Increase"
+e131 push-button 1755,475,37,35 "Decrease"
+e132 push-button 1792,475,37,35 "Hanging Indent"
+e133 [pixels] icon 1720,529,16,16
+e134 spin-button 1745,516,151,42 "Before Text Indent" value="0.0"
+e135 [pixels] icon 1720,574,16,16
+e136 spin-button 1745,561,151,42 "After Text Indent" value="0.0"
+e137 [pixels] icon 1720,619,16,16
+e138 spin-button 1745,606,151,42 "First Line Indent" value="0.0"
+e139 text 1526,451,182,17 "Spacing:"
+e140 push-button 1530,475,37,35 "Increase"
+e141 push-button 1567,475,37,35 "Decrease"
+e142 [pixels] icon 1532,529,16,16
+e143 spin-button 1557,516,151,42 "Above Paragraph Spacing" value="0.0"
+e144 [pixels] icon 1532,574,16,16
+e145 spin-button 1557,561,151,42 "Below Paragraph Spacing" value="0.0"
+e146 push-button 1533,610,36,34 "Line Spacing"
+e147 toggle-button 1569,610,18,34 "Menu" state=checked:false
+e148 push-button 1530,403,37,35 "Left"
+e149 push-button 1567,403,37,35 "Center"
+e150 push-button 1604,403,37,35 "Right"
+e151 push-button 1641,403,37,35 "Justified"
+e152 push-button 1782,403,37,35 "Top"
+e153 push-button 1819,403,37,35 "Center"
+e154 push-button 1856,403,37,35 "Bottom"
+e155 toggle-button 1520,655,358,17 "Area" state=checked:false
+e156 toggle-button 1520,674,358,17 "Line" state=checked:false
+e157 toggle-button 1520,693,358,17 "Shadow" state=checked:false
+e158 toggle-button 1520,712,358,17 "Position and Size" state=checked:false
+e159 toggle-button 1520,731,382,17 "Columns" state=checked:false
+e160 scroll-bar 1520,1051,350,6 value="0.0"
+e161 text 70,64,1078,39 "Standard"
+e162 push-button 74,66,44,35 "New" value="0.0"
+e163 push-button 118,66,44,35 "Open" value="0.0"
+e164 push-button 162,66,44,35 "Save" value="0.0"
+e165 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e166 push-button 247,66,33,35 "Print" value="0.0"
+e167 push-button 288,66,33,35 "Cut" value="0.0"
+e168 push-button 321,66,33,35 "Copy" value="0.0"
+e169 push-button 354,66,44,35 "Paste" value="0.0"
+e170 push-button 406,66,33,35 "Clone" value="0.0"
+e171 push-button 447,66,44,35 "Undo" value="0.0"
+e172 push-button 491,66,44,35 "Redo" value="0.0"
+e173 toggle-button 543,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e174 push-button 576,66,33,35 "Spelling" value="0.0"
+e175 toggle-button 617,66,33,35 "Grid" value="0.0" state=checked:false
+e176 push-button 650,62,52,43 "Display Views" value="0.0"
+e177 push-button 702,66,33,35 "Master Slide" value="0.0"
+e178 push-button 743,66,33,35 "Start from First Slide" value="0.0"
+e179 push-button 776,66,33,35 "Start from Current Slide" value="0.0"
+e180 push-button 817,66,44,35 "Table" value="0.0"
+e181 push-button 861,66,33,35 "Image" value="0.0"
+e182 push-button 894,66,33,35 "Media" value="0.0"
+e183 push-button 927,66,33,35 "Chart" value="0.0"
+e184 push-button 968,66,33,35 "Text Box" value="0.0"
+e185 push-button 1001,66,44,35 "Symbol" value="0.0"
+e186 toggle-button 1045,66,33,35 "Insert Fontwork" value="0.0" state=checked:false
+e187 toggle-button 1078,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e188 toggle-button 1111,66,33,35 "Draw Functions" value="1.0" state=checked:true
+e189 text 1148,64,170,39 "Presentation"
+e190 push-button 1152,66,44,35 "New Slide" value="0.0"
+e191 push-button 1196,66,33,35 "Duplicate Slide" value="0.0"
+e192 push-button 1229,66,33,35 "Delete Slide" value="0.0"
+e193 push-button 1270,66,44,35 "Slide Layout" value="0.0"
+e194 text 70,103,1131,39 "Drawing"
+e195 push-button 74,105,33,35 "Select" value="1.0"
+e196 push-button 107,105,33,35 "Zoom & Pan" value="0.0"
+e197 push-button 148,105,44,35 "Line Color" value="0.0"
+e198 push-button 192,105,44,35 "Fill Color" value="0.0"
+e199 push-button 244,105,33,35 "Line" value="0.0"
+e200 push-button 277,105,33,35 "Rectangle" value="0.0"
+e201 push-button 310,105,33,35 "Ellipse" value="0.0"
+e202 push-button 351,105,44,35 "Lines and Arrows" value="0.0"
+e203 push-button 395,105,44,35 "Curves and Polygons" value="0.0"
+e204 push-button 439,105,44,35 "Connectors" value="0.0"
+e205 push-button 491,105,44,35 "Basic Shapes" value="0.0"
+e206 push-button 535,105,44,35 "Symbol Shapes" value="0.0"
+e207 push-button 579,105,44,35 "Arrow Shapes" value="0.0"
+e208 push-button 623,105,44,35 "Flowchart Shapes" value="0.0"
+e209 push-button 667,105,44,35 "Callout Shapes" value="0.0"
+e210 push-button 711,105,44,35 "Star Shapes" value="0.0"
+e211 push-button 755,105,44,35 "3D Objects" value="0.0"
+e212 push-button 807,105,33,35 "Rotate" value="0.0"
+e213 push-button 840,105,44,35 "Align Objects" value="0.0"
+e214 push-button 884,105,44,35 "Arrange" value="0.0"
+e215 push-button 928,105,44,35 "Distribution" value="0.0"
+e216 toggle-button 980,105,33,35 "Shadow" value="0.0" state=checked:false
+e217 push-button 1013,105,33,35 "Crop" value="0.0"
+e218 push-button 1046,105,44,35 "Filter" value="0.0"
+e219 push-button 1098,105,33,35 "Edit Points" value="0.0"
+e220 push-button 1131,105,33,35 "Gluepoints" value="0.0"
+e221 push-button 1164,105,33,35 "Toggle Extrusion" value="0.0"
+e222 text 76,1036,75,18 "Slide 1 of 15"

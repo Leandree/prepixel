@@ -1,0 +1,5 @@
+The desktop is showing with Thunderbird in the dock. I'll launch it to set up a local message filter that forwards incoming mail.
+
+```json
+{"action": "import pyautogui; pyautogui.click(35, 133)", "memo": "Launched Thunderbird from dock. Plan: Tools > Message Filters > New filter on anonym-x2024@outlook.com account, apply when 'Getting New Mail', condition 'Match all messages', action 'Forward Message to' anonym-x2024@gmail.com. Local only, don't touch online account."}
+```

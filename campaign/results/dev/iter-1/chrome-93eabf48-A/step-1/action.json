@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(34, 64)", "memo": "Clicked Chrome icon in Ubuntu dock to launch Chrome. Next: wait for window, then go to chrome://settings/appearance and set Mode to Light (task = turn OFF dark mode)."}

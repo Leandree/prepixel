@@ -1,0 +1,5 @@
+The Tools menu is open. Clicking Preferences to verify the setting persisted.
+
+```json
+{"action": "import pyautogui; pyautogui.click(991, 604)", "memo": "Opened Preferences for VERIFICATION only. Next: click 'All' radio (bottom-left ~637,898), scroll list down (~715,650 scroll -8), click Playlist (~639,471), confirm 'Play and exit' is UNCHECKED. Then close with CANCEL (~1210,903 is Save - do NOT use; find Cancel). Then DONE."}
+```

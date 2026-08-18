@@ -1,0 +1,1 @@
+{"action":"done","memo":"Vim removed from GNOME favorites: dash now lists Thunderbird, Chrome, Terminal, Trash only; gsettings favorite-apps updated via python filter."}

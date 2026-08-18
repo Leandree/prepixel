@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"Total Revenue\t","memo":"Prev bulk type failed: only last formula landed in A1. Now entering ONE cell per action. Just typed A1='Total Revenue'+Tab -> cursor B1. Next: type 'Total Expenses\\n' (B1), then '=SUM(Sheet1.A2:A20)\\t' (A2, expect 867786), then '=SUM(Sheet1.B2:B20)\\n' (B2, expect 411686), then ctrl+s and Enter to keep xlsx."}
+```

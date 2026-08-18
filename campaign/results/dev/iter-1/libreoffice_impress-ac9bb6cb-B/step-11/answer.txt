@@ -1,0 +1,1 @@
+{"action":"click","target":"e56","memo":"Clicked slide-number shape ('10', Google Shape;276;p1) on slide to select it. NEXT: sidebar Properties>Character shows a Font Color split button — click its dropdown arrow, then pick Red (FF0000) from the palette. If sidebar lacks it, use Format>Character>Font Effects>Font Color=Red. 4 steps left."}

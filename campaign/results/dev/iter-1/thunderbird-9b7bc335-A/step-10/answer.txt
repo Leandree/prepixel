@@ -1,0 +1,3 @@
+The Message Filters window has closed cleanly and we're back at the main account view. Step 9 confirmed the filter state before closing: **1 item**, "Forward All to Gmail", **Enabled** (checkmark), scoped to `anonym-x2024@outlook.com` — with rules verified in step 8 (match all messages → Forward Message to anonym-x2024@gmail.com, running on Getting New Mail + Manually Run). The filter is local to Thunderbird only; the online account was not modified.
+
+{"action": "DONE", "memo": "Task complete: local Thunderbird filter 'Forward All to Gmail' on anonym-x2024@outlook.com, enabled, match-all -> forward to anonym-x2024@gmail.com, triggers on Getting New Mail. Filters window closed, back at main view. Online account untouched."}

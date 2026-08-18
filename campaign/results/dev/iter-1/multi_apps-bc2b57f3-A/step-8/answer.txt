@@ -1,0 +1,5 @@
+Both facts are now verified: the reminder requires only the sheet ordering, and my macro reported no missing sheets with the final order matching exactly, then saved. Let me switch to the Calc window for a visual confirmation.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(565, 128); time.sleep(3)", "memo": "Reminder confirmed (step7 msgbox): organise sheets in one calc file, order ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Step5 macro: 0 MISS, final order exact, d.store() saved. Now switching to Calc to visually verify tabs; if tabs match -> DONE."}
+```

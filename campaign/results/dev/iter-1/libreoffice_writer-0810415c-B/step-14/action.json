@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+s", "memo": "No format dialog appeared after 1st ctrl+s (likely saved directly as .docx). Pressing ctrl+s again as a probe. NEXT STEP (last): if a 'Keep current format?' dialog is visible, click 'Use Word 2007-365!'; otherwise the doc is saved and both paras are double-spaced -> emit done."}

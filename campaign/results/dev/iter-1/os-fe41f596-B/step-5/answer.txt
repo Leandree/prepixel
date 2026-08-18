@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+alt+t","memo":"Power panel has NO 'Show Battery Percentage' toggle (only Balanced/Power Saver, one unnamed row, Automatic suspend). Opening terminal to run: gsettings set org.gnome.desktop.interface show-battery-percentage true. Next: wait for terminal window, then type command + Enter, verify with 'gsettings get'."}

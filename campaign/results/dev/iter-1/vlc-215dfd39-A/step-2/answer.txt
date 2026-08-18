@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(991, 604)", "memo": "VLC Tools menu opened; clicked Preferences (991,604). Next: Preferences dialog opens on Interface tab -> find 'Show controls in full screen mode'/'Resize interface...' area; uncheck 'Show background cone or art' checkbox, then click Save button (bottom right of dialog)."}

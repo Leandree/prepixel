@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+home", "memo": "Prev typing landed at C2:D3 (junk left there). Now cursor should be A1, selection collapsed. STEP14: type \"Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A2:A1000)\\t=SUM(Sheet1.B2:B1000)\\n\". STEP15: key ctrl+s (if Keep-format dialog appears it needs enter, but no steps left - prefer ctrl+s anyway)."}

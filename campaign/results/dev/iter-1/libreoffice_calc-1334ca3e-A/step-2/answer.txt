@@ -1,0 +1,3 @@
+The View menu is open and the status bar shows the sheet is currently at **260%** zoom. The "Zoom" entry at the bottom has a submenu arrow — I'll open it.
+
+{"action": "import pyautogui; pyautogui.click(220, 632)", "memo": "Zoom is currently 260% (status bar, bottom-right). View menu open; just clicked 'Zoom' submenu at (220,632). Next: pick a smaller preset (e.g. 100% or 50%) or 'Zoom...' dialog -> select 50%/Variable -> OK. Verify status bar shows lower %. Alternative fallback: click zoom slider minus at (1743,1070) repeatedly."}

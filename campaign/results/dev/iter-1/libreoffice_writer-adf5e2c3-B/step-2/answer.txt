@@ -1,0 +1,9 @@
+
+{
+  "action": "key",
+  "keys": "ctrl+end",
+  "memo": "Jumped to doc end to inspect reference list numbering/order. Paras so far: 1 intro, 2 mood, 3 cardiovascular(Hannum...) -> para 4 likely has <add here>. Existing cross-refs look like [11],[12]."
+}
+```json
+{"action":"key","keys":"ctrl+end"}
+```

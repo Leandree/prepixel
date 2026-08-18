@@ -1,0 +1,5 @@
+The slide panel is restored — the "Slides" pane with the slide 1 thumbnail is now visible on the left side of the editing area.
+
+```json
+{"action": "DONE", "memo": "Slide Pane restored via View > Slide Pane; left panel with 'Slides' header and slide 1 thumbnail is visible. Task complete."}
+```

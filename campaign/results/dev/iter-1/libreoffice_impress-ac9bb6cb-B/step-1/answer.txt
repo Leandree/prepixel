@@ -1,0 +1,6 @@
+
+{
+  "action": "click",
+  "target": "e19",
+  "memo": "Task: make slide number red in Impress (saa-format-guide.pptx). Clicked dock icon to focus Impress window. Plan: View > Master Slide, select slide-number placeholder, set font color red, close master view."
+}

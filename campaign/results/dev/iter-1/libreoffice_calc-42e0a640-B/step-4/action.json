@@ -1,0 +1,1 @@
+{"action": "click", "target": "e43", "memo": "Clicked 'Insert Sheet at End...' - a dialog should appear asking for sheet name (default Sheet2). Next: press Enter to accept. Then Name Box->A1, type 'Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A2:A20)\\t=SUM(Sheet1.B2:B20)\\n', then Ctrl+S + Keep current format."}

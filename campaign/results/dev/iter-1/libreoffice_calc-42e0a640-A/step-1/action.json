@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(506, 76)", "memo": "NetIncome.xlsx open. Sheet1: A1='Revenue', B1='Total Expenses', data A2:A20/B2:B20 (19 rows). Plan: Tools>Macros>Edit Macros -> Basic IDE, paste macro creating Sheet2 with A1='Total Revenue', B1='Total Expenses', A2=sum(A2:A20), B2=sum(B2:B20), then doc.store(). Just clicked Tools menu."}

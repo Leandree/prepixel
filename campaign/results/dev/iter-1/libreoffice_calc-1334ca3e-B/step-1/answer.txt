@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e25","memo":"Zoom is 260% (status bar e249). Opened View menu to find Zoom… dialog; set zoom to 100%."}
+```

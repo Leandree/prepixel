@@ -1,0 +1,5 @@
+The `<add here>` marker is selected (status bar: 10 characters), inside "A study by Pennington**\<add here\>** noted that women…". Reference list confirms the new entry is numbered **[14]**. Replacing the marker with the reference number now.
+
+```json
+{"action": "import pyautogui; pyautogui.write('[14]', interval=0.05)", "memo": "Replaced '<add here>' selection (after 'Pennington') with '[14]'. Ref list entry [14] = Steinberg et al. 2003 on p4 (blue/underlined - inherited hyperlink char style, consider Ctrl+M to clear). NEXT: screenshot to verify in-text '[14]' inserted correctly, then Ctrl+S and Keep Current Format (docx)."}
+```

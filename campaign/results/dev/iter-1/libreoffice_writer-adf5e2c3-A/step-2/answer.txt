@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(760, 744); pyautogui.press('end'); pyautogui.press('enter')", "memo": "Refs are [1]-[13], ends with Schramm [13]; Steinberg sorts after -> [14]. In-text citations look like 'evidence[11]'. Just clicked end of [13] para + Enter to test if list auto-numbers [14]. If no auto-number, type '[14]\\t' manually. Then find '<add here>' in para 4 and replace with [14]."}
+```

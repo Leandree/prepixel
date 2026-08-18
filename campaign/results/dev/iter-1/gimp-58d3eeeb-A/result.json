@@ -1,0 +1,35 @@
+{
+ "task_id": "58d3eeeb-e9d0-499f-962e-fd0db2a744d8",
+ "domain": "gimp",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "2ffa67b023831a0949446425f5640a6a40ad56e2",
+ "success": false,
+ "score_raw": 0,
+ "steps": 2,
+ "termination": "FAIL",
+ "wall_clock_s": 104.2,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 858,
+  "cache_creation_input_tokens": 20237,
+  "cache_read_input_tokens": 429824,
+  "output_tokens": 2829,
+  "cost_usd": 0.492297,
+  "attempts": 2,
+  "steps_with_usage": 2,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.doubleClick(1852, 1003)",
+  "FAIL"
+ ]
+}

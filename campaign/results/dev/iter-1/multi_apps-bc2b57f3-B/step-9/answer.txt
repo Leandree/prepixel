@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+a","memo":"Selected all in Module1. Next: type macro FixOrder (enumerate StarDesktop.Components, find URL containing workbook-with-sample-database, moveByName order ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration, then oDoc.store()), then press F5 to run."}
+```

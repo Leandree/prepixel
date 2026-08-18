@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"Return","memo":"Views empty since step 12 — almost certainly the macro's MsgBox \"DONE\" modal blocking the a11y tree (step-12 Return likely fired before it rendered). Just sent Return to dismiss it. NEXT (final step): read the Calc page-tabs and confirm order ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration; macro already called oDoc.store(), so if tabs look right -> done."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(622, 794)", "memo": "Clicked 'Double' in Line Spacing list. Selection is para1+2 (94 words/545 chars). Next: verify combo shows Double, then click OK at (1372,850). Then Ctrl+S and press Enter to keep .docx format."}

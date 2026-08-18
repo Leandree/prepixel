@@ -1,0 +1,5 @@
+Now I have clear evidence. On slide 15 (step-7) the "15" is clearly **red**, while on slide 1 (step-10) the "1" is clearly **dark/black** — so slide 1 genuinely was never recolored. The rubber-band drag isn't selecting it (slide 1 uses a different layout/master), so I'll click the number glyph directly and pick red explicitly from the palette rather than relying on the last-used-color button.
+
+```json
+{"action": "import pyautogui, time\npyautogui.press('escape'); time.sleep(0.4)\npyautogui.click(1441, 942); time.sleep(0.9)\npyautogui.click(1575, 328); time.sleep(1.0)\npyautogui.click(1616, 447); time.sleep(0.8)", "memo": "Confirmed via step-7 vs step-10: slide 15 num is RED, slide 1 num still BLACK (rubber-band drag failed on slide 1's layout). This step: Esc + direct click on '1' glyph (1441,942) to select frame, then sidebar font-color DROPDOWN (1575,328) + explicit red swatch (1616,447). NEXT: verify '1' is red in main view; if yes, Ctrl+S + Enter (Keep PowerPoint format), then DONE. If still black, try Tab-cycling objects on slide 1 and watch status bar for the number text frame."}
+```

@@ -1,0 +1,3 @@
+Master View is open and I can see the `<number>` placeholder at bottom-right. Selecting its text and opening the font color dropdown.
+
+{"action": "import pyautogui, time\npyautogui.press('escape'); time.sleep(0.3)\npyautogui.tripleClick(1421, 950); time.sleep(0.9)\npyautogui.hotkey('ctrl', 'a'); time.sleep(0.6)\npyautogui.click(1077, 109); time.sleep(1.5)", "memo": "In MASTER VIEW (correct place - slide number is a master object). Selected <number> placeholder text at (1421,950) and clicked font-color dropdown arrow (1077,109). NEXT(15-final): click Red in palette (std palette row2 col5), then Esc, Close Master View, Ctrl+S, Enter to keep pptx format."}

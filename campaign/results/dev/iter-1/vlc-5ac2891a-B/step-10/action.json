@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+alt+t", "memo": "Prefs dialog closed. Opened terminal via ctrl+alt+t. NEXT: type command -> sed -i 's/^#\\?play-and-exit=.*/play-and-exit=0/' ~/.config/vlc/vlcrc ; grep -n play-and-exit ~/.config/vlc/vlcrc  then Enter, then verify output shows play-and-exit=0 uncommented."}

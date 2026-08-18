@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(308, 1045); time.sleep(1.5)", "memo": "Clicked Sheet2 tab. Verify A1='Total Revenue', B1='Total Expenses', A2/B2 numeric sums (Revenue col A rows2-20, Total Expenses col B rows2-20 of Sheet1). Sheet1 had 19 data rows. If values present and file saved (macro called oDoc.store), task is DONE."}

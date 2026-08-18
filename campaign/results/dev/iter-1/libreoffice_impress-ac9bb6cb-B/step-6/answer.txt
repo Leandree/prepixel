@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e201","memo":"Basic Macros dlg still open; Edit did nothing (no module). Now selected 'My Macros'. NEXT: click 'New' (e196) to create Module1 -> Basic IDE opens. Then ctrl+a in code area and type:\nSub FixNum\nd=ThisComponent\nFor i=0 To d.DrawPages.Count-1\np=d.DrawPages.getByIndex(i)\nFor j=0 To p.Count-1\ns=p.getByIndex(j)\nt=Trim(s.String)\nIf Len(t)>0 And Len(t)<4 And IsNumeric(t) Then s.CharColor=RGB(255,0,0)\nNext j\nNext i\nEnd Sub\nthen F5, alt+f4, ctrl+s, Enter(Keep format)"}
+```

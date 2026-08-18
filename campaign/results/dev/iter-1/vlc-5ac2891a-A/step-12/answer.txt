@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(639, 471)", "memo": "Step12: clicked 'Playlist' node in Advanced Prefs tree (639,471). NEXT: read screenshot, find 'Play and exit' checkbox in right pane - UNCHECK it if checked, then click Save (1210,903)."}

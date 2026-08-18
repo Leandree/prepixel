@@ -1,0 +1,1 @@
+{"action": "key", "keys": "escape", "memo": "Filters menu items aren't exposed in the a11y tree. Plan: Escape to close menu, then press '/' to open GIMP's Search Actions, type 'Vignette', press Enter to open the Vignette filter dialog."}

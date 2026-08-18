@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(511, 758)", "memo": "Clicked View>Zoom>100% (was 260%). Next: verify status bar bottom-right shows 100% and cells are smaller; if menu didn't register, reopen View(177,76)>Zoom(220,632)>100%(511,758) or drag zoom slider near (1800,1070)."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.moveTo(1100, 600); pyautogui.scroll(-3)", "memo": "Qt interface panel open in Advanced Prefs (All). Scrolled right pane down to expose 'Display background cone or art' checkbox (was at y~843). Next: click its checkbox (x~906) to UNCHECK, verify unchecked, then click Save at (1210,903)."}

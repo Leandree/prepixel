@@ -1,0 +1,1 @@
+{"action":"click","target":"e40","memo":"Clicked 'Manage message filters' from account central for anonym-x2024@outlook.com. Next: in Message Filters dialog, click 'New...' to create filter; name it, choose 'Match all messages', action 'Forward Message To' anonym-x2024@gmail.com, run when Getting New Mail."}

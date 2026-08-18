@@ -1,0 +1,1 @@
+{"action": "key", "keys": "alt+f11", "memo": "Doc open (15 slides, per-slide number shapes e.g. 'Google Shape;276;p1' text '10'). Plan: Basic Macros dialog -> Edit (My Macros/Standard/Module1) -> ctrl+a -> type macro setting CharColor=RGB(255,0,0) on numeric/SlideNumberShape shapes on all DrawPages+MasterPages -> F5 -> close IDE (alt+f4) -> ctrl+s -> Keep PowerPoint format."}

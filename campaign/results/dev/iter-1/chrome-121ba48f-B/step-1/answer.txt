@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e26","memo":"Switched to existing 'Dota 2' browser tab. Next: verify it's the Dota 2 store page, then find the DLC section and add all DLC to cart. A cookie banner (Accept All ~e201) may need dismissing."}
+```

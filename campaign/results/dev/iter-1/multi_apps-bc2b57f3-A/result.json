@@ -1,0 +1,43 @@
+{
+ "task_id": "bc2b57f3-686d-4ec9-87ce-edf850b7e442",
+ "domain": "multi_apps",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "2ffa67b023831a0949446425f5640a6a40ad56e2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 10,
+ "termination": "DONE",
+ "wall_clock_s": 531.3,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 5958,
+  "cache_creation_input_tokens": 129839,
+  "cache_read_input_tokens": 2454656,
+  "output_tokens": 20112,
+  "cost_usd": 3.058308,
+  "attempts": 10,
+  "steps_with_usage": 10,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui, time; pyautogui.hotkey('ctrl','o'); time.sleep(2); pyautogui.write('~/Desktop/reminder.docx'); time.sleep(1); pyautogui.press('enter')",
+  "import pyautogui, time; pyautogui.hotkey('alt','f11'); time.sleep(2)",
+  "import pyautogui, time; pyautogui.click(762, 405); time.sleep(1); pyautogui.click(1259, 464); time.sleep(3)",
+  "import pyautogui, time; pyautogui.click(1000, 400); time.sleep(0.5); pyautogui.hotkey('ctrl','a'); time.sleep(0.3); c='Sub DoReorder\\nDim n(9) As String\\nn(0)=\"ReadMe\"\\nn(1)=\"Raw_data\"\\nn(2)=\"Beans\"\\nn(3)=\"Millet\"\\nn(4)=\"Sorghum\"\\nn(5)=\"Mkt Gotheye\"\\nn(6)=\"Mkt Mangaize\"\\nn(7)=\"Mkt Ouallam\"\\nn(8)=\"Mkt Tera\"\\nn(9)=\"Millet spatial integration\"\\noE = StarDesktop.Components.createEnumeration()\\nDo While oE.hasMoreElements()\\no = oE.nextElement()\\nIf HasUnoInterfaces(o, \"com.sun.star.frame.XModel\") Then\\nIf InStr(o.getURL(), \"sample-database\") > 0 Then\\nd = o\\nEnd If\\nEnd If\\nLoop\\ns = \"\"\\nFor i = 0 To 9\\nIf d.Sheets.hasByName(n(i)) Then\\nd.Sheets.moveByName(n(i), i)\\nElse\\ns = s & \"MISS \" & n(i) & Chr(10)\\nEnd If\\nNext i\\nr = \"\"\\nFor i = 0 To d.Sheets.Count - 1\\nr = r & d.Sheets.getByIndex(i).Name & Chr(10)\\nNext i\\nd.store()\\nMsgBox s & \"==\" & Chr(10) & r\\nEnd Sub'; pyautogui.write(c, interval=0.008); time.sleep(1); pyautogui.press('f5')",
+  "import pyautogui, time; pyautogui.click(993, 684); time.sleep(1)",
+  "import pyautogui, time; pyautogui.click(1000, 400); time.sleep(0.5); pyautogui.hotkey('ctrl','a'); time.sleep(0.3); c='Sub ShowReq\\noE = StarDesktop.Components.createEnumeration()\\nDo While oE.hasMoreElements()\\no = oE.nextElement()\\nIf HasUnoInterfaces(o, \"com.sun.star.frame.XModel\") Then\\nIf InStr(o.getURL(), \"reminder\") > 0 Then\\nMsgBox o.getText().getString()\\nEnd If\\nEnd If\\nLoop\\nEnd Sub'; pyautogui.write(c, interval=0.008); time.sleep(1); pyautogui.press('f5'); time.sleep(2)",
+  "import pyautogui, time; pyautogui.click(993, 727); time.sleep(1); pyautogui.click(388, 76); time.sleep(1)",
+  "import pyautogui, time; pyautogui.click(565, 128); time.sleep(3)",
+  "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter'); time.sleep(2)",
+  "DONE"
+ ]
+}

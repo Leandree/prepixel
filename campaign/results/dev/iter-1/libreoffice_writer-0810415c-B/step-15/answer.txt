@@ -1,0 +1,1 @@
+{"action":"done","memo":"Both first two paragraphs set to 2.0 line spacing (heights ~32px/line vs ~18px for untouched paragraphs); saved in Word format with no format dialog appearing."}

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e150","memo":"Applied Spacing:2 to selection (both paras, 545 chars). Next: verify e51 (para2) height grows ~74->~148 and e50 stays double; then ctrl+s and click 'Use Word 2007-365!' in Keep format dialog."}
+```

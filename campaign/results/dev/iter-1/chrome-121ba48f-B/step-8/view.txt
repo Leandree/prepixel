@@ -1,0 +1,65 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 push-button 1802,27,30,35 "Minimise"
+e14 push-button 1842,27,30,35 "Restore"
+e15 push-button 1882,27,38,35 "Close"
+e16 push-button 76,27,28,41 "Search tabs"
+e17 page-tab 98,27,256,41 "Dota 2 on Steam - Memory usage - 268 MB" state=selected
+e18 push-button 312,33,28,28 "Close"
+e19 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 64.2 MB"
+e20 push-button 550,33,28,28 "Close"
+e21 push-button 586,27,28,41 "New Tab"
+e22 push-button 70,73,39,34 "Back"
+e23 push-button 111,73,34,34 "Forward"
+e24 push-button 147,73,34,34 "Reload"
+e25 push-button 195,78,24,24 "View site information"
+e26 entry 227,78,1418,24 "Address and search bar"
+e27 push-button 1653,78,24,24 "Bookmark this tab"
+e28 push-button 1698,73,34,34 "You"
+e29 push-button 1737,73,183,34 "Relaunch to update"
+~e30 document-web 70,114,1850,966 "Dota 2 on Steam"
+~e31 [pixels] image 1297,462,14,15
+~e32 text 695,479,600,32 "Added to your cart!"
+~e33 text 695,481,211,28 "Added to your cart!"
+~e34 text 695,535,600,125 "The Dota 2 Official Soundtrack The Dota 2 Official Soundtrack Windows macOS Linux / SteamOS 8,19€ For my account Remove The Dota 2 Official Soundtrack"
+~e35 push-button 695,535,600,125 "The Dota 2 Official Soundtrack The Dota 2 Official Soundtrack Windows macOS Linux / SteamOS 8,19€ For my account Remove The Dota 2 Official Soundtrack"
+~e36 link 710,550,200,98 "The Dota 2 Official Soundtrack"
+~e37 [pixels] image 710,550,200,94 alt=The Dota 2 Official Soundtrack
+~e38 text 925,550,234,21 "The Dota 2 Official Soundtrack"
+~e39 [pixels] image 925,586,15,15 alt=Windows
+~e40 [pixels] image 944,584,16,17 alt=macOS
+~e41 [pixels] image 964,585,16,17 alt=Linux / SteamOS
+~e42 text 1241,584,39,18 "8,19€"
+~e43 combo-box 925,616,128,29 "For my account"
+~e44 push-button 1234,622,46,17 "Remove The Dota 2 Official Soundtrack"
+~e45 push-button 695,681,290,33 "Continue Shopping"
+~e46 push-button 1005,681,290,33 "View My Cart (1)"
+e47 toggle-button 0,0,99,27 "Activities" state=checked:false
+e48 menu 99,0,162,27 "Google Chrome"
+e49 menu 906,0,178,27 "Aug 18 21‎∶37"
+e50 menu 1814,0,106,27 "System"
+e51 push-button 0,840,70,8
+e52 push-button 62,33,8,815
+e53 push-button 0,33,70,64 "Google Chrome"
+e54 push-button 0,101,70,64 "Thunderbird Mail"
+e55 push-button 0,169,70,64 "Visual Studio Code"
+e56 push-button 0,237,70,64 "VLC media player"
+e57 push-button 0,305,70,64 "LibreOffice Writer"
+e58 push-button 0,373,70,64 "LibreOffice Calc"
+e59 push-button 0,441,70,64 "LibreOffice Impress"
+e60 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e61 push-button 0,577,70,64 "Files"
+e62 push-button 0,645,70,64 "Ubuntu Software"
+e63 push-button 0,713,70,64 "Help"
+e64 push-button 0,784,70,64 "Trash"
+e65 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

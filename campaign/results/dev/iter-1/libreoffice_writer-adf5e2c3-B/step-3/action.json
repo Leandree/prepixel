@@ -1,0 +1,1 @@
+{"action": "key", "keys": "return", "memo": "At doc end (end of ref [13] Schramm). Refs are alphabetical: [11]Parker,[12]Scholey,[13]Schramm -> Steinberg = [14]. Just pressed Enter for new ref paragraph; CHECK if '[14]' auto-numbering appears. Then type ref text (add '[14]  ' manually if not auto). After that: Ctrl+F '<add here>' in 4th para, replace with cross-ref [14]."}

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e77","memo":"Cancelled prefs: 'All' radio reads checked but panel stayed Simple across 4 attempts (radio states DO update, so a11y is live -> advanced panel truly never rendered). FALLBACK NOW: ctrl+alt+t terminal, run: sed -i 's/^#*play-and-exit=.*/play-and-exit=0/' ~/.config/vlc/vlcrc ; grep play-and-exit ~/.config/vlc/vlcrc  (append line if missing). Do NOT press Save in VLC after."}
+```

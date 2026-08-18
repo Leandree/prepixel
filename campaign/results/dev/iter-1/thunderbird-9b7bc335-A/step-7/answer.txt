@@ -1,0 +1,3 @@
+The filter is correctly configured: name set, "Match all messages" selected, and "Forward Message to" chosen. Now I'll fill in the destination address.
+
+{"action": "import pyautogui; pyautogui.click(1038, 697); pyautogui.write('anonym-x2024@gmail.com')", "memo": "Filter 'Forward All to Gmail': Match all messages, Getting New Mail + Manually Run checked, action 'Forward Message to'. Just typed anonym-x2024@gmail.com into address field at (1038,697). Next: verify text appeared, then click OK at (1389,862). Dialog then returns to Message Filters list — close it."}

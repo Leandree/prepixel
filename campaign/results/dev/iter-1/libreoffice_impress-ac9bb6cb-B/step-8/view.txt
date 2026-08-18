@@ -1,0 +1,53 @@
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "saa-​format-​guide.​pptx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​saa-​format-​guide.​pptx#"
+e7 text 662,262,667,583 "Basic Macros"
+e8 push-button 1202,370,119,34 "Assign..."
+e9 push-button 1202,409,119,34 "Edit"
+e10 push-button 1202,448,119,34 "New"
+e11 push-button 1202,487,119,34 "Organizer..."
+e12 text 670,307,254,57 "Macro Name"
+e13 text 682,330,242,34
+e14 text 670,307,88,17 "Macro Name"
+e15 table-cell 723,395,198,21 "My Macros"
+e16 table-cell 723,395,16,21
+e17 table-cell 723,418,198,21 "LibreOffice Macros"
+e18 table-cell 723,418,16,21
+e19 table-cell 723,441,198,21 "saa-format-guide.pptx"
+e20 table-cell 723,441,16,21
+e21 text 670,370,83,17 "Macro From"
+e22 text 936,370,254,421 "Existing Macros In:"
+e23 text 936,370,133,17 "Existing Macros In:"
+e24 push-button 670,803,85,34 "Help"
+e25 push-button 1147,803,85,34 "Close"
+e26 push-button 1236,803,85,34 "Run"
+~e27 text 707,344,576,419 "LibreOffice 7.3 Document Recovery"
+~e28 table-cell 738,489,534,21 "saa-format-guide.pptx" state=selected
+~e29 text 715,464,560,17 "The following files will be recovered:"
+~e30 text 715,389,560,51 "Due to an error, LibreOffice crashed. All the files you were working on will now be saved. The next time LibreOffice is launched, your files will be recovered automatically."
+~e31 push-button 1190,721,85,34 "OK"
+e32 toggle-button 0,0,99,27 "Activities" state=checked:false
+e33 menu 99,0,105,27 "Soffice"
+e34 menu 906,0,178,27 "Aug 18 22‎∶07"
+e35 menu 1814,0,106,27 "System"
+~e36 push-button 0,908,70,8
+~e37 push-button 62,33,8,883
+e38 push-button 0,33,70,64 "Google Chrome"
+e39 push-button 0,101,70,64 "Thunderbird Mail"
+e40 push-button 0,169,70,64 "Visual Studio Code"
+e41 push-button 0,237,70,64 "VLC media player"
+e42 push-button 0,305,70,64 "LibreOffice Writer"
+e43 push-button 0,373,70,64 "LibreOffice Calc"
+e44 push-button 0,441,70,64 "LibreOffice Impress"
+e45 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e46 push-button 0,577,70,64 "Files"
+e47 push-button 0,645,70,64 "Ubuntu Software"
+e48 push-button 0,713,70,64 "Help"
+~e49 push-button 0,784,70,64 "Soffice"
+~e50 push-button 0,852,70,64 "Trash"
+e51 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e52 text 70,457,159,31 "LibreOffice Impress"
+e53 text 83,464,133,17 "LibreOffice Impress"

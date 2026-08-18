@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e18","memo":"Task: open Vignette filter window (GIMP: Filters > Light and Shadow > Vignette). Launched GIMP from dock; wait for it to load. May need an image open (dog_with_background.png on desktop) for filter to be enabled."}
+```

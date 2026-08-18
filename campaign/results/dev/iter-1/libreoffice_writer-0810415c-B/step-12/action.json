@@ -1,0 +1,1 @@
+{"action": "click", "target": "e150", "memo": "Clicked 'Spacing: 2' (e150 was focused=already 2, so harmless) to close popup. Evidence both paras are double: gap after para1 AND para2 = 37px (double-spaced empty paras) vs 18px for paras 3+. NEXT: ctrl+s, then the 'Use Word 2007-365!' keep-format dialog (press Enter / click that button)."}

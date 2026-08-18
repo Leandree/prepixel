@@ -1,0 +1,1 @@
+{"action":"click","target":"e85","memo":"Step5 typing went into the SEARCH box (e74 now has 'Forward to gmail' + clear-X e75) => Filter Rules dialog was NOT open; hypothesis wrong. Just clicked New… (e85) again. Next: if view still shows only Message Filters, crop e71 to see real pixels/hidden dialog. 8 steps left; need name+match-all+Forward To+email+OK+OK."}

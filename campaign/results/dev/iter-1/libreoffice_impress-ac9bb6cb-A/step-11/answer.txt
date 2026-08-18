@@ -1,0 +1,5 @@
+Comparing step‑9/10 (number clearly black) with step‑11, the "1" now renders red — but we're still in TextEdit mode with no selection, so that formatting may not be committed to the field. I'll escape to object-level selection, re-apply red to the whole placeholder, then save with Keep Current Format.
+
+```json
+{"action": "import pyautogui, time\npyautogui.press('escape'); time.sleep(0.6)\npyautogui.click(1548, 328); time.sleep(1.2)\npyautogui.press('escape'); time.sleep(0.5)\npyautogui.hotkey('ctrl', 's'); time.sleep(2.5)\npyautogui.press('enter'); time.sleep(2.0)", "memo": "Slide1: after Esc from TextEdit the frame is object-selected; clicked font-color button (1548,328, last color=red) to apply red to whole placeholder, then Ctrl+S + Enter (Keep PPTX). NEXT: verify '1' on slide 1 is red at (1441,942) and thumbnails 2-15 still red; if slide 1 still black, try Format>Character dialog instead."}
+```

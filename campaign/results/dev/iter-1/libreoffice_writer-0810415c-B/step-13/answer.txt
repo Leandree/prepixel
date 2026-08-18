@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+s","memo":"Both paras double-spaced (verified by 37px gaps). Just pressed ctrl+s. NEXT: a 'Keep current format / Use Word 2007-365!' dialog should appear — click 'Use Word 2007-365!' (or press Enter, which defaults to that). Then done."}

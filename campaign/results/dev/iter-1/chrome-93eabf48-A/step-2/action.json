@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1890, 139); pyautogui.hotkey('ctrl', 'l'); pyautogui.write('chrome://settings/appearance\n')", "memo": "Chrome open; dismissed 'Can't update' popup and navigated to chrome://settings/appearance. Next: find 'Mode' section and click the 'Light' option to turn dark mode OFF."}

@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+alt+t","memo":"GUI advanced prefs a11y is frozen -> switching to terminal. Opened via ctrl+alt+t. Next: type one-liner to set qt-bgcone=0 in ~/.config/vlc/vlcrc: mkdir -p ~/.config/vlc; touch ~/.config/vlc/vlcrc; grep -q '^#*qt-bgcone=' f && sed -i 's/^#*qt-bgcone=.*/qt-bgcone=0/' f || echo qt-bgcone=0 >> f; then grep to verify."}

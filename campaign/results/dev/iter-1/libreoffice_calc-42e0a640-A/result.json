@@ -1,0 +1,42 @@
+{
+ "task_id": "42e0a640-4f19-4b28-973d-729602b5a4a7",
+ "domain": "libreoffice_calc",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "2ffa67b023831a0949446425f5640a6a40ad56e2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 9,
+ "termination": "DONE",
+ "wall_clock_s": 271.5,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 2831,
+  "cache_creation_input_tokens": 102828,
+  "cache_read_input_tokens": 1475275,
+  "output_tokens": 9109,
+  "cost_usd": 2.007797,
+  "attempts": 9,
+  "steps_with_usage": 9,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(506, 76)",
+  "import pyautogui; pyautogui.click(534, 532); import time; time.sleep(1)",
+  "import pyautogui, time; pyautogui.click(902, 557); time.sleep(2)",
+  "import pyautogui, time; pyautogui.click(900, 400); time.sleep(0.5); pyautogui.hotkey('ctrl','a'); time.sleep(0.3); pyautogui.press('delete'); time.sleep(0.3); pyautogui.write('Sub DoTask\\noDoc = ThisComponent\\noSheets = oDoc.Sheets\\ns1 = oSheets.getByIndex(0)\\noCur = s1.createCursor()\\noCur.gotoEndOfUsedArea(False)\\nnLast = oCur.RangeAddress.EndRow\\nsA = 0.0\\nsB = 0.0\\nFor i = 1 To nLast\\nsA = sA + s1.getCellByPosition(0, i).getValue()\\nsB = sB + s1.getCellByPosition(1, i).getValue()\\nNext i\\nIf oSheets.hasByName(\"Sheet2\") Then\\noSheets.removeByName(\"Sheet2\")\\nEnd If\\noSheets.insertNewByName(\"Sheet2\", oSheets.Count)\\ns2 = oSheets.getByName(\"Sheet2\")\\ns2.getCellByPosition(0,0).setString(\"Total Revenue\")\\ns2.getCellByPosition(1,0).setString(\"Total Expenses\")\\ns2.getCellByPosition(0,1).setValue(sA)\\ns2.getCellByPosition(1,1).setValue(sB)\\noDoc.store()\\nEnd Sub', interval=0.01)",
+  "import pyautogui, time; pyautogui.press('f5'); time.sleep(3)",
+  "import pyautogui, time; pyautogui.click(389, 76); time.sleep(1)",
+  "import pyautogui, time; pyautogui.click(492, 127); time.sleep(2)",
+  "import pyautogui, time; pyautogui.click(308, 1045); time.sleep(1.5)",
+  "DONE"
+ ]
+}

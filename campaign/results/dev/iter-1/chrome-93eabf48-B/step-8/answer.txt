@@ -1,0 +1,1 @@
+{"action":"done","memo":"Verified after relaunch: chrome://flags 'Auto Dark Mode for Web Contents' (#enable-force-dark) = Disabled and persisted across the restart. Dark mode forcing is off."}

@@ -1,0 +1,7 @@
+Both checks pass: the reference list has `[14] Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003)...` under the same auto-numbered list (WWNum1), and the in-text `[14]` now sits where `<add here>` was, in the paragraph "A study by Pennington[14] noted that women do not generally meet US guidelines...".
+
+One real inconsistency remains that I introduced: entry [14] renders in **Times New Roman** (serif) while entries [11]–[13] are Arial. I'll match the font and re-save.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 'end'); pyautogui.sleep(0.8); pyautogui.keyDown('shift'); pyautogui.press('up', presses=2); pyautogui.press('home'); pyautogui.keyUp('shift'); pyautogui.sleep(0.4); pyautogui.tripleClick(443, 147); pyautogui.sleep(0.4); pyautogui.write('Arial'); pyautogui.press('enter'); pyautogui.sleep(1.0); pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(2.5)", "memo": "Task content is DONE+saved: ref [14] Steinberg in list (autonumber WWNum1), in-text [14] replaced <add here> in para 4 ('A study by Pennington[14] noted...'). Step 13 only fixed font of entry [14] Times New Roman -> Arial to match [11]-[13], then Ctrl+S (NO Enter - alien dialog disabled). Step 14: verify [14] entry is sans-serif and text intact; if font change corrupted text, Ctrl+Z and re-save. Otherwise DONE."}
+```

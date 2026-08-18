@@ -1,0 +1,3 @@
+```json
+{"action":"scroll","direction":"down","memo":"Exploring doc: need to find 4th paragraph with <add here> and the reference list (numbered, refs shown as [11],[12] = cross-refs). Started scrolling from top."}
+```

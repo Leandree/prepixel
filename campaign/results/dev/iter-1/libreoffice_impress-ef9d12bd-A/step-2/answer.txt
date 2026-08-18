@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(216, 353)", "memo": "View menu was open; clicked 'Slide Pane' (unchecked) at (216,353) to restore left panel. Next: verify slide panel visible on left side of editing area."}

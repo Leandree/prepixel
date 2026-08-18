@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e40", "memo": "Two 'All' clicks left a11y tree showing Simple prefs widgets, but VLC hides (not deletes) simple panel, so tree may be stale. Cropping e40 (579,499,122,73) to see REAL pixels: if advanced prefs is up, expect tree items (Audio/Interface/Video) there, not the skin preview image. Then click tree row for Interface."}

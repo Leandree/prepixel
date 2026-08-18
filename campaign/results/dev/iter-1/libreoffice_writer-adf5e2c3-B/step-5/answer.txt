@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+h","memo":"VERIFIED: ref [14] is its own paragraph at doc end (e56, separate block below [13]). Now opening Find&Replace: set Search='<add here>', Replace='[14]', click Replace All, then close dialog, then Ctrl+S and Keep Current Format (docx)."}
+```

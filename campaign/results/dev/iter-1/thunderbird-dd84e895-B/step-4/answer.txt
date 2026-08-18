@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+a","memo":"Pressed Ctrl+A to select both messages in Bills (e40 AWS, e44 X/Twitter); both currently unstarred (e55 Starred checkbox was unchecked). Next: press S to add star to all selected, then verify both rows show 'Starred' in labels."}
+```

@@ -1,0 +1,1 @@
+{"action": "set_value", "target": "e61", "value": "Disabled", "memo": "On chrome://flags, set 'Auto Dark Mode for Web Contents' (#enable-force-dark) to Disabled. Next: click the 'Relaunch' button that appears at the bottom of the page (may need scroll) to apply."}

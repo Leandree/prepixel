@@ -1,0 +1,5 @@
+I've reviewed the screen. The slide number placeholder is the dashed box with a faint "1" at the bottom-right of the slide. I'll click on it to select it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1434, 967)", "memo": "Task: make slide number red in Impress (saa-format-guide.pptx). Slide-number placeholder is dashed box at ~(1373-1460, 940-993), faint '1' at (1434,967). Step1: clicked it to select. Next: verify selection (status bar/handles); if selected, use Format > Character > Font Color > Red. If not selectable, use View > Master Slide and edit placeholder there."}
+```

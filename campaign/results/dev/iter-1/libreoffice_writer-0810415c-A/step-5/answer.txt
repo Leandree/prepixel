@@ -1,0 +1,5 @@
+The Paragraph dialog is open on Indents & Spacing, with the Line Spacing combo showing "Single". I'll open that dropdown.
+
+```json
+{"action": "import pyautogui; pyautogui.click(938, 695)", "memo": "Selection para1+2 (94 words/545 chars) active; Paragraph dialog open on Indents & Spacing. Just clicked Line Spacing dropdown arrow at (938,695). Next: click 'Double' in the opened list (list appears under combo ~y=760-790), then click OK at (1372,850). Then Ctrl+S and Enter to keep .docx."}
+```

@@ -1,0 +1,5 @@
+The reminder requires: all sheets in one Calc file, ordered ReadMe → Millet spatial integration. The macro reported no missing sheets and the final order matches exactly, and `store()` ran. Dismissing the dialog.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(993, 684); time.sleep(1)", "memo": "MsgBox confirmed: no MISS lines, final order = ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration; d.store() succeeded on workbook-with-sample-database.xlsx. Clicked OK. Next: switch to the Calc window to visually confirm tab order, then DONE."}
+```

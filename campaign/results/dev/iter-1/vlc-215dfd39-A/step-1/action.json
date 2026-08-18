@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(946, 373)", "memo": "Task: disable cone icon in VLC splash/background. Step1: clicked Tools menu (946,373) in VLC window (window spans ~647-1245 x, 330-790 y). Next: click 'Preferences' in dropdown (near bottom of Tools menu), then in Interface tab uncheck 'Show background cone or art' / set to no video output cone."}

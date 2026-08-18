@@ -1,0 +1,6 @@
+{
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "crop",
+ "rung": "crop"
+}

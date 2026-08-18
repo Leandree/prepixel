@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "Clicked 'All' (confirmed checked). View still showed Simple Prefs layout \u2014 likely stale. After re-observe: find tree Interface > Main interfaces > Qt, uncheck 'Display background cone or art', then Save."}

@@ -1,0 +1,5 @@
+Both messages in the Bills folder now show filled orange stars — in the message list (rows at y=181 and y=227) and in the conversation preview pane next to each subject line. The Ctrl+A + `s` action starred both.
+
+```json
+{"action": "DONE", "memo": "Step4: Verified both Bills messages (AWS invoice, X receipt) show filled orange stars in list and preview pane. Task complete."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1087, 628); time.sleep(3)", "memo": "Step7: Clicked 'Add all DLC to Cart' (1087,628) in 'Content For This Game' section on Dota 2 store page (2 DLC: Official Soundtrack 8,19\u20ac + Remixes EP free). Next: verify cart shows items (cart icon top-right / cart page). If a modal appeared, handle it."}

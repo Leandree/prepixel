@@ -1,0 +1,19 @@
+{
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "no-usable-action: no-interface"
+ },
+ "rung1_error": "no-usable-action: no-interface",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  35,
+  133
+ ],
+ "settle_ms": 4457,
+ "settle_captures": 3,
+ "guard_ms": 22
+}

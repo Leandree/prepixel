@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1372, 850)", "memo": "Combo confirmed 'Double'; clicked OK. Selection was para1+2 (94 words/545 chars). Next: verify dialog closed and spacing applied, then Ctrl+S and press Enter to keep .docx (Use Word 2007-365!)."}
+```

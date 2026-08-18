@@ -1,0 +1,14 @@
+{
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.click"
+ },
+ "rung": 1,
+ "rung1_method": "Action.click",
+ "settle_ms": 4258,
+ "settle_captures": 2,
+ "guard_ms": 40
+}

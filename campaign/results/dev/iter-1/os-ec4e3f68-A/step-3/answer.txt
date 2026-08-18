@@ -1,0 +1,3 @@
+The dock no longer contains Vim, and the system notification confirms "Vim has been removed from your favorites." The remaining dock items are Thunderbird, Chrome, and Trash.
+
+{"action": "DONE", "memo": "Vim removed from favorites — confirmed by on-screen notification 'Vim has been removed from your favorites.' and its absence from the dock."}

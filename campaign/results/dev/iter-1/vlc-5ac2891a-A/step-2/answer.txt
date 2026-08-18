@@ -1,0 +1,7 @@
+VLC is now open. Next I'll open the Tools menu to reach Preferences.
+
+```json
+{"action": "import pyautogui; pyautogui.click(946, 373)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(946, 373)", "memo": "VLC window is open (title bar ~y=345, menu bar y=373: Media 673, Playback 732, Audio 790, Video 838, Subtitle 893, Tools 946, View 989, Help 1032). Just clicked Tools menu. Next: click 'Preferences' in the dropdown (or Ctrl+P), then in Preferences set 'Show settings: All', go to Playlist, uncheck 'Play and exit', Save."}

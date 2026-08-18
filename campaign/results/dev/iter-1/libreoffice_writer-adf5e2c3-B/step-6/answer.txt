@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e157","value":"<add here>","memo":"Find&Replace open. Just set Find='<add here>'. Next: set Replace (e161) = '[14]', then click Replace All (e167), verify '1 replacement made', Close (e181), Ctrl+S, Keep Current Format."}
+```

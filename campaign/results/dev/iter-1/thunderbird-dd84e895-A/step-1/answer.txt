@@ -1,0 +1,5 @@
+Desktop is showing. I'll launch Thunderbird from the dock.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 133)", "memo": "Step1: clicked Thunderbird icon in dock. Next: wait for Thunderbird to open, then find local 'Bills' folder, select all emails (Ctrl+A), and press 'S' to toggle star (or right-click > Mark > As Starred)."}
+```

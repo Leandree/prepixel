@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Clicked 'New…' in Message Filters (0 filters, account anonym-x2024@outlook.com) but Filter Rules dialog not yet visible; a stray menu-item 'Copy…' appeared. Waiting to re-observe. If a popup menu is open, press Escape and click 'New…' again. Goal: filter name 'Forward to gmail', Match all messages, action 'Forward Message to' anonym-x2024@gmail.com."}

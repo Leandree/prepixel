@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(195, 509)", "memo": "Step2: Thunderbird open; clicked 'Bills' folder under Local Folders (195,509). Next: click a message row in the list pane, Ctrl+A to select all, then press 'S' to star. Verify stars appear."}

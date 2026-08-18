@@ -1,0 +1,14 @@
+{
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": true,
+  "method": "EditableText.setTextContents+Action.activate"
+ },
+ "rung": 1,
+ "rung1_method": "EditableText.setTextContents+Action.activate",
+ "settle_ms": 4638,
+ "settle_captures": 3,
+ "guard_ms": 29
+}

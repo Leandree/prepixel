@@ -1,0 +1,19 @@
+{
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "no-usable-action: ['dodefault', 'showcontextmenu']"
+ },
+ "rung1_error": "no-usable-action: ['dodefault', 'showcontextmenu']",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  226,
+  47
+ ],
+ "settle_ms": 4410,
+ "settle_captures": 1,
+ "guard_ms": 49
+}

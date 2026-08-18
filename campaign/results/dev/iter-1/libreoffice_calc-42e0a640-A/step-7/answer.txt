@@ -1,0 +1,5 @@
+The Window menu is open with the NetIncome.xlsx entry visible. I'll switch to it to verify the result.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(492, 127); time.sleep(2)", "memo": "Switched to NetIncome.xlsx Calc window. Next: verify Sheet2 tab exists, click it, and confirm A1='Total Revenue', B1='Total Expenses', A2/B2 hold the sums. Macro already called oDoc.store() so file should be saved (Keep current format dialog may have appeared - check for it)."}
+```

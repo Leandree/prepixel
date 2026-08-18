@@ -1,0 +1,5 @@
+Spacing went from Single → Double and is now visibly applied to both paragraphs. Saving with Ctrl+S.
+
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl', 's'); time.sleep(1.5)", "memo": "Double spacing applied+verified on para1+2 (94 words/545 chars). Just pressed Ctrl+S. Next: 'Keep current format' dialog should appear -> click 'Use Word 2007-365!' button (right side) to preserve .docx, then DONE."}
+```

@@ -1,0 +1,9 @@
+{
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "scroll",
+ "rung": "scroll",
+ "settle_ms": 4706,
+ "settle_captures": 2,
+ "guard_ms": 40
+}

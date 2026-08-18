@@ -1,0 +1,1 @@
+{"action":"click","target":"e55","memo":"Clicked shape frame 'Google Shape;276;p1' (slide-number '10') to select it. NEXT: sidebar Properties should now show a Character panel with a 'Font Color' split button whose default is Red — click the main button (not the arrow) to apply red. Then ctrl+s and 'Use PowerPoint Format!' to save. 3 steps left."}

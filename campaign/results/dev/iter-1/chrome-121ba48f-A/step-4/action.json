@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(609, 477); time.sleep(3)", "memo": "Step4: search results page for 'Dota 2' loaded; clicked first result 'Dota 2' (Free, 10 Jul 2013) at (609,477) to open its store page. Next: page may show age gate; then scroll down to 'Downloadable Content' section and click every 'Add to Cart' button for each DLC."}

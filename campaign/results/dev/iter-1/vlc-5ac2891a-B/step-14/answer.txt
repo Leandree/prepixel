@@ -1,0 +1,1 @@
+{"action":"crop","target":"e11","memo":"Cropping terminal to verify grep output shows uncommented 'play-and-exit=0' in ~/.config/vlc/vlcrc. If the line reads e.g. '123:play-and-exit=0' (no leading #), task is complete -> answer done. If it still shows '#play-and-exit=1' or an error, retype the fix command."}

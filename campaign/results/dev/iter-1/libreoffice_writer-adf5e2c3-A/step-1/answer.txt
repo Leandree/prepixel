@@ -1,0 +1,7 @@
+I can see the document. I need to examine the reference list at the end to learn the numbering format before adding anything. Let me jump to the end of the document.
+
+```json
+{"action": "import pyautogui; pyautogui.click(960, 500); pyautogui.hotkey('ctrl', 'end')"}
+```
+
+**memo:** Doc = Essay_Writing_English_for_uni.docx in LO Writer. Task: append Steinberg et al. (2003) ref to reference list + insert its ref number at `<add here>` in 4th paragraph. Body paras: P1 "Since Spanish explorers", P2 "Consumption of chocolate", P3 "Another possible positive influence...". Existing in-text cites use bracket style e.g. [11], [12]. Next: read end-of-doc reference list numbering, then use Ctrl+H / Find & Replace for `<add here>`.

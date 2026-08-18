@@ -1,0 +1,1 @@
+{"action":"key","keys":"/","memo":"Pressed '/' to open GIMP's Search Actions dialog. Next: type 'Vignette' into the search box, then click/Enter the 'Vignette' result to open the filter dialog. If '/' didn't open a search box, fall back to clicking Filters menu (e32) and hovering the 'Light and Shadow' submenu."}

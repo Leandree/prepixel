@@ -1,0 +1,197 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Help me adding "Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028" to my reference list, and add a cross reference (using reference number) in the fourth paragraph where I marked "<add here>".
+
+STEP 1 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+(none)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+(none)
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "Essay_​Writing_​English_​for_​uni.​docx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​Essay_​Writing_​English_​for_​uni.​docx#"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,180,27 "LibreOffice Writer"
+e9 menu 906,0,178,27 "Aug 18 22‎∶32"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+e29 menu 153,64,49,25 "View"
+e30 menu 202,64,55,25 "Insert"
+e31 menu 257,64,66,25 "Format"
+e32 menu 323,64,56,25 "Styles"
+e33 menu 379,64,53,25 "Table"
+e34 menu 432,64,52,25 "Form"
+e35 menu 484,64,52,25 "Tools"
+e36 menu 536,64,70,25 "Window"
+e37 menu 606,64,47,25 "Help"
+e38 menu 70,64,40,21 "File" value="0.0"
+e39 menu 110,64,43,21 "Edit" value="0.0"
+e40 menu 153,64,50,21 "View" value="0.0"
+e41 menu 203,64,56,21 "Insert" value="0.0"
+e42 menu 259,64,66,21 "Format" value="0.0"
+e43 menu 325,64,56,21 "Styles" value="0.0"
+e44 menu 381,64,53,21 "Table" value="0.0"
+e45 menu 434,64,52,21 "Form" value="0.0"
+e46 menu 486,64,53,21 "Tools" value="0.0"
+e47 menu 539,64,73,21 "Window" value="0.0"
+e48 menu 612,64,48,21 "Help" value="0.0"
+e49 document-text 70,246,1779,788 "Essay_Writing_English_for_uni - LibreOffice Document"
+e50 text 563,361,793,54 "Example essay"
+e51 text 563,433,793,19 "“Chocolate is a healthy food.” Discuss."
+e52 text 563,470,793,276 "Since Spanish explorers brought back chocolate from the new world, chocolate consumption has become a worldwide phenomenon.  At first, chocolate, a derivative of the cacao bean, was consumed as a drink, only later achieving mass popularity in tablet or bar form. However, chocolate’s inherent popularity does not equate to it possessing healthy properties, as suggested by the title. The realities of chocolate are more down to earth; a number of these realities will be addressed in this essay. Chocolate has chemical properties that can influence mood and there is possible evidence for some positive impacts of chocolate on cardiovascular health. Yet, such positive attributes are counterbalanced somewhat by the argument that, in some instances, chocolate can be viewed as a drug rather than a food. Moreover, there is the possibility of some correlation between over-consumption of chocolate and obesity. Thus, it will be argued that despite chocolate’s positive effect in some cases on mood and the cardiovascular system it has also been linked to addiction and obesity."
+e53 text 563,764,793,270 "Consumption of chocolate is something that many enjoy, and there is evidence[11]  that high carbohydrate foods such as chocolate do have a ‘feel good’ effect. Moreover, Scholey and Owen[12]  in a systematic review of the literature in the field point to several studies, such as Macht and Dettmer (2006) and Macht and Mueller (2007), which appear to confirm this effect. Yet, as Parker, Parker and Brotchie (2006, p. 150) note, the mood effects of chocolate “are as ephemeral as holding a chocolate in one’s mouth”. In addition, mood is something that is difficult to isolate and quantify, and aside from the study by Macht and Dettmer (2006) there appears to be little research on any longer term mood affecting influences of chocolate. Another point is raised by Macht and Dettmer (2006), whose study found that positive responses to chocolate correlated more with anticipation and temporary sensory pleasure, whereas guilt was also a statistically significant factor for many, for whom the ‘feel-good’ effect would be minimalised.  As these authors stress, “temporal tracking of [both] positive and negative emotions” (p.335)  before and after consuming chocolate in future studies could help in further understanding the ‘feel good’ effect and more negative emotions."
+e54 scroll-bar 1849,222,12,812 "Vertical scroll bar" value="0.0"
+e55 text 70,222,1779,24 "Horizontal Ruler"
+e56 text 1870,144,48,888 "Properties"
+e57 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e58 text 1870,210,44,42 "Properties"
+e59 toggle-button 1874,214,37,35 state=checked:true
+e60 text 1870,252,44,42 "Styles"
+e61 toggle-button 1874,256,37,35 state=checked:false
+e62 text 1870,294,44,42 "Gallery"
+e63 toggle-button 1874,298,37,35 state=checked:false
+e64 text 1870,336,44,42 "Navigator"
+e65 toggle-button 1874,340,37,35 state=checked:false
+e66 text 1870,378,44,42 "Page"
+e67 toggle-button 1874,382,37,35 state=checked:false
+e68 text 1870,420,44,42 "Style Inspector"
+e69 toggle-button 1874,424,37,35 state=checked:false
+e70 text 111,178,1598,26 "Help us make LibreOffice even better!"
+e71 [pixels] icon 73,171,32,32
+e72 push-button 1715,170,117,34 "Get involved"
+e73 push-button 1839,179,16,16
+e74 text 111,218,1632,26 "Your donations support our worldwide community."
+e75 [pixels] icon 73,211,32,32
+e76 push-button 1749,210,83,34 "Donate"
+e77 push-button 1839,219,16,16
+e78 text 70,64,1254,39 "Standard"
+e79 push-button 74,66,44,35 "New" value="0.0"
+e80 push-button 118,66,44,35 "Open" value="0.0"
+e81 push-button 162,66,44,35 "Save" value="0.0"
+e82 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e83 push-button 247,66,33,35 "Print" value="0.0"
+e84 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e85 push-button 321,66,33,35 "Cut" value="0.0"
+e86 push-button 354,66,33,35 "Copy" value="0.0"
+e87 push-button 387,66,44,35 "Paste" value="0.0"
+e88 push-button 439,66,33,35 "Clone" value="0.0"
+e89 push-button 480,66,44,35 "Undo" value="0.0"
+e90 push-button 524,66,44,35 "Redo" value="0.0"
+e91 toggle-button 576,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e92 push-button 609,66,33,35 "Spelling" value="0.0"
+e93 toggle-button 642,66,33,35 "Formatting Marks" value="0.0" state=checked:false
+e94 push-button 683,66,44,35 "Table" value="0.0"
+e95 push-button 727,66,33,35 "Image" value="0.0"
+e96 push-button 760,66,33,35 "Chart" value="0.0"
+e97 push-button 793,66,33,35 "Text Box" value="0.0"
+e98 push-button 834,66,33,35 "Page Break" value="0.0"
+e99 push-button 867,66,44,35 "Field" value="0.0"
+e100 push-button 911,66,44,35 "Symbol" value="0.0"
+e101 toggle-button 963,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e102 push-button 996,66,33,35 "Footnote" value="0.0"
+e103 push-button 1029,66,33,35 "Endnote" value="0.0"
+e104 push-button 1062,66,33,35 "Bookmark" value="0.0"
+e105 push-button 1095,66,33,35 "Cross-reference" value="0.0"
+e106 push-button 1136,66,33,35 "Comment" value="0.0"
+e107 toggle-button 1169,66,33,35 "Track Changes Functions" value="0.0" state=checked:false
+e108 push-button 1210,66,33,35 "Line" value="0.0"
+e109 push-button 1243,66,44,35 "Basic Shapes" value="0.0"
+e110 toggle-button 1287,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e111 text 70,103,1437,39 "Formatting"
+e112 text 74,105,202,34 "Paragraph Style"
+e113 text 74,130,166,34 "Heading 1"
+e114 toggle-button 240,130,36,34 state=checked:false
+e115 push-button 276,105,33,35 "Update" value="0.0"
+e116 push-button 309,105,33,35 "New" value="0.0"
+e117 text 350,105,221,34 "Font Name"
+e118 text 350,130,185,34 "Arial"
+e119 toggle-button 535,130,36,34 state=checked:false
+e120 text 579,105,101,34 "Font Size"
+e121 text 579,130,65,34 "14 pt"
+e122 toggle-button 644,130,36,34 state=checked:false
+e123 toggle-button 688,105,33,35 "Bold" value="1.0" state=checked:true
+e124 toggle-button 721,105,33,35 "Italic" value="0.0" state=checked:false
+e125 push-button 754,105,44,35 "Underline" value="0.0"
+e126 toggle-button 798,105,33,35 "Strikethrough" value="0.0" state=checked:false
+e127 toggle-button 839,105,33,35 "Superscript" value="0.0" state=checked:false
+e128 toggle-button 872,105,33,35 "Subscript" value="0.0" state=checked:false
+e129 push-button 913,105,33,35 "Clear" value="0.0"
+e130 push-button 954,105,44,35 "Font Color" value="0.0"
+e131 push-button 998,105,44,35 "Character Highlighting Color" value="0.0"
+e132 toggle-button 1050,105,33,35 "Left" value="1.0" state=checked:true
+e133 toggle-button 1083,105,33,35 "Center" value="0.0" state=checked:false
+e134 toggle-button 1116,105,33,35 "Right" value="0.0" state=checked:false
+e135 toggle-button 1149,105,33,35 "Justified" value="0.0" state=checked:false
+e136 push-button 1190,105,44,35 "Unordered List" value="0.0"
+e137 push-button 1234,105,44,35 "Ordered List" value="0.0"
+e138 push-button 1278,105,33,35 "No List" value="1.0" state=checked:true
+e139 push-button 1319,105,33,35 "Increase" value="0.0"
+e140 push-button 1352,105,33,35 "Decrease" value="0.0"
+e141 push-button 1393,105,44,35 "Line Spacing" value="0.0"
+e142 push-button 1437,105,33,35 "Increase" value="0.0"
+e143 push-button 1470,105,33,35 "Decrease" value="0.0"
+e144 text 105,1036,238,18 "Page 1 of 4"
+e145 text 349,1036,356,18 "1,483 words, 10,132 characters"
+e146 text 711,1036,286,18 "Default Page Style"
+e147 text 1003,1036,282,18 "English (Australia)"
+e148 text 1417,1036,234,18 "Outline 1"
+e149 text 1876,1036,38,18 "100%"
+
+
+Previous views (up to 3, oldest first), same grammar:
+(none)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

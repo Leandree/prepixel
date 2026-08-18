@@ -1,0 +1,3 @@
+Confirmed: comparing step-9 → step-10, only "Display background cone or art" changed (checked → unchecked). No other settings were altered by the earlier misplaced click. Now saving.
+
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "Verified via step-9 vs step-10 diff: ONLY 'Display background cone or art' toggled checked->unchecked (qt-bgcone=0); no collateral changes. Just clicked Save (1210,903). Next: confirm Advanced Preferences dialog closed -> then DONE."}

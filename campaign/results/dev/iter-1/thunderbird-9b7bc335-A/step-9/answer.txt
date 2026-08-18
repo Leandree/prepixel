@@ -1,0 +1,5 @@
+Step 8's dialog confirms the filter was correct (Match all messages → Forward Message to anonym-x2024@gmail.com), and step 9 shows it saved and Enabled ✓ in the list. Closing the Message Filters window now.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1377, 321)", "memo": "Filter 'Forward All to Gmail' verified in list: Enabled checkmark present; rules confirmed in step-8 screenshot (Match all messages, Forward Message to anonym-x2024@gmail.com, Getting New Mail + Manually Run). Just closed Message Filters window. Next: confirm window closed and main Thunderbird view visible, then DONE."}
+```

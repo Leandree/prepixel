@@ -1,0 +1,3 @@
+```json
+{"action":"wait","memo":"View came back empty again at step 13; issued wait to force a re-render. NEXT: read the Calc page-tabs (previously e638-e647) and confirm order ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. If correct -> done (macro already called oDoc.store()). If the Basic IDE shows an error dialog instead, press Return then re-run with F5."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "Step 3: 'Convert to RGB Working Space?' dialog STILL open (previous Keep click at 1106,702 didn't register). Clicked Keep again. Next: verify dialog gone, then Filters menu (475,76) > 'Light and Shadow' > 'Vignette...'. If dialog persists, try pressing Escape or clicking Convert."}
+```

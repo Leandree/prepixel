@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e14","value":"chrome://settings/appearance","memo":"Chrome open. Typed chrome://settings/appearance into address bar (e14); next press Enter, then set Mode to Light."}
+```

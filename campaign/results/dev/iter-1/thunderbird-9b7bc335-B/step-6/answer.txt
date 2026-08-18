@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"Forward to gmail","memo":"Hypothesis: Filter Rules dialog IS open (modal) but invisible to the a11y tree — that's why the 2nd New… click was a no-op (parent blocked). Just typed 'Forward to gmail' expecting the focused Filter name field. Next: verify via view/crop; then set Match all messages + action Forward Message To anonym-x2024@gmail.com, then OK."}
+```

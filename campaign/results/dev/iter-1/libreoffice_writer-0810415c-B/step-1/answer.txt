@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e50","memo":"Clicked in 1st paragraph. Next: Ctrl+Home, then Shift+Ctrl+Down twice to select first 2 paragraphs, then Ctrl+2 for double spacing, then Ctrl+S (Keep current format)."}
+```

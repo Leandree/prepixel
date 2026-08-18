@@ -1,0 +1,95 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I want to see the battery percentage. Can you help me display it on my screen?
+
+STEP 2 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click toggle-button "Activities"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Goal: enable battery percentage display. Opened Activities overview; next type 'Settings' to launch GNOME Settings, then go to Power > 'Show Battery Percentage' toggle.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+~e3 text 865,61,290,17
+e4 toggle-button 0,0,99,27 "Activities" state=checked:true
+e5 menu 99,0,43,27
+e6 menu 906,0,178,27 "Aug 18 23‎∶06"
+e7 menu 1814,0,106,27 "System"
+~e8 text 810,41,274,28 "Software Updates Available to Download"
+~e9 text 810,49,274,20 "Software Updates Available to Download"
+~e10 push-button 1208,42,26,26
+~e11 text 810,73,291,17 "Please download waiting software updates."
+e12 push-button 0,840,70,8
+e13 push-button 62,33,8,815
+e14 push-button 0,33,70,64 "Google Chrome"
+e15 push-button 0,101,70,64 "Thunderbird Mail"
+e16 push-button 0,169,70,64 "Visual Studio Code"
+e17 push-button 0,237,70,64 "VLC media player"
+e18 push-button 0,305,70,64 "LibreOffice Writer"
+e19 push-button 0,373,70,64 "LibreOffice Calc"
+e20 push-button 0,441,70,64 "LibreOffice Impress"
+e21 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e22 push-button 0,577,70,64 "Files"
+e23 push-button 0,645,70,64 "Ubuntu Software"
+e24 push-button 0,713,70,64 "Help"
+e25 push-button 0,784,70,64 "Trash"
+e26 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+[act-guard] previous action: CONFIRMED (state [checked:false]→[checked:true])
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 1 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 toggle-button 0,0,99,27 "Activities" state=checked:false
+e4 menu 99,0,43,27
+e5 menu 906,0,178,27 "Aug 18 23‎∶06"
+e6 menu 1814,0,106,27 "System"
+e7 push-button 0,840,70,8
+e8 push-button 62,33,8,815
+e9 push-button 0,33,70,64 "Google Chrome"
+e10 push-button 0,101,70,64 "Thunderbird Mail"
+e11 push-button 0,169,70,64 "Visual Studio Code"
+e12 push-button 0,237,70,64 "VLC media player"
+e13 push-button 0,305,70,64 "LibreOffice Writer"
+e14 push-button 0,373,70,64 "LibreOffice Calc"
+e15 push-button 0,441,70,64 "LibreOffice Impress"
+e16 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e17 push-button 0,577,70,64 "Files"
+e18 push-button 0,645,70,64 "Ubuntu Software"
+e19 push-button 0,713,70,64 "Help"
+e20 push-button 0,784,70,64 "Trash"
+e21 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

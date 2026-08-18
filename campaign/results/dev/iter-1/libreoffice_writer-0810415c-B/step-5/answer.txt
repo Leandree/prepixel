@@ -1,0 +1,1 @@
+{"action":"click","target":"e150","memo":"Clicked 'Spacing: 2' (double) with para1 selected (349 chars). NEXT: click para2 e51 ('A novel may have any number of climaxes...'), then click Line Spacing button (e143) and pick 'Spacing: 2'. Then ctrl+s and Keep current format (Use Word 2007-365!)."}

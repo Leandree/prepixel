@@ -1,0 +1,41 @@
+{
+ "task_id": "93eabf48-6a27-4cb6-b963-7d5fe1e0d3a9",
+ "domain": "chrome",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "2ffa67b023831a0949446425f5640a6a40ad56e2",
+ "success": false,
+ "score_raw": 0,
+ "steps": 8,
+ "termination": "DONE",
+ "wall_clock_s": 262.0,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 2646,
+  "cache_creation_input_tokens": 131687,
+  "cache_read_input_tokens": 1003682,
+  "output_tokens": 9816,
+  "cost_usd": 2.077341,
+  "attempts": 8,
+  "steps_with_usage": 8,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(34, 64)",
+  "import pyautogui; pyautogui.click(1890, 139); pyautogui.hotkey('ctrl', 'l'); pyautogui.write('chrome://settings/appearance\n')",
+  "import pyautogui, time; pyautogui.click(1890, 139); time.sleep(0.6); pyautogui.click(500, 90); time.sleep(0.4); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('chrome://settings/appearance'); time.sleep(0.3); pyautogui.press('enter')",
+  "import pyautogui, time; pyautogui.click(600, 90); time.sleep(0.4); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('chrome://flags/#enable-force-dark'); time.sleep(0.3); pyautogui.press('enter'); time.sleep(1.5)",
+  "import pyautogui, time; pyautogui.click(868, 142); time.sleep(0.4); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('dark'); time.sleep(1.2)",
+  "import pyautogui, time; pyautogui.click(1257, 328); time.sleep(0.8); pyautogui.press('end'); time.sleep(0.4); pyautogui.press('enter'); time.sleep(1.0)",
+  "import pyautogui, time; pyautogui.click(1822, 1034); time.sleep(3.0)",
+  "DONE"
+ ]
+}

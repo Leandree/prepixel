@@ -1,0 +1,1 @@
+{"action": "click", "target": "e167", "memo": "Sheet cols: D=start,E=end,G=words,H=days,I=words/day. Min I is row 7 (I7=1328.9, G7=47840, H7=36). Clicked A7 to read its Title from formula bar (formula bar text elem was e742). Next: read title, then open book_list_result.docx on desktop and write it."}

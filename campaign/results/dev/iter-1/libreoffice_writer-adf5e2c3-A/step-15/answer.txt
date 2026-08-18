@@ -1,0 +1,7 @@
+Both parts are verified complete:
+- **Reference list**: `[14] Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids... doi: 10.1053/jada.2003.50028` appears as the next auto-numbered entry after [13], now in Arial to match [11]–[13].
+- **In-text cross-reference**: paragraph 4 reads "A study by Pennington**[14]** noted that women do not generally meet US guidelines for trace elements" — the `<add here>` marker is gone.
+
+Final action: collapse the selection (harmless) and issue one last save to persist the font change.
+
+{"action": "import pyautogui; pyautogui.press('end'); pyautogui.sleep(0.3); pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(2.5)", "memo": "Task complete: ref [14] Steinberg in list (Arial, WWNum1 autonumber, after [13]); in-text [14] replaced <add here> in para 4 (Pennington[14]). Final Ctrl+S issued; alien-format dialog does not appear in this setup, so save is silent."}

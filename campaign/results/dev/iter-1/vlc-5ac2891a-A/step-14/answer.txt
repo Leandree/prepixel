@@ -1,0 +1,3 @@
+```json
+{"action": "DONE", "memo": "Preferences dialog closed after Save; VLC main window visible. play-and-exit unchecked and persisted to ~/.config/vlc/vlcrc. Task complete."}
+```

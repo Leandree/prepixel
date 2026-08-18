@@ -1,0 +1,5 @@
+Desktop is empty — Vignette is a GIMP filter, so I need to launch GIMP first from the dock.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 540)", "memo": "Task: open GIMP's Vignette filter window (Filters > Light and Shadow > Vignette). Step 1: clicked GIMP icon in dock at (34,540) to launch it. Next: wait for GIMP to load, may need to create/open an image before filter menu is enabled."}
+```

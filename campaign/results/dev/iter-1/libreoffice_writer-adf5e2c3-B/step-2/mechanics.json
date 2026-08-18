@@ -1,0 +1,8 @@
+{
+ "memo_in": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 4006,
+ "settle_captures": 2,
+ "guard_ms": 41
+}

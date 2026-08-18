@@ -1,0 +1,1 @@
+{"action":"click","target":"e195","memo":"Clicked Edit in Basic Macros dlg (hoping My Macros/Standard/Module1 -> Basic IDE). If IDE open: click code area, ctrl+a, type Sub FixNum: loop DrawPages+MasterPages, shapes with numeric short String -> s.CharColor=RGB(255,0,0); F5; alt+f4; ctrl+s; Enter(Keep format). If not open, expand tree My Macros."}

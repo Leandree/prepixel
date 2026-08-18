@@ -1,0 +1,1 @@
+{"action":"click","target":"e4","memo":"Goal: read reminder.docx on desktop for assignment requirements, then apply them to the open Calc file (workbook-with-sample-database.xlsx, sheet Mkt Tera active). Step 1: clicked desktop icon reminder.docx — may need double-click/Enter to open."}

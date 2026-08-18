@@ -1,0 +1,25 @@
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "saa-​format-​guide.​pptx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​saa-​format-​guide.​pptx#"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,191,27 "LibreOffice Impress"
+e9 menu 906,0,178,27 "Aug 18 22‎∶03"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

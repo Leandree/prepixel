@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e77","memo":"Prefs a11y tree is frozen on the Simple panel (identical steps 4-6) even though 'All' reads checked:true, and crop gave me nothing usable -> no clickable eN for the advanced tree, so the GUI path to Interface>Main interfaces>Qt>'Display background cone or art' is a dead end. Just clicked Cancel to close prefs (avoid a later save re-writing qt-bgcone). NEXT: ctrl+alt+t -> wait -> type: f=~/.config/vlc/vlcrc; mkdir -p ~/.config/vlc; touch $f; grep -q '^#*qt-bgcone=' $f && sed -i 's/^#*qt-bgcone=.*/qt-bgcone=0/' $f || echo qt-bgcone=0 >> $f; grep -n qt-bgcone $f  -> Enter, then verify output shows qt-bgcone=0. Report in final answer that I used the config file, not the GUI."}
+```

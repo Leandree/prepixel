@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(637, 898)", "memo": "Clicked 'All' radio in Simple Preferences to switch to advanced view. Next: in left tree find Playlist section, uncheck 'Play and exit' (play-and-exit=0), then click Save (1210, 903)."}
+```

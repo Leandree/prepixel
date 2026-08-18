@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.write('[14]', interval=0.05)", "memo": "Replaced '<add here>' selection (after 'Pennington') with '[14]'. Ref list entry [14] = Steinberg et al. 2003 on p4 (blue/underlined - inherited hyperlink char style, consider Ctrl+M to clear). NEXT: screenshot to verify in-text '[14]' inserted correctly, then Ctrl+S and Keep Current Format (docx)."}

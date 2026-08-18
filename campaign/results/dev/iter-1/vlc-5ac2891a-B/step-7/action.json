@@ -1,0 +1,1 @@
+{"action": "click", "target": "e75", "memo": "Clicked 'All' after forcing Simple->All transition. If the tree still lists Simple widgets, it's stale: next step do 'wait' to let advanced tree render, then look for a search/filter box or the Playlist section to uncheck 'Play and exit' (play-and-exit=0), then Save (e76)."}

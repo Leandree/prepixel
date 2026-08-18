@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(34, 268)", "memo": "Clicked VLC icon in Ubuntu dock to launch VLC. Goal: Tools > Preferences > (Show All) > Playlist > uncheck 'Play and exit' so vlcrc has play-and-exit=0, then Save."}

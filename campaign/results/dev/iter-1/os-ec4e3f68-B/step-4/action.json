@@ -1,0 +1,1 @@
+{"action": "type", "text": "gsettings get org.gnome.shell favorite-apps\n", "memo": "Dash now shows Thunderbird, Chrome, Terminal, Trash (no Vim) \u2014 removal appears to have worked. Ran `gsettings get org.gnome.shell favorite-apps` to confirm; next step: read terminal output to verify no vim entry remains, then done."}

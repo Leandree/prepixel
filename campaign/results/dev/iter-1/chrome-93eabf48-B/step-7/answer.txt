@@ -1,0 +1,1 @@
+{"action":"click","target":"e128","memo":"Set #enable-force-dark to Disabled (relaunch bar confirmed change). Now clicking Relaunch to apply/persist. After Chrome restarts: verify chrome://flags shows 'Auto Dark Mode for Web Contents' = Disabled; if UI still dark, check chrome://settings/appearance (Use Classic theme)."}

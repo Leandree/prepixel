@@ -1,0 +1,144 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 94,54,1252,852 "Software"
+e4 toggle-button 126,77,36,46 "Search" state=checked:true
+e5 radio-button 532,77,125,46 "Explore" state=checked:false
+e6 radio-button 657,77,125,46 "Installed" state=checked:false
+e7 radio-button 782,77,125,46 "Updates" state=checked:false
+e8 text 470,130,500,34 "Search" state=focused
+e9 [pixels] icon 479,139,16,16 alt=edit-find-symbolic
+e10 [pixels] icon 945,139,16,16 alt=edit-clear-symbolic
+e11 text 120,171,1200,1 "Information"
+e12 text 120,171,1200,706 "Search page"
+e13 toggle-button 0,0,99,27 "Activities" state=checked:false
+e14 menu 99,0,162,27 "Google Chrome"
+e15 menu 906,0,178,27 "Aug 18 21‎∶37"
+e16 menu 1814,0,106,27 "System"
+e17 push-button 0,840,70,8
+e18 push-button 62,33,8,815
+e19 push-button 0,33,70,64 "Google Chrome"
+e20 push-button 0,101,70,64 "Thunderbird Mail"
+e21 push-button 0,169,70,64 "Visual Studio Code"
+e22 push-button 0,237,70,64 "VLC media player"
+e23 push-button 0,305,70,64 "LibreOffice Writer"
+e24 push-button 0,373,70,64 "LibreOffice Calc"
+e25 push-button 0,441,70,64 "LibreOffice Impress"
+e26 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e27 push-button 0,577,70,64 "Files"
+e28 push-button 0,645,70,64 "Ubuntu Software"
+e29 push-button 0,713,70,64 "Help"
+e30 push-button 0,784,70,64 "Trash"
+e31 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e32 push-button 1802,27,30,35 "Minimise"
+e33 push-button 1842,27,30,35 "Restore"
+e34 push-button 1882,27,38,35 "Close"
+e35 push-button 76,27,28,41 "Search tabs"
+e36 page-tab 98,27,256,41 "Dota 2 on Steam - Memory usage - 268 MB" state=selected
+e37 push-button 312,33,28,28 "Close"
+e38 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 64.2 MB"
+e39 push-button 550,33,28,28 "Close"
+e40 push-button 586,27,28,41 "New Tab"
+e41 push-button 70,73,39,34 "Back"
+e42 push-button 111,73,34,34 "Forward"
+e43 push-button 147,73,34,34 "Reload"
+e44 push-button 195,78,24,24 "View site information"
+e45 entry 227,78,1418,24 "Address and search bar"
+e46 push-button 1653,78,24,24 "Bookmark this tab"
+e47 push-button 1698,73,34,34 "You"
+e48 push-button 1737,73,183,34 "Relaunch to update"
+e49 document-web 70,114,1850,966 "Dota 2 on Steam" state=focused
+e50 link 388,144,145,47 "Link to the Steam Homepage"
+e51 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+e52 text 588,114,335,73 "Global Menu"
+e53 link 588,114,66,73 "STORE"
+e54 link 653,114,114,73 "COMMUNITY"
+e55 link 766,114,71,68 "ABOUT"
+e56 link 836,114,87,68 "SUPPORT"
+e57 text 1339,120,249,24 "|"
+e58 link 1339,120,111,21 "Install Steam"
+e59 link 1455,125,43,14 "sign in"
+e60 text 1497,125,16,14 "|"
+e61 text 1512,125,71,14 "language"
+e62 text 1517,125,48,14 "language"
+e63 text 380,218,1216,46 "Store menu"
+e64 push-button 380,218,83,46 "Browse"
+e65 push-button 462,218,153,46 "Recommendations"
+e66 push-button 614,218,105,46 "Categories"
+e67 push-button 718,218,98,46 "Hardware"
+e68 push-button 815,218,118,46 "Ways to Play"
+e69 push-button 932,218,139,46 "Special Sections"
+e70 combo-box 1111,224,446,34 "Search the store"
+e71 push-button 1557,224,34,34 "Search"
+e72 [pixels] image 1565,232,18,18 alt=Search
+e73 text 398,274,182,36 "Open in Desktop App"
+e74 text 418,284,142,16 "Open in Desktop App"
+e75 text 599,275,587,34 "You're not signed in!
+Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+e76 text 599,274,147,19 "You're not signed in!"
+e77 text 599,292,587,17 "Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+e78 text 388,340,1200,17 ">  >  >"
+e79 link 388,341,57,15 "All Games"
+e80 text 444,341,15,15 ">"
+e81 link 458,341,110,15 "Free To Play Games"
+e82 text 567,341,15,15 ">"
+e83 link 581,341,84,15 "Dota Franchise"
+e84 text 664,341,15,15 ">"
+e85 link 678,341,39,15 "Dota 2"
+e86 link 1448,357,140,32 "Community Hub"
+e87 text 388,357,1200,32 "Dota 2"
+e88 text 388,357,82,32 "Dota 2"
+e89 text 1213,593,375,115 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+e90 text 1213,594,344,112 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+e91 link 1213,727,375,19 "RECENT REVIEWS: Mixed (21,640)"
+e92 text 1213,727,142,19 "RECENT REVIEWS:"
+e93 text 1213,730,102,13 "RECENT REVIEWS:"
+e94 text 1354,727,188,19 "Mixed (21,640)"
+e95 text 1354,728,35,16 "Mixed"
+e96 text 1392,728,49,16 "(21,640)"
+e97 link 1213,745,375,19 "ENGLISH REVIEWS: Very Positive (835,675)"
+e98 text 1213,745,142,19 "ENGLISH REVIEWS:"
+e99 text 1213,748,106,13 "ENGLISH REVIEWS:"
+e100 text 1354,745,188,19 "Very Positive (835,675)"
+e101 text 1354,746,76,16 "Very Positive"
+e102 text 1433,746,56,16 "(835,675)"
+e103 text 1213,772,142,19 "RELEASE DATE:"
+e104 text 1213,775,86,13 "RELEASE DATE:"
+e105 text 1354,772,72,19 "10 Jul, 2013"
+e106 text 1354,773,72,16 "10 Jul, 2013"
+e107 text 1213,803,142,19 "DEVELOPER:"
+e108 text 1213,806,71,13 "DEVELOPER:"
+e109 link 1354,804,32,16 "Valve"
+e110 text 1213,821,142,19 "PUBLISHER:"
+e111 text 1213,824,66,13 "PUBLISHER:"
+e112 link 1354,822,32,16 "Valve"
+e113 text 1213,891,375,20 "Popular user-defined tags for this product:"
+e114 text 1213,893,224,15 "Popular user-defined tags for this product:"
+e115 link 1213,910,74,20 "Free to Play"
+e116 link 1288,910,47,20 "MOBA"
+e117 link 1336,910,68,20 "Multiplayer"
+e118 link 1405,910,56,20 "Strategy"
+e119 link 1462,910,53,20 "eSports"
+e120 push-button 1516,910,22,20 "+"
+e121 text 389,403,808,456 "0:00 / 0:42"
+e122 [pixels] video 389,403,808,456 alt=Unable to play media.
+~e123 text 389,403,808,456 "0:02 / 0:42"
+e124 [pixels] image 397,609,25,40
+e125 [pixels] image 1164,609,25,40
+e126 [pixels] image 389,864,116,66
+e127 [pixels] image 436,885,22,23
+e128 [pixels] image 509,864,116,66
+e129 [pixels] image 556,885,22,23
+e130 [pixels] image 629,864,116,66
+e131 [pixels] image 749,864,116,66
+e132 [pixels] image 869,864,116,66
+e133 [pixels] image 989,864,116,66
+e134 [pixels] image 1109,864,116,66
+e135 [pixels] image 405,939,6,11
+e136 [pixels] image 1175,939,6,10
+e137 text 404,982,367,33 "to add this item to your wishlist, follow it, or mark it as ignored"
+e138 link 404,982,37,15 "Sign in"
+e139 text 440,982,331,15 "to add this item to your wishlist, follow it, or mark it as ignored"
+e140 link 1524,982,48,33 "To get missing image descriptions, open the context menu."
+e141 [pixels] image 1540,989,16,20 alt=To get missing image descriptions, open the context menu.
+e142 link 1208,1078,364,27 "Co-op"
+e143 link 393,1062,780,55 "Check out the entire Dota collection on Steam"
