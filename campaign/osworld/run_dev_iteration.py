@@ -39,6 +39,7 @@ Usage:
                               [--max-steps 15] [--only chrome,os]
 """
 import argparse
+import calendar
 import json
 import os
 import queue
@@ -72,12 +73,73 @@ STAGGER_S = 45
 # this exact key to separate the model under test from the CLI's own helper.
 ANSWER_MODEL = "claude-opus-5[1m]"
 
+OSWORLD_IMAGE = "happysixd/osworld-docker"
+
 print_lock = threading.Lock()
+reap_lock = threading.Lock()
+# Cell start times of the cells currently in flight, keyed by worker.
+inflight = {}
 
 
 def say(msg):
     with print_lock:
         print("[%s] %s" % (time.strftime("%H:%M:%S"), msg), flush=True)
+
+
+def reap_orphans(wid):
+    """Remove OSWorld VM containers that no live cell can own.
+
+    A driver that dies before `env.close()` leaves its 4 GB VM running, and
+    on a 15 GB host one orphan is enough to starve every later cell: measured
+    in iteration 1, where a single setup failure leaked a container and the
+    next FOUR cells died at the VM-boot timeout — including one whose task
+    was perfectly runnable. The driver-side fix (close the env on setup
+    error) is the right one, but a two-hour unattended run should not depend
+    on the driver never crashing in a new way.
+
+    The rule is safe by construction: under the lock, any OSWorld container
+    that started BEFORE the oldest cell currently in flight cannot belong to
+    a cell that is still running. Nothing outside the OSWorld image is ever
+    touched — this host also runs the user's own containers.
+    """
+    with reap_lock:
+        oldest = min(inflight.values()) if inflight else time.time()
+        try:
+            out = subprocess.run(
+                ["docker", "ps", "-a", "--filter", "ancestor=" + OSWORLD_IMAGE,
+                 "--format", "{{.ID}} {{.CreatedAt}}"],
+                capture_output=True, text=True, timeout=30).stdout
+        except Exception as e:
+            say("w%d: could not list containers to reap: %s" % (wid, e))
+            return
+        doomed = []
+        for line in out.strip().splitlines():
+            cid = line.split()[0] if line.split() else ""
+            if not cid:
+                continue
+            try:
+                started = subprocess.run(
+                    ["docker", "inspect", "--format",
+                     "{{.State.StartedAt}}", cid],
+                    capture_output=True, text=True, timeout=30).stdout.strip()
+                # timegm, not mktime: docker reports UTC and mktime would
+                # read it as local time. Under CEST that made containers look
+                # an hour OLDER than they are — and this function deletes
+                # things by age, so the error had exactly one direction:
+                # killing live VMs.
+                ts = calendar.timegm(time.strptime(started[:19],
+                                                   "%Y-%m-%dT%H:%M:%S"))
+            except Exception:
+                continue
+            if ts < oldest - 30:
+                doomed.append(cid)
+        for cid in doomed:
+            try:
+                subprocess.run(["docker", "rm", "-f", cid],
+                               capture_output=True, timeout=60)
+                say("w%d: reaped orphaned VM container %s" % (wid, cid[:12]))
+            except Exception as e:
+                say("w%d: could not reap %s: %s" % (wid, cid[:12], e))
 
 
 def pin_driver(runs):
@@ -126,7 +188,7 @@ def pinned_commit(driver_dir):
         return "unknown"
 
 
-def run_cell(cell, runs, driver_dir, max_steps):
+def run_cell(cell, runs, driver_dir, max_steps, wid=0):
     domain, tid, cond = cell
     name = "%s-%s-%s" % (domain, tid[:8], cond)
     out = os.path.join(runs, name)
@@ -136,6 +198,7 @@ def run_cell(cell, runs, driver_dir, max_steps):
 
     say("START %s" % name)
     t0 = time.time()
+    inflight[wid] = t0
     env = dict(os.environ,
                CAMPAIGN_DRIVER_COMMIT=pinned_commit(driver_dir),
                CAMPAIGN_ANSWER_MODEL=ANSWER_MODEL,
@@ -164,6 +227,10 @@ def run_cell(cell, runs, driver_dir, max_steps):
             ans.kill()
 
     dt = time.time() - t0
+    inflight.pop(wid, None)
+    # Reap BEFORE the next cell asks for 4 GB, not after it has failed to
+    # get it.
+    reap_orphans(wid)
     rj = os.path.join(out, "result.json")
     if not os.path.exists(rj):
         say("FAILED %s (no result.json, driver rc=%s, %.0fs)"
@@ -184,11 +251,13 @@ def worker(wid, q, runs, driver_dir, max_steps, results):
         except queue.Empty:
             return
         try:
-            results.append(run_cell(cell, runs, driver_dir, max_steps))
+            results.append(
+                run_cell(cell, runs, driver_dir, max_steps, wid))
         except Exception as e:                       # noqa: BLE001
             say("ERROR %s: %s" % (cell, e))
             results.append(("-".join(cell), "exception"))
         finally:
+            inflight.pop(wid, None)
             q.task_done()
 
 
