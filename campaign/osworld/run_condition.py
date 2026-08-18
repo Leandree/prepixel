@@ -72,15 +72,25 @@ WEB_DOC_ROLES = ("document-web", "document-frame")
 CDP_TIMEOUT = 25            # s; a slow page must not stall the whole step
 
 
-def _center_in(rect, box):
-    """Is this record's centre inside the web content area? Centre rather
-    than overlap on purpose: a page-sized AT-SPI container overlaps the
-    content rect without BEING content, and dropping it would take the
-    window's own structure out of the view."""
+def _inside(rect, box, tol=2):
+    """Is this AT-SPI record WHOLLY inside the web content area?
+
+    Containment, not centre-in-box. A centre test looked equivalent and is
+    not: the Chromium window frame is centred inside its own content rect,
+    so a centre test swallows it — and with it the window title, which is
+    the one line naming what the user is looking at. Containment keeps
+    anything larger than the content area (the frame, the window, the
+    desktop) on AT-SPI, which is the channel that knows about them, and
+    replaces only what is genuinely page content.
+
+    An element straddling the boundary stays on AT-SPI too. That can
+    duplicate a CDP line for the same thing, which is a visible redundancy
+    rather than a silent disappearance — the right way round for this
+    campaign."""
     x, y, w, h = rect
     bx, by, bw, bh = box
-    cx, cy = x + w / 2.0, y + h / 2.0
-    return bx <= cx <= bx + bw and by <= cy <= by + bh
+    return (x >= bx - tol and y >= by - tol
+            and x + w <= bx + bw + tol and y + h <= by + bh + tol)
 
 
 def _chromium_content_rect(tree_xml):
@@ -588,14 +598,14 @@ class Driver:
             self.mech_total["cdp_declines"] += 1
             return records, suspects
         web = out.get("records", [])
-        kept = [r for r in records if not _center_in(r["rect"], rect)]
+        kept = [r for r in records if not _inside(r["rect"], rect)]
         dropped = len(records) - len(kept)
         # The coverage guard's suspects for this region were suspicions about
         # AT-SPI's blindness, and AT-SPI is no longer the channel reading it.
         # They are superseded rather than ignored: the CDP channel declares
         # its OWN blind spots (canvas, img, cross-origin frames) as [pixels].
         # Counted, so "the guard went quiet here" stays visible in the record.
-        sup = [s for s in suspects if not _center_in(s["rect"], rect)]
+        sup = [s for s in suspects if not _inside(s["rect"], rect)]
         self.mech_total["guard_suspects_superseded"] += len(suspects) - len(sup)
         mech["channel"] = "atspi+cdp"
         mech["cdp"] = {"used": True, "ms": ms, "rect": list(rect),
