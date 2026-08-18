@@ -66,6 +66,51 @@ import time
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
+def _cost_accounting(out, model):
+    """Sum what the answering model actually consumed, from the CLI's own
+    envelopes in each step's answer-meta.json.
+
+    Two subtleties, both of which would silently distort the comparison:
+    the CLI bills a small helper model of its own alongside the answering
+    model, so usage is filtered to the model under test; and re-attempts
+    after an unparseable reply are real spend, so every attempt is counted,
+    not just the one that produced the action."""
+    tot = {"input_tokens": 0, "cache_creation_input_tokens": 0,
+           "cache_read_input_tokens": 0, "output_tokens": 0,
+           "cost_usd": 0.0, "attempts": 0, "steps_with_usage": 0,
+           "steps_missing_usage": 0}
+    for name in sorted(os.listdir(out)):
+        if not name.startswith("step-"):
+            continue
+        p = os.path.join(out, name, "answer-meta.json")
+        if not os.path.exists(p):
+            continue
+        try:
+            meta = json.load(open(p))
+        except Exception:
+            continue
+        saw = False
+        for att in meta.get("attempts", []):
+            tot["attempts"] += 1
+            mu = att.get("model_usage") or {}
+            # `model` is the CLI's own name for the answering model; the
+            # helper model's key will not match it.
+            for key, u in mu.items():
+                if model and key != model:
+                    continue
+                saw = True
+                tot["input_tokens"] += u.get("inputTokens", 0)
+                tot["cache_creation_input_tokens"] += u.get(
+                    "cacheCreationInputTokens", 0)
+                tot["cache_read_input_tokens"] += u.get(
+                    "cacheReadInputTokens", 0)
+                tot["output_tokens"] += u.get("outputTokens", 0)
+                tot["cost_usd"] += u.get("costUSD", 0.0) or 0.0
+        tot["steps_with_usage" if saw else "steps_missing_usage"] += 1
+    tot["cost_usd"] = round(tot["cost_usd"], 6)
+    return tot
+
+
 def _git_head():
     """The exact driver a cell was produced by. The manager's freeze rule —
     every final cell carries the freeze hash — only works if the hash is
@@ -982,13 +1027,14 @@ def main():
         "driver_commit": _git_head(),
         "success": bool(score) if score is not None else False,
         "score_raw": score, "steps": len(actions), "termination": term,
-        "input_tokens": None, "output_tokens": None,   # filled by orchestrator
         "wall_clock_s": round(time.time() - t0, 1),
         "pixel_fallbacks": pixel_fallbacks if args.condition == "B" else None,
         "guard_hits": guard_hits_total if args.condition == "B" else None,
         "guard_suspects_checked": suspects_total if args.condition == "B" else None,
         "act_verdicts": act_verdicts if args.condition == "B" else None,
         "mechanics": drv.mech_total if args.condition == "B" else None,
+        "cost": _cost_accounting(
+            args.out, os.environ.get("CAMPAIGN_ANSWER_MODEL", "")),
         "infra_failure": infra_failure, "notes": "",
         "actions": actions,
     }

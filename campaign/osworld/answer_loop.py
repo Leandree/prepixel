@@ -21,8 +21,20 @@ this loop writes the file. The raw reply is kept in `step-N/answer.txt` and
 the call's metadata (tool list, duration, exit code, attempts) in
 `step-N/answer-meta.json`, which is what `scan_contamination.py` audits.
 
+Calls run with `--output-format json`, so each attempt records the CLI's own
+token accounting (`usage`, `modelUsage`, `total_cost_usd`) rather than an
+offline estimate of it. The manager's freeze criterion is median cost, and
+condition A's cost is mostly IMAGE tokens, which no text-side approximation
+would have counted honestly. `modelUsage` is kept per model because the CLI
+bills a small helper model of its own alongside the answering model; only
+the answering model's share is the experiment's cost.
+
+MODEL (user decision 2026-08-18, DEV-PHASE-PLAN P8): `claude-opus-5[1m]`, in
+BOTH conditions. Note that the CLI's `opus` alias resolves to Opus 4.8, so
+the model is named explicitly rather than by alias.
+
 Usage:
-  python answer_loop.py --run <run-dir> --condition A|B [--model sonnet]
+  python answer_loop.py --run <run-dir> --condition A|B [--model M]
 """
 import argparse
 import json
@@ -69,21 +81,36 @@ def extract_action(text):
 
 
 def answer(prompt, tools, model, workdir):
-    cmd = ["claude", "-p", "--model", model, "--tools", tools]
+    cmd = ["claude", "-p", "--model", model, "--tools", tools,
+           "--output-format", "json"]
     t0 = time.time()
     p = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
                        timeout=CALL_TIMEOUT, cwd=workdir)
-    return p.stdout, {"cmd": " ".join(cmd), "tools": tools,
-                      "seconds": round(time.time() - t0, 1),
-                      "returncode": p.returncode,
-                      "stderr": (p.stderr or "")[-400:]}
+    info = {"cmd": " ".join(cmd), "tools": tools,
+            "seconds": round(time.time() - t0, 1),
+            "returncode": p.returncode, "stderr": (p.stderr or "")[-400:]}
+    try:
+        env = json.loads(p.stdout)
+        reply = env.get("result") or ""
+        info["usage"] = env.get("usage")
+        info["model_usage"] = env.get("modelUsage")
+        info["cost_usd"] = env.get("total_cost_usd")
+        info["api_error_status"] = env.get("api_error_status")
+    except json.JSONDecodeError:
+        # The envelope is the CLI's contract, not the model's; if it is
+        # missing something went wrong at the CLI level. Keep the raw bytes
+        # so the failure is inspectable instead of silently becoming a
+        # zero-cost step.
+        reply = p.stdout
+        info["envelope_parse_failed"] = True
+    return reply, info
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
     ap.add_argument("--condition", required=True, choices=["A", "B"])
-    ap.add_argument("--model", default="sonnet")
+    ap.add_argument("--model", default="claude-opus-5[1m]")
     args = ap.parse_args()
 
     # A must open its screenshot; B is given everything inline and gets

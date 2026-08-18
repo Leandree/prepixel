@@ -61,6 +61,12 @@ PINNED = ("run_condition.py", "distill-osworld.py", "answer_loop.py",
 # keeps the boots from overlapping without slowing anything else down.
 STAGGER_S = 45
 
+# The answering model, IDENTICAL in both conditions (DEV-PHASE-PLAN P8; user
+# decision 2026-08-18). Named in full because the CLI's `opus` alias resolves
+# to Opus 4.8, and because the driver filters the CLI's token accounting by
+# this exact key to separate the model under test from the CLI's own helper.
+ANSWER_MODEL = "claude-opus-5[1m]"
+
 print_lock = threading.Lock()
 
 
@@ -112,7 +118,11 @@ def run_cell(cell, runs, driver_dir, max_steps):
 
     say("START %s" % name)
     t0 = time.time()
-    env = dict(os.environ, CAMPAIGN_DRIVER_COMMIT=pinned_commit(driver_dir))
+    env = dict(os.environ,
+               CAMPAIGN_DRIVER_COMMIT=pinned_commit(driver_dir),
+               CAMPAIGN_ANSWER_MODEL=ANSWER_MODEL,
+               CAMPAIGN_MODEL=os.environ.get(
+                   "CAMPAIGN_MODEL", "claude-code-cli:" + ANSWER_MODEL))
     with open(os.path.join(runs, name + ".log"), "wb") as dlog, \
             open(os.path.join(runs, name + "-answer.log"), "wb") as alog:
         drv = subprocess.Popen(
@@ -124,8 +134,8 @@ def run_cell(cell, runs, driver_dir, max_steps):
         time.sleep(3)   # let the driver create <out> before the loop polls it
         ans = subprocess.Popen(
             [PY, os.path.join(driver_dir, "answer_loop.py"),
-             "--run", out, "--condition", cond],
-            cwd=OSWORLD, stdout=alog, stderr=subprocess.STDOUT)
+             "--run", out, "--condition", cond, "--model", ANSWER_MODEL],
+            cwd=OSWORLD, env=env, stdout=alog, stderr=subprocess.STDOUT)
         drv.wait()
         # The answer loop is a poller with no termination signal of its own;
         # the driver finishing IS the signal. Kill by this exact PID only.
