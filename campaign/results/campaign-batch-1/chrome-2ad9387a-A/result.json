@@ -1,0 +1,33 @@
+{
+ "task_id": "2ad9387a-65d8-4e33-ad5b-7580065a27ca",
+ "domain": "chrome",
+ "condition": "A",
+ "model": "claude-code-cli:sonnet (campaign 2026-08-18)",
+ "driver": "v2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 10,
+ "termination": "DONE",
+ "input_tokens": null,
+ "output_tokens": null,
+ "wall_clock_s": 532.4,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(35, 65)",
+  "import pyautogui; pyautogui.click(1890, 138)",
+  "import pyautogui; pyautogui.click(1897, 90)",
+  "import pyautogui; pyautogui.click(1737, 431)",
+  "import pyautogui; pyautogui.click(1307, 573)",
+  "import pyautogui; pyautogui.click(1888, 141)",
+  "import pyautogui; pyautogui.click(1811, 240)",
+  "import pyautogui; pyautogui.click(994, 591); pyautogui.write('Favorites')",
+  "import pyautogui; pyautogui.click(1200, 662)",
+  "DONE"
+ ]
+}

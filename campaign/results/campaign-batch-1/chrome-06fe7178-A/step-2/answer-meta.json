@@ -1,0 +1,30 @@
+{
+ "attempts": [
+  {
+   "cmd": "claude -p --model sonnet --tools Read",
+   "tools": "Read",
+   "seconds": 16.9,
+   "returncode": 0,
+   "stderr": "",
+   "attempt": 1
+  },
+  {
+   "cmd": "claude -p --model sonnet --tools Read",
+   "tools": "Read",
+   "seconds": 13.8,
+   "returncode": 0,
+   "stderr": "",
+   "attempt": 2
+  },
+  {
+   "cmd": "claude -p --model sonnet --tools Read",
+   "tools": "Read",
+   "seconds": 88.8,
+   "returncode": 0,
+   "stderr": "",
+   "attempt": 3
+  }
+ ],
+ "tools": "Read",
+ "parsed": true
+}

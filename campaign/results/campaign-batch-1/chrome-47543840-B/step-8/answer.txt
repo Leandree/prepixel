@@ -1,0 +1,3 @@
+I'll type the pickup location into the search field that's now focused.
+
+{"action":"type","text":"Boston Logan Intl Airport"}

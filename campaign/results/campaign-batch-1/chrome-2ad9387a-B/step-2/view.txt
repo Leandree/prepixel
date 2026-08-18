@@ -1,0 +1,47 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Bookmarks - Memory usage - 27.4 MB" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+~e13 push-button 195,78,88,24 "Chrome"
+~e14 entry 291,78,1395,24 "Address and search bar"
+~e15 push-button 1694,78,24,24 "Bookmark this tab"
+~e16 push-button 1739,73,34,34 "You"
+~e17 push-button 1778,73,142,34 "Finish update"
+~e18 document-web 70,114,1850,966 "Bookmarks"
+~e19 entry 818,130,653,24 "Search bookmarks" state=focused
+~e20 push-button 1872,126,32,32 "Organise"
+~e21 text 70,170,256,910 "Bookmark folder tree"
+~e22 tree-item 71,178,252,40 "Bookmarks bar"
+~e23 tree-item 71,218,252,40 "Other bookmarks"
+~e24 text 959,616,328,17 "To bookmark pages, click the star in the address bar"
+e25 toggle-button 0,0,99,27 "Activities" state=checked:false
+e26 menu 99,0,162,27 "Google Chrome"
+e27 menu 906,0,178,27 "Aug 18 20‎∶10"
+e28 menu 1814,0,106,27 "System"
+~e29 text 810,41,274,28 "Software Updates Available to Download"
+~e30 text 810,49,274,20 "Software Updates Available to Download"
+~e31 push-button 1208,42,26,26
+~e32 text 810,73,291,17 "Please download waiting software updates."
+e33 push-button 0,840,70,8
+e34 push-button 62,33,8,815
+e35 push-button 0,33,70,64 "Google Chrome"
+e36 push-button 0,101,70,64 "Thunderbird Mail"
+e37 push-button 0,169,70,64 "Visual Studio Code"
+e38 push-button 0,237,70,64 "VLC media player"
+e39 push-button 0,305,70,64 "LibreOffice Writer"
+e40 push-button 0,373,70,64 "LibreOffice Calc"
+e41 push-button 0,441,70,64 "LibreOffice Impress"
+e42 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e43 push-button 0,577,70,64 "Files"
+e44 push-button 0,645,70,64 "Ubuntu Software"
+e45 push-button 0,713,70,64 "Help"
+e46 push-button 0,784,70,64 "Trash"
+e47 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

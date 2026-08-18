@@ -1,0 +1,3 @@
+I'll click "Select My Car" to submit the search with the selected location and dates.
+
+{"action":"click","target":"e87"}

@@ -1,0 +1,7 @@
+{
+ "action_kind": "type",
+ "rung": "kbd",
+ "settle_ms": 4460,
+ "settle_captures": 3,
+ "guard_ms": 19
+}

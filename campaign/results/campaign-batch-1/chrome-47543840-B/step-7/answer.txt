@@ -1,0 +1,3 @@
+I'll proceed with filling in the pickup location field since it's outside the modal's bounds.
+
+{"action":"click","target":"e45"}

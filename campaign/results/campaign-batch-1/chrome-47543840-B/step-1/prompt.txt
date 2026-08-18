@@ -1,0 +1,100 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: On the current website, show me the cars available for pickup at Boston Logan Intl Airport from the 10th to the 11th of next month, sorted by the number of seats to find the largest capacity.
+
+STEP 1 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+(none)
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Discount car rental rates and rental car deals | Budget Car Rental" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1565,24 "Address and search bar"
+e15 push-button 1800,78,24,24 "Bookmark this tab"
+e16 push-button 1845,73,34,34 "You"
+e17 push-button 1881,73,39,34 "Chrome"
+e18 document-web 70,114,1850,966 "Discount car rental rates and rental car deals | Budget Car Rental" state=focused
+e19 link 160,134,210,76
+e20 list-item 1047,156,150,25 "Reservations"
+e21 list-item 1200,156,78,25 "Deals"
+e22 list-item 1281,156,175,25 "Cars & Services"
+e23 list-item 1459,156,119,25 "Fastbreak"
+e24 list-item 1581,156,117,25 "Locations"
+e25 list-item 1700,156,115,25 "Car Sales"
+e26 list-item 1390,122,70,28 "Sign In"
+e27 list-item 1462,122,81,28 "Register"
+e28 list-item 1545,122,142,28 "Business Rentals"
+e29 list-item 1689,122,126,28 "Customer Care"
+e30 entry 487,529,501,50 "Enter your pick-up location or zip code"
+e31 entry 992,529,241,50
+e32 combo-box 1237,529,251,50 "Pick Up Time"
+e33 menu-item 1237,529,251,10 "noon" state=selected
+e34 push-button 85,628,1805,60 "Select My Car"
+e35 [pixels] video 25,90,90,46 alt=Unable to play media.
+e36 text 184,103,334,265 "www.budget.com wants to: Know your location"
+e37 text 211,128,248,24 "www.budget.com wants to"
+e38 push-button 471,128,24,22 "Close"
+e39 text 211,170,280,20 "Know your location"
+e40 text 239,170,136,20 "Know your location"
+e41 push-button 211,206,280,39 "Allow while visiting the site"
+e42 push-button 211,253,280,39 "Allow this time"
+e43 push-button 211,300,280,39 "Never allow"
+e44 toggle-button 0,0,99,27 "Activities" state=checked:false
+e45 menu 99,0,162,27 "Google Chrome"
+e46 menu 906,0,178,27 "Aug 18 20‎∶30"
+e47 menu 1814,0,106,27 "System"
+e48 push-button 0,840,70,8
+e49 push-button 62,33,8,815
+e50 push-button 0,33,70,64 "Google Chrome"
+e51 push-button 0,101,70,64 "Thunderbird Mail"
+e52 push-button 0,169,70,64 "Visual Studio Code"
+e53 push-button 0,237,70,64 "VLC media player"
+e54 push-button 0,305,70,64 "LibreOffice Writer"
+e55 push-button 0,373,70,64 "LibreOffice Calc"
+e56 push-button 0,441,70,64 "LibreOffice Impress"
+e57 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e58 push-button 0,577,70,64 "Files"
+e59 push-button 0,645,70,64 "Ubuntu Software"
+e60 push-button 0,713,70,64 "Help"
+e61 push-button 0,784,70,64 "Trash"
+e62 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+
+Use only what this prompt gives you.

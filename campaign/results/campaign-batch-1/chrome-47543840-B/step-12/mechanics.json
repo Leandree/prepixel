@@ -1,0 +1,13 @@
+{
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.click",
+  "err": null
+ },
+ "rung": 1,
+ "rung1_method": "Action.click",
+ "settle_ms": 4425,
+ "settle_captures": 2,
+ "guard_ms": 50
+}

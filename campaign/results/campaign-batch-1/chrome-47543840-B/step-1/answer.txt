@@ -1,0 +1,3 @@
+First, I need to dismiss the location permission popup before interacting with the page.
+
+{"action":"click","target":"e43"}

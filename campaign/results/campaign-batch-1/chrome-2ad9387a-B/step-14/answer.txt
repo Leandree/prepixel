@@ -1,0 +1,3 @@
+The folder "Favorites" now appears in the Bookmarks bar tree (e23), confirming it was created successfully.
+
+{"action":"done"}

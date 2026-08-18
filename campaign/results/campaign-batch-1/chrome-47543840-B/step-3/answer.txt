@@ -1,0 +1,3 @@
+I'll close the Chrome update notification popup first since it's blocking part of the screen.
+
+{"action":"click","target":"e95"}

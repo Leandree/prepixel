@@ -1,5 +1,65 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-18 — DECISION NEEDED — D1/D2/D3 implemented, first 3 pre-registered tasks run, contamination scan clean 6/6
+
+Rulings implemented and committed before any run (1b779d6). Batch traces:
+`campaign/results/campaign-batch-1/`.
+
+**Deviation from your sequence, on the user's explicit instruction:** no
+pilot v3. The user asked to go straight to counted cells, three tasks, both
+conditions. I protected them with a 2-step plumbing run on a PILOT task in
+both conditions before starting (isolation, prompt rendering, answer
+parsing, execution, guard, scan) — not part of the batch, counts nothing.
+Flagging it because your gate existed precisely to avoid burning cells.
+
+**D1 is now a property of the process, not a request in a prompt.** Task
+subagents could not be restricted (the agent registry is frozen at session
+start), so every step is answered by a fresh `claude -p` with an explicit
+tool list: `--tools ""` for B — no tools at all — and `--tools Read` for A,
+whose channel is an image it must open. Verified before use: asked for a
+canary file's contents, the tool-less process invents a value while the
+Read-enabled one returns the exact bytes; run from an empty directory it
+reports no CLAUDE.md or user memory, so the campaign's own notes cannot
+leak. The model returns JSON as text and the loop writes `action.json`; B's
+prompt now contains no filesystem path at all, so it cannot even locate the
+traces. Side benefit: ~6 s per answer versus 30-120 s for a subagent.
+
+**Scan result: 6 runs, 57 steps, zero violations**, only `""` and `"Read"`
+tool lists in the whole batch. Your other go criteria also hold: zero
+`resolve_error`, rungs and guard verdicts on every action, and **not one
+coordinate emitted by the model in condition B** across 57 steps.
+
+| # | task | A | B |
+|---|---|---|---|
+| 1 | 06fe7178 reopen closed tab | ✅ 2 | ✅ 2 |
+| 2 | 2ad9387a bookmarks folder | ✅ 10 | ✅ 14 |
+| 3 | 47543840 rental cars | ✅ 14 | ❌ 15 max_steps |
+
+**Two measured findings.** (a) B's 4 extra steps on task 2 have a named
+cause: the folder-name field is exposed as `entry … "Name" state=focused`
+with NO `value=`, so the channel cannot read back its own typing; the guard
+correctly said UNVERIFIED five times and `crop` carried the recovery (2
+pixel fallbacks, the campaign's first). I then checked whether that was our
+bug or the bridge's — typing a unique marker into the omnibox and dumping
+the raw tree, it appears in **0 of 1951 nodes**. The payload does not carry
+entry text. Bridge limit, not adapter, unlike STATE_PRESSED which was ours.
+(b) Task 3's B did the whole flow — dialogs, location, both dates, "Select
+My Car", then the new `scroll` — and hit the 15-step cap mid-flow. An honest
+budget loss, not confusion.
+
+**One thing I did NOT fix mid-batch, and want your call on.** D3's line
+fires as `declares=9 exposes=106` on Chrome's New Tab: our "exposed" count
+includes every named descendant, so the numbers are not comparable and the
+line is noise. It appeared 3 times in one cell. I left the driver frozen for
+the batch rather than make cells 1-3 incomparable with the rest. Proposal
+for the remaining 47: count exposed rows as the largest group of same-role
+siblings in the container — structural, no task heuristic, and it would read
+`declares=9 exposes=9` on the tiles while still firing on Chrome's real
+"declares 1, exposes 6 stale rows".
+
+Holding here for your go on the remaining 47 tasks, per the user's request
+for one more checkpoint even though your D-sequence waived it.
+
 ## 2026-08-18 — BLOCKED — pilot v2 pass 2: our own view lied, and the answering agent can read outside its channel
 
 Ran the same four runs a second time, same driver commit, nothing changed

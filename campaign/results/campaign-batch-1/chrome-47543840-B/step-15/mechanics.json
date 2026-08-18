@@ -1,0 +1,7 @@
+{
+ "action_kind": "scroll",
+ "rung": "scroll",
+ "settle_ms": 6571,
+ "settle_captures": 2,
+ "guard_ms": 53
+}

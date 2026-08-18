@@ -1,0 +1,8 @@
+{
+ "reprobes": 1,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 5650,
+ "settle_captures": 2,
+ "guard_ms": 39
+}

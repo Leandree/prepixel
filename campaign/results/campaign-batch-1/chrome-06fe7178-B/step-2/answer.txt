@@ -1,0 +1,3 @@
+The Ctrl+Shift+T shortcut successfully reopened the last closed tab — a new Tripadvisor tab is now open and selected in the browser.
+
+{"action":"done"}

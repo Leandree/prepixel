@@ -1,0 +1,171 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: On the current website, show me the cars available for pickup at Boston Logan Intl Airport from the 10th to the 11th of next month, sorted by the number of seats to find the largest capacity.
+
+STEP 8 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click push-button "Never allow"
+2. click push-button "Agree"
+3. click push-button "Close"
+4. key escape
+5. click document-frame "Close"
+6. crop document-frame "Close"
+7. click entry "Pickup & return"
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Discount car rental rates and rental car deals | Budget Car Rental - Memory usage - 254 MB" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1367,24 "Address and search bar"
+e15 push-button 1602,78,24,24 "This site has been blocked from accessing your location."
+e16 push-button 1634,78,24,24 "Bookmark this tab"
+e17 push-button 1679,73,34,34 "You"
+e18 push-button 1718,73,202,34 "New Chrome available"
+~e19 document-web 70,114,1850,966 "Discount car rental rates and rental car deals | Budget Car Rental"
+e20 text 70,114,1,1 "Please note: This website includes an accessibility system. Press Control-F11 to adjust the website to people with visual disabilities who are using a screen reader; Press Control-F10 to open an accessibility menu."
+e21 text 70,114,81,727 "Please note: This website includes an accessibility system. Press Control-F11 to adjust the website to people with visual disabilities who are using a screen reader; Press Control-F10 to open an accessibility menu."
+e22 [offscreen] list-item 1182,-186,543,46 "Press enter for Accessibility for blind people who use screen readers"
+e23 [offscreen] list-item 1274,-186,451,46 "Press enter for Keyboard Navigation"
+e24 [offscreen] list-item 1298,-186,427,46 "Press enter for Accessibility menu"
+e25 link 160,134,210,76
+e26 list-item 1032,156,150,25 "Reservations"
+e27 list-item 1185,156,78,25 "Deals"
+e28 list-item 1266,156,175,25 "Cars & Services"
+e29 list-item 1444,156,119,25 "Fastbreak"
+e30 list-item 1566,156,117,25 "Locations"
+e31 list-item 1685,156,115,25 "Car Sales"
+e32 list-item 1378,122,81,28 "Register"
+e33 list-item 1461,122,142,28 "Business Rentals"
+e34 list-item 1605,122,126,28 "Customer Care"
+e35 list-item 1730,122,70,28 "Sign In"
+~e36 text 895,93,170,25 "When You Pay Now"
+~e37 text 340,234,97,22 "Pickup & return"
+~e38 text 340,235,97,20 "Pickup & return"
+~e39 push-button 456,238,158,14 "Different return location"
+~e40 [pixels] image 456,238,15,14
+~e41 [pixels] image 355,281,25,25
+~e42 entry 340,263,522,61 "Pickup & return"
+~e43 text 356,331,207,36 "Please enter a Pick-up Location"
+~e44 text 368,339,87,19 "Please enter a"
+~e45 text 454,339,97,19 "Pick-up Location"
+~e46 text 888,234,42,22 "Pickup"
+~e47 text 888,235,42,20 "Pickup"
+~e48 text 888,263,126,61 "Aug 19"
+~e49 [pixels] image 903,283,22,21
+~e50 entry 888,263,126,61 "mm/dd/yyyy"
+~e51 text 936,282,54,23 "Aug 19"
+~e52 combo-box 1013,263,116,61 "Pick Up Time"
+~e53 menu-item 1013,263,116,11 "12:00 PM" state=selected
+~e54 text 1155,234,43,22 "Return"
+~e55 text 1155,235,43,20 "Return"
+~e56 text 1155,263,126,61 "Aug 20"
+~e57 [pixels] image 1170,283,22,21
+~e58 entry 1155,263,126,61 "mm/dd/yyyy"
+~e59 text 1203,282,54,23 "Aug 20"
+~e60 combo-box 1280,263,116,61 "Return Time"
+~e61 menu-item 1280,263,116,11 "12:00 PM" state=selected
+~e62 push-button 1422,263,198,61 "Show Cars"
+~e63 [pixels] image 340,389,15,15
+~e64 text 361,386,83,21 "Renter age is"
+~e65 text 361,387,83,19 "Renter age is"
+~e66 combo-box 449,386,43,21 "Renter age is"
+~e67 menu-item 449,386,43,10 "25+" state=selected
+~e68 [pixels] image 479,391,13,12
+~e69 text 501,386,72,22 "Resident of"
+~e70 text 501,387,72,20 "Resident of"
+~e71 combo-box 578,386,56,22 "Select Residency"
+~e72 menu-item 578,386,56,11 "U.S.A." state=selected
+~e73 [pixels] image 621,391,13,12
+~e74 push-button 1358,386,262,22 "Add a customer ID Add a discount code"
+~e75 text 1358,387,118,20 "Add a customer ID"
+~e76 text 1492,387,128,20 "Add a discount code"
+~e77 [pixels] image 694,471,20,19
+~e78 text 737,469,363,23 "Get a free upgrade with this Summer Savings offer"
+~e79 push-button 1161,459,117,43 "Apply Offer"
+e80 document-frame 680,154,600,456 "Close"
+e81 text 837,285,286,111 "Save up to 35% with Exclusive Member Rates"
+e82 text 847,285,266,111 "Save up to 35% with Exclusive Member Rates"
+e83 link 837,406,286,24 "Terms Apply"
+e84 link 837,442,286,51 "Sign In"
+e85 text 812,517,336,49 "Don't have an account?
+It's easy and only takes a minute"
+e86 text 897,518,166,23 "Don't have an account?"
+e87 text 863,542,234,23 "It's easy and only takes a minute"
+e88 link 914,576,132,23 "Create an Account"
+~e89 text 160,868,1640,46 "Car rentals that fit your budget"
+~e90 text 160,873,440,40 "Car rentals that fit your budget"
+~e91 link 180,969,964,122 "Enjoy 10% BACK in an Amazon.com Gift Card, plus save more with up to 30% OFF base rates.*  Save Now"
+~e92 text 199,975,945,31 "Enjoy 10% BACK in an"
+~e93 text 199,969,78,42 "Enjoy"
+~e94 text 284,969,153,42 "10% BACK"
+~e95 text 436,969,79,42 "in an"
+~e96 text 199,1015,945,31 "Amazon.com Gift Card, plus save more"
+~e97 text 199,1009,548,42 "Amazon.com Gift Card, plus save more"
+~e98 text 199,1055,945,31 "with up to 30% OFF base rates.*"
+~e99 text 199,1049,147,42 "with up to"
+~e100 text 345,1049,136,42 "30% OFF"
+~e101 text 480,1049,184,42 "base rates.*"
+~e102 link 1204,975,403,31 "Save time at the counter and check in now! Check In"
+~e103 text 1204,975,403,31 "Save time at the counter and check in now!"
+~e104 text 1204,976,402,29 "Save time at the counter and check in now!"
+e105 text 1754,1048,116,32 "Screen reader users: Please switch to forms mode for this link."
+e106 text 1754,1048,116,32 "Feedback"
+e107 text 1790,1052,64,21 "Feedback"
+e108 toggle-button 0,0,99,27 "Activities" state=checked:false
+e109 menu 99,0,162,27 "Google Chrome"
+e110 menu 906,0,178,27 "Aug 18 20‎∶32"
+e111 menu 1814,0,106,27 "System"
+e112 push-button 0,840,70,8
+e113 push-button 62,33,8,815
+e114 push-button 0,33,70,64 "Google Chrome"
+e115 push-button 0,101,70,64 "Thunderbird Mail"
+e116 push-button 0,169,70,64 "Visual Studio Code"
+e117 push-button 0,237,70,64 "VLC media player"
+e118 push-button 0,305,70,64 "LibreOffice Writer"
+e119 push-button 0,373,70,64 "LibreOffice Calc"
+e120 push-button 0,441,70,64 "LibreOffice Impress"
+e121 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e122 push-button 0,577,70,64 "Files"
+e123 push-button 0,645,70,64 "Ubuntu Software"
+e124 push-button 0,713,70,64 "Help"
+e125 push-button 0,784,70,64 "Trash"
+e126 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+[act-guard] previous action: CONFIRMED (element no longer present — view changed)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+
+Use only what this prompt gives you.

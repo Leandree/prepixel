@@ -1,0 +1,3 @@
+I'll select September 10 as the pickup date from the calendar.
+
+{"action":"click","target":"e211"}

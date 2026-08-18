@@ -1,0 +1,3 @@
+I'll try to close the promotional overlay modal first before interacting with the search form.
+
+{"action":"key","keys":"escape"}

@@ -1,0 +1,3 @@
+I need to close this sign-in popup first before filling in the location/date fields.
+
+{"action":"key","keys":"escape"}

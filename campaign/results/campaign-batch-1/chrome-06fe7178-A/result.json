@@ -1,0 +1,25 @@
+{
+ "task_id": "06fe7178-4491-4589-810f-2e2bc9502122",
+ "domain": "chrome",
+ "condition": "A",
+ "model": "claude-code-cli:sonnet (campaign 2026-08-18)",
+ "driver": "v2",
+ "success": true,
+ "score_raw": 1,
+ "steps": 2,
+ "termination": "DONE",
+ "input_tokens": null,
+ "output_tokens": null,
+ "wall_clock_s": 184.2,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.hotkey('ctrl', 'shift', 't')",
+  "DONE"
+ ]
+}

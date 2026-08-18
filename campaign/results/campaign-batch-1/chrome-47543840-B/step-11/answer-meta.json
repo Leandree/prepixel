@@ -1,0 +1,14 @@
+{
+ "attempts": [
+  {
+   "cmd": "claude -p --model sonnet --tools ",
+   "tools": "",
+   "seconds": 6.0,
+   "returncode": 0,
+   "stderr": "",
+   "attempt": 1
+  }
+ ],
+ "tools": "",
+ "parsed": true
+}

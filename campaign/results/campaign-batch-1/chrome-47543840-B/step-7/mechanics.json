@@ -1,0 +1,12 @@
+{
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Component.grabFocus"
+ },
+ "rung": 1,
+ "rung1_method": "Component.grabFocus",
+ "settle_ms": 5082,
+ "settle_captures": 3,
+ "guard_ms": 36
+}

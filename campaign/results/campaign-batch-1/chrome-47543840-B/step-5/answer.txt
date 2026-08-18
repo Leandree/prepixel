@@ -1,0 +1,3 @@
+I need to close this sign-in promotional popup that's covering the form before I can interact with the pickup location and dates fields.
+
+{"action":"click","target":"e80"}

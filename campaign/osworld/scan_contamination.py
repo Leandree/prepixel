@@ -43,6 +43,7 @@ PIXEL_PATTERNS = [("pixels-in-B", r"screenshot|\.png\b|\.jpg\b|pixel")]
 
 
 def scan_run(run_dir):
+    run_dir = run_dir.rstrip("/")
     result = json.load(open(os.path.join(run_dir, "result.json")))
     cond = result["condition"]
     rep = {"run": os.path.basename(run_dir), "condition": cond,

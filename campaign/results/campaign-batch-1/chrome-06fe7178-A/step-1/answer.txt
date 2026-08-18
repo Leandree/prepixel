@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 'shift', 't')"}

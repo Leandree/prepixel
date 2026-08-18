@@ -1,0 +1,3 @@
+The keyboard shortcut Ctrl+Shift+T reopens the last closed tab in Chrome.
+
+{"action":"key","keys":"ctrl+shift+t"}

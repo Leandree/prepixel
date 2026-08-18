@@ -1,0 +1,3 @@
+I'll use the "Organise" menu to find the option to add a new folder.
+
+{"action":"click","target":"e20"}

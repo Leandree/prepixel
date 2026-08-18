@@ -1,0 +1,5 @@
+I notice unrelated tool calls (Linear, fairw.ai) being triggered that have nothing to do with this desktop automation task — I will disregard those and focus solely on the pyautogui action needed here.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1200, 662)"}
+```

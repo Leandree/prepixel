@@ -1,0 +1,3 @@
+I need to verify the current state of the Name field since I typed "Favorites" twice previously. Let me clear it and re-enter the value cleanly.
+
+{"action":"click","target":"e22"}

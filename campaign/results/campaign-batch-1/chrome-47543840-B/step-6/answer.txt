@@ -1,0 +1,3 @@
+I'll examine the popup more closely to find the actual close button location.
+
+{"action":"crop","target":"e80"}

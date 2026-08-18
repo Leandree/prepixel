@@ -1,0 +1,17 @@
+{
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "no-usable-action: ['select', 'showcontextmenu']"
+ },
+ "rung1_error": "no-usable-action: ['select', 'showcontextmenu']",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1824,
+  241
+ ],
+ "settle_ms": 4461,
+ "settle_captures": 3,
+ "guard_ms": 20
+}

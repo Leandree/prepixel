@@ -1,0 +1,141 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: On the current website, show me the cars available for pickup at Boston Logan Intl Airport from the 10th to the 11th of next month, sorted by the number of seats to find the largest capacity.
+
+STEP 11 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click push-button "Never allow"
+2. click push-button "Agree"
+3. click push-button "Close"
+4. key escape
+5. click document-frame "Close"
+6. crop document-frame "Close"
+7. click entry "Pickup & return"
+8. type "Boston Logan Intl Airport"
+9. click link "Boston Logan International Airport (BOS)"
+10. key escape
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Cheap Car Rentals | Boston Logan Intl Airport (BOS) | Budget - Memory usage - 416 MB" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1367,24 "Address and search bar"
+e15 push-button 1602,78,24,24 "This site has been blocked from accessing your location."
+e16 push-button 1634,78,24,24 "Bookmark this tab"
+e17 push-button 1679,73,34,34 "You"
+e18 push-button 1718,73,202,34 "New Chrome available"
+~e19 document-web 70,114,1850,966 "Cheap Car Rentals | Boston Logan Intl Airport (BOS) | Budget" state=focused
+e20 text 70,114,1,1 "Please note: This website includes an accessibility system. Press Control-F11 to adjust the website to people with visual disabilities who are using a screen reader; Press Control-F10 to open an accessibility menu."
+e21 text 70,114,81,727 "Please note: This website includes an accessibility system. Press Control-F11 to adjust the website to people with visual disabilities who are using a screen reader; Press Control-F10 to open an accessibility menu."
+e22 [offscreen] list-item 1182,-186,543,46 "Press enter for Accessibility for blind people who use screen readers"
+e23 [offscreen] list-item 1274,-186,451,46 "Press enter for Keyboard Navigation"
+e24 [offscreen] list-item 1298,-186,427,46 "Press enter for Accessibility menu"
+e25 link 160,134,210,76
+~e26 list-item 1047,156,150,25 "Reservations"
+~e27 list-item 1200,156,78,25 "Deals"
+~e28 list-item 1281,156,175,25 "Cars & Services"
+~e29 list-item 1459,156,119,25 "Fastbreak"
+~e30 list-item 1581,156,117,25 "Locations"
+~e31 list-item 1700,156,115,25 "Car Sales"
+~e32 list-item 1390,122,70,28 "Sign In"
+~e33 list-item 1462,122,81,28 "Register"
+~e34 list-item 1545,122,142,28 "Business Rentals"
+~e35 list-item 1689,122,126,28 "Customer Care"
+~e36 text 70,289,1835,46 "Cheap Car Rentals at Boston Logan International Airport (BOS)"
+~e37 text 443,287,1089,49 "Cheap Car Rentals at Boston Logan International Airport (BOS)"
+~e38 entry 487,377,501,50 "Enter your pick-up location or zip code"
+~e39 entry 992,377,241,50 "mm/dd/yyyy"
+~e40 combo-box 1237,377,251,50 "Pick Up Time"
+~e41 menu-item 1237,377,251,10 "noon" state=selected
+~e42 push-button 901,477,173,50 "Select My Car"
+~e43 text 180,647,1615,50 "Our Best Deals At"
+~e44 text 793,659,152,24 "Our Best Deals At"
+~e45 text 944,659,206,24 "Boston Logan Intl Airport"
+~e46 link 1170,661,24,24
+~e47 text 607,732,221,31 "Save up to 10%"
+~e48 text 631,731,173,32 "Save up to 10%"
+~e49 text 607,781,221,20 "On a 5+ day rental"
+~e50 text 654,780,127,21 "On a 5+ day rental"
+~e51 push-button 607,817,221,36 "Tap to Apply"
+~e52 push-button 698,862,39,17 "Details"
+~e53 text 877,732,221,31 "Free Upgrade"
+~e54 text 914,731,147,32 "Free Upgrade"
+~e55 text 877,775,221,39 "Get a free upgrade on select vehicles"
+~e56 text 892,774,191,40 "Get a free upgrade on select vehicles"
+~e57 push-button 877,823,221,36 "Tap to Apply"
+~e58 push-button 968,862,39,17 "Details"
+~e59 text 1147,732,221,31 "$10 off"
+~e60 text 1218,731,79,32 "$10 off"
+~e61 text 1147,781,221,20 "On a 3 day rental of $175+"
+~e62 text 1166,780,183,21 "On a 3 day rental of $175+"
+~e63 push-button 1147,817,221,36 "Tap to Apply"
+~e64 push-button 1238,862,39,17 "Details"
+~e65 list-item 225,1050,91,22 "Locations"
+~e66 list-item 318,1050,127,22 "Canada & USA"
+~e67 list-item 448,1050,119,22 "United States"
+~e68 list-item 569,1050,127,22 "Massachusetts"
+~e69 list-item 699,1050,74,22 "Boston"
+~e70 list-item 776,1050,177,22 "Boston Logan Intl Airport"
+~e71 link 1647,1052,103,31 "View Map"
+e72 [pixels] video 25,90,90,46 alt=Unable to play media.
+e73 text 1754,1048,116,32 "Screen reader users: Please switch to forms mode for this link."
+e74 text 1754,1048,116,32 "Feedback"
+e75 text 1790,1052,64,21 "Feedback"
+e76 toggle-button 0,0,99,27 "Activities" state=checked:false
+e77 menu 99,0,162,27 "Google Chrome"
+e78 menu 906,0,178,27 "Aug 18 20‎∶33"
+e79 menu 1814,0,106,27 "System"
+e80 push-button 0,840,70,8
+e81 push-button 62,33,8,815
+e82 push-button 0,33,70,64 "Google Chrome"
+e83 push-button 0,101,70,64 "Thunderbird Mail"
+e84 push-button 0,169,70,64 "Visual Studio Code"
+e85 push-button 0,237,70,64 "VLC media player"
+e86 push-button 0,305,70,64 "LibreOffice Writer"
+e87 push-button 0,373,70,64 "LibreOffice Calc"
+e88 push-button 0,441,70,64 "LibreOffice Impress"
+e89 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e90 push-button 0,577,70,64 "Files"
+e91 push-button 0,645,70,64 "Ubuntu Software"
+e92 push-button 0,713,70,64 "Help"
+e93 push-button 0,784,70,64 "Trash"
+e94 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+[act-guard] previous action: CONFIRMED (view changed outside the system bar; focus: document-web 70,114,1850,966 "Cheap Car Rentals | Boston Logan Intl Airport (BOS) | Budget" state=focused)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+
+Use only what this prompt gives you.

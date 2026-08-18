@@ -1,0 +1,113 @@
+[
+ {
+  "run": "chrome-06fe7178-A",
+  "condition": "A",
+  "steps": 2,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-06fe7178-B",
+  "condition": "B",
+  "steps": 2,
+  "violations": [],
+  "tool_lists": [
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-2ad9387a-A",
+  "condition": "A",
+  "steps": 10,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-2ad9387a-B",
+  "condition": "B",
+  "steps": 14,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-47543840-A",
+  "condition": "A",
+  "steps": 14,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-47543840-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ }
+]

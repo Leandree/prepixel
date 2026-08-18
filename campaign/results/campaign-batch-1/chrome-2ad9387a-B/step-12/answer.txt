@@ -1,0 +1,3 @@
+The Name field is focused with all text selected; I'll type the folder name now.
+
+{"action":"type","text":"Favorites"}

@@ -1,0 +1,3 @@
+I can see a direct link for Boston Logan International Airport on the page, which will be simpler than using the search field.
+
+{"action":"click","target":"e63"}

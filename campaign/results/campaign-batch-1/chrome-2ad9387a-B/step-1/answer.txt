@@ -1,0 +1,3 @@
+I'll open Chrome's Bookmark Manager to create a new folder on the bookmarks bar.
+
+{"action":"key","keys":"ctrl+shift+o"}

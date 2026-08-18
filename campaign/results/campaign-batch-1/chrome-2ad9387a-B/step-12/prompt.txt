@@ -1,0 +1,91 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Can you make a new folder for me on the bookmarks bar in my internet browser? Let's call it 'Favorites.'
+
+STEP 12 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. key ctrl+shift+o
+2. click push-button "Organise"
+3. click menu-item "Add new folder"
+4. type "Favorites"
+5. type "Favorites"
+6. crop entry "Name"
+7. click entry "Name"
+8. type "Favorites"
+9. crop entry "Name"
+10. type "Favorites"
+11. key ctrl+a
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Bookmarks - Memory usage - 26.9 MB" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,88,24 "Chrome"
+e14 entry 291,78,1395,24 "Address and search bar"
+e15 push-button 1694,78,24,24 "Bookmark this tab"
+e16 push-button 1739,73,34,34 "You"
+e17 push-button 1778,73,142,34 "Finish update"
+e18 document-web 70,114,1850,966 "Bookmarks"
+e19 text 739,497,512,200 "Add folder"
+e20 text 739,497,512,51 "Add folder"
+e21 text 759,515,70,18 "Add folder"
+e22 entry 769,583,452,16 "Name" state=focused
+e23 push-button 1086,645,75,36 "Cancel"
+e24 push-button 1168,645,67,36 "Save"
+e25 toggle-button 0,0,99,27 "Activities" state=checked:false
+e26 menu 99,0,162,27 "Google Chrome"
+e27 menu 906,0,178,27 "Aug 18 20‎∶12"
+e28 menu 1814,0,106,27 "System"
+e29 push-button 0,840,70,8
+e30 push-button 62,33,8,815
+e31 push-button 0,33,70,64 "Google Chrome"
+e32 push-button 0,101,70,64 "Thunderbird Mail"
+e33 push-button 0,169,70,64 "Visual Studio Code"
+e34 push-button 0,237,70,64 "VLC media player"
+e35 push-button 0,305,70,64 "LibreOffice Writer"
+e36 push-button 0,373,70,64 "LibreOffice Calc"
+e37 push-button 0,441,70,64 "LibreOffice Impress"
+e38 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e39 push-button 0,577,70,64 "Files"
+e40 push-button 0,645,70,64 "Ubuntu Software"
+e41 push-button 0,713,70,64 "Help"
+e42 push-button 0,784,70,64 "Trash"
+e43 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+[act-guard] previous action: UNVERIFIED (view unchanged outside the system bar; focus: entry 769,583,452,16 "Name" state=focused)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+
+Use only what this prompt gives you.

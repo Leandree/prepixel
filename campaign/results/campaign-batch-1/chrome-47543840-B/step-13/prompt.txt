@@ -1,0 +1,282 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: On the current website, show me the cars available for pickup at Boston Logan Intl Airport from the 10th to the 11th of next month, sorted by the number of seats to find the largest capacity.
+
+STEP 13 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click push-button "Never allow"
+2. click push-button "Agree"
+3. click push-button "Close"
+4. key escape
+5. click document-frame "Close"
+6. crop document-frame "Close"
+7. click entry "Pickup & return"
+8. type "Boston Logan Intl Airport"
+9. click link "Boston Logan International Airport (BOS)"
+10. key escape
+11. click entry "mm/dd/yyyy"
+12. click table-cell "10"
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 toggle-button 0,0,99,27 "Activities" state=checked:false
+e4 menu 99,0,162,27 "Google Chrome"
+e5 menu 906,0,178,27 "Aug 18 20‎∶33"
+e6 menu 1814,0,106,27 "System"
+e7 push-button 0,840,70,8
+e8 push-button 62,33,8,815
+e9 push-button 0,33,70,64 "Google Chrome"
+e10 push-button 0,101,70,64 "Thunderbird Mail"
+e11 push-button 0,169,70,64 "Visual Studio Code"
+e12 push-button 0,237,70,64 "VLC media player"
+e13 push-button 0,305,70,64 "LibreOffice Writer"
+e14 push-button 0,373,70,64 "LibreOffice Calc"
+e15 push-button 0,441,70,64 "LibreOffice Impress"
+e16 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e17 push-button 0,577,70,64 "Files"
+e18 push-button 0,645,70,64 "Ubuntu Software"
+e19 push-button 0,713,70,64 "Help"
+e20 push-button 0,784,70,64 "Trash"
+e21 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e22 push-button 1802,27,30,35 "Minimise"
+e23 push-button 1842,27,30,35 "Restore"
+e24 push-button 1882,27,38,35 "Close"
+e25 push-button 76,27,28,41 "Search tabs"
+e26 page-tab 98,27,256,41 "Cheap Car Rentals | Boston Logan Intl Airport (BOS) | Budget - Memory usage - 416 MB" state=selected
+e27 push-button 312,33,28,28 "Close"
+e28 push-button 348,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1367,24 "Address and search bar"
+e34 push-button 1602,78,24,24 "This site has been blocked from accessing your location."
+e35 push-button 1634,78,24,24 "Bookmark this tab"
+e36 push-button 1679,73,34,34 "You"
+e37 push-button 1718,73,202,34 "New Chrome available"
+e38 document-web 70,114,1850,966 "Cheap Car Rentals | Boston Logan Intl Airport (BOS) | Budget"
+e39 text 70,114,1,1 "Please note: This website includes an accessibility system. Press Control-F11 to adjust the website to people with visual disabilities who are using a screen reader; Press Control-F10 to open an accessibility menu."
+e40 text 70,114,81,727 "Please note: This website includes an accessibility system. Press Control-F11 to adjust the website to people with visual disabilities who are using a screen reader; Press Control-F10 to open an accessibility menu."
+e41 [offscreen] list-item 1182,-186,543,46 "Press enter for Accessibility for blind people who use screen readers"
+e42 [offscreen] list-item 1274,-186,451,46 "Press enter for Keyboard Navigation"
+e43 [offscreen] list-item 1298,-186,427,46 "Press enter for Accessibility menu"
+e44 link 160,134,210,76
+e45 list-item 1047,156,150,25 "Reservations"
+e46 list-item 1200,156,78,25 "Deals"
+e47 list-item 1281,156,175,25 "Cars & Services"
+e48 list-item 1459,156,119,25 "Fastbreak"
+e49 list-item 1581,156,117,25 "Locations"
+e50 list-item 1700,156,115,25 "Car Sales"
+e51 list-item 1390,122,70,28 "Sign In"
+e52 list-item 1462,122,81,28 "Register"
+e53 list-item 1545,122,142,28 "Business Rentals"
+e54 list-item 1689,122,126,28 "Customer Care"
+e55 text 70,134,1835,46 "Cheap Car Rentals at Boston Logan International Airport (BOS)"
+e56 text 443,132,1089,49 "Cheap Car Rentals at Boston Logan International Airport (BOS)"
+e57 entry 487,222,501,50 "Enter your pick-up location or zip code"
+~e58 entry 992,222,241,50 "mm/dd/yyyy"
+e59 combo-box 1237,222,251,50 "Pick Up Time"
+e60 menu-item 1237,222,251,10 "noon" state=selected
+e61 entry 487,286,501,50 "Return to same location"
+~e62 entry 992,286,241,50 "mm/dd/yyyy" state=focused
+e63 combo-box 1237,286,251,50 "Return Time"
+e64 menu-item 1237,286,251,10 "noon" state=selected
+e65 push-button 497,357,21,20
+e66 text 527,347,36,35 "Age:"
+e67 text 527,356,30,19 "Age:"
+e68 combo-box 564,347,59,40 "Age:"
+e69 menu-item 564,347,59,10 "25+" state=selected
+e70 push-button 634,357,21,20
+e71 text 664,347,76,35 "I live in:"
+e72 text 664,356,48,19 "I live in:"
+e73 combo-box 744,347,211,40 "Select Residency"
+e74 menu-item 744,347,211,10 "U.S.A." state=selected
+e75 push-button 967,357,21,20
+e76 text 997,347,166,40 "Add Customer ID *"
+e77 text 997,357,119,19 "Add Customer ID *"
+e78 push-button 1174,357,21,20
+e79 text 1204,347,141,40 "Offer Codes *"
+e80 text 1204,357,79,19 "Offer Codes"
+e81 text 1282,357,8,19 "*"
+e82 text 1346,347,142,40 "Vehicle Type *"
+e83 text 1361,357,90,19 "Vehicle Type *"
+e84 text 1433,412,55,18 "Optional"
+e85 text 1433,410,5,13 "*"
+e86 text 1437,412,51,17 "Optional"
+e87 push-button 901,438,173,50 "Select My Car"
+e88 text 180,608,1615,50 "Our Best Deals At"
+e89 text 793,620,152,24 "Our Best Deals At"
+e90 text 944,620,206,24 "Boston Logan Intl Airport"
+e91 link 1170,622,24,24
+e92 text 607,693,221,31 "Save up to 10%"
+e93 text 631,692,173,32 "Save up to 10%"
+e94 text 607,742,221,20 "On a 5+ day rental"
+e95 text 654,741,127,21 "On a 5+ day rental"
+e96 push-button 607,778,221,36 "Tap to Apply"
+e97 push-button 698,823,39,17 "Details"
+e98 text 877,693,221,31 "Free Upgrade"
+e99 text 914,692,147,32 "Free Upgrade"
+e100 text 877,736,221,39 "Get a free upgrade on select vehicles"
+e101 text 892,735,191,40 "Get a free upgrade on select vehicles"
+e102 push-button 877,784,221,36 "Tap to Apply"
+e103 push-button 968,823,39,17 "Details"
+e104 text 1147,693,221,31 "$10 off"
+e105 text 1218,692,79,32 "$10 off"
+e106 text 1147,742,221,20 "On a 3 day rental of $175+"
+e107 text 1166,741,183,21 "On a 3 day rental of $175+"
+e108 push-button 1147,778,221,36 "Tap to Apply"
+e109 push-button 1238,823,39,17 "Details"
+e110 list-item 225,1032,91,22 "Locations"
+e111 list-item 318,1032,127,22 "Canada & USA"
+e112 list-item 448,1032,119,22 "United States"
+e113 list-item 569,1032,127,22 "Massachusetts"
+e114 list-item 699,1032,74,22 "Boston"
+e115 list-item 776,1032,177,22 "Boston Logan Intl Airport"
+e116 link 1647,1033,103,31 "View Map"
+~e117 text 1007,341,169,40 "Thursday Sep 10"
+~e118 text 1007,348,112,34 "Thursday"
+~e119 text 1118,355,58,24 "Sep 10"
+~e120 text 1175,341,239,40 "– Select Return Date"
+~e121 text 1175,348,239,34 "– Select Return Date"
+~e122 text 1022,397,196,22 "SEPTEMBER 2026"
+~e123 text 1022,397,88,21 "SEPTEMBER"
+~e124 text 1113,397,37,21 "2026"
+~e125 text 997,425,36,29 "S"
+~e126 text 1011,431,8,17 "S"
+~e127 text 1032,425,36,29 "M"
+~e128 text 1044,431,12,17 "M"
+~e129 text 1067,425,36,29 "T"
+~e130 text 1081,431,8,17 "T"
+~e131 text 1102,425,36,29 "W"
+~e132 text 1113,431,14,17 "W"
+~e133 text 1137,425,36,29 "T"
+~e134 text 1151,431,8,17 "T"
+~e135 text 1172,425,36,29 "F"
+~e136 text 1186,431,8,17 "F"
+~e137 text 1207,425,36,29 "S"
+~e138 text 1221,431,8,17 "S"
+~e139 table-cell 997,453,36,29
+~e140 table-cell 1032,453,36,29
+~e141 table-cell 1067,453,36,29 "1"
+~e142 table-cell 1102,453,36,29 "2"
+~e143 table-cell 1137,453,36,29 "3"
+~e144 table-cell 1172,453,36,29 "4"
+~e145 table-cell 1207,453,36,29 "5"
+~e146 table-cell 997,481,36,29 "6"
+~e147 table-cell 1032,481,36,29 "7"
+~e148 table-cell 1067,481,36,29 "8"
+~e149 table-cell 1102,481,36,29 "9"
+~e150 table-cell 1137,481,36,29 "10"
+~e151 table-cell 1172,481,36,29 "11"
+~e152 table-cell 1207,481,36,29 "12"
+~e153 table-cell 997,509,36,29 "13"
+~e154 table-cell 1032,509,36,29 "14"
+~e155 table-cell 1067,509,36,29 "15"
+~e156 table-cell 1102,509,36,29 "16"
+~e157 table-cell 1137,509,36,29 "17"
+~e158 table-cell 1172,509,36,29 "18"
+~e159 table-cell 1207,509,36,29 "19"
+~e160 table-cell 997,537,36,29 "20"
+~e161 table-cell 1032,537,36,29 "21"
+~e162 table-cell 1067,537,36,29 "22"
+~e163 table-cell 1102,537,36,29 "23"
+~e164 table-cell 1137,537,36,29 "24"
+~e165 table-cell 1172,537,36,29 "25"
+~e166 table-cell 1207,537,36,29 "26"
+~e167 table-cell 997,565,36,29 "27"
+~e168 table-cell 1032,565,36,29 "28"
+~e169 table-cell 1067,565,36,29 "29"
+~e170 table-cell 1102,565,36,29 "30"
+~e171 table-cell 1137,565,36,29
+~e172 table-cell 1172,565,36,29
+~e173 table-cell 1207,565,36,29
+~e174 link 1470,400,8,13 "Next"
+~e175 text 1267,397,196,22 "OCTOBER 2026"
+~e176 text 1352,397,71,21 "OCTOBER"
+~e177 text 1426,397,37,21 "2026"
+~e178 text 1243,425,36,29 "S"
+~e179 text 1257,431,8,17 "S"
+~e180 text 1278,425,36,29 "M"
+~e181 text 1290,431,12,17 "M"
+~e182 text 1313,425,36,29 "T"
+~e183 text 1327,431,8,17 "T"
+~e184 text 1348,425,36,29 "W"
+~e185 text 1359,431,14,17 "W"
+~e186 text 1383,425,36,29 "T"
+~e187 text 1397,431,8,17 "T"
+~e188 text 1418,425,36,29 "F"
+~e189 text 1432,431,8,17 "F"
+~e190 text 1453,425,36,29 "S"
+~e191 text 1467,431,8,17 "S"
+~e192 table-cell 1243,453,36,29
+~e193 table-cell 1278,453,36,29
+~e194 table-cell 1313,453,36,29
+~e195 table-cell 1348,453,36,29
+~e196 table-cell 1383,453,36,29 "1"
+~e197 table-cell 1418,453,36,29 "2"
+~e198 table-cell 1453,453,36,29 "3"
+~e199 table-cell 1243,481,36,29 "4"
+~e200 table-cell 1278,481,36,29 "5"
+~e201 table-cell 1313,481,36,29 "6"
+~e202 table-cell 1348,481,36,29 "7"
+~e203 table-cell 1383,481,36,29 "8"
+~e204 table-cell 1418,481,36,29 "9"
+~e205 table-cell 1453,481,36,29 "10"
+~e206 table-cell 1243,509,36,29 "11"
+~e207 table-cell 1278,509,36,29 "12"
+~e208 table-cell 1313,509,36,29 "13"
+~e209 table-cell 1348,509,36,29 "14"
+~e210 table-cell 1383,509,36,29 "15"
+~e211 table-cell 1418,509,36,29 "16"
+~e212 table-cell 1453,509,36,29 "17"
+~e213 table-cell 1243,537,36,29 "18"
+~e214 table-cell 1278,537,36,29 "19"
+~e215 table-cell 1313,537,36,29 "20"
+~e216 table-cell 1348,537,36,29 "21"
+~e217 table-cell 1383,537,36,29 "22"
+~e218 table-cell 1418,537,36,29 "23"
+~e219 table-cell 1453,537,36,29 "24"
+~e220 table-cell 1243,565,36,29 "25"
+~e221 table-cell 1278,565,36,29 "26"
+~e222 table-cell 1313,565,36,29 "27"
+~e223 table-cell 1348,565,36,29 "28"
+~e224 table-cell 1383,565,36,29 "29"
+~e225 table-cell 1418,565,36,29 "30"
+~e226 table-cell 1453,565,36,29 "31"
+~e227 text 999,620,487,30 "Jump to a new date:"
+~e228 text 999,627,111,17 "Jump to a new date:"
+~e229 combo-box 1110,626,131,22 "September 2026"
+~e230 push-button 1454,355,26,22 "Close Calender"
+e231 text 1754,1048,116,32 "Screen reader users: Please switch to forms mode for this link."
+e232 text 1754,1048,116,32 "Feedback"
+e233 text 1790,1052,64,21 "Feedback"
+[act-guard] previous action: CONFIRMED (element no longer present — view changed)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+
+Use only what this prompt gives you.
