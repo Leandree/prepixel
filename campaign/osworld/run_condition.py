@@ -227,7 +227,51 @@ def template_section(block, marker):
 
 
 BODY = TEMPLATE.split("---")[1].strip()
-HISTORY_DEPTH = 3       # previous observations, IDENTICAL in A and B (P6)
+HISTORY_DEPTH = 3       # previous observations carried by condition A
+# P6, second pass. Matching A's history COUNT was wrong and iteration 1
+# measured how wrong: on libreoffice_calc-42e0a640 condition B's prompt
+# reached 245 000 characters against A's 3 200 plus four images, and that
+# cell cost $17.51 against A's $2.01 — eight times the run's median.
+#
+# A screenshot costs the same whatever is on it (1920x1080 -> ~3 700 tokens
+# by the repo's own imgTokensClaude); a structured view of a spreadsheet
+# costs 12 500. Three of each is the same NUMBER of observations and four
+# times the payload. The symmetry that means something is the BUDGET, so B
+# gets as many recent views as fit inside what A's three screenshots cost,
+# and the prompt says plainly when views were left out.
+#
+# The current view is never truncated — D1 requires it inlined in full, and
+# a responder that has never seen the previous step cannot be handed a diff
+# against it. Only history is capped.
+HISTORY_TOKEN_BUDGET = 3 * 3686     # A's three screenshots, in tokens
+CHARS_PER_TOKEN = 4                 # coarse, applied only to B's own history
+
+
+def _history_block(prev_views):
+    """Most recent previous views that fit A's history budget, oldest first.
+    Returns (block, n_dropped)."""
+    if not prev_views:
+        return "(none)", 0
+    budget = HISTORY_TOKEN_BUDGET * CHARS_PER_TOKEN
+    chosen = []
+    for n, v in reversed(prev_views):
+        cost = len(v) + 40
+        if cost > budget:
+            break
+        budget -= cost
+        chosen.append((n, v))
+        if len(chosen) >= HISTORY_DEPTH:
+            break
+    dropped = len(prev_views) - len(chosen)
+    if not chosen:
+        return ("(none — the previous views did not fit the history budget "
+                "this condition is allowed; the view above is complete)",
+                dropped)
+    block = "\n\n".join(f"--- view at step {n} ---\n{v}"
+                        for n, v in reversed(chosen))
+    if dropped:
+        block += ("\n\n(%d earlier view(s) omitted: history budget)" % dropped)
+    return block, dropped
 MEMO_LIMIT = 300        # characters, mechanically truncated (P5)
 
 OBS_A = template_section("OBSERVATION", "A (pixels)")
@@ -1204,12 +1248,9 @@ def main():
             # so nothing sends the model to a file
             drv.prev_diff_base = raw_lines
             verdict_line = act_verdicts[-1] if act_verdicts else ""
-            # P6: B carries the same observation history depth as A, which
-            # has always shown up to 3 previous screenshots. Inlining is the
-            # only way to give a stateless responder its own past.
-            prev_block = "\n\n".join(
-                f"--- view at step {n} ---\n{v}"
-                for n, v in drv.prev_views[-HISTORY_DEPTH:]) or "(none)"
+            prev_block, dropped = _history_block(drv.prev_views)
+            mech["history_views"] = len(drv.prev_views) - dropped
+            mech["history_views_dropped"] = dropped
             observation = OBS_B.replace("{VIEW}", view) \
                 .replace("{ACT_GUARD_LINE}",
                          f"[act-guard] previous action: {verdict_line}"

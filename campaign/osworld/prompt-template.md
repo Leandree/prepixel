@@ -33,6 +33,17 @@ v3→v4 (DEV-PHASE-PLAN P5/P6, development phase only):
   carries up to 3 previous views, oldest first, and condition A is
   untouched. B's token cost rises accordingly — which is exactly the
   quantity the paper is measuring, so it is reported, not avoided.
+  CORRECTED after dev iteration 1 measured the consequence: matching the
+  COUNT was the wrong symmetry. A screenshot costs the same whatever it
+  shows (~3 700 tokens); a structured view of a spreadsheet costs 12 500,
+  so three of each is the same number of observations and four times the
+  payload — B's prompt reached 245 000 characters against A's 3 200 plus
+  four images, and that cell cost $17.51 against A's $2.01. B's history is
+  now capped by the token BUDGET of A's three screenshots, filled with the
+  most recent views that fit, and the prompt states when views were left
+  out. The current view is never truncated: D1 requires it in full, and a
+  responder that never saw the previous step cannot be handed a diff
+  against it.
 - `typed-by-driver="…"` may be appended to the focused element by the driver
   (P2) when the channel does not expose a field's value. It is labelled as
   the driver's own record and never mixed with state read from the channel.
