@@ -1,0 +1,27 @@
+{
+ "scenario": "nav",
+ "task": "chrome/030eeff7-b492-4218-b312-701ec99ee0cc",
+ "driver": "v2",
+ "platform_rung_available": true,
+ "platform_probe": "OSW_PLATFORM_OK 16",
+ "nav_start": "New Tab",
+ "nav_1_single_command": "Google Chrome - The Fast & Secure Web Browser Built to be Yours",
+ "nav_2_separate_with_settle": "About Version",
+ "nav_3_separate_no_settle": "History",
+ "mechanics": {
+  "platform_available": true,
+  "rung1": 0,
+  "rung2": 0,
+  "kbd": 3,
+  "resolve_errors": 0,
+  "noop_toggles": 0,
+  "rung1_fallbacks": 0,
+  "settle_ms_total": 13909,
+  "settle_captures_total": 7,
+  "guard_ms_total": 92,
+  "reprobes": 0,
+  "scroll_iters_total": 0,
+  "waits_after_settle": 0,
+  "platform_probe": "OSW_PLATFORM_OK 16"
+ }
+}

@@ -1,0 +1,196 @@
+{
+ "scenario": "chrome",
+ "task": "chrome/030eeff7-b492-4218-b312-701ec99ee0cc",
+ "driver": "v2",
+ "platform_rung_available": true,
+ "platform_probe": "OSW_PLATFORM_OK 16",
+ "settings_lines": 86,
+ "settings_document": "Settings",
+ "d_searchbox": "entry 683,130,652,24 \"Search settings\" state=focused",
+ "d_click": {
+  "action": {
+   "action": "click",
+   "target": "e21"
+  },
+  "history": "click entry \"Search settings\"",
+  "verdict": "UNVERIFIED (element re-read unchanged: still entry 683,130,652,24 \"Search settings\" state=focused)",
+  "mech": {
+   "action_kind": "click",
+   "platform_result": {
+    "ok": true,
+    "method": "Component.grabFocus"
+   },
+   "rung": 1,
+   "rung1_method": "Component.grabFocus",
+   "settle_ms": 5026,
+   "settle_captures": 3,
+   "guard_ms": 24
+  }
+ },
+ "d_type": {
+  "action": {
+   "action": "type",
+   "text": "do not track"
+  },
+  "history": "type \"do not track\"",
+  "verdict": "CONFIRMED (view changed outside the system bar; focus: entry 683,130,624,24 \"Search settings\" state=focused)",
+  "mech": {
+   "action_kind": "type",
+   "rung": "kbd",
+   "settle_ms": 4943,
+   "settle_captures": 3,
+   "guard_ms": 25
+  }
+ },
+ "d_settle": {
+  "settle_ms": 4498,
+  "captures": 3,
+  "reprobes": 0
+ },
+ "d_selfinconsistent": [],
+ "d_result_lines": [],
+ "d_population_timeline": [
+  {
+   "t": 1.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 3.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 4.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 6.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 7.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 9.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 10.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 12.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 13.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 15.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 16.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 18.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 19.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 21.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 22.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 24.0,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  },
+  {
+   "t": 25.5,
+   "track_lines": 0,
+   "declares_count": 0,
+   "sample": null
+  }
+ ],
+ "d_populated_after_s": null,
+ "b_dnt_before": null,
+ "c_offscreen_count": 0,
+ "c_offscreen_sample": [],
+ "c_raw_evidence": {
+  "nodes": 3049,
+  "nodes_with_coords": 303,
+  "nodes_showing_true": 303,
+  "nodes_without_coords": 2746
+ },
+ "c_marker_in_view": [],
+ "c_scroll_to": "NOT EXERCISABLE: no [offscreen] node emitted (see c_raw_evidence: the OSWorld a11y payload only carries coordinates for showing+visible nodes)",
+ "mechanics": {
+  "platform_available": true,
+  "rung1": 1,
+  "rung2": 0,
+  "kbd": 1,
+  "resolve_errors": 0,
+  "noop_toggles": 0,
+  "rung1_fallbacks": 0,
+  "settle_ms_total": 24623,
+  "settle_captures_total": 15,
+  "guard_ms_total": 49,
+  "reprobes": 0,
+  "scroll_iters_total": 0,
+  "waits_after_settle": 0,
+  "platform_probe": "OSW_PLATFORM_OK 16"
+ },
+ "nav_log": [
+  {
+   "url": "chrome://settings/",
+   "out": "NAV:{\"new\": \"9AFF43C0593F16E457E7354D9EDBF9EE\", \"activated\": true}",
+   "err": ""
+  },
+  {
+   "url": "file:///tmp/longpage.html",
+   "out": "NAV:{\"new\": \"8030DBF8CA56843BABC70FC6449576B0\", \"activated\": true}",
+   "err": ""
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 168,147,852,675 "Preferences – General"
+e4 push-button 914,178,34,30 "Minimize"
+e5 push-button 954,178,34,30 "Close"
+e6 text 503,184,181,17 "Preferences – General"
+e7 push-button 200,170,65,46 "Help"
+e8 list-item 195,264,151,50 "General" state=selected,focused
+e9 list-item 195,314,151,50 "Shortcuts"
+e10 list-item 195,410,151,50 "Unnamed"
+e11 [pixels] icon 280,418,16,34
+e12 check-box 359,229,623,22 "Enable mnemonics (such as Alt+F to open the File menu)" state=checked:false
+e13 check-box 359,257,623,22 "Enable the menu accelerator key (F10 by default)" state=checked:true
+e14 combo-box 523,365,94,34 "Last"
+e15 text 359,365,152,34 "New tab position:"
+e16 combo-box 523,325,94,34 "Window"
+e17 text 359,325,152,34 "Open new terminals in:"
+e18 combo-box 523,285,94,34 "Dark"
+e19 text 359,285,152,34 "Theme variant:"
+e20 toggle-button 0,0,99,27 "Activities" state=checked:false
+e21 menu 99,0,116,27 "Terminal"
+e22 menu 906,0,178,27 "Aug 18 04‎∶39"
+e23 menu 1814,0,106,27 "System"
+e24 push-button 0,908,70,8
+e25 push-button 62,33,8,883
+e26 push-button 0,33,70,64 "Google Chrome"
+e27 push-button 0,101,70,64 "Thunderbird Mail"
+e28 push-button 0,169,70,64 "Visual Studio Code"
+e29 push-button 0,237,70,64 "VLC media player"
+e30 push-button 0,305,70,64 "LibreOffice Writer"
+e31 push-button 0,373,70,64 "LibreOffice Calc"
+e32 push-button 0,441,70,64 "LibreOffice Impress"
+e33 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e34 push-button 0,577,70,64 "Files"
+e35 push-button 0,645,70,64 "Ubuntu Software"
+e36 push-button 0,713,70,64 "Help"
+e37 push-button 0,784,70,64 "Terminal"
+e38 push-button 0,852,70,64 "Trash"
+e39 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

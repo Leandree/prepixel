@@ -1,0 +1,86 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "New Tab - Memory usage - 56.6 MB"
+e8 push-button 312,33,28,28 "Close"
+e9 page-tab 336,27,256,41 "Settings - Memory usage - 54.9 MB"
+e10 push-button 550,33,28,28 "Close"
+e11 push-button 586,27,28,41 "New Tab"
+e12 push-button 70,73,39,34 "Back"
+e13 push-button 111,73,34,34 "Forward"
+e14 push-button 147,73,34,34 "Reload"
+e15 push-button 195,78,88,24 "Chrome"
+e16 entry 291,78,1335,24 "Address and search bar"
+e17 push-button 1634,78,24,24 "Bookmark this tab"
+e18 push-button 1679,73,34,34 "You"
+e19 push-button 1718,73,202,34 "New Chrome available"
+e20 document-web 70,114,1850,966 "Settings"
+e21 entry 683,130,652,24 "Search settings" state=focused
+e22 menu 70,178,250,634 "You and Google"
+e23 [pixels] image 94,188,20,20
+e24 menu-item 71,218,247,40 "Autofill and passwords"
+e25 [pixels] image 94,228,20,20
+e26 menu-item 71,258,247,40 "Privacy and security"
+e27 [pixels] image 94,268,20,20
+e28 menu-item 71,298,247,40 "Performance"
+e29 [pixels] image 94,308,20,20
+e30 menu-item 71,338,247,40 "Appearance"
+e31 [pixels] image 94,348,20,20
+e32 menu-item 71,378,247,40 "Search engine"
+e33 [pixels] image 94,388,20,20
+e34 menu-item 71,418,247,40 "Default browser"
+e35 [pixels] image 94,428,20,20
+e36 menu-item 71,458,247,40 "On start-up"
+e37 [pixels] image 94,468,20,20
+e38 menu-item 71,515,247,40 "Languages"
+e39 [pixels] image 94,525,20,20
+e40 menu-item 71,555,247,40 "Downloads"
+e41 [pixels] image 94,565,20,20
+e42 menu-item 71,595,247,40 "Accessibility"
+e43 [pixels] image 94,605,20,20
+e44 menu-item 71,635,247,40 "System"
+e45 [pixels] image 94,645,20,20
+e46 menu-item 71,675,247,40 "Reset settings"
+e47 [pixels] image 94,685,20,20
+e48 menu-item 71,732,247,40 "Extensions"
+e49 [pixels] image 94,742,20,20
+e50 menu-item 71,772,247,40 "About Chrome"
+e51 [pixels] image 94,782,20,20
+e52 text 655,191,103,33 "You and Google"
+e53 text 655,201,103,16 "You and Google"
+e54 text 675,367,516,27 "Get Google smarts in Chrome"
+e55 text 675,370,232,21 "Get Google smarts in Chrome"
+e56 text 675,393,516,21 "Sync and personalise Chrome across your devices"
+e57 text 675,395,293,16 "Sync and personalise Chrome across your devices"
+e58 push-button 1198,372,117,37 "Turn on sync…"
+e59 link 1291,433,32,33 "Sync and Google services"
+e60 link 1291,481,32,33 "Customise your Chrome profile"
+e61 link 1291,529,32,33 "Import bookmarks and settings"
+e62 text 1592,103,334,207 "Can't update Chrome"
+e63 text 1619,128,248,24 "Can't update Chrome"
+e64 push-button 1879,128,24,22 "Close"
+e65 text 1599,160,320,66 "Chrome couldn't update to the latest version, so you're missing out on new features and security fixes."
+e66 text 1619,160,280,66 "Chrome couldn't update to the latest version, so you're missing out on new features and security fixes."
+e67 push-button 1740,242,159,39 "Reinstall Chrome" state=focused
+e68 toggle-button 0,0,99,27 "Activities" state=checked:false
+e69 menu 99,0,162,27 "Google Chrome"
+e70 menu 906,0,178,27 "Aug 18 04‎∶57"
+e71 menu 1814,0,106,27 "System"
+e72 push-button 0,840,70,8
+e73 push-button 62,33,8,815
+e74 push-button 0,33,70,64 "Google Chrome"
+e75 push-button 0,101,70,64 "Thunderbird Mail"
+e76 push-button 0,169,70,64 "Visual Studio Code"
+e77 push-button 0,237,70,64 "VLC media player"
+e78 push-button 0,305,70,64 "LibreOffice Writer"
+e79 push-button 0,373,70,64 "LibreOffice Calc"
+e80 push-button 0,441,70,64 "LibreOffice Impress"
+e81 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e82 push-button 0,577,70,64 "Files"
+e83 push-button 0,645,70,64 "Ubuntu Software"
+e84 push-button 0,713,70,64 "Help"
+e85 push-button 0,784,70,64 "Trash"
+e86 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

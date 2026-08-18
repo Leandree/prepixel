@@ -1,0 +1,130 @@
+{
+ "scenario": "os",
+ "task": "os/13584542-872b-42d8-b299-866967b5c3ef",
+ "driver": "v2",
+ "platform_rung_available": true,
+ "platform_probe": "OSW_PLATFORM_OK 15",
+ "nav_profile": {
+  "action": {
+   "action": "click",
+   "target": "e10"
+  },
+  "history": "click list-item \"Unnamed\"",
+  "verdict": "CONFIRMED (state [none]\u2192[selected,focused])",
+  "mech": {
+   "action_kind": "click",
+   "platform_result": {
+    "ok": false,
+    "err": "no-action-interface"
+   },
+   "rung1_error": "no-action-interface",
+   "rung": 2,
+   "occlusion_check": "not-implemented (full-rect center)",
+   "anchor": [
+    270,
+    435
+   ],
+   "settle_ms": 5256,
+   "settle_captures": 3,
+   "guard_ms": 22
+  }
+ },
+ "dialog_found": true,
+ "a_target": "spin-button 515,290,118,34 \"80\" value=\"80.0\"",
+ "a_corner_miss": {
+  "clicked": [
+   515,
+   290
+  ],
+  "verdict": "UNVERIFIED (element re-read unchanged: still spin-button 515,290,118,34 \"80\" value=\"80.0\")"
+ },
+ "a2_before": "spin-button 515,290,118,34 \"80\" value=\"80.0\"",
+ "a2_set_value": {
+  "action": {
+   "action": "set_value",
+   "target": "e36",
+   "value": "132"
+  },
+  "history": "set_value spin-button \"80\" := \"132\"",
+  "verdict": "CONFIRMED (value \"80.0\"\u2192\"132.0\", label \"80\"\u2192\"132\")",
+  "mech": {
+   "action_kind": "set_value",
+   "platform_result": {
+    "ok": true,
+    "method": "Value.currentValue"
+   },
+   "rung": 1,
+   "rung1_method": "Value.currentValue",
+   "settle_ms": 4461,
+   "settle_captures": 3,
+   "guard_ms": 21
+  }
+ },
+ "a2_after": "spin-button 515,290,118,34 \"132\" value=\"132.0\"",
+ "e_static_label": {
+  "action": {
+   "action": "click",
+   "target": "e35"
+  },
+  "history": "click label \"rows\"",
+  "verdict": "UNVERIFIED (element re-read unchanged: still text 831,290,32,34 \"rows\")",
+  "mech": {
+   "action_kind": "click",
+   "platform_result": {
+    "ok": false,
+    "err": "no-action-interface"
+   },
+   "rung1_error": "no-action-interface",
+   "rung": 2,
+   "occlusion_check": "not-implemented (full-rect center)",
+   "anchor": [
+    847,
+    307
+   ],
+   "settle_ms": 4512,
+   "settle_captures": 3,
+   "guard_ms": 21
+  }
+ },
+ "e_target": "text 831,290,32,34 \"rows\"",
+ "b_before": "toggle-button 302,418,36,34 \"Menu\" state=checked:false",
+ "b_toggle": {
+  "action": {
+   "action": "toggle",
+   "target": "e12",
+   "to": true
+  },
+  "history": "toggle toggle-button \"Menu\" -> true",
+  "verdict": "CONFIRMED (state [checked:false]\u2192[checked:true])",
+  "mech": {
+   "action_kind": "toggle",
+   "platform_result": {
+    "ok": true,
+    "method": "Action.click",
+    "err": null
+   },
+   "rung": 1,
+   "rung1_method": "Action.click",
+   "settle_ms": 4499,
+   "settle_captures": 3,
+   "guard_ms": 21
+  }
+ },
+ "b_after": "toggle-button 302,418,36,34 \"Menu\" state=checked:true",
+ "mechanics": {
+  "platform_available": true,
+  "rung1": 4,
+  "rung2": 2,
+  "kbd": 0,
+  "resolve_errors": 0,
+  "noop_toggles": 0,
+  "rung1_fallbacks": 2,
+  "settle_ms_total": 63174,
+  "settle_captures_total": 42,
+  "guard_ms_total": 147,
+  "reprobes": 0,
+  "scroll_iters_total": 0,
+  "waits_after_settle": 0,
+  "platform_probe": "OSW_PLATFORM_OK 15"
+ }
+}
