@@ -47,23 +47,40 @@ import time
 CALL_TIMEOUT = 420          # s per answer; a stuck call ends the step
 MAX_ATTEMPTS = 3            # unparseable reply -> fresh process, same prompt
 
-# This host answers on a Claude Max SUBSCRIPTION, with overflow billing off:
-# when the account's limit is reached the call is refused, it does not
-# silently become pay-as-you-go. A refusal is an infrastructure fact about
-# the host, not the model failing the task, and burning MAX_ATTEMPTS on it
-# would turn one refusal into three and then into a "task failure". The loop
-# raises a marker the driver reads, and the cell is recorded infra_failure.
-RATE_LIMIT_MARKS = ("rate limit", "rate_limit", "429", "usage limit",
+# A server-side error is not the model failing the task, and it must not be
+# allowed to look like one. Dev iteration 2 made the distinction concrete:
+# 21 calls came back `API Error: 529 Overloaded`, each burning one of three
+# attempts in ~200 s, and four cells that had SUCCEEDED in iteration 1 were
+# recorded as step_timeout failures. The first version of this file only
+# looked for 429 and treated everything else as an unparseable reply.
+#
+# 529 says "try again in a moment", so that is what happens now: a transient
+# error does not consume an attempt, it waits and retries. Only a persistent
+# one ends the cell, and it ends it as infra_failure carrying the HTTP code,
+# never as a task result.
+#
+# The backoff total stays under the driver's step timeout (1200 s) so the
+# driver never has to guess why the answer never came; and when the loop does
+# give up it drops a marker the driver reads immediately.
+TRANSIENT_BACKOFF = [5, 15, 30, 60, 60, 90, 120, 150, 180]   # ~12 min total
+RATE_LIMIT_MARKS = ("rate limit", "rate_limit", "usage limit",
                     "quota", "resets at", "too many requests")
 
 
-def looks_rate_limited(info, reply):
-    if str(info.get("api_error_status") or "") == "429":
-        return "api_error_status=429"
-    hay = ((info.get("stderr") or "") + " " + (reply or "")[:500]).lower()
-    for m in RATE_LIMIT_MARKS:
-        if m in hay:
-            return m
+def api_error_of(info, reply):
+    """HTTP-ish code for a server-side refusal, or None if the call reached
+    the model. Kept separate from 'the reply was unusable' on purpose."""
+    code = info.get("api_error_status")
+    if code:
+        return str(code)
+    head = (reply or "")[:200]
+    m = re.match(r"\s*API Error:\s*(\d{3})", head)
+    if m:
+        return m.group(1)
+    hay = ((info.get("stderr") or "") + " " + head).lower()
+    for mark in RATE_LIMIT_MARKS:
+        if mark in hay:
+            return "429"
     return None
 
 
@@ -159,36 +176,49 @@ def main():
             continue
 
         prompt = open(ppath).read()
-        meta, action, raw = {"attempts": []}, None, ""
-        for attempt in range(1, MAX_ATTEMPTS + 1):
+        meta, action, raw = {"attempts": [], "transient_retries": 0}, None, ""
+        attempt, transient, gave_up = 0, 0, None
+        while attempt < MAX_ATTEMPTS:
             try:
                 raw, info = answer(prompt, tools, args.model, workdir)
             except subprocess.TimeoutExpired:
                 raw, info = "", {"cmd": "timeout", "tools": tools,
                                  "seconds": CALL_TIMEOUT, "returncode": -1,
                                  "stderr": "call timed out"}
+            code = api_error_of(info, raw)
+            if code:
+                # The call never reached the model, so it is not one of the
+                # model's chances to answer. Wait and try again.
+                info["attempt"] = f"transient-{transient + 1}"
+                meta["attempts"].append(info)
+                if transient >= len(TRANSIENT_BACKOFF):
+                    gave_up = code
+                    break
+                wait = TRANSIENT_BACKOFF[transient]
+                transient += 1
+                meta["transient_retries"] = transient
+                print(f"step {step}: API {code}, retry {transient} "
+                      f"in {wait}s")
+                time.sleep(wait)
+                continue
+            attempt += 1
             info["attempt"] = attempt
             meta["attempts"].append(info)
             action = extract_action(raw)
             if action is not None:
                 break
-            # Only now: a call that returned a usable action cannot have been
-            # refused, and testing the reply text unconditionally would trip
-            # on a task that asks the model to TYPE "429" or "rate limit"
-            # into a document — discarding a good cell as infrastructure.
-            hit = looks_rate_limited(info, raw)
-            if hit:
-                meta["rate_limited"] = hit
-                json.dump(meta, open(os.path.join(sd, "answer-meta.json"), "w"),
-                          indent=1)
-                open(os.path.join(sd, "answer.txt"), "w").write(raw)
-                open(os.path.join(args.run, "RATE_LIMITED"), "w").write(
-                    f"step {step}, attempt {attempt}: {hit}")
-                print(f"step {step}: rate limited ({hit}) — stopping the cell")
-                return
             print(f"step {step}: no JSON in reply, attempt {attempt}")
 
         open(os.path.join(sd, "answer.txt"), "w").write(raw)
+        if gave_up:
+            meta["api_unavailable"] = gave_up
+            json.dump(meta, open(os.path.join(sd, "answer-meta.json"), "w"),
+                      indent=1)
+            open(os.path.join(args.run, "API_UNAVAILABLE"), "w").write(
+                f"step {step}: API {gave_up} after {transient} retries")
+            print(f"step {step}: API {gave_up} persisted — stopping the cell")
+            return
+
         meta["tools"] = tools
         meta["parsed"] = action is not None
         json.dump(meta, open(os.path.join(sd, "answer-meta.json"), "w"),

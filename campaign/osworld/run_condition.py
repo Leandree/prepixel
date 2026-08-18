@@ -1300,17 +1300,19 @@ def main():
         open(os.path.join(args.out, "CURRENT_STEP"), "w").write(str(step))
 
         apath = os.path.join(sd, "action.json")
-        # The answering side raises this when the account's rate limit
-        # refuses the call. That is an infrastructure fact, not the model
-        # failing the task, and the two must never end up in the same
-        # column — this campaign has already had four infra failures that
-        # would have read as findings if nobody had looked.
-        rl_path = os.path.join(args.out, "RATE_LIMITED")
+        # The answering side raises this when the API refuses the call —
+        # rate limit, or a server-side 5xx that persisted through the whole
+        # backoff. That is an infrastructure fact, not the model failing the
+        # task, and the two must never end up in the same column. Dev
+        # iteration 2 is the reason this is explicit: 21 `529 Overloaded`
+        # replies turned four cells that had SUCCEEDED in iteration 1 into
+        # step_timeout failures.
+        rl_path = os.path.join(args.out, "API_UNAVAILABLE")
         waited = 0
         while not os.path.exists(apath):
             if os.path.exists(rl_path):
                 infra_failure = True
-                term = "rate_limited: " + open(rl_path).read()[:200]
+                term = "api_unavailable: " + open(rl_path).read()[:200]
                 break
             time.sleep(2)
             waited += 2
