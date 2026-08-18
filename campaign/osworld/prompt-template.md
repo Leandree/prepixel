@@ -20,6 +20,23 @@ lines that changed since the previous step, so the diff's signal survives at
 the cost of one character per changed line. This RAISES B's per-step token
 cost versus v2 and is a direct consequence of D1 — reported, not hidden.
 
+v3→v4 (DEV-PHASE-PLAN P5/P6, development phase only):
+- `memo` — an optional short note the answerer writes for its own next step,
+  passed back verbatim and truncated at 300 characters. Identical field,
+  identical limit, identical placement in BOTH conditions. It is scaffold,
+  not advice: it never tells the model what to think, only gives it a place
+  to keep what it already thought, which a stateless per-step responder
+  otherwise loses.
+- observation history is now symmetric. Condition A always carried up to 3
+  previous screenshots; inlining B's view in v3 had silently left B with
+  none, so the two conditions were no longer the same scaffold. B now
+  carries up to 3 previous views, oldest first, and condition A is
+  untouched. B's token cost rises accordingly — which is exactly the
+  quantity the paper is measuring, so it is reported, not avoided.
+- `typed-by-driver="…"` may be appended to the focused element by the driver
+  (P2) when the channel does not expose a field's value. It is labelled as
+  the driver's own record and never mixed with state read from the channel.
+
 Amending this file after the first campaign run is forbidden (protocol §1
 spirit); v1→v2→v3 all happened pre-campaign, on manager order, in git
 history.
@@ -36,9 +53,14 @@ STEP {N} of {MAX_STEPS}.
 PREVIOUS ACTIONS (oldest first):
 {ACTION_HISTORY}
 
+YOUR NOTE FROM THE PREVIOUS STEP:
+{MEMO}
+
 {OBSERVATION}
 
 {ACTION_SCHEMA}
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
 
 Use only what this prompt gives you.
 
@@ -91,6 +113,11 @@ pressed, selected, expanded, focused); a leading `~` marks a line that
 changed since the previous step; `[pixels] …` is a DECLARED opaque region
 whose content the structure cannot read (crop shows its pixels);
 `declares=N exposes=M` on a region means the structure announces N items
-there and exposes M of them:
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
 {VIEW}
 {ACT_GUARD_LINE}
+
+Previous views (up to 3, oldest first), same grammar:
+{PREV_VIEWS}

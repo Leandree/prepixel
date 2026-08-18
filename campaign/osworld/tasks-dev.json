@@ -1,0 +1,130 @@
+{
+ "purpose": "development set \u2014 the driver is tuned on these and NEVER on the pre-registered 50 (manager_orders/DEV-PHASE-PLAN.md \u00a71)",
+ "source": "evaluation_examples/test_all.json @ OSWorld main (cloned 2026-08-17)",
+ "seed": 43,
+ "n_target": 20,
+ "min_per_domain": 2,
+ "excluded": {
+  "pre_registered_50": [
+   "00fa164e-2612-4439-992e-157d019a8436",
+   "0326d92d-d218-48a8-9ca1-981cd6d064c7",
+   "035f41ba-6653-43ab-aa63-c86d449d62e5",
+   "05dd4c1d-c489-4c85-8389-a7836c4f0567",
+   "06fe7178-4491-4589-810f-2e2bc9502122",
+   "0bf05a7d-b28b-44d2-955a-50b41e24012a",
+   "26660ad1-6ebb-4f59-8cba-a8432dfe8d38",
+   "28cc3b7e-b194-4bc9-8353-d04c0f4d56d2",
+   "2ad9387a-65d8-4e33-ad5b-7580065a27ca",
+   "2e6f678f-472d-4c55-99cc-8e7c5c402a71",
+   "36037439-2044-4b50-b9d1-875b5a332143",
+   "3680a5ee-6870-426a-a997-eba929a0d25c",
+   "37887e8c-da15-4192-923c-08fa390a176d",
+   "386dbd0e-0241-4a0a-b6a2-6704fba26b1c",
+   "38f48d40-764e-4e77-a7cf-51dfce880291",
+   "3b27600c-3668-4abd-8f84-7bcdebbccbdb",
+   "42f4d1c7-4521-4161-b646-0a8934e36081",
+   "455d3c66-7dc6-4537-a39a-36d3e9119df7",
+   "46407397-a7d5-4c6b-92c6-dbe038b1457b",
+   "47543840-672a-467d-80df-8f7c3b9788c9",
+   "480bcfea-d68f-4aaa-a0a9-2589ef319381",
+   "4de54231-e4b5-49e3-b2ba-61a0bec721c0",
+   "4ed5abd0-8b5d-47bd-839f-cacfa15ca37a",
+   "51f5801c-18b3-4f25-b0c3-02f85507a078",
+   "5203d847-2572-4150-912a-03f062254390",
+   "6766f2b8-8a72-417f-a9e5-56fcaa735837",
+   "6d72aad6-187a-4392-a4c4-ed87269c51cf",
+   "6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5",
+   "6f56bf42-85b8-4fbb-8e06-6c44960184ba",
+   "7efeb4b1-3d19-4762-b163-63328d66303b",
+   "81c425f5-78f3-4771-afd6-3d2973825947",
+   "82e3c869-49f6-4305-a7ce-f3e64a0618e7",
+   "881deb30-9549-4583-a841-8270c65f2a17",
+   "9195653c-f4aa-453d-aa95-787f6ccfaae9",
+   "a669ef01-ded5-4099-9ea9-25e99b569840",
+   "af23762e-2bfd-4a1d-aada-20fa8de9ce07",
+   "b52b40a5-ad70-4c53-b5b0-5650a8387052",
+   "bb8ccc78-479f-4a2f-a71e-d565e439436b",
+   "bba3381f-b5eb-4439-bd9e-80c22218d5a7",
+   "bf4e9888-f10f-47af-8dba-76413038b73c",
+   "df67aebb-fb3a-44fd-b75b-51b6012df509",
+   "dfac9ee8-9bc4-4cdc-b465-4a4bfcd2f397",
+   "e19bd559-633b-4b02-940f-d946248f088e",
+   "e1e75309-3ddb-4d09-92ec-de869c928143",
+   "e528b65e-1107-4b8c-8988-490e4fece599",
+   "ecb0df7a-4e8d-4a03-b162-053391d3afaf",
+   "f178a4a9-d090-4b56-bc4c-4b72a61a035d",
+   "f201fbc3-44e6-46fc-bcaa-432f9815454c",
+   "f4aec372-4fb0-4df5-a52b-79e0e2a5d6ce",
+   "f7dfbef3-7697-431c-883a-db8583a4e4f9"
+  ],
+  "pilot_tasks": [
+   "030eeff7-b492-4218-b312-701ec99ee0cc",
+   "13584542-872b-42d8-b299-866967b5c3ef"
+  ]
+ },
+ "pool_sizes_after_exclusion": {
+  "chrome": 39,
+  "gimp": 22,
+  "libreoffice_calc": 40,
+  "libreoffice_impress": 40,
+  "libreoffice_writer": 20,
+  "multi_apps": 87,
+  "os": 20,
+  "thunderbird": 12,
+  "vlc": 14
+ },
+ "quotas": {
+  "chrome": 2,
+  "gimp": 2,
+  "libreoffice_calc": 2,
+  "libreoffice_impress": 2,
+  "libreoffice_writer": 2,
+  "multi_apps": 4,
+  "os": 2,
+  "thunderbird": 2,
+  "vlc": 2
+ },
+ "n_selected": 20,
+ "tasks": {
+  "chrome": [
+   "121ba48f-9e17-48ce-9bc6-a4fb17a7ebba",
+   "93eabf48-6a27-4cb6-b963-7d5fe1e0d3a9"
+  ],
+  "gimp": [
+   "58d3eeeb-e9d0-499f-962e-fd0db2a744d8",
+   "a746add2-cab0-4740-ac36-c3769d9bfb46"
+  ],
+  "libreoffice_calc": [
+   "1334ca3e-f9e3-4db8-9ca7-b4c653be7d17",
+   "42e0a640-4f19-4b28-973d-729602b5a4a7"
+  ],
+  "libreoffice_impress": [
+   "ac9bb6cb-1888-43ab-81e4-a98a547918cd",
+   "ef9d12bd-bcee-4ba0-a40e-918400f43ddf"
+  ],
+  "libreoffice_writer": [
+   "0810415c-bde4-4443-9047-d5f70165a697",
+   "adf5e2c3-64c7-4644-b7b6-d2f0167927e7"
+  ],
+  "multi_apps": [
+   "897e3b53-5d4d-444b-85cb-2cdc8a97d903",
+   "a0b9dc9c-fc07-4a88-8c5d-5e3ecad91bcb",
+   "bc2b57f3-686d-4ec9-87ce-edf850b7e442",
+   "da52d699-e8d2-4dc5-9191-a2199e0b6a9b"
+  ],
+  "os": [
+   "ec4e3f68-9ea4-4c18-a5c9-69f89d1178b3",
+   "fe41f596-a71b-4c2f-9b2f-9dcd40b568c3"
+  ],
+  "thunderbird": [
+   "9b7bc335-06b5-4cd3-9119-1a649c478509",
+   "dd84e895-72fd-4023-a336-97689ded257c"
+  ],
+  "vlc": [
+   "215dfd39-f493-4bc3-a027-8a97d72c61bf",
+   "5ac2891a-eacd-4954-b339-98abba077adb"
+  ]
+ },
+ "disjointness_checked": true,
+ "usage_rule": "Dev cells never count toward the campaign. When the improvements plateau the driver is tagged driver-freeze-v3 and the 50 run once, unmodified."
+}

@@ -11,9 +11,10 @@ Boots the OSWorld docker VM for ONE task × ONE condition, then loops:
   4. wait for the answering agent to write <out>/step-N/action.json,
   5. condition B: resolve element-reference actions through the LADDER —
      (1) AT-SPI platform action inside the VM (EditableText/Value/Action/
-     grabFocus via run_python_script), (2) pointer synthesis at the rect
-     center clamped to the viewport, (3) resolution failure -> error
-     observation, never a guess. Every rung choice is logged per step.
+     Selection/Text-caret/grabFocus via run_python_script), (2) pointer
+     synthesis at the rect center clamped to the viewport, (3) resolution
+     failure -> error observation, never a guess. Every rung choice is
+     logged per step.
   6. settle: fixed post-action budget IDENTICAL in both conditions
      (A sleeps SETTLE_BUDGET; B re-captures the tree until two consecutive
      identical captures or the budget runs out),
@@ -35,6 +36,19 @@ file: rung 2's partial-occlusion sub-rule (anchor at the visible subregion
 center) is NOT implemented — AT-SPI gives no reliable z-order; anchor is
 always the full-rect center. Occurrences where this could matter are
 detectable in traces as UNVERIFIED verdicts on rung-2 clicks.
+
+Development phase (manager_orders/DEV-PHASE-PLAN.md), tuned on the 20
+disjoint dev tasks only:
+  P2 the driver echoes what it typed as `typed-by-driver="…"` on the focused
+     element, labelled as the driver's own record (the payload does not
+     expose entry text — probe_entry_text.py, 0/1951 nodes),
+  P5 a `memo` field, identical in both conditions, carried verbatim to the
+     next step and truncated at MEMO_LIMIT,
+  P6 B carries HISTORY_DEPTH previous views inline, matching the previous
+     screenshots condition A always carried,
+  P7 rung 1 widened BY INTERFACE, never by app: Selection.selectChild on the
+     parent when a child exposes no usable Action, Text.setCaretOffset after
+     grabFocus so a following `type` appends deterministically.
 
 Usage:
   python run_condition.py --domain chrome --task-id <uuid> --condition A|B \
@@ -84,6 +98,9 @@ def template_section(block, marker):
 
 
 BODY = TEMPLATE.split("---")[1].strip()
+HISTORY_DEPTH = 3       # previous observations, IDENTICAL in A and B (P6)
+MEMO_LIMIT = 300        # characters, mechanically truncated (P5)
+
 OBS_A = template_section("OBSERVATION", "A (pixels)")
 OBS_B = template_section("OBSERVATION", "B (prepixel)")
 SCHEMA_A = template_section("ACTION_SCHEMA", "A (pixels)")
@@ -230,21 +247,44 @@ def _run():
                 # the following keystrokes went there. Focus is the click.
                 try:
                     acc.queryComponent().grabFocus()
-                    return {"ok": True, "method": "Component.grabFocus"}
                 except Exception as e:
                     return {"ok": False, "err": "grabFocus: %s" % e}
+                # P7: put the caret at the end so a following `type` appends
+                # predictably instead of landing wherever the caret happened
+                # to be. Text is an interface, not an app special case.
+                caret = None
+                try:
+                    ti = acc.queryText()
+                    ti.setCaretOffset(ti.characterCount)
+                    caret = "+Text.setCaretOffset"
+                except Exception:
+                    pass
+                return {"ok": True,
+                        "method": "Component.grabFocus" + (caret or "")}
+            names = []
             try:
                 ai = acc.queryAction()
+                names = [ai.getName(i).lower() for i in range(ai.nActions)]
+                for pref in ("click", "press", "toggle", "activate", "jump"):
+                    if pref in names:
+                        done = ai.doAction(names.index(pref))
+                        if done:
+                            return {"ok": True, "method": "Action.%s" % pref}
             except Exception:
-                return {"ok": False, "err": "no-action-interface"}
-            names = [ai.getName(i).lower() for i in range(ai.nActions)]
-            for pref in ("click", "press", "toggle", "activate", "jump"):
-                if pref in names:
-                    done = ai.doAction(names.index(pref))
-                    return {"ok": bool(done),
-                            "method": "Action.%s" % pref,
-                            "err": None if done else "doAction returned False"}
-            return {"ok": False, "err": "no-usable-action: %s" % names}
+                pass
+            # P7: no usable Action — the fallback logs pointed at list items,
+            # table cells and combo-box children, whose real interface is
+            # Selection on the PARENT. Generic by interface, not by app.
+            try:
+                parent = acc.parent
+                sel = parent.querySelection()
+                idx = acc.getIndexInParent()
+                if idx >= 0 and sel.selectChild(idx):
+                    return {"ok": True, "method": "Selection.selectChild"}
+            except Exception:
+                pass
+            return {"ok": False,
+                    "err": "no-usable-action: %s" % (names or "no-interface")}
         if VERB == "focus":
             acc.queryComponent().grabFocus()
             return {"ok": True, "method": "Component.grabFocus"}
@@ -270,13 +310,16 @@ class Driver:
         self.cur_records = None
         self.prev_diff_base = []    # previous view minus system bar (kbd guard)
         self.pending_expect = None  # (what, wanted) the last action asked for
+        self.typed_echo = None      # P2: what the driver last typed, and where
+        self.prev_views = []        # P6: previous rendered views, oldest first
         self.mech_total = {"platform_available": None, "rung1": 0, "rung2": 0,
                            "kbd": 0, "resolve_errors": 0, "noop_toggles": 0,
                            "rung1_fallbacks": 0, "settle_ms_total": 0,
                            "settle_captures_total": 0, "guard_ms_total": 0,
                            "reprobes": 0, "scroll_iters_total": 0,
                            "waits_after_settle": 0, "scrolls": 0,
-                           "declared_count_mismatches": 0}
+                           "declared_count_mismatches": 0, "typed_echoes": 0,
+                           "memos_carried": 0}
 
     # -------------------------------------------------------------- probe --
     def probe_platform(self):
@@ -353,6 +396,16 @@ class Driver:
                     "line": f'[pixels] group {x},{y},{w},{h} '
                             f'"{s["label"]}" [unverified: pixels show '
                             f'content]'})
+        # P2: annotate the focused element with the driver's typing record
+        echo = self.typed_echo
+        if echo:
+            focused = [r for r in records if r["states"].get("focused")]
+            if focused:
+                tgt = focused[0]
+                if echo["rect"] is None or tgt["rect"] == echo["rect"]:
+                    tgt["line"] += f' typed-by-driver={_q(echo["text"])}'
+                else:
+                    self.typed_echo = None      # focus moved: record is stale
         registry = {}
         out_lines = []
         previous = set(self.prev_diff_base or [])
@@ -493,6 +546,14 @@ class Driver:
             text = str(act.get("text", ""))
             self.mech_total["kbd"] += 1
             mech["rung"] = "kbd"
+            # P2: the driver KNOWS what it typed — that is its own action, not
+            # a reading of the screen. Recorded here, surfaced on the focused
+            # element, and always labelled as a driver record.
+            focused = next((r for r in (self.cur_records or [])
+                            if r["states"].get("focused")), None)
+            self.typed_echo = {"text": text,
+                               "rect": focused["rect"] if focused else None}
+            self.mech_total["typed_echoes"] += 1
             try:
                 self._pyautogui("import pyautogui; "
                                 f"pyautogui.typewrite({text!r}, interval=0.02)")
@@ -737,6 +798,7 @@ def main():
     cur_shot = obs["screenshot"]
 
     actions, act_verdicts = [], []
+    memo = None                 # P5: verbatim note the answerer left itself
     prev_obs_paths = []
     pixel_fallbacks = guard_hits_total = suspects_total = 0
     infra_failure, term = False, "max_steps"
@@ -761,7 +823,7 @@ def main():
         if args.condition == "A":
             observation = OBS_A.replace("{SCREENSHOT_PATH}", shot) \
                 .replace("{PREV_SCREENSHOT_PATHS}",
-                         "\n".join(prev_obs_paths[-3:]) or "(none)")
+                         "\n".join(prev_obs_paths[-HISTORY_DEPTH:]) or "(none)")
             prev_obs_paths.append(shot)
             schema = SCHEMA_A
         else:
@@ -774,16 +836,26 @@ def main():
             # so nothing sends the model to a file
             drv.prev_diff_base = raw_lines
             verdict_line = act_verdicts[-1] if act_verdicts else ""
+            # P6: B carries the same observation history depth as A, which
+            # has always shown up to 3 previous screenshots. Inlining is the
+            # only way to give a stateless responder its own past.
+            prev_block = "\n\n".join(
+                f"--- view at step {n} ---\n{v}"
+                for n, v in drv.prev_views[-HISTORY_DEPTH:]) or "(none)"
             observation = OBS_B.replace("{VIEW}", view) \
                 .replace("{ACT_GUARD_LINE}",
                          f"[act-guard] previous action: {verdict_line}"
-                         if verdict_line else "")
+                         if verdict_line else "") \
+                .replace("{PREV_VIEWS}", prev_block)
+            drv.prev_views.append((step, view))
             schema = SCHEMA_B
 
+        mech["memo_in"] = bool(memo)
         history = "\n".join(f"{i+1}. {a}" for i, a in enumerate(actions)) or "(none)"
         prompt = BODY.replace("{INSTRUCTION}", task["instruction"]) \
             .replace("{N}", str(step)).replace("{MAX_STEPS}", str(args.max_steps)) \
             .replace("{ACTION_HISTORY}", history) \
+            .replace("{MEMO}", memo or "(none)") \
             .replace("{OBSERVATION}", observation) \
             .replace("{ACTION_SCHEMA}", schema)
         open(os.path.join(sd, "prompt.txt"), "w").write(prompt)
@@ -802,6 +874,14 @@ def main():
             break
         time.sleep(1)  # let the writer finish
         act_raw = json.load(open(apath))
+        # P5: carried verbatim, mechanically truncated, identical in A and B
+        new_memo = act_raw.get("memo")
+        if isinstance(new_memo, str) and new_memo.strip():
+            memo = new_memo.strip()[:MEMO_LIMIT]
+            drv.mech_total["memos_carried"] += 1
+            mech["memo_out"] = True
+        elif new_memo is not None:
+            memo = None
 
         if args.condition == "A":
             action = str(act_raw["action"]).strip()
