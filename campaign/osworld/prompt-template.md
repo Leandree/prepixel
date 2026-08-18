@@ -133,7 +133,11 @@ The current screen as a structured view. Grammar: `eN <type> x,y,w,h
 "content"` — eN is the element id, valid for THIS step only; `value="…"` is
 the current value; `state=…` lists element states (checked:true/false,
 pressed, selected, expanded, focused); a leading `~` marks a line that
-changed since the previous step; `[pixels] …` is a DECLARED opaque region
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
 whose content the structure cannot read (crop shows its pixels);
 `declares=N exposes=M` on a region means the structure announces N items
 there and exposes M of them; `typed-by-driver="…"` is NOT read from the
