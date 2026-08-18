@@ -20,17 +20,25 @@ Replaying the v1 corner-click in the sandbox now yields
 (AT-SPI `Action.click` / `Value.currentValue`); the model emitted zero
 coordinates all run.
 
-**The chrome task, both conditions failed — not a driver effect.** Both v2
-models declared the task impossible, claiming Chrome removed the setting.
+**The chrome task, both conditions failed — and the traces say why.** Both
+v2 models declared the task impossible, claiming Chrome removed the setting.
 Both were wrong; v1's own trace shows the control at Privacy →
-**Third-party cookies** → "Do Not Track", and neither v2 run opened that
-sub-page. What misled them is real: searching "do not track" in
-chrome://settings announces `"1 result"` and exposes no matching row —
-polled every 1.5 s for 25.5 s in the sandbox, reproduced live at chrome-B
-step 6, and condition A reasoned about the same badge from pixels. Shared
-cause, both channels; the v1/v2 difference is that v1's models kept
-exploring. Small-n trajectory variance on a misleading UI, which is exactly
-why the campaign is 50 tasks.
+**Third-party cookies** → "Do Not Track". The decisive detail: at the step
+where chrome-B wrote `fail`, its view contained
+`e57 link "Third-party cookies …"` — the very page v1 opened before clicking
+the toggle. It quit with 7 of 15 steps unspent (chrome-A with 10). The
+channel exposed the door; the model walked away from it.
+
+The belief that stopped them is a training prior, not an observation: A
+dated the removal to "Chrome 122 (Jan 2024)", B to "around 129 (Sept 2024)"
+— they disagree, which is the tell. What made the prior feel confirmed is
+the real defect above: a search that announces `"1 result"` and exposes no
+row reads exactly like a feature that is gone. v1 succeeded by persistence,
+not perception — its chrome-B burned ten steps on the same search before
+changing route. So the chrome delta measures how long a sampled trajectory
+keeps trying, not what the channel showed; and no, I cannot separate "we
+removed the prompt's behavioural advice per §2.2" from sampling noise at
+n=1 per condition. That separation is what 50 tasks are for.
 
 **Acceptance (§4.2): 4 pass, 1 fails informatively, 1 not exercisable.**
 (a) corner-miss → UNVERIFIED ✓; (a2) the same element via `set_value` →

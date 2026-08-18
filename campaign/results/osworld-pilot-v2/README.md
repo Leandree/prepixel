@@ -66,6 +66,28 @@ Settings → Privacy → **Third-party cookies** → "Do Not Track"
 (`pilot-chrome-B/step-13/view.txt` of v1: `text 739,456,512,282 "Do Not
 Track"`). Neither v2 run ever opened that sub-page.
 
+**The channel handed B the door and B walked away from it.** At the exact
+step where chrome-B wrote `fail`, its own view contained
+`e57 link 1291,381,32,33 "Third-party cookies Third-party cookies are
+blocked in Incognito mode"` — the page v1 reached by typing
+`chrome://settings/cookies` before clicking the toggle. It quit with 7 of 15
+steps unspent; chrome-A quit with 10 unspent. Neither ran out of budget,
+neither lacked the information: both stopped on a belief.
+
+That belief is a training prior, not an observation: condition A dated the
+removal to "Chrome 122 (January 2024)", condition B to "around version 129
+(Sept 2024)". They do not agree with each other, which is the tell. What
+made the prior feel confirmed is the real UI defect above — a search that
+announces a result and shows nothing reads exactly like a feature that no
+longer exists.
+
+v1 succeeded through persistence, not perception: its chrome-B burned ten
+steps failing on the same search before changing route at step 11. So the
+v1→v2 chrome delta measures how long a sampled trajectory keeps trying, not
+what the channel exposed. Whether removing the prompt's behavioural advice
+(§2.2) contributes cannot be separated from sampling noise at n=1 per
+condition — which is what 50 tasks are for.
+
 What sent them there is real and reproducible: searching "do not track" in
 chrome://settings makes the page announce `text 675,429,84,29 "1 result"`
 while exposing no matching row — measured in the acceptance suite by polling
