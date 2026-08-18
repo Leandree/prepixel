@@ -1111,14 +1111,30 @@ class Driver:
                 what, wanted = expect
                 if what == "value":
                     got = cand["value"]
-                    ok = (got == wanted)
+                    ok, via = (got == wanted), "value"
                     try:
                         ok = ok or float(got) == float(wanted)
                     except (TypeError, ValueError):
                         pass
+                    if not ok and cand["label"] == wanted:
+                        # Measured on libreoffice_writer-adf5e2c3-B: the guard
+                        # said UNVERIFIED twice while its OWN re-read line
+                        # read `text … "<add here>"` and `text … "[14]"` —
+                        # the values it was asked to confirm. This payload
+                        # does not expose entry text as `value` at all (0 of
+                        # 1951 nodes, probe_entry_text.py); it exposes it as
+                        # the label. Demanding `value` was demanding proof the
+                        # channel structurally cannot give, so every set_value
+                        # on a text field came back unverified and the model
+                        # paid for it in steps.
+                        ok, via = True, "label"
                     if not ok:
                         return (f'UNVERIFIED (asked value={_q(wanted)}, '
                                 f'element re-read: {cand["line"]})')
+                    if via == "label":
+                        return (f'CONFIRMED (asked value={_q(wanted)}, found '
+                                f'as the element\'s text — this channel does '
+                                f'not expose entry values: {cand["line"]})')
                 elif what == "checked":
                     if cand["states"].get("checked") is not wanted:
                         return (f'UNVERIFIED (asked checked:'
