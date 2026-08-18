@@ -53,6 +53,15 @@ const CONNECT_TIMEOUT = Number(arg('--timeout-ms', '8000'));
 function inPage(maxOffscreen) {
   const vw = innerWidth, vh = innerHeight;
   const recs = [];
+  // Handles for the action side. Parking the elements on the page means
+  // cdp_act.mjs acts on the very node the view described, instead of
+  // re-finding it by a selector that may match something else by the time
+  // the model answers. The array is rebuilt every step, which matches the
+  // existing contract exactly: eN ids are valid for THIS step only. If the
+  // page navigated in between, the global is gone and the action falls
+  // honestly to the next rung rather than hitting the wrong element.
+  const els = [];
+  window.__prepixel = els;
 
   // HTML -> the AT-SPI role vocabulary. Kept deliberately small: a mapping
   // is generic, a per-site special case is not.
@@ -232,8 +241,11 @@ function inPage(maxOffscreen) {
       const t = (n.textContent || '').trim().replace(/\s+/g, ' ');
       if (!t) return;
       if (!on) nOff += 1;
+      // The handle is the PARENT element: a text node cannot be scrolled to,
+      // and text below the fold is exactly what a scroll target looks like.
       recs.push({ kind: on ? 'text' : 'offscreen', role: 'static', rect,
-                  label: t, value: '', states: {},
+                  label: t, value: '', states: {}, src: 'cdp',
+                  h: els.push(n.parentElement) - 1,
                   line: `${on ? '' : '[offscreen] '}text ${bs} ${q(t)}` });
       return;
     }
@@ -241,6 +253,7 @@ function inPage(maxOffscreen) {
     if (OPAQUE.has(role)) {
       if (!on) return;         // a blind spot off-screen is not croppable
       recs.push({ kind: 'pixels', role, rect, label, value: '', states: {},
+                  src: 'cdp', h: els.push(n) - 1,
                   line: `[pixels] ${role} ${bs}` +
                         (label ? ` alt=${label}` : '') });
       return;
@@ -253,6 +266,7 @@ function inPage(maxOffscreen) {
     const occ = on && occluded(n, r, ctx) ? ' [occluded]' : '';
     recs.push({
       kind: on ? 'element' : 'offscreen', role, rect, label, value,
+      src: 'cdp', h: els.push(n) - 1,
       states: st,
       line: `${on ? '' : '[offscreen] '}${role} ${bs}` +
             (label ? ` ${q(label)}` : '') +

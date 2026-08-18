@@ -159,6 +159,50 @@ check(/^check-box \d+,\d+,\d+,\d+.* state=checked:true$/.test(cbLine),
 const stillAlive = await page.evaluate(() => 1 + 1).catch(() => null);
 check(stillAlive === 2, 'the page survives cdp_view disconnecting');
 
+// ------------------------------------------------------------- the act side
+// cdp_act must land on the SAME node the view described, which is the whole
+// reason the view parks handles on the page.
+const act = (rec, op, extra = []) => JSON.parse(execFileSync('node', [
+  path.join(HERE, 'cdp_act.mjs'),
+  '--endpoint', `http://127.0.0.1:${PORT}`,
+  '--handle', String(rec.h), '--op', op, ...extra,
+], { encoding: 'utf8' }));
+
+console.log('\nact assertions:');
+const entry = find((r) => r.role === 'entry' && r.value === 'typed value here');
+const sv = act(entry, 'set_value', ['--value', 'replaced text']);
+check(sv.ok && await page.$eval('#q', (e) => e.value) === 'replaced text',
+      'set_value writes the field the view described', JSON.stringify(sv));
+
+const cb2 = R.filter((r) => r.role === 'check-box')
+  .find((r) => r.states.checked === false);
+const tg = act(cb2, 'toggle', ['--to', 'true']);
+check(tg.ok && await page.$eval('#cb2', (e) => e.checked) === true,
+      'toggle reaches the asked state', JSON.stringify(tg));
+const again = act(cb2, 'toggle', ['--to', 'true']);
+check(again.ok && again.noop === true,
+      'toggling to the state it already holds is a declared no-op',
+      JSON.stringify(again));
+
+const sel = find((r) => r.role === 'combo-box');
+const svs = act(sel, 'set_value', ['--value', 'alpha']);
+check(svs.ok && await page.$eval('#sel', (e) => e.value) === 'alpha',
+      'set_value on a combo-box picks the option by its text',
+      JSON.stringify(svs));
+
+const st = act(below, 'scroll_to');
+const scrolledY = await page.evaluate(() => scrollY);
+check(st.ok && scrolledY > 1000,
+      'scroll_to brings a below-the-fold element onto the screen',
+      `${JSON.stringify(st)} scrollY=${scrolledY}`);
+
+// A stale handle must SAY so rather than act on whatever is at that index.
+await page.evaluate(() => { delete window.__prepixel; });
+const stale = act(entry, 'click');
+check(!stale.ok && /stale-handle/.test(stale.err || ''),
+      'a handle from a page that has navigated reports stale-handle',
+      JSON.stringify(stale));
+
 await browser.close();
 server.close();
 console.log(failures ? `\n${failures} FAILURES` : '\nALL PASS');

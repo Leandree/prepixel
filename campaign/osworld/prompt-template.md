@@ -37,6 +37,16 @@ v3→v4 (DEV-PHASE-PLAN P5/P6, development phase only):
   (P2) when the channel does not expose a field's value. It is labelled as
   the driver's own record and never mixed with state read from the channel.
 
+v4→v5 (DEV-PHASE-PLAN P1, development phase only): condition B regains
+`scroll_to`, withdrawn in v2 because the AT-SPI path had to guess a scroll
+distance from rects the OSWorld payload mostly does not supply below the
+fold (301 of 3047 nodes positioned). With the per-window router, an
+`[offscreen]` line coming from a Chromium window carries the page's own
+coordinates and the page scrolls itself exactly; on any other window the old
+feedback loop still runs, unchanged. Same action word, channel-appropriate
+mechanics — which is what the router is for. Condition A is untouched: its
+action space is pyautogui and always could scroll.
+
 Amending this file after the first campaign run is forbidden (protocol §1
 spirit); v1→v2→v3 all happened pre-campaign, on manager order, in git
 history.
@@ -89,6 +99,8 @@ Targets are the eN ids from the view; the driver resolves all geometry.
                                                        names, joined with +)
   {"action":"scroll","direction":"down"}               scroll the view ("up"
                                                        or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
   {"action":"crop","target":"e21"}                     get the pixels of a
                                                        [pixels] line (costs
                                                        one step)

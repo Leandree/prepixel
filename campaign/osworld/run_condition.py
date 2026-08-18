@@ -62,8 +62,63 @@ import re
 import subprocess
 import sys
 import time
+import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+CHROMIUM_APPS = ("chromium", "google-chrome", "chrome")
+WEB_DOC_ROLES = ("document-web", "document-frame")
+CDP_TIMEOUT = 25            # s; a slow page must not stall the whole step
+
+
+def _center_in(rect, box):
+    """Is this record's centre inside the web content area? Centre rather
+    than overlap on purpose: a page-sized AT-SPI container overlaps the
+    content rect without BEING content, and dropping it would take the
+    window's own structure out of the view."""
+    x, y, w, h = rect
+    bx, by, bw, bh = box
+    cx, cy = x + w / 2.0, y + h / 2.0
+    return bx <= cx <= bx + bw and by <= cy <= by + bh
+
+
+def _chromium_content_rect(tree_xml):
+    """Screen rect of the web content area of the ACTIVE Chromium window.
+
+    This is the router's SIGNATURE step (DEV-PHASE-PLAN P1): the channel is
+    chosen per window from what the window is, not from the task. A window
+    qualifies when its application is a Chromium and it exposes a
+    document-web/document-frame that is showing, visible and on screen; the
+    largest such rect is the content area, everything outside it is browser
+    chrome and stays on AT-SPI.
+
+    Returns (rect, app_name) or (None, reason) so the reason can be logged —
+    a router that silently declines is indistinguishable from one that never
+    ran.
+    """
+    try:
+        root = ET.fromstring(tree_xml or "<desktop-frame/>")
+    except Exception as e:
+        return None, "tree-parse: %s" % str(e)[:80]
+    best, app_seen = None, None
+    for app in root.iter("application"):
+        name = (app.get("name") or "").strip().lower()
+        if not any(c in name for c in CHROMIUM_APPS):
+            continue
+        app_seen = name
+        for node in app.iter():
+            if node.tag not in WEB_DOC_ROLES:
+                continue
+            if distill_osworld._position(node, VW, VH) != "on":
+                continue
+            x, y, w, h = distill_osworld._coords(node)
+            if w * h > 0 and (best is None or w * h > best[2] * best[3]):
+                best = (x, y, w, h)
+    if best:
+        return best, app_seen
+    return None, ("no on-screen web document in %r" % app_seen
+                  if app_seen else "no chromium application in the tree")
 
 
 def _cost_accounting(out, model):
@@ -376,6 +431,7 @@ class Driver:
         self.pending_expect = None  # (what, wanted) the last action asked for
         self.typed_echo = None      # P2: what the driver last typed, and where
         self.prev_views = []        # P6: previous rendered views, oldest first
+        self.web_meta = {}          # P1: last CDP page meta (url, scroll, …)
         self.mech_total = {"platform_available": None, "rung1": 0, "rung2": 0,
                            "kbd": 0, "resolve_errors": 0, "noop_toggles": 0,
                            "rung1_fallbacks": 0, "settle_ms_total": 0,
@@ -383,7 +439,17 @@ class Driver:
                            "reprobes": 0, "scroll_iters_total": 0,
                            "waits_after_settle": 0, "scrolls": 0,
                            "declared_count_mismatches": 0, "typed_echoes": 0,
-                           "memos_carried": 0}
+                           "memos_carried": 0,
+                           # P1 router: how often the web channel was chosen,
+                           # what it cost, and how much of the AT-SPI view it
+                           # replaced. A decline is counted too — the router
+                           # declining is a measurement, not a non-event.
+                           "cdp_steps": 0, "cdp_declines": 0,
+                           "cdp_ms_total": 0, "cdp_records_total": 0,
+                           "atspi_records_replaced": 0,
+                           "guard_suspects_superseded": 0,
+                           "cdp_actions": 0, "cdp_action_failures": 0,
+                           "cdp_scroll_to": 0}
 
     # -------------------------------------------------------------- probe --
     def probe_platform(self):
@@ -427,6 +493,81 @@ class Driver:
     def distill(self, tree):
         return distill_osworld.distill(tree or "<desktop-frame/>", VW, VH)
 
+    # ------------------------------------------------------------- router --
+    def route_web(self, tree, records, suspects, mech):
+        """Per-window channel router (P1): AT-SPI for the desktop, CDP for
+        the content area of an active Chromium window.
+
+        The composition rule is geometric and one-directional: AT-SPI records
+        whose centre lies inside the web content rect are REPLACED by the CDP
+        records for that same rect. Browser chrome — tabs, omnibox, toolbar,
+        the window frame — is outside the rect and stays on AT-SPI, which is
+        the channel that actually knows about it.
+
+        The router is strictly OPPORTUNISTIC. It never launches or restarts
+        Chrome: CDP exists in this VM only because the task's own setup asked
+        for it (measured: 4 of the 20 dev tasks, 79 of 369 corpus-wide — and
+        they are the tasks where the browser is the subject, because
+        OSWorld's own evaluator needs the same port). Relaunching Chrome to
+        get a better channel would hand condition B an environment condition
+        A never had, which would not be a measurement any more.
+        """
+        rect, why = _chromium_content_rect(tree)
+        mech["channel"] = "atspi"
+        if rect is None:
+            mech["cdp"] = {"used": False, "reason": why}
+            return records, suspects
+        port = getattr(self.env, "chromium_port", None)
+        if not port:
+            mech["cdp"] = {"used": False, "reason": "no chromium_port on env"}
+            return records, suspects
+        x, y, w, h = rect
+        t0 = time.time()
+        try:
+            p = subprocess.run(
+                ["node", os.path.join(HERE, "cdp_view.mjs"),
+                 "--endpoint", "http://localhost:%d" % port,
+                 "--offset", "%d,%d" % (x, y)],
+                capture_output=True, text=True, timeout=CDP_TIMEOUT)
+            out = json.loads(p.stdout or "{}")
+        except Exception as e:
+            out = {"ok": False, "error": "%s: %s" % (type(e).__name__,
+                                                     str(e)[:120])}
+        ms = int((time.time() - t0) * 1000)
+        if not out.get("ok"):
+            # Declining is a normal outcome (no debug port on this task), so
+            # it is logged, not raised, and the AT-SPI view is unchanged.
+            mech["cdp"] = {"used": False, "ms": ms, "rect": list(rect),
+                           "reason": out.get("error", "no output")}
+            self.mech_total["cdp_declines"] += 1
+            return records, suspects
+        web = out.get("records", [])
+        kept = [r for r in records if not _center_in(r["rect"], rect)]
+        dropped = len(records) - len(kept)
+        # The coverage guard's suspects for this region were suspicions about
+        # AT-SPI's blindness, and AT-SPI is no longer the channel reading it.
+        # They are superseded rather than ignored: the CDP channel declares
+        # its OWN blind spots (canvas, img, cross-origin frames) as [pixels].
+        # Counted, so "the guard went quiet here" stays visible in the record.
+        sup = [s for s in suspects if not _center_in(s["rect"], rect)]
+        self.mech_total["guard_suspects_superseded"] += len(suspects) - len(sup)
+        mech["channel"] = "atspi+cdp"
+        mech["cdp"] = {"used": True, "ms": ms, "rect": list(rect),
+                       "atspi_records_replaced": dropped,
+                       "cdp_records": len(web),
+                       "offscreen": out.get("meta", {}).get(
+                           "offscreen_emitted", 0),
+                       "url": out.get("meta", {}).get("url", "")[:200],
+                       "scroll": out.get("meta", {}).get("scroll"),
+                       "scroll_height": out.get("meta", {}).get(
+                           "scrollHeight")}
+        self.mech_total["cdp_steps"] += 1
+        self.mech_total["cdp_ms_total"] += ms
+        self.mech_total["cdp_records_total"] += len(web)
+        self.mech_total["atspi_records_replaced"] += dropped
+        self.web_meta = out.get("meta", {})
+        return kept + web, sup
+
     # ------------------------------------------------------------- render --
     def build_view(self, step_dir, shot_path, mech):
         """distill + re-probe + coverage guard + id assignment.
@@ -448,6 +589,8 @@ class Driver:
                     "line": f"[pixels] group {x},{y},{w},{h} "
                             f"declares={ic['declared']} "
                             f"exposes={ic['exposed']}"})
+        records, suspects = self.route_web(
+            self.cur_tree, records, suspects, mech)
         n_hits = 0
         for s in suspects:
             j = judge_crop(shot_path, s["rect"])
@@ -652,8 +795,56 @@ class Driver:
                 f"EXPLICIT_FAILURE (resolution: unknown action kind "
                 f"{kind!r})", False, None)
 
+    def _cdp_act(self, rec, verb, value, mech):
+        """Rung 1 for an element the WEB channel described.
+
+        Symmetry matters here: rung 1 is defined as "the platform's own
+        action for the channel that described the element". For AT-SPI that
+        is pyatspi inside the VM; for a CDP-described element it is the DOM.
+        Routing a web element through AT-SPI instead would make rung 1 fail
+        for reasons that have nothing to do with the web channel's quality.
+        """
+        port = getattr(self.env, "chromium_port", None)
+        if not port:
+            return {"ok": False, "err": "no chromium_port"}
+        op = {"click": "click", "toggle": "toggle",
+              "set_value": "set_value", "scroll_to": "scroll_to",
+              "focus": "focus"}.get(verb, "click")
+        cmd = ["node", os.path.join(HERE, "cdp_act.mjs"),
+               "--endpoint", "http://localhost:%d" % port,
+               "--handle", str(rec.get("h", -1)), "--op", op]
+        if value is not None:
+            cmd += ["--value", str(value)]
+        if verb == "toggle":
+            cmd += ["--to", "true" if value else "false"]
+        try:
+            p = subprocess.run(cmd, capture_output=True, text=True,
+                               timeout=CDP_TIMEOUT)
+            return json.loads(p.stdout or '{"ok":false,"err":"no output"}')
+        except Exception as e:
+            return {"ok": False,
+                    "err": "%s: %s" % (type(e).__name__, str(e)[:120])}
+
     def _act_on(self, rec, verb, value, mech):
         """Ladder rungs 1-2 for click/toggle/set_value. Returns err or None."""
+        if rec.get("src") == "cdp":
+            res = self._cdp_act(rec, verb, value, mech)
+            if res.get("ok"):
+                self.mech_total["rung1"] += 1
+                self.mech_total["cdp_actions"] += 1
+                mech["rung"] = 1
+                mech["rung1_method"] = "cdp:" + str(res.get("method"))
+                if res.get("noop"):
+                    self.mech_total["noop_toggles"] += 1
+                return None
+            self.mech_total["rung1_fallbacks"] += 1
+            self.mech_total["cdp_action_failures"] += 1
+            mech["rung1_error"] = "cdp: %s" % res.get("err")
+            # Deliberately falls through to rung 2 rather than to AT-SPI: the
+            # element was described in web terms, so an AT-SPI lookup for it
+            # would be a guess, and the pointer at least aims at the rect the
+            # model was actually shown.
+            return self._rung2(rec, verb, value, mech)
         if self.platform_available:
             res = self._platform(rec, "click" if verb == "toggle" else verb,
                                  value, mech)
@@ -664,6 +855,10 @@ class Driver:
                 return None
             self.mech_total["rung1_fallbacks"] += 1
             mech["rung1_error"] = res.get("err")
+        return self._rung2(rec, verb, value, mech)
+
+    def _rung2(self, rec, verb, value, mech):
+        """Pointer synthesis at the rect centre, clamped to the viewport."""
         self.mech_total["rung2"] += 1
         mech["rung"] = 2
         mech["occlusion_check"] = "not-implemented (full-rect center)"
@@ -704,7 +899,28 @@ class Driver:
 
     def _do_scroll_to(self, rec, label, mech):
         """§2.6: the driver computes the scroll, re-captures, re-resolves.
-        Feedback loop, max 6 scroll rounds, every round logged."""
+        Feedback loop, max 6 scroll rounds, every round logged.
+
+        On a CDP-described element this is not a feedback loop at all — the
+        page knows where its own content is, so one scrollIntoView puts it on
+        screen exactly. That difference is the point of the router, and it is
+        why scroll_to is offered again: the action was withdrawn because the
+        AT-SPI path had to guess a scroll distance from rects the payload
+        mostly does not supply below the fold (301 of 3047 nodes positioned).
+        The AT-SPI path below is unchanged and still guesses; the web path
+        does not have to."""
+        if rec.get("src") == "cdp":
+            res = self._cdp_act(rec, "scroll_to", None, mech)
+            mech["rung"] = 1 if res.get("ok") else "scroll"
+            mech["rung1_method"] = "cdp:" + str(res.get("method"))
+            if res.get("ok"):
+                self.mech_total["cdp_scroll_to"] += 1
+                self.mech_total["rung1"] += 1
+                mech["cdp_scroll"] = res.get("scroll")
+                return (f"scroll_to {label}", None, True, 1)
+            self.mech_total["cdp_action_failures"] += 1
+            mech["rung1_error"] = "cdp: %s" % res.get("err")
+            # falls through to the pointer-scroll loop below
         mech["rung"] = "scroll"
         target_role, target_label = rec["role"], rec["label"]
         cur_rect = rec["rect"]
