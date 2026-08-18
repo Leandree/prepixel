@@ -23,8 +23,16 @@ A spends it sleeping, so a loaded host buys B fewer captures inside the same
 4 s. As with the original sizing, the asymmetry runs against the condition
 under test, which is the safe direction.
 
+The iteration runs against a PINNED COPY of the driver, snapshotted into
+`<runs>/_driver/` at launch. An iteration takes hours; the next improvement
+gets built during those hours, and a driver edited underneath a running
+queue would silently give the last cells a different system than the first.
+The snapshot also means each iteration directory carries the exact code that
+produced it, next to the commit hash each cell already stamps.
+
 Resumable: a cell whose result.json already exists is skipped, so an
-interrupted iteration is restarted with the same command.
+interrupted iteration is restarted with the same command — and it resumes on
+the pinned driver, not on whatever the working tree has become.
 
 Usage:
   python run_dev_iteration.py --runs ~/dev/osworld-dev-iter1 [--workers 2]
@@ -34,6 +42,7 @@ import argparse
 import json
 import os
 import queue
+import shutil
 import subprocess
 import threading
 import time
@@ -41,9 +50,11 @@ import time
 HERE = os.path.dirname(os.path.abspath(__file__))
 OSWORLD = os.path.expanduser("~/dev/OSWorld")
 PY = os.path.expanduser("~/miniconda3/envs/osworld/bin/python")
-DRIVER = os.path.join(HERE, "run_condition.py")
-ANSWER = os.path.join(HERE, "answer_loop.py")
 TASKS = os.path.join(HERE, "tasks-dev.json")
+# Everything the driver reads at import or run time. prompt-template.md is in
+# the list because it IS the experiment's frozen text.
+PINNED = ("run_condition.py", "distill-osworld.py", "answer_loop.py",
+          "prompt-template.md", "judge-crop.mjs")
 
 # A fresh DesktopEnv boot is the one moment two workers genuinely compete
 # (image start, VM boot, server handshake). Staggering the second worker
@@ -58,7 +69,40 @@ def say(msg):
         print("[%s] %s" % (time.strftime("%H:%M:%S"), msg), flush=True)
 
 
-def run_cell(cell, runs, max_steps):
+def pin_driver(runs):
+    """Snapshot the driver so the queue cannot be changed under itself."""
+    d = os.path.join(runs, "_driver")
+    if os.path.exists(os.path.join(d, "run_condition.py")):
+        say("driver already pinned at %s (resuming on it)" % d)
+        return d
+    os.makedirs(d, exist_ok=True)
+    for f in PINNED:
+        shutil.copy2(os.path.join(HERE, f), os.path.join(d, f))
+    head = subprocess.run(["git", "-C", HERE, "rev-parse", "HEAD"],
+                          capture_output=True, text=True).stdout.strip()
+    dirty = subprocess.run(["git", "-C", HERE, "status", "--porcelain"] +
+                           [os.path.join(HERE, f) for f in PINNED],
+                           capture_output=True, text=True).stdout.strip()
+    json.dump({"commit": head, "uncommitted_changes": dirty or None,
+               "files": list(PINNED)},
+              open(os.path.join(d, "PINNED.json"), "w"), indent=1)
+    if dirty:
+        say("WARNING: pinned driver has uncommitted changes:\n%s" % dirty)
+    say("driver pinned at %s (commit %s)" % (d, head[:8]))
+    return d
+
+
+def pinned_commit(driver_dir):
+    """The pinned copy lives outside the repo, so the driver cannot read its
+    own commit with git — it is handed down through the environment."""
+    try:
+        return json.load(open(os.path.join(driver_dir,
+                                           "PINNED.json")))["commit"]
+    except Exception:
+        return "unknown"
+
+
+def run_cell(cell, runs, driver_dir, max_steps):
     domain, tid, cond = cell
     name = "%s-%s-%s" % (domain, tid[:8], cond)
     out = os.path.join(runs, name)
@@ -68,15 +112,19 @@ def run_cell(cell, runs, max_steps):
 
     say("START %s" % name)
     t0 = time.time()
+    env = dict(os.environ, CAMPAIGN_DRIVER_COMMIT=pinned_commit(driver_dir))
     with open(os.path.join(runs, name + ".log"), "wb") as dlog, \
             open(os.path.join(runs, name + "-answer.log"), "wb") as alog:
         drv = subprocess.Popen(
-            [PY, DRIVER, "--domain", domain, "--task-id", tid,
-             "--condition", cond, "--out", out, "--max-steps", str(max_steps)],
-            cwd=OSWORLD, stdout=dlog, stderr=subprocess.STDOUT)
+            [PY, os.path.join(driver_dir, "run_condition.py"),
+             "--domain", domain, "--task-id", tid, "--condition", cond,
+             "--out", out, "--max-steps", str(max_steps),
+             "--phase", "development"],
+            cwd=OSWORLD, env=env, stdout=dlog, stderr=subprocess.STDOUT)
         time.sleep(3)   # let the driver create <out> before the loop polls it
         ans = subprocess.Popen(
-            [PY, ANSWER, "--run", out, "--condition", cond],
+            [PY, os.path.join(driver_dir, "answer_loop.py"),
+             "--run", out, "--condition", cond],
             cwd=OSWORLD, stdout=alog, stderr=subprocess.STDOUT)
         drv.wait()
         # The answer loop is a poller with no termination signal of its own;
@@ -99,7 +147,7 @@ def run_cell(cell, runs, max_steps):
     return name, "ok"
 
 
-def worker(wid, q, runs, max_steps, results):
+def worker(wid, q, runs, driver_dir, max_steps, results):
     if wid:
         time.sleep(STAGGER_S * wid)
     while True:
@@ -108,7 +156,7 @@ def worker(wid, q, runs, max_steps, results):
         except queue.Empty:
             return
         try:
-            results.append(run_cell(cell, runs, max_steps))
+            results.append(run_cell(cell, runs, driver_dir, max_steps))
         except Exception as e:                       # noqa: BLE001
             say("ERROR %s: %s" % (cell, e))
             results.append(("-".join(cell), "exception"))
@@ -126,6 +174,7 @@ def main():
 
     runs = os.path.expanduser(a.runs)
     os.makedirs(runs, exist_ok=True)
+    driver_dir = pin_driver(runs)
     spec = json.load(open(TASKS))
     only = {d for d in a.only.split(",") if d}
 
@@ -144,8 +193,9 @@ def main():
     results, threads = [], []
     t0 = time.time()
     for wid in range(a.workers):
-        t = threading.Thread(target=worker,
-                             args=(wid, q, runs, a.max_steps, results))
+        t = threading.Thread(
+            target=worker,
+            args=(wid, q, runs, driver_dir, a.max_steps, results))
         t.start()
         threads.append(t)
     for t in threads:

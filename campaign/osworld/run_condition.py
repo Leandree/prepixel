@@ -69,7 +69,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 def _git_head():
     """The exact driver a cell was produced by. The manager's freeze rule —
     every final cell carries the freeze hash — only works if the hash is
-    stamped at run time, not transcribed afterwards."""
+    stamped at run time, not transcribed afterwards.
+
+    Dev iterations run from a pinned COPY outside the repo, where `git -C`
+    would find nothing, so the runner passes the commit it pinned; the git
+    call is the fallback for a driver invoked directly from the worktree."""
+    env = os.environ.get("CAMPAIGN_DRIVER_COMMIT")
+    if env:
+        return env
     try:
         return subprocess.check_output(
             ["git", "-C", HERE, "rev-parse", "HEAD"],
