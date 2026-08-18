@@ -1,0 +1,40 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I click in terminal: terminal->132x43 to change terminal size but after each reboot terminal size is set to default setting and I have to change it again. Help me set it permanently
+
+STEP 7 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.hotkey('ctrl', 'alt', 't')
+2. import pyautogui; pyautogui.click(842, 79)
+3. import pyautogui; pyautogui.click(796, 301)
+4. import pyautogui; pyautogui.click(1034, 320)
+5. import pyautogui
+pyautogui.click(1332, 193)
+pyautogui.hotkey('ctrl', 'a')
+pyautogui.typewrite('132', interval=0.05)
+pyautogui.press('tab')
+pyautogui.click(1524, 193)
+pyautogui.hotkey('ctrl', 'a')
+pyautogui.typewrite('43', interval=0.05)
+pyautogui.press('tab')
+6. import pyautogui; pyautogui.click(1770, 79)
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-runs-v2-p2/pilot-os-A/step-7/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-runs-v2-p2/pilot-os-A/step-4/screenshot.png
+/home/leandre/dev/osworld-runs-v2-p2/pilot-os-A/step-5/screenshot.png
+/home/leandre/dev/osworld-runs-v2-p2/pilot-os-A/step-6/screenshot.png
+
+ACTION SPACE — reply by writing the file /home/leandre/dev/osworld-runs-v2-p2/pilot-os-A/step-7/action.json as JSON:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels. Exactly one JSON object, no
+commentary in the file. Write the file with the Write tool, then stop.

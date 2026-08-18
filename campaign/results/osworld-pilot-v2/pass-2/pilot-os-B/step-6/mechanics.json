@@ -1,0 +1,12 @@
+{
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": true,
+  "method": "Value.currentValue"
+ },
+ "rung": 1,
+ "rung1_method": "Value.currentValue",
+ "settle_ms": 4825,
+ "settle_captures": 3,
+ "guard_ms": 23
+}

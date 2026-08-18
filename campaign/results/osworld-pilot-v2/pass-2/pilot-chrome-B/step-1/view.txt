@@ -1,0 +1,37 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 48,8,952,774 "New Tab - Google Chrome"
+e4 push-button 1802,27,30,35 "Minimise"
+e5 push-button 1842,27,30,35 "Restore"
+e6 push-button 1882,27,38,35 "Close"
+e7 push-button 76,27,28,41 "Search tabs"
+e8 page-tab 98,27,256,41 "New Tab" state=selected
+e9 push-button 312,33,28,28 "Close"
+e10 push-button 348,27,28,41 "New Tab"
+e11 push-button 70,73,39,34 "Back"
+e12 push-button 111,73,34,34 "Forward"
+e13 push-button 147,73,34,34 "Reload"
+e14 text 195,78,24,24 "Search icon"
+e15 entry 227,78,1565,24 "Address and search bar" state=focused
+e16 push-button 1800,78,24,24 "Bookmark this tab"
+e17 push-button 1845,73,34,34 "You"
+e18 push-button 1881,73,39,34 "Chrome"
+e19 toggle-button 0,0,99,27 "Activities" state=checked:false
+e20 menu 99,0,162,27 "Google Chrome"
+e21 menu 906,0,178,27 "Aug 18 17‎∶35"
+e22 menu 1814,0,106,27 "System"
+e23 push-button 0,840,70,8
+e24 push-button 62,33,8,815
+e25 push-button 0,33,70,64 "Google Chrome"
+e26 push-button 0,101,70,64 "Thunderbird Mail"
+e27 push-button 0,169,70,64 "Visual Studio Code"
+e28 push-button 0,237,70,64 "VLC media player"
+e29 push-button 0,305,70,64 "LibreOffice Writer"
+e30 push-button 0,373,70,64 "LibreOffice Calc"
+e31 push-button 0,441,70,64 "LibreOffice Impress"
+e32 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e33 push-button 0,577,70,64 "Files"
+e34 push-button 0,645,70,64 "Ubuntu Software"
+e35 push-button 0,713,70,64 "Help"
+e36 push-button 0,784,70,64 "Trash"
+e37 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

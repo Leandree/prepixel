@@ -1,0 +1,31 @@
+{
+ "task_id": "030eeff7-b492-4218-b312-701ec99ee0cc",
+ "domain": "chrome",
+ "condition": "A",
+ "model": "claude-code-subagent:sonnet (pilot v2 2026-08-18)",
+ "driver": "v2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 8,
+ "termination": "DONE",
+ "input_tokens": null,
+ "output_tokens": null,
+ "wall_clock_s": 421.4,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(35, 65)",
+  "import pyautogui; pyautogui.click(1898, 90)",
+  "import pyautogui; pyautogui.click(1640, 855)",
+  "import pyautogui; pyautogui.click(197, 277)",
+  "import pyautogui; pyautogui.click(900, 762)",
+  "import pyautogui; pyautogui.click(1294, 878)",
+  "import pyautogui; pyautogui.click(1195, 704)",
+  "DONE"
+ ]
+}

@@ -1,0 +1,101 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Can you enable the 'Do Not Track' feature in Chrome to enhance my online privacy?
+
+STEP 12 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. type "chrome://settings/privacy"
+2. click entry "Address and search bar"
+3. type "chrome://settings/privacy"
+4. click list-item "chrome://settings/privacy"
+5. type "Do Not Track"
+6. click link "Third-party cookies Third-party cookies are blocked in Incognito mode"
+7. toggle toggle-button "Send a ‘Do Not Track’ request with your browsing traffic" -> true
+8. click push-button "Confirm"
+9. toggle toggle-button "Send a ‘Do Not Track’ request with your browsing traffic" -> true
+10. click push-button "Reload"
+11. toggle toggle-button "Send a ‘Do Not Track’ request with your browsing traffic" -> true
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); `eN [offscreen] …` exists on the page
+but outside the viewport (scroll_to makes it actionable); `[pixels] …` is a
+DECLARED opaque region whose content the structure cannot read (crop shows
+its pixels); `[self-inconsistent: …]` means the structure declares content it
+does not expose (crop shows the region's pixels):
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Settings – Third-party cookies - Memory usage - 128 MB" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,88,24 "Chrome"
+e14 entry 291,78,1354,24 "Address and search bar"
+e15 push-button 1653,78,24,24 "Bookmark this tab"
+e16 push-button 1698,73,34,34 "You"
+e17 push-button 1737,73,183,34 "Relaunch to update"
+e18 document-web 70,114,1850,966 "Settings – Third-party cookies"
+e19 text 739,456,512,282 "Do Not Track"
+e20 text 739,456,512,52 "Do Not Track"
+e21 text 759,474,88,19 "Do Not Track"
+e22 text 739,508,512,161 "Enabling ""Do Not Track"" means that a request will be included with your browsing traffic. Any effect depends on whether a website responds to the request, and how the request is interpreted. For example, some websites may respond to this request by showing you ads that aren't based on other websites you've visited. Many websites will still collect and use your browsing data; for example to improve security, to provide content, services, ads and recommendations on their websites, and to generate reporting statistics."
+e23 text 759,510,463,136 "Enabling ""Do Not Track"" means that a request will be included with your browsing traffic. Any effect depends on whether a website responds to the request, and how the request is interpreted. For example, some websites may respond to this request by showing you ads that aren't based on other websites you've visited. Many websites will still collect and use your browsing data; for example to improve security, to provide content, services, ads and recommendations on their websites, and to generate reporting statistics."
+e24 link 759,630,460,36 "Learn more about Do Not Track"
+e25 text 759,630,460,36 "Learn more"
+e26 push-button 1074,685,75,37 "Cancel"
+e27 push-button 1156,685,79,37 "Confirm"
+e28 toggle-button 0,0,99,27 "Activities" state=checked:false
+e29 menu 99,0,162,27 "Google Chrome"
+e30 menu 906,0,178,27 "Aug 18 17‎∶56"
+e31 menu 1814,0,106,27 "System"
+e32 push-button 0,840,70,8
+e33 push-button 62,33,8,815
+e34 push-button 0,33,70,64 "Google Chrome"
+e35 push-button 0,101,70,64 "Thunderbird Mail"
+e36 push-button 0,169,70,64 "Visual Studio Code"
+e37 push-button 0,237,70,64 "VLC media player"
+e38 push-button 0,305,70,64 "LibreOffice Writer"
+e39 push-button 0,373,70,64 "LibreOffice Calc"
+e40 push-button 0,441,70,64 "LibreOffice Impress"
+e41 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e42 push-button 0,577,70,64 "Files"
+e43 push-button 0,645,70,64 "Ubuntu Software"
+e44 push-button 0,713,70,64 "Help"
+e45 push-button 0,784,70,64 "Trash"
+e46 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+[diff inapplicable: full view re-emitted]
+[act-guard] previous action: UNVERIFIED (asked checked=True, but the target element is no longer in the view)
+Full current view with ids: /home/leandre/dev/osworld-runs-v2-p2/pilot-chrome-B/step-12/view.txt
+(Read that file if you need an element not shown above.) Previous views (up
+to 3, oldest first) are at:
+/home/leandre/dev/osworld-runs-v2-p2/pilot-chrome-B/step-9/view.txt
+/home/leandre/dev/osworld-runs-v2-p2/pilot-chrome-B/step-10/view.txt
+/home/leandre/dev/osworld-runs-v2-p2/pilot-chrome-B/step-11/view.txt
+
+ACTION SCHEMA — reply by writing the file /home/leandre/dev/osworld-runs-v2-p2/pilot-chrome-B/step-12/action.json as ONE JSON object.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll_to","target":"e19"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+Exactly one JSON object, no commentary in the file. Write the file with the
+Write tool, then stop.

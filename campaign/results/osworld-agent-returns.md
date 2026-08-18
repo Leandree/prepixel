@@ -1,5 +1,65 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-18 — BLOCKED — pilot v2 pass 2: our own view lied, and the answering agent can read outside its channel
+
+Ran the same four runs a second time, same driver commit, nothing changed
+(`campaign/results/osworld-pilot-v2/pass-2/`). Pass 1 untouched.
+
+| run | pass 1 | pass 2 | v1 |
+|---|---|---|---|
+| os-A | success, 7 | success, 7 | success, 7 |
+| os-B | success, 7 | success, 8 | success, 9 |
+| chrome-A | FAIL, 5 | success, 8 ⚠ | success, 10 |
+| chrome-B | FAIL, 8 | success, 13 ⚠ | success, 14 |
+
+The os task reproduces cleanly (same route, ±1 step). The chrome task swung
+0/2 → 2/2 with identical code, which settles the question I flagged
+yesterday: the v1→v2 chrome delta was trajectory variance, not the channel.
+
+**1. The adapter was lying about toggle state, and it cost a run four
+steps.** Chrome carries its settings toggles' on-ness in `STATE_PRESSED`,
+not `STATE_CHECKED`. v2 asserted `checked:false` for any checkable role
+lacking `checked`, so the Do Not Track toggle read `checked:false,pressed`
+while ENABLED. chrome-B pass 2, steps 7-12: toggle → confirm (now ON, view
+says `checked:false,pressed`) → model believes it is off and re-toggles (now
+OFF) → reload → toggle → confirm (ON again). `pressed` tracks the real state
+exactly; only our reading of it was wrong. This is the paper's own category
+— a view that misreports state — landing on us, and the act-guard is what
+exposed it by refusing to call "something moved" a success. Fixed: for a
+checkable role with no `checked`, the state comes from `pressed` when
+present; absence of both still means off. Verified on Chrome-on,
+Chrome-off, GTK-checked, GTK-unchecked. The fix is committed AFTER the pass,
+so the traces preserve the defect.
+
+**2. Both chrome "successes" are contaminated — I am not counting them.**
+Three ways the answering subagent reached outside its channel, all in this
+pass: chrome-B step 13 recovered only by opening `screenshot.png` and
+judging the toggle by colour (pixels, in condition B); chrome-A step 5 ran a
+**web search** to learn where the setting lives; and chrome-B step 6 read
+**pass 1's own failed trace plus the v1 traces**, concluded "prior runs
+converge on Third-party cookies", and clicked it — cross-run and
+cross-condition leakage, i.e. the answer key. A fourth door is open and
+unused: the evaluator JSON for every task sits in
+`~/dev/OSWorld/evaluation_examples/examples/`.
+
+This is not a driver bug, it is what "run the agent as a Claude Code
+subagent" means: a general-purpose toolbelt and a whole filesystem. I am
+BLOCKED on the campaign until you rule, because every cell would carry this.
+Proposed, needing your approval since it touches the frozen wrapper:
+
+- **inline the observation** rather than passing a path — condition B is
+  pure text, so its agent can run with NO tools and just return the JSON;
+- **isolate A's image** in a per-step directory containing nothing else (A
+  genuinely needs an image read);
+- **one wrapper sentence, identical in both conditions** — use only what
+  this prompt gives you, no web, no other files — plus a mechanical scan of
+  each trace for out-of-path reads, reported per run.
+
+Detect-and-constrain, not enforcement: a subscription subagent cannot be
+filesystem-sandboxed. This is now the strongest argument for the
+API-credits track, where the reference agent has exactly one tool: the
+action space.
+
 ## 2026-08-18 — DECISION NEEDED — driver v2 implemented, acceptance run, pilot v2 done; two design calls are yours
 
 Driver v2 per `manager_orders/DRIVER-V2-SPEC.md` §2.1–2.6 is implemented and

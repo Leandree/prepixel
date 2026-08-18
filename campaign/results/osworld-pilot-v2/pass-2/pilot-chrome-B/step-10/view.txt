@@ -1,0 +1,103 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Settings – Third-party cookies - Memory usage - 77.3 MB" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,88,24 "Chrome"
+e14 entry 291,78,1354,24 "Address and search bar"
+e15 push-button 1653,78,24,24 "Bookmark this tab"
+e16 push-button 1698,73,34,34 "You"
+e17 push-button 1737,73,183,34 "Relaunch to update"
+e18 document-web 70,114,1850,966 "Settings – Third-party cookies"
+e19 text 137,129,183,26 "Settings"
+e20 text 137,129,85,26 "Settings"
+e21 entry 683,130,624,24 "Search settings"
+e22 push-button 1307,128,28,28 "Clear search"
+e23 menu 70,178,250,634 "You and Google"
+e24 [pixels] image 94,188,20,20
+e25 menu-item 71,218,247,40 "Autofill and passwords"
+e26 [pixels] image 94,228,20,20
+e27 menu-item 71,258,247,40 "Privacy and security"
+e28 [pixels] image 94,268,20,20
+e29 menu-item 71,298,247,40 "Performance"
+e30 [pixels] image 94,308,20,20
+e31 menu-item 71,338,247,40 "Appearance"
+e32 [pixels] image 94,348,20,20
+e33 menu-item 71,378,247,40 "Search engine"
+e34 [pixels] image 94,388,20,20
+e35 menu-item 71,418,247,40 "Default browser"
+e36 [pixels] image 94,428,20,20
+e37 menu-item 71,458,247,40 "On start-up"
+e38 [pixels] image 94,468,20,20
+e39 menu-item 71,515,247,40 "Languages"
+e40 [pixels] image 94,525,20,20
+e41 menu-item 71,555,247,40 "Downloads"
+e42 [pixels] image 94,565,20,20
+e43 menu-item 71,595,247,40 "Accessibility"
+e44 [pixels] image 94,605,20,20
+e45 menu-item 71,635,247,40 "System"
+e46 [pixels] image 94,645,20,20
+e47 menu-item 71,675,247,40 "Reset settings"
+e48 [pixels] image 94,685,20,20
+e49 menu-item 71,732,247,40 "Extensions"
+e50 [pixels] image 94,742,20,20
+e51 menu-item 71,772,247,40 "About Chrome"
+e52 [pixels] image 94,782,20,20
+e53 text 647,170,681,1045 "No sites added"
+e54 push-button 657,182,33,32 "Third-party cookies sub-page back button"
+e55 text 699,187,369,21 "Third-party cookies"
+e56 text 699,189,124,17 "Third-party cookies"
+e57 push-button 1083,182,33,32 "Learn more about: Third-party cookies"
+e58 [pixels] image 1127,190,17,16
+e59 text 1147,186,161,24 "Search"
+e60 entry 1147,184,161,24 "Search"
+e61 text 647,468,681,49 "Manage the types of information that sites can use to track you as you browse."
+e62 text 667,486,461,15 "Manage the types of information that sites can use to track you as you browse."
+e63 radio-button 667,532,17,17 "Allow third-party cookies" state=checked:false
+e64 push-button 1279,522,37,37 "More about allowing third-party cookies"
+e65 radio-button 667,580,17,17 "Block third-party cookies in Incognito mode" state=checked:true
+e66 push-button 1279,571,37,37 "More about blocking third-party cookies in Incognito mode" state=expanded
+e67 [pixels] image 703,635,21,21
+e68 text 723,625,585,41 "Sites can use cookies to improve your browsing experience, for example to keep you signed in or to remember items in your shopping basket"
+e69 text 739,627,561,36 "Sites can use cookies to improve your browsing experience, for example to keep you signed in or to remember items in your shopping basket"
+e70 [pixels] image 703,699,21,21
+e71 text 723,678,585,62 "While in Incognito, sites can't use your cookies to see your browsing activity across sites, even related sites. Your browsing activity isn't used for things like personalising ads. Features on some sites may not work."
+e72 text 739,680,569,57 "While in Incognito, sites can't use your cookies to see your browsing activity across sites, even related sites. Your browsing activity isn't used for things like personalising ads. Features on some sites may not work."
+e73 radio-button 667,769,17,17 "Block third-party cookies" state=checked:false
+e74 push-button 1279,760,37,37 "More about blocking third-party cookies"
+e75 text 647,802,681,45 "Advanced"
+e76 text 667,820,58,16 "Advanced"
+e77 toggle-button 1281,870,27,17 "Send a ‘Do Not Track’ request with your browsing traffic" state=checked:false,focused
+e78 link 1283,930,33,33 "See all site data and permissions"
+e79 text 667,970,641,65 "Sites allowed to use third-party cookies"
+e80 text 667,1004,232,16 "Sites allowed to use third-party cookies"
+e81 text 667,1002,562,105 "Affects the sites listed here. Inserting “[*.]” before a domain name creates an exception for the entire domain. For example, adding “[*.]google.co.uk” means that third-party cookies can also be active for mail.google.co.uk, because it’s part of google.co.uk."
+e82 text 667,1036,546,56 "Affects the sites listed here. Inserting “[*.]” before a domain name creates an exception for the entire domain. For example, adding “[*.]google.co.uk” means that third-party cookies can also be active for mail.google.co.uk, because it’s part of google.co.uk."
+e83 push-button 1240,1042,68,37 "Add site to allowed list"
+e84 text 1262,1052,24,16 "Add"
+e85 toggle-button 0,0,99,27 "Activities" state=checked:false
+e86 menu 99,0,162,27 "Google Chrome"
+e87 menu 906,0,178,27 "Aug 18 17‎∶51"
+e88 menu 1814,0,106,27 "System"
+e89 push-button 0,840,70,8
+e90 push-button 62,33,8,815
+e91 push-button 0,33,70,64 "Google Chrome"
+e92 push-button 0,101,70,64 "Thunderbird Mail"
+e93 push-button 0,169,70,64 "Visual Studio Code"
+e94 push-button 0,237,70,64 "VLC media player"
+e95 push-button 0,305,70,64 "LibreOffice Writer"
+e96 push-button 0,373,70,64 "LibreOffice Calc"
+e97 push-button 0,441,70,64 "LibreOffice Impress"
+e98 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e99 push-button 0,577,70,64 "Files"
+e100 push-button 0,645,70,64 "Ubuntu Software"
+e101 push-button 0,713,70,64 "Help"
+e102 push-button 0,784,70,64 "Trash"
+e103 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

@@ -1,0 +1,96 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I click in terminal: terminal->132x43 to change terminal size but after each reboot terminal size is set to default setting and I have to change it again. Help me set it permanently
+
+STEP 4 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. key ctrl+alt+t
+2. click toggle-button "Menu"
+3. click push-button "Preferences"
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); `eN [offscreen] …` exists on the page
+but outside the viewport (scroll_to makes it actionable); `[pixels] …` is a
+DECLARED opaque region whose content the structure cannot read (crop shows
+its pixels); `[self-inconsistent: …]` means the structure declares content it
+does not expose (crop shows the region's pixels):
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 234,33,786,533 "user@user-virtual-machine: ~"
+e4 push-button 874,64,34,30 "Minimize"
+e5 push-button 914,64,34,30 "Maximize"
+e6 push-button 954,64,34,30 "Close"
+e7 push-button 783,56,36,46
+e8 toggle-button 825,56,36,46 "Menu" state=checked:false
+e9 text 511,70,232,17 "user@user-virtual-machine: ~"
+e10 push-button 266,56,36,46
+e11 terminal 260,103,722,434 "Terminal"
+e12 scroll-bar 982,103,12,434 value="0.0"
+e13 text 968,33,852,675 "Preferences – General"
+e14 push-button 1714,64,34,30 "Minimize"
+e15 push-button 1754,64,34,30 "Close"
+e16 text 1303,70,181,17 "Preferences – General"
+e17 push-button 1000,56,65,46 "Help"
+e18 list-item 995,150,151,50 "General" state=selected,focused
+e19 list-item 995,200,151,50 "Shortcuts"
+e20 list-item 995,296,151,50 "Unnamed"
+e21 [pixels] icon 1080,304,16,34
+e22 check-box 1159,115,623,22 "Enable mnemonics (such as Alt+F to open the File menu)" state=checked:false
+e23 check-box 1159,143,623,22 "Enable the menu accelerator key (F10 by default)" state=checked:true
+e24 combo-box 1323,251,94,34 "Last"
+e25 text 1159,251,152,34 "New tab position:"
+e26 combo-box 1323,211,94,34 "Window"
+e27 text 1159,211,152,34 "Open new terminals in:"
+e28 combo-box 1323,171,94,34 "Dark"
+e29 text 1159,171,152,34 "Theme variant:"
+e30 toggle-button 0,0,99,27 "Activities" state=checked:false
+e31 menu 99,0,116,27 "Terminal"
+e32 menu 906,0,178,27 "Aug 18 17‎∶23"
+e33 menu 1814,0,106,27 "System"
+e34 push-button 0,908,70,8
+e35 push-button 62,33,8,883
+e36 push-button 0,33,70,64 "Google Chrome"
+e37 push-button 0,101,70,64 "Thunderbird Mail"
+e38 push-button 0,169,70,64 "Visual Studio Code"
+e39 push-button 0,237,70,64 "VLC media player"
+e40 push-button 0,305,70,64 "LibreOffice Writer"
+e41 push-button 0,373,70,64 "LibreOffice Calc"
+e42 push-button 0,441,70,64 "LibreOffice Impress"
+e43 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e44 push-button 0,577,70,64 "Files"
+e45 push-button 0,645,70,64 "Ubuntu Software"
+e46 push-button 0,713,70,64 "Help"
+e47 push-button 0,784,70,64 "Terminal"
+e48 push-button 0,852,70,64 "Trash"
+e49 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+[diff inapplicable: full view re-emitted]
+[act-guard] previous action: CONFIRMED (element no longer present — view changed)
+Full current view with ids: /home/leandre/dev/osworld-runs-v2-p2/pilot-os-B/step-4/view.txt
+(Read that file if you need an element not shown above.) Previous views (up
+to 3, oldest first) are at:
+/home/leandre/dev/osworld-runs-v2-p2/pilot-os-B/step-1/view.txt
+/home/leandre/dev/osworld-runs-v2-p2/pilot-os-B/step-2/view.txt
+/home/leandre/dev/osworld-runs-v2-p2/pilot-os-B/step-3/view.txt
+
+ACTION SCHEMA — reply by writing the file /home/leandre/dev/osworld-runs-v2-p2/pilot-os-B/step-4/action.json as ONE JSON object.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll_to","target":"e19"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+Exactly one JSON object, no commentary in the file. Write the file with the
+Write tool, then stop.

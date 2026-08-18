@@ -123,7 +123,16 @@ def _states(node, role):
         if _get(node, NS_STATE, k, "") == "true":
             st[k] = True
     if role in CHECKABLE and "checked" not in st:
-        st["checked"] = False
+        # A toggle's on-ness may ride on STATE_PRESSED instead of
+        # STATE_CHECKED — Chrome does exactly this for its settings toggles.
+        # Measured (pilot v2 pass 2, chrome-B): the Do Not Track toggle read
+        # `checked:false,pressed` while ENABLED and `checked:false` while
+        # disabled, i.e. `pressed` alone carried the state. Asserting
+        # checked:false there is our own view lying, and it cost that run
+        # four steps: the model re-toggled a setting that was already on.
+        # Absence of BOTH is still evidence of off (a GTK check-box exposes
+        # neither when unchecked).
+        st["checked"] = bool(st.get("pressed"))
     return st
 
 

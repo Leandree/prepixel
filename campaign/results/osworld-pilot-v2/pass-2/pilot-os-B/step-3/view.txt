@@ -1,0 +1,42 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 234,33,786,533 "user@user-virtual-machine: ~"
+e4 push-button 874,64,34,30 "Minimize"
+e5 push-button 914,64,34,30 "Maximize"
+e6 push-button 954,64,34,30 "Close"
+e7 push-button 783,56,36,46
+e8 toggle-button 825,56,36,46 "Menu" state=checked:true
+e9 text 511,70,232,17 "user@user-virtual-machine: ~"
+e10 push-button 266,56,36,46
+e11 terminal 260,103,722,434 "Terminal"
+e12 scroll-bar 982,103,12,434 value="0.0"
+e13 push-button 751,127,57,34 "Zoom Out" state=focused
+e14 push-button 808,127,70,34 "100%"
+e15 push-button 878,127,58,34 "Zoom In"
+e16 push-button 751,171,185,26 "New Window"
+e17 push-button 751,197,185,26 "Full Screen"
+e18 check-box 751,230,185,26 "Read-Only" state=checked:false
+e19 push-button 751,256,185,26 "Advanced"
+e20 push-button 751,289,185,26 "Preferences"
+e21 push-button 751,315,185,26 "Help"
+e22 push-button 751,341,185,26 "About"
+e23 toggle-button 0,0,99,27 "Activities" state=checked:false
+e24 menu 99,0,116,27 "Terminal"
+e25 menu 906,0,178,27 "Aug 18 17‎∶22"
+e26 menu 1814,0,106,27 "System"
+e27 push-button 0,908,70,8
+e28 push-button 62,33,8,883
+e29 push-button 0,33,70,64 "Google Chrome"
+e30 push-button 0,101,70,64 "Thunderbird Mail"
+e31 push-button 0,169,70,64 "Visual Studio Code"
+e32 push-button 0,237,70,64 "VLC media player"
+e33 push-button 0,305,70,64 "LibreOffice Writer"
+e34 push-button 0,373,70,64 "LibreOffice Calc"
+e35 push-button 0,441,70,64 "LibreOffice Impress"
+e36 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e37 push-button 0,577,70,64 "Files"
+e38 push-button 0,645,70,64 "Ubuntu Software"
+e39 push-button 0,713,70,64 "Help"
+e40 push-button 0,784,70,64 "Terminal"
+e41 push-button 0,852,70,64 "Trash"
+e42 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
