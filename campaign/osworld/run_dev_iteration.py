@@ -1,0 +1,160 @@
+#!/usr/bin/env python3
+"""Development-iteration runner: the 20 dev tasks x both conditions, two VMs
+at a time (DEV-PHASE-PLAN.md §3).
+
+Parallelism is bounded by the host, not by taste: the docker provider gives
+each VM RAM_SIZE=4G / CPU_CORES=4, this host has 6 cores and ~10 GB free, so
+two concurrent VMs fit and three do not. Port allocation is safe to race —
+`DockerProvider.start_emulator` allocates VNC/server/chromium/VLC ports and
+starts the container while holding a FileLock — and the qcow2 is mounted
+read-only, each container writing its own copy-on-write layer.
+
+The queue is ordered A1,B1,A2,B2,… so the two cells in flight are normally
+the two conditions of the SAME task: contention is then symmetric between
+the conditions, which is what matters for a measured comparison. When one
+condition finishes early the pair desynchronises and the mix stays roughly
+balanced; the honest statement, recorded in the returns file, is that
+dev-phase wall-clock is measured under 2-way contention and is NOT
+comparable to batch-1's serial wall-clock. Success and token cost — the two
+numbers that decide the freeze — do not depend on host load.
+
+Contention does touch one budget: B spends SETTLE_BUDGET re-capturing while
+A spends it sleeping, so a loaded host buys B fewer captures inside the same
+4 s. As with the original sizing, the asymmetry runs against the condition
+under test, which is the safe direction.
+
+Resumable: a cell whose result.json already exists is skipped, so an
+interrupted iteration is restarted with the same command.
+
+Usage:
+  python run_dev_iteration.py --runs ~/dev/osworld-dev-iter1 [--workers 2]
+                              [--max-steps 15] [--only chrome,os]
+"""
+import argparse
+import json
+import os
+import queue
+import subprocess
+import threading
+import time
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+OSWORLD = os.path.expanduser("~/dev/OSWorld")
+PY = os.path.expanduser("~/miniconda3/envs/osworld/bin/python")
+DRIVER = os.path.join(HERE, "run_condition.py")
+ANSWER = os.path.join(HERE, "answer_loop.py")
+TASKS = os.path.join(HERE, "tasks-dev.json")
+
+# A fresh DesktopEnv boot is the one moment two workers genuinely compete
+# (image start, VM boot, server handshake). Staggering the second worker
+# keeps the boots from overlapping without slowing anything else down.
+STAGGER_S = 45
+
+print_lock = threading.Lock()
+
+
+def say(msg):
+    with print_lock:
+        print("[%s] %s" % (time.strftime("%H:%M:%S"), msg), flush=True)
+
+
+def run_cell(cell, runs, max_steps):
+    domain, tid, cond = cell
+    name = "%s-%s-%s" % (domain, tid[:8], cond)
+    out = os.path.join(runs, name)
+    if os.path.exists(os.path.join(out, "result.json")):
+        say("SKIP  %s (result.json present)" % name)
+        return name, "skipped"
+
+    say("START %s" % name)
+    t0 = time.time()
+    with open(os.path.join(runs, name + ".log"), "wb") as dlog, \
+            open(os.path.join(runs, name + "-answer.log"), "wb") as alog:
+        drv = subprocess.Popen(
+            [PY, DRIVER, "--domain", domain, "--task-id", tid,
+             "--condition", cond, "--out", out, "--max-steps", str(max_steps)],
+            cwd=OSWORLD, stdout=dlog, stderr=subprocess.STDOUT)
+        time.sleep(3)   # let the driver create <out> before the loop polls it
+        ans = subprocess.Popen(
+            [PY, ANSWER, "--run", out, "--condition", cond],
+            cwd=OSWORLD, stdout=alog, stderr=subprocess.STDOUT)
+        drv.wait()
+        # The answer loop is a poller with no termination signal of its own;
+        # the driver finishing IS the signal. Kill by this exact PID only.
+        ans.terminate()
+        try:
+            ans.wait(timeout=20)
+        except subprocess.TimeoutExpired:
+            ans.kill()
+
+    dt = time.time() - t0
+    rj = os.path.join(out, "result.json")
+    if not os.path.exists(rj):
+        say("FAILED %s (no result.json, driver rc=%s, %.0fs)"
+            % (name, drv.returncode, dt))
+        return name, "no-result"
+    r = json.load(open(rj))
+    say("DONE  %s success=%s steps=%s term=%s (%.0fs)"
+        % (name, r.get("success"), r.get("steps"), r.get("termination"), dt))
+    return name, "ok"
+
+
+def worker(wid, q, runs, max_steps, results):
+    if wid:
+        time.sleep(STAGGER_S * wid)
+    while True:
+        try:
+            cell = q.get_nowait()
+        except queue.Empty:
+            return
+        try:
+            results.append(run_cell(cell, runs, max_steps))
+        except Exception as e:                       # noqa: BLE001
+            say("ERROR %s: %s" % (cell, e))
+            results.append(("-".join(cell), "exception"))
+        finally:
+            q.task_done()
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--runs", required=True)
+    ap.add_argument("--workers", type=int, default=2)
+    ap.add_argument("--max-steps", type=int, default=15)
+    ap.add_argument("--only", default="", help="comma-separated domain filter")
+    a = ap.parse_args()
+
+    runs = os.path.expanduser(a.runs)
+    os.makedirs(runs, exist_ok=True)
+    spec = json.load(open(TASKS))
+    only = {d for d in a.only.split(",") if d}
+
+    q = queue.Queue()
+    n = 0
+    for domain in sorted(spec["tasks"]):
+        if only and domain not in only:
+            continue
+        for tid in spec["tasks"][domain]:
+            for cond in ("A", "B"):     # A then B, adjacent in the queue
+                q.put((domain, tid, cond))
+                n += 1
+    say("queue: %d cells, %d workers, max_steps=%d, runs=%s"
+        % (n, a.workers, a.max_steps, runs))
+
+    results, threads = [], []
+    t0 = time.time()
+    for wid in range(a.workers):
+        t = threading.Thread(target=worker,
+                             args=(wid, q, runs, a.max_steps, results))
+        t.start()
+        threads.append(t)
+    for t in threads:
+        t.join()
+
+    say("ITERATION COMPLETE in %.0f min" % ((time.time() - t0) / 60))
+    for name, status in sorted(results):
+        say("  %-28s %s" % (name, status))
+
+
+if __name__ == "__main__":
+    main()

@@ -65,6 +65,18 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
+
+def _git_head():
+    """The exact driver a cell was produced by. The manager's freeze rule —
+    every final cell carries the freeze hash — only works if the hash is
+    stamped at run time, not transcribed afterwards."""
+    try:
+        return subprocess.check_output(
+            ["git", "-C", HERE, "rev-parse", "HEAD"],
+            stderr=subprocess.DEVNULL).decode().strip()
+    except Exception:
+        return "unknown"
+
 spec = importlib.util.spec_from_file_location(
     "distill_osworld", os.path.join(HERE, "distill-osworld.py"))
 distill_osworld = importlib.util.module_from_spec(spec)
@@ -774,6 +786,8 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--max-steps", type=int, default=15)
     ap.add_argument("--osworld", default=os.path.expanduser("~/dev/OSWorld"))
+    ap.add_argument("--phase", default="development",
+                    choices=["development", "campaign"])
     ap.add_argument("--step-timeout", type=int, default=1200,
                     help="seconds to wait for action.json before infra_failure")
     args = ap.parse_args()
@@ -953,7 +967,12 @@ def main():
         "task_id": args.task_id, "domain": args.domain,
         "condition": args.condition,
         "model": os.environ.get("CAMPAIGN_MODEL", "UNSET"),
-        "driver": "v2",
+        "driver": "v3-dev",
+        # Defaults to "development" on purpose: a campaign cell mislabelled as
+        # dev is a bookkeeping nuisance, a dev cell mislabelled as campaign is
+        # a corrupted record. The final run passes --phase campaign explicitly.
+        "phase": args.phase,
+        "driver_commit": _git_head(),
         "success": bool(score) if score is not None else False,
         "score_raw": score, "steps": len(actions), "termination": term,
         "input_tokens": None, "output_tokens": None,   # filled by orchestrator
