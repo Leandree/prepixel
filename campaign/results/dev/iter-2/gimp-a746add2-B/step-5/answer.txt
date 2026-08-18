@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"escape","memo":"Filters menu navigation by mnemonic ('l') did nothing visible and menu items aren't exposed in a11y tree. Pressed Escape to close any open menu. NEXT: click on the image canvas area (e95/canvas ~900,600) if focus is lost, then press '/' to open GIMP's 'Search and Run a Command', type 'Vignette', press Enter to open the Vignette filter dialog."}
+```

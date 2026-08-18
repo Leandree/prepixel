@@ -1,0 +1,37 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find Dota 2 game and add all DLC to cart.
+
+STEP 6 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(200, 47)
+2. import pyautogui; pyautogui.click(460, 47); pyautogui.sleep(1); pyautogui.hotkey('ctrl','l'); pyautogui.sleep(0.5); pyautogui.write('https://store.steampowered.com/app/570/Dota_2/'); pyautogui.press('enter')
+3. import pyautogui; pyautogui.moveTo(1750, 600); pyautogui.scroll(-1200); pyautogui.sleep(1)
+4. import pyautogui; pyautogui.click(1381, 1030); pyautogui.sleep(1); pyautogui.moveTo(960, 600); pyautogui.scroll(500); pyautogui.sleep(1)
+5. import pyautogui; pyautogui.moveTo(960, 600); pyautogui.scroll(-300); pyautogui.sleep(1.5)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+At top of Dota 2 store page (cookie banner gone). Scroll sensitivity: -1200 = full page bottom. Now stepping down -300 at a time hunting for 'Downloadable Content for this game' section + 'Add all DLC to Cart' button. If overshoot past reviews, scroll up in +150 steps.
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter2/chrome-121ba48f-A/_pixels/step-6/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter2/chrome-121ba48f-A/_pixels/step-3/screenshot.png
+/home/leandre/dev/osworld-dev-iter2/chrome-121ba48f-A/_pixels/step-4/screenshot.png
+/home/leandre/dev/osworld-dev-iter2/chrome-121ba48f-A/_pixels/step-5/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

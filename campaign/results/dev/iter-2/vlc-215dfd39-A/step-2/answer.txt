@@ -1,0 +1,5 @@
+VLC is open with the cone splash visible. Opening the Tools menu to reach Preferences.
+
+```json
+{"action": "import pyautogui; pyautogui.click(945, 373)", "memo": "VLC open at ~(650-1245, 330-790). Clicked Tools menu. Next: click 'Preferences' (bottom of menu, ~Ctrl+P), then in Interface panel uncheck 'Show cone icon' under Look and feel, then Save."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(48, 13); pyautogui.sleep(1.5); pyautogui.write('vlc'); pyautogui.sleep(1.5); pyautogui.press('enter')", "memo": "Launching VLC from Activities search. Next: wait for VLC window, then Tools > Preferences > All settings > Playlist > uncheck 'Play and exit' (play-and-exit=0), then Save."}

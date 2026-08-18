@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1210, 903); pyautogui.sleep(2)", "memo": "Playlist pane confirmed: 'Play and exit' checkbox at (906,395) is UNCHECKED (correct = no auto-close). Clicked Save (1210,903) to write vlcrc. Next: verify Preferences dialog closed and VLC main window is back; if dialog still open, re-check. Then task is DONE."}

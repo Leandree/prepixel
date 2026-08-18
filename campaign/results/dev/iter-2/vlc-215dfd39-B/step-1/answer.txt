@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+p","memo":"Opened VLC Preferences (Ctrl+P). Goal: disable qt-bgcone. Next: switch to 'All' (Advanced) settings radio at bottom-left, then Interface > Main interfaces > Qt > uncheck 'Display background cone or art'. Then Save."}
+```

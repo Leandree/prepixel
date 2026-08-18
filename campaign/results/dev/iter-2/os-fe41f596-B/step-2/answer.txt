@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"settings","memo":"Typed 'settings' in Activities overview search. Next: press Enter (or click the Settings result) to launch GNOME Settings, then navigate to Power > 'Show Battery Percentage' toggle and turn it on."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e75","memo":"Clicked 'All' radio (e75) in fresh Preferences dialog. NEXT: verify tree view appeared (Advanced Preferences with tree list). If yes, navigate Interface > Main interfaces > Qt and uncheck 'Display background cone or art', then Save. If still Simple layout, wait one step for refresh."}
+```

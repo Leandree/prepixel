@@ -1,0 +1,1 @@
+{"action": "click", "target": "e75", "memo": "Clicked 'All' radio in VLC Preferences to show advanced settings. Next: navigate tree to Interface > Main interfaces > Qt, uncheck 'Display background cone or art' (qt-bgcone), then Save."}

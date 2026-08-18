@@ -1,0 +1,1099 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find Dota 2 game and add all DLC to cart.
+
+STEP 5 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click page-tab "Dota 2"
+2. click page-tab "Welcome to Steam - Memory usage - 109 MB"
+3. click static "Accept All"
+4. set_value combo-box "Search the store" := "Dota 2"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Typed 'Dota 2' into Steam store search box e67. Next: press Enter to search (or click search button), then open the Dota 2 store page (app/570), then find 'Add all DLC to Cart' button.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 02‎∶11"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Dota 2 - Memory usage - 70.2 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 101 MB" state=selected
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1399,24 "Address and search bar"
+e34 push-button 1634,78,24,24 "Bookmark this tab"
+e35 push-button 1679,73,34,34 "You"
+e36 push-button 1718,73,202,34 "New Chrome available"
+e37 link -408,343,756,434
+~e38 link 1628,343,756,434 "LIVE"
+e39 text 1592,103,334,207 "Can't update Chrome"
+e40 banner 70,114,1836,104
+e41 link 388,174,145,17 "Link to the Steam Homepage"
+e42 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+e43 navigation 588,114,335,73 "Global Menu"
+e44 link 588,114,65,73 "STORE"
+e45 link 653,114,114,73 "COMMUNITY"
+e46 link 767,114,69,68 "About"
+e47 link 836,114,87,68 "SUPPORT"
+e48 navigation 1340,120,248,24 "Account Menu"
+e49 link 1340,120,110,21 "Install Steam"
+e50 link 1456,125,42,14 "sign in"
+e51 text 1498,125,15,14 "|"
+e52 text 1518,125,47,14 "language"
+e53 navigation 380,218,1216,46 "Store menu"
+e54 push-button 380,218,83,46 "Browse"
+e55 presentation 439,234,14,14
+e56 push-button 463,218,152,46 "Recommendations"
+e57 presentation 591,234,14,14
+e58 push-button 615,218,104,46 "Categories"
+e59 presentation 695,234,14,14
+e60 push-button 719,218,97,46 "Hardware"
+e61 presentation 792,234,14,14
+e62 push-button 816,218,117,46 "Ways to Play"
+e63 presentation 909,234,14,14
+e64 push-button 933,218,137,46 "Special Sections"
+e65 presentation 1046,234,14,14
+e66 search 1111,224,480,34
+~e67 combo-box 1111,224,446,34 "Search the store" value="Dota 2" state=focused
+~e68 push-button 1531,232,18,18 "Clear search term"
+~e69 [pixels] image 1533,234,14,14
+e70 push-button 1557,224,34,34
+e71 [pixels] image 1565,232,18,18 alt=Search
+~e72 text 1096,281,86,16 "Search results"
+~e73 link 1096,303,485,56 "Dota 2Free" [occluded]
+~e74 [pixels] image 1096,303,148,56
+~e75 text 1254,315,41,16 "Dota 2"
+~e76 text 1254,334,22,14 "Free"
+~e77 link 1096,365,485,56 "Dota 2 Player ProfilesFree" [occluded]
+~e78 [pixels] image 1096,365,148,56
+~e79 text 1254,377,132,16 "Dota 2 Player Profiles"
+~e80 text 1254,396,22,14 "Free"
+~e81 link 1096,427,485,56 "The Dota 2 Official Soundtrack8,19€" [occluded]
+~e82 [pixels] image 1096,427,148,56
+~e83 text 1254,439,190,16 "The Dota 2 Official Soundtrack"
+~e84 text 1254,458,31,14 "8,19€"
+~e85 text 1096,499,73,16 "Browse by..."
+~e86 link 1096,521,485,48 "2K97 games" [occluded]
+~e87 [pixels] image 1096,521,485,48
+~e88 [pixels] image 1096,521,485,48
+~e89 [pixels] image 1096,521,485,48
+~e90 [pixels] image 1096,521,48,48
+~e91 text 1154,537,17,16 "2K"
+~e92 text 1515,539,51,14 "97 games"
+~e93 link 1096,575,485,48 "Dota3 games" [occluded]
+~e94 [pixels] image 1096,575,485,48
+~e95 [pixels] image 1096,575,485,48
+~e96 [pixels] image 1096,575,485,48
+~e97 [pixels] image 1096,575,48,48
+~e98 text 1154,591,29,16 "Dota"
+~e99 text 1522,593,44,14 "3 games"
+~e100 link 1096,629,485,48 "NBA 2K Franchise3 games" [occluded]
+~e101 [pixels] image 1096,629,485,48
+~e102 [pixels] image 1096,629,485,48
+~e103 [pixels] image 1096,629,485,48
+~e104 [pixels] image 1096,629,48,48
+~e105 text 1154,645,110,16 "NBA 2K Franchise"
+~e106 text 1522,647,44,14 "3 games"
+~e107 link 1096,687,485,31 "Advanced Search" [occluded]
+e108 main 70,218,1836,4349
+e109 text 388,281,265,26 "Featured & Recommended"
+e110 link 1390,279,198,30 "Send a Gift Card"
+e111 [pixels] image 1390,275,69,38 alt=Send a Gift Card
+e112 list 388,319,1200,481 "Featured & Recommended"
+e113 [pixels] image 388,319,840,481
+e114 text 1246,334,303,22 "Call of Duty®: Modern Warfare® 4"
+e115 text 1246,363,155,17 "Available: 22 Oct, 2026"
+e116 [pixels] image 1246,397,157,88
+e117 [pixels] image 1413,397,157,88
+e118 [pixels] image 1246,495,157,88
+e119 [pixels] image 1413,495,157,88
+e120 text 1246,653,107,21 "Pre-Purchase"
+e121 text 1353,653,38,21 "now"
+e122 text 1246,677,173,21 "Coming 22 Oct, 2026"
+e123 text 1510,763,48,17 "69,99€"
+e124 [pixels] image 388,319,840,481
+e125 text 1246,334,155,22 "Wuthering Waves"
+e126 text 1246,363,84,17 "Very Positive"
+e127 text 1330,363,120,17 "(29,055 Reviews)"
+e128 [pixels] image 1246,397,157,88
+e129 [pixels] image 1413,397,157,88
+e130 [pixels] image 1246,495,157,88
+e131 [pixels] image 1413,495,157,88
+e132 [pixels] image 1246,652,30,48
+e133 text 1288,653,79,21 "Top Seller"
+e134 text 1288,677,63,21 "Ranked"
+e135 text 1351,677,33,21 "#25"
+e136 text 1385,677,114,21 "in your region"
+e137 text 1480,763,78,17 "Free To Play"
+e138 [pixels] image 388,319,840,481
+e139 text 1246,334,77,22 "Big Walk"
+e140 text 1246,363,84,17 "Very Positive"
+e141 text 1330,363,117,17 "(13,281 Reviews)"
+e142 [pixels] image 1246,397,157,88
+e143 [pixels] image 1413,397,157,88
+e144 [pixels] image 1246,495,157,88
+e145 [pixels] image 1413,495,157,88
+e146 [pixels] image 1246,652,30,48
+e147 text 1288,653,79,21 "Top Seller"
+e148 text 1288,677,63,21 "Ranked"
+e149 text 1351,677,22,21 "#2"
+e150 text 1374,677,114,21 "in your region"
+e151 text 1511,763,47,17 "18,99€"
+e152 [pixels] image 388,319,840,481
+e153 text 1246,334,253,22 "STAR WARS Zero Company™"
+e154 text 1246,363,157,17 "Available: 27 Aug, 2026"
+e155 [pixels] image 1246,397,157,88
+e156 [pixels] image 1413,397,157,88
+e157 [pixels] image 1246,495,157,88
+e158 [pixels] image 1413,495,157,88
+e159 text 1246,653,107,21 "Pre-Purchase"
+e160 text 1353,653,38,21 "now"
+e161 text 1246,677,175,21 "Coming 27 Aug, 2026"
+e162 text 1509,763,49,17 "49,99€"
+e163 [pixels] image 388,319,840,481
+e164 text 1246,334,349,22 "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-"
+e165 text 1246,363,84,17 "Very Positive"
+e166 text 1330,363,110,17 "(7,302 Reviews)"
+e167 [pixels] image 1246,397,157,88
+e168 [pixels] image 1413,397,157,88
+e169 [pixels] image 1246,495,157,88
+e170 [pixels] image 1413,495,157,88
+e171 [pixels] image 1246,652,30,48
+e172 text 1288,653,79,21 "Top Seller"
+e173 text 1288,677,63,21 "Ranked"
+e174 text 1351,677,22,21 "#3"
+e175 text 1373,677,114,21 "in your region"
+e176 link 1246,758,324,28 "70% off. 49,99€ normally, discounted to 14,99€" [occluded]
+e177 text 1426,764,36,17 "-70%"
+e178 text 1472,765,38,14 "49,99€"
+e179 text 1514,763,48,17 "14,99€"
+e180 [pixels] image 388,319,840,481
+e181 text 1246,334,263,22 "Kingdom Come: Deliverance II"
+e182 text 1246,363,84,17 "Very Positive"
+e183 text 1330,363,119,17 "(66,950 Reviews)"
+e184 [pixels] image 1246,397,157,88
+e185 [pixels] image 1413,397,157,88
+e186 [pixels] image 1246,495,157,88
+e187 [pixels] image 1413,495,157,88
+e188 [pixels] image 1246,652,30,48
+e189 text 1288,653,79,21 "Top Seller"
+e190 text 1288,677,63,21 "Ranked"
+e191 text 1351,677,31,21 "#11"
+e192 text 1382,677,114,21 "in your region"
+e193 link 1246,758,324,28 "60% off. 59,99€ normally, discounted to 23,99€" [occluded]
+e194 text 1424,764,37,17 "-60%"
+e195 text 1472,765,38,14 "59,99€"
+e196 text 1514,763,48,17 "23,99€"
+e197 [pixels] image 388,319,840,481
+e198 text 1246,334,75,22 "Palworld"
+e199 text 1246,363,161,17 "Overwhelmingly Positive"
+e200 text 1407,363,125,17 "(177,724 Reviews)"
+e201 [pixels] image 1246,397,157,88
+e202 [pixels] image 1413,397,157,88
+e203 [pixels] image 1246,495,157,88
+e204 [pixels] image 1413,495,157,88
+e205 [pixels] image 1246,652,30,48
+e206 text 1288,653,79,21 "Top Seller"
+e207 text 1288,677,63,21 "Ranked"
+e208 text 1351,677,33,21 "#10"
+e209 text 1384,677,114,21 "in your region"
+e210 text 1510,763,48,17 "28,99€"
+e211 [pixels] image 388,319,840,481
+~e212 text 1246,334,116,22 "Marvel Rivals"
+e213 text 1246,363,99,17 "Mostly Positive"
+~e214 text 1345,363,128,17 "(296,452 Reviews)"
+e215 [pixels] image 1246,397,157,88
+e216 [pixels] image 1413,397,157,88
+e217 [pixels] image 1246,495,157,88
+e218 [pixels] image 1413,495,157,88
+e219 [pixels] image 1246,652,30,48
+e220 text 1288,653,79,21 "Top Seller"
+e221 text 1288,677,63,21 "Ranked"
+~e222 text 1351,677,33,21 "#22"
+e223 text 1384,677,114,21 "in your region"
+e224 text 1480,763,78,17 "Free To Play"
+e225 [pixels] image 388,319,840,481
+e226 text 1246,334,241,22 "Total War: WARHAMMER III"
+e227 text 1246,363,99,17 "Mostly Positive"
+e228 text 1345,363,118,17 "(55,937 Reviews)"
+e229 [pixels] image 1246,397,157,88
+e230 [pixels] image 1413,397,157,88
+e231 [pixels] image 1246,495,157,88
+e232 [pixels] image 1413,495,157,88
+e233 [pixels] image 1246,652,30,48
+e234 text 1288,653,79,21 "Top Seller"
+e235 text 1288,677,63,21 "Ranked"
+e236 text 1351,677,22,21 "#5"
+e237 text 1374,677,114,21 "in your region"
+~e238 link 1246,758,324,28 "85% off. 59,99€ normally, discounted to 8,99€" [occluded]
+e239 text 1434,764,36,17 "-85%"
+e240 text 1481,765,38,14 "59,99€"
+e241 text 1523,763,39,17 "8,99€"
+~e242 link -408,343,756,433 "Baldur's Gate 3Overwhelmingly Positive (447,374 Reviews)Top SellerRanked #30 in your region59,99€" [occluded]
+e243 [pixels] image -408,343,756,433
+~e244 link 388,319,1200,481 "HELLDIVERS™ 2Very Positive (631,501 Reviews)Top SellerRanked #7 in your region39,99€"
+e245 [pixels] image 388,319,840,481
+e246 text 1246,334,144,22 "HELLDIVERS™ 2"
+e247 text 1246,363,84,17 "Very Positive"
+e248 text 1330,363,126,17 "(631,501 Reviews)"
+e249 [pixels] image 1246,397,157,88
+e250 [pixels] image 1413,397,157,88
+e251 [pixels] image 1246,495,157,88
+e252 [pixels] image 1413,495,157,88
+e253 [pixels] image 1246,652,30,48
+e254 text 1288,653,79,21 "Top Seller"
+e255 text 1288,677,63,21 "Ranked"
+e256 text 1351,677,21,21 "#7"
+e257 text 1373,677,114,21 "in your region"
+e258 text 1510,763,48,17 "39,99€"
+~e259 link 1628,343,756,433 "LiveWARDOGSAvailable: 10 Sep, 2026Pre-Purchase nowComing 10 Sep, 202639,99€"
+~e260 text 1653,352,29,15 "Live"
+e261 link 388,866,1200,190 "Steam Pins & Pegs Fest 2026"
+e262 [offscreen] heading 318,972,651,30 "Discounts & Events"
+e263 [offscreen] link 1428,976,90,22 "See More"
+e264 [offscreen] list 318,1012,1200,475
+e265 [offscreen] link 339,1030,341,439 "FRANCHISE SALE Up to -95%"
+e266 [offscreen] link 339,1030,341,405 "FRANCHISE SALE"
+e267 [offscreen] text 599,1444,76,17 "Up to -95%"
+e268 [offscreen] link 698,1030,341,439 "MIDWEEK DEAL Up to -90%"
+e269 [offscreen] link 698,1030,341,405 "MIDWEEK DEAL"
+e270 [offscreen] text 957,1444,77,17 "Up to -90%"
+e271 [offscreen] link 1057,1030,341,193 "TODAY'S DEAL-55%19,50€8,77€"
+e272 [offscreen] text 1065,1022,97,17 "TODAY'S DEAL"
+e273 [offscreen] link 1057,1189,341,34 "55% off. 19,50€ normally, discounted to 8,77€"
+e274 [offscreen] text 1261,1197,36,17 "-55%"
+e275 [offscreen] text 1310,1199,38,14 "19,50€"
+e276 [offscreen] text 1352,1197,38,17 "8,77€"
+e277 [offscreen] link 1057,1277,341,193 "TODAY'S DEAL-60%39,99€15,99€"
+e278 [offscreen] text 1065,1269,97,17 "TODAY'S DEAL"
+e279 [offscreen] link 1057,1436,341,34 "60% off. 39,99€ normally, discounted to 15,99€"
+e280 [offscreen] text 1251,1444,37,17 "-60%"
+e281 [offscreen] text 1301,1446,38,14 "39,99€"
+e282 [offscreen] text 1343,1444,47,17 "15,99€"
+e283 [offscreen] link 1419,1030,341,439 "FRANCHISE SALE Up to -84%"
+e284 [offscreen] link 1419,1030,341,405 "FRANCHISE SALE"
+e285 [offscreen] text 1679,1444,76,17 "Up to -84%"
+e286 [offscreen] link 1778,1030,341,439 "MIDWEEK DEAL -50%19,99€9,99€"
+e287 [offscreen] link 1778,1030,341,405 "MIDWEEK DEAL"
+e288 [offscreen] link 1778,1436,341,34 "50% off. 19,99€ normally, discounted to 9,99€"
+e289 [offscreen] text 1981,1444,37,17 "-50%"
+e290 [offscreen] text 2030,1446,37,14 "19,99€"
+e291 [offscreen] text 2072,1444,39,17 "9,99€"
+e292 [offscreen] link 2137,1030,341,193 "TODAY'S DEAL-25%19,50€14,62€"
+e293 [offscreen] text 2145,1022,97,17 "TODAY'S DEAL"
+e294 [offscreen] link 2137,1189,341,34 "25% off. 19,50€ normally, discounted to 14,62€"
+e295 [offscreen] text 2332,1197,36,17 "-25%"
+e296 [offscreen] text 2381,1199,38,14 "19,50€"
+e297 [offscreen] text 2422,1197,48,17 "14,62€"
+e298 [offscreen] link 2137,1277,341,193 "TODAY'S DEAL-60%19,50€7,80€"
+e299 [offscreen] text 2145,1269,97,17 "TODAY'S DEAL"
+e300 [offscreen] link 2137,1436,341,34 "60% off. 19,50€ normally, discounted to 7,80€"
+e301 [offscreen] text 2339,1444,37,17 "-60%"
+e302 [offscreen] text 2389,1446,38,14 "19,50€"
+e303 [offscreen] text 2431,1444,39,17 "7,80€"
+e304 [offscreen] link 339,1030,341,193 "-60%59,99€23,99€"
+e305 [offscreen] link 339,1190,341,34 "60% off. 59,99€ normally, discounted to 23,99€"
+e306 [offscreen] text 532,1198,37,17 "-60%"
+e307 [offscreen] text 582,1200,38,14 "59,99€"
+e308 [offscreen] text 624,1198,48,17 "23,99€"
+e309 [offscreen] link 339,1276,341,193 "-75%69,99€17,49€"
+e310 [offscreen] link 339,1436,341,34 "75% off. 69,99€ normally, discounted to 17,49€"
+e311 [offscreen] text 535,1444,35,17 "-75%"
+e312 [offscreen] text 583,1446,38,14 "69,99€"
+e313 [offscreen] text 625,1444,47,17 "17,49€"
+e314 [offscreen] link 698,1030,341,193 "-30%59,99€41,99€"
+e315 [offscreen] link 698,1190,341,34 "30% off. 59,99€ normally, discounted to 41,99€"
+e316 [offscreen] text 892,1198,36,17 "-30%"
+e317 [offscreen] text 941,1200,38,14 "59,99€"
+e318 [offscreen] text 983,1198,48,17 "41,99€"
+e319 [offscreen] link 698,1276,341,193 "-85%59,99€8,99€"
+e320 [offscreen] link 698,1436,341,34 "85% off. 59,99€ normally, discounted to 8,99€"
+e321 [offscreen] text 901,1444,36,17 "-85%"
+e322 [offscreen] +602 more lines truncated (scroll to reveal)
+[act-guard] previous action: UNVERIFIED (asked value="Dota 2", element re-read: combo-box 1111,224,446,34 "Search the store" state=focused)
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 2 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 02‎∶02"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Dota 2 - Memory usage - 83.0 MB" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 109 MB"
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+~e33 entry 227,78,1399,24 "Address and search bar"
+~e34 push-button 1634,78,24,24 "Bookmark this tab"
+~e35 push-button 1679,73,34,34 "You"
+~e36 push-button 1718,73,202,34 "New Chrome available"
+~e37 text 422,1061,339,85 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks."
+~e38 text 822,1061,338,85 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and..."
+~e39 text 1222,1061,328,63 "Nearly a year has passed since Team Falcons hoisted the Aegis of Champions as the final team standing in Hamburg."
+~e40 [pixels] image 70,906,1835,772 alt=To get missing image descriptions, open the context menu.
+e41 text 1592,103,334,207 "Can't update Chrome"
+~e42 link 100,129,200,50
+~e43 text 362,141,70,26 "Game"
+~e44 [pixels] image 437,151,10,6
+~e45 link 342,195,177,17 "Patches" [occluded]
+~e46 link 342,221,177,17 "Gameplay Updates" [occluded]
+~e47 link 342,247,177,17 "Previous Updates" [occluded]
+~e48 link 489,135,93,38 "Heroes"
+~e49 link 622,135,67,38 "News"
+~e50 link 729,135,103,38 "Esports"
+~e51 link 1557,135,51,17 "Login"
+~e52 text 1449,157,144,14 "Select Language"
+~e53 [pixels] image 1598,162,10,6
+~e54 link 1608,114,267,80 "Play for Free"
+~e55 [pixels] video 70,114,1850,725
+~e56 text 254,285,532,222 "“A Modern Multiplayer Masterpiece.”"
+~e57 text 254,505,167,20 "- Destructoid"
+~e58 link 254,550,918,108 "Play for FreeDownload on Steam"
+~e59 [pixels] image 265,595,48,48
+~e60 text 321,594,193,31 "Play for Free"
+~e61 text 321,626,191,15 "Download on Steam"
+~e62 [pixels] image 70,639,1835,200
+~e63 text 403,752,132,16 "Latest News"
+~e64 link 555,749,124,23 "View All"
+~e65 link 403,797,370,245
+~e66 [pixels] image 403,797,370,243
+~e67 text 423,972,311,62 "The International: Streams, Secret Shop, and More"
+~e68 text 423,950,144,16 "12 August 2026"
+~e69 link 803,797,370,245
+~e70 [pixels] image 803,797,370,243
+~e71 text 823,972,293,62 "Gameplay Patch 7.41e and Summer Scrub"
+~e72 text 823,950,112,16 "31 July 2026"
+~e73 link 1203,797,370,245 "Nearly a year has passed since Team Falcons hoisted the Aegis of Champions as the final team standing in Hamburg.The International: Predictions, Fantasy, and Supporter Bundles31 July 2026"
+~e74 [pixels] image 1203,797,370,243
+~e75 text 1223,945,281,89 "The International: Predictions, Fantasy, and Supporter Bundles"
+~e76 text 1223,923,112,16 "31 July 2026"
+~e77 [pixels] image 70,907,1835,771
+~e78 [pixels] image 70,907,1835,978
+~e79 [offscreen] text 739,1395,358,101 "Join the"
+~e80 [offscreen] text 427,1546,981,116 "Every day, millions of players worldwide enter the battle as one of over a hundred Dota Heroes in a 5v5 team clash. Dota is the deepest multi-player action RTS game ever made and there's always a new strategy or tactic to discover. It's completely free to play and always will be – start defending your ancient now."
+~e81 [offscreen] link 768,1665,298,106 "See What's New"
+~e82 [offscreen] text 620,2884,594,101 "Who Will You"
+~e83 [offscreen] text 420,3035,995,86 "From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory."
+~e84 [offscreen] link 764,3124,306,106 "View All Heroes"
+~e85 [offscreen] link -1028,3275,255,127 "Anti-Mage"
+~e86 [offscreen] link -763,3275,255,127 "Axe"
+~e87 [offscreen] link -498,3275,255,127 "Bane"
+~e88 [offscreen] link -233,3275,255,127 "Bloodseeker"
+~e89 [offscreen] link 32,3275,255,127 "Crystal Maiden"
+~e90 [offscreen] link 297,3275,255,127 "Drow Ranger"
+~e91 [offscreen] link 562,3275,255,127 "Earthshaker"
+~e92 [offscreen] link 827,3275,255,127 "Juggernaut"
+~e93 [offscreen] link 1092,3275,255,127 "Mirana"
+~e94 [offscreen] link 1357,3275,255,127 "Shadow Fiend"
+~e95 [offscreen] link 1622,3275,255,127 "Morphling"
+~e96 [offscreen] link 1887,3275,255,127 "Phantom Lancer"
+~e97 [offscreen] link 2152,3275,255,127 "Puck"
+~e98 [offscreen] link 2417,3275,255,127 "Pudge"
+~e99 [offscreen] link 2682,3275,255,127 "Razor"
+~e100 [offscreen] link 2947,3275,255,127 "Sand King"
+~e101 [offscreen] link 3212,3275,255,127 "Storm Spirit"
+~e102 [offscreen] link 3477,3275,255,127 "Sven"
+~e103 [offscreen] link 3742,3275,255,127 "Tiny"
+~e104 [offscreen] link 4007,3275,255,127 "Vengeful Spirit"
+~e105 [offscreen] link 4272,3275,255,127 "Windranger"
+~e106 [offscreen] link 4537,3275,255,127 "Zeus"
+~e107 [offscreen] link 4802,3275,255,127 "Kunkka"
+~e108 [offscreen] link 5067,3275,255,127 "Lina"
+~e109 [offscreen] link 5332,3275,255,127 "Lich"
+~e110 [offscreen] link 5597,3275,255,127 "Lion"
+~e111 [offscreen] link 5862,3275,255,127 "Anti-Mage"
+~e112 [offscreen] link 6127,3275,255,127 "Axe"
+~e113 [offscreen] link 6392,3275,255,127 "Bane"
+~e114 [offscreen] link 6657,3275,255,127 "Bloodseeker"
+~e115 [offscreen] link 6922,3275,255,127 "Crystal Maiden"
+~e116 [offscreen] link 7187,3275,255,127 "Drow Ranger"
+~e117 [offscreen] link 7452,3275,255,127 "Earthshaker"
+~e118 [offscreen] link 7717,3275,255,127 "Juggernaut"
+~e119 [offscreen] link 7982,3275,255,127 "Mirana"
+~e120 [offscreen] link 8247,3275,255,127 "Shadow Fiend"
+~e121 [offscreen] link 8512,3275,255,127 "Morphling"
+~e122 [offscreen] link 8777,3275,255,127 "Phantom Lancer"
+~e123 [offscreen] link 9042,3275,255,127 "Puck"
+~e124 [offscreen] link 9307,3275,255,127 "Pudge"
+~e125 [offscreen] link 9572,3275,255,127 "Razor"
+~e126 [offscreen] link 9837,3275,255,127 "Sand King"
+~e127 [offscreen] link 10102,3275,255,127 "Storm Spirit"
+~e128 [offscreen] link 10367,3275,255,127 "Sven"
+~e129 [offscreen] link 10632,3275,255,127 "Tiny"
+~e130 [offscreen] link 10897,3275,255,127 "Vengeful Spirit"
+~e131 [offscreen] link 11162,3275,255,127 "Windranger"
+~e132 [offscreen] link 11427,3275,255,127 "Zeus"
+~e133 [offscreen] link 11692,3275,255,127 "Kunkka"
+~e134 [offscreen] link 11957,3275,255,127 "Lina"
+~e135 [offscreen] link 12222,3275,255,127 "Lich"
+~e136 [offscreen] link 12487,3275,255,127 "Lion"
+~e137 [offscreen] link -5233,3413,255,127 "Shadow Shaman"
+~e138 [offscreen] link -4968,3413,255,127 "Slardar"
+~e139 [offscreen] +811 more lines truncated (scroll to reveal)
+
+--- view at step 3 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 02‎∶02"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Dota 2 - Memory usage - 83.0 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 109 MB" state=selected
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1399,24 "Address and search bar"
+e34 push-button 1634,78,24,24 "Bookmark this tab"
+e35 push-button 1679,73,34,34 "You"
+e36 push-button 1718,73,202,34 "New Chrome available"
+~e37 link -408,343,756,434
+~e38 link 1628,343,756,434 "LIVE"
+e39 text 1592,103,334,207 "Can't update Chrome"
+~e40 banner 70,114,1836,104
+~e41 link 388,174,145,17 "Link to the Steam Homepage"
+~e42 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+~e43 navigation 588,114,335,73 "Global Menu"
+~e44 link 588,114,65,73 "STORE"
+~e45 link 653,114,114,73 "COMMUNITY"
+~e46 link 767,114,69,68 "About"
+~e47 link 836,114,87,68 "SUPPORT"
+~e48 navigation 1340,120,248,24 "Account Menu"
+~e49 link 1340,120,110,21 "Install Steam"
+~e50 link 1456,125,42,14 "sign in"
+~e51 text 1498,125,15,14 "|"
+~e52 text 1518,125,47,14 "language"
+~e53 navigation 380,218,1216,46 "Store menu"
+~e54 push-button 380,218,83,46 "Browse"
+~e55 presentation 439,234,14,14
+~e56 push-button 463,218,152,46 "Recommendations"
+~e57 presentation 591,234,14,14
+~e58 push-button 615,218,104,46 "Categories"
+~e59 presentation 695,234,14,14
+~e60 push-button 719,218,97,46 "Hardware"
+~e61 presentation 792,234,14,14
+~e62 push-button 816,218,117,46 "Ways to Play"
+~e63 presentation 909,234,14,14
+~e64 push-button 933,218,137,46 "Special Sections"
+~e65 presentation 1046,234,14,14
+~e66 search 1111,224,480,34
+~e67 combo-box 1111,224,446,34 "Search the store"
+~e68 push-button 1557,224,34,34
+~e69 [pixels] image 1565,232,18,18 alt=Search
+~e70 link 1096,275,485,31 "Advanced Search" [occluded]
+~e71 main 70,218,1836,4349
+~e72 text 388,281,265,26 "Featured & Recommended"
+~e73 link 1390,279,198,30 "Send a Gift Card"
+~e74 [pixels] image 1390,275,69,38 alt=Send a Gift Card
+~e75 list 388,319,1200,481 "Featured & Recommended"
+~e76 [pixels] image 388,319,840,481
+~e77 text 1246,334,303,22 "Call of Duty®: Modern Warfare® 4"
+~e78 text 1246,363,155,17 "Available: 22 Oct, 2026"
+~e79 [pixels] image 1246,397,157,88
+~e80 [pixels] image 1413,397,157,88
+~e81 [pixels] image 1246,495,157,88
+~e82 [pixels] image 1413,495,157,88
+~e83 text 1246,653,107,21 "Pre-Purchase"
+~e84 text 1353,653,38,21 "now"
+~e85 text 1246,677,173,21 "Coming 22 Oct, 2026"
+~e86 text 1510,763,48,17 "69,99€"
+~e87 [pixels] image 388,319,840,481
+~e88 text 1246,334,155,22 "Wuthering Waves"
+~e89 text 1246,363,84,17 "Very Positive"
+~e90 text 1330,363,120,17 "(29,055 Reviews)"
+~e91 [pixels] image 1246,397,157,88
+~e92 [pixels] image 1413,397,157,88
+~e93 [pixels] image 1246,495,157,88
+~e94 [pixels] image 1413,495,157,88
+~e95 [pixels] image 1246,652,30,48
+~e96 text 1288,653,79,21 "Top Seller"
+~e97 text 1288,677,63,21 "Ranked"
+~e98 text 1351,677,33,21 "#25"
+~e99 text 1385,677,114,21 "in your region"
+~e100 text 1480,763,78,17 "Free To Play"
+~e101 [pixels] image 388,319,840,481
+~e102 text 1246,334,77,22 "Big Walk"
+~e103 text 1246,363,84,17 "Very Positive"
+~e104 text 1330,363,117,17 "(13,281 Reviews)"
+~e105 [pixels] image 1246,397,157,88
+~e106 [pixels] image 1413,397,157,88
+~e107 [pixels] image 1246,495,157,88
+~e108 [pixels] image 1413,495,157,88
+~e109 [pixels] image 1246,652,30,48
+~e110 text 1288,653,79,21 "Top Seller"
+~e111 text 1288,677,63,21 "Ranked"
+~e112 text 1351,677,22,21 "#2"
+~e113 text 1374,677,114,21 "in your region"
+~e114 text 1511,763,47,17 "18,99€"
+~e115 [pixels] image 388,319,840,481
+~e116 text 1246,334,253,22 "STAR WARS Zero Company™"
+~e117 text 1246,363,157,17 "Available: 27 Aug, 2026"
+~e118 [pixels] image 1246,397,157,88
+~e119 [pixels] image 1413,397,157,88
+~e120 [pixels] image 1246,495,157,88
+~e121 [pixels] image 1413,495,157,88
+~e122 text 1246,653,107,21 "Pre-Purchase"
+~e123 text 1353,653,38,21 "now"
+~e124 text 1246,677,175,21 "Coming 27 Aug, 2026"
+~e125 text 1509,763,49,17 "49,99€"
+~e126 [pixels] image 388,319,840,481
+~e127 text 1246,334,349,22 "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-"
+~e128 text 1246,363,84,17 "Very Positive"
+~e129 text 1330,363,110,17 "(7,302 Reviews)"
+~e130 [pixels] image 1246,397,157,88
+~e131 [pixels] image 1413,397,157,88
+~e132 [pixels] image 1246,495,157,88
+~e133 [pixels] image 1413,495,157,88
+~e134 [pixels] image 1246,652,30,48
+~e135 text 1288,653,79,21 "Top Seller"
+~e136 text 1288,677,63,21 "Ranked"
+~e137 text 1351,677,22,21 "#3"
+~e138 text 1373,677,114,21 "in your region"
+~e139 link 1246,758,324,28 "70% off. 49,99€ normally, discounted to 14,99€" [occluded]
+~e140 text 1426,764,36,17 "-70%"
+~e141 text 1472,765,38,14 "49,99€"
+~e142 text 1514,763,48,17 "14,99€"
+~e143 [pixels] image 388,319,840,481
+~e144 text 1246,334,263,22 "Kingdom Come: Deliverance II"
+~e145 text 1246,363,84,17 "Very Positive"
+~e146 text 1330,363,119,17 "(66,950 Reviews)"
+~e147 [pixels] image 1246,397,157,88
+~e148 [pixels] image 1413,397,157,88
+~e149 [pixels] image 1246,495,157,88
+~e150 [pixels] image 1413,495,157,88
+~e151 [pixels] image 1246,652,30,48
+~e152 text 1288,653,79,21 "Top Seller"
+~e153 text 1288,677,63,21 "Ranked"
+~e154 text 1351,677,31,21 "#11"
+~e155 text 1382,677,114,21 "in your region"
+~e156 link 1246,758,324,28 "60% off. 59,99€ normally, discounted to 23,99€" [occluded]
+~e157 text 1424,764,37,17 "-60%"
+~e158 text 1472,765,38,14 "59,99€"
+~e159 text 1514,763,48,17 "23,99€"
+~e160 [pixels] image 388,319,840,481
+~e161 text 1246,334,75,22 "Palworld"
+~e162 text 1246,363,161,17 "Overwhelmingly Positive"
+~e163 text 1407,363,125,17 "(177,724 Reviews)"
+~e164 [pixels] image 1246,397,157,88
+~e165 [pixels] image 1413,397,157,88
+~e166 [pixels] image 1246,495,157,88
+~e167 [pixels] image 1413,495,157,88
+~e168 [pixels] image 1246,652,30,48
+~e169 text 1288,653,79,21 "Top Seller"
+~e170 text 1288,677,63,21 "Ranked"
+~e171 text 1351,677,33,21 "#10"
+~e172 text 1384,677,114,21 "in your region"
+~e173 text 1510,763,48,17 "28,99€"
+~e174 [pixels] image 388,319,840,481
+~e175 text 1246,334,116,22 "Marvel Rivals"
+~e176 text 1246,363,99,17 "Mostly Positive"
+~e177 text 1345,363,128,17 "(296,452 Reviews)"
+~e178 [pixels] image 1246,397,157,88
+~e179 [pixels] image 1413,397,157,88
+~e180 [pixels] image 1246,495,157,88
+~e181 [pixels] image 1413,495,157,88
+~e182 [pixels] image 1246,652,30,48
+~e183 text 1288,653,79,21 "Top Seller"
+~e184 text 1288,677,63,21 "Ranked"
+~e185 text 1351,677,33,21 "#22"
+~e186 text 1384,677,114,21 "in your region"
+~e187 text 1480,763,78,17 "Free To Play"
+~e188 [pixels] image 388,319,840,481
+~e189 text 1246,334,241,22 "Total War: WARHAMMER III"
+~e190 text 1246,363,99,17 "Mostly Positive"
+~e191 text 1345,363,118,17 "(55,937 Reviews)"
+~e192 [pixels] image 1246,397,157,88
+~e193 [pixels] image 1413,397,157,88
+~e194 [pixels] image 1246,495,157,88
+~e195 [pixels] image 1413,495,157,88
+~e196 [pixels] image 1246,652,30,48
+~e197 text 1288,653,79,21 "Top Seller"
+~e198 text 1288,677,63,21 "Ranked"
+~e199 text 1351,677,22,21 "#5"
+~e200 text 1374,677,114,21 "in your region"
+~e201 link 1246,758,324,28 "85% off. 59,99€ normally, discounted to 8,99€" [occluded]
+~e202 text 1434,764,36,17 "-85%"
+~e203 text 1481,765,38,14 "59,99€"
+~e204 text 1523,763,39,17 "8,99€"
+~e205 link -408,343,756,433 "Baldur's Gate 3Overwhelmingly Positive (447,374 Reviews)Top SellerRanked #30 in your region59,99€" [occluded]
+~e206 [pixels] image -408,343,756,433
+~e207 link 388,319,1200,481 "HELLDIVERS™ 2Very Positive (631,501 Reviews)Top SellerRanked #7 in your region39,99€"
+~e208 [pixels] image 388,319,840,481
+~e209 text 1246,334,144,22 "HELLDIVERS™ 2"
+~e210 text 1246,363,84,17 "Very Positive"
+~e211 text 1330,363,126,17 "(631,501 Reviews)"
+~e212 [pixels] image 1246,397,157,88
+~e213 [pixels] image 1413,397,157,88
+~e214 [pixels] image 1246,495,157,88
+~e215 [pixels] image 1413,495,157,88
+~e216 [pixels] image 1246,652,30,48
+~e217 text 1288,653,79,21 "Top Seller"
+~e218 text 1288,677,63,21 "Ranked"
+~e219 text 1351,677,21,21 "#7"
+~e220 text 1373,677,114,21 "in your region"
+~e221 text 1510,763,48,17 "39,99€"
+~e222 link 1628,343,756,433 "LiveWARDOGSAvailable: 10 Sep, 2026Pre-Purchase nowComing 10 Sep, 202639,99€"
+~e223 text 1653,352,29,15 "Live"
+~e224 link 388,866,1200,190 "Steam Pins & Pegs Fest 2026" [occluded]
+~e225 [offscreen] heading 318,972,651,30 "Discounts & Events"
+~e226 [offscreen] link 1428,976,90,22 "See More"
+~e227 [offscreen] list 318,1012,1200,475
+~e228 [offscreen] link 339,1030,341,439 "FRANCHISE SALE Up to -95%"
+~e229 [offscreen] link 339,1030,341,405 "FRANCHISE SALE"
+~e230 [offscreen] text 599,1444,76,17 "Up to -95%"
+~e231 [offscreen] link 698,1030,341,439 "MIDWEEK DEAL Up to -90%"
+~e232 [offscreen] link 698,1030,341,405 "MIDWEEK DEAL"
+~e233 [offscreen] text 957,1444,77,17 "Up to -90%"
+~e234 [offscreen] link 1057,1030,341,193 "TODAY'S DEAL-55%19,50€8,77€"
+~e235 [offscreen] text 1065,1022,97,17 "TODAY'S DEAL"
+~e236 [offscreen] link 1057,1189,341,34 "55% off. 19,50€ normally, discounted to 8,77€"
+~e237 [offscreen] text 1261,1197,36,17 "-55%"
+~e238 [offscreen] text 1310,1199,38,14 "19,50€"
+~e239 [offscreen] text 1352,1197,38,17 "8,77€"
+~e240 [offscreen] link 1057,1277,341,193 "TODAY'S DEAL-60%39,99€15,99€"
+~e241 [offscreen] text 1065,1269,97,17 "TODAY'S DEAL"
+~e242 [offscreen] link 1057,1436,341,34 "60% off. 39,99€ normally, discounted to 15,99€"
+~e243 [offscreen] text 1251,1444,37,17 "-60%"
+~e244 [offscreen] text 1301,1446,38,14 "39,99€"
+~e245 [offscreen] text 1343,1444,47,17 "15,99€"
+~e246 [offscreen] link 1419,1030,341,439 "FRANCHISE SALE Up to -84%"
+~e247 [offscreen] link 1419,1030,341,405 "FRANCHISE SALE"
+~e248 [offscreen] text 1679,1444,76,17 "Up to -84%"
+~e249 [offscreen] link 1778,1030,341,439 "MIDWEEK DEAL -50%19,99€9,99€"
+~e250 [offscreen] link 1778,1030,341,405 "MIDWEEK DEAL"
+~e251 [offscreen] link 1778,1436,341,34 "50% off. 19,99€ normally, discounted to 9,99€"
+~e252 [offscreen] text 1981,1444,37,17 "-50%"
+~e253 [offscreen] text 2030,1446,37,14 "19,99€"
+~e254 [offscreen] text 2072,1444,39,17 "9,99€"
+~e255 [offscreen] link 2137,1030,341,193 "TODAY'S DEAL-25%19,50€14,62€"
+~e256 [offscreen] text 2145,1022,97,17 "TODAY'S DEAL"
+~e257 [offscreen] link 2137,1189,341,34 "25% off. 19,50€ normally, discounted to 14,62€"
+~e258 [offscreen] text 2332,1197,36,17 "-25%"
+~e259 [offscreen] text 2381,1199,38,14 "19,50€"
+~e260 [offscreen] text 2422,1197,48,17 "14,62€"
+~e261 [offscreen] link 2137,1277,341,193 "TODAY'S DEAL-60%19,50€7,80€"
+~e262 [offscreen] text 2145,1269,97,17 "TODAY'S DEAL"
+~e263 [offscreen] link 2137,1436,341,34 "60% off. 19,50€ normally, discounted to 7,80€"
+~e264 [offscreen] text 2339,1444,37,17 "-60%"
+~e265 [offscreen] text 2389,1446,38,14 "19,50€"
+~e266 [offscreen] text 2431,1444,39,17 "7,80€"
+~e267 [offscreen] link 339,1030,341,193 "-60%59,99€23,99€"
+~e268 [offscreen] link 339,1190,341,34 "60% off. 59,99€ normally, discounted to 23,99€"
+~e269 [offscreen] text 532,1198,37,17 "-60%"
+~e270 [offscreen] text 582,1200,38,14 "59,99€"
+~e271 [offscreen] text 624,1198,48,17 "23,99€"
+~e272 [offscreen] link 339,1276,341,193 "-75%69,99€17,49€"
+~e273 [offscreen] link 339,1436,341,34 "75% off. 69,99€ normally, discounted to 17,49€"
+~e274 [offscreen] text 535,1444,35,17 "-75%"
+~e275 [offscreen] text 583,1446,38,14 "69,99€"
+~e276 [offscreen] text 625,1444,47,17 "17,49€"
+~e277 [offscreen] link 698,1030,341,193 "-30%59,99€41,99€"
+~e278 [offscreen] link 698,1190,341,34 "30% off. 59,99€ normally, discounted to 41,99€"
+~e279 [offscreen] text 892,1198,36,17 "-30%"
+~e280 [offscreen] text 941,1200,38,14 "59,99€"
+~e281 [offscreen] text 983,1198,48,17 "41,99€"
+~e282 [offscreen] link 698,1276,341,193 "-85%59,99€8,99€"
+~e283 [offscreen] link 698,1436,341,34 "85% off. 59,99€ normally, discounted to 8,99€"
+~e284 [offscreen] text 901,1444,36,17 "-85%"
+~e285 text 516,979,623,16 "Do you mind if we use optional cookies to provide you personalized content and to analyze site traffic?"
+~e286 text 516,1006,489,16 "We don't use a lot of cookies; you can see and manage them at any time on our"
+~e287 link 1005,1006,128,16 "Cookie Settings page"
+~e288 text 516,1006,764,33 ". If you click 'Accept All,' you consent to the use of cookies on Steam websites. Learn more about cookies in our"
+~e289 link 1046,1023,82,16 "Privacy Policy"
+~e290 text 1128,1023,4,16 "."
+~e291 text 1347,984,70,19 "Accept All"
+~e292 text 1349,1020,66,19 "Reject All"
+~e293 [offscreen] +602 more lines truncated (scroll to reveal)
+
+--- view at step 4 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 02‎∶06"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Dota 2 - Memory usage - 81.0 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 97.8 MB" state=selected
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1399,24 "Address and search bar"
+e34 push-button 1634,78,24,24 "Bookmark this tab"
+e35 push-button 1679,73,34,34 "You"
+e36 push-button 1718,73,202,34 "New Chrome available"
+e37 link -408,343,756,434
+~e38 link 1628,343,756,434
+e39 text 1592,103,334,207 "Can't update Chrome"
+e40 banner 70,114,1836,104
+e41 link 388,174,145,17 "Link to the Steam Homepage"
+e42 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+e43 navigation 588,114,335,73 "Global Menu"
+e44 link 588,114,65,73 "STORE"
+e45 link 653,114,114,73 "COMMUNITY"
+e46 link 767,114,69,68 "About"
+e47 link 836,114,87,68 "SUPPORT"
+e48 navigation 1340,120,248,24 "Account Menu"
+e49 link 1340,120,110,21 "Install Steam"
+e50 link 1456,125,42,14 "sign in"
+e51 text 1498,125,15,14 "|"
+e52 text 1518,125,47,14 "language"
+e53 navigation 380,218,1216,46 "Store menu"
+e54 push-button 380,218,83,46 "Browse"
+e55 presentation 439,234,14,14
+e56 push-button 463,218,152,46 "Recommendations"
+e57 presentation 591,234,14,14
+e58 push-button 615,218,104,46 "Categories"
+e59 presentation 695,234,14,14
+e60 push-button 719,218,97,46 "Hardware"
+e61 presentation 792,234,14,14
+e62 push-button 816,218,117,46 "Ways to Play"
+e63 presentation 909,234,14,14
+e64 push-button 933,218,137,46 "Special Sections"
+e65 presentation 1046,234,14,14
+e66 search 1111,224,480,34
+e67 combo-box 1111,224,446,34 "Search the store"
+e68 push-button 1557,224,34,34
+e69 [pixels] image 1565,232,18,18 alt=Search
+e70 link 1096,275,485,31 "Advanced Search" [occluded]
+e71 main 70,218,1836,4349
+e72 text 388,281,265,26 "Featured & Recommended"
+e73 link 1390,279,198,30 "Send a Gift Card"
+e74 [pixels] image 1390,275,69,38 alt=Send a Gift Card
+e75 list 388,319,1200,481 "Featured & Recommended"
+e76 [pixels] image 388,319,840,481
+e77 text 1246,334,303,22 "Call of Duty®: Modern Warfare® 4"
+e78 text 1246,363,155,17 "Available: 22 Oct, 2026"
+e79 [pixels] image 1246,397,157,88
+e80 [pixels] image 1413,397,157,88
+e81 [pixels] image 1246,495,157,88
+e82 [pixels] image 1413,495,157,88
+e83 text 1246,653,107,21 "Pre-Purchase"
+e84 text 1353,653,38,21 "now"
+e85 text 1246,677,173,21 "Coming 22 Oct, 2026"
+e86 text 1510,763,48,17 "69,99€"
+e87 [pixels] image 388,319,840,481
+e88 text 1246,334,155,22 "Wuthering Waves"
+e89 text 1246,363,84,17 "Very Positive"
+e90 text 1330,363,120,17 "(29,055 Reviews)"
+e91 [pixels] image 1246,397,157,88
+e92 [pixels] image 1413,397,157,88
+e93 [pixels] image 1246,495,157,88
+e94 [pixels] image 1413,495,157,88
+e95 [pixels] image 1246,652,30,48
+e96 text 1288,653,79,21 "Top Seller"
+e97 text 1288,677,63,21 "Ranked"
+e98 text 1351,677,33,21 "#25"
+e99 text 1385,677,114,21 "in your region"
+e100 text 1480,763,78,17 "Free To Play"
+e101 [pixels] image 388,319,840,481
+e102 text 1246,334,77,22 "Big Walk"
+e103 text 1246,363,84,17 "Very Positive"
+e104 text 1330,363,117,17 "(13,281 Reviews)"
+e105 [pixels] image 1246,397,157,88
+e106 [pixels] image 1413,397,157,88
+e107 [pixels] image 1246,495,157,88
+e108 [pixels] image 1413,495,157,88
+e109 [pixels] image 1246,652,30,48
+e110 text 1288,653,79,21 "Top Seller"
+e111 text 1288,677,63,21 "Ranked"
+e112 text 1351,677,22,21 "#2"
+e113 text 1374,677,114,21 "in your region"
+e114 text 1511,763,47,17 "18,99€"
+e115 [pixels] image 388,319,840,481
+e116 text 1246,334,253,22 "STAR WARS Zero Company™"
+e117 text 1246,363,157,17 "Available: 27 Aug, 2026"
+e118 [pixels] image 1246,397,157,88
+e119 [pixels] image 1413,397,157,88
+e120 [pixels] image 1246,495,157,88
+e121 [pixels] image 1413,495,157,88
+e122 text 1246,653,107,21 "Pre-Purchase"
+e123 text 1353,653,38,21 "now"
+e124 text 1246,677,175,21 "Coming 27 Aug, 2026"
+e125 text 1509,763,49,17 "49,99€"
+e126 [pixels] image 388,319,840,481
+e127 text 1246,334,349,22 "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-"
+e128 text 1246,363,84,17 "Very Positive"
+e129 text 1330,363,110,17 "(7,302 Reviews)"
+e130 [pixels] image 1246,397,157,88
+e131 [pixels] image 1413,397,157,88
+e132 [pixels] image 1246,495,157,88
+e133 [pixels] image 1413,495,157,88
+e134 [pixels] image 1246,652,30,48
+e135 text 1288,653,79,21 "Top Seller"
+e136 text 1288,677,63,21 "Ranked"
+e137 text 1351,677,22,21 "#3"
+e138 text 1373,677,114,21 "in your region"
+e139 link 1246,758,324,28 "70% off. 49,99€ normally, discounted to 14,99€" [occluded]
+e140 text 1426,764,36,17 "-70%"
+e141 text 1472,765,38,14 "49,99€"
+e142 text 1514,763,48,17 "14,99€"
+e143 [pixels] image 388,319,840,481
+e144 text 1246,334,263,22 "Kingdom Come: Deliverance II"
+e145 text 1246,363,84,17 "Very Positive"
+e146 text 1330,363,119,17 "(66,950 Reviews)"
+e147 [pixels] image 1246,397,157,88
+e148 [pixels] image 1413,397,157,88
+e149 [pixels] image 1246,495,157,88
+e150 [pixels] image 1413,495,157,88
+e151 [pixels] image 1246,652,30,48
+e152 text 1288,653,79,21 "Top Seller"
+e153 text 1288,677,63,21 "Ranked"
+e154 text 1351,677,31,21 "#11"
+e155 text 1382,677,114,21 "in your region"
+e156 link 1246,758,324,28 "60% off. 59,99€ normally, discounted to 23,99€" [occluded]
+e157 text 1424,764,37,17 "-60%"
+e158 text 1472,765,38,14 "59,99€"
+e159 text 1514,763,48,17 "23,99€"
+e160 [pixels] image 388,319,840,481
+e161 text 1246,334,75,22 "Palworld"
+e162 text 1246,363,161,17 "Overwhelmingly Positive"
+e163 text 1407,363,125,17 "(177,724 Reviews)"
+e164 [pixels] image 1246,397,157,88
+e165 [pixels] image 1413,397,157,88
+e166 [pixels] image 1246,495,157,88
+e167 [pixels] image 1413,495,157,88
+e168 [pixels] image 1246,652,30,48
+e169 text 1288,653,79,21 "Top Seller"
+e170 text 1288,677,63,21 "Ranked"
+e171 text 1351,677,33,21 "#10"
+e172 text 1384,677,114,21 "in your region"
+e173 text 1510,763,48,17 "28,99€"
+~e174 link -408,343,756,433 "Marvel RivalsMostly Positive (296,452 Reviews)Top SellerRanked #22 in your regionFree To Play" [occluded]
+e175 [pixels] image -408,343,756,433
+~e176 link 388,319,1200,481 "Total War: WARHAMMER IIIMostly Positive (55,937 Reviews)Top SellerRanked #5 in your region-85%59,99€8,99€"
+e177 [pixels] image 388,319,840,481
+e178 text 1246,334,241,22 "Total War: WARHAMMER III"
+e179 text 1246,363,99,17 "Mostly Positive"
+e180 text 1345,363,118,17 "(55,937 Reviews)"
+e181 [pixels] image 1246,397,157,88
+e182 [pixels] image 1413,397,157,88
+e183 [pixels] image 1246,495,157,88
+e184 [pixels] image 1413,495,157,88
+e185 [pixels] image 1246,652,30,48
+e186 text 1288,653,79,21 "Top Seller"
+e187 text 1288,677,63,21 "Ranked"
+e188 text 1351,677,22,21 "#5"
+e189 text 1374,677,114,21 "in your region"
+~e190 link 1246,758,324,28 "85% off. 59,99€ normally, discounted to 8,99€"
+e191 text 1434,764,36,17 "-85%"
+e192 text 1481,765,38,14 "59,99€"
+e193 text 1523,763,39,17 "8,99€"
+~e194 link 1628,343,756,433 "Baldur's Gate 3Overwhelmingly Positive (447,374 Reviews)Top SellerRanked #30 in your region59,99€"
+~e195 [pixels] image 1628,343,756,433
+e196 [pixels] image 388,319,840,481
+e197 text 1246,334,144,22 "HELLDIVERS™ 2"
+e198 text 1246,363,84,17 "Very Positive"
+e199 text 1330,363,126,17 "(631,501 Reviews)"
+e200 [pixels] image 1246,397,157,88
+e201 [pixels] image 1413,397,157,88
+e202 [pixels] image 1246,495,157,88
+e203 [pixels] image 1413,495,157,88
+e204 [pixels] image 1246,652,30,48
+e205 text 1288,653,79,21 "Top Seller"
+e206 text 1288,677,63,21 "Ranked"
+e207 text 1351,677,21,21 "#7"
+e208 text 1373,677,114,21 "in your region"
+e209 text 1510,763,48,17 "39,99€"
+~e210 text 413,328,29,15 "Live"
+~e211 text 1246,334,94,22 "WARDOGS"
+~e212 text 1246,363,155,17 "Available: 10 Sep, 2026"
+e213 [pixels] image 1246,397,157,88
+e214 [pixels] image 1413,397,157,88
+e215 [pixels] image 1246,495,157,88
+e216 [pixels] image 1413,495,157,88
+e217 text 1246,653,107,21 "Pre-Purchase"
+e218 text 1353,653,38,21 "now"
+~e219 text 1246,677,172,21 "Coming 10 Sep, 2026"
+e220 text 1510,763,48,17 "39,99€"
+~e221 link 388,866,1200,190 "Steam Pins & Pegs Fest 2026"
+e222 [offscreen] heading 318,972,651,30 "Discounts & Events"
+e223 [offscreen] link 1428,976,90,22 "See More"
+e224 [offscreen] list 318,1012,1200,475
+e225 [offscreen] link 339,1030,341,439 "FRANCHISE SALE Up to -95%"
+e226 [offscreen] link 339,1030,341,405 "FRANCHISE SALE"
+e227 [offscreen] text 599,1444,76,17 "Up to -95%"
+e228 [offscreen] link 698,1030,341,439 "MIDWEEK DEAL Up to -90%"
+e229 [offscreen] link 698,1030,341,405 "MIDWEEK DEAL"
+e230 [offscreen] text 957,1444,77,17 "Up to -90%"
+e231 [offscreen] link 1057,1030,341,193 "TODAY'S DEAL-55%19,50€8,77€"
+e232 [offscreen] text 1065,1022,97,17 "TODAY'S DEAL"
+e233 [offscreen] link 1057,1189,341,34 "55% off. 19,50€ normally, discounted to 8,77€"
+e234 [offscreen] text 1261,1197,36,17 "-55%"
+e235 [offscreen] text 1310,1199,38,14 "19,50€"
+e236 [offscreen] text 1352,1197,38,17 "8,77€"
+e237 [offscreen] link 1057,1277,341,193 "TODAY'S DEAL-60%39,99€15,99€"
+e238 [offscreen] text 1065,1269,97,17 "TODAY'S DEAL"
+e239 [offscreen] link 1057,1436,341,34 "60% off. 39,99€ normally, discounted to 15,99€"
+e240 [offscreen] text 1251,1444,37,17 "-60%"
+e241 [offscreen] text 1301,1446,38,14 "39,99€"
+e242 [offscreen] text 1343,1444,47,17 "15,99€"
+e243 [offscreen] link 1419,1030,341,439 "FRANCHISE SALE Up to -84%"
+e244 [offscreen] link 1419,1030,341,405 "FRANCHISE SALE"
+e245 [offscreen] text 1679,1444,76,17 "Up to -84%"
+e246 [offscreen] link 1778,1030,341,439 "MIDWEEK DEAL -50%19,99€9,99€"
+e247 [offscreen] link 1778,1030,341,405 "MIDWEEK DEAL"
+e248 [offscreen] link 1778,1436,341,34 "50% off. 19,99€ normally, discounted to 9,99€"
+e249 [offscreen] text 1981,1444,37,17 "-50%"
+e250 [offscreen] text 2030,1446,37,14 "19,99€"
+e251 [offscreen] text 2072,1444,39,17 "9,99€"
+e252 [offscreen] link 2137,1030,341,193 "TODAY'S DEAL-25%19,50€14,62€"
+e253 [offscreen] text 2145,1022,97,17 "TODAY'S DEAL"
+e254 [offscreen] link 2137,1189,341,34 "25% off. 19,50€ normally, discounted to 14,62€"
+e255 [offscreen] text 2332,1197,36,17 "-25%"
+e256 [offscreen] text 2381,1199,38,14 "19,50€"
+e257 [offscreen] text 2422,1197,48,17 "14,62€"
+e258 [offscreen] link 2137,1277,341,193 "TODAY'S DEAL-60%19,50€7,80€"
+e259 [offscreen] text 2145,1269,97,17 "TODAY'S DEAL"
+e260 [offscreen] link 2137,1436,341,34 "60% off. 19,50€ normally, discounted to 7,80€"
+e261 [offscreen] text 2339,1444,37,17 "-60%"
+e262 [offscreen] text 2389,1446,38,14 "19,50€"
+e263 [offscreen] text 2431,1444,39,17 "7,80€"
+e264 [offscreen] link 339,1030,341,193 "-60%59,99€23,99€"
+e265 [offscreen] link 339,1190,341,34 "60% off. 59,99€ normally, discounted to 23,99€"
+e266 [offscreen] text 532,1198,37,17 "-60%"
+e267 [offscreen] text 582,1200,38,14 "59,99€"
+e268 [offscreen] text 624,1198,48,17 "23,99€"
+e269 [offscreen] link 339,1276,341,193 "-75%69,99€17,49€"
+e270 [offscreen] link 339,1436,341,34 "75% off. 69,99€ normally, discounted to 17,49€"
+e271 [offscreen] text 535,1444,35,17 "-75%"
+e272 [offscreen] text 583,1446,38,14 "69,99€"
+e273 [offscreen] text 625,1444,47,17 "17,49€"
+e274 [offscreen] link 698,1030,341,193 "-30%59,99€41,99€"
+e275 [offscreen] link 698,1190,341,34 "30% off. 59,99€ normally, discounted to 41,99€"
+e276 [offscreen] text 892,1198,36,17 "-30%"
+e277 [offscreen] text 941,1200,38,14 "59,99€"
+e278 [offscreen] text 983,1198,48,17 "41,99€"
+e279 [offscreen] link 698,1276,341,193 "-85%59,99€8,99€"
+e280 [offscreen] link 698,1436,341,34 "85% off. 59,99€ normally, discounted to 8,99€"
+e281 [offscreen] text 901,1444,36,17 "-85%"
+e282 [offscreen] +602 more lines truncated (scroll to reveal)
+
+(1 earlier view(s) omitted: history budget)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

@@ -1,0 +1,5 @@
+The Qt interface panel is open and I can see "Display background cone or art" partially cut off at the bottom. I'll scroll the right pane to bring it fully into view.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(1100, 600); pyautogui.scroll(-3)", "memo": "Qt interface pane open in Advanced Prefs (All). Scrolled right pane down to reveal 'Display background cone or art' checkbox (was cut off at y~843). Next: uncheck that checkbox, then click Save at (1210, 903)."}
+```

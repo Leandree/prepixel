@@ -1,0 +1,58 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 44,4,786,533 "user@user-virtual-machine: ~"
+e4 push-button 684,35,34,30 "Minimize"
+e5 push-button 724,35,34,30 "Maximize"
+e6 push-button 764,35,34,30 "Close"
+e7 push-button 593,27,36,46
+e8 toggle-button 635,27,36,46 "Menu" state=checked:false
+e9 text 321,41,232,17 "user@user-virtual-machine: ~"
+e10 push-button 76,27,36,46
+~e11 terminal 70,74,722,434 "Terminal" state=focused typed-by-driver="clear; sed -i 's/^#\? *play-and-exit=.*/play-and-exit=0/' ~/.config/vlc/vlcrc 2>/dev/null; grep -q '^play-and-exit=0' ~/.config/vlc/vlcrc 2>/dev/null || { mkdir -p ~/.config/vlc; echo 'play-and-exit=0' >> ~/.config/vlc/vlcrc; }; echo ""STATUS=$(grep -c '^play-and-exit=0' ~/.config/vlc/vlcrc)""
+"
+e12 scroll-bar 792,74,12,434 value="0.0"
+e13 text 646,364,600,420 "VLC media player"
+e14 menu-item 652,364,44,20 "Media"
+e15 menu-item 702,364,62,20 "Playback"
+e16 menu-item 770,364,43,20 "Audio"
+e17 menu-item 819,364,42,20 "Video"
+e18 menu-item 867,364,55,20 "Subtitle"
+e19 menu-item 928,364,38,20 "Tools"
+e20 menu-item 972,364,37,20 "View"
+e21 menu-item 1015,364,36,20 "Help"
+e22 text 646,732,44,18 "--:--"
+e23 slider 690,732,512,18 value="0.0"
+e24 text 1202,732,44,18 "--:--"
+e25 [pixels] image 1128,767,16,16
+e26 slider 1144,757,85,26 value="0.0"
+e27 [pixels] unknown 1229,766,17,17
+e28 push-button 649,751,32,32
+e29 push-button 693,754,26,26
+e30 push-button 719,754,26,26
+e31 push-button 745,754,26,26
+e32 push-button 783,754,26,26
+e33 push-button 809,754,26,26
+e34 push-button 847,754,26,26
+e35 check-box 873,754,26,26 state=checked:false
+e36 check-box 899,754,26,26 state=checked:false
+e37 toggle-button 0,0,99,27 "Activities" state=checked:false
+e38 menu 99,0,116,27 "Terminal"
+e39 menu 906,0,178,27 "Aug 19 03‎∶54"
+e40 menu 1774,0,40,27 "vlc"
+e41 menu 1814,0,106,27 "System"
+e42 push-button 0,908,70,8
+e43 push-button 62,33,8,883
+e44 push-button 0,33,70,64 "Google Chrome"
+e45 push-button 0,101,70,64 "Thunderbird Mail"
+e46 push-button 0,169,70,64 "Visual Studio Code"
+e47 push-button 0,237,70,64 "VLC media player"
+e48 push-button 0,305,70,64 "LibreOffice Writer"
+e49 push-button 0,373,70,64 "LibreOffice Calc"
+e50 push-button 0,441,70,64 "LibreOffice Impress"
+e51 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e52 push-button 0,577,70,64 "Files"
+e53 push-button 0,645,70,64 "Ubuntu Software"
+e54 push-button 0,713,70,64 "Help"
+e55 push-button 0,784,70,64 "Terminal"
+e56 push-button 0,852,70,64 "Trash"
+e57 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

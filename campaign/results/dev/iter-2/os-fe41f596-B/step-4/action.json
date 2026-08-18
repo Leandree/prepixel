@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+alt+t", "memo": "Power panel shows only Power Mode + 2 rows (no 'Show Battery Percentage' row \u2014 VM likely reports no battery). Opening a terminal to set it via gsettings: `gsettings set org.gnome.desktop.interface show-battery-percentage true`. Next: type that command + Enter, then verify the top bar clock area shows a percentage."}

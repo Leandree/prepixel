@@ -1,0 +1,5 @@
+The View menu is open and I can confirm `<number>` in the bottom-right of the master now renders red. Returning to Normal view.
+
+```json
+{"action": "import pyautogui; pyautogui.click(207, 101)", "memo": "Red confirmed on <number> in Master Slide (bottom-right placeholder shows red). Clicked View > Normal. Next: Ctrl+S then press Enter to Keep Current Format (pptx), then verify title bar / DONE."}
+```

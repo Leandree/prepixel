@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Structured view came back empty after F5+Return; need a fresh observation. If still empty, use alt+tab or the Window menu to focus the Calc doc and verify tab order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Macro already called oDoc.store()."}

@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+o","memo":"CONFIRMED: A7='Out of the Silent Planet', I7=1328.89 = lowest words/day (next I10=1984.3). ANSWER = Out of the Silent Planet. Pressed Ctrl+O in Calc to open file dialog; next: type ~/Desktop/book_list_result.docx into the file-name field, Enter -> opens in Writer. Then type title, Ctrl+S, Keep current format."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Opened View menu to reach Zoom dialog. Next: click 'Zoom...' entry, choose 75% (Variable), OK. Then Ctrl+S and 'Use Excel 2007-365!' to keep xlsx format so zoom is saved."}

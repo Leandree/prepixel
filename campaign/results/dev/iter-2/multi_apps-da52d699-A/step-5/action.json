@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(900, 400); pyautogui.write('Out of the Silent Planet')", "memo": "ANSWER='Out of the Silent Planet' (min 1328.89 w/d). Step5: clicked doc body + typed title. Next: verify text appears (word count >0), then Ctrl+S and press Enter / click 'Use Word 2007-365!' to keep .docx format."}

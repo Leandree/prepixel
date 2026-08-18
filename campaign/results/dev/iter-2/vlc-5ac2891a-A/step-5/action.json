@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.moveTo(715, 600); pyautogui.scroll(-5); pyautogui.sleep(1.5)", "memo": "In VLC Advanced Preferences (All view). Scrolled left tree down looking for 'Playlist' node (below Interface > Main interfaces). Next: click 'Playlist' in tree, then UNCHECK 'Play and exit' checkbox in right pane, then click Save at (1210, 903)."}

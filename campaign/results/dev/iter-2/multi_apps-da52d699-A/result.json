@@ -1,0 +1,40 @@
+{
+ "task_id": "da52d699-e8d2-4dc5-9191-a2199e0b6a9b",
+ "domain": "multi_apps",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "961bf580a8e8afd3dfaec4a77b463b5111e1b943",
+ "success": true,
+ "score_raw": 1,
+ "steps": 7,
+ "termination": "DONE",
+ "wall_clock_s": 291.8,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 4670,
+  "cache_creation_input_tokens": 68173,
+  "cache_read_input_tokens": 177690,
+  "output_tokens": 11573,
+  "cost_usd": 1.08325,
+  "attempts": 7,
+  "steps_with_usage": 7,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "WAIT",
+  "import pyautogui; pyautogui.click(181, 443)",
+  "import pyautogui; pyautogui.click(1833, 45)",
+  "import pyautogui; pyautogui.doubleClick(1852, 767)",
+  "import pyautogui; pyautogui.click(900, 400); pyautogui.write('Out of the Silent Planet')",
+  "import pyautogui; pyautogui.hotkey('ctrl', 's')",
+  "DONE"
+ ]
+}

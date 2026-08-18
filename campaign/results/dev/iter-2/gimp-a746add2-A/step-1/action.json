@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(35, 540)", "memo": "Task: open GIMP's Vignette filter window (Filters > Light and Shadow > Vignette). Step 1: clicked GIMP icon in Ubuntu dock at (35,540) to launch it. Next: wait for GIMP to load, then open Filters menu. Note: Vignette may need an open image to be enabled."}

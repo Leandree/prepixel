@@ -1,0 +1,5 @@
+Playlist node is now visible in the tree. Clicking it to load its settings pane.
+
+```json
+{"action": "import pyautogui; pyautogui.click(639, 471); pyautogui.sleep(2)", "memo": "Clicked 'Playlist' node in Advanced Preferences tree (All view). Right pane should now show Playlist settings incl. 'Play and exit' checkbox — must be UNCHECKED. Then click Save at (1210, 903)."}
+```

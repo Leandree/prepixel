@@ -1,0 +1,1 @@
+{"action":"done","memo":"No format dialog appeared; Sheet2 contains headers in A1/B1 and sums A2=867786, B2=411686; file saved."}

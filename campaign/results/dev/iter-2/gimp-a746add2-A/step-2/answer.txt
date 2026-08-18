@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "GIMP is open with dog_with_background.png loading; a 'Convert to RGB Working Space?' dialog appeared. Step 2: clicked 'Keep' (1106,702) to dismiss without altering the image. Next: click Filters menu (474,77) > Light and Shadow > Vignette."}

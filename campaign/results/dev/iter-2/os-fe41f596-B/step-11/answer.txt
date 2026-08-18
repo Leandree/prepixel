@@ -1,0 +1,1 @@
+{"action":"crop","target":"e87","memo":"Verifying top-bar System menu (e87, 106px) for a battery percentage. gsettings show-battery-percentage was set true and confirmed via get. If crop shows '%' -> done. If no battery in this VM (no % icon), the setting is still correctly applied -> done."}

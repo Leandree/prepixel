@@ -1,0 +1,5 @@
+The title is typed correctly (5 words, 24 characters). Now saving with Ctrl+S.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's')", "memo": "Text 'Out of the Silent Planet' confirmed in doc (5 words, 24 chars). Pressed Ctrl+S. Next: a 'Keep current format' dialog should appear -> click 'Use Word 2007-365!' button (right-ish, ~x=1100 y=600) or press Enter if that's the default. Then verify title bar has no modified state and DONE."}
+```

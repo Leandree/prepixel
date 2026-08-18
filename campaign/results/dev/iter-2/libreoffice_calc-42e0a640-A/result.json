@@ -1,0 +1,41 @@
+{
+ "task_id": "42e0a640-4f19-4b28-973d-729602b5a4a7",
+ "domain": "libreoffice_calc",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "961bf580a8e8afd3dfaec4a77b463b5111e1b943",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 8,
+ "termination": "DONE",
+ "wall_clock_s": 251.3,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 4678,
+  "cache_creation_input_tokens": 76996,
+  "cache_read_input_tokens": 222977,
+  "output_tokens": 10064,
+  "cost_usd": 1.156438,
+  "attempts": 8,
+  "steps_with_usage": 8,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(405, 76)",
+  "import pyautogui; pyautogui.click(455, 303)",
+  "import pyautogui; pyautogui.click(738, 392)",
+  "import pyautogui; pyautogui.click(1233, 794)",
+  "import pyautogui; pyautogui.click(151, 314); pyautogui.write('Total Revenue\t'); pyautogui.write('Total Expenses\n'); pyautogui.write('=SUM(Sheet1.A2:A20)\t'); pyautogui.write('=SUM(Sheet1.B2:B20)\n')",
+  "import pyautogui, time; pyautogui.click(151, 314); time.sleep(0.5); pyautogui.write('Total Revenue', interval=0.05); pyautogui.press('tab'); time.sleep(0.3); pyautogui.write('Total Expenses', interval=0.05); pyautogui.press('enter'); time.sleep(0.5); pyautogui.click(151, 331); time.sleep(0.5); pyautogui.write('=SUM(Sheet1.A2:A20)', interval=0.05); pyautogui.press('tab'); time.sleep(0.3); pyautogui.write('=SUM(Sheet1.B2:B20)', interval=0.05); pyautogui.press('enter')",
+  "import pyautogui, time; pyautogui.hotkey('ctrl', 's'); time.sleep(2); pyautogui.press('enter')",
+  "DONE"
+ ]
+}

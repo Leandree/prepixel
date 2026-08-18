@@ -1,0 +1,69 @@
+{
+ "attempts": [
+  {
+   "cmd": "claude -p --model claude-opus-5[1m] --tools Read --output-format json",
+   "tools": "Read",
+   "seconds": 29.5,
+   "returncode": 0,
+   "stderr": "",
+   "usage": {
+    "input_tokens": 781,
+    "cache_creation_input_tokens": 15297,
+    "cache_read_input_tokens": 57802,
+    "output_tokens": 1592,
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 15297,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 258,
+      "cache_read_input_tokens": 19180,
+      "cache_creation_input_tokens": 3108,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 3108
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard"
+   },
+   "model_usage": {
+    "claude-haiku-4-5-20251001": {
+     "inputTokens": 1243,
+     "outputTokens": 18,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 0.001333,
+     "contextWindow": 200000,
+     "maxOutputTokens": 32000
+    },
+    "claude-opus-5[1m]": {
+     "inputTokens": 781,
+     "outputTokens": 1592,
+     "cacheReadInputTokens": 57802,
+     "cacheCreationInputTokens": 15297,
+     "webSearchRequests": 0,
+     "costUSD": 0.225576,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 32000
+    }
+   },
+   "cost_usd": 0.226909,
+   "api_error_status": null,
+   "attempt": 1
+  }
+ ],
+ "transient_retries": 0,
+ "tools": "Read",
+ "parsed": true
+}

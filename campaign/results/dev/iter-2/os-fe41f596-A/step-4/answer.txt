@@ -1,0 +1,3 @@
+The `gsettings get` output confirms `true` — the battery-percentage display setting is enabled. The top bar shows no percentage because this VM has no battery hardware, but the setting the task asks for is applied and verified.
+
+{"action": "DONE", "memo": "Verified: gsettings get org.gnome.desktop.interface show-battery-percentage returned 'true'. Setting applied; no % in top bar only because VM lacks battery hardware. Task complete."}

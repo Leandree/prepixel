@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e769","memo":"Writer Tools menu open; clicking Macros submenu. Next: choose 'Edit Macros...'/'Basic Macros' to open Basic IDE. Macro plan: oDoc=find Calc component (workbook-with-sample-database.xlsx) via StarDesktop.Components, then oDoc.Sheets.moveByName for order ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration; then oDoc.store()"}
+```

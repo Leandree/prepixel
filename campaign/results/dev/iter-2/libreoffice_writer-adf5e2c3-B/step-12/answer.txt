@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+End","memo":"Replace confirmed: 'A study by Pennington [14] noted'. Now at doc end — verify the '[14] Steinberg, F. M., Bearden...' line exists as last reference, then Ctrl+S and click 'Use Word 2007-365!' in the format dialog."}

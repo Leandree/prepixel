@@ -1,0 +1,5 @@
+The Steinberg paragraph exists as its own paragraph but lost its list number (text starts at the margin, no `[14]` label). Since it's now an unnumbered entry, Backspace at its start will merge it into `[13]`, and Enter will re-split it as a properly numbered `[14]` item.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(900, 763); time.sleep(0.4); pyautogui.press('home'); time.sleep(0.3); pyautogui.press('backspace'); time.sleep(0.8); pyautogui.press('enter'); time.sleep(1.0); pyautogui.hotkey('ctrl','s'); time.sleep(2.5); pyautogui.press('enter'); time.sleep(2)", "memo": "Step14: Steinberg para was unnumbered -> did Home+Backspace (merge into [13]) then Enter (re-split as numbered [14]), then Ctrl+S + Enter (Keep Word format). STEP15: verify screenshot shows '[14] Steinberg, F. M., ...' numbered. If numbering still missing but text+[14] citation are correct, just re-save (Ctrl+S, Enter) and DONE."}
+```

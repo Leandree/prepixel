@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(34, 133)", "memo": "Clicked Thunderbird icon in dock to launch it. Plan: Tools > Message Filters > New filter on anonym-x2024@outlook.com, condition match-all, action Forward Message to anonym-x2024@gmail.com. Do NOT touch online account settings."}

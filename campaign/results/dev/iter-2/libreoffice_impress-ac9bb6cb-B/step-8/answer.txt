@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e16","memo":"Clicked Finish on recovery dialog; doc saa-format-guide.pptx should reopen in Impress. Next: View > Master Slide (or toolbar 'Master Slide' btn ~702,66), click the <number> placeholder border at ~1387,891, Esc to select shape, then Format > Character > Font Color > Red. NO macros."}
+```

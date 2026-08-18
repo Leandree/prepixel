@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e40","memo":"Clicked 'Manage message filters' on anonym-x2024@outlook.com home page. Next: in Message Filters dialog, ensure filter list is for outlook account, click 'New...' to create filter; name it, choose 'Match all messages', action 'Forward Message to' -> anonym-x2024@gmail.com, apply when getting new mail. Then OK."}
+```

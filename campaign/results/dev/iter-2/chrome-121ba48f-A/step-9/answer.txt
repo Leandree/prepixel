@@ -1,0 +1,7 @@
+The cart page confirms the task is complete.
+
+```json
+{"action": "DONE", "memo": "Cart verified: 'Your Shopping Cart (1 item)' — The Dota 2 Official Soundtrack 8,19EUR, the only cart-addable Dota 2 DLC (Add-all-DLC subtotal matched 8,19EUR). Task accomplished."}
+```
+
+**Summary:** Navigated to the Dota 2 store page, used the "Add all DLC to Cart" button in the Downloadable Content section, and confirmed on `store.steampowered.com/cart` that the cart now contains the DLC (1 item — The Dota 2 Official Soundtrack, 8,19€). The free "Dota 2 Remixes EP" isn't cart-addable, which matches the add-all subtotal of 8,19€.

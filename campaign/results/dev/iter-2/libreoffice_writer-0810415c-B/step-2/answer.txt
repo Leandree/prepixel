@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+shift+down","memo":"Cursor was in para1 (e50). Just pressed ctrl+shift+down -> selection should now reach start of para2 (e51). NEXT: press shift+end to extend into para2's first line (do NOT press ctrl+shift+down again, that would touch para3). Then click Line Spacing e143 and pick 'Double Spacing'."}
+```

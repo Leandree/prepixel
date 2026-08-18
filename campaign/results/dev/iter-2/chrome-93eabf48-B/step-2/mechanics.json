@@ -1,0 +1,39 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 608,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 21,
+  "cdp_records": 13,
+  "offscreen": 0,
+  "url": "chrome://new-tab-page/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "New Tab"
+ },
+ "history_views": 1,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Component.grabFocus+Text.setCaretOffset"
+ },
+ "rung": 1,
+ "rung1_method": "Component.grabFocus+Text.setCaretOffset",
+ "settle_ms": 4940,
+ "settle_captures": 3,
+ "guard_ms": 21
+}

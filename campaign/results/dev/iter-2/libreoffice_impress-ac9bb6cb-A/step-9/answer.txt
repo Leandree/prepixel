@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1260, 838)", "memo": "Font color set to Red, clicked OK. Next: click outside placeholder (e.g. 600,1000) to deselect, then close Master View (View > Normal, menu View at 177,76 -> Normal), then Ctrl+S and press Enter to Keep Current Format (pptx)."}
+```

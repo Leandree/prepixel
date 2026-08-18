@@ -1,0 +1,295 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Dota 2 - Memory usage - 117 MB"
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Dota 2 on Steam - Memory usage - 182 MB" state=selected
+e8 push-button 550,33,28,28 "Close"
+e9 push-button 586,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1399,24 "Address and search bar"
+e15 push-button 1634,78,24,24 "Bookmark this tab"
+e16 push-button 1679,73,34,34 "You"
+e17 push-button 1718,73,202,34 "New Chrome available"
+e18 text 1592,103,334,207 "Can't update Chrome"
+e19 toggle-button 0,0,99,27 "Activities" state=checked:false
+e20 menu 99,0,162,27 "Google Chrome"
+e21 menu 906,0,178,27 "Aug 19 02‎∶12"
+e22 menu 1814,0,106,27 "System"
+e23 push-button 0,840,70,8
+e24 push-button 62,33,8,815
+e25 push-button 0,33,70,64 "Google Chrome"
+e26 push-button 0,101,70,64 "Thunderbird Mail"
+e27 push-button 0,169,70,64 "Visual Studio Code"
+e28 push-button 0,237,70,64 "VLC media player"
+e29 push-button 0,305,70,64 "LibreOffice Writer"
+e30 push-button 0,373,70,64 "LibreOffice Calc"
+e31 push-button 0,441,70,64 "LibreOffice Impress"
+e32 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e33 push-button 0,577,70,64 "Files"
+e34 push-button 0,645,70,64 "Ubuntu Software"
+e35 push-button 0,713,70,64 "Help"
+e36 push-button 0,784,70,64 "Trash"
+e37 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e38 [offscreen] banner 0,0,1850,104
+~e39 [offscreen] link 325,60,145,17 "Link to the Steam Homepage"
+~e40 [offscreen] navigation 525,0,335,73 "Global Menu"
+~e41 [offscreen] link 525,0,65,73 "STORE"
+~e42 [offscreen] link 590,0,114,73 "COMMUNITY"
+~e43 [offscreen] link 704,0,69,68 "About"
+~e44 [offscreen] link 773,0,87,68 "SUPPORT"
+~e45 [offscreen] navigation 1277,6,248,24 "Account Menu"
+~e46 [offscreen] link 1277,6,110,21 "Install Steam"
+~e47 [offscreen] link 1393,11,42,14 "sign in"
+~e48 [offscreen] text 1435,11,15,14 "|"
+~e49 [offscreen] text 1455,11,47,14 "language"
+~e50 navigation 387,114,1216,46 "Store menu" [occluded]
+~e51 push-button 387,114,83,46 "Browse" [occluded]
+~e52 presentation 446,130,14,14 [occluded]
+~e53 push-button 470,114,152,46 "Recommendations" [occluded]
+~e54 presentation 598,130,14,14 [occluded]
+~e55 push-button 622,114,104,46 "Categories" [occluded]
+~e56 presentation 702,130,14,14 [occluded]
+~e57 push-button 726,114,97,46 "Hardware" [occluded]
+~e58 presentation 799,130,14,14 [occluded]
+~e59 push-button 823,114,117,46 "Ways to Play" [occluded]
+~e60 presentation 916,130,14,14 [occluded]
+~e61 push-button 940,114,137,46 "Special Sections" [occluded]
+~e62 presentation 1053,130,14,14 [occluded]
+~e63 search 1093,120,398,34 [occluded]
+~e64 combo-box 1093,120,364,34 "Search the store" [occluded]
+~e65 push-button 1457,120,34,34 [occluded]
+~e66 [pixels] image 1465,128,18,18 alt=Search
+~e67 link 1103,171,378,31 "Advanced Search" [occluded]
+~e68 link 1515,122,75,30 "Cart1" [occluded]
+~e69 [pixels] image 1525,130,14,14
+~e70 text 1544,129,26,16 "Cart"
+~e71 text 1574,132,6,12 "1"
+~e72 main 70,-382,1850,3973
+~e73 [offscreen] text 355,170,142,16 "Open in Desktop App"
+~e74 [offscreen] text 537,160,146,19 "You're not signed in!"
+~e75 [offscreen] text 537,178,586,17 "Open this page in the Steam App to wishlist, follow, purchase and see recommendations"
+~e76 [pixels] image 70,-280,1850,646
+~e77 [pixels] image 70,-280,1850,1042
+~e78 [pixels] image 70,-280,1850,1042
+~e79 [offscreen] link 325,227,56,15 "All Games"
+~e80 [offscreen] text 381,227,14,15 ">"
+~e81 [offscreen] link 395,227,109,15 "Free To Play Games"
+~e82 [offscreen] text 504,227,14,15 ">"
+~e83 [offscreen] link 518,227,83,15 "Dota Franchise"
+~e84 [offscreen] text 602,227,14,15 ">"
+~e85 [offscreen] link 616,227,38,15 "Dota 2"
+~e86 [offscreen] link 1385,243,140,32 "Community Hub"
+~e87 [offscreen] heading 325,243,1200,32 "Dota 2"
+~e88 [offscreen] text 1150,480,344,111 "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+~e89 link 1220,128,375,18 "Recent Reviews: Mixed (21,842) - 68% of the 21,842 user reviews in the last 30 days are positive." [occluded]
+~e90 text 1220,131,102,12 "Recent Reviews:"
+~e91 text 1361,129,35,15 "Mixed"
+~e92 text 1400,129,48,15 "(21,842)"
+~e93 link 1220,146,375,18 "English Reviews: Very Positive (835,709) - 87% of the 835,709 user reviews for this game are positive." [occluded]
+~e94 text 1220,149,105,12 "English Reviews:"
+~e95 text 1361,147,75,15 "Very Positive"
+~e96 text 1440,147,56,15 "(835,709)"
+~e97 text 1220,176,85,12 "Release Date:"
+~e98 text 1361,174,71,15 "10 Jul, 2013"
+~e99 text 1220,207,70,12 "Developer:"
+~e100 link 1361,205,32,15 "Valve" [occluded]
+~e101 text 1220,225,65,12 "Publisher:"
+~e102 link 1361,223,32,15 "Valve" [occluded]
+~e103 text 1220,293,223,14 "Popular user-defined tags for this product:"
+~e104 link 1220,310,73,19 "Free to Play" [occluded]
+~e105 link 1295,310,46,19 "MOBA" [occluded]
+~e106 link 1344,310,67,19 "Multiplayer" [occluded]
+~e107 link 1413,310,55,19 "Strategy" [occluded]
+~e108 link 1470,310,52,19 "eSports" [occluded]
+~e109 push-button 1524,310,20,19 "+" [occluded]
+~e110 [pixels] video 396,-197,808,455
+~e111 [pixels] image 406,290,26,26
+~e112 [pixels] image 446,290,26,26
+~e113 text 486,294,30,17 "0:33"
+~e114 text 520,294,5,17 "/"
+~e115 text 529,294,31,17 "0:42"
+~e116 [pixels] image 1088,290,26,26
+~e117 [pixels] image 1128,290,26,26
+~e118 [pixels] image 1168,290,26,26
+~e119 [pixels] image 396,264,116,65
+~e120 [pixels] image 443,286,22,22
+~e121 [pixels] image 516,264,116,65
+~e122 [pixels] image 563,286,22,22
+~e123 [pixels] image 636,264,116,65
+~e124 [pixels] image 756,264,116,65
+~e125 [pixels] image 876,264,116,65
+~e126 [pixels] image 996,264,116,65
+~e127 [pixels] image 1116,264,116,65
+~e128 [pixels] image 1236,264,116,65
+~e129 [pixels] image 1356,264,116,65
+~e130 [pixels] image 1476,264,116,65
+~e131 [pixels] image 1596,264,116,65
+~e132 [pixels] image 1716,264,116,65
+~e133 [pixels] image 1836,264,116,65
+~e134 [pixels] image 1883,286,22,22
+~e135 [pixels] image 412,339,6,10
+~e136 [pixels] image 1182,339,6,10
+~e137 [pixels] image 70,366,1850,200
+~e138 paragraph 411,382,366,32 "Sign in to add this item to your wishlist, follow it, or mark it as ignored" [occluded]
+~e139 link 411,382,37,14 "Sign in" [occluded]
+~e140 text 448,382,329,14 "to add this item to your wishlist, follow it, or mark it as ignored"
+~e141 link 1531,382,48,32 [occluded]
+~e142 [pixels] image 1547,390,16,19
+~e143 link 1215,478,364,26 "Co-op" [occluded]
+~e144 [pixels] image 1221,483,26,16
+~e145 link 1215,506,364,26 "Steam Trading Cards" [occluded]
+~e146 [pixels] image 1221,511,26,16
+~e147 link 1215,534,364,26 "Steam Workshop" [occluded]
+~e148 [pixels] image 1221,539,26,16
+~e149 link 1215,562,364,26 "SteamVR Collectibles" [occluded]
+~e150 [pixels] image 1221,567,26,16
+~e151 link 1215,590,364,26 "In-App Purchases" [occluded]
+~e152 [pixels] image 1221,595,26,16
+~e153 link 1215,618,364,26 "Steam Timeline" [occluded]
+~e154 [pixels] image 1221,623,26,16
+~e155 push-button 1215,646,364,26 "Accessibility Features (3)?" [occluded]
+~e156 [pixels] image 1221,651,26,16
+~e157 text 1261,652,134,14 "Accessibility Features (3)"
+~e158 link 1552,650,19,19 "?" [occluded]
+~e159 list-item 1215,672,364,76 "VisualColor AlternativesCamera Comfort" [occluded]
+~e160 text 1253,678,32,14 "Visual"
+~e161 list-item 1215,696,364,26 "Color Alternatives" [occluded]
+~e162 link 1215,696,364,26 "Color Alternatives" [occluded]
+~e163 list-item 1215,722,364,26 "Camera Comfort" [occluded]
+~e164 link 1215,722,364,26 "Camera Comfort" [occluded]
+~e165 list-item 1215,748,364,50 "AudioCustom Volume Controls" [occluded]
+~e166 text 1253,754,31,14 "Audio"
+~e167 list-item 1215,772,364,26 "Custom Volume Controls" [occluded]
+~e168 link 1215,772,364,26 "Custom Volume Controls" [occluded]
+~e169 text 1223,689,137,14 "Uses Anti-Cheat Software"
+~e170 text 1223,710,124,14 "VAC (Valve Anti-Cheat)"
+~e171 text 1215,770,59,14 "Languages"
+~e172 text 1274,770,3,14 ":"
+~e173 table-row 1215,786,364,15 [occluded]
+~e174 table-cell 1215,786,122,15 [occluded]
+~e175 table-cell 1337,786,81,15 "Interface" [occluded]
+~e176 table-cell 1418,786,81,15 "Full Audio" [occluded]
+~e177 table-cell 1498,786,81,15 "Subtitles" [occluded]
+~e178 table-row 1215,801,364,21 [occluded]
+~e179 table-cell 1215,801,122,21 "English" [occluded]
+~e180 table-cell 1337,801,81,21 "✔" [occluded]
+~e181 table-cell 1418,801,81,21 "✔" [occluded]
+~e182 table-cell 1498,801,81,21 [occluded]
+~e183 table-row 1215,822,364,21 [occluded]
+~e184 table-cell 1215,822,122,21 "Bulgarian" [occluded]
+~e185 table-cell 1337,822,81,21 "✔" [occluded]
+~e186 table-cell 1418,822,81,21 [occluded]
+~e187 table-cell 1498,822,81,21 [occluded]
+~e188 table-row 1215,843,364,21 [occluded]
+~e189 table-cell 1215,843,122,21 "Czech" [occluded]
+~e190 table-cell 1337,843,81,21 "✔" [occluded]
+~e191 table-cell 1418,843,81,21 [occluded]
+~e192 table-cell 1498,843,81,21 [occluded]
+~e193 table-row 1215,864,364,21 [occluded]
+~e194 table-cell 1215,864,122,21 "Danish" [occluded]
+~e195 table-cell 1337,864,81,21 "✔" [occluded]
+~e196 table-cell 1418,864,81,21 [occluded]
+~e197 table-cell 1498,864,81,21 [occluded]
+~e198 table-row 1215,885,364,21 [occluded]
+~e199 table-cell 1215,885,122,21 "Dutch" [occluded]
+~e200 table-cell 1337,885,81,21 "✔" [occluded]
+~e201 table-cell 1418,885,81,21 [occluded]
+~e202 table-cell 1498,885,81,21 [occluded]
+~e203 link 1215,911,169,14 "See all 28 supported languages" [occluded]
+~e204 group 1199,949,396,109 "Steam Deck Compatibility" [occluded]
+~e205 text 1199,962,202,17 "Steam Deck Compatibility"
+~e206 presentation 1223,1006,28,20 [occluded]
+~e207 text 1251,1008,54,16 "Playable"
+~e208 push-button 1475,1002,96,28 "Learn more" [occluded]
+~e209 text 1215,1074,149,14 "Points Shop Items Available"
+~e210 [offscreen] link 1145,1580,69,69
+~e211 [offscreen] link 1219,1580,69,69
+~e212 [offscreen] link 1293,1580,69,69
+~e213 [offscreen] link 1366,1580,69,69
+~e214 [offscreen] link 1440,1580,69,69 "Viewall 145"
+~e215 [offscreen] text 1460,1600,30,16 "View"
+~e216 [offscreen] text 1454,1614,42,16 "all 145"
+~e217 [offscreen] text 1145,1702,33,12 "Title:"
+~e218 [offscreen] text 1178,1701,39,14 "Dota 2"
+~e219 [offscreen] text 1145,1722,42,12 "Genre:"
+~e220 [offscreen] link 1191,1720,36,15 "Action"
+~e221 [offscreen] text 1226,1721,7,14 ","
+~e222 [offscreen] link 1233,1720,46,15 "Strategy"
+~e223 [offscreen] text 1279,1721,7,14 ","
+~e224 [offscreen] link 1286,1720,66,15 "Free To Play"
+~e225 [offscreen] text 1145,1742,70,12 "Developer:"
+~e226 [offscreen] link 1219,1740,30,15 "Valve"
+~e227 [offscreen] text 1145,1762,65,12 "Publisher:"
+~e228 [offscreen] link 1214,1760,30,15 "Valve"
+~e229 [offscreen] text 1145,1782,67,12 "Franchise:"
+~e230 [offscreen] link 1215,1780,26,15 "Dota"
+~e231 [offscreen] text 1145,1802,85,12 "Release Date:"
+~e232 [offscreen] text 1230,1801,69,14 "10 Jul, 2013"
+~e233 [offscreen] link 1145,1832,364,25 "Visit the website"
+~e234 [offscreen] link 1145,1859,364,25 "View update history"
+~e235 [offscreen] link 1145,1886,364,25 "Read related news"
+~e236 [offscreen] link 1145,1913,364,25 "View discussions"
+~e237 [offscreen] link 1145,1940,364,25 "Visit the Workshop"
+~e238 [offscreen] link 1145,1967,364,25 "Find Community Groups"
+~e239 [offscreen] link 1145,2034,80,32 "Embed"
+~e240 [offscreen] link 1228,2034,52,32
+~e241 [offscreen] text 1156,2117,28,28 "90"
+~e242 [offscreen] text 1242,2107,126,32 "metacritic"
+~e243 [offscreen] link 1242,2137,110,15 "Read Critic Reviews"
+~e244 [offscreen] text 1145,2193,60,20 "Content"
+~e245 link 400,462,780,54 "Check out the entire Dota collection on Steam" [occluded]
+~e246 [pixels] image 400,462,780,54
+~e247 region 400,531,780,65 "Play Dota 2" [occluded]
+~e248 heading 416,547,748,23 "Play Dota 2" [occluded]
+~e249 text 969,588,73,16 "Free To Play"
+~e250 link 1056,579,106,32 "Play Game" [occluded]
+~e251 heading 400,656,780,28 "Content For This Game" [occluded]
+~e252 text 400,662,150,17 "Content For This Game"
+~e253 link 1094,662,70,14 "Browse all (2)" [occluded]
+~e254 text 1094,662,55,14 "Browse all"
+~e255 text 1149,662,15,14 "(2)"
+~e256 link 400,685,780,22 "The Dota 2 Official Soundtrack 8,19€" [occluded]
+~e257 text 412,689,163,14 "The Dota 2 Official Soundtrack"
+~e258 text 1141,689,30,14 "8,19€"
+~e259 link 400,708,780,22 "The Dota 2 Remixes EP Free" [occluded]
+~e260 text 412,712,129,14 "The Dota 2 Remixes EP"
+~e261 text 1146,712,25,14 "Free"
+~e262 text 968,741,33,15 "8,19€"
+~e263 link 1015,733,161,32 "Add all DLC to Cart" [occluded]
+~e264 heading 400,815,780,28 "Recent Events & AnnouncementsView All" [occluded]
+~e265 text 400,821,218,17 "Recent Events & Announcements"
+~e266 push-button 1107,821,73,22 "View All" [occluded]
+~e267 push-button 400,853,386,303 [occluded]
+~e268 text 420,874,35,15 "News"
+~e269 text 420,900,336,67 "It's the final countdown: Players and talent have landed, and all of the pieces are falling into place to make Shanghai the center of the Dota universe for the next two weeks."
+~e270 [pixels] image 400,853,386,303
+~e271 [pixels] image 400,853,386,217
+~e272 push-button 794,853,386,303 [occluded]
+~e273 text 814,874,104,15 "Regular Update"
+~e274 text 814,900,338,67 "The International approaches and we've just released an update that includes predictions, fantasy, supporter bundles, and a chance to prove your skills and win new Immortals and..."
+~e275 [pixels] image 794,853,386,303
+~e276 [pixels] image 794,853,386,217
+~e277 [pixels] image 1297,463,14,14
+~e278 dialog 671,456,648,284
+~e279 text 695,482,210,27 "Added to your cart!"
+~e280 push-button 695,536,600,124 "The Dota 2 Official Soundtrack8,19€For my accountRemove"
+~e281 link 710,628,200,20
+~e282 [pixels] image 710,551,200,93 alt=The Dota 2 Official Soundtrack
+~e283 text 925,551,234,20 "The Dota 2 Official Soundtrack"
+~e284 [pixels] image 925,586,15,15 alt=Windows
+~e285 [pixels] image 944,585,16,16 alt=macOS
+~e286 [pixels] image 964,586,16,16 alt=Linux / SteamOS
+~e287 text 1241,585,39,17 "8,19€"
+~e288 label 925,617,128,28 "For my account"
+~e289 combo-box 925,617,128,28 "For my account"
+~e290 presentation 1034,625,12,14
+~e291 push-button 1235,622,45,17 "Remove The Dota 2 Official Soundtrack"
+~e292 text 1235,623,45,15 "Remove"
+~e293 push-button 695,682,290,32 "Continue Shopping"
+~e294 push-button 1005,682,290,32 "View My Cart (1)"
+e295 [offscreen] +288 more lines truncated (scroll to reveal)

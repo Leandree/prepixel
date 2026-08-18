@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(898, 490)", "memo": "Clicked Red swatch (898,490) in standard palette row 2 (5th col). Verify Font color box now shows 'Red'. Then: OK (1260,838) -> close Master View (View>Normal or Close Master View button) -> Ctrl+S -> Enter/Keep Current Format."}

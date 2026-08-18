@@ -1,0 +1,3 @@
+Desktop is showing. I need to launch Thunderbird first.
+
+{"action": "import pyautogui; pyautogui.click(35, 133)", "memo": "Step1: clicked Thunderbird icon in dock to launch it. Goal: star every email in local 'Bills' folder. Plan: open Bills folder, select all (Ctrl+A), then mark starred (press 'S' or Message>Mark>As Starred)."}

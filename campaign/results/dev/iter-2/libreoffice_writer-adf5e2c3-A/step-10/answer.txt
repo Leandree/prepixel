@@ -1,0 +1,5 @@
+Replacement succeeded ("Search key replaced 1 times"). Closing the dialog and saving.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1296, 818); time.sleep(1); pyautogui.hotkey('ctrl', 's'); time.sleep(2); pyautogui.press('enter'); time.sleep(1.5)", "memo": "Replace All done: '<add here>' -> '[14]' (1 replacement). Dialog closed, Ctrl+S + Enter (Keep Word format) issued. NEXT: verify screenshot - check para 4 shows [14] and ref list last entry is the Steinberg 2003 ref in Arial after [13]; confirm no unsaved-changes marker. Then DONE."}
+```

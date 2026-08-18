@@ -1,0 +1,1 @@
+{"action": "click", "target": "e998", "memo": "Verifying Sheet1 headers: expect A1=Revenue, B1=Total Expenses (my formulas summed A2:A1000 -> 867786, B2:B1000 -> 411686). If columns differ, fix Sheet2 A2/B2 formulas. Then click Sheet2 tab (e999), Ctrl+S, Keep current format."}

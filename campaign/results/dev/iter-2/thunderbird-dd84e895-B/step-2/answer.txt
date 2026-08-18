@@ -1,0 +1,1 @@
+{"action":"click","target":"e34","memo":"Thunderbird loaded. Clicked Local Folders > Bills (e34). Next: click into message list, Ctrl+A to select all, then press 'S' to star/flag all emails."}

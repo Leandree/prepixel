@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.moveTo(560, 267); time.sleep(0.3); pyautogui.moveTo(700, 267); time.sleep(1.0)", "memo": "Step 6: Filters menu open, 'Light and Shadow' (y=267) highlighted but submenu not shown. Hovered toward its arrow (700,267) to expand. Next: read screenshot, find 'Vignette' in the submenu (right of x=743) and click it to open the filter dialog."}
+```

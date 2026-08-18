@@ -1,0 +1,459 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Could you assist me in turning off the dark mode feature in Google Chrome? I've noticed that while dark mode is great for reducing glare, it actually makes it more challenging for me to read text clearly, especially with my astigmatism.
+
+STEP 11 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click push-button "Google Chrome"
+2. click entry "Address and search bar"
+3. type "chrome://settings/appearance
+"
+4. click entry "Address and search bar"
+5. type "chrome://flags/?search=dark
+"
+6. key ctrl+l
+7. type "chrome://flags/?search=dark"
+8. key delete
+9. key enter
+10. type "dark"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Flags page loaded; search box focused, typed 'dark' to filter. NEXT: find 'Auto Dark Mode for Web Contents' (#enable-force-dark) combo-box and set it to Disabled, then click Relaunch.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Experiments - Memory usage - 73.1 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,88,24 "Chrome"
+e12 entry 291,78,1335,24 "Address and search bar"
+e13 push-button 1634,78,24,24 "Bookmark this tab"
+e14 push-button 1679,73,34,34 "You"
+e15 push-button 1718,73,202,34 "New Chrome available"
+e16 toggle-button 0,0,99,27 "Activities" state=checked:false
+e17 menu 99,0,162,27 "Google Chrome"
+e18 menu 906,0,178,27 "Aug 19 02‎∶24"
+e19 menu 1814,0,106,27 "System"
+e20 push-button 0,840,70,8
+e21 push-button 62,33,8,815
+e22 push-button 0,33,70,64 "Google Chrome"
+e23 push-button 0,101,70,64 "Thunderbird Mail"
+e24 push-button 0,169,70,64 "Visual Studio Code"
+e25 push-button 0,237,70,64 "VLC media player"
+e26 push-button 0,305,70,64 "LibreOffice Writer"
+e27 push-button 0,373,70,64 "LibreOffice Calc"
+e28 push-button 0,441,70,64 "LibreOffice Impress"
+e29 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e30 push-button 0,577,70,64 "Files"
+e31 push-button 0,645,70,64 "Ubuntu Software"
+e32 push-button 0,713,70,64 "Help"
+e33 push-button 0,784,70,64 "Trash"
+e34 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e35 text 70,49,130,31 "Google Chrome"
+e36 text 83,56,104,17 "Google Chrome"
+~e37 entry 658,122,420,41 "Search flags" value="dark"
+~e38 push-button 1050,133,20,20 "Clear search"
+e39 push-button 1255,126,77,33 "Reset all"
+~e40 status 70,171,97,15
+~e41 text 70,171,97,15 "1 result for 'dark'"
+e42 heading 638,187,373,28 "Experiments"
+e43 text 1254,201,84,15 "130.0.6723.58"
+~e44 page-tab-list 638,231,700,47
+~e45 page-tab 638,231,350,47 "Available" state=selected
+~e46 page-tab 988,231,350,47 "Unavailable"
+~e47 tabpanel 638,278,700,208
+~e48 heading 638,288,198,20 "Auto Dark Mode for Web Contents" [occluded]
+~e49 text 638,290,31,15 "Auto"
+~e50 text 668,290,27,15 "Dark"
+~e51 text 695,290,140,15 "Mode for Web Contents"
+~e52 paragraph 638,311,533,38 "Automatically render all web contents using a dark theme. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+~e53 link 638,352,114,15 "#enable-force-dark" [occluded]
+~e54 combo-box 1184,316,150,26 value="Default" [occluded]
+~e55 [offscreen] text 29,1211,466,18 "Your changes will take effect the next time that you relaunch Chrome."
+~e56 [offscreen] push-button 1686,1198,135,44 "Relaunch"
+[act-guard] previous action: CONFIRMED (view changed outside the system bar; focus: entry 658,122,420,41 "Search flags" state=focused)
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 8 ---
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Settings - Memory usage - 67.2 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+~e11 text 202,78,24,24 "Search icon"
+~e12 entry 240,78,1410,24 "Address and search bar" state=focused
+e13 push-button 1679,73,34,34 "You"
+e14 push-button 1718,73,202,34 "New Chrome available"
+e15 toggle-button 0,0,99,27 "Activities" state=checked:false
+e16 menu 99,0,162,27 "Google Chrome"
+e17 menu 906,0,178,27 "Aug 19 02‎∶22"
+e18 menu 1814,0,106,27 "System"
+e19 push-button 0,840,70,8
+e20 push-button 62,33,8,815
+e21 push-button 0,33,70,64 "Google Chrome"
+e22 push-button 0,101,70,64 "Thunderbird Mail"
+e23 push-button 0,169,70,64 "Visual Studio Code"
+e24 push-button 0,237,70,64 "VLC media player"
+e25 push-button 0,305,70,64 "LibreOffice Writer"
+e26 push-button 0,373,70,64 "LibreOffice Calc"
+e27 push-button 0,441,70,64 "LibreOffice Impress"
+e28 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e29 push-button 0,577,70,64 "Files"
+e30 push-button 0,645,70,64 "Ubuntu Software"
+e31 push-button 0,713,70,64 "Help"
+e32 push-button 0,784,70,64 "Trash"
+e33 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e34 text 70,49,130,31 "Google Chrome"
+e35 text 83,56,104,17 "Google Chrome"
+e36 [pixels] image 91,130,24,24
+e37 presentation 91,130,24,24 [occluded]
+e38 heading 137,129,183,26 "Settings" [occluded]
+e39 none 659,132,20,20 [occluded]
+e40 push-button 655,128,28,28 "Search settings" [occluded]
+e41 label 683,131,652,22 "Search settings" [occluded]
+e42 entry 683,131,652,22 "Search settings" [occluded]
+e43 banner 70,114,1850,56
+e44 navigation 70,178,250,634 [occluded]
+e45 menu 70,178,250,634 [occluded]
+e46 menu-item 71,178,247,40 "You and Google" [occluded]
+e47 [pixels] image 94,188,20,20
+e48 menu-item 71,218,247,40 "Autofill and passwords" [occluded]
+e49 [pixels] image 94,228,20,20
+e50 menu-item 71,258,247,40 "Privacy and security" [occluded]
+e51 [pixels] image 94,268,20,20
+e52 menu-item 71,298,247,40 "Performance" [occluded]
+e53 [pixels] image 94,308,20,20
+e54 menu-item 71,338,247,40 "Appearance" [occluded]
+e55 [pixels] image 94,348,20,20
+e56 menu-item 71,378,247,40 "Search engine" [occluded]
+e57 [pixels] image 94,388,20,20
+e58 menu-item 71,418,247,40 "Default browser" [occluded]
+e59 [pixels] image 94,428,20,20
+e60 menu-item 71,458,247,40 "On start-up" [occluded]
+e61 [pixels] image 94,468,20,20
+e62 menu-item 71,515,247,40 "Languages" [occluded]
+e63 [pixels] image 94,525,20,20
+e64 menu-item 71,555,247,40 "Downloads" [occluded]
+e65 [pixels] image 94,565,20,20
+e66 menu-item 71,595,247,40 "Accessibility" [occluded]
+e67 [pixels] image 94,605,20,20
+e68 menu-item 71,635,247,40 "System" [occluded]
+e69 [pixels] image 94,645,20,20
+e70 menu-item 71,675,247,40 "Reset settings" [occluded]
+e71 [pixels] image 94,685,20,20
+e72 menu-item 71,732,247,40 "Opens in a new tab" [occluded]
+e73 [pixels] image 94,742,20,20
+e74 text 134,744,69,16 "Extensions"
+e75 menu-item 71,772,247,40 "About Chrome" [occluded]
+e76 [pixels] image 94,782,20,20
+e77 heading 655,191,103,32 "You and Google" [occluded]
+e78 [pixels] image 655,235,680,120
+e79 text 675,370,232,20 "Get Google smarts in Chrome"
+e80 text 675,395,293,15 "Sync and personalise Chrome across your devices"
+e81 push-button 1199,372,116,36 "Turn on sync…" [occluded]
+e82 text 675,442,150,15 "Sync and Google services"
+e83 none 1297,440,20,20 [occluded]
+e84 link 1291,434,32,32 [occluded]
+e85 text 675,490,180,15 "Customise your Chrome profile"
+e86 none 1297,488,20,20 [occluded]
+e87 link 1291,482,32,32 [occluded]
+e88 text 675,538,183,15 "Import bookmarks and settings"
+e89 none 1297,536,20,20 [occluded]
+e90 link 1291,530,32,32 [occluded]
+e91 main 655,170,680,399 [occluded]
+
+--- view at step 9 ---
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Settings - Memory usage - 67.2 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 text 202,78,24,24 "Search icon"
+e12 entry 240,78,1410,24 "Address and search bar" state=focused
+e13 push-button 1679,73,34,34 "You"
+e14 push-button 1718,73,202,34 "New Chrome available"
+e15 toggle-button 0,0,99,27 "Activities" state=checked:false
+e16 menu 99,0,162,27 "Google Chrome"
+e17 menu 906,0,178,27 "Aug 19 02‎∶23"
+e18 menu 1814,0,106,27 "System"
+e19 push-button 0,840,70,8
+e20 push-button 62,33,8,815
+e21 push-button 0,33,70,64 "Google Chrome"
+e22 push-button 0,101,70,64 "Thunderbird Mail"
+e23 push-button 0,169,70,64 "Visual Studio Code"
+e24 push-button 0,237,70,64 "VLC media player"
+e25 push-button 0,305,70,64 "LibreOffice Writer"
+e26 push-button 0,373,70,64 "LibreOffice Calc"
+e27 push-button 0,441,70,64 "LibreOffice Impress"
+e28 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e29 push-button 0,577,70,64 "Files"
+e30 push-button 0,645,70,64 "Ubuntu Software"
+e31 push-button 0,713,70,64 "Help"
+e32 push-button 0,784,70,64 "Trash"
+e33 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e34 text 70,49,130,31 "Google Chrome"
+e35 text 83,56,104,17 "Google Chrome"
+e36 [pixels] image 91,130,24,24
+e37 presentation 91,130,24,24 [occluded]
+e38 heading 137,129,183,26 "Settings" [occluded]
+e39 none 659,132,20,20 [occluded]
+e40 push-button 655,128,28,28 "Search settings" [occluded]
+e41 label 683,131,652,22 "Search settings" [occluded]
+e42 entry 683,131,652,22 "Search settings" [occluded]
+e43 banner 70,114,1850,56
+e44 navigation 70,178,250,634 [occluded]
+e45 menu 70,178,250,634 [occluded]
+e46 menu-item 71,178,247,40 "You and Google" [occluded]
+e47 [pixels] image 94,188,20,20
+e48 menu-item 71,218,247,40 "Autofill and passwords" [occluded]
+e49 [pixels] image 94,228,20,20
+e50 menu-item 71,258,247,40 "Privacy and security" [occluded]
+e51 [pixels] image 94,268,20,20
+e52 menu-item 71,298,247,40 "Performance" [occluded]
+e53 [pixels] image 94,308,20,20
+e54 menu-item 71,338,247,40 "Appearance" [occluded]
+e55 [pixels] image 94,348,20,20
+e56 menu-item 71,378,247,40 "Search engine" [occluded]
+e57 [pixels] image 94,388,20,20
+e58 menu-item 71,418,247,40 "Default browser" [occluded]
+e59 [pixels] image 94,428,20,20
+e60 menu-item 71,458,247,40 "On start-up" [occluded]
+e61 [pixels] image 94,468,20,20
+e62 menu-item 71,515,247,40 "Languages" [occluded]
+e63 [pixels] image 94,525,20,20
+e64 menu-item 71,555,247,40 "Downloads" [occluded]
+e65 [pixels] image 94,565,20,20
+e66 menu-item 71,595,247,40 "Accessibility" [occluded]
+e67 [pixels] image 94,605,20,20
+e68 menu-item 71,635,247,40 "System" [occluded]
+e69 [pixels] image 94,645,20,20
+e70 menu-item 71,675,247,40 "Reset settings" [occluded]
+e71 [pixels] image 94,685,20,20
+e72 menu-item 71,732,247,40 "Opens in a new tab" [occluded]
+e73 [pixels] image 94,742,20,20
+e74 text 134,744,69,16 "Extensions"
+e75 menu-item 71,772,247,40 "About Chrome" [occluded]
+e76 [pixels] image 94,782,20,20
+e77 heading 655,191,103,32 "You and Google" [occluded]
+e78 [pixels] image 655,235,680,120
+e79 text 675,370,232,20 "Get Google smarts in Chrome"
+e80 text 675,395,293,15 "Sync and personalise Chrome across your devices"
+e81 push-button 1199,372,116,36 "Turn on sync…" [occluded]
+e82 text 675,442,150,15 "Sync and Google services"
+e83 none 1297,440,20,20 [occluded]
+e84 link 1291,434,32,32 [occluded]
+e85 text 675,490,180,15 "Customise your Chrome profile"
+e86 none 1297,488,20,20 [occluded]
+e87 link 1291,482,32,32 [occluded]
+e88 text 675,538,183,15 "Import bookmarks and settings"
+e89 none 1297,536,20,20 [occluded]
+e90 link 1291,530,32,32 [occluded]
+e91 main 655,170,680,399 [occluded]
+
+--- view at step 10 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 02‎∶23"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 text 70,49,130,31 "Google Chrome"
+e21 text 83,56,104,17 "Google Chrome"
+e22 push-button 1802,27,30,35 "Minimise"
+e23 push-button 1842,27,30,35 "Restore"
+e24 push-button 1882,27,38,35 "Close"
+e25 push-button 76,27,28,41 "Search tabs"
+e26 page-tab 98,27,256,41 "Experiments" state=selected
+e27 push-button 312,33,28,28 "Close"
+e28 push-button 348,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+~e32 push-button 195,78,88,24 "Chrome"
+~e33 entry 291,78,1335,24 "Address and search bar"
+~e34 push-button 1634,78,24,24 "Bookmark this tab"
+e35 push-button 1679,73,34,34 "You"
+e36 push-button 1718,73,202,34 "New Chrome available"
+~e37 text 637,1038,534,57 "Select strategies used to promote quads to HW overlays. Note that strategies other than Default may break playback of protected content. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e38 text 637,1057,496,35 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e39 entry 658,122,420,41 "Search flags"
+~e40 push-button 1255,126,77,33 "Reset all"
+~e41 heading 638,187,373,28 "Experiments"
+~e42 text 1254,201,84,15 "130.0.6723.58"
+~e43 text 638,232,292,16 "Warning: Experimental features ahead!"
+~e44 text 638,232,698,55 "By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production."
+~e45 page-tab-list 638,305,700,47
+~e46 page-tab 638,305,350,47 "Available" state=selected
+~e47 page-tab 988,305,350,47 "Unavailable"
+~e48 tabpanel 638,352,700,58965
+~e49 heading 638,363,195,20 "Temporarily unexpire M128 flags." [occluded]
+~e50 paragraph 638,385,533,38 "Temporarily unexpire flags that expired as of M128. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+~e51 text 638,386,500,15 "Temporarily unexpire flags that expired as of M128. These flags will be removed soon."
+~e52 text 1137,386,12,15 "–"
+~e53 text 638,405,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e54 link 638,427,198,15 "#temporary-unexpire-flags-m128" [occluded]
+~e55 combo-box 1184,391,150,26 value="Default" [occluded]
+~e56 heading 638,471,195,20 "Temporarily unexpire M129 flags." [occluded]
+~e57 paragraph 638,493,533,38 "Temporarily unexpire flags that expired as of M129. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+~e58 text 638,494,500,15 "Temporarily unexpire flags that expired as of M129. These flags will be removed soon."
+~e59 text 1137,494,12,15 "–"
+~e60 text 638,513,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e61 link 638,535,198,15 "#temporary-unexpire-flags-m129" [occluded]
+~e62 combo-box 1184,499,150,26 value="Default" [occluded]
+~e63 heading 638,579,126,20 "Enable benchmarking" [occluded]
+~e64 paragraph 638,601,533,151 [occluded]
+~e65 text 638,602,523,128 "Sets all features to a fixed state; that is, disables randomization for feature states. If '(Default Feature States)' is selected, sets all features to their default state. If '(Match Field Trial Testing Config)' is selected, sets all features to the state configured in the field trial testing config. This is used by developers and testers to diagnose whether an observed problem is caused by a non-default base::Feature configuration. This flag is automatically reset after 3 restarts and will be off from the 4th restart. On the 3rd restart, the flag will appear to be off but the effect is still active."
+~e66 text 889,715,15,15 "–"
+~e67 text 638,715,511,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e68 link 638,756,136,15 "#enable-benchmarking" [occluded]
+~e69 combo-box 1184,663,150,26 value="Disabled" [occluded]
+~e70 heading 638,800,183,20 "Override software rendering list" [occluded]
+~e71 paragraph 638,822,533,38 "Overrides the built-in software rendering list and enables GPU-acceleration on unsupported system configurations. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+~e72 text 638,823,533,34 "Overrides the built-in software rendering list and enables GPU-acceleration on unsupported system configurations."
+~e73 text 771,842,15,15 "–"
+~e74 text 787,842,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e75 link 638,863,128,15 "#ignore-gpu-blocklist" [occluded]
+~e76 combo-box 1184,828,150,26 value="Disabled" [occluded]
+~e77 heading 638,908,133,20 "Accelerated 2D canvas" [occluded]
+~e78 paragraph 638,930,533,38 "Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+~e79 text 638,931,495,34 "Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering."
+~e80 text 696,950,15,15 "–"
+~e81 text 712,950,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e82 link 638,971,192,15 "#disable-accelerated-2d-canvas" [occluded]
+~e83 combo-box 1184,936,150,26 value="Enabled" [occluded]
+~e84 heading 638,1016,167,20 "Select HW overlay strategies" [occluded]
+~e85 paragraph 638,1038,533,57 "Select strategies used to promote quads to HW overlays. Note that strategies other than Default may break playback of protected content. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+~e86 text 638,1039,512,34 "Select strategies used to promote quads to HW overlays. Note that strategies other than Default may break playback of protected content."
+~e87 text 924,1058,15,15 "–"
+~e88 text 638,1058,495,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e89 [offscreen] link 568,984,114,15 "#overlay-strategies"
+~e90 combo-box 1184,1053,150,26 value="Default" [occluded]
+~e91 [offscreen] heading 568,1028,143,20 "Tint composited content"
+~e92 [offscreen] paragraph 568,1051,533,38 "Tint contents composited using Viz with a shade of red to help debug and study overlay support. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e93 [offscreen] text 568,1052,509,34 "Tint contents composited using Viz with a shade of red to help debug and study overlay support."
+~e94 [offscreen] text 616,1071,15,15 "–"
+~e95 [offscreen] text 632,1071,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e96 [offscreen] link 568,1092,153,15 "#tint-composited-content"
+~e97 [offscreen] combo-box 1114,1056,150,26 value="Disabled"
+~e98 [offscreen] heading 568,1136,146,20 "Show overdraw feedback"
+~e99 [offscreen] paragraph 568,1159,533,38 "Visualize overdraw by color-coding elements based on if they have other elements drawn underneath. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e100 [offscreen] text 568,1160,519,34 "Visualize overdraw by color-coding elements based on if they have other elements drawn underneath."
+~e101 [offscreen] text 638,1179,15,15 "–"
+~e102 [offscreen] text 653,1179,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e103 [offscreen] link 568,1200,158,15 "#show-overdraw-feedback"
+~e104 [offscreen] combo-box 1114,1164,150,26 value="Disabled"
+~e105 [offscreen] heading 568,1244,72,20 "Partial swap"
+~e106 [offscreen] paragraph 568,1267,533,19 "Sets partial swap behavior. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e107 [offscreen] text 568,1268,157,15 "Sets partial swap behavior."
+~e108 [offscreen] text 725,1268,15,15 "–"
+~e109 [offscreen] text 740,1268,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e110 [offscreen] link 568,1289,147,15 "#ui-disable-partial-swap"
+~e111 [offscreen] combo-box 1114,1263,150,26 value="Enabled"
+~e112 [offscreen] heading 568,1333,244,20 "Allow WebRTC to adjust the input volume."
+~e113 [offscreen] paragraph 568,1356,533,75
+~e114 [offscreen] text 568,1357,532,72 "Allow the Audio Processing Module in WebRTC to adjust the input volume during a real-time call. Disable if microphone muting or clipping issues are observed when the browser is running and used for a real-time call. This flag is experimental and may be removed at any time."
+~e115 [offscreen] text 597,1413,15,15 "–"
+~e116 [offscreen] text 612,1413,122,15 "Mac, Windows, Linux"
+~e117 [offscreen] link 568,1435,286,15 "#enable-webrtc-allow-input-volume-adjustment"
+~e118 [offscreen] combo-box 1114,1380,150,26 value="Default"
+~e119 [offscreen] heading 568,1479,240,20 "WebRTC downmix capture audio method."
+~e120 [offscreen] paragraph 568,1502,533,57
+~e121 [offscreen] text 568,1503,509,53 "Override the method that the Audio Processing Module in WebRTC uses to downmix the captured audio to mono (when needed) during a real-time call. This flag is experimental and may be removed at any time."
+~e122 [offscreen] text 760,1540,15,15 "–"
+~e123 [offscreen] text 776,1540,236,15 "Mac, Windows, Linux, ChromeOS, Lacros"
+~e124 [offscreen] link 568,1562,323,15 "#enable-webrtc-apm-downmix-capture-audio-method"
+~e125 [offscreen] combo-box 1114,1516,150,26 value="Default"
+~e126 [offscreen] heading 568,1606,243,20 "Anonymize local IPs exposed by WebRTC."
+~e127 [offscreen] paragraph 568,1628,533,38 "Conceal local IP addresses with mDNS hostnames. – Mac, Windows, Linux, ChromeOS, Lacros"
+~e128 [offscreen] text 568,1629,298,15 "Conceal local IP addresses with mDNS hostnames."
+~e129 [offscreen] text 865,1629,15,15 "–"
+~e130 [offscreen] text 568,1629,506,34 "Mac, Windows, Linux, ChromeOS, Lacros"
+~e131 [offscreen] link 568,1670,250,15 "#enable-webrtc-hide-local-ips-with-mdns"
+~e132 [offscreen] combo-box 1114,1634,150,26 value="Default"
+~e133 [offscreen] heading 568,1714,149,20 "PipeWire Camera support"
+~e134 [offscreen] paragraph 568,1736,533,19 "When enabled the PipeWire multimedia server will be used for cameras. – Linux"
+~e135 [offscreen] text 568,1737,416,15 "When enabled the PipeWire multimedia server will be used for cameras."
+~e136 [offscreen] text 983,1737,15,15 "–"
+~e137 [offscreen] text 999,1737,32,15 "Linux"
+~e138 [offscreen] link 568,1759,197,15 "#enable-webrtc-pipewire-camera"
+~e139 [offscreen] combo-box 1114,1732,150,26 value="Default"
+~e140 [offscreen] heading 568,1803,121,20 "Web HID in WebView"
+~e141 [offscreen] paragraph 568,1825,533,38 "Enable WebViews to access Web HID upon embedder's permission. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e142 [offscreen] text 568,1826,391,15 "Enable WebViews to access Web HID upon embedder's permission."
+~e143 [offscreen] text 958,1826,15,15 "–"
+~e144 [offscreen] text 568,1826,531,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e145 [offscreen] link 568,1867,135,15 "#web-hid-in-web-view"
+~e146 [offscreen] combo-box 1114,1831,150,26 value="Default"
+~e147 [offscreen] heading 568,1911,178,20 "Extensions on chrome:// URLs"
+~e148 [offscreen] paragraph 568,1933,533,38 "Enables running extensions on chrome:// URLs, where extensions explicitly request this permission. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+~e149 [offscreen] text 568,1934,509,34 "Enables running extensions on chrome:// URLs, where extensions explicitly request this permission."
+~e150 [offscreen] +4430 more lines truncated (scroll to reveal)
+
+(7 earlier view(s) omitted: history budget)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

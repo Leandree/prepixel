@@ -1,0 +1,1 @@
+{"action": "click", "target": "e204", "memo": "Basic Macros dialog open. Clicked expander of 'My Macros' tree node. Next: expand Standard, select Module1, click Edit (e197) to open Basic IDE. Then write macro to set slide-number field char color red on all pages+masters and oDoc.store()."}

@@ -1,0 +1,1 @@
+{"action": "click", "target": "e167", "memo": "Sheet cols: A=Title,D=start,E=end,G=words,H=days,I=words/day. Min I is row 7 (I7=1328.89); next lowest I10=1984.3. Just clicked A7 to read its title in the input line (formula bar text elem, was 'Title' for A1). Next: read title, then open book_list_result.docx (desktop icon e4) and type it, Ctrl+S keep format."}

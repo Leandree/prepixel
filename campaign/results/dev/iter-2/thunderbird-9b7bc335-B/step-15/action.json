@@ -1,0 +1,1 @@
+{"action": "click", "target": "e121", "memo": "Clicked OK on Filter Rules dialog: filter 'Forward all', Getting New Mail checked, action 'Forward Message to anonym-x2024@gmail.com' (condition left as Subject contains <empty>, which matches all). If an error dialog appears, the empty subject term must be replaced by selecting 'Match all messages'."}

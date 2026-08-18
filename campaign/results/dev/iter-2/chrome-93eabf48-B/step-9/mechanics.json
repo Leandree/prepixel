@@ -1,0 +1,34 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 617,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 46,
+  "cdp_records": 56,
+  "offscreen": 0,
+  "url": "chrome://settings/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "title-partial",
+  "tab": "Settings - Memory usage - 67.2 MB",
+  "picked_title": "Settings"
+ },
+ "history_views": 3,
+ "history_views_dropped": 5,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 7397,
+ "settle_captures": 2,
+ "guard_ms": 65
+}

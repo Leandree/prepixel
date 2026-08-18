@@ -1,0 +1,5 @@
+The "Main interfaces" node is expanded and I can see the **Qt** child entry. Selecting it now.
+
+```json
+{"action": "import pyautogui; pyautogui.click(635, 607)", "memo": "Clicked 'Qt' under Main interfaces in Advanced Prefs (All). Right pane should now show Qt interface settings. Next: find checkbox 'Display background cone or art' (scroll right pane down if needed), uncheck it, then click Save at (1210, 903)."}
+```

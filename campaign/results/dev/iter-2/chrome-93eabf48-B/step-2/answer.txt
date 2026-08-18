@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e12","memo":"Chrome open. Clicked address bar. Next: type chrome://settings/appearance + Enter, then set Mode to Light in appearance settings."}
+```

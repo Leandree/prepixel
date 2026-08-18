@@ -1,0 +1,1 @@
+{"action":"key","keys":"/","memo":"Pressed '/' to open GIMP's 'Search and Run a Command' dialog. NEXT: verify a search dialog/entry appeared; if yes, type 'Vignette' then press Enter (or click the Vignette result) to open the Vignette filter window. If '/' did nothing, fall back to clicking Filters menu (e32) and then hovering 'Light and Shadow' submenu -> Vignette."}

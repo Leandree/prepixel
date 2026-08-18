@@ -1,0 +1,1 @@
+{"action": "click", "target": "e185", "memo": "Clicked Edit in Basic Macros dialog -> Basic IDE should open. NEXT: type full macro at top of code window (Sub FixNum ... End Sub) ending with newline so existing Sub Main stays below, then press F5 to run. Macro loops master+draw pages, shapes supportsService SlideNumberShape -> CharColor=RGB(255,0,0), then d.store()."}

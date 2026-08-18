@@ -1,5 +1,184 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-18 — DEV ITERATION 2 — 40/40 cells, and iteration 1's cost result was an artefact I have to withdraw
+
+Traces `campaign/results/dev/iter-2/`, driver pinned at 961bf58, contamination
+scan clean (40 runs, 340 steps, 0 violations, only "" and "Read" tool lists,
+10 crops matching 10 declared pixel_fallbacks).
+
+### The thing you should read first: I am withdrawing iteration 1's cost figures
+
+Iteration 1 reported B cheaper than A at the median ($1.78 vs $2.04). That
+was an artefact of my own harness and the sign reverses once it is removed.
+
+Per-call context, measured from the CLI's own usage envelopes:
+
+| | condition A | condition B |
+|---|---|---|
+| iteration 1, per call | median **173 765** tok (floor 57 981) | median 16 515 tok (floor 3 317) |
+| iteration 2, per call | median **25 354** tok (floor 10 320) | median 15 613 tok (floor 3 437) |
+
+The answering CLI was prepending the session's MCP tool schemas to every
+call. Condition A runs with `--tools Read` — it must, its channel is an
+image it has to open — and that pulled in the schemas; condition B runs with
+no tools and did not. So iteration 1 charged condition A roughly 150 000
+tokens per call for tooling that belongs to neither channel, and B's
+apparent cost advantage was that overhead, not the channel.
+
+With the contamination gone, **B costs 1.85x A at the median**. That is the
+opposite of what I reported this morning, it is the honest number, and it
+goes against the direction the paper is arguing.
+
+Fixed rather than merely noted: answering calls now run
+`--strict-mcp-config --mcp-config answer-mcp-empty.json`, in BOTH
+conditions. The prefix is then 2 274 tokens and byte-identical across
+repeated calls (measured three times). The isolation contract was
+re-verified under the new flags with the canary: condition B asks for Read,
+does not get it, and the canary does not appear in its reply. The config
+file is pinned with the driver, because a pinned iteration missing it would
+silently measure something else again.
+
+Iteration 2's own cost data is sound: its prefix was ~2 700 tokens, measured
+by regressing per-call context against prompt size on B's smallest prompts.
+So iteration 2 is internally valid and iteration-1-versus-2 cost deltas are
+NOT. Success counts are comparable across both.
+
+### Iteration 2 results
+
+| task | A | steps | $ | B | steps | $ |
+|---|---|---|---|---|---|---|
+| `chrome-121ba48f` | ✅ | 9 | 1.30 | ✅ | 9 | 2.22 |
+| `chrome-93eabf48` | ❌ | 8 | 1.12 | ❌ | 13 | 1.57 |
+| `gimp-58d3eeeb` | ❌ | 1 | 0.12 | ❌ | 3 | 0.20 |
+| `gimp-a746add2` | ✅ | 9 | 0.79 | ✅ | 11 | 1.71 |
+| `libreoffice_calc-1334ca3e` | ✅ | 5 | 0.57 | ✅ | 4 | 0.94 |
+| `libreoffice_calc-42e0a640` | ✅ | 8 | 1.16 | ✅ | 13 | 4.29 |
+| `libreoffice_impress-ac9bb6cb` | ✅ | 13 | 1.44 | ✅ | 15 | 3.23 |
+| `libreoffice_impress-ef9d12bd` | ✅ | 3 | 0.19 | ✅ | 3 | 0.37 |
+| `libreoffice_writer-0810415c` | ✅ | 12 | 1.71 | ❌ | 14 | 3.84 |
+| `libreoffice_writer-adf5e2c3` | ✅ | 15 | 3.05 | ❌ | 15 | 3.65 |
+| `multi_apps-897e3b53` | ⚠️infra | 0 | — | ⚠️infra | 0 | — |
+| `multi_apps-a0b9dc9c` | ⚠️infra | 0 | — | ⚠️infra | 0 | — |
+| `multi_apps-bc2b57f3` | ✅ | 13 | 3.27 | ✅ | 15 | 5.21 |
+| `multi_apps-da52d699` | ✅ | 7 | 1.08 | ✅ | 11 | 4.28 |
+| `os-ec4e3f68` | ✅ | 3 | 0.37 | ✅ | 4 | 0.17 |
+| `os-fe41f596` | ❌ | 4 | 0.35 | ❌ | 12 | 1.19 |
+| `thunderbird-9b7bc335` | ✅ | 10 | 0.76 | ❌ | 15 | 2.36 |
+| `thunderbird-dd84e895` | ✅ | 5 | 0.33 | ✅ | 6 | 0.54 |
+| `vlc-215dfd39` | ✅ | 12 | 1.09 | ✅ | 15 | 2.22 |
+| `vlc-5ac2891a` | ✅ | 10 | 1.37 | ✅ | 15 | 1.78 |
+
+| metric | A | B |
+|---|---|---|
+| cells | 20 | 20 |
+| successes | 15 | 12 |
+| infra failures | 2 | 2 |
+| median steps | 8.00 | 11.50 |
+| median cost $ | 1.08 | 2.00 |
+| total cost $ | 20.08 | 39.76 |
+
+**Condition B mechanics, all steps.** rung: 1=73, 2=19, crop=10, kbd=66, scroll=2 · channel: atspi=160, atspi+cdp=19
+
+| rung-1 fallback reason (P7 input) | n |
+|---|---|
+| `no-usable-action: no-interface` | 8 |
+| `node-not-found` | 8 |
+| `cdp: page.evaluate: Target page, context or browser has been closed` | 1 |
+| `no-settable-interface: ` | 1 |
+| `no-usable-action: ['showmenu']` | 1 |
+
+| router declined the web channel because | n |
+|---|---|
+| `no chromium application in the tree` | 160 |
+
+**Every B failure, with its mechanical evidence. Cause written by hand after reading the trace — this script never guesses one.**
+
+- `chrome-93eabf48` — term=DONE steps=13, A=❌. verdicts {'UNVERIFIED': 2, 'CONFIRMED': 10}. last 11:{"action": "set_value", "target": "e54", "value": "Disabled", "memo": "Set 'Auto Dark Mode | 12:{"action": "click", "target": "e57", "memo": "Combo now shows Disabled and relaunch bar ap | 13:{"action": "done", "memo": "Chrome relaunched; chrome://flags shows 'Auto Dark Mode for We
+  - cause: TODO
+- `gimp-58d3eeeb` — term=FAIL steps=3, A=❌. verdicts {'CROP': 1, 'CONFIRMED': 1}. last 1:{"action": "crop", "target": "e1", "memo": "Task: 'translate the hidden audio conversation | 2:{"action": "key", "keys": "ctrl+alt+t", "memo": "Task asks to translate a 'hidden audio co | 3:{"action": "fail", "memo": "Task is not achievable: (1) no 'image above' exists in my inpu
+  - cause: TODO
+- `libreoffice_writer-0810415c` — term=DONE steps=14, A=✅. verdicts {'UNVERIFIED': 6, 'CONFIRMED': 7}. last 12:{"action": "key", "keys": "ctrl+s", "memo": "Both paras appear double now (e50 129, e51 55 | 13:{"action": "click", "target": "e83", "memo": "Clicked Save toolbar button to be sure the d | 14:{"action": "done", "memo": "Both paragraphs set via Line Spacing > 'Spacing: 2' (heights g
+  - cause: TODO
+- `libreoffice_writer-adf5e2c3` — term=DONE steps=15, A=✅. verdicts {'CONFIRMED': 10, 'UNVERIFIED': 3, 'WAIT': 1}. last 13:{"action": "key", "keys": "ctrl+s", "memo": "Both edits verified in doc: '[14] Steinberg.. | 14:{"action": "wait", "memo": "Ctrl+S pressed; no Keep-Format dialog visible in structure yet | 15:{"action": "done", "memo": "Reference [14] Steinberg et al. appended to reference list (vi
+  - cause: TODO
+- `multi_apps-897e3b53` — term=setup_error steps=0, A=❌. verdicts {}. last (none)
+  - cause: TODO
+- `multi_apps-a0b9dc9c` — term=setup_error steps=0, A=❌. verdicts {}. last (none)
+  - cause: TODO
+- `os-fe41f596` — term=DONE steps=12, A=❌. verdicts {'CONFIRMED': 8, 'CROP': 3}. last 10:{"action": "crop", "target": "e11", "memo": "Cropping terminal e11 to read output of 'gset | 11:{"action": "crop", "target": "e87", "memo": "Verifying top-bar System menu (e87, 106px) fo | 12:{"action": "done", "memo": "gsettings org.gnome.desktop.interface show-battery-percentage 
+  - cause: TODO
+- `thunderbird-9b7bc335` — term=max_steps steps=15, A=✅. verdicts {'UNVERIFIED': 7, 'WAIT': 2, 'CONFIRMED': 6}. last 13:{"action": "set_value", "target": "e116", "value": "Forward Message to", "memo": "Filter R | 14:{"action": "type", "text": "f\tanonym-x2024@gmail.com", "memo": "Step14 typed 'f' into foc | 15:{"action": "click", "target": "e121", "memo": "Clicked OK on Filter Rules dialog: filter '
+  - cause: TODO
+
+
+| metric | A | B |
+|---|---|---|
+| successes | 15/18 | 12/18 |
+| median API-equivalent cost | $1.08 | $2.00 |
+| mean / max | $1.12 / $3.27 | $2.21 / $5.21 |
+| median steps | 8.5 | 12.5 |
+| cells hitting the 15-step cap | 1 | 6 |
+
+Against iteration 1 (A 15/18, B 11/18): **+1 cell for B, nothing for A.**
+By your freeze criterion that is close to "a full iteration with no gain",
+and I am not going to argue it is more than it is.
+
+The history budget did what it was built for: B's most expensive cell fell
+from $17.51 to $5.21 and no cell now carries an oversized history. The
+act-guard fix and the P7 interfaces are in. But the step cap still binds B
+six times against A's once — same asymmetry as iteration 1, now on a driver
+where B's mechanics are materially better, which makes it look less like a
+tuning problem and more like a property of the channel.
+
+### P1 is barely measurable on this dev set, and that is a sampling problem
+
+The router fired on **19 of 179 condition-B steps**. Every other step logged
+`no chromium application in the tree` — correctly, there was no browser. Only
+2 cells exercised the web channel at all, because just 4 of the 20 dev tasks
+launch Chrome with a debug port and 2 of those are the Google Drive tasks
+that cannot run here.
+
+Where it did fire it worked: `chrome-121ba48f-B` succeeded in 9 steps with
+1 084 AT-SPI records replaced and 5 DOM actions. But two cells cannot
+support a claim about the campaign's headline improvement. If you want P1
+measured, the dev set needs browser-heavy tasks drawn for that purpose — a
+decision for you, since it changes the sampling I pre-registered.
+
+### The defect the model diagnosed before I did
+
+The first attempt at iteration 2 was abandoned. Two causes, both mine:
+
+**(a)** 21 calls returned `API Error: 529 Overloaded`. My rate-limit handling
+recognised only 429, so a 529 fell through to "unusable reply", burned three
+attempts at ~200 s each, and four cells that had SUCCEEDED in iteration 1
+were recorded as step_timeout failures. Transient server errors now retry
+with backoff and never consume a model attempt; in the re-run, 3 occurred and
+all 3 recovered with no cell lost.
+
+**(b)** `chrome-121ba48f-B` regressed to a 15-step failure with no 529s in
+it. The web channel had reported `url=dota2.com/home` for steps 1-10 while
+the model had already navigated the active tab to Steam — I picked the page
+by `document.visibilityState` and more than one page claimed to be visible.
+The model's memos said so from step 2 onward: "tab title reads Steam DLC but
+a11y body still renders dota2.com". It spent ten steps fighting the channel
+and ran out of budget. Worth keeping for the paper: **the failure was legible
+in the trace long before it was legible in the score.** The router now takes
+the selected tab from AT-SPI, which is the same tree it already trusts to say
+which window is a browser, and records which rule picked the page.
+
+The whole first attempt is archived, not deleted, as the evidence for both.
+
+### Still open, unchanged
+
+`libreoffice_writer-adf5e2c3-B` failed again in both iterations while the
+final view shows the edit applied. Two independent runs now agree the edit
+happens and the evaluator scores zero, which makes it more interesting, not
+less. I still refuse to name a cause without a dedicated run.
+
+And the Google Drive question is unchanged and still needs your decision
+before the freeze: 2 of the 50 pre-registered tasks cannot run on this host.
+
+
 ## 2026-08-18 — DEV ITERATION 1 (baseline, no CDP router) — 36 cells, A 15/18, B 11/18
 
 Traces: `campaign/results/dev/iter-1/`. Driver pinned at commit 2ffa67b,

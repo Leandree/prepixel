@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1266, 551); time.sleep(1.5)", "memo": "Ref [14] added to list w/ Arial, verified after [13]. Just clicked 'Replace All' for '<add here>' -> '[14]' (Current selection only was unchecked). NEXT: dismiss any 'X replacements made' popup (Enter/OK ~960,600), then Close dialog (1296,818), then Ctrl+S + Enter to Keep current format."}

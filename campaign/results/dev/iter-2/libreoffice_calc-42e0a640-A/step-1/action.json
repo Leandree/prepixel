@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(405, 76)", "memo": "Sheet1 has Revenue A2:A20, Total Expenses B2:B20 (19 rows). Plan: Sheet menu > Insert Sheet, after current, name Sheet2; then A1='Total Revenue', B1='Total Expenses', A2=SUM(Sheet1.A2:A20), B2=SUM(Sheet1.B2:B20); Ctrl+S + Keep current format."}

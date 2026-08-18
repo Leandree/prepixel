@@ -1,0 +1,1 @@
+{"action":"click","target":"e1035","memo":"Insert Sheet dialog open. Selected 'After current sheet'. Next: verify Name field says Sheet2 (e1039 shows Sheet2 already), then click OK (e1050). Then in Sheet2 A1 type 'Total Revenue\\tTotal Expenses\\n', then A2 '=SUM(Sheet1.A2:A20)\\t=SUM(Sheet1.B2:B20)\\n', Ctrl+S, Keep current format."}

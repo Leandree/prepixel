@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(700, 170)", "memo": "Step3: Bills folder open, 2 messages (AWS invoice, X receipt), both stars empty. Clicked first message row to focus list pane. Next: Ctrl+A to select both, then press 'S' to toggle starred; verify BOTH star icons at x~1021 (y=181 and y=227) become filled/yellow."}
+```

@@ -1,0 +1,1 @@
+{"action":"key","keys":"enter","memo":"ANSWER=Out of the Silent Planet (I7=1328.89 lowest wpd). Pressed Enter in Calc Open dialog with ~/Desktop/book_list_result.docx. NEXT: wait for Writer to load, click into doc body, type the title, Ctrl+S, choose 'Use Word 2007-365!' to keep .docx."}

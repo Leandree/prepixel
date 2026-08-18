@@ -1,0 +1,1 @@
+{"action":"crop","target":"e40","memo":"'All' radio reads checked but panel lines still list Simple prefs — cropping panel region at ~579,499 to see real pixels. If Advanced tree is actually shown, use search/tree -> Playlist -> uncheck 'Play and exit' (play-and-exit=0), then Save. If still Simple, click 'Simple' then 'All' to force rebuild."}

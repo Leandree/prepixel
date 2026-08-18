@@ -60,7 +60,12 @@ PINNED = ("run_condition.py", "distill-osworld.py", "answer_loop.py",
           # the router would then have been silently absent from a pinned
           # iteration while the code said it was there — the exact failure
           # the pin is supposed to prevent.
-          "cdp_view.mjs", "cdp_act.mjs")
+          "cdp_view.mjs", "cdp_act.mjs",
+          # The empty MCP config. Without it the answering CLI loads the
+          # session's tool schemas — up to 162k prefix tokens per call,
+          # belonging to neither channel — so a pinned iteration missing
+          # this file would silently measure something else.
+          "answer-mcp-empty.json")
 
 # A fresh DesktopEnv boot is the one moment two workers genuinely compete
 # (image start, VM boot, server handshake). Staggering the second worker

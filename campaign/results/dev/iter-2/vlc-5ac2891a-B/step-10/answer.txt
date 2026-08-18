@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"mkdir -p ~/.config/vlc; sed -i 's/^#* *play-and-exit=.*/play-and-exit=0/' ~/.config/vlc/vlcrc; grep -q '^play-and-exit=0' ~/.config/vlc/vlcrc || echo 'play-and-exit=0' >> ~/.config/vlc/vlcrc; grep -n play-and-exit ~/.config/vlc/vlcrc\n","memo":"Typed sed+fallback-append command in terminal to set play-and-exit=0 in ~/.config/vlc/vlcrc, ending with grep to verify. Next: check terminal output shows 'play-and-exit=0' (press enter if command not executed yet)."}
+```

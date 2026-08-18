@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e73","memo":"Clicked 'Dota 2' suggestion in store search dropdown to open app/570 page. Next: on Dota 2 store page, scroll to the DLC section and click 'Add all DLC to Cart'."}
+```

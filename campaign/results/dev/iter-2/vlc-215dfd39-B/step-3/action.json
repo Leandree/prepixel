@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "'All' radio now checked (confirmed) but structure still shows Simple Preferences widgets plus stray 'Filter:' labels \u2014 likely mid-repaint. Waiting for advanced tree view. Next: expand Interface > Main interfaces > Qt, uncheck 'Display background cone or art' (qt-bgcone), then Save."}

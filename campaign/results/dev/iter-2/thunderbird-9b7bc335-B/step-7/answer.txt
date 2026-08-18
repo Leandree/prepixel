@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e40","memo":"Escape closed the whole Message Filters dialog; reopening it now. NEXT: once dialog shows (title 'Message Filters', 'New…' button ~1256,419), click 'New…' ONCE and then wait for the Filter Rules dialog (name field + condition rows). Then: name 'Forward', condition From/Subject any, action 'Forward Message To' = anonym-x2024@gmail.com."}
+```

@@ -1,0 +1,36 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Examine the spreadsheet on the desktop, which contains a record of books read in 2022. Take the website https://howlongtoread.com/ as a reference to identify the book with the slowest reading pace, measured in words per day. I have an empty document named 'book_list_result.docx' on the desktop; please open it and record the title there.
+
+STEP 5 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. WAIT
+2. import pyautogui; pyautogui.click(181, 443)
+3. import pyautogui; pyautogui.click(1833, 45)
+4. import pyautogui; pyautogui.doubleClick(1852, 767)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+ANSWER=Out of the Silent Planet (I col min 1328.89 w/d, confirmed in step-2 screenshot). Step4: double-clicked book_list_result.docx on desktop. Next: WAIT for Writer to load, then click in body, type 'Out of the Silent Planet', Ctrl+S, press Enter/'Use Word 2007-365!' to keep .docx format.
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter2/multi_apps-da52d699-A/_pixels/step-5/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter2/multi_apps-da52d699-A/_pixels/step-2/screenshot.png
+/home/leandre/dev/osworld-dev-iter2/multi_apps-da52d699-A/_pixels/step-3/screenshot.png
+/home/leandre/dev/osworld-dev-iter2/multi_apps-da52d699-A/_pixels/step-4/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

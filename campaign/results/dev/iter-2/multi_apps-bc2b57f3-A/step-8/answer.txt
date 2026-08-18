@@ -1,0 +1,5 @@
+The Window menu is open with "reminder.docx - LibreOffice Writer" available. I'll switch to it and jump to the top of the document so I can finally read the actual requirements text.
+
+```json
+{"action": "import pyautogui; pyautogui.click(497, 152); pyautogui.sleep(3); pyautogui.hotkey('ctrl','Home'); pyautogui.sleep(1)", "memo": "Step8: Reorder of xlsx SAVED+verified (ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration). Now switched to reminder.docx Writer window & Ctrl+Home. NEXT: READ the requirement text on screen carefully - I never saw it; verify my assumed sheet order matches, and check for any OTHER requirements (rename/delete/formatting) I may have missed."}
+```

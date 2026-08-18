@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"alt+f11","memo":"Plan: use Basic IDE macro to set slide-number field color to red on all pages+masters, then oDoc.store(). Opened Basic Macros dialog with Alt+F11. Next: select My Macros>Standard>Module1 and click Edit."}
+```

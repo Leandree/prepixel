@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+alt+t","memo":"Prefs cancelled; GUI 'All' panel unusable. Opened terminal via ctrl+alt+t. Next: verify terminal window appeared, then type: sed -i 's/^#\\{0,1\\} *play-and-exit=.*/play-and-exit=0/' ~/.config/vlc/vlcrc ; grep play-and-exit ~/.config/vlc/vlcrc  (append line if grep empty)"}
+```

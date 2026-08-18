@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.press('right'); time.sleep(1.0)", "memo": "Step 7: Filters menu open, 'Light and Shadow' highlighted at y=267 but submenu never rendered from hover. Pressed Right arrow to expand submenu via keyboard. Next: read screenshot; if submenu visible, click 'Vignette'; else type 'v'/use arrow keys to select Vignette and press Enter."}

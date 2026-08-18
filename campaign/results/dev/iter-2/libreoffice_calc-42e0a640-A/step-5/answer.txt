@@ -1,0 +1,5 @@
+Sheet2 is active with the cursor in A1, and Sheet1 confirms Revenue in A2:A20 and Total Expenses in B2:B20. Entering the headers and sum formulas.
+
+```json
+{"action": "import pyautogui; pyautogui.click(151, 314); pyautogui.write('Total Revenue\t'); pyautogui.write('Total Expenses\n'); pyautogui.write('=SUM(Sheet1.A2:A20)\t'); pyautogui.write('=SUM(Sheet1.B2:B20)\n')", "memo": "Typed in Sheet2: A1='Total Revenue', B1='Total Expenses', A2==SUM(Sheet1.A2:A20), B2==SUM(Sheet1.B2:B20). Next: verify values appear (A2 approx 867686? check), then Ctrl+S and press Enter for 'Use Excel 2007-365!' Keep current format dialog."}
+```

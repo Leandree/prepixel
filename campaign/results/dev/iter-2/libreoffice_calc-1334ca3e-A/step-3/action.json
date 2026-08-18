@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(511, 758)", "memo": "Clicked View>Zoom>100% (was 260%). Next: verify zoom shows 100% in status bar, then Ctrl+S and press Enter / click 'Use Excel 2007-365!' to keep xlsx so the zoom setting persists."}

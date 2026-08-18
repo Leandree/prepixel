@@ -1,0 +1,1 @@
+{"action": "DONE", "memo": "Verified: gsettings get org.gnome.desktop.interface show-battery-percentage returned 'true'. Setting applied; no % in top bar only because VM lacks battery hardware. Task complete."}

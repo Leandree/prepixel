@@ -1,0 +1,1 @@
+{"action": "key", "keys": "shift+end", "memo": "Selection was exactly para1 (58 words/349 chars), end at start of para2. Now shift+end extends into para2's first line, so selection spans para1+para2 only. NEXT: click Line Spacing dropdown e143 and choose 'Double Spacing'; then verify and Ctrl+S (Keep current format)."}

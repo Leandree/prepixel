@@ -1,0 +1,5 @@
+Zoom is now 100% (status bar bottom-right), the cells are back to a normal size, no dialog remains, and the Keep-current-format prompt consumed the Enter (cursor still on A2 rather than advancing to A3), confirming the save went through.
+
+```json
+{"action": "DONE", "memo": "Task complete: zoom reduced from oversized view to 100%, file saved in xlsx format."}
+```

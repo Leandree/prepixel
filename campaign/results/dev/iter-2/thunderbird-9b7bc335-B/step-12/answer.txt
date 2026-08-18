@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"alt+n","memo":"Confirmed: typing went into search box (clear button e75 appeared) => New… clicks are NOT opening Filter Rules dialog; no modal is present. Trying accesskey alt+n for New…. If a Filter Rules dialog appears next, name it 'Forward all', set condition to match-all, action Forward to anonym-x2024@gmail.com. If alt+n also does nothing, the dialog cannot be opened in this environment -> report failure with remaining steps."}
+```

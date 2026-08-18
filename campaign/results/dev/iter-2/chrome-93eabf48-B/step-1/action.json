@@ -1,0 +1,1 @@
+{"action": "click", "target": "e9", "memo": "Task: disable Chrome dark mode. Launched Chrome from dock. Next: open chrome://settings/appearance and set Mode/Theme to Light. If a --force-dark-mode flag/launcher arg exists, may need to check chrome://flags or the launcher."}

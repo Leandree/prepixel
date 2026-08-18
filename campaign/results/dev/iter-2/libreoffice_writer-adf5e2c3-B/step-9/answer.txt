@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e159","value":"Pennington [14]","memo":"Replace field should now be 'Pennington [14]' (Find = 'Pennington<add here>'). Next: click Replace All (e165), verify text reads 'A study by Pennington [14] noted', then Close (e179), Ctrl+S, and choose 'Use Word 2007-365!'"}
+```

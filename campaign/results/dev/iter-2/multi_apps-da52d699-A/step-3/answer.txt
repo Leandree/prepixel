@@ -1,0 +1,5 @@
+Confirmed A7 = "Out of the Silent Planet" (47,840 words / 36 days ≈ 1,329 words/day — the lowest by a wide margin; next lowest is Silence at ~1,984). The word-count columns were already in the file before any of my clicks. Now I need to get to the desktop to open the .docx.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1833, 45)", "memo": "ANSWER=Out of the Silent Planet (1328.9 w/d, min). Verified G/H/I pre-existed in file. Step3: minimized Calc to reach desktop. Next: double-click 'book_list_result.docx' icon on desktop, wait for Writer, type title, Ctrl+S, Keep current format."}
+```

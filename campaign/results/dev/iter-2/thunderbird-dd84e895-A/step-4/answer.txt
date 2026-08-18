@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl', 'a'); time.sleep(0.5); pyautogui.press('s')", "memo": "Step4: Bills folder, 2 msgs (AWS y=181, X y=227), stars empty at x~1022. Pressed Ctrl+A (select both) then 's' to toggle star. Next: verify BOTH stars at (1022,181) and (1022,227) are now filled/yellow. If only one starred or none, click each star icon directly."}
+```

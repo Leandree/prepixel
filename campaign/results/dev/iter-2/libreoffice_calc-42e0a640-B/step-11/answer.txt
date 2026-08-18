@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Ctrl+S sent at step 10; view shows no dialog yet. Waiting to see if 'Keep Current Format' dialog appears. If it does, click the keep-current-format button; if no dialog and no unsaved indicator, the save is done -> done."}

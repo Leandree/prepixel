@@ -1,0 +1,1 @@
+{"action":"key","keys":"enter","memo":"Submitted 'gsettings get show-battery-percentage' in terminal e11. NEXT: crop e11 to read the output — expect 'true'. If it prints false or an error, re-type the set command with 'true'. Note: top-bar System menu e87 is only 106px wide, so the % may not visibly render in this VM."}

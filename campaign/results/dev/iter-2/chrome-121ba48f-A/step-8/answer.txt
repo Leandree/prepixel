@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1149, 697); pyautogui.sleep(3)", "memo": "Steam confirmed 'Added to your cart!' with The Dota 2 Official Soundtrack (8,19EUR); cart badge = 1. Free 'Dota 2 Remixes EP' is not cart-addable (Add-all-DLC subtotal was 8,19EUR = paid DLC only). Clicked 'View My Cart (1)' to verify cart page lists the DLC, then DONE."}
+```

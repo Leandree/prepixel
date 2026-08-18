@@ -1,0 +1,9 @@
+The flag persisted as **Disabled** after the relaunch (the "relaunch to apply" banner is gone). I'll dismiss the stray update bubble to leave a clean state.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1890, 139); time.sleep(1)"}
+```
+
+**Status:** `chrome://flags/#enable-force-dark` ("Auto Dark Mode for Web Contents") is now **Disabled** and Chrome has been relaunched, so web pages will render in their normal light colors instead of being force-darkened. The Appearance settings page (step 3) showed the browser UI theme is GTK with a light UI, so no additional change was needed there.
+
+**memo:** Step 6: Chrome relaunched; enable-force-dark = Disabled persists (relaunch banner gone). Appearance page has no Light/Dark mode selector (Theme: GTK, UI already light). Just dismissed the "Can't update Chrome" bubble via X at (1890,139). Next step: confirm bubble closed, then DONE.

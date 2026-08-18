@@ -1,0 +1,40 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 1130,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 169,
+  "cdp_records": 213,
+  "offscreen": 60,
+  "url": "https://store.steampowered.com/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 4453,
+  "picked_by": "visible",
+  "tab": "Popular New Releases",
+  "picked_title": "Welcome to Steam"
+ },
+ "cdp_offscreen_skipped": 602,
+ "history_views": 0,
+ "history_views_dropped": 0,
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.dodefault"
+ },
+ "rung": 1,
+ "rung1_method": "Action.dodefault",
+ "settle_ms": 4728,
+ "settle_captures": 1,
+ "guard_ms": 48
+}

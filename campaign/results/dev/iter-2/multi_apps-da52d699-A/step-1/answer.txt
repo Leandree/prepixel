@@ -1,0 +1,11 @@
+The screenshot is a static capture for this step, and the Calc window is still blank while the file renders. Rather than clicking blind into an unrendered window, I'll wait and re-observe.
+
+```json
+{"action": "WAIT", "memo": "Step 1: Calc window 'to 2023_validation_Book_Reading_Rate.xlsx' open but content not yet rendered (blank). Waiting. NOTE: title says 2023 though task says 2022 records - verify actual data. Plan: read sheet (title/word count/start+end dates) -> compute words/day -> need howlongtoread.com for word counts (Chrome in dock at ~35,65) -> lowest words/day -> write title into book_list_result.docx on Desktop."}
+```
+
+Key things I've noted for the next steps:
+
+- **The window hasn't painted yet** — only the title bar and an empty grid area are visible, so there's no cell data to read. Clicking or typing now risks landing in an undefined spot.
+- **A discrepancy worth flagging:** the file is named `2023_validation_Book_Reading_Rate.xlsx`, but your task describes a record of books read in **2022**. Once the sheet renders I'll check whether the data actually covers 2022, and I'll tell you if it looks like a different file than the one you intended rather than silently proceeding.
+- **On the reference site:** the task says to use howlongtoread.com to identify the slowest pace. I can only get word counts from that site by actually browsing to it; I won't invent word counts from memory, since the whole result hinges on them.

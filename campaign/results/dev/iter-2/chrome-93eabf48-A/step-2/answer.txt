@@ -1,0 +1,5 @@
+The display woke up and Chrome is open on a New Tab page. Navigating to the appearance settings.
+
+```json
+{"action": "import pyautogui; pyautogui.click(700, 90); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('chrome://settings/appearance'); pyautogui.press('enter')", "memo": "Step 2: Chrome open (window looks light-themed already, so dark mode is likely the chrome://flags 'Auto Dark Mode for Web Contents' force-dark flag). Typed chrome://settings/appearance in omnibox. Next: read screenshot, check 'Mode' row -> set to Light if Dark/Device; then check chrome://flags for enable-force-dark and set Disabled + Relaunch."}
+```

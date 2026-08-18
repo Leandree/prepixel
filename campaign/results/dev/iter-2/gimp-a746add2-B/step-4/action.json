@@ -1,0 +1,1 @@
+{"action": "key", "keys": "l", "memo": "Filters menu appears open (status bar showed 'Reset all plug-ins\u2026' hint) but its items aren't in the a11y tree, so navigating by mnemonic: pressed 'l' for 'Light and Shadow' submenu. Next: press 'v' for Vignette. If no Vignette dialog appears, fall back: Escape, then '/' (Search and Run a Command), type 'vignette', Enter."}

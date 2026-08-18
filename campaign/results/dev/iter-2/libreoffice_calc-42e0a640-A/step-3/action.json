@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(738, 392)", "memo": "Insert Sheet dialog open, Name=Sheet2 already. Just clicked 'After current sheet'. Next: click OK at (1233,794). Then in Sheet2 A1 type: Total Revenue<tab>Total Expenses<enter>, then A2 =SUM(Sheet1.A2:A20)<tab>=SUM(Sheet1.B2:B20)<enter>. Then Ctrl+S + Enter (Keep current format)."}

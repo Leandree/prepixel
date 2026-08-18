@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(171, 105)", "memo": "Clicked 'Remove from Favorites' in Vim's dock context menu. Next: verify Vim icon is gone from the dock (dock should start with Chrome at ~(34,135) shifting up to ~(34,65)); if gone, DONE."}

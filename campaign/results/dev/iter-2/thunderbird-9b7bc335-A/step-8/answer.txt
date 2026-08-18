@@ -1,0 +1,5 @@
+Everything looks correct: name "Forward all", "Match all messages" selected, and "Forward Message to" → anonym-x2024@gmail.com. Saving with OK.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1388, 862)", "memo": "Clicked OK to save filter 'Forward all' (Match all messages -> Forward Message to anonym-x2024@gmail.com). Next: verify filter appears listed & enabled (checkbox) in Message Filters window, then close it via its X (~top-right of that window)."}
+```

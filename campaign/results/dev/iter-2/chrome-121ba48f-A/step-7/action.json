@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1088, 597); pyautogui.sleep(3)", "memo": "Clicked 'Add all DLC to Cart' (1088,597) on Dota 2 page; status bar had confirmed javascript:addAllDlcToCart(). DLC = Dota 2 Official Soundtrack (8,19EUR) + Remixes EP (Free). Next: screenshot to verify cart page/notification shows both items added, then DONE."}

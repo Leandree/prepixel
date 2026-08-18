@@ -1,0 +1,3 @@
+```json
+{"action": "DONE", "memo": "Verified: Vim icon no longer present in the dock (now Thunderbird, Chrome, Trash only). 'Remove from Favorites' click succeeded."}
+```

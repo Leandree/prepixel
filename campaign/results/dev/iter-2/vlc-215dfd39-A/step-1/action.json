@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(34, 268)", "memo": "Clicked VLC in dock to launch it. Next: wait for VLC window, then Tools > Preferences > Interface, uncheck 'Show cone icon' (Look and feel section), then Save."}

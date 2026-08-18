@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"l","memo":"Blind menu nav: Filters popup should be open (e32 lost focus = focus moved into popup). Pressed 'l' = mnemonic for 'Light and Shadow' submenu, which should open it. NEXT: press 'v' for Vignette -> dialog opens. Check status bar (e87/e90) as signal: a tooltip text there means an item is highlighted; if it still shows the filename after 'v', the menu path failed -> fall back to clicking e32 to reopen Filters, then 'l', then 'v'."}
+```

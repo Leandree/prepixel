@@ -1,0 +1,1 @@
+{"action": "click", "target": "e931", "memo": "Status bar still says 'Sheet 1 of 1' \u2014 first Add click didn't take. Retrying +. Sheet1: A=Revenue, B=Total Expenses, data rows 2-20. Next: in Sheet2 A1 type 'Total Revenue<tab>Total Expenses<enter>' then A2 '=SUM(Sheet1.A2:A20)<tab>=SUM(Sheet1.B2:B20)<enter>', then Ctrl+S, Keep current format."}

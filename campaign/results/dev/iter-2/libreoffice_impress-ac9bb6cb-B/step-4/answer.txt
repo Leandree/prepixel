@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e197","memo":"Clicked Edit in Basic Macros dialog with 'My Macros' selected -> expect Basic IDE (Module1). Next: click into code area, select-all, and type macro looping DrawPages+MasterPages shapes, setting CharColor=RGB(255,0,0) on slide-number/page-number placeholders, then oDoc.store(). Then press F5 to run."}
+```

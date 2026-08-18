@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"Return","memo":"Pressed Return to dismiss dialog after F5 (expected MsgBox \"OK\" = success, or a Basic error dialog). Next: observe screen. If Basic IDE with no dialog, switch to the Calc window (Window menu / alt+tab) and verify tab order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. oDoc.store() saves xlsx in place, no Keep Format prompt."}
+```

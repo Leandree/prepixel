@@ -1,0 +1,41 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I am preparing a PPT in Libreoffice impress. The slide number is barely visible to me. Please help me change the color of the slide number to red?
+
+STEP 10 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(177, 76)
+2. import pyautogui; pyautogui.click(223, 201)
+3. import pyautogui; pyautogui.click(1421, 943)
+4. import pyautogui; pyautogui.hotkey('ctrl','a'); pyautogui.click(289, 76)
+5. import pyautogui; pyautogui.click(324, 253)
+6. import pyautogui; pyautogui.click(816, 306)
+7. import pyautogui; pyautogui.click(986, 371)
+8. import pyautogui; pyautogui.click(898, 490)
+9. import pyautogui; pyautogui.click(1260, 838)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Font color set to Red, clicked OK. Next: click outside placeholder (e.g. 600,1000) to deselect, then close Master View (View > Normal, menu View at 177,76 -> Normal), then Ctrl+S and press Enter to Keep Current Format (pptx).
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter2/libreoffice_impress-ac9bb6cb-A/_pixels/step-10/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter2/libreoffice_impress-ac9bb6cb-A/_pixels/step-7/screenshot.png
+/home/leandre/dev/osworld-dev-iter2/libreoffice_impress-ac9bb6cb-A/_pixels/step-8/screenshot.png
+/home/leandre/dev/osworld-dev-iter2/libreoffice_impress-ac9bb6cb-A/_pixels/step-9/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

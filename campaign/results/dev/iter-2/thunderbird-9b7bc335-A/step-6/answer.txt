@@ -1,0 +1,5 @@
+The action dropdown is open as expected. Selecting "Forward Message to".
+
+```json
+{"action": "import pyautogui; pyautogui.click(646, 353)", "memo": "Filter Rules dialog: name='Forward all', 'Match all messages' selected. Just picked action 'Forward Message to'. Next: click the address field right of the action dropdown (~1035,697), type anonym-x2024@gmail.com, then click OK (1388,862). Afterwards close the Message Filters window."}
+```

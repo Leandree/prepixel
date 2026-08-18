@@ -1,0 +1,1 @@
+{"action":"crop","target":"e87","memo":"Ran gsettings show-battery-percentage true (act-guard confirmed). Cropping System menu (1814,0,106,27) to verify battery % is visible in top bar. If no % shown, VM may lack battery or setting didn't apply -> re-run 'gsettings get org.gnome.desktop.interface show-battery-percentage' in terminal e11."}

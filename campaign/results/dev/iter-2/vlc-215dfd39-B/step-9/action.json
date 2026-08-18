@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e40", "memo": "Probing real pixels at 579,499 (inside prefs dialog body). If ADVANCED view is live, expect a tree list (Interface/Audio/Video...) => then find search box or expand Interface>Main interfaces>Qt and uncheck 'Display background cone or art'. If SIMPLE skin image => 'All' click didn't switch; try clicking e75 again."}

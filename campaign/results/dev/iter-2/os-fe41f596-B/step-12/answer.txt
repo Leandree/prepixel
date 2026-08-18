@@ -1,0 +1,1 @@
+{"action":"done","memo":"gsettings org.gnome.desktop.interface show-battery-percentage set to true and verified with `gsettings get` returning true; battery percentage display is enabled in the top bar."}

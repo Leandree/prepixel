@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"Total Revenue\tTotal Expenses\n=SUM(Sheet1.A2:A1000)\t=SUM(Sheet1.B2:B1000)\n","memo":"Typed headers Total Revenue/Total Expenses in Sheet2 A1:B1 and SUM formulas over Sheet1.A2:A1000 / B2:B1000 in A2:B2. Next: verify A2/B2 show numbers (not 0 or #REF), then Ctrl+S and choose 'Use Excel 2007-365!' / Keep current format if dialog appears."}
+```

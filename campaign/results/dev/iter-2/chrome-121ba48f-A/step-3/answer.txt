@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.moveTo(1750, 600); pyautogui.scroll(-1200); pyautogui.sleep(1)", "memo": "On Steam Dota 2 page (app/570). Scrolling down to find 'Downloadable Content for this game' section and its 'Add all DLC to Cart' button. Page loaded fine, not signed in (may still allow cart adds)."}
+```

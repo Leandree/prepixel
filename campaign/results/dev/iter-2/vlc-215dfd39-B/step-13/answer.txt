@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e40","memo":"Structure appears stale (still lists Simple Prefs widgets though 'All' is checked:true). Cropping e40 (579,499,122,73) to see real pixels: if advanced tree ('Interface/Audio/Video...' tree rows) is visible, the dialog IS in All mode and I must expand Interface > Main interfaces > Qt, uncheck 'Display background cone or art', then Save. Only 2 steps left after this - likely cannot finish; report honestly."}
+```

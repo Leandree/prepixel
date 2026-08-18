@@ -1,0 +1,5 @@
+Both messages in the Bills folder now show "Starred" in their accessible labels (e40 AWS, e44 X (formerly Twitter)), confirming the star was applied to every email in the folder.
+
+```json
+{"action":"done","memo":"Both Bills emails (AWS 3/1/2024 and X 12/1/2024) now report 'Starred' in their row labels. Task complete."}
+```

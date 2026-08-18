@@ -1,0 +1,1 @@
+{"action":"wait","memo":"'All' now confirmed checked:true but structure still lists Simple Preferences widgets — likely a stale a11y tree. Waiting for advanced tree to render. Next: find search/filter box, type 'cone', or navigate Interface > Main interfaces > Qt and uncheck 'Display background cone or art', then Save (e76). Only ~3 steps left — be direct."}

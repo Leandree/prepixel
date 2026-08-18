@@ -1,0 +1,1 @@
+{"action":"type","text":"chrome://flags/?search=dark","memo":"Typed flags URL WITHOUT newline into omnibox. Next: press 'delete' to drop inline autocomplete, then 'enter'. Goal: set '#enable-force-dark' (Auto Dark Mode for Web Contents) to Disabled, then Relaunch."}

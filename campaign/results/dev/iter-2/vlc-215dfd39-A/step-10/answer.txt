@@ -1,0 +1,5 @@
+Nothing was accidentally toggled — the panel just auto-scrolled (~104px) when it took focus, so my click missed. "Display background cone or art" is still checked, now at y=679. Clicking on its label this time (larger hit area).
+
+```json
+{"action": "import pyautogui; pyautogui.click(1003, 679)", "memo": "Clicked label 'Display background cone or art' at (1003,679) to uncheck. Panel may auto-scroll on focus - VERIFY checkbox is unchecked in next screenshot before saving. If unchecked, click Save at (1210, 903). Other checkbox states must stay unchanged."}
+```

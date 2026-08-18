@@ -65,7 +65,18 @@ ANSWER_PATTERNS = [
     ("evaluator", r"evaluation_examples"),
     ("other-run-traces", r"osworld-runs|osworld-pilot|pilot-(?:os|chrome)-[AB]"),
 ]
-PATH_RE = re.compile(r"/(?:home|tmp|var|root)/[^\s\"'\)\]]+")
+# HOST paths only. `/root/Desktop/reminder.docx` is a file inside the VM that
+# a task is about — task content, not a channel leak — and flagging it made
+# the scan cry wolf on dev iteration 2. What must never reach condition B is
+# a path to OUR artefacts: the run directories and the pixel files.
+PATH_RE = re.compile(
+    r"/home/leandre/[^\s\"'\)\]]+|/[^\s\"'\)\]]*\.(?:png|jpe?g)\b")
+
+# The memo is the model's OWN words, handed back verbatim by P5. Anything in
+# it was authored by the model, so it cannot be evidence that the channel
+# leaked something to the model. Scanned as an answer, never as a prompt.
+MEMO_RE = re.compile(
+    r"^YOUR NOTE FROM THE PREVIOUS STEP:\n.*?(?=\n\n)", re.S | re.M)
 
 
 def _ctx(text, m, pad=60):
@@ -116,6 +127,7 @@ def scan_run(run_dir):
         ppath = os.path.join(sd, "prompt.txt")
         if os.path.exists(ppath):
             prompt = open(ppath, encoding="utf-8", errors="replace").read()
+            prompt = MEMO_RE.sub("[memo omitted: model-authored]", prompt)
             for name, pat in PROMPT_PATTERNS:
                 m = re.search(pat, prompt, re.I)
                 if m:

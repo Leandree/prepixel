@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1421, 943)", "memo": "In Master Slide view. Just single-clicked the <number> slide-number placeholder at (1421,943) to select the frame. Next: verify selection handles; then Format > Character (menu Format at x=289,y=76) > Font Effects tab > Font Color -> Red. Then Close Master View (btn 1738,431), Ctrl+S, Keep Current Format."}

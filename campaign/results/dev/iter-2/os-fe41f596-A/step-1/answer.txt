@@ -1,0 +1,5 @@
+Ubuntu GNOME desktop. Battery percentage is toggled in Settings → Power. I'll open the system menu at the top-right to reach Settings.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1866, 12)", "memo": "Task: show battery percentage. Plan: system menu (top-right) -> Settings -> Power -> 'Show Battery Percentage' toggle ON. Fallback if GUI awkward: open Terminal (ctrl+alt+t) and run: gsettings set org.gnome.desktop.interface show-battery-percentage true"}
+```

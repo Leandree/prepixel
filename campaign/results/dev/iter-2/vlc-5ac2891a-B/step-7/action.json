@@ -1,0 +1,1 @@
+{"action": "click", "target": "e75", "memo": "Clicked 'All' after toggling back to Simple (forced rebuild). Expect advanced tree + search box. Then: Playlist section -> uncheck 'Play and exit' (play-and-exit=0) -> Save (e76 ~1211,891). If panel STILL shows Simple widgets, fallback: Cancel and edit ~/.config/vlc/vlcrc via a terminal."}

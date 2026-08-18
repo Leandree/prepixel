@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(648, 697)", "memo": "Filter Rules: name='Forward all', 'Match all messages' selected. Just clicked action dropdown 'Move Message to' (648,697) to open list. Next: pick 'Forward Message to' from popup, then click the address field right of it (~1035,697) and type anonym-x2024@gmail.com, then OK (1388,853)."}

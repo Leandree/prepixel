@@ -1,0 +1,5 @@
+I can see the slide pane is now restored — there's a "Slides View" panel on the left (x≈73–259) showing the "Slide 1" thumbnail, and the main editing area shifted right to make room for it.
+
+```json
+{"action":"done","memo":"Slide pane restored via View > Slide Pane. Slides View panel now visible at left (73,204,186,850) with Slide 1 thumbnail; editing area shifted right to x=273. Task complete."}
+```

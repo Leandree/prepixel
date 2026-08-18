@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(207, 101)", "memo": "Red confirmed on <number> in Master Slide (bottom-right placeholder shows red). Clicked View > Normal. Next: Ctrl+S then press Enter to Keep Current Format (pptx), then verify title bar / DONE."}

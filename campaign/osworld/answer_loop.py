@@ -116,9 +116,25 @@ def extract_action(text):
     return None
 
 
+# The answering process must carry NOTHING but the channel under test.
+# Measured across dev iterations 1 and 2: the CLI was prepending the
+# session's MCP tool schemas to every call — 162 129 cached prefix tokens
+# per call in iteration 1, 11 702 in iteration 2, against a condition-A
+# prompt of 1 204 CHARACTERS. The freeze criterion is median cost, and it
+# was dominated by a constant belonging to neither channel, which moved 70x
+# between iterations for reasons outside the experiment.
+#
+# With an empty MCP config the prefix is 2 274 tokens and byte-identical
+# across calls (measured three times). Applied to BOTH conditions, so the
+# only thing that still differs between them is the observation.
+MCP_EMPTY = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                         "answer-mcp-empty.json")
+
+
 def answer(prompt, tools, model, workdir):
     cmd = ["claude", "-p", "--model", model, "--tools", tools,
-           "--output-format", "json"]
+           "--output-format", "json",
+           "--strict-mcp-config", "--mcp-config", MCP_EMPTY]
     t0 = time.time()
     p = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
                        timeout=CALL_TIMEOUT, cwd=workdir)

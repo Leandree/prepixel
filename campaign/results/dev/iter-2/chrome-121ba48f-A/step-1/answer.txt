@@ -1,0 +1,7 @@
+There's already a "Dota 2" tab open. Let me switch to it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(200, 47)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(200, 47)", "memo": "Chrome open with 2 tabs: 'Dota 2' (tab1) and about:blank (tab2). Clicked tab1 to view Dota 2 Steam page. Next: find DLC section on store page and add all DLC to cart."}

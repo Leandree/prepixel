@@ -1,0 +1,1 @@
+{"action": "set_value", "target": "e155", "value": "Pennington<add here>", "memo": "Using anchored find to avoid leading-space trim. Next: set Replace (e159) = 'Pennington [14]', then Replace All (e165), Close (e179), Ctrl+S -> Use Word 2007-365!"}

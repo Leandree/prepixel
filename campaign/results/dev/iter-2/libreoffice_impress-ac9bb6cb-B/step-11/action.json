@@ -1,0 +1,1 @@
+{"action": "key", "keys": "alt+f11", "memo": "Basic Macros dialog opening. Next: click Edit (select My Macros>Standard/Module1 if needed) to open Basic IDE. Then type code at cursor top ending with 'End Sub' newline (Sub Main stays below), then F5. Code: loop DrawPages+MasterPages, if text IsNumeric or has 'number' set s.CharColor=RGB(255,0,0), then d.store()"}

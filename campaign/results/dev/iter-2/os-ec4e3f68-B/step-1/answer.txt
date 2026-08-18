@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+alt+t","memo":"Goal: remove Vim from GNOME dash favorites. No right-click action available, so using terminal + gsettings. Next: run `gsettings get org.gnome.shell favorite-apps` to read current list, then set it without the vim entry."}
+```

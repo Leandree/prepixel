@@ -1,0 +1,5 @@
+Desktop is showing. VLC is in the dock — I'll launch it to access Preferences → Interface, where the "Show cone icon" option lives.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 268)", "memo": "Clicked VLC in dock to launch it. Next: wait for VLC window, then Tools > Preferences > Interface, uncheck 'Show cone icon' (Look and feel section), then Save."}
+```

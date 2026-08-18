@@ -1,0 +1,1 @@
+{"action":"click","target":"e75","memo":"In Preferences. Clicked 'All' to show advanced settings. Next: in left tree select Playlist (under Interface? it's top-level 'Playlist' node) and uncheck 'Play and exit' (play-and-exit), then click Save. Note simple prefs had 'Pause on the last frame of a video' unchecked (e62) as fallback."}

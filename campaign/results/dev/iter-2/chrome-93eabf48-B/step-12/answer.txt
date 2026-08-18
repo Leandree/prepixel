@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e57","memo":"Combo now shows Disabled and relaunch bar appeared; clicked Relaunch to apply #enable-force-dark=Disabled. NEXT: wait for Chrome to restart, then verify flag shows Disabled and mark done."}
+```

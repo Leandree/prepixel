@@ -1,0 +1,1 @@
+{"action": "type", "text": "chrome://flags/?search=dark\n", "memo": "Typed chrome://flags/?search=dark. Next: find 'Auto Dark Mode for Web Contents' (#enable-force-dark) select box and set to Disabled, then Relaunch. Appearance page had no Light/Dark mode row (GTK theme build)."}

@@ -1,0 +1,3 @@
+```json
+{"action":"scroll","direction":"down","memo":"On Dota 2 store page (app/570). Scrolling down to locate the 'Downloadable Content For This Game' section and its 'Add all DLC to Cart' button. Page has ~385 more lines below."}
+```

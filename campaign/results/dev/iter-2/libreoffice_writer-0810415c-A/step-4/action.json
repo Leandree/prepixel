@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(327, 253)", "memo": "Clicked Format > Paragraph... Dialog should open on 'Indents & Spacing' tab. Next: find 'Line Spacing' dropdown (lower-left area of dialog), set to 'Double', click OK. Then Ctrl+S -> 'Use Word 2007-365!'. Selection was 94 words/545 chars = first 2 paras. Doc: Novels_Intro_Packet.docx"}

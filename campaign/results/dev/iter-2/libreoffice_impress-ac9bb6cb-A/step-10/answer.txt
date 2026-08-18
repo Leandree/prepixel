@@ -1,0 +1,3 @@
+Confirmed the change: Black → Red on the `<number>` field. Now I'll deselect and open the View menu to return to Normal view.
+
+{"action": "import pyautogui; pyautogui.press('escape'); pyautogui.press('escape'); pyautogui.click(177, 76)", "memo": "Red applied to <number> in Master (was Black at step7, Red at step9). Escaped selection, opened View menu. Next: click 'Normal' in View menu, then Ctrl+S and press Enter to Keep Current Format (pptx)."}

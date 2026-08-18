@@ -1,0 +1,1 @@
+{"action":"done","memo":"Both paragraphs set via Line Spacing > 'Spacing: 2' (heights grew: para2 55→74px), and the file was saved with ctrl+s plus a confirming Save-button click — no 'Keep current format' dialog appeared, so the .docx was written. Task complete."}

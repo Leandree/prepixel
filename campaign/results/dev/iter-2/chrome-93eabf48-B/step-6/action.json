@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+l", "memo": "Last nav failed (landed on chrome://settings root, likely omnibox autocomplete). Now address bar focused+selected. Next: type 'chrome://flags/?search=dark' WITHOUT newline, then press 'delete' to kill inline autocomplete, then 'enter'. Then set 'Auto Dark Mode for Web Contents' (#enable-force-dark) to Disabled and Relaunch."}

@@ -1,0 +1,5 @@
+The Tools menu is open with "Preferences" visible at the bottom. Clicking it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(991, 604)", "memo": "Clicked Tools > Preferences. Simple Preferences dialog should open on Interface panel. Next: uncheck 'Show controls in full screen mode'? No — find 'Look and feel' section and uncheck 'Show cone icon' checkbox, then click Save (bottom right of dialog)."}
+```

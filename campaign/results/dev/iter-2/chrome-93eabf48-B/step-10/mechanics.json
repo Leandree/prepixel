@@ -1,0 +1,35 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 566,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 62,
+  "cdp_records": 111,
+  "offscreen": 60,
+  "url": "chrome://flags/?search=dark",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "visible",
+  "tab": "Available",
+  "picked_title": "Experiments"
+ },
+ "cdp_offscreen_skipped": 4430,
+ "history_views": 3,
+ "history_views_dropped": 6,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "type",
+ "rung": "kbd",
+ "settle_ms": 5167,
+ "settle_captures": 3,
+ "guard_ms": 22
+}

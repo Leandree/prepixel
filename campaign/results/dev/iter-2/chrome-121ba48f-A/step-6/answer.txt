@@ -1,0 +1,5 @@
+Confirmed the page geometry: from top, `-300` scroll units lands at the very bottom, so the DLC section sits between. Rather than binary-searching by scroll, I'll jump to the button with find-in-page.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl','f'); pyautogui.sleep(0.8); pyautogui.write('Add all DLC'); pyautogui.sleep(1.2); pyautogui.press('enter'); pyautogui.sleep(1.2); pyautogui.press('escape'); pyautogui.sleep(1)", "memo": "Used Ctrl+F 'Add all DLC' to jump to the DLC section (blind scrolling wasted steps 3-6: -300 units = full page bottom, +500 = top). Chrome scrolls the match into view and Esc keeps position. Next: screenshot, locate the blue 'Add all DLC to Cart' button, click it. If find found nothing, page may label it differently - look for 'Downloadable Content for this game'."}
+```

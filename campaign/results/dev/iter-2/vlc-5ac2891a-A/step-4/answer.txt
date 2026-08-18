@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(637, 898); pyautogui.sleep(2)", "memo": "Clicked 'All' radio in Show settings of VLC Preferences. Next: in the left tree, select 'Playlist' section, find 'Play and exit' checkbox and UNCHECK it, then click Save (1210, 903)."}
+```

@@ -1,0 +1,1 @@
+{"action":"click","target":"e1050","memo":"Clicked OK to insert Sheet2 after Sheet1. Next: verify Sheet2 tab is active, click cell A1 (Name Box e946 -> type A1), then type 'Total Revenue\\tTotal Expenses\\n' then '=SUM(Sheet1.A2:A20)\\t=SUM(Sheet1.B2:B20)\\n', then Ctrl+S and Keep current format. Data in Sheet1 is A2:A20 (Revenue) and B2:B20 (Total Expenses)."}

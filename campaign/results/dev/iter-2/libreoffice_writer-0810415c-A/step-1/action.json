@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(650, 316); pyautogui.keyDown('shift'); pyautogui.click(728, 445); pyautogui.keyUp('shift')", "memo": "Selected para1 start (650,316) to para2 end (728,445). Next: apply double line spacing via Format>Paragraph or toolbar line-spacing dropdown at (1424,147). Doc: Novels_Intro_Packet.docx; must save with Ctrl+S + Keep current format."}

@@ -1,0 +1,94 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Settings - Memory usage - 67.2 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,88,24 "Chrome"
+~e12 entry 291,78,1196,24 "Address and search bar" state=focused typed-by-driver="chrome://flags/?search=dark
+"
+~e13 push-button 1495,78,131,24 "Search with Google Lens"
+e14 push-button 1634,78,24,24 "Bookmark this tab"
+e15 push-button 1679,73,34,34 "You"
+e16 push-button 1718,73,202,34 "New Chrome available"
+e17 toggle-button 0,0,99,27 "Activities" state=checked:false
+e18 menu 99,0,162,27 "Google Chrome"
+e19 menu 906,0,178,27 "Aug 19 02‎∶22"
+e20 menu 1814,0,106,27 "System"
+e21 push-button 0,840,70,8
+e22 push-button 62,33,8,815
+e23 push-button 0,33,70,64 "Google Chrome"
+e24 push-button 0,101,70,64 "Thunderbird Mail"
+e25 push-button 0,169,70,64 "Visual Studio Code"
+e26 push-button 0,237,70,64 "VLC media player"
+e27 push-button 0,305,70,64 "LibreOffice Writer"
+e28 push-button 0,373,70,64 "LibreOffice Calc"
+e29 push-button 0,441,70,64 "LibreOffice Impress"
+e30 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e31 push-button 0,577,70,64 "Files"
+e32 push-button 0,645,70,64 "Ubuntu Software"
+e33 push-button 0,713,70,64 "Help"
+e34 push-button 0,784,70,64 "Trash"
+e35 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e36 text 70,49,130,31 "Google Chrome"
+e37 text 83,56,104,17 "Google Chrome"
+e38 [pixels] image 91,130,24,24
+e39 presentation 91,130,24,24 [occluded]
+e40 heading 137,129,183,26 "Settings" [occluded]
+e41 none 659,132,20,20 [occluded]
+e42 push-button 655,128,28,28 "Search settings" [occluded]
+e43 label 683,131,652,22 "Search settings" [occluded]
+e44 entry 683,131,652,22 "Search settings" [occluded]
+e45 banner 70,114,1850,56
+e46 navigation 70,178,250,634 [occluded]
+e47 menu 70,178,250,634 [occluded]
+e48 menu-item 71,178,247,40 "You and Google" [occluded]
+e49 [pixels] image 94,188,20,20
+e50 menu-item 71,218,247,40 "Autofill and passwords" [occluded]
+e51 [pixels] image 94,228,20,20
+e52 menu-item 71,258,247,40 "Privacy and security" [occluded]
+e53 [pixels] image 94,268,20,20
+e54 menu-item 71,298,247,40 "Performance" [occluded]
+e55 [pixels] image 94,308,20,20
+e56 menu-item 71,338,247,40 "Appearance" [occluded]
+e57 [pixels] image 94,348,20,20
+e58 menu-item 71,378,247,40 "Search engine" [occluded]
+e59 [pixels] image 94,388,20,20
+e60 menu-item 71,418,247,40 "Default browser" [occluded]
+e61 [pixels] image 94,428,20,20
+e62 menu-item 71,458,247,40 "On start-up" [occluded]
+e63 [pixels] image 94,468,20,20
+e64 menu-item 71,515,247,40 "Languages" [occluded]
+e65 [pixels] image 94,525,20,20
+e66 menu-item 71,555,247,40 "Downloads" [occluded]
+e67 [pixels] image 94,565,20,20
+e68 menu-item 71,595,247,40 "Accessibility" [occluded]
+e69 [pixels] image 94,605,20,20
+e70 menu-item 71,635,247,40 "System" [occluded]
+e71 [pixels] image 94,645,20,20
+e72 menu-item 71,675,247,40 "Reset settings" [occluded]
+e73 [pixels] image 94,685,20,20
+e74 menu-item 71,732,247,40 "Opens in a new tab" [occluded]
+e75 [pixels] image 94,742,20,20
+e76 text 134,744,69,16 "Extensions"
+e77 menu-item 71,772,247,40 "About Chrome" [occluded]
+e78 [pixels] image 94,782,20,20
+e79 heading 655,191,103,32 "You and Google" [occluded]
+e80 [pixels] image 655,235,680,120
+e81 text 675,370,232,20 "Get Google smarts in Chrome"
+e82 text 675,395,293,15 "Sync and personalise Chrome across your devices"
+e83 push-button 1199,372,116,36 "Turn on sync…" [occluded]
+e84 text 675,442,150,15 "Sync and Google services"
+e85 none 1297,440,20,20 [occluded]
+e86 link 1291,434,32,32 [occluded]
+e87 text 675,490,180,15 "Customise your Chrome profile"
+e88 none 1297,488,20,20 [occluded]
+e89 link 1291,482,32,32 [occluded]
+e90 text 675,538,183,15 "Import bookmarks and settings"
+e91 none 1297,536,20,20 [occluded]
+e92 link 1291,530,32,32 [occluded]
+e93 main 655,170,680,399 [occluded]

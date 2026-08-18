@@ -1,0 +1,5 @@
+Step-9 confirms the Enter at step 8 deleted the selection; step 10's undo restored it. Current state: both paragraphs restored **and** double-spaced, and the layout matches step-8 exactly (no stray empty paragraph — "The setting..." is at the identical y-position). The save indicator now looks clean.
+
+I'll do one harmless confirmation save (a no-op if already saved) so I can verify no "Keep format" dialog is pending before declaring done.
+
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2.5)", "memo": "State verified: paras 1&2 double-spaced, text intact (layout identical to step-8, no extra empty para). Pressed Ctrl+S as confirmation. NEXT: if a 'Keep current format' dialog is on screen, CLICK the 'Use Word 2007-365!' button explicitly (never press Enter - that deleted text at step 8). If no dialog and save indicator is clean -> DONE."}

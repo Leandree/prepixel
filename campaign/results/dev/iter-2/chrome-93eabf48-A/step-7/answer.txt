@@ -1,0 +1,5 @@
+The force-dark flag persisted as **Disabled** after relaunch (it was "Default" before). Now checking the appearance settings for a Light/Dark mode toggle.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(700, 90); time.sleep(0.5); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('chrome://settings/appearance'); pyautogui.press('enter'); time.sleep(3)", "memo": "Step 7: chrome://flags #enable-force-dark confirmed 'Disabled' after relaunch (was 'Default' at step 4). Now loading chrome://settings/appearance to set Mode=Light if that option exists. If no Mode option on this Linux build, task is already done via the flag."}
+```

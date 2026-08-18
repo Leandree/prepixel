@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(816, 306)", "memo": "Character dialog open, <number> selected (preview confirms). Clicked 'Font Effects' tab. Next: click Font Color dropdown arrow (~right of 'Font Color' combo, roughly x=1130 y=430 area) -> pick Red swatch. Then OK, Close Master View (~1738,431), Ctrl+S, Keep Current Format."}

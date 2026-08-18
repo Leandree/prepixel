@@ -1,0 +1,5 @@
+The View menu is open. Selecting "Master Slide" to edit the slide-number placeholder.
+
+```json
+{"action": "import pyautogui; pyautogui.click(223, 201)", "memo": "Clicked View > Master Slide. Next: in master view, click the slide-number placeholder (dashed box, bottom-right ~1422,940), select its text (Tab/Esc then F2 + Ctrl+A), then Format > Character > Font Color -> Red. Then View > Normal, Ctrl+S, Keep Current Format."}
+```

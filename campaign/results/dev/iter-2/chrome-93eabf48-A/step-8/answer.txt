@@ -1,0 +1,1 @@
+{"action": "DONE", "memo": "Task complete: chrome://flags/#enable-force-dark set to Disabled and Chrome relaunched (verified step 7). Appearance page on this Linux build has no Light/Dark Mode selector (Theme=GTK only), and the UI renders light — nothing further to change."}

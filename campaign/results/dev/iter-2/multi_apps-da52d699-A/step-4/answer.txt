@@ -1,0 +1,5 @@
+Desktop is visible and my prior computation is confirmed by the step-2 screenshot (column I minimum = 1328.89 for "Out of the Silent Planet"). Opening the docx now.
+
+```json
+{"action": "import pyautogui; pyautogui.doubleClick(1852, 767)", "memo": "ANSWER=Out of the Silent Planet (I col min 1328.89 w/d, confirmed in step-2 screenshot). Step4: double-clicked book_list_result.docx on desktop. Next: WAIT for Writer to load, then click in body, type 'Out of the Silent Planet', Ctrl+S, press Enter/'Use Word 2007-365!' to keep .docx format."}
+```

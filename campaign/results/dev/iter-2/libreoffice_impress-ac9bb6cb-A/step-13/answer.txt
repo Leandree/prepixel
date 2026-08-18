@@ -1,0 +1,3 @@
+The step-11 screenshot confirms the `<number>` field in the Master Slide's slide-number placeholder is rendered in red, and the current screen shows we're back in Normal view with no save dialog pending — the Ctrl+S with "Use PowerPoint Format!" completed.
+
+{"action": "DONE", "memo": "Task complete: slide number field color set to red in Master Slide view (verified red at step-11), file saved as .pptx keeping PowerPoint format."}

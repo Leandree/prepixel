@@ -1,0 +1,1 @@
+{"action":"click","target":"e36","memo":"Clicked View > Slide Pane (was checked:false) to restore the left slide panel. Next step: verify the slide pane appears on the left (slide thumbnails near x~70-250) and that View > Slide Pane is now checked; if visible, task is done."}

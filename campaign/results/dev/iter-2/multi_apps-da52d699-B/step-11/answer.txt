@@ -1,0 +1,1 @@
+{"action":"done","memo":"book_list_result.docx contains 'Out of the Silent Planet' (row 7: 47840 words / 36 days ≈ 1329 wpd, slowest pace) and is saved — second Ctrl+S produced no format dialog, confirming no unsaved changes."}

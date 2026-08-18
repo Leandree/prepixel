@@ -1,0 +1,5 @@
+Data verified: Sheet1 rows 2–20, and the computed 867786 matches the manual sum. Now saving in xlsx format.
+
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl', 's'); time.sleep(2); pyautogui.press('enter')", "memo": "Sheet2 A1='Total Revenue', B1='Total Expenses', A2=867786 (verified = manual sum of Sheet1 A2:A20), B2=411686. Just pressed Ctrl+S then Enter (Keep current format for xlsx). Next: verify no dialog remains and title bar shows no unsaved marker, then DONE."}
+```

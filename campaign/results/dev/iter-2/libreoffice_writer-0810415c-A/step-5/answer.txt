@@ -1,0 +1,5 @@
+The Paragraph dialog is open with the Line Spacing dropdown showing "Single". I'll open it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(938, 696)", "memo": "Paragraph dialog open, Indents & Spacing tab. Clicked Line Spacing dropdown (was 'Single') at (938,696). Next: click 'Double' option in the list (should appear below ~(660,760) area; order: Single, 1.15 Lines, 1.5 Lines, Double, Proportional, At least, Leading, Fixed). Then OK at (1372,850), then Ctrl+S -> Keep current format."}
+```

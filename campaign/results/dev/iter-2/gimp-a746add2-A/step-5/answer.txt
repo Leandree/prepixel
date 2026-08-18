@@ -1,0 +1,7 @@
+The Filters menu is open. Now I'll open the "Light and Shadow" submenu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(535, 266)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(535, 266)", "memo": "Step 5: Filters menu was open; clicked 'Light and Shadow' (535,266). Next: in the submenu that appears to the right (~x 760-900), find and click 'Vignette' to open its filter dialog."}

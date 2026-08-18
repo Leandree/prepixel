@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e291","memo":"Clicked 'Accept All' on Steam cookie banner. Next: click/set search box e67 (Search the store, ~1111,224), type 'Dota 2', press Enter, open Dota 2 store page (app/570), then find 'Add all DLC to Cart' button."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1233, 794)", "memo": "Clicked OK on Insert Sheet -> Sheet2 created after Sheet1, cursor should be in Sheet2 A1. Next: type 'Total Revenue<tab>Total Expenses<enter>', then in A2 '=SUM(Sheet1.A2:A20)<tab>=SUM(Sheet1.B2:B20)<enter>'. Data rows are 2-20 in Sheet1. Then Ctrl+S + Enter (Keep current format)."}

@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(324, 253)", "memo": "Clicked Format > Character... in Master view with <number> field selected (status bar: TextEdit Row 1 Col 2). Next: Character dialog opens -> Font Effects tab -> Font Color dropdown -> pick Red. Then OK, Close Master View (~1738,431), Ctrl+S, Keep Current Format."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.hotkey('ctrl','s'); pyautogui.sleep(2); pyautogui.press('enter')", "memo": "Zoom set to 100% (confirmed in status bar). Pressed Ctrl+S then Enter for the Keep-current-format dialog. Next: verify no dialog remains and title has no modified marker; then DONE."}

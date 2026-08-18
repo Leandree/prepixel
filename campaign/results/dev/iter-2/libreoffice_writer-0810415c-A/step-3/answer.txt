@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(290, 76)", "memo": "Both paras selected (94 words, 545 chars). Just clicked Format menu. Next: click 'Paragraph...' item in dropdown, then in dialog set Line Spacing = Double, OK, then Ctrl+S and 'Use Word 2007-365!' to keep .docx format. Doc: Novels_Intro_Packet.docx"}

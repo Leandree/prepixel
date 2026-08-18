@@ -1,0 +1,1 @@
+{"action": "type", "text": "gsettings set org.gnome.desktop.interface show-battery-percentage true", "memo": "Typed gsettings command in terminal (not yet run). Next: press Enter, then check top bar clock/System area (e87 'System' 1814,0) for a battery % appearing. If gsettings errors, fall back to Settings>Power toggle."}

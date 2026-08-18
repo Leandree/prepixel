@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Ctrl+S pressed; no Keep-Format dialog visible in structure yet. Waiting to re-observe. If dialog appears, click 'Use Word 2007-365!'; if none and doc looks saved, answer done. Do NOT press Enter blindly (would add a newline to doc)."}

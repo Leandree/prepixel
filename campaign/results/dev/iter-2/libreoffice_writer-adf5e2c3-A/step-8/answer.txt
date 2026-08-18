@@ -1,0 +1,3 @@
+Reference [14] is correctly in the list. But the dialog has two problems: the Replace field is empty (my `[14]` never landed) and "Current selection only" is checked, which would limit the replace to the selected reference line.
+
+{"action": "import pyautogui, time; pyautogui.click(681, 619); time.sleep(0.3); pyautogui.click(1020, 496); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('[14]'); time.sleep(0.5)", "memo": "Ref [14] in list OK (Arial done). In Find&Replace: Find='<add here>' OK; just unchecked 'Current selection only' + typed '[14]' into Replace. NEXT: verify Replace field shows [14] & checkbox unchecked, then click 'Replace All' (1266,551), close dialog (1296,818), then Ctrl+S + Enter (Keep format)."}

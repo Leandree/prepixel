@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e50","memo":"Abandoned the multi-para selection (risk: selection ending at next para's start formats it too). New plan: per-paragraph. Cursor now in para1 (e50). NEXT: click Line Spacing dropdown e143 -> pick 'Double Spacing'. Then click para2 (e51), e143 -> Double. Then ctrl+s -> Use Word 2007-365!"}
+```

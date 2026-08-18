@@ -1,0 +1,3 @@
+Confirmed the sequence: step 7 applied Double spacing correctly, and step 8's blind `Enter` overwrote the still-selected text. Undoing now — one undo at a time so I don't roll back the spacing itself.
+
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','z'); time.sleep(1)", "memo": "CRITICAL: step-8's blind Enter DELETED the 2 selected paragraphs (words 1199->1105); doc may have been saved that way. Just pressed Ctrl+Z once. VERIFY 'Compared to a short story...' + 'A novel may have any number of climaxes...' are back AND still double-spaced (undo again if text still missing). Then Ctrl+S and click the 'Use Word 2007-365!' BUTTON with the mouse - never press Enter blind."}

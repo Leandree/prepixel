@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+End","memo":"Task: add Steinberg 2003 ref to ref list + cross-ref at \"<add here>\" in 4th para. Refs numbered [11],[12]. Pressed Ctrl+End to jump to end of doc to inspect reference list numbering/format."}
+```

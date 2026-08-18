@@ -1,0 +1,1 @@
+{"action": "click", "target": "e29", "memo": "Add button failed twice (still 'Sheet 1 of 1', only Sheet1 tab). Now using Sheet menu > Insert Sheet: choose 'After current sheet', name Sheet2, OK. Then in Sheet2 A1 type 'Total Revenue<tab>Total Expenses<enter>', A2 '=SUM(Sheet1.A2:A20)<tab>=SUM(Sheet1.B2:B20)<enter>', Ctrl+S, Keep current format."}

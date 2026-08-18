@@ -1,0 +1,1 @@
+{"action":"done","memo":"Reference [14] Steinberg et al. appended to reference list (visible as last entry, p.4) and '<add here>' in 4th paragraph replaced with ' [14]' giving 'A study by Pennington [14] noted...'. Ctrl+S issued, no format dialog appeared, document saved."}

@@ -1,0 +1,1 @@
+{"action":"type","text":"gsettings get org.gnome.shell favorite-apps\n","memo":"Terminal open+focused. Ran `gsettings get org.gnome.shell favorite-apps` to read favorites list. Next: read output, then set the list again minus the vim entry (likely 'vim.desktop') via `gsettings set org.gnome.shell favorite-apps \"[...]\"`. Verify Vim icon disappears from dash."}

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e9","memo":"Opened Tools menu in VLC; next click Preferences (Ctrl+P) to find the 'Play and exit' / auto-close setting. Goal: set play-and-exit off (advanced prefs > Playlist)."}
+```

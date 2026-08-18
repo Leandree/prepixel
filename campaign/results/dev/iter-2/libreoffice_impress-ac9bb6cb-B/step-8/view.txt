@@ -1,0 +1,37 @@
+~e1 [pixels] icon 1821,735,64,64
+~e2 text 1793,803,120,34 ".​~lock.​saa-​format-​guide.​pptx#"
+e3 [pixels] icon 1821,852,64,64
+e4 text 1793,920,120,34 "saa-​format-​guide.​pptx"
+e5 [pixels] icon 1821,969,64,64
+e6 text 1833,1037,40,17 "Home"
+e7 text 706,350,578,406 "LibreOffice 7.3 Document Recovery"
+~e8 text 745,464,336,25 "Document Name"
+~e9 text 1111,464,164,25 "Status"
+~e10 table-cell 737,490,6,21 state=selected,focused
+~e11 table-cell 747,490,332,21 "saa-format-guide.pptx" state=selected
+~e12 table-cell 1083,490,26,21 state=selected
+~e13 table-cell 1113,490,160,21 "Successfully recovered" state=selected
+~e14 text 714,436,562,17 "Status of recovered documents:"
+~e15 text 714,395,562,17 "Recovery of your documents was finished. Click 'Finish' to see your documents."
+~e16 push-button 1086,714,93,34 "Finish"
+e17 push-button 1183,714,93,34 "Discard"
+e18 toggle-button 0,0,99,27 "Activities" state=checked:false
+e19 menu 99,0,105,27 "Soffice"
+e20 menu 906,0,178,27 "Aug 19 02‎∶40"
+e21 menu 1814,0,106,27 "System"
+e22 push-button 0,908,70,8
+e23 push-button 62,33,8,883
+e24 push-button 0,33,70,64 "Google Chrome"
+e25 push-button 0,101,70,64 "Thunderbird Mail"
+e26 push-button 0,169,70,64 "Visual Studio Code"
+e27 push-button 0,237,70,64 "VLC media player"
+e28 push-button 0,305,70,64 "LibreOffice Writer"
+e29 push-button 0,373,70,64 "LibreOffice Calc"
+e30 push-button 0,441,70,64 "LibreOffice Impress"
+e31 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e32 push-button 0,577,70,64 "Files"
+e33 push-button 0,645,70,64 "Ubuntu Software"
+e34 push-button 0,713,70,64 "Help"
+e35 push-button 0,784,70,64 "Soffice"
+e36 push-button 0,852,70,64 "Trash"
+e37 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

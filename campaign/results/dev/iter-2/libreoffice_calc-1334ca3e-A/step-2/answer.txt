@@ -1,0 +1,7 @@
+The View menu is open and the status bar shows the document is at **260%** zoom. "Zoom" is the last entry with a submenu — I'll open it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(200, 632)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(200, 632)", "memo": "Doc zoom is 260% (status bar bottom-right). Opened View > Zoom submenu. Next: pick 'Zoom...' / a preset to set 100%, confirm status bar shows 100%, then Ctrl+S and 'Use Excel 2007-365!' to keep xlsx."}

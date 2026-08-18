@@ -1,0 +1,3 @@
+Master view confirmed the `<number>` field is now red, and we're back in Normal view. Saving now.
+
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter')", "memo": "Applied red to <number> in Master Slide (verified red in step-11). Back in Normal view. Just did Ctrl+S + Enter for 'Use PowerPoint Format!'. Next: verify no dialog remains / title bar has no modification marker, then DONE."}

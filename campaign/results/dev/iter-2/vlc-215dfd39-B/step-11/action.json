@@ -1,0 +1,1 @@
+{"action": "click", "target": "e75", "memo": "Clicked All after Simple was truly checked \u2014 expect advanced tree (Interface>Main interfaces>Qt). Target option: 'Display background cone or art' (qt-bgcone) -> uncheck, then Save. If panel still simple, fall back to typing 'cone' in prefs search/filter."}

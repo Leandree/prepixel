@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(455, 303)", "memo": "Clicked Sheet > Insert Sheet... Dialog should appear: set Position=After current sheet, Name=Sheet2, click OK. Then A1='Total Revenue', B1='Total Expenses', A2=SUM(Sheet1.A2:A20), B2=SUM(Sheet1.B2:B20); Ctrl+S + Keep current format (Enter)."}

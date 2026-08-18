@@ -1,0 +1,149 @@
+e1 [pixels] icon 1802,852,101,64
+e2 text 1793,920,120,34 "dog_​with_​background.​png"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 toggle-button 0,0,99,27 "Activities" state=checked:false
+e6 menu 99,0,287,27 "GNU Image Manipulation Program"
+e7 menu 906,0,178,27 "Aug 19 02‎∶28"
+e8 menu 1814,0,106,27 "System"
+e9 push-button 0,840,70,8
+e10 push-button 62,33,8,815
+e11 push-button 0,33,70,64 "Google Chrome"
+e12 push-button 0,101,70,64 "Thunderbird Mail"
+e13 push-button 0,169,70,64 "Visual Studio Code"
+e14 push-button 0,237,70,64 "VLC media player"
+e15 push-button 0,305,70,64 "LibreOffice Writer"
+e16 push-button 0,373,70,64 "LibreOffice Calc"
+e17 push-button 0,441,70,64 "LibreOffice Impress"
+e18 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e19 push-button 0,577,70,64 "Files"
+e20 push-button 0,645,70,64 "Ubuntu Software"
+e21 push-button 0,713,70,64 "Help"
+e22 push-button 0,784,70,64 "Trash"
+e23 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e24 menu 70,64,36,25 "File"
+e25 menu 106,64,39,25 "Edit"
+e26 menu 145,64,53,25 "Select"
+e27 menu 198,64,45,25 "View"
+e28 menu 243,64,53,25 "Image"
+e29 menu 296,64,48,25 "Layer"
+e30 menu 344,64,56,25 "Colors"
+e31 menu 400,64,48,25 "Tools"
+e32 menu 448,64,55,25 "Filters"
+e33 menu 503,64,73,25 "Windows"
+e34 menu 576,64,43,25 "Help"
+e35 toggle-button 70,124,47,40 state=checked:false
+e36 toggle-button 117,124,47,40 state=checked:false
+e37 toggle-button 164,124,47,40 state=checked:false
+e38 toggle-button 211,124,47,40 state=checked:false
+e39 toggle-button 70,164,47,40 state=checked:true
+e40 toggle-button 117,164,47,40 state=checked:false
+e41 toggle-button 164,164,47,40 state=checked:false
+e42 toggle-button 211,164,47,40 state=checked:false
+e43 toggle-button 70,204,47,40 state=checked:false
+e44 toggle-button 117,204,47,40 state=checked:false
+e45 toggle-button 164,204,47,40 state=checked:false
+e46 toggle-button 211,204,47,40 state=checked:false
+e47 toggle-button 70,244,47,40 state=checked:false
+e48 toggle-button 117,244,47,40 state=checked:false
+e49 toggle-button 164,244,47,40 state=checked:false
+e50 toggle-button 211,244,47,40 state=checked:false
+e51 text 76,365,176,15 "Crop"
+e52 check-box 76,381,176,21 "Current layer only" state=checked:false
+e53 check-box 76,406,176,21 "Delete cropped pixels" state=checked:false
+e54 check-box 76,431,176,21 "Allow growing" state=checked:false
+e55 check-box 76,458,176,21 "Expand from center" state=checked:false
+e56 text 88,514,98,34 "1578:948"
+e57 radio-button 188,514,32,34 state=checked:false
+e58 radio-button 220,514,32,34 state=checked:true
+e59 check-box 76,483,21,29 state=checked:false
+e60 combo-box 99,483,153,29 "Aspect ratio"
+e61 spin-button 88,583,81,32 "0" value="0.0"
+e62 spin-button 171,583,81,32 "0" value="0.0"
+e63 text 76,552,47,29 "Position:"
+e64 combo-box 201,552,51,29 "pixels"
+e65 spin-button 88,650,81,32 "0" value="0.0"
+e66 spin-button 171,650,81,32 "0" value="0.0"
+e67 text 76,619,26,29 "Size:"
+e68 combo-box 201,619,51,29 "pixels"
+e69 spin-button 88,709,164,24 "50.0" value="50.0"
+e70 check-box 76,686,176,21 "Highlight" state=checked:true
+e71 combo-box 76,737,176,29 "No guides"
+e72 push-button 76,770,176,31 "Auto Shrink"
+e73 check-box 76,805,176,21 "Shrink merged" state=checked:false
+e74 push-button 76,1045,43,32
+e75 push-button 120,1045,43,32
+e76 push-button 164,1045,43,32
+e77 push-button 208,1045,44,32
+e78 page-tab 155,340,18,18 "(None)"
+e79 [pixels] unknown 271,149,16,880
+e80 [pixels] unknown 287,133,1402,16
+e81 [pixels] icon 271,133,16,16
+e82 check-box 1689,133,18,18 state=checked:false
+e83 scroll-bar 1689,152,18,877 value="-124.0"
+e84 check-box 271,1029,18,18 state=checked:false
+e85 scroll-bar 290,1029,1400,18 value="-175.0"
+e86 [pixels] icon 1691,1029,16,18
+e87 text 271,1047,1436,31 "Reset all plug-ins to their default settings"
+e88 combo-box 368,1048,53,29 "pixels"
+e89 combo-box 422,1048,64,29 "66.7 %"
+e90 text 488,1048,1214,29 "Reset all plug-ins to their default settings"
+e91 page-tab 1727,96,18,18 "2. Hardness 050 (51 × 51)"
+e92 text 1726,122,188,32
+e93 [pixels] unknown 1727,172,34,34
+e94 [pixels] unknown 1761,172,34,34
+e95 [pixels] unknown 1795,172,34,34
+e96 [pixels] unknown 1829,172,34,34
+e97 [pixels] unknown 1863,172,34,34
+e98 [pixels] unknown 1727,206,34,34
+e99 [pixels] unknown 1761,206,34,34
+e100 [pixels] unknown 1795,206,34,34
+e101 [pixels] unknown 1829,206,34,34
+e102 [pixels] unknown 1863,206,34,34
+e103 [pixels] unknown 1727,240,34,34
+e104 [pixels] unknown 1761,240,34,34
+e105 [pixels] unknown 1795,240,34,34
+e106 [pixels] unknown 1829,240,34,34
+e107 [pixels] unknown 1863,240,34,34
+e108 [pixels] unknown 1727,274,34,34
+e109 [pixels] unknown 1761,274,34,34
+e110 [pixels] unknown 1795,274,34,34
+e111 [pixels] unknown 1829,274,34,34
+e112 [pixels] unknown 1863,274,34,34
+e113 [pixels] unknown 1727,308,34,34
+e114 [pixels] unknown 1761,308,34,34
+e115 [pixels] unknown 1795,308,34,34
+e116 [pixels] unknown 1829,308,34,34
+e117 [pixels] unknown 1863,308,34,34
+e118 scroll-bar 1899,171,15,160 value="0.0"
+e119 text 1726,332,188,32 "Basic,"
+e120 spin-button 1726,365,188,24 "10.0" value="10.0"
+e121 push-button 1726,390,30,32
+e122 push-button 1757,390,30,32
+e123 push-button 1788,390,30,32
+e124 push-button 1819,390,30,32
+e125 push-button 1850,390,30,32
+e126 push-button 1881,390,33,32
+e127 page-tab 1755,97,18,18 "Pine (64 × 56)"
+e128 page-tab 1783,97,18,18 "(None)"
+e129 page-tab 1811,98,16,16 "(None)"
+e130 combo-box 1726,466,141,29 "Normal"
+e131 combo-box 1868,466,46,29 "Default"
+e132 spin-button 1726,496,188,24 "100.0" value="100.0"
+e133 text 1726,521,28,32 "Lock:"
+e134 toggle-button 1755,521,32,32 state=checked:false
+e135 toggle-button 1788,521,32,32 state=checked:false
+e136 toggle-button 1821,521,32,32 state=checked:false
+e137 table-cell 1730,555,20,25 state=checked:true,selected
+e138 table-cell 1756,555,20,25 state=selected
+e139 table-cell 1816,555,171,25 "dog_with_background.png" state=selected
+e140 table-cell 1816,555,38,25 state=selected
+e141 scroll-bar 1726,1029,188,15 value="0.0"
+e142 push-button 1726,1045,22,32
+e143 push-button 1749,1045,22,32
+e144 push-button 1772,1045,22,32
+e145 push-button 1795,1045,22,32
+e146 push-button 1818,1045,22,32
+e147 push-button 1841,1045,22,32
+e148 push-button 1864,1045,22,32
+e149 push-button 1887,1045,27,32

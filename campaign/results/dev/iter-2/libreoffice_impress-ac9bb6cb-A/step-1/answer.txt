@@ -1,0 +1,3 @@
+I can see LibreOffice Impress with the presentation open. The slide number placeholder is at the bottom-right (dashed box). To change its color, I need to edit it in Master Slide view.
+
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Opened View menu; next pick 'Master Slide' to edit slide-number placeholder color to red. File: saa-format-guide.pptx (15 slides). Slide number placeholder is dashed box at bottom-right (~1422,900). After coloring red, close master view and Ctrl+S -> Keep Current Format."}

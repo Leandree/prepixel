@@ -1,0 +1,5 @@
+Verified: "Display background cone or art" changed from checked (step-10) to unchecked (step-11), and every other setting is identical. Now saving.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "Unchecked 'Display background cone or art' (verified vs step-10; all other settings unchanged) and clicked Save at (1210,903). Next: confirm Advanced Preferences dialog has closed -> then DONE."}
+```

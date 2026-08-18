@@ -1,0 +1,5 @@
+The screen is fully black — likely an idle/blank screen. I'll wake it with a mouse move and key press before doing anything else.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(960, 540); pyautogui.click(960, 540); pyautogui.press('esc')", "memo": "Step 1: screen was entirely black (idle/blank). Sent click at center + Esc to wake display. Next: re-observe screenshot. Goal = turn OFF Chrome dark mode. Plan: open Chrome, go to chrome://settings/appearance and set Mode to 'Light'; also check chrome://flags for 'Auto Dark Mode for Web Contents' = Disabled, and Chrome may have been launched with --force-dark-mode."}
+```

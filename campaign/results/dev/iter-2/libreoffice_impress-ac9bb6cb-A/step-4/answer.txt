@@ -1,0 +1,5 @@
+State confirmed: I'm in text-edit mode inside the `<number>` placeholder on the master slide (status bar: "TextEdit: Paragraph 1, Row 1, Column 1", object 1.52 x 1.09 at 23.58/13.00). Now I'll select the field text and open the Format menu.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl','a'); pyautogui.click(289, 76)", "memo": "In Master view, text-edit inside <number> placeholder; did Ctrl+A to select the field, then clicked Format menu (289,76). Next: click 'Character...' in menu -> Font Effects tab -> Font Color dropdown -> Custom/Red (hex FF0000) -> OK. Then Close Master View (1738,431), Ctrl+S, Keep Current Format."}
+```

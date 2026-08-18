@@ -1,0 +1,109 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 44,4,786,533 "user@user-virtual-machine: ~"
+~e4 push-button 684,35,34,30 "Minimize"
+~e5 push-button 724,35,34,30 "Maximize"
+~e6 push-button 764,35,34,30 "Close"
+e7 push-button 593,27,36,46
+e8 toggle-button 635,27,36,46 "Menu" state=checked:false
+~e9 text 321,41,232,17 "user@user-virtual-machine: ~"
+e10 push-button 76,27,36,46
+~e11 terminal 70,74,722,434 "Terminal" state=focused
+~e12 scroll-bar 792,74,12,434 value="0.0"
+e13 text 646,364,600,420 "VLC media player"
+e14 menu-item 652,364,44,20 "Media"
+e15 menu-item 702,364,62,20 "Playback"
+e16 menu-item 770,364,43,20 "Audio"
+e17 menu-item 819,364,42,20 "Video"
+e18 menu-item 867,364,55,20 "Subtitle"
+e19 menu-item 928,364,38,20 "Tools"
+e20 menu-item 972,364,37,20 "View"
+e21 menu-item 1015,364,36,20 "Help"
+e22 text 646,732,44,18 "--:--"
+e23 slider 690,732,512,18 value="0.0"
+e24 text 1202,732,44,18 "--:--"
+e25 [pixels] image 1128,767,16,16
+e26 slider 1144,757,85,26 value="0.0"
+e27 [pixels] unknown 1229,766,17,17
+e28 push-button 649,751,32,32
+e29 push-button 693,754,26,26
+e30 push-button 719,754,26,26
+e31 push-button 745,754,26,26
+e32 push-button 783,754,26,26
+e33 push-button 809,754,26,26
+e34 push-button 847,754,26,26
+e35 check-box 873,754,26,26 state=checked:false
+e36 check-box 899,754,26,26 state=checked:false
+e37 text 546,224,800,700 "Simple Preferences"
+e38 check-box 556,234,88,74 "Interface" state=checked:true
+e39 check-box 645,234,88,74 "Audio" state=checked:false
+e40 check-box 734,234,88,74 "Video" state=checked:false
+e41 check-box 823,234,107,74 "Subtitles / OSD" state=checked:false
+e42 check-box 931,234,103,74 "Input / Codecs" state=checked:false
+e43 check-box 1035,234,88,74 "Hotkeys" state=checked:false
+e44 text 558,318,776,24 "Interface Settings"
+e45 text 567,366,744,276 "Look and feel"
+e46 radio-button 1017,397,122,19 "Use custom skin" state=checked:false
+e47 radio-button 737,397,120,19 "Use native style" state=checked:true
+e48 text 737,423,404,3 "Look and feel"
+e49 text 579,432,720,207 "Look and feel"
+e50 [pixels] image 579,499,122,73
+e51 check-box 992,469,198,19 "Resize interface to video size" state=checked:true
+e52 combo-box 992,549,221,23 "When minimized"
+e53 list-item 0,0,753,23 "Never"
+e54 list-item 0,46,753,23 "Always"
+e55 combo-box 992,578,221,23 "System's default"
+e56 list-item 0,25,753,23 "Windows"
+e57 list-item 0,48,753,23 "Fusion"
+e58 check-box 717,442,225,19 "Show controls in full screen mode" state=checked:true
+e59 check-box 992,496,218,19 "Pause playback when minimized" state=checked:false
+e60 text 717,549,191,23 "Show media change popup:"
+e61 check-box 717,496,188,19 "Start in minimal view mode" state=checked:false
+e62 text 717,578,119,23 "Force window style:"
+e63 check-box 717,469,186,19 "Integrate video in interface" state=checked:true
+e64 check-box 717,523,131,19 "Show systray icon" state=checked:true
+e65 text 717,607,191,23 "Auto raising the interface:"
+e66 combo-box 992,607,221,23 "Video"
+e67 list-item 0,46,753,23 "Audio"
+e68 list-item 0,69,753,23 "Audio/Video"
+e69 text 567,648,744,146 "Playlist and Instances"
+e70 check-box 579,706,349,19 "Use only one instance when started from file manager" state=checked:true
+e71 check-box 579,733,141,19 "Display playlist tree" state=checked:false
+e72 check-box 942,733,228,19 "Pause on the last frame of a video" state=checked:false
+e73 check-box 942,679,320,20 "Enqueue items into playlist in one instance mode" state=checked:false
+e74 combo-box 942,759,357,23 "Ask"
+e75 text 579,759,357,23 "Continue playback?"
+e76 check-box 579,679,164,19 "Allow only one instance" state=checked:false
+e77 text 567,800,744,94 "Privacy / Network Interaction"
+e78 check-box 579,833,186,19 "Save recently played items" state=checked:true
+e79 text 774,830,162,25 "Filter:"
+e80 text 942,831,357,23 "Filter:"
+e81 check-box 579,862,213,19 "Allow metadata network access" state=checked:true
+e82 scroll-bar 1320,357,14,498 value="0.0"
+e83 text 555,864,121,51 "Show settings"
+~e84 radio-button 561,889,64,19 "Simple" state=checked:false
+e85 radio-button 630,889,38,19 "All" state=checked:true
+e86 push-button 1171,891,80,24 "Save"
+e87 push-button 1257,891,80,24 "Cancel"
+e88 push-button 688,891,136,24 "Reset Preferences"
+e89 toggle-button 0,0,99,27 "Activities" state=checked:false
+e90 menu 99,0,116,27 "Terminal"
+e91 menu 906,0,178,27 "Aug 19 03‎∶50"
+e92 menu 1774,0,40,27 "vlc"
+e93 menu 1814,0,106,27 "System"
+~e94 push-button 0,908,70,8
+~e95 push-button 62,33,8,883
+e96 push-button 0,33,70,64 "Google Chrome"
+e97 push-button 0,101,70,64 "Thunderbird Mail"
+e98 push-button 0,169,70,64 "Visual Studio Code"
+e99 push-button 0,237,70,64 "VLC media player"
+e100 push-button 0,305,70,64 "LibreOffice Writer"
+e101 push-button 0,373,70,64 "LibreOffice Calc"
+e102 push-button 0,441,70,64 "LibreOffice Impress"
+e103 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e104 push-button 0,577,70,64 "Files"
+e105 push-button 0,645,70,64 "Ubuntu Software"
+e106 push-button 0,713,70,64 "Help"
+~e107 push-button 0,784,70,64 "Terminal"
+~e108 push-button 0,852,70,64 "Trash"
+e109 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

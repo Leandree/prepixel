@@ -1,0 +1,1 @@
+{"action": "DONE", "memo": "Both Bills messages (AWS, X receipt) now show filled yellow stars at (1022,181) and (1022,227), confirmed also by yellow stars in the preview pane. Task complete."}

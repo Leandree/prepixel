@@ -1,0 +1,1 @@
+{"action": "click", "target": "e203", "memo": "Basic Macros dialog: clicked 'My Macros' row (e203) to select it. Next: click Edit (e197) to open Basic IDE (should land in My Macros>Standard>Module1). Then type macro: loop all DrawPages+MasterPages, find shapes, set CharColor RGB(255,0,0) on slide-number placeholder/field text, then oDoc.store()."}

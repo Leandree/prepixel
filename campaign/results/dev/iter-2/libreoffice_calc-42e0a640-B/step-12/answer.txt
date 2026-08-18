@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+s","memo":"Sheet2 has headers in A1/B1 and totals A2=867786, B2=411686. Sent ctrl+s again (2nd time) to be certain the file is saved. Next step: if a 'Keep Current Format' dialog appears, click the keep-current-format button; if no dialog, the save is complete -> done."}
+```

@@ -1,0 +1,1 @@
+{"action":"click","target":"e758","memo":"reminder.docx read. Required sheet order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Plan: Writer Tools>Macros>Edit Macros, Basic macro to reorder xlsx sheets (StarDesktop.Components) then store()."}

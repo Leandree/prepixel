@@ -1,0 +1,5 @@
+Spreadsheet data is fully visible. Columns G/H/I are word count, days, and words/day (G÷H = I, and H matches the date spans). The minimum words/day is row 7 — "Out of the Silent Plan…" at 47,840 words ÷ 36 days = 1,328.9 wpd (next lowest is *Silence* at 1,984). Let me click A7 to read the untruncated title from the formula bar.
+
+```json
+{"action": "import pyautogui; pyautogui.click(181, 443)", "memo": "Step 2: Data read. G=words,H=days,I=words/day. Rates: Fire&Blood 4797, Song of Solomon 2105, Lost Symbol 2306, 2001 3861, American Gods 3797, OUT OF THE SILENT PLANET 1328.9 (MIN), Andromeda 3259, Brave New World 4217, Silence 1984, Shining 24767. ANSWER=Out of the Silent Planet. Clicked A7 to confirm full title in formula bar. Next: open book_list_result.docx on Desktop (Files/double-click), type title, Ctrl+S, Keep current format."}
+```

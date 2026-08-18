@@ -1,0 +1,1 @@
+{"action": "click", "target": "e50", "memo": "Clicked into paragraph 1 (e50). Next: press ctrl+shift+down to extend selection to start of para 2, then shift+end to reach into para 2. Then use Line Spacing button e143 -> Double Spacing. Doc is at top; e50=para1, e51=para2."}

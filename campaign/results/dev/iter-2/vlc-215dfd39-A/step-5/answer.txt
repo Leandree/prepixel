@@ -1,0 +1,5 @@
+Advanced Preferences tree is open with Interface expanded; "Main interfaces" is just below the visible area. I'll scroll the tree down to reach it.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(715, 600); pyautogui.scroll(-4)", "memo": "Advanced Prefs (All) open. Tree: Interface expanded (Control interfaces, Hotkeys settings, Main interfaces below). Just scrolled tree down. Next: click the expand arrow left of 'Main interfaces', then click 'Qt', then uncheck 'Display background cone or art', then Save at (1210, 903)."}
+```

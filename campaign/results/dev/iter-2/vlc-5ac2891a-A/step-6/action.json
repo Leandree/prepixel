@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(639, 471); pyautogui.sleep(2)", "memo": "Clicked 'Playlist' node in Advanced Preferences tree (All view). Right pane should now show Playlist settings incl. 'Play and exit' checkbox \u2014 must be UNCHECKED. Then click Save at (1210, 903)."}

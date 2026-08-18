@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e201","memo":"Closed Basic Macros dialog (macro path abandoned - no time). NEXT: click the <number> placeholder in master view (text 'Google Shape;18;p17' / '<number>' near 1399,866) to SELECT the shape, then in the Properties sidebar's Character panel click the Font Color button (its default swatch is red) to apply red to the slide-number text."}
+```

@@ -1,0 +1,3 @@
+The sheet tabs now read left-to-right: **ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration** — matching the order required by reminder.docx. No "Keep current format" dialog appeared on the last Ctrl+S, which means the document has no unsaved changes (the macro's `store()` already wrote the file back as .xlsx).
+
+{"action": "DONE"}

@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Clicked 'All' (confirmed checked). Panel still shows Simple prefs elements — tree likely stale; waiting for Advanced Preferences to render. Next: use search box or left tree -> Playlist, uncheck 'Play and exit', then Save."}

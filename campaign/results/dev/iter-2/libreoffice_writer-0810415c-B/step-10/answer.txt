@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e143","memo":"Selection cleared (status now '1,199 words'), caret should be in para2 after 'down'. Para1 already double-spaced (e50 h=129 vs 55 for e51). NOW: dropdown open -> click 'Spacing: 2'. Then verify e51 height grows ~55 -> ~110+. Document clicks are no-ops; keyboard only."}
+```

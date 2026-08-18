@@ -1,0 +1,7 @@
+**Problem identified:** comparing step‑11 and step‑12, the backspace only stripped the numbering from item `[15]`, so the Steinberg text now sits in an *unnumbered* paragraph below an *empty* `[14]`. I need to merge it into `[14]`.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(900, 781); time.sleep(0.3); pyautogui.press('home'); time.sleep(0.2); pyautogui.press('backspace'); time.sleep(0.5)"}
+```
+
+{"action": "import pyautogui, time; pyautogui.click(900, 781); time.sleep(0.3); pyautogui.press('home'); time.sleep(0.2); pyautogui.press('backspace'); time.sleep(0.5)", "memo": "Step11 backspace only removed [15]'s numbering -> text landed in unnumbered para under EMPTY [14]. Just did Home+Backspace at start of 'Steinberg' to merge it into item [14]. NEXT: screenshot-check that line reads '[14]  Steinberg, F. M., ...' (one para, Arial) and no stray [15]; if merge failed, use Format>Bullets/list or retype. Then verify para 4 has [14], click blank area to deselect, Ctrl+S, wait 2s, Enter (Keep current format)."}

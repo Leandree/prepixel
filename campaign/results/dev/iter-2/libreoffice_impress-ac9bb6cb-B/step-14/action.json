@@ -1,0 +1,1 @@
+{"action": "click", "target": "e53", "memo": "Clicked <number> shape in master view to SELECT it. NEXT (final step): in Properties sidebar a Character panel should now appear \u2014 click its 'Font Color' button (default swatch = red) to apply red. If no Character panel, use Format>Character. Escape first if it entered text-edit mode."}

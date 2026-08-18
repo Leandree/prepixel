@@ -1,0 +1,37 @@
+{
+ "task_id": "fe41f596-a71b-4c2f-9b2f-9dcd40b568c3",
+ "domain": "os",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "961bf580a8e8afd3dfaec4a77b463b5111e1b943",
+ "success": false,
+ "score_raw": 0,
+ "steps": 4,
+ "termination": "DONE",
+ "wall_clock_s": 100.7,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 18,
+  "cache_creation_input_tokens": 27906,
+  "cache_read_input_tokens": 44523,
+  "output_tokens": 2040,
+  "cost_usd": 0.352411,
+  "attempts": 4,
+  "steps_with_usage": 4,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(1866, 12)",
+  "import pyautogui, time; pyautogui.press('escape'); time.sleep(1); pyautogui.hotkey('ctrl', 'alt', 't'); time.sleep(2)",
+  "import pyautogui, time; pyautogui.click(620, 300); time.sleep(0.5); pyautogui.write('gsettings set org.gnome.desktop.interface show-battery-percentage true\\n'); time.sleep(1); pyautogui.write('gsettings get org.gnome.desktop.interface show-battery-percentage\\n')",
+  "DONE"
+ ]
+}

@@ -1,0 +1,1 @@
+{"action":"click","target":"e40","memo":"Bills folder has 2 messages (e40 AWS, e44 X/Twitter). Clicked first message to focus list. Next: Ctrl+A to select both, then press 'S' to star them. Verify star column shows filled stars for both."}

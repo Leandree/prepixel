@@ -1,0 +1,3 @@
+Double spacing is applied to the first two paragraphs. Now saving in .docx format.
+
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter')", "memo": "Applied double spacing to first 2 paragraphs (verified visually). Pressed Ctrl+S and Enter to keep Word format. Next: verify no dialog remains and title has no modified marker; then DONE."}

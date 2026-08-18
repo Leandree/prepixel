@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1007, 210)", "memo": "Thunderbird open; account anonym-x2024@outlook.com selected. Clicked 'Manage message filters' link on account page to open Message Filters dialog. Next: click 'New...' to create filter, name it, set 'Match all messages', add action 'Forward Message to' anonym-x2024@gmail.com."}

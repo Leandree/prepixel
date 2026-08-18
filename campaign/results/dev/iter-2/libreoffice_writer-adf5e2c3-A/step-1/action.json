@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(960, 550); pyautogui.hotkey('ctrl', 'end')", "memo": "Doc: Essay_Writing_English_for_uni.docx. Numbered refs style [11],[12]. Jumped to end to inspect reference list numbering + find <add here> in 4th paragraph."}

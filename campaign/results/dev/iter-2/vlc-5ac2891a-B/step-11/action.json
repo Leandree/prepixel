@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e11", "memo": "Cropping terminal to read output of the sed/grep command; expect a line like '<n>:play-and-exit=0' confirming ~/.config/vlc/vlcrc is set. If missing, re-run command."}

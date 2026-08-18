@@ -1,0 +1,1 @@
+{"action":"crop","target":"e11","memo":"Cropping terminal e11 to read output of 'gsettings get show-battery-percentage' (expect true). If true -> verify top bar e87 (System menu, 106px) shows %; if it does, done. If output is false/error, re-run the set command."}

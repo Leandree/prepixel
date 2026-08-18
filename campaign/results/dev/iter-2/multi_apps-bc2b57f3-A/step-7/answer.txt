@@ -1,0 +1,3 @@
+The macro dialog is dismissed and the reorder is saved. Before finishing, I want to re-read reminder.docx in full — none of my retained screenshots actually show its text (it was covered by the Basic Macros dialog), so I'm relying on a memo that may have captured only part of the requirements.
+
+{"action": "import pyautogui; pyautogui.click(389, 76); pyautogui.sleep(1.5)", "memo": "Step7: Sheet reorder SAVED & confirmed (ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration). Opened Window menu in Basic IDE to switch to reminder.docx and re-read FULL requirements (never actually saw its text - was hidden by dialog). Next: click reminder.docx entry in menu."}

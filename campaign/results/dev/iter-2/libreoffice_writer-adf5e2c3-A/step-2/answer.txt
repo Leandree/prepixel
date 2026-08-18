@@ -1,0 +1,5 @@
+The reference list is alphabetical (Parker [11], Scholey [12], Schramm [13]), so Steinberg becomes [14] at the end. I'll place the cursor at the end of entry [13] and press Enter to see whether the numbering is automatic list numbering or literal text.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1190, 744); pyautogui.press('end'); pyautogui.press('enter')", "memo": "Refs alphabetical: [11] Parker, [12] Scholey, [13] Schramm -> Steinberg = [14] at end. Clicked end of [13] (after 36.full link) + Enter to test if numbering is auto-list or literal text. NEXT: check if [14] auto-appeared; if not type '[14]\\tSteinberg...'. Watch for hyperlink formatting carryover (Ctrl+M). Then find <add here> in 4th paragraph (p.1-2) and insert [14]."}
+```

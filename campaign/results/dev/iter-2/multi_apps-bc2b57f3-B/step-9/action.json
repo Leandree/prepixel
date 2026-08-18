@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+a", "memo": "Selected all in Basic IDE Module1. Next: type FixOrder macro (find .xlsx doc via StarDesktop.Components, moveByName order ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration, then oDoc.store()), then press F5 to run."}

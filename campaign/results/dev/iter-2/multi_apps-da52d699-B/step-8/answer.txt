@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+s","memo":"Pressed Ctrl+S in Writer for book_list_result.docx (contains 'Out of the Silent Planet', 5 words). NEXT: a Keep-format dialog will appear — click 'Use Word 2007-365!' to preserve .docx, then verify title bar has no modified marker and finish."}
+```

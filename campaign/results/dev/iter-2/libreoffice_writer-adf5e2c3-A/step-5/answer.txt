@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(760, 763); pyautogui.press('home'); pyautogui.hotkey('ctrl', 'shift', 'end'); pyautogui.hotkey('ctrl', 'm'); pyautogui.click(960, 950)", "memo": "Fixed ref [14] formatting: selected from START of the [14] visual line (y=763) to doc end + Ctrl+M (Ctrl+M did work last time, it just missed line 1). NEXT: verify [14] line is black/not underlined; then Ctrl+H: replace '<add here>' with '[14]' (Replace All), close dialog, then Ctrl+S and keep Word format (Use Word 2007-365!)."}
+```

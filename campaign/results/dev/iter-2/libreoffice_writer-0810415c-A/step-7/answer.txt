@@ -1,0 +1,7 @@
+Line Spacing is set to "Double" in the dialog. Now I'll apply it with OK.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1372, 850)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(1372, 850)", "memo": "Clicked OK in Paragraph dialog (Double line spacing applied to selection of first two paragraphs, 94 words/545 chars). Next: verify text looks double-spaced, then Ctrl+S and press Enter / click 'Use Word 2007-365!' to keep .docx format."}

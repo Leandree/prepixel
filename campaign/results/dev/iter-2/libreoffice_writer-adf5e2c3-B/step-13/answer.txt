@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+s","memo":"Both edits verified in doc: '[14] Steinberg...' last in reference list, 'A study by Pennington [14] noted' in 4th paragraph. Just pressed Ctrl+S — next: click 'Use Word 2007-365!' in the Keep Format dialog, then done."}

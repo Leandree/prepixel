@@ -1,0 +1,5 @@
+The macro succeeded — the dialog shows "SAVED" with all 10 sheets in the exact required order. Dismissing it now.
+
+```json
+{"action": "import pyautogui; pyautogui.click(994, 684); pyautogui.sleep(1)", "memo": "Step6: MsgBox confirmed SAVED + order 0=ReadMe,1=Raw_data,2=Beans,3=Millet,4=Sorghum,5=Mkt Gotheye,6=Mkt Mangaize,7=Mkt Ouallam,8=Mkt Tera,9=Millet spatial integration. Clicked OK. Task appears complete; next: switch to Calc window to visually confirm tab order, then DONE."}
+```

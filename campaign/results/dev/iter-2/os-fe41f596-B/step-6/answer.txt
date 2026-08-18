@@ -1,0 +1,1 @@
+{"action":"key","keys":"enter","memo":"Pressed Enter to run gsettings show-battery-percentage true. Next: verify top bar near clock (e86 'Aug 19' 906,0 / e87 'System' 1814,0) shows battery %; crop e87 region if needed. Fallback: Settings>Power toggle."}

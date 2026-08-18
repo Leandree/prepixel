@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+o","memo":"Calc is the focused app (top bar says LibreOffice Calc), so the desktop icon click did nothing. Opening File>Open dialog instead; next: type /root/Desktop/reminder.docx (or ~/Desktop/reminder.docx) and press Enter to open it in Writer and read requirements. Workbook 'workbook-with-sample-database.xlsx' open in Calc, 10 sheets, current sheet 'Mkt Tera'."}
+```

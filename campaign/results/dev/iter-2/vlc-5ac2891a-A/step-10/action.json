@@ -1,0 +1,1 @@
+{"action": "DONE", "memo": "Verified via grep: ~/.config/vlc/vlcrc line 4073 reads 'play-and-exit=0' (uncommented, single match). GUI 'Play and exit' checkbox also unchecked and preferences saved. VLC will no longer auto-close when a video ends. Task complete."}

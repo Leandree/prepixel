@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(986, 371)", "memo": "Font Effects tab open; clicked Font color dropdown arrow (986,371). Next: pick Red swatch in the palette that opens (Red is in standard palette row 1, ~5th column area). Then OK (1260,838), Close Master View, Ctrl+S, Keep Current Format."}

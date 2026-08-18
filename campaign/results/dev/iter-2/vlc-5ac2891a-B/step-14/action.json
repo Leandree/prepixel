@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e11", "memo": "Cropped e11 to read 'STATUS=N' after cleared screen. If STATUS>=1 -> play-and-exit=0 is set in ~/.config/vlc/vlcrc -> answer done on step 15. If STATUS=0 -> re-run: echo 'play-and-exit=0' >> ~/.config/vlc/vlcrc"}

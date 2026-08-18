@@ -1,0 +1,5 @@
+The slide panel is indeed hidden — the editing area starts right at the left edge. I'll restore it via the View menu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Opened View menu to find 'Slide Pane' toggle. Next: click 'Slide Pane' entry in the dropdown to restore left panel."}
+```

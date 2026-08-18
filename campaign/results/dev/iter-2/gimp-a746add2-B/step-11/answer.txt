@@ -1,0 +1,5 @@
+The Vignette filter dialog is now open — e131/e133 show the "Vignette" window with Presets, shape (Circle), color, radius/softness spin-buttons, and OK/Cancel/Reset/Help buttons.
+
+```json
+{"action":"done","memo":"Vignette filter dialog is open (title 'Vignette', Presets combo, OK/Cancel/Reset/Help). Task complete; did not apply the filter since only opening was requested."}
+```
