@@ -33,5 +33,7 @@
   "import pyautogui; pyautogui.click(777, 452)",
   "import pyautogui; pyautogui.click(716, 548)",
   "DONE"
- ]
+ ],
+ "phase": "development",
+ "phase_note": "reclassified by manager_orders/DEV-PHASE-PLAN.md \u00a71: run before the dev/test split was drawn, so these cells are development material and count toward no campaign result"
 }
