@@ -661,6 +661,18 @@ class Driver:
                        "scroll": out.get("meta", {}).get("scroll"),
                        "scroll_height": out.get("meta", {}).get(
                            "scrollHeight")}
+        skipped = out.get("meta", {}).get("offscreen_skipped", 0)
+        if skipped:
+            # No silent caps — the AT-SPI channel already declares its
+            # offscreen overflow in the view itself, and a web channel that
+            # quietly stopped at 60 would be the same silent blind spot this
+            # campaign exists to catch. Measured on dota2.com: the cap
+            # saturated at 60 with more below it.
+            web.append({"kind": "note", "role": "note", "rect": [0, 0, 0, 0],
+                        "label": "", "value": "", "states": {},
+                        "line": f"[offscreen] +{skipped} more lines truncated "
+                                f"(scroll to reveal)"})
+            mech["cdp_offscreen_skipped"] = skipped
         self.mech_total["cdp_steps"] += 1
         self.mech_total["cdp_ms_total"] += ms
         self.mech_total["cdp_records_total"] += len(web)

@@ -222,12 +222,12 @@ function inPage(maxOffscreen) {
              (host && host.contains(top)));
   };
 
-  let nOff = 0;
+  let nOff = 0, nSkipped = 0;
   function push(n, role, ctx, kindHint) {
     const r = rectOf(n);
     if (r.width <= 0 || r.height <= 0) return;
     const on = onScreen(r, ctx);
-    if (!on && nOff >= maxOffscreen) return;
+    if (!on && nOff >= maxOffscreen) { nSkipped += 1; return; }
     // On-screen: viewport frame, translated later into screen coords.
     // Off-screen: PAGE coordinates — a scroll target, not a click target.
     const box = on
@@ -337,7 +337,8 @@ function inPage(maxOffscreen) {
             viewport: [vw, vh], scroll: [scrollX, scrollY],
             scrollHeight: document.documentElement.scrollHeight,
             visibility: document.visibilityState,
-            focused: document.hasFocus(), offscreen_emitted: nOff },
+            focused: document.hasFocus(), offscreen_emitted: nOff,
+            offscreen_skipped: nSkipped },
   };
 }
 
