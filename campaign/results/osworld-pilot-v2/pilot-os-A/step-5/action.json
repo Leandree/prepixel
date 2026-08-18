@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1338, 193); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('132'); pyautogui.press('tab'); pyautogui.click(1525, 193); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('43'); pyautogui.press('tab')"}

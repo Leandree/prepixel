@@ -1,0 +1,30 @@
+{
+ "task_id": "13584542-872b-42d8-b299-866967b5c3ef",
+ "domain": "os",
+ "condition": "A",
+ "model": "claude-code-subagent:sonnet (pilot v2 2026-08-18)",
+ "driver": "v2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 7,
+ "termination": "DONE",
+ "input_tokens": null,
+ "output_tokens": null,
+ "wall_clock_s": 484.4,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.hotkey('ctrl', 'alt', 't')",
+  "import pyautogui; pyautogui.click(842, 79)",
+  "import pyautogui; pyautogui.click(796, 301)",
+  "import pyautogui; pyautogui.click(1034, 320)",
+  "import pyautogui; pyautogui.click(1338, 193); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('132'); pyautogui.press('tab'); pyautogui.click(1525, 193); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('43'); pyautogui.press('tab')",
+  "import pyautogui; pyautogui.click(1770, 79)",
+  "DONE"
+ ]
+}

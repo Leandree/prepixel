@@ -1,0 +1,92 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Can you enable the 'Do Not Track' feature in Chrome to enhance my online privacy?
+
+STEP 1 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+(none)
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); `eN [offscreen] …` exists on the page
+but outside the viewport (scroll_to makes it actionable); `[pixels] …` is a
+DECLARED opaque region whose content the structure cannot read (crop shows
+its pixels); `[self-inconsistent: …]` means the structure declares content it
+does not expose (crop shows the region's pixels):
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "New Tab" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 text 195,78,24,24 "Search icon"
+e14 entry 227,78,1565,24 "Address and search bar" state=focused
+e15 push-button 1800,78,24,24 "Bookmark this tab"
+e16 push-button 1845,73,34,34 "You"
+e17 push-button 1881,73,39,34 "Chrome"
+e18 document-web 70,114,1850,966 "New Tab" state=focused
+e19 document-web 70,114,1850,966 "Gmail" state=focused
+e20 link 1808,134,43,24 "Search for images"
+e21 text 1808,138,43,15 "Images"
+e22 push-button 1866,126,40,40 "Google apps"
+e23 combo-box 622,376,746,48 "Search Google or type a URL"
+e24 push-button 1289,376,26,48 "Search by voice"
+e25 push-button 1326,376,26,48 "Search by image"
+e26 text 883,442,112,112 "Web Store"
+e27 link 883,442,112,112 "Web Store"
+e28 push-button 965,446,28,28 "More actions for Web Store shortcut"
+e29 text 909,522,60,15 "Web Store"
+e30 push-button 995,442,112,112 "Add shortcut"
+e31 toggle-button 1736,1032,168,32 "Customise Chrome" state=checked:false
+e32 toggle-button 0,0,99,27 "Activities" state=checked:false
+e33 menu 99,0,162,27 "Google Chrome"
+e34 menu 906,0,178,27 "Aug 18 16‎∶48"
+e35 menu 1814,0,106,27 "System"
+e36 push-button 0,840,70,8
+e37 push-button 62,33,8,815
+e38 push-button 0,33,70,64 "Google Chrome"
+e39 push-button 0,101,70,64 "Thunderbird Mail"
+e40 push-button 0,169,70,64 "Visual Studio Code"
+e41 push-button 0,237,70,64 "VLC media player"
+e42 push-button 0,305,70,64 "LibreOffice Writer"
+e43 push-button 0,373,70,64 "LibreOffice Calc"
+e44 push-button 0,441,70,64 "LibreOffice Impress"
+e45 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e46 push-button 0,577,70,64 "Files"
+e47 push-button 0,645,70,64 "Ubuntu Software"
+e48 push-button 0,713,70,64 "Help"
+e49 push-button 0,784,70,64 "Trash"
+e50 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+
+Full current view with ids: /home/leandre/dev/osworld-runs-v2/pilot-chrome-B/step-1/view.txt
+(Read that file if you need an element not shown above.) Previous views (up
+to 3, oldest first) are at:
+(none)
+
+ACTION SCHEMA — reply by writing the file /home/leandre/dev/osworld-runs-v2/pilot-chrome-B/step-1/action.json as ONE JSON object.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll_to","target":"e19"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+Exactly one JSON object, no commentary in the file. Write the file with the
+Write tool, then stop.

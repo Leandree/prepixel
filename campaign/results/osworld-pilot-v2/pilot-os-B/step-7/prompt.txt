@@ -1,0 +1,52 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I click in terminal: terminal->132x43 to change terminal size but after each reboot terminal size is set to default setting and I have to change it again. Help me set it permanently
+
+STEP 7 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. key ctrl+alt+t
+2. click toggle-button "Menu"
+3. click push-button "Preferences"
+4. click list-item "Unnamed"
+5. set_value spin-button "80" := "132"
+6. set_value spin-button "24" := "43"
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); `eN [offscreen] …` exists on the page
+but outside the viewport (scroll_to makes it actionable); `[pixels] …` is a
+DECLARED opaque region whose content the structure cannot read (crop shows
+its pixels); `[self-inconsistent: …]` means the structure declares content it
+does not expose (crop shows the region's pixels):
+[diff vs previous view — system bar excluded; ids are current-step ids]
+- spin-button 1507,176,118,34 "24" value="24.0"
++ e44 spin-button 1507,176,118,34 "43" value="43.0"
+[act-guard] previous action: CONFIRMED (value "24.0"→"43.0", label "24"→"43")
+Full current view with ids: /home/leandre/dev/osworld-runs-v2/pilot-os-B/step-7/view.txt
+(Read that file if you need an element not shown above.) Previous views (up
+to 3, oldest first) are at:
+/home/leandre/dev/osworld-runs-v2/pilot-os-B/step-4/view.txt
+/home/leandre/dev/osworld-runs-v2/pilot-os-B/step-5/view.txt
+/home/leandre/dev/osworld-runs-v2/pilot-os-B/step-6/view.txt
+
+ACTION SCHEMA — reply by writing the file /home/leandre/dev/osworld-runs-v2/pilot-os-B/step-7/action.json as ONE JSON object.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll_to","target":"e19"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+Exactly one JSON object, no commentary in the file. Write the file with the
+Write tool, then stop.

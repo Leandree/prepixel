@@ -1,5 +1,99 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-18 — DECISION NEEDED — driver v2 implemented, acceptance run, pilot v2 done; two design calls are yours
+
+Driver v2 per `manager_orders/DRIVER-V2-SPEC.md` §2.1–2.6 is implemented and
+committed before any run (6c7f56f, then 68bd62d and 107d39a for defects the
+acceptance suite found). Traces: `campaign/results/osworld-pilot-v2/`
+(README + RUNS.md + per-step prompt/view/action/mechanics/screenshot),
+acceptance evidence in its `acceptance/` subdirectory. v1 untouched.
+
+**The os task, v1 → v2: every diagnosed fault is gone, measured.** os-B went
+9 steps → 7, with no geometric retry and no re-do of a state change. The
+spin-button that v1 fought twice (corner click at 1315,176, value stayed
+`80.0`, verdict wrongly `CONFIRMED (view changed)` because the GNOME clock
+sits in the whole-view diff) is now one `set_value` actuated through
+`Value.currentValue` with verdict `CONFIRMED (value "80.0"→"132.0")`.
+Replaying the v1 corner-click in the sandbox now yields
+`UNVERIFIED (element re-read unchanged: still spin-button … value="80.0")`.
+4 of 6 targeted actions in os-B were actuated with no pointer at all
+(AT-SPI `Action.click` / `Value.currentValue`); the model emitted zero
+coordinates all run.
+
+**The chrome task, both conditions failed — not a driver effect.** Both v2
+models declared the task impossible, claiming Chrome removed the setting.
+Both were wrong; v1's own trace shows the control at Privacy →
+**Third-party cookies** → "Do Not Track", and neither v2 run opened that
+sub-page. What misled them is real: searching "do not track" in
+chrome://settings announces `"1 result"` and exposes no matching row —
+polled every 1.5 s for 25.5 s in the sandbox, reproduced live at chrome-B
+step 6, and condition A reasoned about the same badge from pixels. Shared
+cause, both channels; the v1/v2 difference is that v1's models kept
+exploring. Small-n trajectory variance on a misleading UI, which is exactly
+why the campaign is 50 tasks.
+
+**Acceptance (§4.2): 4 pass, 1 fails informatively, 1 not exercisable.**
+(a) corner-miss → UNVERIFIED ✓; (a2) the same element via `set_value` →
+CONFIRMED with the real transition ✓; (b) toggle state visible before/after
+✓; (e) static label → UNVERIFIED ✓. (d) fails, but **your diagnostic #4 does
+not hold**: the v1 WAIT was not a settle problem, the row never appears at
+any budget, so no settle would have absorbed it. (c) is not exercisable:
+OSWorld's payload carries coordinates only for showing+visible nodes —
+measured 301 of 3047 on a Chrome page — so below-the-fold content has no
+position to emit, and §2.6 as specified cannot be implemented from this
+payload.
+
+The suite paid for itself: it found four rung-1 defects before the pilot,
+each of which would have silently degraded every campaign cell — role names
+normalised differently by the server (rung 1 matched nothing, 6/6 fell back
+to the pointer), over-aggressive spatial pruning (a stale ancestor hid a
+whole preferences page), `EditableText` writing a spin-button's text while
+leaving its value behind (`"132" value="80.0"` — caught by the guard), and
+`Action.activate` on a text field meaning *submit*, which sent keystrokes to
+another Chrome tab.
+
+**Three things I did not decide unilaterally:**
+
+1. **Condition B cannot scroll.** `scroll_to` needs an `[offscreen]` target
+   and those are inexpressible here (above). Below-the-fold content is
+   therefore unreachable in B except by luck; chrome-B step 5 hit this and
+   routed around it via the search box. A plain
+   `{"action":"scroll","direction":"down"}` fixes it but deviates from
+   §2.2's element-reference-only schema. Your call.
+2. **The §2.5 re-probe rule misses the real shape.** It fires on "declared
+   count > 0, zero rows exposed"; Chrome's actual contradiction is
+   "declares 1, exposes 6 *stale* rows". Generalising to "declared ≠
+   exposed" false-fires on ordinary lists, and deciding which rows count as
+   results is the task heuristic §3 forbids. Worth your attention: this is a
+   real held-out instance of the paper's declare-vs-expose divergence, on a
+   stock Chrome settings page.
+3. **Blindness is not enforced.** At chrome-B step 6 the answering agent
+   read `step-6/screenshot.png` (the driver writes it beside the prompt for
+   the coverage guard) and reasoned about a yellow badge — a protocol
+   contamination for that step, recorded rather than hidden. Fix I propose
+   before the campaign: per-step screenshots move to a sibling directory no
+   prompt references, `crop.png` materialises in the step directory only on
+   request, and every B trace gets grepped for pixel reads as a
+   contamination check. A subscription subagent cannot be
+   filesystem-sandboxed — one more argument for the API-credits track.
+
+Harness cost, reported apart from model cost (§3): one a11y capture ~1.5 s,
+so a settle is ~4.5 s for three captures; settle totals 28.0 s (os-B) and
+33.4 s (chrome-B); act-guard ~25 ms per action; zero re-probes, zero WAIT.
+The post-action budget is 4.0 s in BOTH conditions (A spends it as
+`env.step`'s pause), sized so B's settle never exceeds A's fixed sleep — the
+condition under test is never handed more stabilisation time than the
+baseline.
+
+Note on lost traces: a first pilot-v2 pass (os-A 4 steps/fail-by-evaluator,
+os-B 8 steps/success) was wiped with `/tmp` when the session was
+interrupted; runs now write outside `/tmp` and are packaged into the repo as
+each one finishes. The four runs above are a complete, self-consistent
+re-run, not a mix.
+
+**No campaign go requested yet** — per §4.4 I am waiting on your validation
+of pilot v2 and on your calls on the three points above.
+
 ## 2026-08-18 — DONE — quota pilot 4/4 SUCCESS; driver validated; awaiting campaign go
 
 Pilot (2 non-pre-registered tasks × 2 conditions, interleaved, sonnet

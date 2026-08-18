@@ -1,0 +1,52 @@
+{
+ "task_id": "13584542-872b-42d8-b299-866967b5c3ef",
+ "domain": "os",
+ "condition": "B",
+ "model": "claude-code-subagent:sonnet (pilot v2 2026-08-18)",
+ "driver": "v2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 7,
+ "termination": "DONE",
+ "input_tokens": null,
+ "output_tokens": null,
+ "wall_clock_s": 412.6,
+ "pixel_fallbacks": 0,
+ "guard_hits": 0,
+ "guard_suspects_checked": 10,
+ "act_verdicts": [
+  "CONFIRMED (view changed outside the system bar; focus: terminal 260,103,722,434 \"Terminal\" state=focused)",
+  "CONFIRMED (state [checked:false]\u2192[checked:true])",
+  "CONFIRMED (element no longer present \u2014 view changed)",
+  "CONFIRMED (state [none]\u2192[selected,focused])",
+  "CONFIRMED (value \"80.0\"\u2192\"132.0\", label \"80\"\u2192\"132\")",
+  "CONFIRMED (value \"24.0\"\u2192\"43.0\", label \"24\"\u2192\"43\")"
+ ],
+ "mechanics": {
+  "platform_available": true,
+  "rung1": 4,
+  "rung2": 1,
+  "kbd": 1,
+  "resolve_errors": 0,
+  "noop_toggles": 0,
+  "rung1_fallbacks": 1,
+  "settle_ms_total": 28015,
+  "settle_captures_total": 18,
+  "guard_ms_total": 122,
+  "reprobes": 0,
+  "scroll_iters_total": 0,
+  "waits_after_settle": 0,
+  "platform_probe": "OSW_PLATFORM_OK 15"
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "key ctrl+alt+t",
+  "click toggle-button \"Menu\"",
+  "click push-button \"Preferences\"",
+  "click list-item \"Unnamed\"",
+  "set_value spin-button \"80\" := \"132\"",
+  "set_value spin-button \"24\" := \"43\"",
+  "done"
+ ]
+}

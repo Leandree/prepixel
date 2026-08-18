@@ -1,0 +1,17 @@
+{
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "no-action-interface"
+ },
+ "rung1_error": "no-action-interface",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1070,
+  321
+ ],
+ "settle_ms": 4551,
+ "settle_captures": 3,
+ "guard_ms": 22
+}

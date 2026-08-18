@@ -1,0 +1,51 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "New Tab - Memory usage - 52.1 MB" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 text 202,78,24,24 "Search icon"
+e14 entry 240,78,1429,24 "Address and search bar" state=focused
+e15 push-button 1698,73,34,34 "You"
+e16 push-button 1737,73,183,34 "Relaunch to update"
+e17 document-web 70,114,1850,966 "New Tab" state=focused
+e18 document-web 70,114,1850,966 "Gmail" state=focused
+e19 link 1808,134,43,24 "Search for images"
+e20 text 1808,138,43,15 "Images"
+e21 push-button 1866,126,40,40 "Google apps"
+e22 combo-box 622,376,746,48 "Search Google or type a URL"
+e23 push-button 1289,376,26,48 "Search by voice"
+e24 push-button 1326,376,26,48 "Search by image"
+e25 text 883,442,112,112 "Web Store"
+e26 link 883,442,112,112 "Web Store"
+e27 push-button 965,446,28,28 "More actions for Web Store shortcut"
+e28 text 909,522,60,15 "Web Store"
+e29 push-button 995,442,112,112 "Add shortcut"
+e30 toggle-button 1736,1032,168,32 "Customise Chrome" state=checked:false
+e31 list-item 184,112,1495,40 "chrome://settings/privacy" state=selected
+e32 list-item 184,152,1495,40 "chrome://settings/privacy search"
+e33 toggle-button 0,0,99,27 "Activities" state=checked:false
+e34 menu 99,0,162,27 "Google Chrome"
+e35 menu 906,0,178,27 "Aug 18 16‎∶51"
+e36 menu 1814,0,106,27 "System"
+e37 push-button 0,840,70,8
+e38 push-button 62,33,8,815
+e39 push-button 0,33,70,64 "Google Chrome"
+e40 push-button 0,101,70,64 "Thunderbird Mail"
+e41 push-button 0,169,70,64 "Visual Studio Code"
+e42 push-button 0,237,70,64 "VLC media player"
+e43 push-button 0,305,70,64 "LibreOffice Writer"
+e44 push-button 0,373,70,64 "LibreOffice Calc"
+e45 push-button 0,441,70,64 "LibreOffice Impress"
+e46 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e47 push-button 0,577,70,64 "Files"
+e48 push-button 0,645,70,64 "Ubuntu Software"
+e49 push-button 0,713,70,64 "Help"
+e50 push-button 0,784,70,64 "Trash"
+e51 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

@@ -1,0 +1,30 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Can you enable the 'Do Not Track' feature in Chrome to enhance my online privacy?
+
+STEP 5 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(35, 65)
+2. import pyautogui; pyautogui.click(994, 90); pyautogui.write('chrome://settings/privacy'); pyautogui.press('enter')
+3. import pyautogui; pyautogui.moveTo(994, 700); pyautogui.scroll(-600)
+4. import pyautogui; pyautogui.click(994, 141); pyautogui.write('do not track')
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-runs-v2/pilot-chrome-A/step-5/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-runs-v2/pilot-chrome-A/step-2/screenshot.png
+/home/leandre/dev/osworld-runs-v2/pilot-chrome-A/step-3/screenshot.png
+/home/leandre/dev/osworld-runs-v2/pilot-chrome-A/step-4/screenshot.png
+
+ACTION SPACE — reply by writing the file /home/leandre/dev/osworld-runs-v2/pilot-chrome-A/step-5/action.json as JSON:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels. Exactly one JSON object, no
+commentary in the file. Write the file with the Write tool, then stop.

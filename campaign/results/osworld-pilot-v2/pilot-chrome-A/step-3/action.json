@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.moveTo(994, 700); pyautogui.scroll(-600)"}
