@@ -24,11 +24,25 @@ driver can assign ids, resolve action targets and scope the act-guard:
 
 `suspects` — coverage-guard candidates (mute subtrees >=150k px², the
 OBS/qBittorrent shape) for the runner's judgeCrop spot-check, unchanged v1.
-`inconsistents` — declared-count-vs-zero-rows candidates (the Chrome
-"1 result" / rekordbox shape, spec §2.5): nodes whose name/text declares
-N>0 results while the surrounding subtree exposes zero item-role nodes.
-The DRIVER re-probes once and, if the contradiction persists, emits
-`[pixels] group x,y,w,h [self-inconsistent: declares N …, exposes 0 rows]`.
+`inconsistents` — declared-count-vs-exposed-rows mismatches (the Chrome
+"1 result" / rekordbox shape, spec §2.5 as amended by ruling D3): a node
+whose name/text declares N>0 items while its container exposes M != N rows.
+The DRIVER re-probes once and, if the mismatch persists, emits the two RAW
+facts on the container's line — `[pixels] group x,y,w,h declares=N
+exposes=M` — and counts the occurrence. It does NOT judge which rows are
+"really" results: deciding that is the task heuristic §3 forbids. The model
+decides, the driver reports.
+
+KNOWN LIMIT, measured — §2.6 `[offscreen]` is NOT implementable from
+OSWorld's payload. The server writes `cp:screencoord`/`cp:size` only for
+nodes whose state is showing+visible: on a Chrome page, 301 of 3047 nodes
+carried coordinates. Content below the fold therefore arrives with no
+position at all, and there is nothing to emit or scroll to. This adapter
+still emits `[offscreen]` for the cases that DO occur — a node that keeps
+showing=true with an off-viewport rect, e.g. an embedded document extending
+past the bottom edge — but "the whole page in one read" is not available
+through this bridge. Ruling D2 replaces `scroll_to` with a plain mechanical
+`scroll` action in the driver.
 
 States emission (v2 §2.3), honest deviation from the spec's
 `state=enabled,focusable` example, documented in the returns file: the
@@ -232,7 +246,9 @@ def distill(xml_string, vw=1920, vh=1080):
                  or (n.text or "").strip()).lower()
             if t and t != decl:          # the twin label is not a result row
                 exposed += 1
-        if exposed == 0:
+        # D3: report the mismatch, whatever its shape — 0 rows exposed OR a
+        # different number of them. No filter decides which rows "count".
+        if exposed != int(m.group(1)):
             x, y, w, h = _coords(scope)
             if w <= 0 or h <= 0:
                 x, y, w, h = _coords(node)
@@ -242,7 +258,8 @@ def distill(xml_string, vw=1920, vh=1080):
             seen_inconsistent.add(key)
             inconsistents.append({
                 "declared": int(m.group(1)), "unit": m.group(2).lower(),
-                "declaring_text": m.group(0), "rect": [x, y, w, h]})
+                "exposed": exposed, "declaring_text": m.group(0),
+                "rect": [x, y, w, h]})
 
     def build(node, pos):
         """Build the record for one renderable node, or None."""

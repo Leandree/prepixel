@@ -19,11 +19,34 @@ import shutil
 from PIL import Image
 
 
+def copy_pixels(src, dst):
+    """Screenshots live outside the step directories since ruling D1: A's in
+    _pixels/step-N/ (alone, because the prompt names them), the coverage
+    guard's in _guard/. Both are packaged as JPEG next to their step."""
+    for sub, pat in (("_pixels", "step-{}/screenshot.png"),
+                     ("_guard", "step-{}.png")):
+        base = os.path.join(src, sub)
+        if not os.path.isdir(base):
+            continue
+        for step in range(1, 41):
+            p = os.path.join(base, pat.format(step))
+            if not os.path.exists(p):
+                continue
+            dd = os.path.join(dst, f"step-{step}")
+            os.makedirs(dd, exist_ok=True)
+            try:
+                Image.open(p).convert("RGB").save(
+                    os.path.join(dd, "screenshot.jpg"), quality=55)
+            except Exception:
+                shutil.copy2(p, os.path.join(dd, os.path.basename(p)))
+
+
 def copy_run(src, dst):
     os.makedirs(dst, exist_ok=True)
-    for name in ("result.json",):
+    for name in ("result.json", "contamination.json"):
         if os.path.exists(os.path.join(src, name)):
             shutil.copy2(os.path.join(src, name), os.path.join(dst, name))
+    copy_pixels(src, dst)
     for step in sorted(os.listdir(src)):
         if not step.startswith("step-"):
             continue

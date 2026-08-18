@@ -1,16 +1,28 @@
-# OSWorld campaign — frozen prompt template v2 (committed BEFORE any run)
+# OSWorld campaign — frozen prompt template v3 (committed BEFORE any run)
 
-v2 per manager_orders/DRIVER-V2-SPEC.md: the prompt carries the task, the
-step budget, the observation and the action schema — NOTHING else. All
-behavioral advice removed (§2.2: the driver resolves geometry; advice-shaped
-prompt lines were driver gaps). The {ACTION_SCHEMA} block now differs per
-condition: A keeps the OSWorld reference pyautogui space UNCHANGED (§3 — the
-asymmetry is the object of study); B uses element references resolved by the
-driver. The driver renders this template into `step-N/prompt.txt` verbatim;
-the orchestrator's spawn wrapper is constant ("Read prompt.txt and follow it
-exactly"). No other instruction reaches the answering agent. Amending this
-file after the first campaign run is forbidden (protocol §1 spirit); v1→v2
-happened pre-campaign, on manager order, and is in git history.
+v3 implements the manager's rulings in `manager_orders/PILOT-V2-RULINGS.md`.
+
+D1 (contamination): the observation is INLINE. No prompt references a file
+except condition A's screenshot, which is the channel's own content and
+lives alone in a per-step directory. The answering agent no longer writes
+`action.json` — it returns the JSON object as its reply and the orchestrator
+writes the file — so condition B's agent can run with NO tools at all and
+condition A's with image reading only. One framing sentence, identical in
+both conditions, closes the prompt; nothing else was added, and no
+behavioural advice (§2.2) came back.
+
+D2: condition B gains `scroll`, a mechanical action with no element
+reference, in the same family as `type` and `key`.
+
+v2→v3 diff for condition B's observation: the view is inlined in full every
+step instead of a diff plus a path to the full view. A leading `~` marks
+lines that changed since the previous step, so the diff's signal survives at
+the cost of one character per changed line. This RAISES B's per-step token
+cost versus v2 and is a direct consequence of D1 — reported, not hidden.
+
+Amending this file after the first campaign run is forbidden (protocol §1
+spirit); v1→v2→v3 all happened pre-campaign, on manager order, in git
+history.
 
 ---
 
@@ -28,23 +40,24 @@ PREVIOUS ACTIONS (oldest first):
 
 {ACTION_SCHEMA}
 
+Use only what this prompt gives you.
+
 ---
 
 ## {ACTION_SCHEMA} block, condition A (pixels)
 
-ACTION SPACE — reply by writing the file {ACTION_PATH} as JSON:
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
   {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
       "import pyautogui; pyautogui.click(123, 456)"
       "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
   {"action": "WAIT"}    the screen is still loading, wait and re-observe
   {"action": "DONE"}    the task is fully accomplished
   {"action": "FAIL"}    the task is impossible or cannot be recovered
-Coordinates are absolute screen pixels. Exactly one JSON object, no
-commentary in the file. Write the file with the Write tool, then stop.
+Coordinates are absolute screen pixels.
 
 ## {ACTION_SCHEMA} block, condition B (prepixel)
 
-ACTION SCHEMA — reply by writing the file {ACTION_PATH} as ONE JSON object.
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
 Targets are the eN ids from the view; the driver resolves all geometry.
   {"action":"click","target":"e17"}                    activate element e17
   {"action":"set_value","target":"e17","value":"132"}  set a field's value
@@ -52,16 +65,14 @@ Targets are the eN ids from the view; the driver resolves all geometry.
   {"action":"type","text":"hello"}                     type into current focus
   {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
                                                        names, joined with +)
-  {"action":"scroll_to","target":"e19"}                bring an [offscreen]
-                                                       element into view
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
   {"action":"crop","target":"e21"}                     get the pixels of a
                                                        [pixels] line (costs
                                                        one step)
   {"action":"wait"}    the screen is still loading, wait and re-observe
   {"action":"done"}    the task is fully accomplished
   {"action":"fail"}    the task is impossible or cannot be recovered
-Exactly one JSON object, no commentary in the file. Write the file with the
-Write tool, then stop.
 
 ## {OBSERVATION} block, condition A (pixels)
 
@@ -76,14 +87,10 @@ first) are at:
 The current screen as a structured view. Grammar: `eN <type> x,y,w,h
 "content"` — eN is the element id, valid for THIS step only; `value="…"` is
 the current value; `state=…` lists element states (checked:true/false,
-pressed, selected, expanded, focused); `eN [offscreen] …` exists on the page
-but outside the viewport (scroll_to makes it actionable); `[pixels] …` is a
-DECLARED opaque region whose content the structure cannot read (crop shows
-its pixels); `[self-inconsistent: …]` means the structure declares content it
-does not expose (crop shows the region's pixels):
-{VIEW_OR_DIFF}
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[pixels] …` is a DECLARED opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them:
+{VIEW}
 {ACT_GUARD_LINE}
-Full current view with ids: {VIEW_PATH}
-(Read that file if you need an element not shown above.) Previous views (up
-to 3, oldest first) are at:
-{PREV_VIEW_PATHS}

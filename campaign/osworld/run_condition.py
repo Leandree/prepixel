@@ -41,7 +41,6 @@ Usage:
       --out runs/<id>-A [--max-steps 15] [--osworld ~/dev/OSWorld]
 """
 import argparse
-import difflib
 import importlib.util
 import json
 import os
@@ -71,6 +70,7 @@ SETTLE_BUDGET = 4.0
 TOPBAR_Y = 28           # px, system bar excluded from ALL diffs (§2.4)
 GUARD_MARGIN = 8        # px, act-guard match margin around the target (§2.4)
 WAIT_SLEEP = 5          # s, model-requested WAIT (unchanged from v1)
+SCROLL_CLICKS = 5       # fixed increment for the D2 scroll action
 VW, VH = 1920, 1080
 # Roles where a click means "put the caret here", not "activate me"
 TEXT_INPUT_ROLES = {"entry", "text", "password-text", "searchbox", "textbox",
@@ -275,7 +275,8 @@ class Driver:
                            "rung1_fallbacks": 0, "settle_ms_total": 0,
                            "settle_captures_total": 0, "guard_ms_total": 0,
                            "reprobes": 0, "scroll_iters_total": 0,
-                           "waits_after_settle": 0}
+                           "waits_after_settle": 0, "scrolls": 0,
+                           "declared_count_mismatches": 0}
 
     # -------------------------------------------------------------- probe --
     def probe_platform(self):
@@ -331,13 +332,15 @@ class Driver:
             self.cur_tree = self.ctrl.get_accessibility_tree()
             records, suspects, incons = self.distill(self.cur_tree)
             for ic in incons:
+                # D3: state both raw facts, judge neither
                 x, y, w, h = ic["rect"]
+                self.mech_total["declared_count_mismatches"] += 1
                 records.append({
                     "kind": "pixels", "role": "group", "rect": ic["rect"],
                     "label": ic["declaring_text"], "value": "", "states": {},
                     "line": f"[pixels] group {x},{y},{w},{h} "
-                            f"[self-inconsistent: declares "
-                            f"{ic['declaring_text']}, exposes 0 rows]"})
+                            f"declares={ic['declared']} "
+                            f"exposes={ic['exposed']}"})
         n_hits = 0
         for s in suspects:
             j = judge_crop(shot_path, s["rect"])
@@ -352,10 +355,16 @@ class Driver:
                             f'content]'})
         registry = {}
         out_lines = []
+        previous = set(self.prev_diff_base or [])
+        first = not self.prev_diff_base
         for i, rec in enumerate(records, 1):
             eid = f"e{i}"
             registry[eid] = rec
-            out_lines.append(f"{eid} {rec['line']}")
+            # D1 inlines the whole view every step, so the diff's signal is
+            # carried by a one-character mark instead of a separate block
+            mark = "" if (first or _is_topbar(rec)
+                          or rec["line"] in previous) else "~"
+            out_lines.append(f"{mark}{eid} {rec['line']}")
         self.cur_records = records
         diff_base = [r["line"] for r in records if not _is_topbar(r)]
         return "\n".join(out_lines), registry, diff_base, len(suspects), n_hits
@@ -458,6 +467,28 @@ class Driver:
                 return hist, f"EXPLICIT_FAILURE ({err[:160]})", False, rec
             return hist, None, True, rec
 
+        if kind == "scroll":
+            # D2: mechanical, no element reference, same family as key/type.
+            # The driver owns the increment; the model never computes a delta.
+            direction = str(act.get("direction", "down")).lower()
+            if direction not in ("up", "down"):
+                self.mech_total["resolve_errors"] += 1
+                mech["resolve_error"] = f"unknown direction {direction!r}"
+                return (f"scroll {direction} (RESOLUTION ERROR)",
+                        f"EXPLICIT_FAILURE (resolution: direction must be "
+                        f"\"up\" or \"down\", got {direction!r})", False, None)
+            self.mech_total["scrolls"] += 1
+            mech["rung"] = "scroll"
+            clicks = SCROLL_CLICKS if direction == "up" else -SCROLL_CLICKS
+            try:
+                self._pyautogui(f"import pyautogui; "
+                                f"pyautogui.moveTo({VW // 2}, {VH // 2}); "
+                                f"pyautogui.scroll({clicks})")
+            except Exception as e:
+                return (f"scroll {direction}",
+                        f"EXPLICIT_FAILURE ({str(e)[:160]})", False, None)
+            return f"scroll {direction}", None, True, "KBD"
+
         if kind == "type":
             text = str(act.get("text", ""))
             self.mech_total["kbd"] += 1
@@ -537,7 +568,10 @@ class Driver:
         from PIL import Image
         step = int(open(os.path.join(self.out, "CURRENT_STEP")).read().strip())
         sd = os.path.join(self.out, f"step-{step}")
-        img = Image.open(os.path.join(sd, "screenshot.png"))
+        # source is the guard's copy, outside any prompt-referenced path;
+        # crop.png appears in the step directory ONLY because the model
+        # asked for it (D1)
+        img = Image.open(os.path.join(self.out, "_guard", f"step-{step}.png"))
         cx0, cy0 = max(0, x), max(0, y)
         crop_path = os.path.join(sd, "crop.png")
         img.crop((cx0, cy0, min(VW, x + w), min(VH, y + h))).save(crop_path)
@@ -703,16 +737,26 @@ def main():
     cur_shot = obs["screenshot"]
 
     actions, act_verdicts = [], []
-    prev_raw_lines, prev_obs_paths = None, []
+    prev_obs_paths = []
     pixel_fallbacks = guard_hits_total = suspects_total = 0
     infra_failure, term = False, "max_steps"
 
     for step in range(1, args.max_steps + 1):
         sd = os.path.join(args.out, f"step-{step}")
         os.makedirs(sd, exist_ok=True)
-        shot = os.path.join(sd, "screenshot.png")
-        open(shot, "wb").write(cur_shot)
         mech = {}
+        # D1: pixels never sit beside the prompt. Condition A's screenshot is
+        # alone in its own per-step directory (it IS A's channel); the
+        # coverage guard's copy lives in a sibling tree no prompt names.
+        if args.condition == "A":
+            pdir = os.path.join(args.out, "_pixels", f"step-{step}")
+            os.makedirs(pdir, exist_ok=True)
+            shot = os.path.join(pdir, "screenshot.png")
+        else:
+            gdir = os.path.join(args.out, "_guard")
+            os.makedirs(gdir, exist_ok=True)
+            shot = os.path.join(gdir, f"step-{step}.png")
+        open(shot, "wb").write(cur_shot)
 
         if args.condition == "A":
             observation = OBS_A.replace("{SCREENSHOT_PATH}", shot) \
@@ -725,41 +769,15 @@ def main():
                 drv.build_view(sd, shot, mech)
             suspects_total += n_susp
             guard_hits_total += n_hits
-            vpath = os.path.join(sd, "view.txt")
-            open(vpath, "w").write(view)
-            id_of = {rec["line"]: eid for eid, rec in registry.items()}
-            if prev_raw_lines is None:
-                shown = view
-            else:
-                diff = [d for d in difflib.unified_diff(
-                            prev_raw_lines, raw_lines, lineterm="", n=0)
-                        if not d.startswith(("---", "+++", "@@"))]
-                rendered = []
-                for d in diff:
-                    body_line = d[1:]
-                    if d.startswith("+"):
-                        rendered.append(f"+ {id_of.get(body_line, '?')} "
-                                        f"{body_line}")
-                    else:
-                        rendered.append(f"- {body_line}")
-                if len(diff) < 0.6 * max(1, len(raw_lines)):
-                    shown = ("[diff vs previous view — system bar excluded; "
-                             "ids are current-step ids]\n"
-                             + "\n".join(rendered)) if rendered \
-                        else "[no change vs previous view]"
-                else:
-                    shown = view + "\n[diff inapplicable: full view re-emitted]"
-            prev_raw_lines = raw_lines
+            open(os.path.join(sd, "view.txt"), "w").write(view)
+            # D1: the view is INLINE and complete; `~` marks changed lines,
+            # so nothing sends the model to a file
             drv.prev_diff_base = raw_lines
             verdict_line = act_verdicts[-1] if act_verdicts else ""
-            observation = OBS_B.replace("{VIEW_OR_DIFF}", shown) \
+            observation = OBS_B.replace("{VIEW}", view) \
                 .replace("{ACT_GUARD_LINE}",
                          f"[act-guard] previous action: {verdict_line}"
-                         if verdict_line else "") \
-                .replace("{VIEW_PATH}", vpath) \
-                .replace("{PREV_VIEW_PATHS}",
-                         "\n".join(prev_obs_paths[-3:]) or "(none)")
-            prev_obs_paths.append(vpath)
+                         if verdict_line else "")
             schema = SCHEMA_B
 
         history = "\n".join(f"{i+1}. {a}" for i, a in enumerate(actions)) or "(none)"
@@ -767,9 +785,7 @@ def main():
             .replace("{N}", str(step)).replace("{MAX_STEPS}", str(args.max_steps)) \
             .replace("{ACTION_HISTORY}", history) \
             .replace("{OBSERVATION}", observation) \
-            .replace("{ACTION_SCHEMA}",
-                     schema.replace("{ACTION_PATH}",
-                                    os.path.join(sd, "action.json")))
+            .replace("{ACTION_SCHEMA}", schema)
         open(os.path.join(sd, "prompt.txt"), "w").write(prompt)
         # signal readiness for the orchestrator
         open(os.path.join(args.out, "CURRENT_STEP"), "w").write(str(step))
