@@ -1,5 +1,46 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-20 — Pré-runs iter-4 : bake prouvé, canal validé en vif, cellules scratch 2 conditions
+
+**Bake** (bake_uno_image.py, 244fa68) : `Ubuntu-uno.qcow2` porte
+`ooSetupConnectionURL` dans le profil ; delta de 519 MiB committé via le
+qemu-img du conteneur lui-même ; boot de vérification monté RO comme le
+provider → port 2002 écoute, l'item survit. Premier run de bake raté par
+MES fautes (shutdown non privilégié silencieux, `docker wait` non vérifié,
+`finally` destructeur) — corrigées et committées avant le second run.
+
+**Preuve évaluateur** (probe_uno_bake_evaluator.py, b5b16b1) : sur la
+tâche calc dev, le soffice lancé PAR le setup écoute sans relance (cmdline
+sans `--accept` — l'affordance est le profil cuit seul), UNO lit le
+document de la tâche, `env.evaluate()` rend 0.0 sur document intact.
+
+**Canal validé en vif sur les trois types** (d656bd9) : calc — valeurs et
+formules, `set_value` texte/numérique/formule confirmé par relecture
+atomique ; writer — le document R5 rend `paragraph 21 list-label "[1] "
+text "Abraham…"` pendant que les `[11]` inline restent du texte littéral ;
+impress — le placeholder littéral `<number>` visible là où l'écran rend un
+numéro de diapo ; shapes adressées par index (deux `shape ""` d'un deck
+neuf étaient indiscernables par nom).
+
+**Cellules scratch complètes, image cuite, hors comptage** :
+- A : succès, 6 pas.
+- B : 0 en 5 pas — et la cause vaut d'être écrite : au pas 1 la CAPTURE
+  montre la fenêtre Calc ouverte, l'ARBRE ne contient pas encore
+  l'application (l'enregistrement a11y est en retard sur le mapping X11).
+  Le routeur a décliné avec la bonne raison loggée ; le modèle, aveugle un
+  pas, a ouvert un document parasite via le dock et a zoomé celui-là. Au
+  pas 2 le canal était `atspi+uno` (946 enregistrements AT-SPI remplacés).
+  **Course du premier arbre : mécanisme préexistant (identique iter-1→3),
+  PAS touché — l'ordre borne l'itération 4 à deux chantiers, et une
+  correction confondrait le delta vs iter-3.** Taux d'occurrence surveillé
+  sur les 28 cellules B ; constat pour la section « pas fait » du rapport.
+
+Lancement de l'itération 4 : 28 tâches × 2, runner inchangé sauf
+`CAMPAIGN_VM_IMAGE` (condition d'environnement, identique aux deux
+conditions, dans PINNED.json et chaque result.json).
+
+---
+
 ## 2026-08-19 — Ordre REPONSEGRANDEPASSE reçu : itération 4 engagée, choix annoncés avant le code
 
 Acte : pas de gel, itération 4 bornée et terminale, deux chantiers, gel
