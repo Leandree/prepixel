@@ -69,9 +69,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--runs", required=True)
     ap.add_argument("--md", default="")
+    ap.add_argument("--subset", default="",
+                    help="task file: restrict the table to its tasks "
+                         "(iteration 3 reports dev-core and dev-browser "
+                         "separately, never mixed)")
     a = ap.parse_args()
     runs = os.path.expanduser(a.runs)
     cells = load(runs)
+    if a.subset:
+        spec = json.load(open(a.subset))["tasks"]
+        keep = {t for ids in spec.values() for t in ids}
+        cells = {k: v for k, v in cells.items() if v["task_id"] in keep}
 
     pairs = collections.OrderedDict()
     for name, r in cells.items():
@@ -121,17 +129,35 @@ def main():
             sb = statistics.median(vb) if vb else 0
         W("| %s | %.2f | %.2f |" % (label, sa, sb))
 
+    # ---- iteration-3 metrics: caps, verdicts, channel per step ----
+    caps = {"A": 0, "B": 0}
+    verdictc = collections.Counter()
+    for r in cells.values():
+        if r["steps"] >= 15 or r["termination"] == "max_steps":
+            caps[r["condition"]] += 1
+        for v in (r.get("act_verdicts") or []):
+            verdictc[(v or "").split(" ")[0]] += 1
+    W("")
+    W("**Cap deaths (>=15 steps): A=%d B=%d.** B guard verdicts: %s" % (
+        caps["A"], caps["B"],
+        ", ".join("%s=%d" % kv for kv in sorted(verdictc.items()))))
+
     # ---- P7 input: why rung 1 declined, counted over the whole dev set ----
     reasons = collections.Counter()
     rungs = collections.Counter()
     channels = collections.Counter()
     cdp_decline = collections.Counter()
+    escal = collections.Counter()
     for r in cells.values():
         if r["condition"] != "B":
             continue
         for m in steps_of(r["_dir"]):
             if "rung" in m:
                 rungs[str(m["rung"])] += 1
+            if m.get("escalated_from_rung1"):
+                escal["noop_escalations"] += 1
+            if m.get("reresolved_rect"):
+                escal["fingerprint_matches"] += 1
             if m.get("rung1_error"):
                 # keep the reason, drop the element-specific tail
                 reasons[str(m["rung1_error"])[:90]] += 1
@@ -139,6 +165,10 @@ def main():
             c = m.get("cdp") or {}
             if c and not c.get("used"):
                 cdp_decline[str(c.get("reason"))[:70]] += 1
+    if escal:
+        W("")
+        W("**Ladder self-corrections:** " +
+          ", ".join("%s=%d" % kv for kv in sorted(escal.items())))
     W("")
     W("**Condition B mechanics, all steps.** rung: " +
       ", ".join("%s=%d" % kv for kv in sorted(rungs.items())) +

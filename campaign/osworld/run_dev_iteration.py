@@ -272,23 +272,30 @@ def main():
     ap.add_argument("--workers", type=int, default=2)
     ap.add_argument("--max-steps", type=int, default=15)
     ap.add_argument("--only", default="", help="comma-separated domain filter")
+    ap.add_argument("--tasks", default="",
+                    help="comma-separated task files (default: tasks-dev.json)"
+                         " — iteration 3 passes dev-core + dev-browser and"
+                         " the queues interleave per file, A,B per task")
     a = ap.parse_args()
 
     runs = os.path.expanduser(a.runs)
     os.makedirs(runs, exist_ok=True)
     driver_dir = pin_driver(runs)
-    spec = json.load(open(TASKS))
+    files = [f for f in a.tasks.split(",") if f] or [TASKS]
     only = {d for d in a.only.split(",") if d}
 
     q = queue.Queue()
     n = 0
-    for domain in sorted(spec["tasks"]):
-        if only and domain not in only:
-            continue
-        for tid in spec["tasks"][domain]:
-            for cond in ("A", "B"):     # A then B, adjacent in the queue
-                q.put((domain, tid, cond))
-                n += 1
+    for f in files:
+        spec = json.load(open(os.path.join(HERE, f) if not
+                              os.path.isabs(f) else f))
+        for domain in sorted(spec["tasks"]):
+            if only and domain not in only:
+                continue
+            for tid in spec["tasks"][domain]:
+                for cond in ("A", "B"):     # A then B, adjacent in the queue
+                    q.put((domain, tid, cond))
+                    n += 1
     say("queue: %d cells, %d workers, max_steps=%d, runs=%s"
         % (n, a.workers, a.max_steps, runs))
 
