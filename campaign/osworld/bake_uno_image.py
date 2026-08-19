@@ -94,8 +94,19 @@ print("BAKE:" + json.dumps({"port_2002": port[:120], "item_survives": still}))
 G4 = r"""
 import json, subprocess
 subprocess.run("sync", shell=True)
-print("BAKE:" + json.dumps({"synced": True}))
-subprocess.Popen(["shutdown", "-h", "now"])
+who = subprocess.run("whoami", shell=True, capture_output=True,
+                     text=True).stdout.strip()
+# the server does NOT run as root (measured: an unprivileged Popen
+# shutdown failed silently and the first bake run never powered off) —
+# the console user goes through logind, root directly
+tried = []
+for cmd in (["systemctl", "poweroff"], ["sudo", "-n", "poweroff"],
+            ["shutdown", "-h", "now"]):
+    p = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+    tried.append([" ".join(cmd), p.returncode, (p.stderr or "")[:60]])
+    if p.returncode == 0:
+        break
+print("BAKE:" + json.dumps({"synced": True, "user": who, "tried": tried}))
 """
 
 
@@ -160,8 +171,15 @@ def main():
             pass                      # server dies with the guest — expected
 
         print("== H2 == waiting for container exit", flush=True)
-        rc = sh(f"timeout 180 docker wait {NAME}")
-        print("== H2 == container exited rc=", rc.stdout.strip(), flush=True)
+        for _ in range(60):           # explicit poll — docker wait's timeout
+            time.sleep(3)             # went unnoticed on the first bake run
+            st = sh(f"docker inspect -f '{{{{.State.Running}}}}' {NAME}")
+            if st.stdout.strip() == "false":
+                break
+        else:
+            raise RuntimeError("guest never powered off; container kept "
+                               "for diagnosis — do NOT cp a live overlay")
+        print("== H2 == container exited", flush=True)
         delta = "/tmp/uno-boot-delta.qcow2"
         sh(f"rm -f {delta}")
         r = sh(f"docker cp {NAME}:/boot.qcow2 {delta}", timeout=600)
@@ -174,9 +192,11 @@ def main():
                timeout=600)
         assert r.returncode == 0, r.stdout + r.stderr
         print("== H3 == commit:", (r.stdout + r.stderr).strip()[:200], flush=True)
-    finally:
-        sh(f"docker rm -f {NAME} 2>/dev/null")
-        sh("rm -f /tmp/uno-boot-delta.qcow2")
+        sh(f"docker rm -f {NAME} 2>/dev/null")   # rm ONLY on success —
+        sh("rm -f /tmp/uno-boot-delta.qcow2")    # the first run's finally
+    except BaseException:                        # rm -f'd a LIVE qemu and
+        sh(f"docker stop {NAME} 2>/dev/null")    # destroyed the delta
+        raise
 
     # H4 — provider-identical (RO) verification on the committed image
     sh(f"docker rm -f {NAME}-verify 2>/dev/null")
