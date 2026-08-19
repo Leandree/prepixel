@@ -1,5 +1,53 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-19 — Ordre REPONSEGRANDEPASSE reçu : itération 4 engagée, choix annoncés avant le code
+
+Acte : pas de gel, itération 4 bornée et terminale, deux chantiers, gel
+inconditionnel ensuite. Le tag `driver-freeze-v3` posé hier reste dans
+l'historique comme trace de la recommandation ; le gel effectif sera
+`driver-freeze-v4` (ou re-pose de v3 si UNO est retiré), après l'itération
+4, quel que soit le résultat.
+
+**Annonces avant implémentation, conformément à la règle :**
+
+1. **Politique des rôles à activation-signal — option retenue : descente
+   au pointeur par sémantique de rôle.** Liste documentée : `radio-button`
+   (le seul rôle au mécanisme prouvé — `Action.toggle` mute l'état sans
+   émettre le signal d'activation que l'app écoute ; vlc-215dfd39, iter-3).
+   Justification en une ligne : l'alternative « état changé, vue inchangée
+   ailleurs → UNVERIFIED » punirait les bascules légitimement silencieuses
+   (un radio dans un formulaire simple ne change rien d'autre à l'écran),
+   alors que le pointeur synthétisé EST l'entrée que le câblage de signaux
+   de l'app écoute. La liste s'étendra si un autre rôle prouve le même
+   mécanisme — pas avant.
+2. **Canal UNO — architecture annoncée** : détection opportuniste (fenêtre
+   LibreOffice au premier plan ET port 2002 joignable — jamais de
+   lancement ni relance de soffice ; si le port ne répond pas, refus
+   loggé) ; affordance établie au niveau image par bake hors-run
+   (`Ubuntu-uno.qcow2`, `qemu-img commit`), image passée explicitement par
+   `path_to_vm` aux DEUX conditions — identique par construction, hash et
+   chemin loggés dans chaque result.json ; mêmes ids, mêmes rôles, même
+   garde, même échelle ; composition par contenance comme CDP ; canal par
+   pas `atspi+uno` avec refus légitimes comptés ; Writer expose
+   `ListLabelString` SÉPARÉ du texte littéral, Calc les cellules de la
+   plage utilisée, Impress le texte des shapes — caps déclarés dans la
+   grammaire de vue. Preuve pré-runs exigée par l'ordre : évaluateur
+   complet sur calc-1334ca3e, les deux conditions, sur image cuite,
+   committée avant tout run compté.
+3. **Règle « évaluateur cassé » pré-enregistrée** :
+   `campaign/osworld/PREREGISTRATION-EVAL-ARTEFACTS.md`, committée avec
+   cette entrée — double rapport brut/corrigé-avec-preuve, symétrique,
+   aucun rescoring silencieux.
+
+**Paires R5 préservées** (demande explicite du manager) — les deux paires
+croisées sont committées intégralement :
+`campaign/results/dev/iter-2/libreoffice_writer-adf5e2c3-{A,B}/` (B tape
+le préfixe, A s'abstient) et
+`campaign/results/dev/iter-3/libreoffice_writer-adf5e2c3-{A,B}/` (A tape
+le préfixe — action pas 6 —, B s'abstient — memo pas 9).
+
+---
+
 ## 2026-08-19 — RAPPORT FINAL de la grande passe : itération 3 complète, gel recommandé
 
 56/56 cellules, driver épinglé, scan de contamination 56/56 CLEAN, 519
