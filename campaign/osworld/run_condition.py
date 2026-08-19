@@ -329,6 +329,7 @@ def _is_topbar(rec):
 # literals, so str.format is not usable here).
 PLATFORM_SCRIPT = r'''
 import json, time
+EXTRA = {}                      # fingerprint annotations, merged on success
 def _run():
     try:
         import pyatspi
@@ -336,9 +337,11 @@ def _run():
         return {"ok": False, "err": "pyatspi-import: %s" % e}
     ROLE = P["role"]; TX = P["x"]; TY = P["y"]; TW = P["w"]; TH = P["h"]
     VERB = P["verb"]; VALUE = P["value"]
+    LABEL = (P.get("label") or "").strip()
     T0 = time.time()
     best = [None, None]
     near = []                   # diagnostics when the target is not found
+    fp = []                     # same role + same NAME, wherever it moved to
     def extents(acc):
         # same call the OSWorld server uses to build cp:screencoord/cp:size,
         # so the rects we match against are the rects the view showed
@@ -363,8 +366,20 @@ def _run():
             d = abs(x - TX) + abs(y - TY) + abs(w - TW) + abs(h - TH)
             if d <= 24 and (best[1] is None or d < best[1]):
                 best[0], best[1] = acc, d
-            elif len(near) < 5:
-                near.append({"rect": [x, y, w, h], "dist": d})
+            else:
+                # Fingerprint candidates (P7): the view's rect can be stale
+                # by the time the action runs — iteration 2 logged 8
+                # node-not-found, half of them the element merely MOVED
+                # (near[] hits ~126 px away). Same role + same NAME is the
+                # element's identity; the rect only ranks the candidates.
+                if LABEL and w > 0 and h > 0:
+                    try:
+                        if (acc.name or "").strip() == LABEL and len(fp) < 8:
+                            fp.append((acc, d, [x, y, w, h]))
+                    except Exception:
+                        pass
+                if len(near) < 5:
+                    near.append({"rect": [x, y, w, h], "dist": d})
         if ext is not None and ext[2] > 0 and ext[3] > 0 and depth <= 3:
             # spatial pruning only near the top of the tree (other apps and
             # other windows). Deeper containers are NOT pruned: measured on
@@ -393,6 +408,11 @@ def _run():
     except Exception as e:
         return {"ok": False, "err": "walk: %s" % e}
     acc = best[0]
+    if acc is None and fp:
+        fp.sort(key=lambda t: t[1])
+        acc, _, fresh = fp[0]
+        EXTRA["matched_by"] = "name"
+        EXTRA["fresh_rect"] = fresh
     if acc is None:
         return {"ok": False, "err": "node-not-found",
                 "walk_s": round(time.time() - T0, 2), "near": near}
@@ -506,14 +526,25 @@ def _run():
             # P7: no usable Action — the fallback logs pointed at list items,
             # table cells and combo-box children, whose real interface is
             # Selection on the PARENT. Generic by interface, not by app.
-            try:
-                parent = acc.parent
-                sel = parent.querySelection()
-                idx = acc.getIndexInParent()
-                if idx >= 0 and sel.selectChild(idx):
-                    return {"ok": True, "method": "Selection.selectChild"}
-            except Exception:
-                pass
+            #
+            # GATED BY ROLE CATEGORY after iteration 2 measured the harm of
+            # not gating: on a Writer paragraph, selectChild answers True
+            # without placing the caret, and that false ok blocked rung 2 —
+            # the pointer click that WOULD have placed it. Four wasted
+            # clicks and a failed cell (writer-0810415c-B steps 1,4,7,8,
+            # guard: "element re-read unchanged" each time). Selection is
+            # the click semantic only where selecting IS the interaction.
+            if ROLE in ("list-item", "menu-item", "check-menu-item",
+                        "radio-menu-item", "tree-item", "table-cell",
+                        "page-tab"):
+                try:
+                    parent = acc.parent
+                    sel = parent.querySelection()
+                    idx = acc.getIndexInParent()
+                    if idx >= 0 and sel.selectChild(idx):
+                        return {"ok": True, "method": "Selection.selectChild"}
+                except Exception:
+                    pass
             return {"ok": False,
                     "err": "no-usable-action: %s" % (names or "no-interface")}
         if VERB == "focus":
@@ -522,7 +553,10 @@ def _run():
         return {"ok": False, "err": "unknown-verb"}
     except Exception as e:
         return {"ok": False, "err": "verb: %s" % e}
-print("OSW_RESULT:" + json.dumps(_run()))
+_res = _run()
+if isinstance(_res, dict) and _res.get("ok"):
+    _res.update(EXTRA)
+print("OSW_RESULT:" + json.dumps(_res))
 '''
 
 
@@ -543,6 +577,7 @@ class Driver:
         self.pending_expect = None  # (what, wanted) the last action asked for
         self.typed_echo = None      # P2: what the driver last typed, and where
         self.prev_views = []        # P6: previous rendered views, oldest first
+        self.prev_noop = None       # armed by an UNVERIFIED-unchanged rung-1
         self.web_meta = {}          # P1: last CDP page meta (url, scroll, …)
         self.mech_total = {"platform_available": None, "rung1": 0, "rung2": 0,
                            "kbd": 0, "resolve_errors": 0, "noop_toggles": 0,
@@ -561,7 +596,8 @@ class Driver:
                            "atspi_records_replaced": 0,
                            "guard_suspects_superseded": 0,
                            "cdp_actions": 0, "cdp_action_failures": 0,
-                           "cdp_scroll_to": 0}
+                           "cdp_scroll_to": 0,
+                           "noop_escalations": 0, "fingerprint_matches": 0}
 
     # -------------------------------------------------------------- probe --
     def probe_platform(self):
@@ -767,6 +803,7 @@ class Driver:
         x, y, w, h = rec["rect"]
         params = {"role": rec["role"], "x": x, "y": y, "w": w, "h": h,
                   "verb": verb, "value": str(value),
+                  "label": rec.get("label") or "",
                   "text_input": rec["role"] in TEXT_INPUT_ROLES}
         # repr, not json.dumps: JSON writes `true`, which is not Python and
         # made the whole script die on line 1 (measured — rung 1 silently
@@ -956,6 +993,20 @@ class Driver:
 
     def _act_on(self, rec, verb, value, mech):
         """Ladder rungs 1-2 for click/toggle/set_value. Returns err or None."""
+        # No-op escalation: if the model re-targets the SAME element with
+        # the SAME verb right after the guard proved a rung-1 action inert
+        # ("element re-read unchanged"), the ladder picks the pointer this
+        # time instead of repeating the inert mechanism. The model decides
+        # the retry; the driver only stops re-choosing a mechanism the guard
+        # just measured as a no-op. Cost of not doing this, iteration 2:
+        # four identical Action.press on Thunderbird's "New…" (the dialog
+        # never opened), and the cell died at the cap.
+        pn = self.prev_noop
+        if pn and pn["role"] == rec["role"] and pn["label"] == rec["label"] \
+                and pn["verb"] == verb:
+            mech["escalated_from_rung1"] = True
+            self.mech_total["noop_escalations"] += 1
+            return self._rung2(rec, verb, value, mech)
         if rec.get("src") == "cdp":
             res = self._cdp_act(rec, verb, value, mech)
             if res.get("ok"):
@@ -981,6 +1032,15 @@ class Driver:
                 self.mech_total["rung1"] += 1
                 mech["rung"] = 1
                 mech["rung1_method"] = res.get("method")
+                if res.get("matched_by") == "name" and res.get("fresh_rect"):
+                    # The element had moved; the platform found it by
+                    # role+name on the FRESH tree. The record's rect must
+                    # follow, or the act-guard would re-read the stale
+                    # region and verdict the wrong pixels.
+                    mech["reresolved_rect"] = res["fresh_rect"]
+                    mech["stale_rect"] = list(rec["rect"])
+                    rec["rect"] = [int(v) for v in res["fresh_rect"]]
+                    self.mech_total["fingerprint_matches"] += 1
                 return None
             self.mech_total["rung1_fallbacks"] += 1
             mech["rung1_error"] = res.get("err")
@@ -1354,7 +1414,20 @@ def main():
             actions.append(action)
             up = action.upper()
             if up in ("DONE", "FAIL"):
+                # Through env.step, NOT just a local break: OSWorld's
+                # `infeasible` evaluator reads env.action_history and scores
+                # 1 only if its LAST entry is FAIL (desktop_env.py:469-474).
+                # Measured cost of skipping this: gimp-58d3eeeb answered
+                # `fail` correctly in all four cells across two iterations
+                # and every one was scored 0 — successes stolen from BOTH
+                # conditions by the harness.
+                try:
+                    env.step(up, pause=0)
+                except Exception as e:
+                    mech["terminal_step_error"] = str(e)[:120]
                 term = up
+                json.dump(mech, open(os.path.join(sd, "mechanics.json"),
+                                     "w"), indent=1)
                 break
             if up == "WAIT":
                 time.sleep(WAIT_SLEEP + SETTLE_BUDGET)
@@ -1377,6 +1450,15 @@ def main():
         if kind == "done" or kind == "fail":
             actions.append(kind)
             term = kind.upper()
+            # Same contract as condition A above: the infeasible evaluator
+            # reads env.action_history, so the terminal action must go
+            # through env.step or a correct `fail` scores 0.
+            try:
+                env.step(term, pause=0)
+            except Exception as e:
+                mech["terminal_step_error"] = str(e)[:120]
+            json.dump(mech, open(os.path.join(sd, "mechanics.json"), "w"),
+                      indent=1)
             break
         if kind == "wait":
             actions.append("wait")
@@ -1403,6 +1485,15 @@ def main():
             # scroll_to settled internally; refresh the screenshot
             cur_shot = env.controller.get_screenshot() or cur_shot
         act_verdicts.append(verdict or "UNVERIFIED (no guard basis)")
+        # Arm the no-op escalation for the NEXT step only: rung 1 reported
+        # ok, and the guard's re-read found the element bit-for-bit
+        # unchanged. Any other outcome disarms it.
+        drv.prev_noop = None
+        if before is not None and mech.get("rung") == 1 and verdict and \
+                verdict.startswith("UNVERIFIED (element re-read unchanged"):
+            drv.prev_noop = {"role": before["role"],
+                             "label": before["label"],
+                             "verb": mech.get("action_kind")}
         json.dump(mech, open(os.path.join(sd, "mechanics.json"), "w"),
                   indent=1)
 

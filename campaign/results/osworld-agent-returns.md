@@ -39,6 +39,19 @@ budget / prior / infra.
 Diag chrome-93eabf48 (ligne Mode présente ou non) : run VM dédié hors
 comptage, en file derrière ce commit.
 
+**Diag chrome-93eabf48, VERDICT.** Le DOM de chrome://settings/appearance
+contient bien un `<select>` Light|Dark|Device (dump CDP en VM) — mais le
+screenshot de A sur la même page montre qu'il n'est PAS rendu : tant que le
+thème système (GTK) est actif, la page n'affiche que « Theme GTK / Use
+Classic / Use QT », et la ligne Mode n'apparaît qu'après « Use Classic ».
+Les deux canaux ont donc montré la vérité (mon distilleur web a eu raison
+d'omettre un select non rendu — présence dans le DOM ≠ visible, et mon
+premier dump diagnostique avait précisément ce défaut). La tâche est
+FAISABLE en deux sauts (Use Classic → Mode: Light) ; les quatre runs ont
+tous renoncé après le premier écran. Classe : prior modèle, symétrique.
+Aucune correction sans biais — souffler « cliquez Use Classic » serait du
+conseil de tâche.
+
 
 ## 2026-08-18 — DEV ITERATION 2 — 40/40 cells, and iteration 1's cost result was an artefact I have to withdraw
 
