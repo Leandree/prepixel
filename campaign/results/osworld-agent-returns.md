@@ -1,5 +1,45 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-19 — GRANDE PASSE, phase 1 : le tableau de causes, et l'annonce des chantiers
+
+### Tableau de causes — chaque échec, A et B, itérations 1 et 2
+
+Chaque ligne cite sa preuve. Classes : perception / actuation / vérification /
+budget / prior / infra.
+
+| cellule | iter | classe | preuve (pas cité) | correction générique |
+|---|---|---|---|---|
+| gimp-58d3eeeb A+B | 1+2 | **infra (harnais, à moi)** | les 4 runs répondent `fail` (ex. B-i2 pas 3) ; `evaluator.func="infeasible"` note 1 ssi la DERNIÈRE action de `env.action_history` est FAIL (desktop_env.py:469-474) ; mon driver sort de la boucle sur done/fail SANS `env.step` (run_condition.py:1356,1377) → l'historique ne voit jamais FAIL → 0 | passer DONE/FAIL par `env.step` — les 4 cellules étaient des succès volés, +1 A et +1 B par itération |
+| os-fe41f596 A+B | 1+2 | prior modèle | tâche `infeasible` (pas de batterie dans la VM) ; les 4 runs répondent DONE après `gsettings show-battery-percentage=true` (B-i2 pas 9-11 : zenity confirme la CLEF, pas l'affichage) | aucune sans biais — FAIL est déjà dans le schéma ; reconnaître l'infaisabilité est la compétence mesurée |
+| chrome-93eabf48 A+B | 1+2 | vérification/spec — diag en cours | l'évaluateur exige `prefs.browser.theme.color_scheme`∈{light,system} (getter chrome.py:610-695, lit l'objet prefs du WebUI) ET URL finale `^chrome://settings/appearance/?$` ; les 4 runs basculent `#enable-force-dark` (chrome://flags) et finissent ailleurs ; les 4 memos affirment « pas de ligne Mode sur ce build Linux » (A-i2 pas 3, B-i2 pas 4) | diag : dump DOM de la page appearance pour trancher « ligne absente (tâche infaisable par l'UI, à documenter) » vs « ligne ratée par les deux canaux » |
+| writer-adf5e2c3 B | 1+2 | prior modèle, sous ambiguïté de canal réelle | R5 REJOUÉ HORS VM : gold ajoute la référence SANS préfixe ; `compare_docx_files` = égalité exacte (docs.py:242) ; reconstruction contrôlée : sans préfixe → **1**, avec le `[14]  ` de B → **0**. La vue de B montrait `[11] [12] [13] ` devant chaque référence (B-i2 pas 4, e53-e55) — mais c'est la NUMÉROTATION de liste rendue, pas du texte littéral : python-docx/gold l'excluent. B a continué la convention visible ; A a tapé nu. L'écran (pixels comme AT-SPI) rend l'ornement indistinguable du littéral | aucune au niveau des canaux écran — l'information n'y existe pas. Argument structurel pour P9/UNO : `ListLabelString` y est séparé du texte |
+| writer-0810415c B | 2 | **actuation (P7 pass 1, à moi)** | clics caret dans paragraphe résolus `Selection.selectChild` qui répond ok SANS placer le caret (pas 1,4,7,8 : garde « element re-read unchanged » à chaque fois) ; le faux ok EMPÊCHE le barreau 2 (pointeur) qui aurait placé le caret ; le modèle finit au clavier, caret imprécis, interligne para2 faux | restreindre Selection.selectChild au clic aux rôles où sélection=clic (list-item, menu-item, tree-item, table-cell, page-tab) — jamais les blocs de texte |
+| thunderbird-9b7bc335 B | 1+2 | actuation | `Action.press` sur « New… » répond ok, le dialogue Filter Rules ne s'ouvre jamais, un menu-item « Copy… » parasite apparaît (i2 pas 3,5,8,10 ; i1 idem ×3, garde UNVERIFIED à chaque fois) ; A réussit la même tâche au pointeur en 10 pas | escalade mécanique : re-ciblage même élément+même verbe juste après un verdict UNVERIFIED-inchangé d'un barreau 1 → barreau 2 (choix d'actuation DANS l'échelle, loggé, pas un retry autonome) |
+| impress-ac9bb6cb B | 1 | actuation (même famille) | « Font Color » (split-button sidebar) : Action.click ok, garde UNVERIFIED inchangé (pas 13), sauvegarde puis done — couleur jamais appliquée ; i2 ✅ au cap | couverte par l'escalade ci-dessus |
+| calc-42e0a640 B | 1 | budget/infra (historique, à moi — déjà corrigé) | prompt 245 668 chars au pas 15, cellule 17,51 $ ; plafond de budget livré avant iter 2 ; i2 ✅ | faite (commit 97cda4a) |
+| 4 morts-au-plafond ✅ de B (i2) | 2 | budget (coût de canal, pas confusion) | impress 8/15 pas UNVERIFIED→re-vérifications ; vlc 2-4 pas mangés par crop ; objectif ATTEINT au cap sans done | l'escalade + le correctif label-vs-value du garde réduisent (a) ; les crops sont le prix déclaré du canal |
+| node-not-found ×8 (B, i2) | 2 | actuation (fraîcheur) | 2 motifs dans `near[]` : rects INT_MIN (élément DISPARU — vue périmée, ex. calc-1334ca3e pas 3) et voisins à ~126 px (élément DÉPLACÉ, ex. da52d699 pas 1) ; correspondance actuelle = rôle + rect ≤ 24 px, PLATFORM_SCRIPT | re-résolution par empreinte : rôle + nom sur l'arbre frais, rect en départage seulement ; rect frais retourné au driver pour scoper le garde |
+
+### Chantiers annoncés (avant implémentation, §4 « tes propres trouvailles »)
+
+1. **DONE/FAIL via env.step** — bug de harnais symétrique ; sans lui, toute
+   tâche `infeasible` est un 0 garanti pour les DEUX conditions même quand le
+   modèle répond juste. Générique : c'est le contrat d'OSWorld.
+2. **Selection.selectChild restreint aux rôles sélectionnables au clic** —
+   défait le faux-ok de P7 pass 1 sur les blocs de texte. Générique : une
+   catégorie de rôles, pas une app.
+3. **Escalade sur no-op** : même élément + même verbe immédiatement après un
+   UNVERIFIED-inchangé de barreau 1 → barreau 2. Le modèle décide du retry ;
+   le driver cesse seulement de répéter un mécanisme que le garde vient de
+   prouver inerte. Générique, loggé (`escalated_from_rung1`).
+4. **Empreinte rôle+nom dans PLATFORM_SCRIPT** (P7, piste du manager) — ci-dessus.
+5. **Supplément dev-browser seed 44** (P1) et **étude de faisabilité UNO**
+   (P9) — instruits ensuite, rapport séparé.
+
+Diag chrome-93eabf48 (ligne Mode présente ou non) : run VM dédié hors
+comptage, en file derrière ce commit.
+
+
 ## 2026-08-18 — DEV ITERATION 2 — 40/40 cells, and iteration 1's cost result was an artefact I have to withdraw
 
 Traces `campaign/results/dev/iter-2/`, driver pinned at 961bf58, contamination
