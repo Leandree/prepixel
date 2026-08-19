@@ -1,0 +1,3 @@
+The dock now shows only Thunderbird, Chrome, and Trash — the Vim icon is gone, and a system notification confirms "Vim has been removed from your favorites."
+
+{"action": "DONE", "memo": "Vim successfully removed from favorites; confirmed by dock (Thunderbird, Chrome, Trash only) and notification banner."}

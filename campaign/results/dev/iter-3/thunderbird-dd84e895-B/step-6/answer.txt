@@ -1,0 +1,1 @@
+{"action":"wait","memo":"AWS starred (confirmed). Clicked X (Twitter) row at step 5; this step's view lost Thunderbird's tree (only desktop/dock shown), so waiting. Next: toggle 'Starred' check-box in message header (~1895,124) to true for X (formerly Twitter), then verify both rows list 'Starred'."}

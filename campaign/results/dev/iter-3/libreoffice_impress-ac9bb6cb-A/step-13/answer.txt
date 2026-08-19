@@ -1,0 +1,5 @@
+Back in Normal view and the file appears saved. Let me verify the change is visible on a slide that shows the number (slide 1 often hides it).
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(170, 345); time.sleep(1.5)", "memo": "Step13: Normal view restored, title 'saa-format-guide.pptx' (saved after master edit + Keep PowerPoint format). Slide1 slide-number placeholder looked empty, so clicked slide2 thumbnail to verify number renders RED. NEXT: zoom/inspect bottom-right of slide2; if number is still black, re-enter Master View (View>Master Slide) and fix remaining masters (4 exist, only #1 edited)."}
+```

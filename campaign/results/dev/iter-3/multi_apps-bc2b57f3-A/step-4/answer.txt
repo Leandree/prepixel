@@ -1,0 +1,5 @@
+The Window menu confirms the Calc workbook is open. Switching to it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(746, 152)", "memo": "Switched to workbook-with-sample-database.xlsx in Calc. Target sheet order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Next: read current tab order at bottom, then right-click tab > Move/Copy Sheet (more reliable than dragging)."}
+```

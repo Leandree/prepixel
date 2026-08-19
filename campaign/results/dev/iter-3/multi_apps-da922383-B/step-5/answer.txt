@@ -1,0 +1,1 @@
+{"action":"crop","target":"e63","memo":"Task: save both Lil'Log tabs as PDF to /home/user/Documents/Blog. Tab2(current)='Thinking about High-Quality Human Data', Tab1='LLM Powered Autonomous Agents'. Clicked Save; header shows 'Saving…' but a11y tree unchanged for 2 frames — cropping print dialog to see if GTK file chooser actually appeared."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "Step10: verified 'Play and exit' UNCHECKED in Advanced>Playlist after reopening prefs (persisted from step7 save). Clicked Save to close dialog. Step11: confirm dialog closed & VLC main window visible, then DONE."}

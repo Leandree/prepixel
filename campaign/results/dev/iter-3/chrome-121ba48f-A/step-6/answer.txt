@@ -1,0 +1,5 @@
+I've scrolled past the DLC area. Scrolling back up to locate the "Downloadable Content for Dota 2" section.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(980, 600); pyautogui.scroll(10)", "memo": "Step 6: On store.steampowered.com/app/570. Had over-scrolled to 'More from Dota'/reviews; scrolling UP to find 'Downloadable Content for Dota 2' section (checkboxes + 'Add selected items to cart' / select-all). If not on app page, go to store.steampowered.com/dlc/570/Dota_2/ and add each DLC."}
+```

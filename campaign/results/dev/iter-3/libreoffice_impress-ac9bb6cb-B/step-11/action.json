@@ -1,0 +1,1 @@
+{"action": "click", "target": "e326", "memo": "Closed Basic Macros dialog (tree expansion wouldn't work). Next: click IDE toolbar Run button (e290, 'Run' in Macro toolbar at ~504,130) to execute first sub FixNum; then press Enter to dismiss MsgBox 'done'. Macro also calls oDoc.store() so file is saved."}

@@ -1,0 +1,5 @@
+There's already a "Dota 2" tab open — let me switch to it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(220, 47)", "memo": "Step 1: Clicked existing 'Dota 2' tab in Chrome. Next: verify it's the Steam Dota 2 store page, then scroll to the DLC section and add all DLC to cart."}
+```

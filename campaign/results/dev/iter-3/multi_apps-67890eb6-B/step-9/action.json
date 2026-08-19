@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "Waiting on curl loop (8 requests, up to 25s each) from step 8; terminal title still shows old G:/V: string. Next: read e7/e1 title for 'u=HTTPcode=pagetitle' x4. File already written: ~/Desktop/best_awards_acl.xlsx, 5 rows, header from original file = [tile,year,author list,PDF link], rows 2022->2019 desc. If all 200 + titles match -> done."}

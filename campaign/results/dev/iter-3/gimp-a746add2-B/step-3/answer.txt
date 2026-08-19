@@ -1,0 +1,1 @@
+{"action":"click","target":"e41","memo":"Clicked Filters menu (e41). Next: hover/click 'Light and Shadow' submenu, then 'Vignette' to open its dialog."}

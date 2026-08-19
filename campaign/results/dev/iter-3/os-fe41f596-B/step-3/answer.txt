@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e10","memo":"Clicked Settings>Power search result. Next: in Power panel find 'Show Battery Percentage' toggle and set it to true."}
+```

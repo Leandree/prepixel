@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e32","memo":"'/' search dialog did not appear (view unchanged), so falling back to menu navigation. Just clicked Filters menu (e32). Next: look for a 'Light and Shadow' submenu item in the new view and click it, then click 'Vignette'. If menu items are not exposed in the structure, use keyboard: type 'l' to jump to 'Light and Shadow', press Right to open submenu, then 'v' for Vignette + Enter."}
+```

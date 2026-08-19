@@ -1,0 +1,5 @@
+The Filter Rules dialog is open with the Filter name field focused. I'll type the name and select "Match all messages".
+
+```json
+{"action": "import pyautogui; pyautogui.click(1041, 313); pyautogui.write('Forward to gmail'); pyautogui.click(1157, 510)", "memo": "Filter Rules dialog: typed name 'Forward to gmail', clicked 'Match all messages' radio (1157,510). Next: change action dropdown 'Move Message to' (648,693) to 'Forward Message To', then type anonym-x2024@gmail.com in the field to its right, then OK (1388,853)."}
+```

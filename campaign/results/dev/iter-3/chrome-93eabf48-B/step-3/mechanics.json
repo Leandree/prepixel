@@ -1,0 +1,44 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 573,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 24,
+  "cdp_records": 13,
+  "offscreen": 0,
+  "url": "chrome://new-tab-page/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "New Tab"
+ },
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "no-usable-action: no-interface"
+ },
+ "rung1_error": "no-usable-action: no-interface",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  35,
+  65
+ ],
+ "settle_ms": 4674,
+ "settle_captures": 3,
+ "guard_ms": 24
+}

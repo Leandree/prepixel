@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(646, 353)", "memo": "Filter 'Forward to gmail', Match all messages. Just selected 'Forward Message to' in action dropdown. Next: click the text field right of it (~1035,697) and type anonym-x2024@gmail.com, then click OK (1388,862). Then close Message Filters window."}
+```

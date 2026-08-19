@@ -1,0 +1,5 @@
+Row 1's star is now filled orange; row 2's star at y=227 is still an empty outline. Clicking it next.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1021, 227)", "memo": "Bills folder (Local Folders), 2 msgs. Row1 (AWS invoice) star at (1021,181) CONFIRMED filled orange. Just clicked row2 (X receipt) star at (1021,227). Next: move mouse away (e.g. click empty list area y=400 is risky - instead moveTo(700,600)) and verify BOTH stars filled orange, then DONE."}
+```

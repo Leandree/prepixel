@@ -1,0 +1,1 @@
+{"action": "click", "target": "e50", "memo": "Clicked 'Bookmarks bar' folder in bookmarks manager to verify 'The Illustrated Transformer' is listed there. If it appears in the right pane, the task is done. If the pane still says 'To bookmark pages, click the star', the ctrl+d save failed \u2014 go to the article tab, ctrl+d, and CLICK the Done button (never Escape)."}

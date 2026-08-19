@@ -1,0 +1,33 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: The requirements of my data analysis assignment are listed in "reminder.docx" on the desktop. Help me modify my assignment opended accordingly.
+
+STEP 3 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(1833, 45)
+2. import pyautogui; pyautogui.doubleClick(1852, 768)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Desktop visible; icons at right: reminder.docx (1852,768), workbook-with-sample-database.xlsx (1852,885). Just double-clicked reminder.docx to open in LibreOffice Writer. Next: WAIT for Writer to load, then read the requirements text.
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter3/multi_apps-bc2b57f3-A/_pixels/step-3/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter3/multi_apps-bc2b57f3-A/_pixels/step-1/screenshot.png
+/home/leandre/dev/osworld-dev-iter3/multi_apps-bc2b57f3-A/_pixels/step-2/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e177","memo":"Clicked 'Next Available' (e177) on Diamond availability table (was showing Wed 19 Aug - Fri 28 Aug 2026). Next: read the new date column headers / highlighted next-available date range in the table header row and report it."}
+```

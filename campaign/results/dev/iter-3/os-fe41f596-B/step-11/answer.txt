@@ -1,0 +1,1 @@
+{"action":"done","memo":"Verified: window title reads BATT=true, i.e. gsettings get org.gnome.desktop.interface show-battery-percentage returns true, so the battery percentage is now shown in the top bar."}

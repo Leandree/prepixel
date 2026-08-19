@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 607,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 147,
+  "cdp_records": 200,
+  "offscreen": 60,
+  "url": "https://www.ryanair.com/gb/en",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 3048,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "Official Ryanair website | Book direct for the lowest fares | Ryanair.com"
+ },
+ "cdp_offscreen_skipped": 455,
+ "history_views": 3,
+ "history_views_dropped": 2,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 4703,
+ "settle_captures": 2,
+ "guard_ms": 41
+}

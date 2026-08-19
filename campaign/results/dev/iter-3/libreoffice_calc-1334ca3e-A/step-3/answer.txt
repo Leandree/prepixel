@@ -1,0 +1,7 @@
+The View menu is open with "Zoom" at the bottom (it has a submenu arrow). I'll open that submenu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(201, 632)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(201, 632)", "memo": "View menu open; clicked 'Zoom' submenu (201,632). Next: submenu should list 50%/75%/100%/150%/200%/Zoom... -> click 100% (likely appears right of menu, x~500-600, y near 632). Current zoom 260% shown bottom-right. Fallback: double-click '260%' at (1893,1070) to open Zoom dialog, pick 100%, OK."}

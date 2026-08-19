@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(566, 128)", "memo": "Clicked Window > workbook-with-sample-database.xlsx to switch to Calc. Next: verify sheet tab order at bottom = ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. If correct, task done (doc already stored by macro)."}

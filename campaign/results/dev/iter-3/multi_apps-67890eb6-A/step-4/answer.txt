@@ -1,0 +1,7 @@
+Both guessed URLs 404'd. I'll open the site's **About** menu to find the real awards page link rather than guessing again.
+
+```json
+{"action": "import pyautogui; pyautogui.click(699, 138)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(699, 138)", "memo": "Goal: ACL best LONG paper 2019-2022 -> title, year, authors(comma-sep), aclanthology PDF link (.pdf); save ~/Desktop/best_awards_acl.xlsx sorted year DESC. /info/best-paper/ and /info/best-papers/ BOTH 404. Just clicked About dropdown (699,138) to find real awards page link. Then read page, then write xlsx via terminal python openpyxl."}

@@ -1,0 +1,5 @@
+The Playlist pane is open and "Play and exit" is already unchecked — the correct state to stop VLC exiting at end of playback. I'll persist the configuration with Save.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "Clicked Save in Advanced Prefs with Playlist>'Play and exit' UNCHECKED (play-and-exit=0). Dialog should close, writing ~/.config/vlc/vlcrc. Next: confirm dialog closed; optionally reopen Tools>Preferences>All>Playlist to verify 'Play and exit' still unchecked, then DONE."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"wait","memo":"Clicked 'All' radio (now checked) but view still shows Simple Preferences widgets - likely stale. Waiting for Advanced Preferences tree to appear. Next: expand/select 'Playlist' in left tree, UNCHECK 'Play and exit', then Save."}
+```

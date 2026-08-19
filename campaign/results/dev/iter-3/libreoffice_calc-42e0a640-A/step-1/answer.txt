@@ -1,0 +1,5 @@
+NetIncome.xlsx is open with "Revenue" (A) and "Total Expenses" (B), data in rows 2–20. I'll insert a new sheet via the Sheet menu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(405, 76)", "memo": "Sheet1: Revenue A2:A20, Total Expenses B2:B20 (19 rows). Plan: Sheet menu > Insert Sheet, name Sheet2, after current; then A1='Total Revenue', B1='Total Expenses', A2==SUM(Sheet1.A2:A20), B2==SUM(Sheet1.B2:B20); Ctrl+S + Enter (keep xlsx). Just clicked Sheet menu."}
+```

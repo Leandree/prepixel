@@ -1,0 +1,7 @@
+Typing is clearly not reaching the Basic IDE (three attempts, code unchanged). Abandoning the macro route — I'll close the Basic IDE and do this through the Impress GUI with mouse-driven menus.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1901, 45); time.sleep(1.5)"}
+```
+
+{"action": "import pyautogui, time; pyautogui.click(1901, 45); time.sleep(1.5)", "memo": "Step7: Basic IDE typing NEVER worked (3 tries, code still 'Sub Main') - keyboard may be unreliable. Closed Basic IDE window (X at 1901,45) to reveal Impress. NEXT: use MOUSE-ONLY GUI path: View>Master Slide, click slide-number placeholder <#>, select its text, Font Color dropdown arrow->Red, close master, File>Save, 'Use PowerPoint Format!'."}

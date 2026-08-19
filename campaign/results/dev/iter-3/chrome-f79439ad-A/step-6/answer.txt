@@ -1,0 +1,5 @@
+From is set to Dublin and the destination panel is now open with the To field focused. I'll type "Vienna".
+
+```json
+{"action": "import pyautogui; pyautogui.click(1050, 328); pyautogui.write('Vienna', interval=0.15)", "memo": "Typed 'Vienna' in To field. Next: click the Vienna airport suggestion in right 'Pick an airport' list (~1052,441 area) or first dropdown result. Then set date 10 Sep 2026, then passengers 2 adults, then Search (1425,321). Note: today is Aug 19, so next month = September."}
+```

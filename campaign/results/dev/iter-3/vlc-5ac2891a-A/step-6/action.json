@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(639, 471)", "memo": "Clicked top-level 'Playlist' node (639,471) in Advanced Prefs tree. Right pane should now show Playlist settings incl. checkbox 'Play and exit' (Exit if there are no more items in the playlist) - must be UNCHECKED. Then click Save at (1210,903). Verify checkbox state before/after clicking."}

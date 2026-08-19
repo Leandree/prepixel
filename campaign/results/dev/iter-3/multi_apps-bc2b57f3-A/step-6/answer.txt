@@ -1,0 +1,5 @@
+The reminder specifies the target sheet order. The Tools menu is open in Calc — I'll open the Macros submenu to script the reordering (10 sheets is too many to drag reliably).
+
+```json
+{"action": "import pyautogui; pyautogui.click(534, 532)", "memo": "Calc/workbook-with-sample-database.xlsx. Opening Tools>Macros submenu -> want 'Edit Macros...'/Basic IDE to script sheet reorder. CURRENT: Mkt Ouallam, Sorghum, Millet spatial integration, Millet, ReadMe, Mkt Gotheye, Raw_data, Beans, Mkt Mangaize, Mkt Tera. TARGET: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Save w/ Ctrl+S + Keep format."}
+```

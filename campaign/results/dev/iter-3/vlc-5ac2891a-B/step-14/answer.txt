@@ -1,0 +1,1 @@
+{"action":"key","keys":"enter","memo":"Pressed enter to execute the mkdir+touch+sed+append command setting play-and-exit=0 in ~/.config/vlc/vlcrc. Step 15: verify via crop of terminal e11 if possible, else done."}

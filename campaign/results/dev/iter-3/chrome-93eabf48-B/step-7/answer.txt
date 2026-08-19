@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e165","memo":"Flag #enable-force-dark now shows Disabled; clicked the 'Relaunch' button in the flags footer bar. Next: wait for Chrome to restart, then verify chrome://flags/#enable-force-dark still reads Disabled (auto dark mode off)."}
+```

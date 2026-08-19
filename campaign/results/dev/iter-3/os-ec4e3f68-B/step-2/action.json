@@ -1,0 +1,1 @@
+{"action": "type", "text": "gsettings get org.gnome.shell favorite-apps\n", "memo": "Terminal open. Just ran `gsettings get org.gnome.shell favorite-apps`. Next: read the output list from the terminal (may need crop/observe), then re-set it with the vim entry (likely 'vim.desktop') removed via `gsettings set org.gnome.shell favorite-apps \"[...]\"`."}

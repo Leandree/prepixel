@@ -1,0 +1,5 @@
+GIMP is already open with `dog_with_background.png`, but a "Convert to RGB Working Space?" dialog is blocking. I'll dismiss it with "Keep" (non-destructive — preserves the embedded profile).
+
+```json
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "Step2: GIMP open w/ dog_with_background.png; dismissed 'Convert to RGB Working Space?' dialog via Keep (1106,702). Next: click Filters menu (475,77) > 'Light and Shadow' > 'Vignette...'. Also a software-update notification banner at top may need dismissing."}
+```

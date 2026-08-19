@@ -1,0 +1,1 @@
+{"action":"set_value","target":"e192","value":"JFK","memo":"Origin search box e192 open (was NTE); set to JFK. Next: pick 'JFK New York-Kennedy' from predictive_search_list, then Destination (e97) -> ORD Chicago O'Hare, trip type One Way, date tomorrow 2026-08-20, then Find Flights (e111)."}

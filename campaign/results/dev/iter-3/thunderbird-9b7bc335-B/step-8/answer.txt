@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+alt+t","memo":"GUI dead-end: New… opens a modal Filter Rules window that the a11y view never exposes (view frozen = modal blocking), so blind completion is unreliable. Pivot: open a terminal and write msgFilterRules.dat directly. Next: if a terminal window appears, run pkill thunderbird, then write filter (name=Forward all, type=17, action=Forward, actionValue=anonym-x2024@gmail.com, condition=ALL) into each ~/.thunderbird/*/{ImapMail,Mail}/*/ server dir except Local Folders. If no terminal, fall back to Escape + retry New…"}
+```

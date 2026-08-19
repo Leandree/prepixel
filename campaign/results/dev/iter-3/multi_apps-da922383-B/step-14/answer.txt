@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+p","memo":"Tab1 'LLM Powered Autonomous Agents'. Print preview re-opened at step14 (a11y tree does not expose the Print frame, so assume it IS open; ctrl+p is a no-op if already open). FINAL step15: {\"action\":\"type\",\"text\":\"\\n/home/user/Documents/Blog/LLM Powered Autonomous Agents\\n\"} — first \\n hits Save, path replaces preselected stem, .pdf kept, second \\n confirms."}
+```

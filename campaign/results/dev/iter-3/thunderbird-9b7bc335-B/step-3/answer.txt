@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e84","memo":"Message Filters dialog open (Filters for: presumed anonym-x2024@outlook.com, 0 items). Clicked New… -> Filter Rules dialog should appear. Next: set filter name, choose 'Match all messages', action 'Forward Message to' = anonym-x2024@gmail.com, then OK."}
+```

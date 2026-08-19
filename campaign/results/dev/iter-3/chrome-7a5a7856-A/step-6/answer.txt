@@ -1,0 +1,5 @@
+The dialog shows Folder = "Bookmarks bar". Now clicking Done to save.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1662, 299)", "memo": "Clicked Done in 'Bookmark added' dialog with Folder='Bookmarks bar'. NEXT: verify dialog closed and star icon (1706,90) is filled/blue, and bookmark appears on bookmarks bar; then DONE."}
+```

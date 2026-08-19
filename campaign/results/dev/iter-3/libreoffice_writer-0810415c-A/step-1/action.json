@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(656, 238); pyautogui.keyDown('shift'); pyautogui.click(707, 367); pyautogui.keyUp('shift')", "memo": "Selected paras 1-2 (Compared to a short story... / A novel may have any number of climaxes...). Next: Format > Paragraph > Line Spacing = Double, then Ctrl+S and Keep current format."}

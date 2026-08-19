@@ -1,0 +1,1 @@
+{"action":"click","target":"e7","memo":"Tree at step 5 wrongly showed dota2.com content though tab 'Dota 2 on Steam' is selected; clicked that tab to force focus + fresh a11y tree. NEXT: from the Steam page tree, find an offscreen element in the 'Downloadable Content for this game' section (look for 'Add all DLC to Cart') and scroll_to it, then click it."}

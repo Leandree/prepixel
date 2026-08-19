@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e935","memo":"Sheet1: headers row1 (A=Revenue, B=Total Expenses), data A2:B20. First Add click didn't register (status bar still 'Sheet 1 of 1'); retrying Add. Next: verify Sheet2 tab exists, then Name Box->A1, type 'Total Revenue'\\t'Total Expenses'\\n =SUM(Sheet1.A2:A20)\\t=SUM(Sheet1.B2:B20), then Ctrl+S + Keep Current Format."}
+```

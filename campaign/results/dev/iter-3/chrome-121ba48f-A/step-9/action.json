@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1148, 697)", "memo": "Step 9: Modal 'Added to your cart!' confirmed Dota 2 Official Soundtrack 8,19\u20ac; header Cart 1. Clicked 'View My Cart (1)' -> expect store.steampowered.com/cart with Soundtrack listed (Remixes EP is free/no purchase). If cart shows it, task is DONE."}

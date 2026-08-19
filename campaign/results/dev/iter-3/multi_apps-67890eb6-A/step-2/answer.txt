@@ -1,0 +1,5 @@
+Landed on the ACL Anthology homepage instead of the best-paper page. I'll dismiss the update popup and re-navigate.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1890, 139); pyautogui.hotkey('ctrl','l'); pyautogui.write('https://aclanthology.org/info/best-paper/'); pyautogui.press('enter')", "memo": "Goal: ACL best LONG paper awards 2019-2022 -> title, year, authors (comma-sep), aclanthology PDF link; save to ~/Desktop/best_awards_acl.xlsx, sorted year DESC. Navigating to aclanthology.org/info/best-paper/. Chrome update popup dismissed."}
+```

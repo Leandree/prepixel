@@ -1,0 +1,1 @@
+{"action": "scroll", "direction": "down", "memo": "In Settings>Power panel. Visible: Balanced/Power Saver, Automatic suspend. Scrolling right pane to find 'Show Battery Percentage' toggle. If absent (VM w/o battery), fall back to terminal: gsettings set org.gnome.desktop.interface show-battery-percentage true"}

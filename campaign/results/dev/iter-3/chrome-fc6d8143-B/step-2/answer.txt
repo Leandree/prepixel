@@ -1,0 +1,1 @@
+{"action":"click","target":"e194","memo":"Accepted privacy banner (Accept All). Next: click Origin (e94 'Origin, NTE, Nantes, France') and set to JFK New York-Kennedy; then Destination -> ORD Chicago O'Hare; trip type maybe One Way; date = tomorrow 2026-08-20; then Find Flights."}

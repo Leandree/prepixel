@@ -1,0 +1,1 @@
+{"action":"key","keys":"shift+down","memo":"Sel stuck at 349 chars (p1 only) after 2x ctrl+shift+down; 2nd press didn't register. Now shift+down to push endpoint into p2's 2nd line (safer than landing at start of p3). NEXT: verify status bar >349 chars, then click e143 Line Spacing -> choose Double. Verify p1(y386,h74)/p2(y478,h56) heights grow."}

@@ -1,0 +1,5 @@
+The search engines list now shows **Microsoft Bing (Default)** in bold, and the Google row no longer carries the "(Default)" label — the default search engine change took effect.
+
+```json
+{"action": "DONE", "memo": "Verified on chrome://settings/searchEngines: 'Microsoft Bing (Default)' with shortcut bing.com; Google row no longer marked default. Task complete."}
+```

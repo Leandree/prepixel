@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e261","memo":"To=Vienna confirmed. Clicked Sept 10 2026 in calendar (e261). Next: verify Depart shows 10 Sep, then open Passengers selector (e86 '1 Adult') and set adults=2, then Search (e93). One way label e72 must stay selected."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1429, 147)", "memo": "Paras 1-2 selected (94 words/545 chars). Clicked line-spacing dropdown arrow (1429,147). Next: pick 'Double' from menu. Then Ctrl+S -> Keep current format (Use Word 2007-365!). If menu didn't open, use Format>Paragraph>Line spacing=Double."}

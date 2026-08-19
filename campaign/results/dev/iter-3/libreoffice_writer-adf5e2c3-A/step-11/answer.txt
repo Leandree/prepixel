@@ -1,0 +1,5 @@
+I'm at page 1 showing paragraphs 1–3. I need to scroll down to see paragraph 4 and confirm the `[14]` citation landed inline correctly.
+
+```json
+{"action": "import pyautogui, time; pyautogui.scroll(-12, x=950, y=600); time.sleep(1)", "memo": "Verified: Replace All said 'replaced 1 times'; word count 1513->1512 (=<add here> 2 words -> [14] 1 word). Ref [14] Steinberg present at doc end p4. Doc saved (Ctrl+S + Enter keep .docx). NOW scrolling from top to view para 4 and confirm [14] appears inline. If it looks right -> DONE."}
+```

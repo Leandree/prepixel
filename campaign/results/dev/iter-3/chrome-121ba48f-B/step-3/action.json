@@ -1,0 +1,1 @@
+{"action": "set_value", "target": "e33", "value": "https://store.steampowered.com/app/570/Dota_2/", "memo": "Tab clicks weren't switching views; instead typed Steam Dota 2 store URL (app/570) into address bar e33. NEXT: press Enter to navigate, then find 'Add all DLC to Cart' button on the store page."}

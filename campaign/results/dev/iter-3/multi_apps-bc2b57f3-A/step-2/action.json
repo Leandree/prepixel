@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.doubleClick(1852, 768)", "memo": "Desktop visible; icons at right: reminder.docx (1852,768), workbook-with-sample-database.xlsx (1852,885). Just double-clicked reminder.docx to open in LibreOffice Writer. Next: WAIT for Writer to load, then read the requirements text."}

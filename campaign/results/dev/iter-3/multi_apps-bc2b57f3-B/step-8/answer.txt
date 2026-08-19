@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e758","memo":"Requirements read: single calc file, sheet order = ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Plan: Writer Tools>Macros>Edit Macros -> Basic IDE, type macro that finds workbook-with-sample-database doc, moveByName each sheet to index, then store(). Run with F5."}
+```

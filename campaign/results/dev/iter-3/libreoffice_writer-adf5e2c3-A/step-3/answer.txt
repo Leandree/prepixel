@@ -1,0 +1,5 @@
+The document is at its end; references run to `[13] Schramm...` (alphabetical), so Steinberg becomes `[14]`. First I'll disable AutoCorrect-while-typing so the DOI and hyphens aren't mangled.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(509, 76); time.sleep(1)", "memo": "Refs are alphabetical, end at [13] Schramm; Steinberg -> [14] appended after [13] (last para of doc is empty, cursor there). In-text style is like 'evidence[11]'. Opened Tools menu to click AutoCorrect > While Typing (disable) before typing."}
+```

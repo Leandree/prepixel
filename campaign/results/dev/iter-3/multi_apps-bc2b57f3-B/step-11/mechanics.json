@@ -1,0 +1,26 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "history_views": 1,
+ "history_views_dropped": 9,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "no-usable-action: no-interface"
+ },
+ "rung1_error": "no-usable-action: no-interface",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1195,
+  183
+ ],
+ "settle_ms": 14324,
+ "settle_captures": 1,
+ "guard_ms": 100
+}

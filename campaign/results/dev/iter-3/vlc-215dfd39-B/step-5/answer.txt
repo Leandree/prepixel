@@ -1,0 +1,1 @@
+{"action":"click","target":"e75","memo":"Re-clicked 'All' radio (safe no-op if already selected) to force the advanced prefs tree to render/refresh — structure was stale showing Simple layout. Next: find left tree, expand Interface > Main interfaces > Qt, uncheck 'Display background cone or art', then Save (e76). If still stale, try scroll to force repaint."}

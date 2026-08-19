@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"escape","memo":"a11y panel never leaves Simple Prefs (play-and-exit not exposed there); switching to All is not observable. New plan: escape closed prefs -> next: ctrl+q to quit VLC (so it can't rewrite vlcrc on exit) -> ctrl+alt+t terminal -> sed -i 's/^#\\?play-and-exit=.*/play-and-exit=0/' ~/.config/vlc/vlcrc && grep play-and-exit ~/.config/vlc/vlcrc"}
+```

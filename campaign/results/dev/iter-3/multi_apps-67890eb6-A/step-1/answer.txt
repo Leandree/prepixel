@@ -1,0 +1,7 @@
+Chrome is open with a blank aclanthology.org tab. I'll navigate to the Anthology's best-paper awards page to confirm all four years in one place.
+
+```json
+{"action": "import pyautogui; pyautogui.click(660, 90); pyautogui.hotkey('ctrl','a'); pyautogui.write('https://aclanthology.org/info/best-paper/\n')"}
+```
+
+**memo:** Goal: 4 rows (2022,2021,2020,2019 desc) in ~/Desktop/best_awards_acl.xlsx w/ title, year, authors (comma-sep), aclanthology PDF url. Known: 2019 "Bridging the Gap between Training and Inference for NMT" (Wen Zhang, Yang Feng, Fandong Meng, Di You, Qun Liu) P19-1426.pdf; 2020 CheckList (Marco Tulio Ribeiro, Tongshuang Wu, Carlos Guestrin, Sameer Singh) 2020.acl-main.442.pdf; 2021 VOLT (Jingjing Xu, Hao Zhou, Chun Gan, Zaixiang Zheng, Lei Li) 2021.acl-long.571.pdf; 2022 = CONFIRM on page. Then use LibreOffice Calc (dock icon ~35,405) to type rows + save xlsx (Keep current format).

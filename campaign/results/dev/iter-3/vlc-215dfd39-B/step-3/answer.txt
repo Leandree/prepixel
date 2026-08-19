@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e75","memo":"Simple prefs Interface panel does NOT expose a 'Show background cone or art' checkbox (likely at ~992,523 but unexposed). Switched to 'All' (advanced) view. Next: in left tree expand Interface > Main interfaces > Qt, then uncheck 'Display background cone or art' (qt-bgcone), then Save."}
+```

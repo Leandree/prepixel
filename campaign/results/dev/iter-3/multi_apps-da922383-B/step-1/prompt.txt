@@ -1,0 +1,211 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I browsed a lot of interesting blog articles today. I hope to store these articles in my local designated folder just like zotero stores papers. Please download the blogs opening now in pdf format and save them in their title to /home/user/Documents/Blog.
+
+STEP 1 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+(none)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+(none)
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 21‎∶54"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "LLM Powered Autonomous Agents | Lil'Log"
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Thinking about High-Quality Human Data | Lil'Log" state=selected
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1565,24 "Address and search bar"
+e34 push-button 1800,78,24,24 "Bookmark this tab"
+e35 push-button 1845,73,34,34 "You"
+e36 push-button 1881,73,39,34 "Chrome"
+e37 list-item 645,1077,701,78 "1. Task design: Design task workflow to improve clarity and reduce complexity. Detailed guidelines are helpful but very long and complicated guidelines demand a decent amount of training to be useful."
+e38 text 627,1077,19,27 "1."
+e39 text 1592,103,334,207 "Can't update Chrome"
+e40 link 497,114,72,60 "Lil'Log (Alt + H)"
+e41 text 497,130,72,28 "Lil'Log"
+e42 push-button 577,114,24,60 "(Alt + T)"
+e43 [pixels] image 577,135,24,18
+e44 list-item 609,114,4,60 "|"
+e45 list-item 1193,114,41,60 "Posts"
+e46 link 1193,114,41,60 "Posts"
+e47 list-item 1258,114,54,60 "Archive"
+e48 link 1258,114,54,60 "Archive"
+e49 list-item 1336,114,49,60 "Search"
+e50 link 1336,114,49,60 "Search (Alt + /)"
+e51 list-item 1410,114,34,60 "Tags"
+e52 link 1410,114,34,60 "Tags"
+e53 list-item 1468,114,30,60 "FAQ"
+e54 link 1468,114,30,60 "FAQ"
+e55 heading 626,222,720,43 "Thinking about High-Quality Human Data"
+e56 text 626,270,490,16 "Date: February 5, 2024 | Estimated Reading Time: 20 min | Author: Lilian Weng"
+e57 push-button 655,317,682,24 "(Alt + C)"
+e58 text 670,320,119,18 "Table of Contents"
+e59 list-item 675,351,622,96 "Human Raters ↔ Data Quality The Wisdom of the Crowd Rater Agreement Rater Disagreement & Two Paradigms" [occluded]
+e60 link 675,354,201,18 "Human Raters ↔ Data Quality"
+e61 text 675,354,201,18 "Human Raters ↔ Data Quality"
+e62 list-item 699,375,598,24 "The Wisdom of the Crowd"
+e63 link 699,378,172,18 "The Wisdom of the Crowd"
+e64 list-item 699,399,598,24 "Rater Agreement" [occluded]
+e65 link 699,402,113,18 "Rater Agreement" [occluded]
+e66 list-item 699,423,598,24 "Rater Disagreement & Two Paradigms" [occluded]
+e67 link 699,426,254,18 "Rater Disagreement & Two Paradigms" [occluded]
+e68 list-item 675,447,622,96 "Data Quality ↔ Model Training Influence Functions Prediction Changes during Training Noisy Cross-Validation" [occluded]
+e69 link 675,450,206,18 "Data Quality ↔ Model Training" [occluded]
+e70 text 675,450,206,18 "Data Quality ↔ Model Training"
+e71 list-item 699,471,598,24 "Influence Functions" [occluded]
+e72 link 699,474,133,18 "Influence Functions" [occluded]
+e73 list-item 699,495,598,24 "Prediction Changes during Training" [occluded]
+e74 link 699,498,236,18 "Prediction Changes during Training" [occluded]
+e75 list-item 699,519,598,24 "Noisy Cross-Validation" [occluded]
+e76 link 699,522,155,18 "Noisy Cross-Validation" [occluded]
+e77 list-item 675,543,622,24 "Citation" [occluded]
+e78 link 675,546,53,18 "Citation" [occluded]
+e79 list-item 675,567,622,24 "References" [occluded]
+e80 link 675,570,75,18 "References" [occluded]
+e81 paragraph 626,388,720,51 "[Special thank you to Ian Kivlichan for many useful pointers (E.g. the 100+ year old Nature paper “Vox populi”) and nice feedback. 🙏 ]"
+e82 text 626,391,155,19 "[Special thank you to"
+e83 link 780,391,92,19 "Ian Kivlichan"
+e84 text 626,391,689,45 "for many useful pointers (E.g. the 100+ year old Nature paper “Vox populi”) and nice feedback. 🙏 ]"
+e85 paragraph 626,459,720,179
+e86 text 626,462,717,45 "High-quality data is the fuel for modern data deep learning model training. Most of the task-specific labeled data comes from human annotation, such as classification task or"
+e87 link 1159,487,39,19 "RLHF"
+e88 text 626,487,718,147 "labeling (which can be constructed as classification format) for LLM alignment training. Lots of ML techniques in the post can help with data quality, but fundamentally human data collection involves attention to details and careful execution. The community knows the value of high quality data, but somehow we have this subtle impression that “Everyone wants to do the model work, not the data work” ("
+e89 link 631,615,169,19 "Sambasivan et al. 2021"
+e90 text 800,615,11,19 ")."
+e91 [pixels] image 734,658,504,230
+e92 text 866,898,302,18 "Two directions to approach high data quality."
+e93 heading 626,953,720,34 "Human Raters ↔ Data Quality#"
+e94 text 626,953,376,33 "Human Raters ↔ Data Quality"
+e95 paragraph 626,1006,720,51 "Collecting human data involve a set of operation steps and every step contributes to the data quality:"
+e96 list-item 646,1077,700,77 "Task design: Design task workflow to improve clarity and reduce complexity. Detailed guidelines are helpful but very long and complicated guidelines demand a decent amount of training to be useful."
+e97 [offscreen] list-item 576,1045,700,77
+e98 [offscreen] text 576,1048,691,70 "Select and train a pool of raters: Select annotators with matched skillset and consistency. Training sessions are necessary. After onboarding, regular feedback and calibration sessions are also needed."
+e99 [offscreen] list-item 576,1127,700,51 "Collect and aggregate data. This is the stage where more ML techniques can be applied to clean, filter and smartly aggregate data to identify the true labels."
+e100 [offscreen] text 647,2018,536,59 "Quality assurance refers to a set of actions that allow one to improve quality by acting on the quality attributes identified in the quality model. (Image source:"
+e101 [offscreen] link 881,2058,118,18 "Daniel et al. 2018"
+e102 [offscreen] text 999,2058,5,18 ")"
+e103 [offscreen] heading 556,2112,720,29 "The Wisdom of the Crowd#"
+e104 [offscreen] text 556,2112,276,28 "The Wisdom of the Crowd"
+e105 [offscreen] paragraph 556,2157,720,205
+e106 [offscreen] link 556,2160,76,19 "Vox populi"
+e107 [offscreen] text 556,2160,713,121 "(originally “Vox populi, vox Dei”), a Latin phrase, means the voice of people. A short paper named was the same name was published in 1907 on Nature. It tracked an event at an annual exhibition where a fat ox was selected and people would guess the weight of the ox in order to win a prize if the guess is close to the real number. The middlemost estimate was treated as “the vox populi” and ended up being very close to the true value. The author concluded"
+e108 [offscreen] text 556,2263,719,45 "“This result is, I think, more creditable to the trustworthiness of a democratic judgment than might have been expected.”"
+e109 [offscreen] text 556,2314,715,45 "This is probably the earliest mention of how crowdsourcing (“the wisdom of the crowd”) would work out."
+e110 [offscreen] paragraph 556,2382,720,154
+e111 [offscreen] text 556,2385,170,19 "Almost 100 years later,"
+e112 [offscreen] link 725,2385,159,19 "Callison-Burch (2009)"
+e113 [offscreen] text 556,2385,709,147 "did an early study on using Amazon Mechanical Turk (AMT) to run non-expert human evaluation on Machine Translation (MT) tasks and even to rely on non-experts to create new gold reference translations. The setup for human evaluation was simple: Each turker is shown a source sentence, a reference translation, and 5 translations from 5 MT systems. They are asked to rank 5 translations from best to worst. Each task is completed by 5 turkers."
+e114 [offscreen] paragraph 556,2556,720,128
+e115 [offscreen] text 556,2559,716,121 "Unsurprisingly, there are spammers producing low quality annotation to only optimize the volume. So when measuring the agreement between experts and non-experts, different weighting schemes need to be applied to downweight the contribution of spammers: (1) “weighted by experts”: using agreement rate with experts on a gold set of 10 examples; (2) “weighted by non-experts”: relying on agreement rate with the rest of turkers on the whole dataset."
+e116 [offscreen] paragraph 556,2704,720,128
+e117 [offscreen] text 556,2707,714,121 "In a harder task, non-expert human annotators were asked to create new gold reference translations. Callison-Burch designed the task in two stages, where the first stage created new translations with reference to MT outputs and the second one filtered translations that may seem to be gerated by a MT system. The correlation between experts’ and crowdsourced translations is higher than that between expert and MT system outputs."
+e118 [offscreen] text 659,3082,514,119 "(Left) The agreement rate is measured by comparing each pair of translation sentences (""A > B"", ""A=B"", ""A < B"") and thus chance agreement is 1/3. The upper bound is set by the expert-expert agreement rate. (Right) Comparison of BLEU score between translations from different sources. LCD (Linguistic Data Consortium) translators provide expert translations. (Image source:"
+e119 [offscreen] link 870,3184,139,18 "Callison-Burch 2009"
+e120 [offscreen] text 1009,3184,5,18 ")"
+e121 [offscreen] heading 556,3238,720,29 "Rater Agreement#"
+e122 [offscreen] text 556,3238,181,28 "Rater Agreement"
+e123 [offscreen] paragraph 556,3283,720,128
+e124 [offscreen] text 556,3286,696,121 "We often think of annotation as targeting a single ground truth and try to evaluate quality against one gold answer with consistent standards. A common practice for finding reliable ground truth labels is to collect multiple labels from multiple raters. Assuming that each rater performs at a different level of quality, we can use a weighted average of annotations but weighted by a proficiency score. This score is often approximated by how often one rater agrees with others."
+e125 [offscreen] paragraph 556,3431,720,51 "Majority Voting: Taking the majority vote is the simplest way of aggregation, equivalent to taking the mode of a set of labels. In this setting, every annotator is contributing equally."
+e126 [offscreen] text 556,3434,110,19 "Majority Voting"
+e127 [offscreen] text 556,3434,694,45 ": Taking the majority vote is the simplest way of aggregation, equivalent to taking the"
+e128 [offscreen] link 582,3459,40,19 "mode"
+e129 [offscreen] text 623,3459,520,19 "of a set of labels. In this setting, every annotator is contributing equally."
+e130 [offscreen] paragraph 556,3502,720,77
+e131 [offscreen] text 556,3505,111,19 "Raw agreement"
+e132 [offscreen] text 667,3505,10,19 "("
+e133 [offscreen] link 676,3505,136,19 "Tratz & Hovy, 2010"
+e134 [offscreen] text 556,3505,664,70 "): Raw agreement counts the percentage of other people agreeing with them. This is indirectly correlated to majority vote, because all members of the majority class are expected to get higher inter-annotator agreement rate."
+e135 [offscreen] paragraph 556,3599,720,102
+e136 [offscreen] text 556,3602,107,19 "Cohen’s Kappa"
+e137 [offscreen] text 662,3602,10,19 "("
+e138 [offscreen] link 672,3602,149,19 "Landis & Koch, 1977"
+e139 [offscreen] text 556,3602,688,45 "): Cohen’s kappa measures the inter-rater agreement in the form of"
+e140 [offscreen] text 612,3622,9,21 "κ"
+e141 [offscreen] text 627,3622,11,21 "="
+e142 [offscreen] text 643,3622,6,21 "("
+e143 [offscreen] text 649,3622,10,21 "p"
+e144 [offscreen] text 659,3635,7,15 "o"
+e145 [offscreen] text 673,3622,11,21 "−"
+e146 [offscreen] text 688,3622,10,21 "p"
+e147 [offscreen] text 698,3635,6,15 "e"
+e148 [offscreen] text 707,3622,6,21 ")"
+e149 [offscreen] text 717,3622,5,21 "/"
+e150 [offscreen] text 727,3622,6,21 "("
+e151 [offscreen] text 733,3622,10,21 "1"
+e152 [offscreen] text 747,3622,11,21 "−"
+e153 [offscreen] text 762,3622,10,21 "p"
+e154 [offscreen] text 771,3635,6,15 "c"
+e155 [offscreen] text 780,3622,6,21 ")"
+e156 [offscreen] text 797,3627,55,19 ", where"
+e157 [offscreen] +1289 more lines truncated (scroll to reveal)
+
+
+Previous views (up to 3, oldest first), same grammar:
+(none)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

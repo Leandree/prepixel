@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "Clicked New\u2026 in Message Filters; Filter Rules dialog not yet visible (a stray 'Copy\u2026' menu-item appeared near the buttons). Waiting for dialog to render. If still absent next step, click New\u2026 (e84) again. Then: name filter, 'Match all messages', action 'Forward Message to' = anonym-x2024@gmail.com, OK."}

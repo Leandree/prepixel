@@ -1,0 +1,5 @@
+The filter "Forward to gmail" exists and is enabled. Let me open it to verify its rules.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1320, 466)", "memo": "Clicked Edit on 'Forward to gmail' filter to verify rules. Expect Filter Rules dialog: check 'Match all messages' selected and action 'Forward Message to' with anonym-x2024@gmail.com. If correct, click OK, then close Message Filters (X at 1376,321), then DONE. If wrong, fix fields."}
+```

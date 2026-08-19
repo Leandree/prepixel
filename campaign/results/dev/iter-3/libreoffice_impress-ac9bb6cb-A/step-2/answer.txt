@@ -1,0 +1,5 @@
+The Tools menu is open. Next I'll open the Macros submenu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(513, 405)", "memo": "Task: make slide number RED in saa-format-guide.pptx (15 slides). Plan: Tools>Macros>Edit Basic (or Basic Macros...), write macro looping DrawPages+MasterPages, find shape supporting com.sun.star.presentation.SlideNumberShape, set CharColor=RGB(255,0,0), then doc.store(). Just clicked Macros submenu; next pick 'Edit Macros...'/'Basic Macros...'."}
+```

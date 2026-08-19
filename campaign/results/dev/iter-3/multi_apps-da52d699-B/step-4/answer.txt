@@ -1,0 +1,1 @@
+{"action":"type","text":"/home/user/Desktop/book_list_result.docx\n","memo":"Answer=\"Out of the Silent Planet\" (A7; I7=1328.9 min words/day). Typed path into Calc's Open dialog location bar + Enter to open book_list_result.docx in Writer. Next: verify Writer opened, click in body, type the title, Ctrl+S, then 'Use Word 2007-365!' to keep .docx format."}

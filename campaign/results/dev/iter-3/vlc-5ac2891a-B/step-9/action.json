@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+alt+t", "memo": "Prefs closed. Opening terminal to edit ~/.config/vlc/vlcrc directly. Next: type `sed -i 's/^#\\?play-and-exit=.*/play-and-exit=0/' ~/.config/vlc/vlcrc` then Enter, then verify with `grep -n play-and-exit ~/.config/vlc/vlcrc`. If no terminal appears, use Activities > search 'Terminal'."}

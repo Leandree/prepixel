@@ -1,0 +1,5 @@
+The Bills folder is open with 2 messages, both showing empty star outlines in the star column. I'll click the first message's star icon directly.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1021, 181)", "memo": "Bills folder (Local Folders) open, 2 messages. Star column at x=1021: row1 y=181 (AWS invoice), row2 y=227 (X receipt). Just clicked row1 star. Next: verify row1 star is filled/colored, then click (1021,227) for row2. Both must end filled."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e55","memo":"Clicked into ref [13] (Schramm) paragraph to check toolbar: if 'Ordered List' shows value 1.0 -> refs are an auto-numbered list (add new item, no manual '[14]'); if 'No List' 1.0 -> numbers are literal text (type '[14] ' manually). Steinberg sorts after Schramm => becomes [14], appended at end. Then find '<add here>' in 4th para and insert cross-ref (Insert>Cross-reference, Numbered paragraphs, Number)."}
+```

@@ -1,0 +1,5 @@
+Line spacing is now visibly doubled on the first two paragraphs (compare with the single-spaced paragraphs below). Time to save.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(1.5)", "memo": "Double spacing applied to paras 1-2 (verified visually). Pressed Ctrl+S; next: if 'Keep current format' dialog appears, click 'Use Word 2007-365!' button (right side of dialog) to keep .docx, then DONE."}
+```

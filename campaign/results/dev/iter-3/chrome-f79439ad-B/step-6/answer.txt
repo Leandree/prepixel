@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e180","memo":"From=Dublin CONFIRMED. To-panel open (destination country list). Clicking Austria (e180) -> then pick 'Vienna' in airport column (x~1025). After that: date 10 Sep 2026, passengers 2 adults, then Search (e87). One-way selection still UNVERIFIED - re-check 'One way' label (e76) before searching."}
+```

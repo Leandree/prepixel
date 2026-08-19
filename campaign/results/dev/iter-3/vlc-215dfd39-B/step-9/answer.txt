@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e74","memo":"Panel is still Simple Prefs though a11y claims All=checked (tree IS live: focus updates tracked). Clicking 'Simple' first to force real radio state change; NEXT STEP click e75 'All' -> advanced tree should appear. Then: Interface > Main interfaces > Qt > uncheck 'Display background cone or art' (qt-bgcone) > Save. 6 steps left after this."}
+```

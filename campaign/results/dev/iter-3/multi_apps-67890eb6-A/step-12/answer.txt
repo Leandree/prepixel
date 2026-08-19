@@ -1,0 +1,10 @@
+The script ran successfully — output shows all four papers correctly extracted and `SAVED OK`:
+
+- **2022** | Learned Incremental Representations for Parsing | Nikita Kitaev, Thomas Lu, Dan Klein | `2022.acl-long.220.pdf`
+- **2021** | Vocabulary Learning via Optimal Transport for Neural Machine Translation | Jingjing Xu, Hao Zhou, Chun Gan, Zaixiang Zheng, Lei Li | `2021.acl-long.571.pdf`
+- **2020** | Beyond Accuracy: Behavioral Testing of NLP Models with CheckList | Marco Tulio Ribeiro, Tongshuang Wu, Carlos Guestrin, Sameer Singh | `2020.acl-main.442.pdf`
+- **2019** | Bridging the Gap between Training and Inference for Neural Machine Translation | Wen Zhang, Yang Feng, Fandong Meng, Di You, Qun Liu | `P19-1426.pdf`
+
+Authors comma-separated, official aclanthology PDF URLs, rows in descending year order, saved to `~/Desktop/best_awards_acl.xlsx`.
+
+{"action": "DONE"}

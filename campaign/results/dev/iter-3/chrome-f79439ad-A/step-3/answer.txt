@@ -1,0 +1,5 @@
+Cookie banner and Chrome popup are cleared; the search form is now accessible. Selecting "One way" first.
+
+```json
+{"action": "import pyautogui; pyautogui.click(534, 262)", "memo": "Clicked 'One way' radio (534,262). Next: verify One way selected, then click From field (620,328), clear 'Lille' (ctrl+a) & type Dublin, pick suggestion; then To (1050,328) type Vienna, pick; then date 10 Sep (next month); then passengers -> 2 adults; then Search (1425,321)."}
+```

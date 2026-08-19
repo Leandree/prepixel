@@ -1,0 +1,3 @@
+Date is confirmed as **Thu, 10 Sept** and the Passengers panel is already open showing 1 Adult. Next: increment adults to 2.
+
+{"action": "import pyautogui; pyautogui.click(1271, 599)", "memo": "Clicked + on Adults to make 2. Verify panel shows Adults 2 and field reads '2 Adults'; then click Done (1263,796) and Search (1425,383)."}

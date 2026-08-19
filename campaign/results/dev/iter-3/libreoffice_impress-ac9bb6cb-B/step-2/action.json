@@ -1,0 +1,1 @@
+{"action": "click", "target": "e51", "memo": "Tools>Macros submenu opened; next click 'Edit Macros...' (or 'Basic Macros...') to open Basic IDE. Then click code area, ctrl+a, type macro iterating oDoc.DrawPages -> shapes -> text portions with TextField -> CharColor=RGB(255,0,0), then oDoc.store(), press F5."}

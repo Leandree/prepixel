@@ -1,0 +1,1 @@
+{"action": "click", "target": "e290", "memo": "Clicked IDE Run button to execute FixNum (first sub). Expect MsgBox 'done' -> press Enter to dismiss. Macro sets CharColor red on shapes containing <number>/text fields across DrawPages+MasterPages and calls oDoc.store(). If the Basic Macros picker reappears instead, select Module1>FixNum and press Run."}

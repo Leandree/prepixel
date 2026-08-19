@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"l","memo":"Filters menu open; status bar showed 'Reset all plug-ins to their default settings' => highlight was on 'Reset all Filters' (also matches mnemonic 'l'), so GTK is cycling among multiple 'l' matches rather than activating. Pressed 'l' again to move to 'Light and Shadow'. Next: if status hint clears/changes, press Right to open submenu, then 'v'/Down to reach Vignette. If a 'Reset all Filters' confirm dialog appears, Cancel it."}
+```

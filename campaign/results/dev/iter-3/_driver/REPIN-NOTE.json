@@ -1,0 +1,16 @@
+{
+ "hot_patched_at": "2026-08-19T15:35:30+02:00",
+ "file": "run_condition.py",
+ "from_commit": "7ca3a400",
+ "to_commit": "db98ad8",
+ "delta": "one line: _do_scroll_to CDP-success path returned before_rec=1 (an int); scoped_guard subscripts it and crashes the driver (rc=1, no result.json). Now returns the KBD sentinel (view-diff verification, identical to the mechanical scroll action). B-only code; condition A never enters the router.",
+ "why_hot_patch": "in-flight drivers hold the old module in memory; killing them would waste their spend. Future spawns load this fixed file. Zero cells sacrificed by the patch itself.",
+ "caveat": "CAMPAIGN_DRIVER_COMMIT is re-read from PINNED.json at each cell spawn. PINNED.json was updated to db98ad8 at ~15:39 (original archived as PINNED-7ca3a400.json), so the only mislabeled cell is chrome-f79439ad-B: spawned ~15:36:30 in the window (new code, old 7ca3a400 label). Everything spawned after 15:39 carries the correct db98ad8 label.",
+ "casualties_on_old_code": [
+  "chrome-b4f95342-B \u2014 step 3, first-ever successful CDP scroll_to hit the bug (15:31:21)"
+ ],
+ "rerun_plan": "at iteration end: mv each partial dir + its .log/-answer.log to <name>.crash-<n>/ (runner truncates logs on respawn), then re-invoke the runner with --workers 1 \u2014 single VM, no boot pressure; skips all cells with result.json",
+ "boot_timeouts_unrelated": [
+  "chrome-bb5e4c0d-B (15:36:28) and chrome-f79439ad-B (15:41:37) \u2014 TimeoutError VM not ready in 300s. Host memory pressure in the browser-heavy queue tail (2 concurrent 4G VMs + services on a 15G host, swap in use). Not driver code."
+ ]
+}

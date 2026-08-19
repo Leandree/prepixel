@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(478, 297); time.sleep(2)", "memo": "Delta booking widget visible. Clicked From field (NTE Nantes) at (478,297); an origin search overlay/input should open -> type 'JFK' and select 'New York-Kennedy, NY (JFK)'. Then To -> ORD Chicago O'Hare, set One Way (dropdown at 851,297), date Aug 20 2026, Find Flights (1487,297)."}

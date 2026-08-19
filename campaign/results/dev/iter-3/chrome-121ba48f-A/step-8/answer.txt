@@ -1,0 +1,5 @@
+Found the "Content For This Game" block with the **Add all DLC to Cart** button visible at the top of the page.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1087, 268)", "memo": "Step 8: Clicked 'Add all DLC to Cart' (8,19\u20ac) in 'Content For This Game' on store.steampowered.com/app/570. Next: verify cart shows Dota 2 DLC (Soundtrack 8,19\u20ac + Remixes EP free); button may change to 'In Cart'/'Added'. Check cart icon top-right or store.steampowered.com/cart."}
+```

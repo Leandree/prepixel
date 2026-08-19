@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(900, 290); time.sleep(1); pyautogui.write('Out of the Silent Planet'); time.sleep(1)", "memo": "ANSWER=Out of the Silent Planet. Typed title into book_list_result.docx body. Next: Ctrl+S, then Enter to 'Use Word 2007-365!' (Keep current format), verify title bar has no modified state."}

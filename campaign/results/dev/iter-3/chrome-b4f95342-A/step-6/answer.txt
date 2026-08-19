@@ -1,0 +1,7 @@
+The Diamond campground page loaded. Now I need to scroll to the Campsite List to find the "Next Available" dates.
+
+```json
+{"action": "import pyautogui; pyautogui.scroll(-6, x=960, y=800)"}
+```
+
+{"action": "import pyautogui; pyautogui.scroll(-6, x=960, y=800)", "memo": "On Diamond campground page (recreation.gov/camping/campgrounds/233869, Uinta-Wasatch-Cache NF, Spanish Fork UT). Scrolled down toward Campsite List tab area. Next: if grid view shows, click the list-view icon (~x=282,y=1048 before scroll) to reveal per-site 'Next Available' dates, then read them."}

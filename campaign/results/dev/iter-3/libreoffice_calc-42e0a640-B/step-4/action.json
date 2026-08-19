@@ -1,0 +1,1 @@
+{"action": "click", "target": "e998", "memo": "Switching to Sheet1 to verify which columns hold 'Revenue' and 'Total Expenses' (and the data row range) before writing formulas. After reading headers: click Sheet2 tab (tab bar ~x=277,y=1034), click A1, type headers+SUM formulas, Ctrl+S, Keep Current Format."}

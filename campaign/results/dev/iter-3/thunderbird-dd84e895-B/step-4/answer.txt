@@ -1,0 +1,1 @@
+{"action":"toggle","target":"e55","to":true,"memo":"Starring AWS msg via header Starred checkbox (e55). Next: click X (formerly Twitter) row in list, then toggle its Starred checkbox in message header. Doing per-message to avoid toggle ambiguity."}

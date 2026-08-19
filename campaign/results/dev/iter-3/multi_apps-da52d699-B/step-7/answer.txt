@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"Out of the Silent Planet","memo":"Typed 'Out of the Silent Planet' into book_list_result.docx. Next: verify word count changed (should be 5 words), then Ctrl+S and click 'Use Word 2007-365!' in the Keep format dialog."}
+```

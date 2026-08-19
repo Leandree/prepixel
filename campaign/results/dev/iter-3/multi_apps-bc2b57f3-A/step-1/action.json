@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1833, 45)", "memo": "Task: read reminder.docx on Desktop, then modify open workbook-with-sample-database.xlsx in LibreOffice Calc. Step1: minimized Calc to reach desktop. Next: double-click reminder.docx icon on desktop."}

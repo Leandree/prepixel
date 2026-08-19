@@ -1,0 +1,1 @@
+{"action":"done","memo":"Slide Pane restored: Slides View panel (e56) now visible at left (x=73..259) with Slide 1 thumbnail and Close Pane button; main editing area shifted right to x=273."}

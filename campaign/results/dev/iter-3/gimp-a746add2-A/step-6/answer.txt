@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.moveTo(600, 266); pyautogui.moveTo(725, 267, duration=0.5)", "memo": "Step6: 'Light and Shadow' highlighted but submenu not yet shown; hovered to arrow (725,267) to expand. Next: read screenshot, find 'Vignette...' in submenu (likely x~780-900) and click it."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Doc loaded, zoom is 260% (status bar bottom-right). Just clicked View menu; next click 'Zoom...' item to open dialog, then pick 100% and OK. Fallback: click '-' on zoom slider at (1742,1070)."}

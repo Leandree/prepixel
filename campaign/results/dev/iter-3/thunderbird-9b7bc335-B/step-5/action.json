@@ -1,0 +1,1 @@
+{"action": "click", "target": "e84", "memo": "Re-clicked New\u2026 in Message Filters (dialog didn't open last time; a stray 'Copy\u2026' menu-item is showing near buttons). Next: expect Filter Rules dialog -> set filter name, choose 'Match all messages', action 'Forward Message to' = anonym-x2024@gmail.com, then OK. If still no dialog, press Escape then retry New\u2026."}

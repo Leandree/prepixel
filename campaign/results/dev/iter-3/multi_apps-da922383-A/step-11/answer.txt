@@ -1,0 +1,5 @@
+Print dialog closed and the page is back to normal, suggesting the second save completed. Let me verify both PDFs actually exist in the Blog folder using a file:// listing.
+
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','t'); time.sleep(1.5); pyautogui.write('file:///home/user/Documents/Blog', interval=0.02); time.sleep(0.5); pyautogui.press('enter'); time.sleep(3)", "memo": "Opened new tab (tab3) with file:///home/user/Documents/Blog to verify both PDFs. Expect 'LLM Powered Autonomous Agents.pdf' (6.4MB, confirmed) and 'Thinking about High-Quality Human Data.pdf'. Next: read listing, then ctrl+w to close this verification tab, then DONE."}
+```

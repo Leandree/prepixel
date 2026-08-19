@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.hotkey('ctrl','s'); pyautogui.sleep(2)", "memo": "Sheet2 verified: A1='Total Revenue', B1='Total Expenses', A2=867786, B2=411686. Sheet1 untouched (step-5 confirmed stray typing never landed). Issued confirming Ctrl+S. Next: if 'Keep current format!' dialog is up, press Enter to keep xlsx; if no dialog and no modified marker, answer DONE."}

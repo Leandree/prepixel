@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e143","memo":"Sel=349ch=p1 only; extra key presses are being dropped, so switching to per-paragraph passes. Clicked e143 Line Spacing (dropdown expected). NEXT: pick 'Double' from menu -> then click in p2 (y478) -> e143 -> Double -> ctrl+s -> Enter (Keep current format). Verify p1(y386,h74) & p2(y478,h56) grow taller."}
+```

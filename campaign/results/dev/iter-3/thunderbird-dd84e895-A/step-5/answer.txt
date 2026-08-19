@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.moveTo(700, 600)", "memo": "Bills folder (Local Folders), 2 msgs. Both stars at (1021,181) and (1021,227) appear orange/filled, but row2 had cursor hovering. Just moved mouse to (700,600). Next: confirm BOTH stars still solid orange with no cursor over them -> then DONE."}

@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "After ctrl+s no 'Keep current format' dialog appeared in the view (only clock changed 20:15->20:16). Paragraph heights still doubled (p1 129, p2 110). Waiting one step to see if the docx format dialog renders; if still none, save likely completed silently -> then click doc + ctrl+s once more to confirm, else done."}

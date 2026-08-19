@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 561,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 82,
+  "cdp_records": 152,
+  "offscreen": 60,
+  "url": "https://www.delta.com/fr/en",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 3574,
+  "picked_by": "visible",
+  "tab": "Search",
+  "picked_title": "Delta Air Lines | Flights & Plane Tickets + Hotels & Cars"
+ },
+ "cdp_offscreen_skipped": 52,
+ "history_views": 3,
+ "history_views_dropped": 3,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "rung": 1,
+ "rung1_method": "cdp:HTMLInputElement.value setter",
+ "settle_ms": 4542,
+ "settle_captures": 3,
+ "guard_ms": 27
+}

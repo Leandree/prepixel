@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(35, 540)", "memo": "Step1: launched GIMP from Ubuntu dock (icon at 35,540). Next: wait for GIMP to load, then Filters > Light and Shadow > Vignette. Vignette needs an open image - may need File>New (Ctrl+N) first."}

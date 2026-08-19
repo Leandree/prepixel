@@ -1,0 +1,1026 @@
+[
+ {
+  "run": "chrome-121ba48f-A",
+  "condition": "A",
+  "steps": 10,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-368d9ba4-A",
+  "condition": "A",
+  "steps": 6,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-7a5a7856-A",
+  "condition": "A",
+  "steps": 8,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-93eabf48-A",
+  "condition": "A",
+  "steps": 7,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-b4f95342-A",
+  "condition": "A",
+  "steps": 8,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-bb5e4c0d-A",
+  "condition": "A",
+  "steps": 6,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-f79439ad-A",
+  "condition": "A",
+  "steps": 13,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-fc6d8143-A",
+  "condition": "A",
+  "steps": 12,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "gimp-58d3eeeb-A",
+  "condition": "A",
+  "steps": 2,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "gimp-a746add2-A",
+  "condition": "A",
+  "steps": 9,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_calc-1334ca3e-A",
+  "condition": "A",
+  "steps": 6,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_calc-42e0a640-A",
+  "condition": "A",
+  "steps": 9,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_impress-ac9bb6cb-A",
+  "condition": "A",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_impress-ef9d12bd-A",
+  "condition": "A",
+  "steps": 3,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_writer-0810415c-A",
+  "condition": "A",
+  "steps": 7,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_writer-adf5e2c3-A",
+  "condition": "A",
+  "steps": 13,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-67890eb6-A",
+  "condition": "A",
+  "steps": 12,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-897e3b53-A",
+  "condition": "A",
+  "steps": 0,
+  "violations": [],
+  "tool_lists": [],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-a0b9dc9c-A",
+  "condition": "A",
+  "steps": 0,
+  "violations": [],
+  "tool_lists": [],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-bc2b57f3-A",
+  "condition": "A",
+  "steps": 12,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-da52d699-A",
+  "condition": "A",
+  "steps": 6,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-da922383-A",
+  "condition": "A",
+  "steps": 13,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "os-ec4e3f68-A",
+  "condition": "A",
+  "steps": 3,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "os-fe41f596-A",
+  "condition": "A",
+  "steps": 5,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "thunderbird-9b7bc335-A",
+  "condition": "A",
+  "steps": 14,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "thunderbird-dd84e895-A",
+  "condition": "A",
+  "steps": 6,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "vlc-215dfd39-A",
+  "condition": "A",
+  "steps": 10,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "vlc-5ac2891a-A",
+  "condition": "A",
+  "steps": 11,
+  "violations": [],
+  "tool_lists": [
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read",
+   "Read"
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-121ba48f-B",
+  "condition": "B",
+  "steps": 10,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-368d9ba4-B",
+  "condition": "B",
+  "steps": 8,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-7a5a7856-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "crops_served": 2,
+  "clean": true
+ },
+ {
+  "run": "chrome-93eabf48-B",
+  "condition": "B",
+  "steps": 8,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-b4f95342-B",
+  "condition": "B",
+  "steps": 8,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-bb5e4c0d-B",
+  "condition": "B",
+  "steps": 4,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-f79439ad-B",
+  "condition": "B",
+  "steps": 12,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "chrome-fc6d8143-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "gimp-58d3eeeb-B",
+  "condition": "B",
+  "steps": 10,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "crops_served": 4,
+  "clean": true
+ },
+ {
+  "run": "gimp-a746add2-B",
+  "condition": "B",
+  "steps": 13,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_calc-1334ca3e-B",
+  "condition": "B",
+  "steps": 4,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_calc-42e0a640-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_impress-ac9bb6cb-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_impress-ef9d12bd-B",
+  "condition": "B",
+  "steps": 3,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_writer-0810415c-B",
+  "condition": "B",
+  "steps": 12,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "libreoffice_writer-adf5e2c3-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-67890eb6-B",
+  "condition": "B",
+  "steps": 14,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "crops_served": 1,
+  "clean": true
+ },
+ {
+  "run": "multi_apps-897e3b53-B",
+  "condition": "B",
+  "steps": 0,
+  "violations": [],
+  "tool_lists": [],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-a0b9dc9c-B",
+  "condition": "B",
+  "steps": 0,
+  "violations": [],
+  "tool_lists": [],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-bc2b57f3-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-da52d699-B",
+  "condition": "B",
+  "steps": 11,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "multi_apps-da922383-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "crops_served": 2,
+  "clean": true
+ },
+ {
+  "run": "os-ec4e3f68-B",
+  "condition": "B",
+  "steps": 4,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "os-fe41f596-B",
+  "condition": "B",
+  "steps": 11,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "thunderbird-9b7bc335-B",
+  "condition": "B",
+  "steps": 14,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "thunderbird-dd84e895-B",
+  "condition": "B",
+  "steps": 11,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "clean": true
+ },
+ {
+  "run": "vlc-215dfd39-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "crops_served": 2,
+  "clean": true
+ },
+ {
+  "run": "vlc-5ac2891a-B",
+  "condition": "B",
+  "steps": 15,
+  "violations": [],
+  "tool_lists": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "crops_served": 3,
+  "clean": true
+ }
+]

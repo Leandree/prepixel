@@ -1,0 +1,14 @@
+{
+ "commit": "7ca3a400e533c9498d8b6f3e0dc13488098370a5",
+ "uncommitted_changes": null,
+ "files": [
+  "run_condition.py",
+  "distill-osworld.py",
+  "answer_loop.py",
+  "prompt-template.md",
+  "judge-crop.mjs",
+  "cdp_view.mjs",
+  "cdp_act.mjs",
+  "answer-mcp-empty.json"
+ ]
+}

@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+l","memo":"Search box typing didn't register (notification permission popup stole focus). Focused address bar with ctrl+l. Next: type https://www.accuweather.com/en/search-locations?query=Manchester then press Enter, pick Manchester, Manchester, United Kingdom, then open Monthly tab."}

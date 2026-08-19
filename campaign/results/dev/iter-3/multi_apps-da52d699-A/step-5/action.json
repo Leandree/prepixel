@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter'); time.sleep(2)", "memo": "ANSWER=Out of the Silent Planet typed in book_list_result.docx. Just pressed Ctrl+S + Enter (Keep Word format). Next: verify no dialog remains and title bar shows saved state, then DONE."}

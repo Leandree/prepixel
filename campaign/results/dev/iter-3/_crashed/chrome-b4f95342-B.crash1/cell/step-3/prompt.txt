@@ -1,0 +1,500 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find the Next Available dates for Diamond.
+
+STEP 3 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. set_value entry "Address and search bar" := "https://www.recreation.gov/search?q=Diamond"
+2. click link "Diamond / $27 – $353 per night / 4.3 stars (opens in a new tab)"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Search results loaded; Diamond card only says 'ENTER DATES FOR AVAILABILITY'. Clicked Diamond link (opens new tab) to reach campground page and find 'Next Available' dates. Next: switch to the new tab if needed and look for availability info.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 21‎∶31"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "1700+ Search Results for ""Diamond"" - Book Online - Memory usage - 459 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Diamond, Uinta-Wasatch-Cache National Forest - Recreation.gov" state=selected
+~e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1367,24 "Address and search bar"
+e34 push-button 1602,78,24,24 "Install Recreation.gov"
+e35 push-button 1634,78,24,24 "Bookmark this tab"
+e36 push-button 1679,73,34,34 "You"
+e37 push-button 1718,73,202,34 "New Chrome available"
+~e38 link 918,108,139,22 "Skip to Main Content"
+~e39 [offscreen] text 589,1321,2,2 "Campsite availability"
+~e40 status 409,114,1157,170
+~e41 text 463,135,1049,71 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+~e42 push-button 849,228,94,40 "Ignore"
+~e43 link 960,228,166,40 "Upgrade Browser"
+~e44 text 920,111,113,15 "Skip to Main Content"
+~e45 presentation 1036,109,19,19 [occluded]
+e46 [pixels] image 94,291,16,11
+e47 text 118,287,286,17 "An official website of the United States government"
+e48 push-button 412,288,139,16 "Here’s how you know"
+e49 presentation 535,288,16,16
+e50 link 94,330,240,35 "Recreation.gov Homepage"
+e51 [pixels] image 94,330,240,35
+~e52 label 1376,327,1,1 "Search Recreation.gov" [occluded]
+~e53 presentation 1385,338,20,20
+~e54 combo-box 1377,328,248,40 "Search Recreation.gov"
+~e55 link 1649,332,40,32 "Help"
+~e56 push-button 1713,332,104,32 "Sign Up or Log In"
+~e57 text 1713,338,104,19 "Sign Up / Log In"
+~e58 push-button 1841,328,40,40 "Navigation Menu"
+~e59 presentation 1845,332,32,32
+~e60 [pixels] image 70,388,455,340 alt=Diamond Campground
+~e61 [pixels] image 533,388,910,340 alt=Diamond Campground
+~e62 [pixels] image 1450,388,455,340 alt=Diamond Campground 2
+~e63 push-button 1631,680,113,32 "View Photos"
+~e64 presentation 1642,688,16,16
+~e65 push-button 216,768,176,24 "Back to Search Results"
+~e66 presentation 216,768,24,24
+~e67 presentation 220,826,16,16
+~e68 text 238,826,81,15 "Campground"
+~e69 heading 216,844,555,36 "Diamond"
+~e70 link 216,888,216,21 "Uinta-Wasatch-Cache National Forest"
+~e71 text 473,889,27,17 "Near"
+~e72 text 503,889,105,17 "Spanish Fork, Utah"
+~e73 push-button 216,927,129,20 "(214)214 reviews"
+~e74 [pixels] image 216,927,96,20 alt=4.3 stars
+~e75 presentation 216,927,20,20
+~e76 presentation 235,927,20,20
+~e77 presentation 254,927,20,20
+~e78 presentation 273,927,20,20
+~e79 presentation 292,927,20,20
+~e80 text 316,927,4,17 "("
+~e81 text 320,927,21,17 "214"
+~e82 text 340,927,4,17 ")"
+~e83 text 315,926,68,17 "214 reviews"
+~e84 push-button 385,927,113,20 "Some Coverage"
+~e85 [pixels] image 385,928,18,18 alt=Mobile signal rating 2
+~e86 push-button 540,926,81,22 "Add To Favorites"
+~e87 presentation 541,927,20,20
+~e88 text 565,927,55,19 "Favorite"
+~e89 push-button 662,925,141,24 "Reservation Rules"
+~e90 presentation 662,929,16,16
+~e91 text 216,983,884,43 "Diamond Campground is located among shady cottonwoods and willow at an elevation of 5,200 feet. The family sites are located just 15 miles from Spanish Fork and the group sites are 2-3 miles further. Visitors enjoy exploring local trails and relaxing along the stream."
+~e92 link 1130,981,629,83 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e93 [pixels] image 1146,995,31,55
+~e94 [pixels] image 1146,995,31,55 alt=Scan & Pay
+~e95 paragraph 1193,989,479,67 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e96 text 1193,990,30,19 "This"
+~e97 text 1223,990,84,19 "campground"
+~e98 text 1307,990,37,19 "uses"
+~e99 text 1344,990,68,19 "Scan & Pay"
+~e100 text 1412,990,254,19 "to accept on-site payment through the"
+~e101 text 1193,1012,97,19 "Recreation.gov"
+~e102 text 1290,1012,81,19 "mobile app."
+~e103 text 1376,1012,124,19 "Download the app"
+~e104 text 1193,1012,450,41 "ahead of your visit to arrive ready."
+~e105 text 1279,1034,78,19 "Learn More"
+~e106 presentation 1361,1033,24,24
+~e107 [pixels] image 1680,977,91,99
+~e108 [pixels] image 1680,977,91,92 alt=Scan & Pay on Recreation.gov app
+~e109 [offscreen] page-tab-list 146,1006,1544,51
+~e110 [offscreen] page-tab 146,1006,271,51 "Campsite List" state=selected
+~e111 [offscreen] page-tab 424,1006,285,51 "Seasons & Fees"
+~e112 [offscreen] page-tab 717,1006,332,51 "Rules & Cancellations"
+~e113 [offscreen] page-tab 1057,1006,318,51 "Facility Information"
+~e114 [offscreen] page-tab 1383,1006,307,51 "Ratings & Reviews"
+~e115 [offscreen] tabpanel 146,1076,1544,3742 "Campsite List"
+~e116 [offscreen] push-button 154,1084,40,40 "Grid layout"
+~e117 [offscreen] presentation 162,1092,24,24
+~e118 [offscreen] push-button 194,1084,40,40 "List layout, screen reader preferred"
+~e119 [offscreen] presentation 201,1092,24,24
+~e120 [offscreen] text 241,1085,88,43 "Campground Calendar"
+~e121 [offscreen] group 242,1084,288,40 "Campground Calendar"
+~e122 [offscreen] push-button 243,1085,32,38 "Calendar"
+~e123 [offscreen] presentation 250,1095,18,18
+~e124 [offscreen] presentation 279,1092,93,24
+~e125 [offscreen] spin-button 279,1092,21,24 "day, Start Date," value="dd"
+~e126 [offscreen] text 281,1094,17,19 "dd"
+~e127 [offscreen] text 300,1094,5,19 "/"
+~e128 [offscreen] spin-button 305,1092,30,24 "month, Start Date," value="mm"
+~e129 [offscreen] text 307,1094,26,19 "mm"
+~e130 [offscreen] text 335,1094,5,19 "/"
+~e131 [offscreen] spin-button 340,1092,32,24 "year, Start Date," value="yyyy"
+~e132 [offscreen] text 342,1094,28,19 "yyyy"
+~e133 [offscreen] presentation 380,1094,20,20
+~e134 [offscreen] presentation 408,1092,93,24
+~e135 [offscreen] spin-button 408,1092,21,24 "day, End Date," value="dd"
+~e136 [offscreen] text 410,1094,17,19 "dd"
+~e137 [offscreen] text 429,1094,5,19 "/"
+~e138 [offscreen] spin-button 434,1092,30,24 "month, End Date," value="mm"
+~e139 [offscreen] text 436,1094,26,19 "mm"
+~e140 [offscreen] text 464,1094,5,19 "/"
+~e141 [offscreen] spin-button 469,1092,32,24 "year, End Date," value="yyyy"
+~e142 [offscreen] text 471,1094,28,19 "yyyy"
+~e143 [offscreen] label 537,1083,1,1 "Search campsites"
+~e144 [offscreen] presentation 546,1094,20,20
+~e145 [offscreen] entry 538,1084,400,40 "Search campsites"
+~e146 [offscreen] push-button 946,1084,40,40 "Expand availability table"
+~e147 [offscreen] presentation 954,1092,24,24
+~e148 [offscreen] push-button 146,1160,210,40 "Sort: Availability, Flexible"
+~e149 [offscreen] presentation 155,1172,16,16
+~e150 [offscreen] text 175,1170,39,19 "Sort:"
+~e151 [offscreen] text 213,1170,133,19 "Availability, Flexible"
+~e152 [offscreen] push-button 364,1160,80,40 "Filters"
+~e153 [offscreen] presentation 373,1172,16,16
+~e154 [offscreen] text 393,1170,42,19 "Filters"
+~e155 [offscreen] push-button 452,1160,40,40 "Legend"
+~e156 [offscreen] presentation 460,1168,24,24
+~e157 [offscreen] push-button 500,1160,40,40 "Refresh Table"
+~e158 [offscreen] presentation 508,1168,24,24
+~e159 [offscreen] push-button 548,1160,40,40 "Availability Alert Button"
+~e160 [offscreen] presentation 556,1168,24,24
+~e161 [offscreen] push-button 700,1160,56,40 "Go Back 5 Days"
+~e162 [offscreen] presentation 718,1166,16,16
+~e163 [offscreen] text 709,1179,38,17 "5 Days"
+~e164 [offscreen] push-button 764,1160,68,40 "Next Available"
+~e165 [offscreen] push-button 840,1160,56,40 "Go Forward 5 Days"
+~e166 [offscreen] text 849,1179,38,17 "5 Days"
+~e167 [offscreen] presentation 862,1166,16,16
+~e168 [offscreen] text 520,1208,59,38 "Campsite availability"
+~e169 region 70,114,1835,12 "Notifications: 0" [occluded]
+~e170 [offscreen] +3039 more lines truncated (scroll to reveal)
+[act-guard] previous action: CONFIRMED (element no longer present — view changed)
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 1 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 push-button 1802,27,30,35 "Minimise"
+e4 push-button 1842,27,30,35 "Restore"
+e5 push-button 1882,27,38,35 "Close"
+e6 push-button 76,27,28,41 "Search tabs"
+e7 page-tab 98,27,256,41 "Recreation.gov - Camping, Cabins, RVs, Permits, Passes & More" state=selected
+e8 push-button 312,33,28,28 "Close"
+e9 push-button 348,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1565,24 "Address and search bar"
+e15 push-button 1800,78,24,24 "Bookmark this tab"
+e16 push-button 1845,73,34,34 "You"
+e17 push-button 1881,73,39,34 "Chrome"
+e18 toggle-button 0,0,99,27 "Activities" state=checked:false
+e19 menu 99,0,162,27 "Google Chrome"
+e20 menu 906,0,178,27 "Aug 19 21‎∶30"
+e21 menu 1814,0,106,27 "System"
+e22 push-button 0,840,70,8
+e23 push-button 62,33,8,815
+e24 push-button 0,33,70,64 "Google Chrome"
+e25 push-button 0,101,70,64 "Thunderbird Mail"
+e26 push-button 0,169,70,64 "Visual Studio Code"
+e27 push-button 0,237,70,64 "VLC media player"
+e28 push-button 0,305,70,64 "LibreOffice Writer"
+e29 push-button 0,373,70,64 "LibreOffice Calc"
+e30 push-button 0,441,70,64 "LibreOffice Impress"
+e31 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e32 push-button 0,577,70,64 "Files"
+e33 push-button 0,645,70,64 "Ubuntu Software"
+e34 push-button 0,713,70,64 "Help"
+e35 push-button 0,784,70,64 "Trash"
+e36 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+
+--- view at step 2 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 21‎∶30"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "1700+ Search Results for ""Diamond"" - Book Online" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+~e31 entry 227,78,1367,24 "Address and search bar"
+~e32 push-button 1602,78,24,24 "Install Recreation.gov"
+~e33 push-button 1634,78,24,24 "Bookmark this tab"
+~e34 push-button 1679,73,34,34 "You"
+~e35 push-button 1718,73,202,34 "New Chrome available"
+~e36 link 926,108,138,22 "Skip to Main Content"
+~e37 text 70,461,720,812 "Search Results List"
+~e38 text 790,461,1130,812 "Map"
+~e39 [pixels] group 70,461,705,4841 declares=20 exposes=575
+~e40 status 417,114,1157,170
+~e41 text 470,135,1049,71 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+~e42 push-button 856,228,94,40 "Ignore"
+~e43 link 968,228,166,40 "Upgrade Browser"
+~e44 text 927,111,113,15 "Skip to Main Content"
+~e45 presentation 1044,109,19,19 [occluded]
+~e46 [pixels] image 94,291,16,11
+~e47 text 118,287,286,17 "An official website of the United States government"
+~e48 push-button 412,288,139,16 "Here’s how you know"
+~e49 presentation 535,288,16,16
+~e50 link 94,330,240,35 "Recreation.gov Homepage"
+~e51 [pixels] image 94,330,240,35
+~e52 label 1391,327,1,1 "Search Recreation.gov" [occluded]
+~e53 presentation 1400,338,20,20
+~e54 combo-box 1392,328,248,40 "Search Recreation.gov"
+~e55 link 1664,332,40,32 "Help"
+~e56 push-button 1728,332,104,32 "Sign Up or Log In"
+~e57 text 1728,338,104,19 "Sign Up / Log In"
+~e58 push-button 1856,328,40,40 "Navigation Menu"
+~e59 presentation 1860,332,32,32
+~e60 main 70,388,1850,885
+~e61 toolbar 70,388,1850,73 "Search Filters"
+~e62 group 71,388,1848,72 "Search criteria"
+~e63 search 95,404,280,40
+~e64 label 94,403,1,1 "Search Recreation.gov" [occluded]
+~e65 presentation 103,414,20,20
+~e66 combo-box 95,404,280,40 "Search Recreation.gov" value="Diamond"
+~e67 push-button 343,412,24,24 "Clear search"
+~e68 presentation 345,414,20,20
+~e69 text 382,405,41,139 "Check In and Check Out Dates"
+~e70 group 383,404,288,40 "Check In and Check Out Dates"
+~e71 push-button 384,405,32,38 "Calendar"
+~e72 presentation 391,415,18,18
+~e73 presentation 420,412,93,24
+~e74 spin-button 420,412,21,24 "day, Start Date," value="dd"
+~e75 text 422,414,17,19 "dd"
+~e76 text 441,414,5,19 "/"
+~e77 spin-button 446,412,30,24 "month, Start Date," value="mm"
+~e78 text 448,414,26,19 "mm"
+~e79 text 476,414,5,19 "/"
+~e80 spin-button 481,412,32,24 "year, Start Date," value="yyyy"
+~e81 text 483,414,28,19 "yyyy"
+~e82 presentation 521,414,20,20
+~e83 presentation 549,412,93,24
+~e84 spin-button 549,412,21,24 "day, End Date," value="dd"
+~e85 text 551,414,17,19 "dd"
+~e86 text 571,414,5,19 "/"
+~e87 spin-button 576,412,30,24 "month, End Date," value="mm"
+~e88 text 578,414,26,19 "mm"
+~e89 text 606,414,5,19 "/"
+~e90 spin-button 611,412,32,24 "year, End Date," value="yyyy"
+~e91 text 613,414,28,19 "yyyy"
+~e92 push-button 679,404,133,40 "Show filters"
+~e93 presentation 692,414,20,20
+~e94 text 718,414,81,19 "More Filters"
+~e95 push-button 1776,412,119,24 "Provide Feedback"
+~e96 region 70,461,720,812 "Search Results List"
+~e97 heading 94,478,487,19 "Search Results near DIAMOND, Spanish Fork, Utah"
+~e98 text 94,525,116,17 "1 - 20 results of 200+"
+~e99 label 543,522,48,24 "Sort By"
+~e100 combo-box 599,514,152,40 "Sort By" value="Best Match"
+~e101 [pixels] image 107,584,20,20 alt=success
+~e102 text 139,585,318,19 "We found these matching results for your search"
+~e103 [pixels] image 95,637,260,217 alt=DIAMOND
+~e104 text 112,646,169,15 "ENTER DATES FOR AVAILABILITY"
+~e105 push-button 299,645,48,26 "Add To Favorites: Diamond"
+~e106 presentation 311,646,24,24
+~e107 presentation 375,655,16,16 [occluded]
+~e108 text 393,655,52,15 "Camping"
+~e109 heading 371,681,363,22 "Diamond"
+~e110 link 371,681,363,22 "Diamond / $27 – $353 per night / 4.3 stars (opens in a new tab)"
+~e111 list-item 371,711,216,20 "Uinta-Wasatch-Cache National Forest" [occluded]
+~e112 presentation 584,719,4,4
+~e113 list-item 371,736,144,20 "Near Spanish Fork, Utah" [occluded]
+~e114 text 371,737,30,17 "Near"
+~e115 text 401,737,72,17 "Spanish Fork"
+~e116 text 473,737,6,17 ","
+~e117 text 480,737,27,17 "Utah"
+~e118 presentation 511,744,4,4
+~e119 list-item 520,736,73,20 "0miles away" [occluded]
+~e120 text 520,737,7,17 "0"
+~e121 text 531,737,61,17 "miles away"
+~e122 list-item 371,760,176,23 "3 Accessible Campsites" [occluded]
+~e123 presentation 371,762,18,18 [occluded]
+~e124 text 390,762,7,17 "3"
+~e125 text 397,762,61,17 "Accessible"
+~e126 text 460,762,58,17 "Campsites"
+~e127 push-button 519,760,28,23 "Help tip"
+~e128 presentation 525,763,16,16
+~e129 [pixels] image 371,819,96,20 alt=4.3 stars
+~e130 presentation 371,819,20,20
+~e131 presentation 390,819,20,20
+~e132 presentation 409,819,20,20
+~e133 presentation 428,819,20,20
+~e134 presentation 447,819,20,20
+~e135 text 471,819,4,17 "("
+~e136 text 475,819,21,17 "214"
+~e137 text 496,819,4,17 ")"
+~e138 text 470,818,42,38 "214 reviews"
+~e139 [pixels] image 518,820,18,18 alt=Mobile signal rating 2
+~e140 text 627,819,70,19 "$27 – $353"
+~e141 text 701,821,33,15 "/ night"
+~e142 [pixels] image 95,873,260,200 alt=Timpooneke Trailhead Timed Tickets
+~e143 text 112,882,169,15 "ENTER DATES FOR AVAILABILITY"
+~e144 push-button 299,881,48,26 "Add To Favorites: Timpooneke Trailhead Timed Tickets"
+~e145 presentation 311,882,24,24
+~e146 presentation 375,891,16,16 [occluded]
+~e147 text 393,891,94,15 "Tickets & Tours"
+~e148 heading 371,917,363,22 "Timpooneke Trailhead Timed Tickets"
+~e149 link 371,917,363,22 "Timpooneke Trailhead Timed Tickets  / 4.5 stars (opens in a new tab)"
+~e150 list-item 371,946,216,20 "Uinta-Wasatch-Cache National Forest" [occluded]
+~e151 presentation 584,954,4,4
+~e152 list-item 592,946,136,20 "27milespoint-to-point"
+~e153 text 592,947,14,17 "27"
+~e154 text 611,947,30,17 "miles"
+~e155 push-button 647,946,81,20 "point-to-point"
+~e156 [pixels] image 371,1037,96,20 alt=4.5 stars
+~e157 presentation 371,1037,20,20
+~e158 presentation 390,1037,20,20
+~e159 presentation 409,1037,20,20
+~e160 presentation 428,1037,20,20
+~e161 presentation 447,1037,20,20
+~e162 text 471,1037,4,17 "("
+~e163 text 475,1037,21,17 "108"
+~e164 text 496,1037,4,17 ")"
+~e165 text 470,1036,42,38 "108 reviews"
+~e166 [pixels] image 518,1038,18,18 alt=Mobile signal rating 1
+~e167 [offscreen] text 42,986,169,15 "ENTER DATES FOR AVAILABILITY"
+~e168 [offscreen] push-button 229,985,48,26 "Add To Favorites: Timpanogos Cave National Monument Tours"
+~e169 [offscreen] presentation 241,986,24,24
+~e170 [offscreen] presentation 305,995,16,16
+~e171 [offscreen] text 323,995,94,15 "Tickets & Tours"
+~e172 [offscreen] heading 301,1021,363,43 "Timpanogos Cave National Monument Tours"
+~e173 [offscreen] link 301,1021,363,43 "Timpanogos Cave National Monument Tours  / 4.8 stars (opens in a new tab)"
+~e174 [offscreen] list-item 301,1072,31,20 "NPS"
+~e175 [offscreen] presentation 329,1080,4,4
+~e176 [offscreen] list-item 337,1072,223,20 "Timpanogos Cave National Monument"
+~e177 [offscreen] presentation 556,1080,4,4
+~e178 [offscreen] list-item 301,1097,157,20 "Near Pleasant Grove, Utah"
+~e179 [offscreen] text 301,1098,30,17 "Near"
+~e180 [offscreen] text 331,1098,84,17 "Pleasant Grove"
+~e181 [offscreen] text 416,1098,6,17 ","
+~e182 [offscreen] text 422,1098,27,17 "Utah"
+~e183 [offscreen] presentation 454,1105,4,4
+~e184 [offscreen] list-item 462,1097,136,20 "30milespoint-to-point"
+~e185 [offscreen] text 462,1098,14,17 "30"
+~e186 [offscreen] text 481,1098,30,17 "miles"
+~e187 [offscreen] push-button 517,1097,81,20 "point-to-point"
+~e188 [offscreen] presentation 301,1169,20,20
+~e189 [offscreen] presentation 320,1169,20,20
+~e190 [offscreen] presentation 339,1169,20,20
+~e191 [offscreen] presentation 358,1169,20,20
+~e192 [offscreen] presentation 377,1169,20,20
+~e193 [offscreen] text 401,1170,4,17 "("
+~e194 [offscreen] text 405,1170,31,17 "1,622"
+~e195 [offscreen] text 436,1170,4,17 ")"
+~e196 [offscreen] text 400,1169,42,38 "1,622 reviews"
+~e197 [offscreen] push-button 229,1231,48,26 "Add To Favorites: Uinta-Wasatch-Cache National Forest"
+~e198 [offscreen] presentation 241,1232,24,24
+~e199 [offscreen] list 301,1239,213,20
+~e200 [offscreen] list-item 301,1239,127,20 "Recreation Area"
+~e201 [offscreen] presentation 305,1241,16,16
+~e202 [offscreen] list-item 436,1239,78,20 "Site Pass"
+~e203 [offscreen] presentation 440,1241,16,16
+~e204 [offscreen] heading 301,1267,363,22 "Uinta-Wasatch-Cache National Forest"
+~e205 [offscreen] link 301,1267,363,22 "Uinta-Wasatch-Cache National Forest   (opens in a new tab)"
+~e206 [offscreen] list-item 301,1297,118,20 "Usda Forest Service"
+~e207 [offscreen] presentation 415,1305,4,4
+~e208 [offscreen] list-item 424,1297,110,20 "Near Kamas, Utah"
+~e209 [offscreen] text 424,1298,30,17 "Near"
+~e210 [offscreen] text 454,1298,38,17 "Kamas"
+~e211 [offscreen] text 492,1298,6,17 ","
+~e212 [offscreen] text 498,1298,27,17 "Utah"
+~e213 [offscreen] presentation 530,1305,4,4
+~e214 [offscreen] list-item 301,1322,136,20 "40milespoint-to-point"
+~e215 [offscreen] text 301,1323,14,17 "40"
+~e216 [offscreen] text 320,1323,30,17 "miles"
+~e217 [offscreen] push-button 356,1322,81,20 "point-to-point"
+~e218 [offscreen] list-item 301,1342,111,20 "122 Campgrounds"
+~e219 [offscreen] text 301,1343,21,17 "122"
+~e220 [offscreen] text 325,1343,79,17 "Campgrounds"
+~e221 [offscreen] presentation 409,1350,4,4
+~e222 [offscreen] list-item 417,1342,75,20 "1 Tree Permit"
+~e223 [offscreen] text 417,1343,7,17 "1"
+~e224 [offscreen] text 427,1343,65,17 "Tree Permit"
+~e225 [offscreen] link 581,1386,83,32 "Buy pass for Uinta-Wasatch-Cache National Forest"
+~e226 [offscreen] text 592,1393,61,17 "Buy a Pass"
+~e227 push-button 806,477,40,40 "Satellite View"
+~e228 presentation 814,485,24,24
+~e229 push-button 1863,477,40,40 "Full Screen"
+~e230 presentation 1873,487,20,20
+~e231 push-button 1863,534,40,40 "Zoom In"
+~e232 presentation 1871,542,24,24
+~e233 push-button 1863,574,40,40 "Zoom Out"
+~e234 presentation 1871,583,24,24
+~e235 region 790,461,1130,812 "Map"
+~e236 region 70,114,1850,12 "Notifications: 0" [occluded]
+~e237 [offscreen] +1316 more lines truncated (scroll to reveal)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

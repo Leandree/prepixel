@@ -1,0 +1,5 @@
+Desktop is idle with Chrome in the dock. I'll launch Chrome to inspect its dark mode state.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 64)", "memo": "Task: disable Chrome dark mode. Step1: clicked Chrome icon in Ubuntu dock to launch it. Next: wait for window, then go to chrome://flags and search 'dark' -> set Auto Dark Mode for Web Contents to Disabled (and check for --force-dark-mode flag)."}
+```

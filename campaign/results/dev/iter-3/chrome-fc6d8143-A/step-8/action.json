@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(851, 297); time.sleep(2.5)", "memo": "JFK->ORD confirmed. Opened trip-type dropdown at (851,297); pick 'One Way' option. Then open Depart-Return (1135,297), select Aug 20 2026 (tomorrow; today=Aug 19 2026), confirm/done, then click Find Flights (1487,297)."}

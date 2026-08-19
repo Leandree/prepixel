@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(220, 47)", "memo": "Task: save each open blog tab as PDF named by title into /home/user/Documents/Blog. Tabs: 1='LLM Powered Autonomous Agents' blog, 2=about:blank (was loading). Just clicked tab 1. Plan: Ctrl+P -> Save as PDF -> set filename=title, path /home/user/Documents/Blog (may need to create folder in save dialog)."}

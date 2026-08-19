@@ -1,0 +1,3 @@
+The preferences dialog has closed and the VLC main window is back. The "Play and exit" option in Tools → Preferences → All (Advanced) → Playlist was verified unchecked and the settings were saved, so VLC will no longer quit when a video finishes.
+
+{"action": "DONE"}

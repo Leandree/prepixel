@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e931","memo":"Sheet1 has headers in row1 (A=Revenue, B=Total Expenses), data A2:B20. Clicked Add-sheet button to create Sheet2. Next: in Sheet2 A1 type 'Total Revenue', B1 'Total Expenses', A2 =SUM(Sheet1.A2:A20), B2 =SUM(Sheet1.B2:B20), then Ctrl+S and Keep Current Format."}
+```

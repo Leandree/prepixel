@@ -1,0 +1,1 @@
+{"action": "key", "keys": "enter", "memo": "Ran sed cmd to set play-and-exit=0 in ~/.config/vlc/vlcrc. Next: crop/read terminal e11 to verify grep output shows 'play-and-exit=0'."}

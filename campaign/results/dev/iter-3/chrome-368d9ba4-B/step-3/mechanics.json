@@ -1,0 +1,35 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 566,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 48,
+  "cdp_records": 99,
+  "offscreen": 60,
+  "url": "https://www.accuweather.com/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 5442,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "Local, National, & Global Daily Weather Forecast | AccuWeather"
+ },
+ "cdp_offscreen_skipped": 347,
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "type",
+ "rung": "kbd",
+ "settle_ms": 5385,
+ "settle_captures": 3,
+ "guard_ms": 30
+}

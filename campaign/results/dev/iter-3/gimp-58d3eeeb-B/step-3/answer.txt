@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+alt+t","memo":"Opening a terminal to inspect heron.jpeg for genuinely embedded data (exiftool/strings/binwalk) - a JPEG could carry an embedded audio or text payload. NOTE: even if audio bytes exist, I cannot listen to audio, so I must not invent a conversation. If no readable embedded transcript is found, answer with 'fail' and explain honestly."}

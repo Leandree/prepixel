@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e115","memo":"On results page, Diamond card (Uinta-Wasatch-Cache NF, Spanish Fork UT) shows only 'ENTER DATES FOR AVAILABILITY'. Clicked the Diamond link (opens NEW TAB) to reach the campground page and read its 'Next Available' dates. Next: switch to/await the new tab, then find Next Available section."}
+```

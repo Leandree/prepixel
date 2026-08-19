@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e826","memo":"Answer=\"Out of the Silent Planet\" (A7; I7=1328.9 words/day, lowest). Open dialog still up with path /home/user/Desktop/book_list_result.docx in location bar; clicked Open button. Next: verify Writer opened, click in body, type title, Ctrl+S, then 'Use Word 2007-365!'."}
+```

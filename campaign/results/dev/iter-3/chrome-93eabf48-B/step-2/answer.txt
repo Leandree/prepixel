@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e12","value":"chrome://settings/appearance","memo":"Task: turn off Chrome dark mode. Typed chrome://settings/appearance into address bar (e12). Next: press Enter, then set Mode to Light."}
+```

@@ -1,0 +1,1 @@
+{"action": "click", "target": "e771", "memo": "Clicked Tools>Macros>Edit Macros to open Basic IDE. Next: click into code pane, ctrl+a, type macro that finds the Calc doc among components and uses Sheets.moveByName to set order: ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration; then store(). Run with F5."}

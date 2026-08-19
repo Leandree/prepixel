@@ -1,0 +1,5 @@
+VLC is now open. Next I'll open Tools → Preferences to find the "Play and exit" setting.
+
+```json
+{"action": "import pyautogui; pyautogui.click(946, 373)", "memo": "VLC open. Opened Tools menu; next click Preferences (Ctrl+P). Goal: Preferences > Show settings 'All' > Playlist > uncheck 'Play and exit' (play-and-exit=0), then Save."}
+```

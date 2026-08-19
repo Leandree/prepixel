@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+a", "memo": "Selected all in Basic editor. NEXT: type macro FixNum: loops DrawPages+MasterPages, for each shape calls Fix(); Fix sets oSh.CharColor=RGB(255,0,0) if String contains <number> or a TextPortionType=\"TextField\" portion exists; then oDoc.store() + MsgBox. Then F5 to run, dismiss dialog."}

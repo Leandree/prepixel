@@ -1,0 +1,1 @@
+{"action":"click","target":"e675","memo":"Enter only moved Calc cursor M65->M66 (desktop clicks do nothing; focus is Calc). Now clicked Open (e675) to get File Open dialog. Next: type ~/Desktop/reminder.docx in filename field and Enter to read the requirements. Assignment = workbook-with-sample-database.xlsx, 10 sheets, current tab Mkt Tera."}

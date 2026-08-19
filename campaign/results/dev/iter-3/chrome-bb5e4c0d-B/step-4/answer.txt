@@ -1,0 +1,1 @@
+{"action":"done","memo":"Verified: the search engines table now shows 'Microsoft Bing (Default)' and Google without the (Default) tag. Bing is the default search engine."}

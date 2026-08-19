@@ -1,0 +1,74 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "node-not-found",
+  "walk_s": 1.1,
+  "near": [
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589935979
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589935979
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589935979
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589935979
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589935979
+   }
+  ]
+ },
+ "rung1_error": "node-not-found",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  539,
+  758
+ ],
+ "settle_ms": 5739,
+ "settle_captures": 2,
+ "guard_ms": 68
+}

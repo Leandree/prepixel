@@ -1,0 +1,37 @@
+{
+ "reprobes": 1,
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 582,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 109,
+  "cdp_records": 197,
+  "offscreen": 60,
+  "url": "https://www.recreation.gov/search?q=Diamond",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 1159,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "1700+ Search Results for \"Diamond\" - Book Online"
+ },
+ "cdp_offscreen_skipped": 1316,
+ "history_views": 3,
+ "history_views_dropped": 1,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 7466,
+ "settle_captures": 2,
+ "guard_ms": 58
+}

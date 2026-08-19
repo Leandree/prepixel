@@ -1,0 +1,22 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "history_views": 2,
+ "history_views_dropped": 12,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "escalated_from_rung1": true,
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1278,
+  820
+ ],
+ "settle_ms": 4690,
+ "settle_captures": 2,
+ "guard_ms": 53
+}

@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+s","memo":"Verified: p1 h74->129 and p2 h56->110 (both doubled); p3-p6 unchanged. Both target paragraphs now double-spaced. Just pressed ctrl+s -> expect 'Keep current format' docx dialog; press Enter (default = Use Word 2007-365!) then done."}

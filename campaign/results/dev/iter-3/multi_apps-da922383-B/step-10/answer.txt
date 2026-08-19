@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+p","memo":"Tab1 LLM Powered Autonomous Agents: pressed ctrl+p. NEXT (5 left): wait -> enter (Save btn) -> ctrl+a -> type '/home/user/Documents/Blog/LLM Powered Autonomous Agents.pdf' -> enter. Tab2 already saved."}
+```

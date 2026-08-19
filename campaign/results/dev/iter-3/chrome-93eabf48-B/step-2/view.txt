@@ -1,0 +1,50 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "New Tab - Memory usage - 56.2 MB"
+~e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+~e8 push-button 70,73,39,34 "Back"
+~e9 push-button 111,73,34,34 "Forward"
+~e10 push-button 147,73,34,34 "Reload"
+~e11 text 195,78,24,24 "Search icon"
+~e12 entry 227,78,1418,24 "Address and search bar"
+~e13 push-button 1653,78,24,24 "Bookmark this tab"
+~e14 push-button 1698,73,34,34 "You"
+~e15 push-button 1737,73,183,34 "Relaunch to update"
+~e16 text 1592,103,334,207 "Can't update Chrome"
+e17 toggle-button 0,0,99,27 "Activities" state=checked:false
+e18 menu 99,0,162,27 "Google Chrome"
+e19 menu 906,0,178,27 "Aug 19 19‎∶33"
+e20 menu 1814,0,106,27 "System"
+e21 push-button 0,840,70,8
+e22 push-button 62,33,8,815
+e23 push-button 0,33,70,64 "Google Chrome"
+e24 push-button 0,101,70,64 "Thunderbird Mail"
+e25 push-button 0,169,70,64 "Visual Studio Code"
+e26 push-button 0,237,70,64 "VLC media player"
+e27 push-button 0,305,70,64 "LibreOffice Writer"
+e28 push-button 0,373,70,64 "LibreOffice Calc"
+e29 push-button 0,441,70,64 "LibreOffice Impress"
+e30 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e31 push-button 0,577,70,64 "Files"
+e32 push-button 0,645,70,64 "Ubuntu Software"
+e33 push-button 0,713,70,64 "Help"
+e34 push-button 0,784,70,64 "Trash"
+e35 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e36 text 70,49,130,31 "Google Chrome"
+~e37 text 83,56,104,17 "Google Chrome"
+~e38 [pixels] image 70,114,1850,966
+~e39 [pixels] image 859,246,272,92
+~e40 combo-box 622,376,746,48 "Search Google or type a URL" [occluded]
+~e41 push-button 1289,376,26,48 "Search by voice" [occluded]
+~e42 push-button 1326,376,26,48 "Search by image" [occluded]
+~e43 link 883,442,112,112 "Web Store" [occluded]
+~e44 [pixels] image 927,470,24,24
+~e45 text 909,522,59,15 "Web Store"
+~e46 push-button 995,442,112,112 "Add shortcut" [occluded]
+~e47 text 1013,522,75,15 "Add shortcut"
+~e48 push-button 1737,1032,167,32 "Customise this page"
+~e49 text 1777,1040,111,15 "Customise Chrome"
+~e50 [pixels] image 70,1080,300,150

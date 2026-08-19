@@ -1,0 +1,1 @@
+{"action":"click","target":"e178","memo":"Calendar open (Aug 2026). Clicked Aug 20, 2026 (tomorrow) = e178. Next: click Done button (e308), then Find Flights (e313)."}

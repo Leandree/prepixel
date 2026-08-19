@@ -1,0 +1,3 @@
+The document shows paragraphs 1–2 with double line spacing (~37px line gaps vs ~18px in the rest), no format-keep dialog is pending, and the file has been saved.
+
+{"action": "DONE"}

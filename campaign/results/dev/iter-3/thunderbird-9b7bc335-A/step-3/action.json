@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1305, 431)", "memo": "Message Filters dialog open (Filters for: anonym-x2024@outlook.com, 0 items). Clicked 'New...' -> expect Filter Rules dialog. Next: type filter name, select 'Match all messages' radio, set action dropdown to 'Forward Message To', type anonym-x2024@gmail.com, click OK."}

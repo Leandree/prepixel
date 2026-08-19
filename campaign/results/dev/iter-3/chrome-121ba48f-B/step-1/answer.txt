@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e26","memo":"Task: on Steam, open Dota 2 store page and use 'Add all DLC to Cart' in the Downloadable Content section. Switched to 'Welcome to Steam' tab; next: use Steam search for Dota 2."}
+```

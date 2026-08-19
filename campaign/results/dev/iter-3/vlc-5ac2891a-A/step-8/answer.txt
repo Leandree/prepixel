@@ -1,0 +1,5 @@
+The dialog closed cleanly after Save. I'll reopen Preferences to verify the setting persisted to `~/.config/vlc/vlcrc`.
+
+```json
+{"action": "import pyautogui; pyautogui.click(945, 345); pyautogui.hotkey('ctrl', 'p')", "memo": "Saved with 'Play and exit' UNCHECKED at step 7 (confirmed in step-7 screenshot); dialog closed OK. Now reopening prefs (Ctrl+P) to verify persistence. Prefs should open in 'All' mode. Next: click Playlist in left tree (~639,471 if same layout, may need scroll down ~6) and confirm 'Play and exit' box at (906,395) is unchecked, then Cancel and DONE."}
+```

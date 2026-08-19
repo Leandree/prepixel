@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(991, 604)", "memo": "Clicked Tools > Preferences. Next: in Preferences dialog, select 'All' radio under 'Show settings' (bottom-left), then navigate to Interface > Main interfaces / Playlist and uncheck 'Play and exit' (play-and-exit), then Save."}
+```

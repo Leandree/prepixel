@@ -1,0 +1,5 @@
+Both stars are now solid orange with the cursor moved away at (705, 612) — no hover artifacts. Both messages in Local Folders → Bills are starred.
+
+```json
+{"action": "DONE", "memo": "Task complete: both emails in Local Folders/Bills (AWS invoice, X receipt) show filled orange stars, verified with cursor away at (700,600)."}
+```

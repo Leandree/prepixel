@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.hotkey('ctrl','s'); pyautogui.sleep(1.5); pyautogui.press('enter'); pyautogui.sleep(1.5)", "memo": "Sheet2 A1='Total Revenue', B1='Total Expenses', A2=867786, B2=411686. Issued Ctrl+S + Enter (Keep current format). Verify no dialog remains and title has no modified marker; then DONE."}

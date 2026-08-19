@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e40","memo":"Cropping e40 (579,499 in panel's left area) to check if screen really shows advanced tree (All mode) or still Simple prefs — a11y tree may be stale. If tree visible: expand Interface > Main interfaces > Qt, uncheck 'Display background cone or art', then Save (e76)."}
+```

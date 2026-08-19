@@ -1,0 +1,5 @@
+The Vignette filter dialog is now open (title "Vignette", with Presets, shape/color settings, and OK/Cancel/Reset buttons).
+
+```json
+{"action":"done","memo":"Vignette filter dialog is open (Filters > Light and Shadow > Vignette). Task complete; did not click OK since only opening was requested."}
+```

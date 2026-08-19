@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1291, 691); pyautogui.sleep(1)", "memo": "Step 4: On chrome://settings/searchEngines. Google is Default; Microsoft Bing row at y=691. Clicked its 3-dot menu (1291,691). Next: click 'Make default' in the popup menu (appears just below/left of the dots), then verify Bing row shows '(Default)'."}

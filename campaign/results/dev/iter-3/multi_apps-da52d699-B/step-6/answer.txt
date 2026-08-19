@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e839","memo":"Writer 'book_list_result' is open (0 words). Answer to type: Out of the Silent Planet. Clicked doc body to focus. Next: type title, then Ctrl+S, then confirm 'Use Word 2007-365!'."}
+```

@@ -1,0 +1,42 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+~e3 text 865,61,260,17 "power" state=focused typed-by-driver="power"
+~e4 push-button 74,1060,1842,8
+~e5 push-button 1908,113,8,955
+~e6 push-button 744,113,147,147 "Power Statistics" state=selected
+~e7 push-button 921,113,147,147 "LibreOffice Impress"
+~e8 push-button 1098,113,147,147 "Power Off"
+~e9 push-button 484,299,180,48 "Settings"
+~e10 push-button 668,299,838,40 "Power"
+~e11 text 760,310,390,17 "View your battery status and change power saving settings"
+~e12 push-button 484,399,180,50 "Characters"
+~e13 text 536,424,47,17 "8 more"
+~e14 push-button 668,399,838,52 "Telugu Fraction Digit Zero For Odd Powers Of Four"
+~e15 text 1052,407,403,36 "U+C78, ౸: Telugu Fraction Digit Zero For Odd Powers Of Four"
+~e16 push-button 668,457,838,52 "Telugu Fraction Digit One For Odd Powers Of Four"
+~e17 text 1048,465,391,36 "U+C79, ౹: Telugu Fraction Digit One For Odd Powers Of Four"
+~e18 push-button 668,515,838,52 "Telugu Fraction Digit Two For Odd Powers Of Four"
+~e19 text 1048,523,398,36 "U+C7A, ౺: Telugu Fraction Digit Two For Odd Powers Of Four"
+~e20 push-button 668,573,838,52 "Telugu Fraction Digit Three For Odd Powers Of Four"
+~e21 text 1059,581,413,36 "U+C7B, ౻: Telugu Fraction Digit Three For Odd Powers Of Four"
+~e22 push-button 668,631,838,52 "Telugu Fraction Digit One For Even Powers Of Four"
+~e23 text 1050,639,403,36 "U+C7C, ౼: Telugu Fraction Digit One For Even Powers Of Four"
+e24 toggle-button 0,0,99,27 "Activities" state=checked:true
+e25 menu 99,0,43,27
+e26 menu 906,0,178,27 "Aug 19 20‎∶48"
+e27 menu 1814,0,106,27 "System"
+e28 push-button 0,840,70,8
+e29 push-button 62,33,8,815
+e30 push-button 0,33,70,64 "Google Chrome"
+e31 push-button 0,101,70,64 "Thunderbird Mail"
+e32 push-button 0,169,70,64 "Visual Studio Code"
+e33 push-button 0,237,70,64 "VLC media player"
+e34 push-button 0,305,70,64 "LibreOffice Writer"
+e35 push-button 0,373,70,64 "LibreOffice Calc"
+e36 push-button 0,441,70,64 "LibreOffice Impress"
+e37 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e38 push-button 0,577,70,64 "Files"
+e39 push-button 0,645,70,64 "Ubuntu Software"
+e40 push-button 0,713,70,64 "Help"
+e41 push-button 0,784,70,64 "Trash"
+e42 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

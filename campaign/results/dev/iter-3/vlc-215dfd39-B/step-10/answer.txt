@@ -1,0 +1,1 @@
+{"action":"click","target":"e75","memo":"Clicked 'All' from a confirmed Simple state -> advanced prefs tree should now render. Next: verify tree appears (left panel with Interface/Audio/Video/... expandable). Then navigate Interface > Main interfaces > Qt and uncheck 'Display background cone or art', then Save (e76)."}

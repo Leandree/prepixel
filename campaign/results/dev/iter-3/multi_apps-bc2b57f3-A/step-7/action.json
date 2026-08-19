@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(902, 558)", "memo": "Opening Basic IDE (Tools>Macros>Edit Macros). Macro plan: s=ThisComponent.Sheets; for i, name in TARGET: s.moveByName(name,i); then ThisComponent.store() to keep xlsx. TARGET: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration."}

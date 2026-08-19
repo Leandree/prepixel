@@ -1,0 +1,3 @@
+"Display background cone or art" is now visible and checked at (905, 679). Unchecking it.
+
+{"action": "import pyautogui; pyautogui.click(905, 679)", "memo": "Clicked to uncheck 'Display background cone or art' (qt-bgcone) at (905,679) in Qt interface prefs. Next: verify checkbox is now unchecked, then click Save at (1210,903)."}

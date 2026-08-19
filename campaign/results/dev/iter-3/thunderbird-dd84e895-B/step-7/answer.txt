@@ -1,0 +1,1 @@
+{"action":"click","target":"e14","memo":"AWS starred (confirmed). Thunderbird window disappeared from view for 2 steps; clicked dock 'Thunderbird Mail' (e14) to restore it. Next: select X (formerly Twitter) row in Bills, then toggle 'Starred' check-box (~1895,124) to true; verify both rows say 'Starred'."}

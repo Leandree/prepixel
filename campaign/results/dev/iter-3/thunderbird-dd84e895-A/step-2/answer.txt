@@ -1,0 +1,5 @@
+Thunderbird is open and I can see the "Bills" folder under Local Folders. Clicking it to open.
+
+```json
+{"action": "import pyautogui; pyautogui.click(195, 508)", "memo": "Clicked Local Folders > Bills (195,508). Next: click first message row in message list, Ctrl+A to select all, then star. Star toggle = 'S' key in Thunderbird (Message > Mark > As Starred). Careful: 'S' on multi-select toggles; verify star column shows filled stars for all rows."}
+```

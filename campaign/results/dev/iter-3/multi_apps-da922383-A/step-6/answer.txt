@@ -1,0 +1,5 @@
+Blog folder doesn't exist — I'll dismiss the error, go to Documents, and create it.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(994, 613); time.sleep(1); pyautogui.click(648, 512); time.sleep(1.5); pyautogui.click(1399, 436); time.sleep(1.5); pyautogui.write('Blog', interval=0.05); time.sleep(0.5); pyautogui.press('enter')", "memo": "Blog folder was missing. Dismissed error, navigated to Documents, clicked new-folder btn (1399,436), typed 'Blog'+Enter. Next: verify we're inside /home/user/Documents/Blog, then set Name field (click 1020,389, ctrl+a) to full path '/home/user/Documents/Blog/LLM Powered Autonomous Agents.pdf' and click Save (1375,389). Then tab2 at 460,47 = 'Thinking about High-Quality Human Data'."}
+```

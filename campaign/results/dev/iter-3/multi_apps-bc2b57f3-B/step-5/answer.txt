@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+l","memo":"File Open dialog is up (GTK). Pressed Ctrl+L for location bar. Next: type ~/Desktop/reminder.docx then Enter to open it in Writer and read requirements. Assignment workbook = workbook-with-sample-database.xlsx (10 sheets, current tab Mkt Tera)."}
+```

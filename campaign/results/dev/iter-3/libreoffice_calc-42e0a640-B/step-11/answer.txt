@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e47","memo":"Clicked A1 to clear full-sheet selection. NEXT (step 12) type in one go: 'Total Revenue<TAB>Total Expenses<NL>=IFERROR(SUM(INDEX(Sheet1.$A$2:$Z$10000,0,MATCH(\"Revenue\",Sheet1.$A$1:$Z$1,0))),SUM(Sheet1.A2:A10000))<TAB>=IFERROR(SUM(INDEX(Sheet1.$A$2:$Z$10000,0,MATCH(\"Total Expenses\",Sheet1.$A$1:$Z$1,0))),SUM(Sheet1.B2:B10000))<NL>'. Then ctrl+s + Enter (Keep format)."}
+```

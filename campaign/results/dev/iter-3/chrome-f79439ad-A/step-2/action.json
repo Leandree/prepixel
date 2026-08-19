@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1213, 671)", "memo": "Ryanair loaded; clicked 'Yes, I agree' on cookie banner. Next: close Chrome update popup (X at 1889,139) & newsletter popup, then select 'One way' radio (566,262), From field (620,328) clear 'Lille'->Dublin, To (1050,328)->Vienna, date 10 Sep, 2 adults, Search."}

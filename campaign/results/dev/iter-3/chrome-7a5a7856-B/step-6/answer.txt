@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+shift+o","memo":"Bookmark exists (Edit bookmark bubble). Opened Bookmark manager to verify it's under Bookmarks bar; if under Other bookmarks, drag/cut-paste into Bookmarks bar. Look for tree items 'Bookmarks bar'/'Other bookmarks' and the 'Illustrated Transformer' row."}

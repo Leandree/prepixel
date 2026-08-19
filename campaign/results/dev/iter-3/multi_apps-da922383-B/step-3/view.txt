@@ -1,0 +1,140 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 358,105,1274,845 "Print"
+e4 toggle-button 0,0,99,27 "Activities" state=checked:false
+e5 menu 99,0,162,27 "Google Chrome"
+e6 menu 906,0,178,27 "Aug 19 21‎∶54"
+e7 menu 1814,0,106,27 "System"
+e8 push-button 0,840,70,8
+e9 push-button 62,33,8,815
+e10 push-button 0,33,70,64 "Google Chrome"
+e11 push-button 0,101,70,64 "Thunderbird Mail"
+e12 push-button 0,169,70,64 "Visual Studio Code"
+e13 push-button 0,237,70,64 "VLC media player"
+e14 push-button 0,305,70,64 "LibreOffice Writer"
+e15 push-button 0,373,70,64 "LibreOffice Calc"
+e16 push-button 0,441,70,64 "LibreOffice Impress"
+e17 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e18 push-button 0,577,70,64 "Files"
+e19 push-button 0,645,70,64 "Ubuntu Software"
+e20 push-button 0,713,70,64 "Help"
+e21 push-button 0,784,70,64 "Trash"
+e22 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e23 link 792,110,72,60 "Lil'Log (Alt + H)"
+e24 text 792,126,72,28 "Lil'Log"
+e25 push-button 872,110,24,60 "(Alt + T)"
+e26 [pixels] image 872,131,24,18
+e27 list-item 904,110,4,60 "|"
+e28 list-item 1488,110,41,60 "Posts"
+e29 link 1488,110,41,60 "Posts"
+e30 list-item 1553,110,54,60 "Archive"
+e31 link 1553,110,54,60 "Archive"
+e32 list-item 1631,110,49,60 "Search"
+e33 link 1631,110,49,60 "Search (Alt + /)"
+e34 list-item 1705,110,34,60 "Tags"
+e35 link 1705,110,34,60 "Tags"
+e36 list-item 1763,110,30,60 "FAQ"
+e37 link 1763,110,30,60 "FAQ"
+e38 heading 921,218,720,43 "Thinking about High-Quality Human Data"
+e39 text 921,266,490,16 "Date: February 5, 2024 | Estimated Reading Time: 20 min | Author: Lilian Weng"
+e40 push-button 950,313,682,24 "(Alt + C)"
+e41 text 965,316,119,18 "Table of Contents"
+e42 list-item 970,347,622,96 "Human Raters ↔ Data Quality The Wisdom of the Crowd Rater Agreement Rater Disagreement & Two Paradigms" [occluded]
+e43 link 970,350,201,18 "Human Raters ↔ Data Quality"
+e44 text 970,350,201,18 "Human Raters ↔ Data Quality"
+e45 list-item 994,371,598,24 "The Wisdom of the Crowd"
+e46 link 994,374,172,18 "The Wisdom of the Crowd"
+e47 list-item 994,395,598,24 "Rater Agreement" [occluded]
+e48 link 994,398,113,18 "Rater Agreement" [occluded]
+e49 list-item 994,419,598,24 "Rater Disagreement & Two Paradigms" [occluded]
+e50 link 994,422,254,18 "Rater Disagreement & Two Paradigms" [occluded]
+e51 list-item 970,443,622,96 "Data Quality ↔ Model Training Influence Functions Prediction Changes during Training Noisy Cross-Validation" [occluded]
+e52 link 970,446,206,18 "Data Quality ↔ Model Training" [occluded]
+e53 text 970,446,206,18 "Data Quality ↔ Model Training"
+e54 list-item 994,467,598,24 "Influence Functions" [occluded]
+e55 link 994,470,133,18 "Influence Functions" [occluded]
+e56 list-item 994,491,598,24 "Prediction Changes during Training" [occluded]
+e57 link 994,494,236,18 "Prediction Changes during Training" [occluded]
+e58 list-item 994,515,598,24 "Noisy Cross-Validation" [occluded]
+e59 link 994,518,155,18 "Noisy Cross-Validation" [occluded]
+e60 list-item 970,539,622,24 "Citation" [occluded]
+e61 link 970,542,53,18 "Citation" [occluded]
+e62 list-item 970,563,622,24 "References" [occluded]
+e63 link 970,566,75,18 "References" [occluded]
+e64 paragraph 921,384,720,51 "[Special thank you to Ian Kivlichan for many useful pointers (E.g. the 100+ year old Nature paper “Vox populi”) and nice feedback. 🙏 ]"
+e65 text 921,387,155,19 "[Special thank you to"
+e66 link 1075,387,92,19 "Ian Kivlichan"
+e67 text 921,387,689,45 "for many useful pointers (E.g. the 100+ year old Nature paper “Vox populi”) and nice feedback. 🙏 ]"
+e68 paragraph 921,455,720,179
+e69 text 921,458,717,45 "High-quality data is the fuel for modern data deep learning model training. Most of the task-specific labeled data comes from human annotation, such as classification task or"
+e70 link 1454,483,39,19 "RLHF"
+e71 text 921,483,718,147 "labeling (which can be constructed as classification format) for LLM alignment training. Lots of ML techniques in the post can help with data quality, but fundamentally human data collection involves attention to details and careful execution. The community knows the value of high quality data, but somehow we have this subtle impression that “Everyone wants to do the model work, not the data work” ("
+e72 link 926,611,169,19 "Sambasivan et al. 2021"
+e73 text 1095,611,11,19 ")."
+e74 [pixels] image 1029,654,504,230
+e75 text 1161,894,302,18 "Two directions to approach high data quality."
+e76 heading 921,949,720,34 "Human Raters ↔ Data Quality#"
+e77 text 921,949,376,33 "Human Raters ↔ Data Quality"
+e78 paragraph 921,1002,720,51 "Collecting human data involve a set of operation steps and every step contributes to the data quality:"
+e79 list-item 941,1073,700,77 "Task design: Design task workflow to improve clarity and reduce complexity. Detailed guidelines are helpful but very long and complicated guidelines demand a decent amount of training to be useful."
+e80 [offscreen] list-item 576,1045,700,77
+e81 [offscreen] text 576,1048,691,70 "Select and train a pool of raters: Select annotators with matched skillset and consistency. Training sessions are necessary. After onboarding, regular feedback and calibration sessions are also needed."
+e82 [offscreen] list-item 576,1127,700,51 "Collect and aggregate data. This is the stage where more ML techniques can be applied to clean, filter and smartly aggregate data to identify the true labels."
+e83 [offscreen] text 647,2018,536,59 "Quality assurance refers to a set of actions that allow one to improve quality by acting on the quality attributes identified in the quality model. (Image source:"
+e84 [offscreen] link 881,2058,118,18 "Daniel et al. 2018"
+e85 [offscreen] text 999,2058,5,18 ")"
+e86 [offscreen] heading 556,2112,720,29 "The Wisdom of the Crowd#"
+e87 [offscreen] text 556,2112,276,28 "The Wisdom of the Crowd"
+e88 [offscreen] paragraph 556,2157,720,205
+e89 [offscreen] link 556,2160,76,19 "Vox populi"
+e90 [offscreen] text 556,2160,713,121 "(originally “Vox populi, vox Dei”), a Latin phrase, means the voice of people. A short paper named was the same name was published in 1907 on Nature. It tracked an event at an annual exhibition where a fat ox was selected and people would guess the weight of the ox in order to win a prize if the guess is close to the real number. The middlemost estimate was treated as “the vox populi” and ended up being very close to the true value. The author concluded"
+e91 [offscreen] text 556,2263,719,45 "“This result is, I think, more creditable to the trustworthiness of a democratic judgment than might have been expected.”"
+e92 [offscreen] text 556,2314,715,45 "This is probably the earliest mention of how crowdsourcing (“the wisdom of the crowd”) would work out."
+e93 [offscreen] paragraph 556,2382,720,154
+e94 [offscreen] text 556,2385,170,19 "Almost 100 years later,"
+e95 [offscreen] link 725,2385,159,19 "Callison-Burch (2009)"
+e96 [offscreen] text 556,2385,709,147 "did an early study on using Amazon Mechanical Turk (AMT) to run non-expert human evaluation on Machine Translation (MT) tasks and even to rely on non-experts to create new gold reference translations. The setup for human evaluation was simple: Each turker is shown a source sentence, a reference translation, and 5 translations from 5 MT systems. They are asked to rank 5 translations from best to worst. Each task is completed by 5 turkers."
+e97 [offscreen] paragraph 556,2556,720,128
+e98 [offscreen] text 556,2559,716,121 "Unsurprisingly, there are spammers producing low quality annotation to only optimize the volume. So when measuring the agreement between experts and non-experts, different weighting schemes need to be applied to downweight the contribution of spammers: (1) “weighted by experts”: using agreement rate with experts on a gold set of 10 examples; (2) “weighted by non-experts”: relying on agreement rate with the rest of turkers on the whole dataset."
+e99 [offscreen] paragraph 556,2704,720,128
+e100 [offscreen] text 556,2707,714,121 "In a harder task, non-expert human annotators were asked to create new gold reference translations. Callison-Burch designed the task in two stages, where the first stage created new translations with reference to MT outputs and the second one filtered translations that may seem to be gerated by a MT system. The correlation between experts’ and crowdsourced translations is higher than that between expert and MT system outputs."
+e101 [offscreen] text 659,3082,514,119 "(Left) The agreement rate is measured by comparing each pair of translation sentences (""A > B"", ""A=B"", ""A < B"") and thus chance agreement is 1/3. The upper bound is set by the expert-expert agreement rate. (Right) Comparison of BLEU score between translations from different sources. LCD (Linguistic Data Consortium) translators provide expert translations. (Image source:"
+e102 [offscreen] link 870,3184,139,18 "Callison-Burch 2009"
+e103 [offscreen] text 1009,3184,5,18 ")"
+e104 [offscreen] heading 556,3238,720,29 "Rater Agreement#"
+e105 [offscreen] text 556,3238,181,28 "Rater Agreement"
+e106 [offscreen] paragraph 556,3283,720,128
+e107 [offscreen] text 556,3286,696,121 "We often think of annotation as targeting a single ground truth and try to evaluate quality against one gold answer with consistent standards. A common practice for finding reliable ground truth labels is to collect multiple labels from multiple raters. Assuming that each rater performs at a different level of quality, we can use a weighted average of annotations but weighted by a proficiency score. This score is often approximated by how often one rater agrees with others."
+e108 [offscreen] paragraph 556,3431,720,51 "Majority Voting: Taking the majority vote is the simplest way of aggregation, equivalent to taking the mode of a set of labels. In this setting, every annotator is contributing equally."
+e109 [offscreen] text 556,3434,110,19 "Majority Voting"
+e110 [offscreen] text 556,3434,694,45 ": Taking the majority vote is the simplest way of aggregation, equivalent to taking the"
+e111 [offscreen] link 582,3459,40,19 "mode"
+e112 [offscreen] text 623,3459,520,19 "of a set of labels. In this setting, every annotator is contributing equally."
+e113 [offscreen] paragraph 556,3502,720,77
+e114 [offscreen] text 556,3505,111,19 "Raw agreement"
+e115 [offscreen] text 667,3505,10,19 "("
+e116 [offscreen] link 676,3505,136,19 "Tratz & Hovy, 2010"
+e117 [offscreen] text 556,3505,664,70 "): Raw agreement counts the percentage of other people agreeing with them. This is indirectly correlated to majority vote, because all members of the majority class are expected to get higher inter-annotator agreement rate."
+e118 [offscreen] paragraph 556,3599,720,102
+e119 [offscreen] text 556,3602,107,19 "Cohen’s Kappa"
+e120 [offscreen] text 662,3602,10,19 "("
+e121 [offscreen] link 672,3602,149,19 "Landis & Koch, 1977"
+e122 [offscreen] text 556,3602,688,45 "): Cohen’s kappa measures the inter-rater agreement in the form of"
+e123 [offscreen] text 612,3622,9,21 "κ"
+e124 [offscreen] text 627,3622,11,21 "="
+e125 [offscreen] text 643,3622,6,21 "("
+e126 [offscreen] text 649,3622,10,21 "p"
+e127 [offscreen] text 659,3635,7,15 "o"
+e128 [offscreen] text 673,3622,11,21 "−"
+e129 [offscreen] text 688,3622,10,21 "p"
+e130 [offscreen] text 698,3635,6,15 "e"
+e131 [offscreen] text 707,3622,6,21 ")"
+e132 [offscreen] text 717,3622,5,21 "/"
+e133 [offscreen] text 727,3622,6,21 "("
+e134 [offscreen] text 733,3622,10,21 "1"
+e135 [offscreen] text 747,3622,11,21 "−"
+e136 [offscreen] text 762,3622,10,21 "p"
+e137 [offscreen] text 771,3635,6,15 "c"
+e138 [offscreen] text 780,3622,6,21 ")"
+e139 [offscreen] text 797,3627,55,19 ", where"
+e140 [offscreen] +1289 more lines truncated (scroll to reveal)

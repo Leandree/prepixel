@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"enter","memo":"Pressed Enter after clicking reminder.docx icon on desktop, expecting Writer to open it. If nothing opens next step, the desktop click isn't registering — instead use Calc File>Open (e675) and type ~/Desktop/reminder.docx. Assignment = workbook-with-sample-database.xlsx in Calc (10 sheets, Mkt Tera active)."}
+```

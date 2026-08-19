@@ -1,0 +1,5 @@
+Bookmark confirmed saved (star is filled blue, folder was "Bookmarks bar"). The bookmarks bar itself is hidden, so I'll show it to verify the bookmark actually landed there.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 'shift', 'b')", "memo": "Bookmark saved to 'Bookmarks bar' folder (star filled blue at 1706,90). Just pressed Ctrl+Shift+B to reveal bookmarks bar. NEXT: verify 'The Illustrated Transformer' chip appears on the bar below the address bar (~y=120); if yes -> DONE."}
+```

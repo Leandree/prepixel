@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1263, 796)", "memo": "Adults=2 set; clicked Done. Next: verify Passengers field reads '2 Adults', One way selected, Depart Thu 10 Sept, then click Search (1425,383)."}

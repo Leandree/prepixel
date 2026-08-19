@@ -1,0 +1,182 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 toggle-button 0,0,99,27 "Activities" state=checked:false
+e4 menu 99,0,191,27 "LibreOffice Impress"
+e5 menu 906,0,178,27 "Aug 19 20‎∶07"
+e6 menu 1814,0,106,27 "System"
+e7 text 810,41,274,28 "Software Updates Available to Download"
+e8 text 810,49,274,20 "Software Updates Available to Download"
+e9 push-button 1208,42,26,26
+e10 text 810,73,291,17 "Please download waiting software updates."
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+~e29 menu 153,64,49,25 "View"
+e30 menu 202,64,55,25 "Insert"
+e31 menu 257,64,66,25 "Format"
+e32 menu 323,64,49,25 "Slide"
+e33 menu 372,64,87,25 "Slide Show"
+e34 menu 459,64,52,25 "Tools"
+e35 menu 511,64,70,25 "Window"
+e36 menu 581,64,47,25 "Help"
+e37 menu 70,89,40,21 "File" value="0.0"
+e38 menu 110,89,43,21 "Edit" value="0.0"
+e39 menu 153,89,50,21 "View" value="0.0"
+e40 menu 203,89,56,21 "Insert" value="0.0"
+e41 menu 259,89,66,21 "Format" value="0.0"
+e42 menu 325,89,49,21 "Slide" value="0.0"
+e43 menu 374,89,90,21 "Slide Show" value="0.0"
+e44 menu 464,89,53,21 "Tools" value="0.0"
+e45 menu 517,89,73,21 "Window" value="0.0"
+e46 menu 590,89,48,21 "Help" value="0.0"
+~e47 text 273,247,1225,799 "Untitled 1 - LibreOffice Presentation"
+~e48 text 291,312,1185,667 "PageShape: Slide 1"
+~e49 text 350,339,1067,111 "PresentationTitle"
+~e50 text 350,358,486,75 "Click to add Title"
+~e51 text 350,468,1067,387 "PresentationSubtitle"
+~e52 text 350,634,357,55 "Click to add Text"
+~e53 scroll-bar 273,1047,1226,12 "Horizontal scroll bar" value="10504.0"
+~e54 scroll-bar 1499,247,12,800 "Vertical scroll bar" value="6439.0"
+~e55 push-button 242,175,20,22 "Close Pane" value="0.0"
+~e56 document-frame 73,204,186,850 "Slides View"
+~e57 text 81,212,170,89 "Slide 1"
+e58 text 1520,169,398,888 "Properties"
+e59 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e60 text 1870,210,44,42 "Properties"
+e61 toggle-button 1874,214,37,35 state=checked:true
+e62 text 1870,252,44,42 "Styles"
+e63 toggle-button 1874,256,37,35 state=checked:false
+e64 text 1870,294,44,42 "Gallery"
+e65 toggle-button 1874,298,37,35 state=checked:false
+e66 text 1870,336,44,42 "Navigator"
+e67 toggle-button 1874,340,37,35 state=checked:false
+e68 text 1870,378,44,42 "Shapes"
+e69 toggle-button 1874,382,37,35 state=checked:false
+e70 text 1870,420,44,42 "Slide Transition"
+e71 toggle-button 1874,424,37,35 state=checked:false
+e72 text 1870,462,44,42 "Animation"
+e73 toggle-button 1874,466,37,35 state=checked:false
+e74 text 1870,504,44,42 "Master Slides"
+e75 toggle-button 1874,508,37,35 state=checked:false
+e76 [pixels] drawing-area 1520,172,10,16
+e77 text 1536,172,305,17 "Properties"
+e78 text 1851,173,16,16 "Close Sidebar Deck"
+e79 push-button 1851,173,16,16
+e80 toggle-button 1520,193,326,17 "Slide" state=checked:true,expanded
+e81 text 1856,197,11,11 "More Options"
+e82 push-button 1856,197,11,11
+e83 toggle-button 1660,291,158,34 state=checked:false
+e84 toggle-button 1660,365,158,34 state=checked:false
+e85 toggle-button 1660,254,158,34 state=checked:false
+e86 toggle-button 1660,217,158,34 state=checked:false
+e87 push-button 1660,452,158,34 "Master View"
+e88 text 1572,254,82,34 "Orientation:"
+e89 check-box 1660,402,158,22 "Master Background" state=checked:true
+e90 push-button 1660,328,158,34 "Insert Image..."
+e91 text 1566,365,88,34 "Master Slide:"
+e92 check-box 1660,427,158,22 "Master Objects" state=checked:true
+e93 text 1571,291,83,34 "Background:"
+e94 text 1600,217,54,34 "Format:"
+e95 toggle-button 1520,493,350,17 "Layouts" state=checked:true,expanded
+e96 text 1520,511,350,198 "Layouts"
+e97 list-item 1521,511,87,66 "Blank Slide"
+e98 list-item 1608,511,87,66 "Title Slide" state=selected
+e99 list-item 1695,511,87,66 "Title, Content"
+e100 list-item 1782,511,87,66 "Title and 2 Content"
+e101 list-item 1521,577,87,66 "Title Only"
+e102 list-item 1608,577,87,66 "Centered Text"
+e103 list-item 1695,577,87,66 "Title, 2 Content and Content"
+e104 list-item 1782,577,87,66 "Title, Content and 2 Content"
+e105 list-item 1521,643,87,66 "Title, 2 Content over Content"
+e106 list-item 1608,643,87,66 "Title, Content over Content"
+e107 list-item 1695,643,87,66 "Title, 4 Content"
+e108 list-item 1782,643,87,66 "Title, 6 Content"
+~e109 text 314,178,1045,26 "Help us make LibreOffice even better!"
+~e110 [pixels] icon 276,171,32,32
+e111 push-button 1365,170,117,34 "Get involved"
+e112 push-button 1489,179,16,16
+~e113 text 314,218,1079,26 "Your donations support our worldwide community."
+~e114 [pixels] icon 276,211,32,32
+e115 push-button 1399,210,83,34 "Donate"
+e116 push-button 1489,219,16,16
+e117 text 70,128,1131,39 "Drawing"
+e118 push-button 74,130,33,35 "Select" value="1.0"
+e119 push-button 107,130,33,35 "Zoom & Pan" value="0.0"
+e120 push-button 148,130,44,35 "Line Color" value="0.0"
+e121 push-button 192,130,44,35 "Fill Color" value="0.0"
+e122 push-button 244,130,33,35 "Line" value="0.0"
+e123 push-button 277,130,33,35 "Rectangle" value="0.0"
+e124 push-button 310,130,33,35 "Ellipse" value="0.0"
+e125 push-button 351,130,44,35 "Lines and Arrows" value="0.0"
+e126 push-button 395,130,44,35 "Curves and Polygons" value="0.0"
+e127 push-button 439,130,44,35 "Connectors" value="0.0"
+e128 push-button 491,130,44,35 "Basic Shapes" value="0.0"
+e129 push-button 535,130,44,35 "Symbol Shapes" value="0.0"
+e130 push-button 579,130,44,35 "Arrow Shapes" value="0.0"
+e131 push-button 623,130,44,35 "Flowchart Shapes" value="0.0"
+e132 push-button 667,130,44,35 "Callout Shapes" value="0.0"
+e133 push-button 711,130,44,35 "Star Shapes" value="0.0"
+e134 push-button 755,130,44,35 "3D Objects" value="0.0"
+e135 push-button 807,130,33,35 "Rotate" value="0.0"
+e136 push-button 840,130,44,35 "Align Objects" value="0.0"
+e137 push-button 884,130,44,35 "Arrange" value="0.0"
+e138 push-button 928,130,44,35 "Distribution" value="0.0"
+e139 toggle-button 980,130,33,35 "Shadow" value="0.0" state=checked:false
+e140 push-button 1013,130,33,35 "Crop" value="0.0"
+e141 push-button 1046,130,44,35 "Filter" value="0.0"
+e142 push-button 1098,130,33,35 "Edit Points" value="0.0"
+e143 push-button 1131,130,33,35 "Gluepoints" value="0.0"
+e144 push-button 1164,130,33,35 "Toggle Extrusion" value="0.0"
+e145 text 70,89,1078,39 "Standard"
+e146 push-button 74,91,44,35 "New" value="0.0"
+e147 push-button 118,91,44,35 "Open" value="0.0"
+e148 push-button 162,91,44,35 "Save" value="0.0"
+e149 push-button 214,91,33,35 "Export Directly as PDF" value="0.0"
+e150 push-button 247,91,33,35 "Print" value="0.0"
+e151 push-button 288,91,33,35 "Cut" value="0.0"
+e152 push-button 321,91,33,35 "Copy" value="0.0"
+e153 push-button 354,91,44,35 "Paste" value="0.0"
+e154 push-button 406,91,33,35 "Clone" value="0.0"
+e155 push-button 447,91,44,35 "Undo" value="0.0"
+e156 push-button 491,91,44,35 "Redo" value="0.0"
+e157 toggle-button 543,91,33,35 "Find and Replace" value="0.0" state=checked:false
+e158 push-button 576,91,33,35 "Spelling" value="0.0"
+e159 toggle-button 617,91,33,35 "Grid" value="0.0" state=checked:false
+e160 push-button 650,87,52,43 "Display Views" value="0.0"
+e161 push-button 702,91,33,35 "Master Slide" value="0.0"
+e162 push-button 743,91,33,35 "Start from First Slide" value="0.0"
+e163 push-button 776,91,33,35 "Start from Current Slide" value="0.0"
+e164 push-button 817,91,44,35 "Table" value="0.0"
+e165 push-button 861,91,33,35 "Image" value="0.0"
+e166 push-button 894,91,33,35 "Media" value="0.0"
+e167 push-button 927,91,33,35 "Chart" value="0.0"
+e168 push-button 968,91,33,35 "Text Box" value="0.0"
+e169 push-button 1001,91,44,35 "Symbol" value="0.0"
+e170 toggle-button 1045,91,33,35 "Insert Fontwork" value="0.0" state=checked:false
+e171 toggle-button 1078,91,33,35 "Hyperlink" value="0.0" state=checked:false
+e172 toggle-button 1111,91,33,35 "Draw Functions" value="1.0" state=checked:true
+e173 text 1148,89,170,39 "Presentation"
+e174 push-button 1152,91,44,35 "New Slide" value="0.0"
+e175 push-button 1196,91,33,35 "Duplicate Slide" value="0.0"
+e176 push-button 1229,91,33,35 "Delete Slide" value="0.0"
+e177 push-button 1270,91,44,35 "Slide Layout" value="0.0"
+e178 text 76,1061,68,18 "Slide 1 of 1"
+e179 text 657,1061,359,18 "Default"
+~e180 text 1022,1061,210,18 "0.26 / 0.97 0.00 x 0.00"
+e181 text 1289,1061,416,18 "English (Hong Kong)"
+~e182 text 1876,1061,38,18 "112%"

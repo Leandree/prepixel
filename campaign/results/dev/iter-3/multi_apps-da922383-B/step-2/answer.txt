@@ -1,0 +1,1 @@
+{"action":"crop","target":"e3","memo":"Task: save both open Lil'Log tabs as PDF to /home/user/Documents/Blog. Tab2(current)='Thinking about High-Quality Human Data', Tab1='LLM Powered Autonomous Agents'. Print dialog open for tab2; cropping to verify Destination=Save as PDF before clicking Save (~1534,881)."}

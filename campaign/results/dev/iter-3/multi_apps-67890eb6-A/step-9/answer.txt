@@ -1,0 +1,5 @@
+openpyxl is missing — installing it and re-running the script.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(480, 520); time.sleep(0.3); pyautogui.write(\"pip3 install -q openpyxl || pip3 install -q --break-system-packages openpyxl; python3 /tmp/a.py\\n\", interval=0.01)", "memo": "openpyxl was missing (ModuleNotFoundError). Ran pip3 install openpyxl (with --break-system-packages fallback) then python3 /tmp/a.py. IDs: 2022.acl-long.220, 2021.acl-long.571, 2020.acl-main.442, P19-1426. Next: check terminal for 4 printed rows + 'SAVED OK'. If pip fails offline, rewrite xlsx via stdlib zipfile XML."}
+```

@@ -1,0 +1,471 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find Dota 2 game and add all DLC to cart.
+
+STEP 3 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click page-tab "Welcome to Steam"
+2. click page-tab "Welcome to Steam - Memory usage - 108 MB"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Tabs: e28 'Dota 2' (dota2.com official site content currently shown), e30 'Welcome to Steam'. No tab shows selected; content is dota2.com. Clicking Welcome to Steam tab again to reach Steam store, then search 'Dota 2' and open store page for 'Add all DLC to Cart'.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 19‎∶29"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Dota 2 - Memory usage - 82.7 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 108 MB"
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1418,24 "Address and search bar"
+e34 push-button 1653,78,24,24 "Bookmark this tab"
+e35 push-button 1698,73,34,34 "You"
+e36 push-button 1737,73,183,34 "Relaunch to update"
+e37 link 1628,343,756,434
+~e38 link -408,343,756,434
+e39 text 1592,103,334,207 "Can't update Chrome"
+e40 link 100,129,200,50
+e41 text 362,141,70,26 "Game"
+e42 [pixels] image 437,151,10,6
+e43 link 342,195,177,17 "Patches" [occluded]
+e44 link 342,221,177,17 "Gameplay Updates" [occluded]
+e45 link 342,247,177,17 "Previous Updates" [occluded]
+e46 link 489,135,93,38 "Heroes"
+e47 link 622,135,67,38 "News"
+e48 link 729,135,103,38 "Esports"
+e49 link 1557,135,51,17 "Login"
+e50 text 1449,157,144,14 "Select Language"
+e51 [pixels] image 1598,162,10,6
+e52 link 1608,114,267,80 "Play for Free"
+e53 [pixels] video 70,114,1850,725
+e54 text 254,285,532,222 "“A Modern Multiplayer Masterpiece.”"
+e55 text 254,505,167,20 "- Destructoid"
+e56 link 254,550,918,108 "Play for FreeDownload on Steam"
+e57 [pixels] image 265,595,48,48
+e58 text 321,594,193,31 "Play for Free"
+e59 text 321,626,191,15 "Download on Steam"
+e60 [pixels] image 70,639,1835,200
+e61 text 403,752,132,16 "Latest News"
+e62 link 555,749,124,23 "View All"
+e63 link 403,797,370,245 "The sixteen best Dota teams in the world spent the last week battling through an intense Group Stage, and now only eight contenders remain.The International Main Event19 August 2026"
+e64 [pixels] image 403,797,370,243
+e65 text 423,1000,336,34 "The International Main Event"
+e66 text 423,978,144,16 "19 August 2026"
+e67 link 803,797,370,245
+e68 [pixels] image 803,797,370,243
+e69 text 823,972,311,62 "The International: Streams, Secret Shop, and More"
+e70 text 823,950,144,16 "12 August 2026"
+e71 link 1203,797,370,245
+e72 [pixels] image 1203,797,370,243
+e73 text 1223,972,293,62 "Gameplay Patch 7.41e and Summer Scrub"
+e74 text 1223,950,112,16 "31 July 2026"
+e75 [pixels] image 70,907,1835,771
+e76 [pixels] image 70,907,1835,978
+e77 [offscreen] text 739,1395,358,101 "Join the"
+e78 [offscreen] text 427,1546,981,116 "Every day, millions of players worldwide enter the battle as one of over a hundred Dota Heroes in a 5v5 team clash. Dota is the deepest multi-player action RTS game ever made and there's always a new strategy or tactic to discover. It's completely free to play and always will be – start defending your ancient now."
+e79 [offscreen] link 768,1665,298,106 "See What's New"
+e80 [offscreen] text 620,2884,594,101 "Who Will You"
+e81 [offscreen] text 420,3035,995,86 "From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory."
+e82 [offscreen] link 764,3124,306,106 "View All Heroes"
+~e83 [offscreen] link -2592,3275,255,127 "Anti-Mage"
+~e84 [offscreen] link -2327,3275,255,127 "Axe"
+~e85 [offscreen] link -2062,3275,255,127 "Bane"
+~e86 [offscreen] link -1797,3275,255,127 "Bloodseeker"
+~e87 [offscreen] link -1532,3275,255,127 "Crystal Maiden"
+~e88 [offscreen] link -1267,3275,255,127 "Drow Ranger"
+~e89 [offscreen] link -1002,3275,255,127 "Earthshaker"
+~e90 [offscreen] link -737,3275,255,127 "Juggernaut"
+~e91 [offscreen] link -472,3275,255,127 "Mirana"
+~e92 [offscreen] link -207,3275,255,127 "Shadow Fiend"
+~e93 [offscreen] link 58,3275,255,127 "Morphling"
+~e94 [offscreen] link 323,3275,255,127 "Phantom Lancer"
+~e95 [offscreen] link 588,3275,255,127 "Puck"
+~e96 [offscreen] link 853,3275,255,127 "Pudge"
+~e97 [offscreen] link 1118,3275,255,127 "Razor"
+~e98 [offscreen] link 1383,3275,255,127 "Sand King"
+~e99 [offscreen] link 1648,3275,255,127 "Storm Spirit"
+~e100 [offscreen] link 1913,3275,255,127 "Sven"
+~e101 [offscreen] link 2178,3275,255,127 "Tiny"
+~e102 [offscreen] link 2443,3275,255,127 "Vengeful Spirit"
+~e103 [offscreen] link 2708,3275,255,127 "Windranger"
+~e104 [offscreen] link 2973,3275,255,127 "Zeus"
+~e105 [offscreen] link 3238,3275,255,127 "Kunkka"
+~e106 [offscreen] link 3503,3275,255,127 "Lina"
+~e107 [offscreen] link 3768,3275,255,127 "Lich"
+~e108 [offscreen] link 4033,3275,255,127 "Lion"
+~e109 [offscreen] link 4298,3275,255,127 "Anti-Mage"
+~e110 [offscreen] link 4563,3275,255,127 "Axe"
+~e111 [offscreen] link 4828,3275,255,127 "Bane"
+~e112 [offscreen] link 5093,3275,255,127 "Bloodseeker"
+~e113 [offscreen] link 5358,3275,255,127 "Crystal Maiden"
+~e114 [offscreen] link 5623,3275,255,127 "Drow Ranger"
+~e115 [offscreen] link 5888,3275,255,127 "Earthshaker"
+~e116 [offscreen] link 6153,3275,255,127 "Juggernaut"
+~e117 [offscreen] link 6418,3275,255,127 "Mirana"
+~e118 [offscreen] link 6683,3275,255,127 "Shadow Fiend"
+~e119 [offscreen] link 6948,3275,255,127 "Morphling"
+~e120 [offscreen] link 7213,3275,255,127 "Phantom Lancer"
+~e121 [offscreen] link 7478,3275,255,127 "Puck"
+~e122 [offscreen] link 7743,3275,255,127 "Pudge"
+~e123 [offscreen] link 8008,3275,255,127 "Razor"
+~e124 [offscreen] link 8273,3275,255,127 "Sand King"
+~e125 [offscreen] link 8538,3275,255,127 "Storm Spirit"
+~e126 [offscreen] link 8803,3275,255,127 "Sven"
+~e127 [offscreen] link 9068,3275,255,127 "Tiny"
+~e128 [offscreen] link 9333,3275,255,127 "Vengeful Spirit"
+~e129 [offscreen] link 9598,3275,255,127 "Windranger"
+~e130 [offscreen] link 9863,3275,255,127 "Zeus"
+~e131 [offscreen] link 10128,3275,255,127 "Kunkka"
+~e132 [offscreen] link 10393,3275,255,127 "Lina"
+~e133 [offscreen] link 10658,3275,255,127 "Lich"
+~e134 [offscreen] link 10923,3275,255,127 "Lion"
+~e135 [offscreen] link -2847,3413,255,127 "Shadow Shaman"
+~e136 [offscreen] link -2582,3413,255,127 "Slardar"
+e137 [offscreen] +811 more lines truncated (scroll to reveal)
+[act-guard] previous action: UNVERIFIED (element re-read unchanged: still page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 108 MB")
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 1 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 19‎∶28"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Dota 2"
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Welcome to Steam" state=selected
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1565,24 "Address and search bar"
+e34 push-button 1800,78,24,24 "Bookmark this tab"
+e35 push-button 1845,73,34,34 "You"
+e36 push-button 1881,73,39,34 "Chrome"
+e37 link 1628,343,756,434
+e38 link -408,343,756,434
+e39 link 100,129,200,50
+e40 text 362,141,70,26 "Game"
+e41 [pixels] image 437,151,10,6
+e42 link 342,195,177,17 "Patches" [occluded]
+e43 link 342,221,177,17 "Gameplay Updates" [occluded]
+e44 link 342,247,177,17 "Previous Updates" [occluded]
+e45 link 489,135,93,38 "Heroes"
+e46 link 622,135,67,38 "News"
+e47 link 729,135,103,38 "Esports"
+e48 link 1557,135,51,17 "Login"
+e49 text 1449,157,144,14 "Select Language"
+e50 [pixels] image 1598,162,10,6
+e51 link 1608,114,267,80 "Play for Free"
+e52 [pixels] video 70,114,1850,725
+e53 text 254,285,532,222 "“A Modern Multiplayer Masterpiece.”"
+e54 text 254,505,167,20 "- Destructoid"
+e55 link 254,550,918,108 "Play for FreeDownload on Steam"
+e56 [pixels] image 265,595,48,48
+e57 text 321,594,193,31 "Play for Free"
+e58 text 321,626,191,15 "Download on Steam"
+e59 [pixels] image 70,639,1835,200
+e60 text 403,752,132,16 "Latest News"
+e61 link 555,749,124,23 "View All"
+e62 link 403,797,370,245 "The sixteen best Dota teams in the world spent the last week battling through an intense Group Stage, and now only eight contenders remain.The International Main Event19 August 2026"
+e63 [pixels] image 403,797,370,243
+e64 text 423,1000,336,34 "The International Main Event"
+e65 text 423,978,144,16 "19 August 2026"
+e66 link 803,797,370,245
+e67 [pixels] image 803,797,370,243
+e68 text 823,972,311,62 "The International: Streams, Secret Shop, and More"
+e69 text 823,950,144,16 "12 August 2026"
+e70 link 1203,797,370,245
+e71 [pixels] image 1203,797,370,243
+e72 text 1223,972,293,62 "Gameplay Patch 7.41e and Summer Scrub"
+e73 text 1223,950,112,16 "31 July 2026"
+e74 [pixels] image 70,907,1835,771
+e75 [pixels] image 70,907,1835,978
+e76 [offscreen] text 739,1395,358,101 "Join the"
+e77 [offscreen] text 427,1546,981,116 "Every day, millions of players worldwide enter the battle as one of over a hundred Dota Heroes in a 5v5 team clash. Dota is the deepest multi-player action RTS game ever made and there's always a new strategy or tactic to discover. It's completely free to play and always will be – start defending your ancient now."
+e78 [offscreen] link 768,1665,298,106 "See What's New"
+e79 [offscreen] text 620,2884,594,101 "Who Will You"
+e80 [offscreen] text 420,3035,995,86 "From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory."
+e81 [offscreen] link 764,3124,306,106 "View All Heroes"
+e82 [offscreen] link -14,3275,255,127 "Anti-Mage"
+e83 [offscreen] link 251,3275,255,127 "Axe"
+e84 [offscreen] link 516,3275,255,127 "Bane"
+e85 [offscreen] link 781,3275,255,127 "Bloodseeker"
+e86 [offscreen] link 1046,3275,255,127 "Crystal Maiden"
+e87 [offscreen] link 1311,3275,255,127 "Drow Ranger"
+e88 [offscreen] link 1576,3275,255,127 "Earthshaker"
+e89 [offscreen] link 1841,3275,255,127 "Juggernaut"
+e90 [offscreen] link 2106,3275,255,127 "Mirana"
+e91 [offscreen] link 2371,3275,255,127 "Shadow Fiend"
+e92 [offscreen] link 2636,3275,255,127 "Morphling"
+e93 [offscreen] link 2901,3275,255,127 "Phantom Lancer"
+e94 [offscreen] link 3166,3275,255,127 "Puck"
+e95 [offscreen] link 3431,3275,255,127 "Pudge"
+e96 [offscreen] link 3696,3275,255,127 "Razor"
+e97 [offscreen] link 3961,3275,255,127 "Sand King"
+e98 [offscreen] link 4226,3275,255,127 "Storm Spirit"
+e99 [offscreen] link 4491,3275,255,127 "Sven"
+e100 [offscreen] link 4756,3275,255,127 "Tiny"
+e101 [offscreen] link 5021,3275,255,127 "Vengeful Spirit"
+e102 [offscreen] link 5286,3275,255,127 "Windranger"
+e103 [offscreen] link 5551,3275,255,127 "Zeus"
+e104 [offscreen] link 5816,3275,255,127 "Kunkka"
+e105 [offscreen] link 6081,3275,255,127 "Lina"
+e106 [offscreen] link 6346,3275,255,127 "Lich"
+e107 [offscreen] link 6611,3275,255,127 "Lion"
+e108 [offscreen] link 6876,3275,255,127 "Anti-Mage"
+e109 [offscreen] link 7141,3275,255,127 "Axe"
+e110 [offscreen] link 7406,3275,255,127 "Bane"
+e111 [offscreen] link 7671,3275,255,127 "Bloodseeker"
+e112 [offscreen] link 7936,3275,255,127 "Crystal Maiden"
+e113 [offscreen] link 8201,3275,255,127 "Drow Ranger"
+e114 [offscreen] link 8466,3275,255,127 "Earthshaker"
+e115 [offscreen] link 8731,3275,255,127 "Juggernaut"
+e116 [offscreen] link 8996,3275,255,127 "Mirana"
+e117 [offscreen] link 9261,3275,255,127 "Shadow Fiend"
+e118 [offscreen] link 9526,3275,255,127 "Morphling"
+e119 [offscreen] link 9791,3275,255,127 "Phantom Lancer"
+e120 [offscreen] link 10056,3275,255,127 "Puck"
+e121 [offscreen] link 10321,3275,255,127 "Pudge"
+e122 [offscreen] link 10586,3275,255,127 "Razor"
+e123 [offscreen] link 10851,3275,255,127 "Sand King"
+e124 [offscreen] link 11116,3275,255,127 "Storm Spirit"
+e125 [offscreen] link 11381,3275,255,127 "Sven"
+e126 [offscreen] link 11646,3275,255,127 "Tiny"
+e127 [offscreen] link 11911,3275,255,127 "Vengeful Spirit"
+e128 [offscreen] link 12176,3275,255,127 "Windranger"
+e129 [offscreen] link 12441,3275,255,127 "Zeus"
+e130 [offscreen] link 12706,3275,255,127 "Kunkka"
+e131 [offscreen] link 12971,3275,255,127 "Lina"
+e132 [offscreen] link 13236,3275,255,127 "Lich"
+e133 [offscreen] link 13501,3275,255,127 "Lion"
+e134 [offscreen] link -6191,3413,255,127 "Shadow Shaman"
+e135 [offscreen] link -5926,3413,255,127 "Slardar"
+e136 [offscreen] +811 more lines truncated (scroll to reveal)
+
+--- view at step 2 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 19 19‎∶28"
+e4 menu 1814,0,106,27 "System"
+~e5 text 810,41,274,28 "Software Updates Available to Download"
+~e6 text 810,49,274,20 "Software Updates Available to Download"
+~e7 push-button 1208,42,26,26
+~e8 text 810,73,291,17 "Please download waiting software updates."
+e9 push-button 0,840,70,8
+e10 push-button 62,33,8,815
+e11 push-button 0,33,70,64 "Google Chrome"
+e12 push-button 0,101,70,64 "Thunderbird Mail"
+e13 push-button 0,169,70,64 "Visual Studio Code"
+e14 push-button 0,237,70,64 "VLC media player"
+e15 push-button 0,305,70,64 "LibreOffice Writer"
+e16 push-button 0,373,70,64 "LibreOffice Calc"
+e17 push-button 0,441,70,64 "LibreOffice Impress"
+e18 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e19 push-button 0,577,70,64 "Files"
+e20 push-button 0,645,70,64 "Ubuntu Software"
+e21 push-button 0,713,70,64 "Help"
+e22 push-button 0,784,70,64 "Trash"
+e23 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e24 push-button 1802,27,30,35 "Minimise"
+e25 push-button 1842,27,30,35 "Restore"
+e26 push-button 1882,27,38,35 "Close"
+e27 push-button 76,27,28,41 "Search tabs"
+e28 page-tab 98,27,256,41 "Dota 2 - Memory usage - 82.7 MB"
+e29 push-button 312,33,28,28 "Close"
+e30 page-tab 336,27,256,41 "Welcome to Steam - Memory usage - 108 MB"
+e31 push-button 550,33,28,28 "Close"
+e32 push-button 586,27,28,41 "New Tab"
+e33 push-button 70,73,39,34 "Back"
+e34 push-button 111,73,34,34 "Forward"
+e35 push-button 147,73,34,34 "Reload"
+e36 push-button 195,78,24,24 "View site information"
+~e37 entry 227,78,1418,24 "Address and search bar"
+~e38 push-button 1653,78,24,24 "Bookmark this tab"
+~e39 push-button 1698,73,34,34 "You"
+~e40 push-button 1737,73,183,34 "Relaunch to update"
+~e41 link -408,343,756,434 "LIVE"
+e42 link 1628,343,756,434
+~e43 text 1592,103,334,207 "Can't update Chrome"
+e44 link 100,129,200,50
+e45 text 362,141,70,26 "Game"
+e46 [pixels] image 437,151,10,6
+e47 link 342,195,177,17 "Patches" [occluded]
+e48 link 342,221,177,17 "Gameplay Updates" [occluded]
+e49 link 342,247,177,17 "Previous Updates" [occluded]
+e50 link 489,135,93,38 "Heroes"
+e51 link 622,135,67,38 "News"
+e52 link 729,135,103,38 "Esports"
+e53 link 1557,135,51,17 "Login"
+e54 text 1449,157,144,14 "Select Language"
+e55 [pixels] image 1598,162,10,6
+e56 link 1608,114,267,80 "Play for Free"
+e57 [pixels] video 70,114,1850,725
+e58 text 254,285,532,222 "“A Modern Multiplayer Masterpiece.”"
+e59 text 254,505,167,20 "- Destructoid"
+e60 link 254,550,918,108 "Play for FreeDownload on Steam"
+e61 [pixels] image 265,595,48,48
+e62 text 321,594,193,31 "Play for Free"
+e63 text 321,626,191,15 "Download on Steam"
+e64 [pixels] image 70,639,1835,200
+e65 text 403,752,132,16 "Latest News"
+e66 link 555,749,124,23 "View All"
+e67 link 403,797,370,245 "The sixteen best Dota teams in the world spent the last week battling through an intense Group Stage, and now only eight contenders remain.The International Main Event19 August 2026"
+e68 [pixels] image 403,797,370,243
+e69 text 423,1000,336,34 "The International Main Event"
+e70 text 423,978,144,16 "19 August 2026"
+e71 link 803,797,370,245
+e72 [pixels] image 803,797,370,243
+e73 text 823,972,311,62 "The International: Streams, Secret Shop, and More"
+e74 text 823,950,144,16 "12 August 2026"
+e75 link 1203,797,370,245
+e76 [pixels] image 1203,797,370,243
+e77 text 1223,972,293,62 "Gameplay Patch 7.41e and Summer Scrub"
+e78 text 1223,950,112,16 "31 July 2026"
+e79 [pixels] image 70,907,1835,771
+e80 [pixels] image 70,907,1835,978
+e81 [offscreen] text 739,1395,358,101 "Join the"
+e82 [offscreen] text 427,1546,981,116 "Every day, millions of players worldwide enter the battle as one of over a hundred Dota Heroes in a 5v5 team clash. Dota is the deepest multi-player action RTS game ever made and there's always a new strategy or tactic to discover. It's completely free to play and always will be – start defending your ancient now."
+e83 [offscreen] link 768,1665,298,106 "See What's New"
+e84 [offscreen] text 620,2884,594,101 "Who Will You"
+e85 [offscreen] text 420,3035,995,86 "From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory."
+e86 [offscreen] link 764,3124,306,106 "View All Heroes"
+~e87 [offscreen] link -1101,3275,255,127 "Anti-Mage"
+~e88 [offscreen] link -836,3275,255,127 "Axe"
+~e89 [offscreen] link -571,3275,255,127 "Bane"
+~e90 [offscreen] link -306,3275,255,127 "Bloodseeker"
+~e91 [offscreen] link -41,3275,255,127 "Crystal Maiden"
+~e92 [offscreen] link 224,3275,255,127 "Drow Ranger"
+~e93 [offscreen] link 489,3275,255,127 "Earthshaker"
+~e94 [offscreen] link 754,3275,255,127 "Juggernaut"
+~e95 [offscreen] link 1019,3275,255,127 "Mirana"
+~e96 [offscreen] link 1284,3275,255,127 "Shadow Fiend"
+~e97 [offscreen] link 1549,3275,255,127 "Morphling"
+~e98 [offscreen] link 1814,3275,255,127 "Phantom Lancer"
+~e99 [offscreen] link 2079,3275,255,127 "Puck"
+~e100 [offscreen] link 2344,3275,255,127 "Pudge"
+~e101 [offscreen] link 2609,3275,255,127 "Razor"
+~e102 [offscreen] link 2874,3275,255,127 "Sand King"
+~e103 [offscreen] link 3139,3275,255,127 "Storm Spirit"
+~e104 [offscreen] link 3404,3275,255,127 "Sven"
+~e105 [offscreen] link 3669,3275,255,127 "Tiny"
+~e106 [offscreen] link 3934,3275,255,127 "Vengeful Spirit"
+~e107 [offscreen] link 4199,3275,255,127 "Windranger"
+~e108 [offscreen] link 4464,3275,255,127 "Zeus"
+~e109 [offscreen] link 4729,3275,255,127 "Kunkka"
+~e110 [offscreen] link 4994,3275,255,127 "Lina"
+~e111 [offscreen] link 5259,3275,255,127 "Lich"
+~e112 [offscreen] link 5524,3275,255,127 "Lion"
+~e113 [offscreen] link 5789,3275,255,127 "Anti-Mage"
+~e114 [offscreen] link 6054,3275,255,127 "Axe"
+~e115 [offscreen] link 6319,3275,255,127 "Bane"
+~e116 [offscreen] link 6584,3275,255,127 "Bloodseeker"
+~e117 [offscreen] link 6849,3275,255,127 "Crystal Maiden"
+~e118 [offscreen] link 7114,3275,255,127 "Drow Ranger"
+~e119 [offscreen] link 7379,3275,255,127 "Earthshaker"
+~e120 [offscreen] link 7644,3275,255,127 "Juggernaut"
+~e121 [offscreen] link 7909,3275,255,127 "Mirana"
+~e122 [offscreen] link 8174,3275,255,127 "Shadow Fiend"
+~e123 [offscreen] link 8439,3275,255,127 "Morphling"
+~e124 [offscreen] link 8704,3275,255,127 "Phantom Lancer"
+~e125 [offscreen] link 8969,3275,255,127 "Puck"
+~e126 [offscreen] link 9234,3275,255,127 "Pudge"
+~e127 [offscreen] link 9499,3275,255,127 "Razor"
+~e128 [offscreen] link 9764,3275,255,127 "Sand King"
+~e129 [offscreen] link 10029,3275,255,127 "Storm Spirit"
+~e130 [offscreen] link 10294,3275,255,127 "Sven"
+~e131 [offscreen] link 10559,3275,255,127 "Tiny"
+~e132 [offscreen] link 10824,3275,255,127 "Vengeful Spirit"
+~e133 [offscreen] link 11089,3275,255,127 "Windranger"
+~e134 [offscreen] link 11354,3275,255,127 "Zeus"
+~e135 [offscreen] link 11619,3275,255,127 "Kunkka"
+~e136 [offscreen] link 11884,3275,255,127 "Lina"
+~e137 [offscreen] link 12149,3275,255,127 "Lich"
+~e138 [offscreen] link 12414,3275,255,127 "Lion"
+~e139 [offscreen] link -4781,3413,255,127 "Shadow Shaman"
+~e140 [offscreen] link -4516,3413,255,127 "Slardar"
+e141 [offscreen] +811 more lines truncated (scroll to reveal)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

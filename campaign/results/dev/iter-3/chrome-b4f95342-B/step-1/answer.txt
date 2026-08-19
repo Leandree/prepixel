@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Chrome open on Recreation.gov tab but structured view shows no page content — waiting for page to load/expose accessibility tree. Goal: find 'Next Available' dates for Diamond (likely a campground search result)."}

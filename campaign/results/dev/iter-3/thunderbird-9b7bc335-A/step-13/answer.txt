@@ -1,0 +1,5 @@
+The filter is confirmed correct in the list (enabled, 1 item). Now closing the Message Filters window.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1376, 321)", "memo": "Filter 'Forward to gmail' (Match all messages -> Forward to anonym-x2024@gmail.com, on Getting New Mail) is created and enabled. Clicked X to close Message Filters window. Next step: verify window closed, then DONE."}
+```

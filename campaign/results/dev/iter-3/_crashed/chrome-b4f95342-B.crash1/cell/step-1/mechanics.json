@@ -1,0 +1,26 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no on-screen web document in 'google chrome'"
+ },
+ "history_views": 0,
+ "history_views_dropped": 0,
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1009,
+  90
+ ],
+ "settle_ms": 6224,
+ "settle_captures": 2,
+ "guard_ms": 39
+}

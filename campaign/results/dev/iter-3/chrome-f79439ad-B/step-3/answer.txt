@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e83","value":"Dublin","memo":"Set From=Dublin via set_value on e83 (was 'Lille'). One-way click at step 2 was UNVERIFIED - must confirm one-way is selected (no return date field) before searching. Next: pick 'Dublin' from the suggestion dropdown, then To=Vienna (e86), date 10 Sep 2026, 2 adults, Search (e87)."}
+```

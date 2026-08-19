@@ -1,0 +1,1 @@
+{"action": "key", "keys": "down", "memo": "Filters (e32) is focused but no submenu items appear in the tree \u2014 pressing Down to actually open the dropdown. Next: check if menu-items are exposed. If yes, click 'Light and Shadow' then 'Vignette'. If not, press 'l' (mnemonic for Light and Shadow) then 'v'/arrow-navigate to Vignette."}

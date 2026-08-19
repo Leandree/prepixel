@@ -1,0 +1,1 @@
+{"action":"click","target":"e219","memo":"From=Dublin. Clicked Vienna (Austria airport list) -> verify To=Vienna next. Then: date 10 Sep 2026 in calendar, passengers 2 adults (open passenger selector), re-check 'One way' label (e76) is selected, then Search (e87)."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(151, 314); pyautogui.sleep(0.5); pyautogui.write('Total Revenue\tTotal Expenses\n=SUM(Sheet1.A2:A20)\t=SUM(Sheet1.B2:B20)\n', interval=0.05)", "memo": "Clicked Sheet2!A1 then typed headers+formulas. Verify A1/B1 text and A2/B2 numbers appear; if still empty, use Name Box to go to A1. Then Ctrl+S + Enter (Keep xlsx format)."}

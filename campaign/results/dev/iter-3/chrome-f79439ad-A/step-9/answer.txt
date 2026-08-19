@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1062, 602)", "memo": "Clicked Sept 10 2026 in calendar (1062,602). Next: verify Depart shows 10 Sep; then click Passengers field (1135,384) and add 1 adult (2 total), then Search (1425,383)."}

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e110","memo":"Search results loaded; Diamond card only says 'ENTER DATES FOR AVAILABILITY'. Clicked Diamond link (opens new tab) to reach campground page and find 'Next Available' dates. Next: switch to the new tab if needed and look for availability info."}
+```

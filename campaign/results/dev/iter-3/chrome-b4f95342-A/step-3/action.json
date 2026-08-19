@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(894, 247)", "memo": "Clicked 'Ignore' to dismiss outdated-browser banner. Next: click main search box (~910,625 before banner removal; page will shift up ~180px, so re-check screenshot), type 'Diamond', click SEARCH. Goal: find Next Available dates for Diamond."}

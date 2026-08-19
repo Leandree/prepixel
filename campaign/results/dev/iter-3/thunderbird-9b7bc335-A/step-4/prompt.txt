@@ -1,0 +1,35 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Set up to forward every email received by anonym-x2024@outlook.com in the future to anonym-x2024@gmail.com. Please don't touch the online account. Just locally in the Thunderbird!
+
+STEP 4 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(35, 133)
+2. import pyautogui; pyautogui.click(1007, 210)
+3. import pyautogui; pyautogui.click(1305, 431)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Message Filters dialog open (Filters for: anonym-x2024@outlook.com, 0 items). Clicked 'New...' -> expect Filter Rules dialog. Next: type filter name, select 'Match all messages' radio, set action dropdown to 'Forward Message To', type anonym-x2024@gmail.com, click OK.
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter3/thunderbird-9b7bc335-A/_pixels/step-4/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter3/thunderbird-9b7bc335-A/_pixels/step-1/screenshot.png
+/home/leandre/dev/osworld-dev-iter3/thunderbird-9b7bc335-A/_pixels/step-2/screenshot.png
+/home/leandre/dev/osworld-dev-iter3/thunderbird-9b7bc335-A/_pixels/step-3/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

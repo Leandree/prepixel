@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"Total Revenue\tTotal Expenses\n","memo":"Prior blob-type FAILED: A1 ended up holding =SUM(Sheet1.B2:B1000) (411686), B1/A2/B2 empty. Redoing row-by-row. Just typed row1 headers (Tab-separated, Enter). NEXT: verify A1 value changed from 411686 to 0.0 (text) and cursor at A2, then type \"=SUM(Sheet1.A2:A1000)\\t=SUM(Sheet1.B2:B1000)\\n\", confirm A2/B2 show numbers, then ctrl+s + Enter (Keep current format)."}
+```

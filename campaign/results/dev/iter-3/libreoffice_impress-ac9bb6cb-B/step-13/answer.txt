@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e314","value":"FixNum","memo":"Basic Macros dialog reappeared after IDE Run. Typing macro name 'FixNum' into Macro Name field, then click Run (e327). If Run does nothing, the library tree (My Macros>Standard>Module1) likely needs expanding/selecting first."}
+```

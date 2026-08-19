@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e75","memo":"On Manchester, ENG GB weather page; clicked 'Monthly' tab. Next: read August 2026 monthly forecast calendar (highs/lows) for Manchester, GB."}
+```

@@ -1,0 +1,1 @@
+{"action":"type","text":"~/Desktop/reminder.docx\n","memo":"Typed ~/Desktop/reminder.docx into GTK location bar + Enter. Next: wait for Writer to open reminder.docx, then read requirements. Assignment workbook = workbook-with-sample-database.xlsx (10 sheets, tab Mkt Tera active)."}

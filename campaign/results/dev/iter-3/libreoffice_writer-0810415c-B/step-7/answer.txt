@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e150","memo":"Clicked 'Spacing: 2' in Line Spacing dropdown for current selection (349ch = p1). NEXT: verify p1 (was y386,h74) grew taller; then click inside p2 'A novel may have any number of climaxes...' (y478), open e143 Line Spacing, pick 'Spacing: 2'. Then ctrl+s -> Enter to Keep current format (docx)."}
+```

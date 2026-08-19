@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(475, 77)", "memo": "Step4: Convert dialog closed; clicked Filters menu (475,77). Next: hover/click 'Light and Shadow' submenu in the dropdown, then 'Vignette...' item."}

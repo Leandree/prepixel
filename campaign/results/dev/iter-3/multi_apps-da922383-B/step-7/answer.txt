@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"/home/user/Documents/Blog/Thinking about High-Quality Human Data.pdf","memo":"Typed full path into (invisible) GTK save dialog name field for Tab2 'Thinking about High-Quality Human Data'. NEXT: press enter to save, then crop e63 to verify dialog closed. Then switch to Tab1 (e26) 'LLM Powered Autonomous Agents', ctrl+p, enter, ctrl+a, type path, enter."}
+```

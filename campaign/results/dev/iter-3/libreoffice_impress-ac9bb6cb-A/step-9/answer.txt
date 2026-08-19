@@ -1,0 +1,5 @@
+Master Slide view is active and I can see the `<number>` placeholder at bottom-right (~1421, 945). I'll select its text.
+
+```json
+{"action": "import pyautogui, time; pyautogui.tripleClick(1421, 945); time.sleep(1.5)", "memo": "Step9: In MASTER SLIDE view of saa-format-guide.pptx. Triple-clicked <number> placeholder at (1421,945) to enter text edit + select field. NEXT: screenshot to confirm text selected (handles+highlight). Then Format>Character>Font Color>Red, or font-color dropdown arrow ~(1075,108) -> pick red. Then Close Master View (1738,431) + ctrl+s + Keep format."}
+```

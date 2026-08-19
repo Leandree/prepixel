@@ -1,0 +1,1 @@
+{"action": "set_value", "target": "e47", "value": "Total Revenue", "memo": "A1 held 'Total Expenses' (stuck: type never moves cursor; tab/enter inert; formulas DO parse). New plan set_value per cell: 9=A1 'Total Revenue' (verify via formula bar next step), 10=B1 'Total Expenses', 11=A2 =SUM(Sheet1.A2:A1000), 12=B2 =SUM(Sheet1.B2:B1000), 13=ctrl+s, 14=enter keep-format"}

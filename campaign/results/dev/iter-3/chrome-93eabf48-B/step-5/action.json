@@ -1,0 +1,1 @@
+{"action": "set_value", "target": "e17", "value": "chrome://flags/#enable-force-dark", "memo": "Appearance page has no Light/Dark 'Mode' row (Linux GTK build: Theme=GTK, Use Classic/Use QT). Trying chrome://flags/#enable-force-dark instead \u2014 set 'Auto Dark Mode for Web Contents' to Disabled, then Relaunch. Press Enter if URL not navigated."}

@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e40","memo":"Verifying whether panel actually switched to All/advanced prefs. Crop region 579,499 = preview image in Simple prefs; in Advanced prefs that area is the left category tree. If tree pixels -> expand Playlist node, uncheck 'Play and exit' (play-and-exit=0), then Save. If still Simple prefs -> a11y is stale; consider checking e62 'Pause on the last frame' is NOT the fix; need play-and-exit."}
+```

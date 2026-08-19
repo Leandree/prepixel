@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+home", "memo": "Goal: double line spacing for first 2 paras. Doc list: e50=p1, e51=p2, e52=p3. Plan: ctrl+home (done this step) -> ctrl+shift+down x2 -> shift+left (trim end back into p2) -> Format>Paragraph, set Line Spacing=Double, OK. Then verify p1/p2 heights grew."}

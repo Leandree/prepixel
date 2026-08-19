@@ -1,0 +1,29 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 743,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 9,
+  "cdp_records": 18,
+  "offscreen": 1,
+  "url": "chrome://bookmarks/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "title-partial",
+  "tab": "Bookmarks - Memory usage - 27.9 MB",
+  "picked_title": "Bookmarks"
+ },
+ "history_views": 3,
+ "history_views_dropped": 11,
+ "memo_in": true,
+ "memo_out": true
+}

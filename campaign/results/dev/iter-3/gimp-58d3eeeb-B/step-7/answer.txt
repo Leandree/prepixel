@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e13","memo":"Reading output of exiftool/strings/ls. If an embedded audio file or transcript is found, extract it next (binwalk -e, steghide, foremost). I CANNOT hear audio - only a real extracted text transcript may be translated. Never fabricate a conversation; if none exists, fail honestly."}
+```

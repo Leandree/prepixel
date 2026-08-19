@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e12","memo":"Clicked Back on tab 2 to return to 'The Illustrated Transformer' (the page the user was viewing). Next: verify tab title says The Illustrated Transformer, then press ctrl+d and click 'Done' in the bubble (NEVER Escape - Escape cancels the bookmark). Default folder should be Bookmarks bar; if it shows another folder, change it via the folder dropdown before Done."}
+```

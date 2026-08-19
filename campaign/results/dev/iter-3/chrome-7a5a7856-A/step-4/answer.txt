@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1597, 237)", "memo": "Bookmark added dialog open; Folder showed 'All Bookmarks' (not Bookmarks bar). Just clicked the Folder dropdown at (1597,237). NEXT: pick 'Bookmarks bar' from the list that appears below the dropdown, then click Done at (1662,299)."}
+```

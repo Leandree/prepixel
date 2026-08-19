@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e174","memo":"Dismissed cookie banner. Plan: 1) select 'One way' (label near e71), 2) From=Dublin (e78 currently 'Lille'), 3) To=Vienna (e81), 4) date 10 Sep 2026 (today=19 Aug 2026), 5) passengers=2 adults, 6) Search."}
+```

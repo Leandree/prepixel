@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+alt+t","memo":"Opening terminal to write xlsx via python/openpyxl (more reliable than GUI). Next step: run heredoc script on ~/Desktop/best_awards_acl.xlsx preserving existing header order. Rows desc: 2022 Learned Incremental Representations for Parsing|Nikita Kitaev, Thomas Lu, Dan Klein|2022.acl-long.220.pdf; 2021 VOLT 2021.acl-long.571; 2020 CheckList 2020.acl-main.442; 2019 Bridging the Gap P19-1426"}
+```

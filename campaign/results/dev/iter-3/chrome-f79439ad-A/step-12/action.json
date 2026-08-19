@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1425, 383)", "memo": "Clicked Search with One way, Dublin->Vienna, Thu 10 Sept, 2 Adults. Next: wait for results page to load, then verify flight list shows Dublin-Vienna 10 Sept for 2 adults."}

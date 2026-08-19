@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(637, 899)", "memo": "Simple Prefs Interface tab has no cone option; clicked 'All' radio (bottom-left) to show advanced settings tree. Next: expand Interface > Main interfaces > Qt, uncheck 'Display background cone or art' (qt-bgcone), then Save."}

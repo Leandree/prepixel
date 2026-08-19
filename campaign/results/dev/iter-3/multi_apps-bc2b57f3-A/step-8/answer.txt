@@ -1,0 +1,5 @@
+The Basic IDE is open with Module1 ready. I'll write the reorder macro and run it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(900, 300); pyautogui.hotkey('ctrl','a'); pyautogui.write('Sub DoReorder\nDim n, oDoc, oComp, oEnum, oSheets, i\nn = Array(\"ReadMe\",\"Raw_data\",\"Beans\",\"Millet\",\"Sorghum\",\"Mkt Gotheye\",\"Mkt Mangaize\",\"Mkt Ouallam\",\"Mkt Tera\",\"Millet spatial integration\")\noEnum = StarDesktop.Components.createEnumeration()\nOn Error Resume Next\nDo While oEnum.hasMoreElements()\noComp = oEnum.nextElement()\nIf oComp.supportsService(\"com.sun.star.sheet.SpreadsheetDocument\") Then oDoc = oComp\nLoop\nOn Error Goto 0\noSheets = oDoc.Sheets\nFor i = 0 To UBound(n)\noSheets.moveByName(n(i), i)\nNext i\noDoc.store()\nEnd Sub', interval=0.01); pyautogui.press('f5')", "memo": "Typed DoReorder macro in Basic IDE Module1 and pressed F5. It finds the .xlsx Calc doc, moveByName to order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration, then store(). Next: check for error dialog; else switch to Calc and verify tab order."}
+```

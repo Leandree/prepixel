@@ -1,0 +1,5 @@
+The Macros submenu is open. Clicking "Edit Macros..." to open the Basic IDE.
+
+```json
+{"action": "import pyautogui; pyautogui.click(833, 430)", "memo": "Clicked Tools>Macros>Edit Macros to open Basic IDE. Next: in IDE, select Module1 under My Macros>Standard, paste macro looping oDoc.DrawPages + MasterPages, for each shape check supportsService(\"com.sun.star.presentation.SlideNumberShape\"), set .CharColor=RGB(255,0,0), then oDoc.store(). Press F5 to run."}
+```

@@ -1,0 +1,1 @@
+{"action":"click","target":"e316","memo":"Basic Macros dialog open. Clicked 'My Macros' label to select/expand. If not expanded, press key 'right' to expand, then navigate: Standard -> Module1 (selecting Module1 populates 'Existing Macros In' with FixNum). Then click Run (e327). oDoc.store() saves silently (no format dialog); dismiss 'done' MsgBox with Enter."}

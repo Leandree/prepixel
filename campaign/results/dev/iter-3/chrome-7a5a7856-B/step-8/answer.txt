@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e7","memo":"Bookmarks bar AND Other bookmarks both 0 items -> Escape on the Ctrl+D bubble CANCELS the bookmark. Never press Escape; click 'Done' instead. Also tab 2 navigated from 'The Illustrated Transformer' to a Substack page, so after switching to it press alt+left to go back to the Illustrated Transformer, then ctrl+d, ensure folder=Bookmarks bar, click Done."}
+```

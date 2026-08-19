@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"power","memo":"Typed 'power' in Activities search; next click the 'Power' Settings result, then toggle 'Show Battery Percentage' on in the Power panel."}
+```

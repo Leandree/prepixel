@@ -1,0 +1,1 @@
+{"action": "key", "keys": "escape", "memo": "Blind keyboard menu nav is invisible to the a11y tree (act-guard says view unchanged 3 steps running) \u2014 abandoning it. Pressed Escape to close Filters/submenu. Next: press Escape again if needed, then '/' (GIMP 2.10 'Search and Run a Command'), type 'Vignette', Enter to open the Vignette dialog."}

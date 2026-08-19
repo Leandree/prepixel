@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 557,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 85,
+  "cdp_records": 122,
+  "offscreen": 60,
+  "url": "chrome://flags/#enable-force-dark",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "visible",
+  "tab": "Available",
+  "picked_title": "Experiments"
+ },
+ "cdp_offscreen_skipped": 4416,
+ "history_views": 3,
+ "history_views_dropped": 2,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "rung": 1,
+ "rung1_method": "cdp:Select.value",
+ "settle_ms": 4919,
+ "settle_captures": 1,
+ "guard_ms": 65
+}

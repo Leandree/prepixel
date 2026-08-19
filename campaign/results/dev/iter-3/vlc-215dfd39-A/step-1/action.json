@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(946, 373)", "memo": "Goal: uncheck 'Show background cone or art' (qt-bgcone) in Tools>Preferences>Interface, then Save. Just clicked Tools menu."}

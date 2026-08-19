@@ -1,0 +1,3 @@
+```json
+{"action":"done","memo":"Verified in Message Filters: 1 item, filter 'Forward all' present and enabled for anonym-x2024@outlook.com (written to msgFilterRules.dat with condition ALL, action Forward -> anonym-x2024@gmail.com). Task complete."}
+```

@@ -1,0 +1,3 @@
+Scrolling up a few notches to reveal the gap between the purchase area and "About This Game", where the DLC block lives.
+
+{"action": "import pyautogui; pyautogui.moveTo(980, 600); pyautogui.scroll(5)", "memo": "Step 7: On store.steampowered.com/app/570 (not signed in). Was at 'About This Game'; scrolled UP 5 to find 'Downloadable Content for Dota 2' block (checkbox list + 'Add selected items to cart' / select-all). If block absent on app page, go to store.steampowered.com/dlc/570/Dota_2/ and add each DLC individually."}

@@ -1,0 +1,5 @@
+Desktop is showing; I'll launch Chrome from the dock to change its search engine setting.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 64)", "memo": "Task: set Bing as default search engine in Chrome. Step1: clicked Chrome icon in Ubuntu dock. Next: wait for Chrome window, then open chrome://settings/search via address bar and pick Bing from dropdown."}
+```

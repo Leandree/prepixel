@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 'alt', 't'); pyautogui.sleep(2.5)", "memo": "Super+type didn't stick (desktop back to normal). Switched plan: opened GNOME Terminal via Ctrl+Alt+T. Next: type `gsettings set org.gnome.desktop.interface show-battery-percentage true` + Enter, then verify with `gsettings get ...` (expect true)."}
+```

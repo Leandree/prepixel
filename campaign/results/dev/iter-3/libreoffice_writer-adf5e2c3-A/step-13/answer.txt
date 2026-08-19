@@ -1,0 +1,9 @@
+Both parts are verified complete:
+- **Reference list** (step-10): `[14] Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids... doi: 10.1053/jada.2003.50028` appears after [13] at the end of the list.
+- **Fourth paragraph** (current screen): "A study by Pennington**[14]** noted that women do not generally meet US guidelines for trace elements..." — the `<add here>` marker was replaced by the cross-reference number.
+
+The file was saved in .docx format after the edits.
+
+```json
+{"action": "DONE"}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1240, 723); pyautogui.sleep(1.5)", "memo": "Step 5: Clicked 'Make default' in the Microsoft Bing row menu on chrome://settings/searchEngines. Next: verify the Bing row now reads 'Microsoft Bing (Default)' and Google no longer shows (Default); if so, DONE."}

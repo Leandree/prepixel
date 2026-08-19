@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e40","memo":"DECISIVE PROBE of 579,499 area. If pixels show the VLC cone/skin preview image -> Simple panel IS really visible (a11y 'All=checked' is a lie) -> next: click e74 'Simple' then e75 'All' to force re-toggle. If pixels show a settings TREE list (Audio/Interface/Video...) -> advanced view IS shown and a11y tree is stale -> use stale eN's purely as coordinate proxies. RECORD RESULT IN NEXT MEMO. Goal: Interface>Main interfaces>Qt> uncheck 'Display background cone or art', then Save (e76)."}
+```

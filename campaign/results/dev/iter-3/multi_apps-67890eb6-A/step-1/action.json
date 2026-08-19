@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(660, 90); pyautogui.hotkey('ctrl','a'); pyautogui.write('https://aclanthology.org/info/best-paper/\n')"}

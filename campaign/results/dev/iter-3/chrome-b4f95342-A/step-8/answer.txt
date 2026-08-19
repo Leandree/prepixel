@@ -1,0 +1,7 @@
+The "Next Available" view has loaded and the grid jumped from Aug 19–28 (showing FF/R for Aug 19–22) to a window starting at the first open date.
+
+```json
+{"action": "DONE", "memo": "Diamond (Uinta-Wasatch-Cache NF) Next Available: grid jumped to SUN AUG 23 – TUE SEP 1, with all listed sites (A004, A009, A010, A011, A017-A025...) showing 'A' available across that range. First next-available date = Sun, Aug 23."}
+```
+
+**Result:** For Diamond campground (Uinta-Wasatch-Cache NF, Spanish Fork, UT), the Next Available dates are **Sunday, August 23 through Tuesday, September 1** — Aug 19–22 were Reserved/First-Come-First-Served, and availability ("A") begins Aug 23 across all listed sites.

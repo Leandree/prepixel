@@ -1,0 +1,9 @@
+Desktop is idle. I'll launch VLC from the dock to access its preferences.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 269)"}
+```
+
+**Plan:** Open VLC → Tools ▸ Preferences (Ctrl+P) → Interface tab → uncheck "Play and exit" in the Playlist section → Save.
+
+**memo:** Clicked VLC dock icon (34,269). Next: wait for VLC window, then Ctrl+P for Preferences → Interface tab → uncheck "Play and exit" → Save.

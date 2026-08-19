@@ -1,0 +1,1 @@
+{"action": "click", "target": "e47", "memo": "On Sheet2, A1 selected+grid focused. NEXT: type \"Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A2:A1000)\\t=SUM(Sheet1.B2:B1000)\\n\" (use type action with \\t and \\n), then ctrl+s, then press Enter/click 'Use Excel 2007-365!' to Keep Current Format."}

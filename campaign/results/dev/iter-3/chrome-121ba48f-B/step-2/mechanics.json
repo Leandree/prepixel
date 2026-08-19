@@ -1,0 +1,40 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 1159,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 183,
+  "cdp_records": 97,
+  "offscreen": 60,
+  "url": "https://www.dota2.com/home",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 4732,
+  "picked_by": "visible",
+  "tab": "Popular New Releases",
+  "picked_title": "Dota 2"
+ },
+ "cdp_offscreen_skipped": 811,
+ "history_views": 1,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.dodefault"
+ },
+ "rung": 1,
+ "rung1_method": "Action.dodefault",
+ "settle_ms": 6405,
+ "settle_captures": 2,
+ "guard_ms": 49
+}

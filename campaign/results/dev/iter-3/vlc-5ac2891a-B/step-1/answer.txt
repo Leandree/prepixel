@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+p","memo":"Opened VLC Preferences (Ctrl+P). Goal: uncheck 'Play and exit' (may need 'All' settings > Interface) so VLC doesn't close when video ends, then Save."}
+```

@@ -1,0 +1,5 @@
+The dropdown is open. I'll select "Bookmarks bar".
+
+```json
+{"action": "import pyautogui; pyautogui.click(1560, 284)", "memo": "Clicked 'Bookmarks bar' in the Folder dropdown of the 'Bookmark added' dialog. NEXT: verify Folder now reads 'Bookmarks bar', then click Done (~1662,299 area, bottom-right of dialog) to save."}
+```

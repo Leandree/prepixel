@@ -1,0 +1,1 @@
+{"action":"scroll_to","target":"e164","memo":"On Diamond campground page. Availability table has a 'Next Available' button (e164) in the Campsite List tab. Scrolling to it; next: click it and read the resulting date range shown in the availability table header."}

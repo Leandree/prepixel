@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1706, 90)", "memo": "Clicked star at (1706,90) to bookmark 'The Illustrated Transformer' (jalammar.github.io/illustrated-transformer/). NEXT: the 'Bookmark added' dialog should appear near top-right. VERIFY the Folder dropdown says 'Bookmarks bar' (change it if it says 'Other bookmarks'), then click Done."}

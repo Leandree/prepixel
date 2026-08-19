@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+alt+t","memo":"Power panel has NO 'Show Battery Percentage' toggle (scroll produced no change; rows are only Power Mode + Screen Blank + Automatic suspend) -> VM without battery UI. Opening terminal to run: gsettings set org.gnome.desktop.interface show-battery-percentage true"}
+```

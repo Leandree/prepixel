@@ -1,0 +1,5 @@
+Page loaded. First I'll dismiss the location permission prompt blocking the page.
+
+```json
+{"action": "import pyautogui; pyautogui.click(350, 343)", "memo": "recreation.gov loaded. Dismissed geolocation prompt via 'Never allow'. Still to close: Chrome update popup (X at 1890,139) and outdated-browser banner ('Ignore' at 894,247). Then type 'Diamond' in main search box (910,625) and click SEARCH (1461,625) to find Next Available dates."}
+```

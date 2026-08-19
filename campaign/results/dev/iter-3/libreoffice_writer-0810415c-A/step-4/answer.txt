@@ -1,0 +1,5 @@
+The line-spacing dropdown is open — I'll select "Spacing: 2".
+
+```json
+{"action": "import pyautogui; pyautogui.click(1464, 289)", "memo": "Clicked 'Spacing: 2' for paras 1-2 (94 words/545 chars selected). Next: verify paragraph spacing doubled in doc, then Ctrl+S and press Enter/click 'Use Word 2007-365!' to keep .docx format."}
+```

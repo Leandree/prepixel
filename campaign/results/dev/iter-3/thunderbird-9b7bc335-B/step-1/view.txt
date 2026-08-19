@@ -1,0 +1,21 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 toggle-button 0,0,99,27 "Activities" state=checked:false
+e4 menu 99,0,43,27
+e5 menu 906,0,178,27 "Aug 19 20‎∶52"
+e6 menu 1814,0,106,27 "System"
+e7 push-button 0,840,70,8
+e8 push-button 62,33,8,815
+e9 push-button 0,33,70,64 "Google Chrome"
+e10 push-button 0,101,70,64 "Thunderbird Mail"
+e11 push-button 0,169,70,64 "Visual Studio Code"
+e12 push-button 0,237,70,64 "VLC media player"
+e13 push-button 0,305,70,64 "LibreOffice Writer"
+e14 push-button 0,373,70,64 "LibreOffice Calc"
+e15 push-button 0,441,70,64 "LibreOffice Impress"
+e16 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e17 push-button 0,577,70,64 "Files"
+e18 push-button 0,645,70,64 "Ubuntu Software"
+e19 push-button 0,713,70,64 "Help"
+e20 push-button 0,784,70,64 "Trash"
+e21 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

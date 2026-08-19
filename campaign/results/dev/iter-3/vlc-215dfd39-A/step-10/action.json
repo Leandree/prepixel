@@ -1,0 +1,1 @@
+{"action": "DONE", "memo": "Advanced Preferences closed after Save; qt-bgcone (Display background cone or art) is unchecked and written to vlcrc. Cone still visible in the current window because the setting only takes effect on VLC restart \u2014 expected, not a failure."}

@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+p","memo":"Tab1 'LLM Powered Autonomous Agents'. Print dialog was NOT in view at step13, so re-opened with ctrl+p. Only 2 steps left. PLAN: step14 -> if 'Print' frame present, key enter (activates Save); step15 -> type \"/home/user/Documents/Blog/LLM Powered Autonomous Agents\\n\" (GTK preselects stem only, keeps .pdf; trailing newline confirms). Do NOT include .pdf in typed text."}
+```

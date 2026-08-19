@@ -1,0 +1,1 @@
+{"action": "click", "target": "e188", "memo": "set_value on From FAILED (still 'Lille'). Origin picker dropdown is open (e171): country list left, airport list right. Clicked 'Ireland' to filter -> next click 'Dublin' in the airport column (~x=1025). Then To=Vienna (e87), date 10 Sep 2026, 2 adults, Search (e88). One-way selection still UNVERIFIED."}

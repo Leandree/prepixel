@@ -1,0 +1,5 @@
+The `[14]` entry landed in the pre-existing empty paragraph at the document end, in plain black text (AutoCorrect was disabled earlier, so no hyperlink formatting). Now I'll open Find & Replace to swap `<add here>` for `[14]`.
+
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl', 'h'); time.sleep(1.5)", "memo": "Ref [14] Steinberg confirmed added at doc end (plain black, correct font; used pre-existing empty para). AutoCorrect-while-typing already OFF. NOW: Find&Replace dialog opening - click Search field, type '<add here>', click Replace field, type '[14]', click Replace All, Close. THEN Ctrl+S -> Use Word 2007-365!"}
+```

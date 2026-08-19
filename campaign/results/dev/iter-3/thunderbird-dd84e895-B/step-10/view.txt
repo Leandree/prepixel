@@ -1,0 +1,172 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 70,27,45,1053 "Spaces Toolbar"
+e4 push-button 77,34,30,30 "Mail (Ctrl+1)"
+e5 push-button 77,79,30,30 "Address Book (Ctrl+2)"
+e6 push-button 77,124,30,30 "Calendar (Ctrl+3)"
+e7 push-button 77,169,30,30 "Tasks (Ctrl+4)"
+e8 push-button 77,214,30,30 "Chat (Ctrl+5)"
+e9 push-button 77,998,30,30 "Settings"
+e10 push-button 77,1043,30,30 "Hide Spaces Toolbar"
+e11 list-item 508,34,901,30 "Search:"
+e12 push-button 1383,34,26,30 "Search"
+e13 push-button 1779,34,35,30 "AppMenu"
+e14 push-button 1818,35,31,28 "Minimize"
+e15 push-button 1849,35,34,28 "Restore Down"
+e16 push-button 1883,35,31,28 "Close"
+e17 text 115,67,325,17 "Application"
+e18 push-button 340,81,30,30 "Folder pane options"
+e19 push-button 180,81,134,31 "New Message"
+e20 push-button 124,81,30,30 "Get Messages"
+e21 tree-item 115,121,264,364 "anonym-x2024@outlook.com" state=expanded
+e22 tree-item 115,147,264,26 "Inbox"
+e23 tree-item 115,173,264,26 "Drafts"
+e24 tree-item 115,199,264,26 "Sent"
+e25 tree-item 115,225,264,26 "Junk"
+e26 tree-item 115,251,264,52 "Deleted" state=expanded
+e27 tree-item 115,277,264,26 "POP"
+e28 tree-item 115,303,264,26 "Notes"
+e29 tree-item 115,329,264,26 "Outbox"
+e30 tree-item 115,355,264,26 "封存"
+e31 tree-item 115,381,264,104 "Local Folders" state=expanded
+e32 tree-item 115,407,264,26 "Trash"
+e33 tree-item 115,433,264,26 "Outbox"
+~e34 tree-item 115,459,264,26 "Bills" state=selected
+e35 text 386,80,37,21 "Bills"
+e36 text 429,82,85,17 "2 Messages"
+e37 toggle-button 875,75,125,31 "Quick Filter" state=checked:false
+e38 push-button 1006,75,30,30 "Message list display options"
+e39 text 380,110,662,92 "Bills"
+e40 tree-item 380,110,662,46 "AWS, 3/1/2024, 15:48, Amazon Web Services Invoice Available [Account: 0123456789ab] [Invoice ID: 0123456789], Starred, Read, Attachments"
+e41 text 392,111,533,19 "AWS"
+e42 text 931,112,99,18 "3/1/2024, 15:48"
+e43 text 392,133,598,21 "Amazon Web Services Invoice Available [Account: 0123456789ab] [Invoice ID: 0123456789]"
+~e44 tree-item 380,156,662,46 "X (formerly Twitter), 12/1/2024, 21:28, Your receipt from X (formerly Twitter) #0123-4567, Read, Attachments" state=selected,focused
+e45 text 392,157,525,19 "X (formerly Twitter)"
+e46 text 923,158,107,18 "12/1/2024, 21:28"
+e47 text 392,179,598,21 "Your receipt from X (formerly Twitter) #0123-4567"
+~e48 text 1043,72,877,984 "Your receipt from X (formerly Twitter) #0123-4567"
+~e49 push-button 1451,77,66,24 "Reply"
+~e50 push-button 1520,77,83,24 "Forward"
+~e51 push-button 1606,77,78,24 "Archive"
+~e52 push-button 1687,77,60,24 "Junk"
+~e53 push-button 1750,77,73,24 "Delete"
+~e54 push-button 1826,77,60,24 "More"
+~e55 check-box 1895,81,16,16 "Starred" state=checked:false
+~e56 text 1050,75,401,29 "From"
+~e57 list-item 1050,75,181,29 "X (formerly Twitter)"
+~e58 text 1052,110,17,21 "To"
+~e59 text 1075,110,717,21 "To"
+~e60 list-item 1075,110,42,21 "Me Not in the Address Book"
+~e61 text 1077,112,21,17 "Me"
+~e62 push-button 1101,114,14,14 "Not in the Address Book"
+~e63 [pixels] image 1102,115,12,12 alt=Not in the Address Book
+~e64 text 1798,112,113,17 "12/1/2024, 17:08"
+~e65 text 1050,137,867,26 "Your receipt from X (formerly Twitter) #0123-4567"
+~e66 text 1083,184,658,17 "To protect your privacy, Thunderbird has blocked remote content in this message."
+~e67 push-button 1761,180,111,24 "Preferences"
+~e68 push-button 1884,180,24,24 "Close"
+~e69 document-web 1043,213,877,811 "Your receipt from X (formerly Twitter) #0123-4567"
+~e70 table-cell 1051,221,41,855
+~e71 table-cell 1092,221,779,855 "X (formerly Twitter)"
+~e72 table-cell 1242,221,480,855 "X (formerly Twitter)"
+~e73 table-cell 1242,221,480,58
+~e74 table-cell 1242,279,32,32
+~e75 link 1242,279,32,32
+~e76 table-cell 1274,279,12,32
+~e77 table-cell 1242,311,480,32
+~e78 table-cell 1242,343,480,300 "Receipt from X (formerly Twitter)"
+~e79 table-cell 1243,344,478,298 "Receipt from X (formerly Twitter)"
+~e80 table-cell 1243,344,478,32
+~e81 table-cell 1243,376,32,242
+~e82 table-cell 1275,376,414,242 "Receipt from X (formerly Twitter)"
+~e83 table-cell 1275,376,338,118 "Receipt from X (formerly Twitter)"
+~e84 table-cell 1275,399,338,42 "$8.00"
+~e85 table-cell 1275,441,338,24 "Paid December 21, 2023"
+~e86 table-cell 1275,465,338,16
+~e87 table-cell 1275,482,338,12
+~e88 table-cell 1613,376,76,118 "invoice illustration"
+~e89 table-cell 1275,494,132,19 "Download invoice"
+~e90 [pixels] image 1275,497,12,12
+~e91 table-cell 1407,494,16,19
+~e92 table-cell 1423,494,130,19 "Download receipt"
+~e93 [pixels] image 1423,497,12,12
+~e94 table-cell 1275,513,414,32
+~e95 table-cell 1275,545,186,19 "Receipt number"
+~e96 table-cell 1461,545,24,19
+~e97 table-cell 1485,545,204,19 "0123-4567"
+~e98 table-cell 1275,564,210,8
+~e99 table-cell 1275,572,186,19 "Invoice number"
+~e100 table-cell 1461,572,24,19
+~e101 table-cell 1485,572,204,19 "01234567-89ab"
+~e102 table-cell 1275,591,210,8
+~e103 table-cell 1275,599,186,19 "Payment method"
+~e104 table-cell 1461,599,24,19
+~e105 table-cell 1485,599,204,19 "- 0123"
+~e106 text 1572,601,72,17 "Mastercard"
+~e107 table-cell 1689,376,32,242
+~e108 table-cell 1243,618,478,24
+~e109 table-cell 1242,643,480,20
+~e110 table-cell 1242,663,480,367 "Receipt #0123-4567"
+~e111 table-cell 1243,664,478,365 "Receipt #0123-4567"
+~e112 table-cell 1243,664,478,32
+~e113 table-cell 1243,696,478,309 "Receipt #0123-4567"
+~e114 table-cell 1243,696,32,20
+~e115 table-cell 1243,716,478,26
+~e116 table-cell 1243,742,32,19
+~e117 table-cell 1275,742,446,19 "DEC 21, 2023 – JAN 21, 2024"
+~e118 table-cell 1243,761,478,8
+~e119 table-cell 1243,769,32,41
+~e120 table-cell 1275,769,261,41 "X Premium"
+~e121 table-cell 1275,791,261,19 "Qty 1"
+~e122 table-cell 1536,769,16,41
+~e123 table-cell 1552,769,137,41 "$8.00"
+~e124 table-cell 1689,769,32,41
+~e125 table-cell 1243,811,478,16
+~e126 table-cell 1243,829,478,16
+~e127 table-cell 1243,845,32,19
+~e128 table-cell 1275,845,186,19 "Total"
+~e129 table-cell 1461,845,16,19
+~e130 table-cell 1477,845,212,19 "$8.00"
+~e131 table-cell 1689,845,32,19
+~e132 table-cell 1243,865,478,16
+~e133 table-cell 1243,883,478,16
+~e134 table-cell 1243,899,32,19
+~e135 table-cell 1275,899,274,19 "Amount paid"
+~e136 table-cell 1549,899,16,19
+~e137 table-cell 1565,899,124,19 "$8.00"
+~e138 table-cell 1689,899,32,19
+~e139 table-cell 1243,919,478,16
+~e140 table-cell 1243,937,478,20
+~e141 table-cell 1243,957,32,48
+~e142 table-cell 1275,957,414,48 "Questions? Visit our support site at  or contact us at ."
+~e143 link 1275,972,356,17 "https://help.twitter.com/en/forms/paid-features/general"
+~e144 link 1360,988,162,17 "paidfeatures@twitter.com"
+~e145 table-cell 1689,957,32,48
+~e146 table-cell 1243,1005,478,24
+~e147 table-cell 1871,221,41,855
+~e148 toggle-button 1044,1029,20,24 state=checked:false
+~e149 text 1087,1030,96,21 "2 attachments"
+~e150 text 1192,1032,50,17 "54.0 KB"
+~e151 push-button 1815,1029,103,24 "Save All"
+e152 push-button 119,1057,20,23 "You are currently online."
+~e153 text 149,1060,1766,17 "​"
+e154 toggle-button 0,0,99,27 "Activities" state=checked:false
+e155 menu 99,0,173,27 "Thunderbird Mail"
+e156 menu 906,0,178,27 "Aug 19 20‎∶58"
+e157 menu 1814,0,106,27 "System"
+e158 push-button 0,840,70,8
+e159 push-button 62,33,8,815
+e160 push-button 0,33,70,64 "Google Chrome"
+e161 push-button 0,101,70,64 "Thunderbird Mail"
+e162 push-button 0,169,70,64 "Visual Studio Code"
+e163 push-button 0,237,70,64 "VLC media player"
+e164 push-button 0,305,70,64 "LibreOffice Writer"
+e165 push-button 0,373,70,64 "LibreOffice Calc"
+e166 push-button 0,441,70,64 "LibreOffice Impress"
+e167 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e168 push-button 0,577,70,64 "Files"
+e169 push-button 0,645,70,64 "Ubuntu Software"
+e170 push-button 0,713,70,64 "Help"
+e171 push-button 0,784,70,64 "Trash"
+e172 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

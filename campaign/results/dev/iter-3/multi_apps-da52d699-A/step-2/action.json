@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(181, 443)", "memo": "Sheet loaded (10 books, rows2-11). Cols G=wordcount,H=days,I=words/day (I=G/H verified). Min words/day = row7 'Out of the Silent Plan...' 1328.89 (next lowest Silence 1984). Clicked A7 to read full title in formula bar. Then: open ~/Desktop/book_list_result.docx, type title, Ctrl+S keep format."}

@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 563,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 63,
+  "cdp_records": 184,
+  "offscreen": 60,
+  "url": "https://www.recreation.gov/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 6332,
+  "picked_by": "visible",
+  "tab": "Explore All",
+  "picked_title": "Recreation.gov - Camping, Cabins, RVs, Permits, Passes & More"
+ },
+ "cdp_offscreen_skipped": 1618,
+ "history_views": 3,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 5922,
+ "settle_captures": 2,
+ "guard_ms": 43
+}

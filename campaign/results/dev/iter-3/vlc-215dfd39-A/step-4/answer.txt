@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.scroll(-4, x=712, y=700)", "memo": "Advanced Prefs tree open ('All' selected). Scrolling tree to reach Interface > Main interfaces > Qt. Then click the arrow to expand 'Main interfaces', select 'Qt', uncheck 'Display background cone or art', click Save (1210,903)."}
+```

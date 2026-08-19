@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"right","memo":"Focus was on unchecked 'Simple' radio; Qt arrow-key navigation in an exclusive radio group moves focus to the next button ('All') AND calls click() on it, which emits the real clicked() signal VLC needs to run setBigSelector(). If the panel switches to Advanced Preferences, navigate the left tree to Interface > Main interfaces > Qt and uncheck 'Display background cone or art' (qt-bgcone), then Save."}
+```

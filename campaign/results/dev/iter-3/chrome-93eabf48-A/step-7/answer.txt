@@ -1,0 +1,5 @@
+Chrome relaunched and the flags page now shows **Auto Dark Mode for Web Contents (`#enable-force-dark`) = Disabled** with no pending-relaunch banner, so the setting is applied and persisted. The "Can't update Chrome" bubble on screen is unrelated to this task.
+
+```json
+{"action": "DONE", "memo": "Task complete: #enable-force-dark set to Disabled and Chrome relaunched; verified post-restart with no relaunch banner."}
+```

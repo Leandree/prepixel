@@ -1,0 +1,7 @@
+The Sheet menu is open. I'll click "Insert Sheet..." to get the dialog with position and name options.
+
+```json
+{"action": "import pyautogui; pyautogui.click(455, 303)"}
+```
+
+{"action": "import pyautogui; pyautogui.click(455, 303)", "memo": "Data confirmed Sheet1: Revenue A2:A20, Total Expenses B2:B20. Clicked Sheet > Insert Sheet... -> dialog should appear: select Position 'After current sheet', set Name field to 'Sheet2', click OK. Then A1='Total Revenue', B1='Total Expenses', A2==SUM(Sheet1.A2:A20), B2==SUM(Sheet1.B2:B20); Ctrl+S then Enter (Keep xlsx)."}

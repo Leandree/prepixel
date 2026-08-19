@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(900, 750); pyautogui.press('escape'); pyautogui.hotkey('ctrl','l'); pyautogui.write('chrome://flags/#enable-force-dark\n')", "memo": "Task: disable Chrome dark mode. Step3: step2 action had NO effect (window unfocused, 'Can't update Chrome' bubble still open). Now clicked page body to focus, Esc to close bubble, ctrl+L -> chrome://flags/#enable-force-dark. Next: set 'Auto Dark Mode for Web Contents' to Disabled; then check chrome://settings/appearance Mode=Light."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e40","memo":"A11y tree may be stale: panel still reads Simple though 'All' radio=checked. Cropping region 579,499 (left column area) to see real pixels: if advanced tree rows (Audio/Input/Interface/Playlist/Video) are visible -> click 'Playlist' node, uncheck 'Play and exit', then Save (e76). If still Simple preview image -> fallback: check 'Pause on the last frame of a video' (e62) + Save."}
+```

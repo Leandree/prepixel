@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e51","memo":"Applied double spacing to paras 1&2 (heights 129/110 vs 19 for para 3); ctrl+s at step 8 showed no format dialog. Clicking in doc as responsiveness test: if status bar changes from 'Selected: 58 words' to a normal word count, no modal is blocking -> save completed -> press ctrl+s once more then done."}
+```

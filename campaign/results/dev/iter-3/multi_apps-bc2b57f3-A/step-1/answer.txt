@@ -1,0 +1,5 @@
+The screen shows LibreOffice Calc with `workbook-with-sample-database.xlsx` open. I need to read `reminder.docx` on the desktop first, so I'll minimize this window.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1833, 45)", "memo": "Task: read reminder.docx on Desktop, then modify open workbook-with-sample-database.xlsx in LibreOffice Calc. Step1: minimized Calc to reach desktop. Next: double-click reminder.docx icon on desktop."}
+```

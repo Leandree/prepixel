@@ -1,0 +1,1 @@
+{"action":"type","text":"Manchester","memo":"Typed 'Manchester' into AccuWeather site search (focus was on e62 Search entry). Next: check for suggestion dropdown and pick 'Manchester, Manchester, United Kingdom' (GB), else press Enter. Then open the 'Monthly' tab. Fallback: address bar -> accuweather.com/en/search-locations?query=Manchester"}

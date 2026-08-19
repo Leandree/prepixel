@@ -1,0 +1,5 @@
+The document is open. I'll dismiss the info bars and jump to the end to see the reference list numbering.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1846, 187); time.sleep(0.5); pyautogui.click(1846, 187); time.sleep(0.5); pyautogui.click(950, 600); time.sleep(0.5); pyautogui.hotkey('ctrl', 'end')"}
+```

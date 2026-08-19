@@ -1,0 +1,5 @@
+The blank tab resolved into "The Illustrated Transformer" — that's the active page. First I'll dismiss the Chrome update bubble, since it overlaps where the bookmark dialog will pop up.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1890, 139)", "memo": "Active tab = 'The Illustrated Transformer' (jalammar.github.io/illustrated-transformer/) - this is the page to bookmark. Just closed the 'Can't update Chrome' bubble that overlapped the bookmark dialog area. NEXT: click star icon at (1706, 90) to bookmark, then verify Folder = 'Bookmarks bar' in the dialog before clicking Done."}
+```

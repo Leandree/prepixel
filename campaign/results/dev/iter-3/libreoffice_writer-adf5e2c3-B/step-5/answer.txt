@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"up","memo":"Confirmed: doc ends with an extra non-list para (No List/Times NR). Pressed Up -> now in last line of [13] Schramm (should show Ordered List/WWNum1). NEXT: press End (go to para end), then Enter (auto-creates [14] item), then type the Steinberg ref WITHOUT '[14]' prefix. After that: Ctrl+Home, find '<add here>' in 4th paragraph, replace with [14]."}
+```

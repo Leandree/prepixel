@@ -1,0 +1,36 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Add a star to every email in local Bills folder
+
+STEP 5 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(34, 133)
+2. import pyautogui; pyautogui.click(195, 508)
+3. import pyautogui; pyautogui.click(1021, 181)
+4. import pyautogui; pyautogui.click(1021, 227)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Bills folder (Local Folders), 2 msgs. Row1 (AWS invoice) star at (1021,181) CONFIRMED filled orange. Just clicked row2 (X receipt) star at (1021,227). Next: move mouse away (e.g. click empty list area y=400 is risky - instead moveTo(700,600)) and verify BOTH stars filled orange, then DONE.
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter3/thunderbird-dd84e895-A/_pixels/step-5/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter3/thunderbird-dd84e895-A/_pixels/step-2/screenshot.png
+/home/leandre/dev/osworld-dev-iter3/thunderbird-dd84e895-A/_pixels/step-3/screenshot.png
+/home/leandre/dev/osworld-dev-iter3/thunderbird-dd84e895-A/_pixels/step-4/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

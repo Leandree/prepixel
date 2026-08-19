@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(620, 328); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('Dublin', interval=0.15)", "memo": "One way IS selected (checkbox checked). Clicked From field (620,328), ctrl+a, typed 'Dublin'. Next: click Dublin suggestion in dropdown under From; then To field (1050,328) type Vienna & pick; then date 10 Sep; then 2 adults; then Search (1425,321)."}
+```

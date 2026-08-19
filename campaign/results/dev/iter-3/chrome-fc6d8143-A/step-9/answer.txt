@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.click(793, 436); time.sleep(2.5); pyautogui.click(1135, 297); time.sleep(3)", "memo": "Selected One Way, then clicked Depart date field to open calendar. Next: pick Aug 20 2026 (tomorrow; today=Aug 19 2026) in calendar, click done/confirm, then Find Flights (1487,297)."}
+```

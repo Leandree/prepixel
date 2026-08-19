@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+shift+down", "memo": "Sel was 349 chars = p1 only. This adds p2 (endpoint lands at start of p3). NEXT: shift+left to pull endpoint back into p2, then click Line Spacing e143 -> Double. Doc: e50=p1(y386,h74), e51=p2(y478,h56), e52=p3. Verify p1/p2 heights grow."}

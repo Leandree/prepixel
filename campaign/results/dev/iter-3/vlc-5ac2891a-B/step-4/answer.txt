@@ -1,0 +1,1 @@
+{"action":"click","target":"e75","memo":"Re-clicked 'All' radio to force refresh; Simple/All radios stay at same spot in both modes so this is safe. If Advanced tree appears: select 'Playlist' node, UNCHECK 'Play and exit' (play-and-exit), then click Save. If still Simple view, consider using advanced search box."}

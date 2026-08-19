@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"Forward all","memo":"Probe: New… clicks show no dialog in the a11y tree; hypothesis = a modal Filter Rules window IS open but not exposed (that's why repeated clicks are no-ops). Typed 'Forward all' hoping it lands in the filter-name field. Next: check if any exposed element (e.g. search entry e74) picked up the text — if yes, no dialog is open, so press Escape then use keyboard on the filter list; if nothing changed, assume hidden dialog and continue: Tab to 'Match all messages', set action 'Forward Message to' + anonym-x2024@gmail.com, then Enter to OK."}
+```

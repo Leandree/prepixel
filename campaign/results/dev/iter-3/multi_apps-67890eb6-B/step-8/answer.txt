@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"R=\"\"; for u in 2022.acl-long.220 2021.acl-long.571 2020.acl-main.442 P19-1426; do c=$(curl -s -m 25 -o /dev/null -w '%{http_code}' https://aclanthology.org/$u.pdf); t=$(curl -s -m 25 https://aclanthology.org/$u/ | grep -o '<title>[^<]*' | head -1 | cut -c8-40); R=\"$R $u=$c=$t\"; done; printf '\\033]0;%s\\007' \"$R\"\n","memo":"File written OK: ~/Desktop/best_awards_acl.xlsx, 5344 bytes, 5 rows, hdr=[tile,year,author list,PDF link] (col order from original file), rows 2022->2019 desc. Now verifying 4 aclanthology URLs via curl; next step read terminal title e7/e1 for u=HTTPcode=pagetitle. If all 200 & titles match -> done."}
+```

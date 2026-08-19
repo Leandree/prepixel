@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+o","memo":"Answer = \"Out of the Silent Planet\" (A7, I7=1328.9 = min words/day; G7=47840 words / H7=36 days). Just pressed Ctrl+O in Calc to open a file dialog. Next: type /root/Desktop/book_list_result.docx (or ~/Desktop/...) into the file name field and Enter; then in Writer type the title, Ctrl+S, Keep current format."}

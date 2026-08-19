@@ -1,0 +1,56 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Rotary Embeddings: A Relative Revolution | EleutherAI Blog - Memory usage - 67.1 MB"
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Language Models & Co. | Jay Alammar | Substack"
+e8 push-button 550,33,28,28 "Close"
+e9 page-tab 574,27,256,41 "Bookmarks - Memory usage - 27.0 MB" state=selected
+e10 push-button 788,33,28,28 "Close"
+e11 push-button 824,27,28,41 "New Tab"
+e12 push-button 70,73,39,34 "Back"
+e13 push-button 111,73,34,34 "Forward"
+e14 push-button 147,73,34,34 "Reload"
+e15 push-button 195,78,88,24 "Chrome"
+e16 entry 291,78,1335,24 "Address and search bar"
+e17 push-button 1634,78,24,24 "Bookmark this tab"
+e18 push-button 1679,73,34,34 "You"
+e19 push-button 1718,73,202,34 "New Chrome available"
+e20 toggle-button 0,0,99,27 "Activities" state=checked:false
+e21 menu 99,0,162,27 "Google Chrome"
+e22 menu 906,0,178,27 "Aug 19 21‎∶25"
+e23 menu 1814,0,106,27 "System"
+e24 push-button 0,840,70,8
+e25 push-button 62,33,8,815
+e26 push-button 0,33,70,64 "Google Chrome"
+e27 push-button 0,101,70,64 "Thunderbird Mail"
+e28 push-button 0,169,70,64 "Visual Studio Code"
+e29 push-button 0,237,70,64 "VLC media player"
+e30 push-button 0,305,70,64 "LibreOffice Writer"
+e31 push-button 0,373,70,64 "LibreOffice Calc"
+e32 push-button 0,441,70,64 "LibreOffice Impress"
+e33 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e34 push-button 0,577,70,64 "Files"
+e35 push-button 0,645,70,64 "Ubuntu Software"
+e36 push-button 0,713,70,64 "Help"
+e37 push-button 0,784,70,64 "Trash"
+e38 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e39 [pixels] image 91,130,24,24
+e40 presentation 91,130,24,24 [occluded]
+e41 heading 137,129,648,26 "Bookmarks" [occluded]
+e42 none 795,132,20,20 [occluded]
+e43 push-button 791,128,28,28 "Search bookmarks" [occluded]
+e44 label 819,131,652,22 "Search bookmarks" [occluded]
+e45 entry 819,131,652,22 "Search bookmarks" [occluded]
+e46 none 1878,132,20,20 [occluded]
+e47 push-button 1872,126,32,32 "Organise" [occluded]
+e48 banner 70,114,1850,56
+e49 tree 70,170,256,910 "Bookmark folder tree"
+e50 tree-item 71,178,252,40 [occluded]
+e51 text 145,190,95,16 "Bookmarks bar"
+e52 tree-item 71,218,252,40 [occluded]
+e53 text 145,230,108,16 "Other bookmarks"
+e54 text 959,616,327,16 "To bookmark pages, click the star in the address bar"
+e55 text 70,1080,49,30 "0 selected"
+e56 [offscreen] text 0,996,59,75 "0 items in bookmark list"

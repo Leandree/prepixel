@@ -1,0 +1,1 @@
+{"action": "type", "text": "Total Revenue\tTotal Expenses\n=SUM(Sheet1.A2:A1000)\t=SUM(Sheet1.B2:B1000)\n", "memo": "Typed headers+SUM formulas into Sheet2 A1:B2. NEXT: verify A1/B1 text and A2/B2 numbers in view; then ctrl+s and press Enter (or click 'Use Excel 2007-365!') to Keep Current Format."}

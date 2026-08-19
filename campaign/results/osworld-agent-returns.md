@@ -1,5 +1,148 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-19 — RAPPORT FINAL de la grande passe : itération 3 complète, gel recommandé
+
+56/56 cellules, driver épinglé, scan de contamination 56/56 CLEAN, 519
+appels modèle sans une seule erreur API, `claude-opus-5[1m]` des deux côtés
+(vérifié sur les enveloppes, pas sur la config). Traces complètes dans
+`campaign/results/dev/iter-3/` (incluant `_driver/` — provenance — et
+`_crashed/` — partiels archivés de l'incident). Les cinq sections dans
+l'ordre demandé.
+
+### (1) Le tableau des causes
+
+Itérations 1+2 : committé en 8b20911, inchangé. Itération 3, chaque échec
+lu dans les traces (digests, view.txt, crops, actions brutes ; configs des
+tâches dev lues — jamais celles des 50) :
+
+| cellule | classe | cause, en une phrase |
+|---|---|---|
+| `chrome-93eabf48` A+B | prior, symétrique | ligne Mode non rendue sous thème GTK (diag committé 3a14c21) ; aucun des deux n'explore le second saut. |
+| `os-fe41f596` A+B | prior, symétrique | tâche INFAISABLE (VM sans batterie, `{"func":"infeasible"}`) ; les deux basculent le gsettings, vérifient `true`, déclarent `done` au lieu de `fail`. A note « no battery device » et rationalise. 3e infaisable du jeu dev. |
+| `libreoffice_writer-adf5e2c3-A` | prior (classe R5) | pas 6 : `write('[14]'); press('tab'); write('Steinberg…')` — le préfixe entre littéralement dans le texte ; exact-match → 0. **La classe R5 a changé de camp** : iter-2 c'était B qui tapait le préfixe et A qui s'abstenait ; iter-3 l'inverse (memo B pas 9 : « WITHOUT '[14]' prefix »). Réplication croisée = le piège est aveugle au canal, seul UNO (`ListLabelString`) le lève. |
+| `libreoffice_writer-adf5e2c3-B` | budget | R5 évité, les deux modifications correctes (PNG garde : `Pennington[14]`) ; `ctrl+s` au pas 15 = cap, le dialogue « Keep current format » n'a jamais reçu son Enter, fichier non sauvé. |
+| `libreoffice_impress-ac9bb6cb-B` | prior | détour macro Basic (FixNum) au lieu de formater ; la macro n'est jamais lancée (module non sélectionné). L'escalade no-op a fonctionné (pas 15 barreau 2 après pas 14 UNVERIFIED-inchangé) — la stratégie condamne, pas l'échelle. |
+| `multi_apps-bc2b57f3-B` | prior | détour macro Basic (FixOrder) puis `done` avec l'aveu du memo : « could not be visually re-verified ». A fait la même tâche directement. |
+| `vlc-215dfd39-B` | **actuation** | LE cas canal de l'itération : `Action.toggle` AT-SPI sur radio Qt flippe `checked` SANS émettre `clicked()` → panneau jamais reconstruit ; le garde dit CONFIRMED (l'état a bien changé) = no-op sémantique invisible au garde. Le modèle l'a diagnostiqué seul et a trouvé le contournement Qt exact (focus + flèche = vrai click) — cap au pas 15 en plein contournement. A réussit : sa souris émet un vrai clicked(). |
+| `chrome-7a5a7856-B` | prior/attention | le crop demandé au pas 11 montrait Folder=« All Bookmarks » ; le memo prévoyait de corriger ; Enter committé sans corriger. Barre réellement vide ensuite — sa vérification finale était véridique et son `fail` la lecture exacte d'un état qu'il avait créé. |
+| `multi_apps-da922383-B` | prior | contenu PDF rejeté par le checker (`[-1, -1]`), échec réel. |
+| `multi_apps-da922383-A` | **évaluateur (OSWorld)** | **A a accompli la tâche** : le checker imprime `[1, 1]` — mais `pip install PyMuPDF` à l'évaluation tire une version dont l'alias `fitz` imprime un warning de dépréciation dans la sortie capturée, et `exact_match` compare la chaîne brute : `'warning: …\n[1, 1]\n' ≠ '[1, 1]\n'` → 0. Seule cellule des trois itérations touchée (vérifié en grepant les enveloppes d'évaluation des trois dossiers). Documenté, pas réparé — même règle que chrome-93eabf48. Cette classe peut exister dans les 50. |
+| `multi_apps-897e3b53`, `-a0b9dc9c` A+B | infra, symétrique | credentials Google absents, setup_error connu depuis iter-1. |
+
+### (2) Les modifications, toutes, avec justification générique
+
+Chacune écrite sans avoir vu la config d'une tâche motivante — interfaces
+et canaux, jamais de cas d'application :
+
+1. **DONE/FAIL passent par `env.step`** (3a14c21) — l'évaluateur
+   `infeasible` d'OSWorld ne note 1 que si la dernière action est FAIL
+   (`desktop_env.py:469`) ; le harnais avalait l'action terminale dans les
+   DEUX conditions. Générique : le harnais doit remettre à l'évaluateur ce
+   que l'agent déclare. Validé en conditions réelles : gimp-58d3eeeb 1/1
+   des deux côtés (4 succès volés en iter-1/2, rendus).
+2. **`Selection.selectChild` limité aux rôles sélectionnables** (3a14c21) —
+   répondre « ok » sur un bloc de texte sans placer le caret bloquait le
+   barreau 2. Liste de rôles, pas d'app. Validé : writer-0810415c-B ✅
+   (KO iter-2).
+3. **Escalade no-op** (3a14c21) — même élément+verbe après un barreau 1
+   « ok » suivi d'UNVERIFIED-inchangé → barreau 2 mécanique. 3 escalades
+   en iter-3, zéro boucle inerte type « 4× Action.press sur New… ».
+4. **Ré-résolution par empreinte** (3a14c21) — `node-not-found` → re-walk
+   rôle+nom sur arbre frais, rect en rang seulement, `fresh_rect` re-scope
+   le garde. 1 sauvetage mesuré (browser).
+5. **Supplément dev-browser** (13493fb) — 8 tâches seed 44, committées
+   AVANT tout run, exclusions auditables dans le fichier. Raison d'être :
+   iter-2 n'avait que 2 cellules browser, le routeur n'était pas mesuré.
+6. **Runner multi-fichiers + table `--subset` + métriques iter-3**
+   (7ca3a40) — canal par pas, verdicts du garde, morts au cap,
+   auto-corrections d'échelle ; core et browser jamais mélangés.
+7. **Sentinelle du garde pour `scroll_to` CDP réussi** (db98ad8) — le
+   premier `scroll_to` CDP qui a JAMAIS réussi (iter-3, pas 3 de
+   b4f95342-B) retournait `1` comme before-record ; le garde le
+   subscripte → crash driver. Fix : sentinelle `KBD` (vérification par
+   diff de vue, comme `scroll`). Le supplément browser a exercé le chemin
+   en deux heures — c'était son travail.
+
+### (3) Itération 3 vs itération 2 — core et browser séparés
+
+**Dev-core (20 tâches, les mêmes) :**
+
+| | iter-2 | iter-3 |
+|---|---|---|
+| A succès | 15/20 (16 ajusté gimp) | **15/20** |
+| B succès | 12/20 (13 ajusté gimp) | **12/20** |
+| infra | 2+2 | 2+2 (les mêmes) |
+| médiane pas A/B | 8 / 11.5 | 7 / 11 |
+| médiane coût équiv. A/B | 1.08 / 2.00 $ | 0.79 / 2.06 $ |
+| morts au cap A/B | — | 1 / 6 |
+
+Bascules B : **+3** (gimp-58d3eeeb fix harnais, 0810415c fix selectChild,
+9b7bc335), **−3** (ac9bb6cb et bc2b57f3 détours macro, 215dfd39 radio Qt).
+Bascule A : +gimp, −adf5e2c3 (R5). Net : zéro des deux côtés — les fixes
+ont rendu ce que le harnais volait, le bruit de prior a repris autant.
+
+**Dev-browser (8 tâches, nouveau — pas de baseline iter-2) :**
+A **7/8**, B **6/8** (A médiane 10 pas / 0.68 $, B 13 / 2.86 $ ; morts au
+cap 0/3). Le routeur, mesuré enfin : canal `atspi+cdp` sur 90 des 91 pas
+B, barreau 1 sur 42 actions contre 4 pointeurs, 4 fallbacks singuliers,
+1 refus légitime (« no on-screen web document »), zéro bug d'onglet.
+Échecs B : 7a5a7856 (dossier de favoris, §1) et da922383 (contenu PDF réel
+— et A y est volé par l'évaluateur, §1).
+
+**Incident de passe, documenté** : 1 crash scroll_to (b4f95342-B, vieux
+code), 4 timeouts de boot VM (pression mémoire host dans la traîne
+browser : 2 VM 4G + services sur 15G, swap) ; fix committé AVANT tout
+rejeu, patch à chaud du pin (les process en vol gardent l'ancien module,
+zéro cellule tuée), `PINNED-7ca3a400.json` archivé + `REPIN-NOTE.json` ;
+rejeu séquentiel `--workers 1` : **5/5 réussis**. Une seule cellule a
+tourné code neuf sous étiquette ancienne (f79439ad-B) — morte au boot,
+partiels archivés dans `_crashed/`, rejouée proprement étiquetée.
+
+### (4) Ce qui n'a PAS été fait, et pourquoi
+
+- **Le canal UNO** : faisabilité prouvée (ee27aff), image `Ubuntu-uno.qcow2`
+  copiée, bake préparé — PAS implémenté. Le bug d'onglet CDP a montré ce
+  que coûte un canal à moitié validé dans une itération mesurée ; UNO est
+  un canal nouveau, pas un réglage.
+- **P8 (comparaison de modèles)** : fermé par décision utilisateur — même
+  modèle des deux côtés, toujours.
+- **Le constat radio Qt** (215dfd39) : annoncé ici, PAS implémenté.
+  Piste générique : pour les rôles à activation-signal (radio, certains
+  boutons Qt), préférer le pointeur au barreau 1, ou détecter « état
+  changé mais vue inchangée ailleurs ». L'implémenter APRÈS avoir vu
+  l'échec serait du réglage sur mesure ; à valider en itération 4 si
+  autorisée.
+- **Tentations écartées comme biaisantes** : souffler le second saut de
+  chrome-93eabf48 ; coacher le dialogue « Keep format » (adf5e2c3-B
+  flippait avec UN pas de plus — le plafond reste à 15, encore) ; réparer
+  ou contourner l'évaluateur de da922383 ; toute consigne de prompt sur
+  les dossiers de favoris ou les stratégies macro.
+- **Pas de re-run intégral post-hot-patch** : le bug crashait, il ne
+  pouvait pas corrompre une cellule complétée ; re-courir 51 cellules
+  saines = dépense sans information.
+
+### (5) Recommandation au regard du §2.7 : GEL
+
+Le critère est rempli au sens strict : l'itération complète n'apporte pas
+de gain hors bruit sur le dev set (A 15→15, B 12→12 ; ajustés 16→15 et
+13→12). Les quatre fixes ont fait exactement ce qu'ils promettaient — et
+le bruit de prior a repris trois cellules ailleurs. Le driver v3 est
+mécaniquement sain : échelle auto-corrective validée, routeur à 91 % de
+barreau 1 sur les pages web, scoring terminal réparé, provenance et
+contamination propres. **Je pose le tag `driver-freeze-v3` et je
+m'arrête.**
+
+Une chose reste, et elle n'est pas un réglage : le seul plafond structurel
+identifié du canal B est la cécité à la distinction ornement/littéral, et
+iter-3 vient d'en faire la démonstration EN CROISÉ (A perd adf5e2c3 sur le
+préfixe que B évite explicitement — pile ou face du prior à chaque run,
+dans les deux canaux écran). La levée est prouvée faisable (UNO,
+`ListLabelString`, acceptation au niveau image, ee27aff). C'est un choix
+de périmètre du papier, pas de driver : campagne des 50 sur v3 gelé tel
+quel, ou itération 4 scoped UNO d'abord. Décision manager.
+
+---
+
 ## 2026-08-19 — P9 : faisabilité UNO = OUI, preuves ; itération 3 en cours
 
 **La question posée** : établir l'acceptation UNO au niveau de l'image VM,

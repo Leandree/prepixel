@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e34","memo":"Clicked Bills folder under Local Folders. Next: click into message list, Ctrl+A to select all, then press 'S' to toggle star (verify stars appear; if S untoggles some, use right-click > Mark > As Starred instead)."}
+```

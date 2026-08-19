@@ -1,0 +1,29 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 572,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 102,
+  "cdp_records": 128,
+  "offscreen": 17,
+  "url": "chrome://settings/searchEngines",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "title-partial",
+  "tab": "Settings \u2013 Manage search engines and site search - Memory usage - 56.2 MB",
+  "picked_title": "Settings \u2013 Manage search engines and site search"
+ },
+ "history_views": 3,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true
+}

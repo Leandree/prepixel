@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+s", "memo": "Status bar now shows '1,199 words' (not 'Selected: 58') -> no modal, doc responsive; formatting verified (paras 1&2 = 129/110px vs 19px for para 3). Pressed ctrl+s again as final save. Next: if a 'Keep current format / Use Word 2007-365!' dialog appears, click 'Use Word 2007-365!'; otherwise done."}

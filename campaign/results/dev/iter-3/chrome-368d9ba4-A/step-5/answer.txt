@@ -1,0 +1,5 @@
+We're on the Manchester GB page (`en/gb/manchester`). Now clicking the MONTHLY tab.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(977, 230); time.sleep(4)", "memo": "Step5: on Manchester GB page (accuweather.com/en/gb/manchester/m15-6/...329260), clicked MONTHLY tab at (977,230). Next: verify monthly calendar page loaded showing AUGUST 2026 with daily hi/lo for Manchester, England. Today=Wed Aug 19. If Aug shown, task DONE."}
+```

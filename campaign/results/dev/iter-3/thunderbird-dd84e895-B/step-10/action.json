@@ -1,0 +1,1 @@
+{"action": "toggle", "target": "e55", "to": true, "memo": "Toggled Starred checkbox (e55) in message header for 'X (formerly Twitter)'. AWS already Starred. Next: verify e44 row shows 'Starred' in its label; if yes -> done. If not, try pressing 's' with row focused."}

@@ -1,0 +1,39 @@
+{
+ "task_id": "1334ca3e-f9e3-4db8-9ca7-b4c653be7d17",
+ "domain": "libreoffice_calc",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "7ca3a400e533c9498d8b6f3e0dc13488098370a5",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 6,
+ "termination": "DONE",
+ "wall_clock_s": 156.5,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 34,
+  "cache_creation_input_tokens": 39662,
+  "cache_read_input_tokens": 78049,
+  "output_tokens": 4271,
+  "cost_usd": 0.54259,
+  "attempts": 6,
+  "steps_with_usage": 6,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "WAIT",
+  "import pyautogui; pyautogui.click(177, 76)",
+  "import pyautogui; pyautogui.click(201, 632)",
+  "import pyautogui; pyautogui.click(511, 759)",
+  "import pyautogui; pyautogui.hotkey('ctrl', 's')",
+  "DONE"
+ ]
+}

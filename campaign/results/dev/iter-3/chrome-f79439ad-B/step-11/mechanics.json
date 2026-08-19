@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 581,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 91,
+  "cdp_records": 138,
+  "offscreen": 60,
+  "url": "https://www.ryanair.com/gb/en",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 3110,
+  "picked_by": "title-partial",
+  "tab": "Official Ryanair website | Book direct for the lowest fares | Ryanair.com - Memory usage - 322 MB",
+  "picked_title": "Official Ryanair website | Book direct for the lowest fares | Ryanair.com"
+ },
+ "cdp_offscreen_skipped": 243,
+ "history_views": 3,
+ "history_views_dropped": 7,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 4617,
+ "settle_captures": 2,
+ "guard_ms": 30
+}

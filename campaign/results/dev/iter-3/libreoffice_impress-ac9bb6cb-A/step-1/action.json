@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(485, 76)", "memo": "Task: make slide number RED in saa-format-guide.pptx (15 slides, LO Impress). Plan: Tools > Macros > Edit Basic, write macro looping all DrawPages+MasterPages, find SlideNumberShape (com.sun.star.presentation.SlideNumberShape) set CharColor=RGB(255,0,0), then doc.store(). Just clicked Tools menu."}

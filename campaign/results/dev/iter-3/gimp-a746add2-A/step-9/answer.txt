@@ -1,0 +1,5 @@
+The Vignette filter dialog is now open — title bar reads "Vignette", with the full parameter set (Vignette shape, Color, Radius, Softness, Gamma, Proportion, Squeeze, Center X/Y, Rotation) and Help/Reset/Cancel/OK buttons. The on-canvas vignette preview ellipse is visible over the image.
+
+```json
+{"action": "DONE", "memo": "Vignette filter dialog confirmed open (Filters > Light and Shadow > Vignette). Task complete; dialog left open as requested."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e113","value":"Disabled","memo":"Set 'Auto Dark Mode for Web Contents' (#enable-force-dark) combo to Disabled. Next: verify combo reads Disabled, then click the 'Relaunch' button that appears at the bottom of the flags page to apply."}
+```

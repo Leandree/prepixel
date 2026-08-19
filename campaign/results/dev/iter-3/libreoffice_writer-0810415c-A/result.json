@@ -1,0 +1,40 @@
+{
+ "task_id": "0810415c-bde4-4443-9047-d5f70165a697",
+ "domain": "libreoffice_writer",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "7ca3a400e533c9498d8b6f3e0dc13488098370a5",
+ "success": true,
+ "score_raw": 1,
+ "steps": 7,
+ "termination": "DONE",
+ "wall_clock_s": 201.0,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 34,
+  "cache_creation_input_tokens": 36133,
+  "cache_read_input_tokens": 66162,
+  "output_tokens": 6851,
+  "cost_usd": 0.565856,
+  "attempts": 7,
+  "steps_with_usage": 7,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(656, 238); pyautogui.keyDown('shift'); pyautogui.click(707, 367); pyautogui.keyUp('shift')",
+  "import pyautogui; pyautogui.click(651, 396); pyautogui.keyDown('shift'); pyautogui.click(699, 524); pyautogui.keyUp('shift')",
+  "import pyautogui; pyautogui.click(1429, 147)",
+  "import pyautogui; pyautogui.click(1464, 289)",
+  "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(1.5)",
+  "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(2)",
+  "DONE"
+ ]
+}

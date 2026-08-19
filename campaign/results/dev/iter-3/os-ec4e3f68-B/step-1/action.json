@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+alt+t", "memo": "Task: remove vim from GNOME favorites. No right-click action available, so using terminal + gsettings. Opened terminal with ctrl+alt+t. Next: run `gsettings get org.gnome.shell favorite-apps` to see the list, then set it without the vim entry."}

@@ -1,0 +1,7 @@
+The submenu is open. I'll uncheck "While Typing" so autocorrect doesn't mangle the citation text (e.g. auto-formatting the DOI/URL or capitalization).
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(860, 252); time.sleep(1)"}
+```
+
+{"action": "import pyautogui, time; pyautogui.click(860, 252); time.sleep(1)", "memo": "AutoCorrect While Typing now OFF. Ref list format: '[N]<TAB>Author...' alphabetical, last is [13] Schramm; empty para follows (cursor there via Ctrl+End). In-text style: word[11] (no space). NEXT: Ctrl+End, then type: [14]\\tSteinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028  -- italicize journal+volume later. THEN: Ctrl+H replace '<add here>' with '[14]' in 4th paragraph."}

@@ -1,0 +1,5 @@
+The reminder is now readable — it specifies one Calc file with a required sheet order. Next I need to find the open assignment workbook, so I'll open the Window menu to see the loaded documents.
+
+```json
+{"action": "import pyautogui; pyautogui.click(571, 76)", "memo": "reminder.docx says: put ALL sheets in ONE calc file, ordered: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Clicked Window menu to locate the open Calc assignment; next switch to it and reorder sheet tabs by dragging."}
+```

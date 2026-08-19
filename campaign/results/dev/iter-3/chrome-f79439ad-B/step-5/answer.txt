@@ -1,0 +1,1 @@
+{"action":"click","target":"e212","memo":"Ireland filter worked; airport list = Cork/Dublin/Kerry/Knock/Shannon. Clicking 'Dublin' (e212). Next: verify From=Dublin, then click To entry (e86) and pick Vienna (Austria->Vienna), then date 10 Sep 2026, 2 adults, Search (e87). One-way selection still UNVERIFIED - re-check 'One way' label state."}

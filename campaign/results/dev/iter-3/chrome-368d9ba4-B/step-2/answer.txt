@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e62","memo":"Clicked AccuWeather search box (dismisses notification bubble too). Next: type 'Manchester' and press Enter, then pick Manchester, GB from results, then open 'Monthly' tab."}
+```

@@ -1,0 +1,1 @@
+{"action":"wait","memo":"'All' radio is now checked but the structure still shows the Simple prefs layout (stale). Waiting for advanced tree to render. Next: locate left tree, expand Interface > Main interfaces > Qt, uncheck 'Display background cone or art' (qt-bgcone), then click Save. A Filter/search box may exist at top-left of the advanced dialog."}

@@ -1,0 +1,5 @@
+Zoom is now 100% (confirmed in the status bar). Now I'll save so the zoom persists in the file.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's')", "memo": "Zoom set to 100% (status bar confirms). Just pressed Ctrl+S. Next: a 'Keep current format' dialog likely appears - click 'Use Excel 2007-365!' to keep xlsx, then verify title bar has no modified marker and DONE."}
+```

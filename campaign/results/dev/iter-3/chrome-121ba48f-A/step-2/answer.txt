@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(452, 47)", "memo": "Step 2: Tab 1 is dota2.com (not Steam store). Switched to 'Welcome to Steam' tab. Next: use Steam search to find Dota 2 store page, then find DLC section and add all DLC to cart."}
+```

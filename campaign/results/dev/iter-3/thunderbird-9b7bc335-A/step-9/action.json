@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1376, 321)", "memo": "Filter 'Forward to gmail' exists and is Enabled (checkmark) for anonym-x2024@outlook.com. Clicked X to close Message Filters window. Next: confirm window closed; task should then be DONE."}

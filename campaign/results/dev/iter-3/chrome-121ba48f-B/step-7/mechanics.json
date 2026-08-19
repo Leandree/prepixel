@@ -1,0 +1,35 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 580,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 108,
+  "cdp_records": 181,
+  "offscreen": 60,
+  "url": "https://store.steampowered.com/app/570/Dota_2/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 4339,
+  "picked_by": "title-partial",
+  "tab": "Dota 2 on Steam - Memory usage - 187 MB",
+  "picked_title": "Dota 2 on Steam"
+ },
+ "cdp_offscreen_skipped": 363,
+ "history_views": 3,
+ "history_views_dropped": 3,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "scroll",
+ "rung": "scroll",
+ "settle_ms": 4969,
+ "settle_captures": 3,
+ "guard_ms": 47
+}

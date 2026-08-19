@@ -1,0 +1,29 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 598,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 21,
+  "cdp_records": 63,
+  "offscreen": 19,
+  "url": "https://www.delta.com/flightsearch/search-results?cacheKeySuffix=4d034609-d995-4754-97d3-b3e2e7c1ee35",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 1691,
+  "picked_by": "title-exact",
+  "tab": "Flight Results : Find & Book Airline Tickets : Delta Air Lines",
+  "picked_title": "Flight Results : Find & Book Airline Tickets : Delta Air Lines"
+ },
+ "history_views": 2,
+ "history_views_dropped": 12,
+ "memo_in": true,
+ "memo_out": true
+}

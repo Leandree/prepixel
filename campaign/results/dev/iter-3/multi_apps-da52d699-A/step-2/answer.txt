@@ -1,0 +1,5 @@
+The spreadsheet is loaded. It has 10 books (rows 2–11) plus unlabeled columns G/H/I that look like word count, days elapsed, and words/day (e.g. 47840/36 = 1328.89). The lowest words/day is row 7, "Out of the Silent Plan…" — I'll click that cell to read the full title.
+
+```json
+{"action": "import pyautogui; pyautogui.click(181, 443)", "memo": "Sheet loaded (10 books, rows2-11). Cols G=wordcount,H=days,I=words/day (I=G/H verified). Min words/day = row7 'Out of the Silent Plan...' 1328.89 (next lowest Silence 1984). Clicked A7 to read full title in formula bar. Then: open ~/Desktop/book_list_result.docx, type title, Ctrl+S keep format."}
+```

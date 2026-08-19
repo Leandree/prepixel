@@ -1,0 +1,5 @@
+Both messages in the Bills folder now show "Starred" in their row labels (e40 AWS, e44 X), and the folder contains only these 2 messages.
+
+```json
+{"action":"done","memo":"Both Bills messages (AWS, X/Twitter) now show 'Starred' in message list rows; folder has 2 messages total. Task complete."}
+```

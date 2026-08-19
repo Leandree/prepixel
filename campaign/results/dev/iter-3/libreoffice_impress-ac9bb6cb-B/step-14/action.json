@@ -1,0 +1,1 @@
+{"action": "click", "target": "e327", "memo": "Clicked Run in Basic Macros dialog with macro name FixNum. Expect MsgBox 'done' (click OK) confirming all shapes containing the page-number field were recolored red and the doc saved. If an error/dialog appears instead, macro didn't run."}

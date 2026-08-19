@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e309","memo":"Aug 20 2026 selected & confirmed. Clicked Done (e309). Next: click Find Flights (e314 in this view's numbering) to run the JFK→ORD one-way search."}
+```

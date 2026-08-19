@@ -1,0 +1,3 @@
+The formatting is applied — paragraphs 1 and 2 now show double line spacing (~37px between lines vs ~18px in the untouched paragraphs), and no format dialog is open. The status-bar modified indicator looks cleared, but I'll confirm the save rather than assume it.
+
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(2)", "memo": "Paras 1-2 double-spaced (verified: ~37px line gaps vs ~18px elsewhere). Ctrl+S pressed a 2nd time to confirm save. If 'Keep current format?' dialog shows, click 'Use Word 2007-365!' (right button, approx x=1464 y=289) then DONE. If no dialog, DONE."}

@@ -1,0 +1,5 @@
+The URL never got typed — the window likely wasn't focused. Let me click into the page first, then use Ctrl+L.
+
+```json
+{"action": "import pyautogui; pyautogui.click(700, 750); pyautogui.sleep(0.8); pyautogui.hotkey('ctrl', 'l'); pyautogui.sleep(0.5); pyautogui.write('chrome://settings/search'); pyautogui.sleep(0.3); pyautogui.press('enter'); pyautogui.sleep(2)", "memo": "Step 3: earlier typing failed (window unfocused). Clicked page body to focus, then Ctrl+L and typed chrome://settings/search + Enter. Next: verify Search engine settings page loaded; click the 'Search engine used in the address bar' dropdown (~right side, row near top) and choose Bing; confirm it reads Bing."}
+```

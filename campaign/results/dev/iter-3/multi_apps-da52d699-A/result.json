@@ -1,0 +1,39 @@
+{
+ "task_id": "da52d699-e8d2-4dc5-9191-a2199e0b6a9b",
+ "domain": "multi_apps",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "7ca3a400e533c9498d8b6f3e0dc13488098370a5",
+ "success": true,
+ "score_raw": 1,
+ "steps": 6,
+ "termination": "DONE",
+ "wall_clock_s": 293.0,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 40,
+  "cache_creation_input_tokens": 56278,
+  "cache_read_input_tokens": 121925,
+  "output_tokens": 11093,
+  "cost_usd": 0.901267,
+  "attempts": 6,
+  "steps_with_usage": 6,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "WAIT",
+  "import pyautogui; pyautogui.click(181, 443)",
+  "import pyautogui, time; pyautogui.hotkey('ctrl','o'); time.sleep(2); pyautogui.write('~/Desktop/book_list_result.docx'); time.sleep(1); pyautogui.press('enter'); time.sleep(3)",
+  "import pyautogui, time; pyautogui.click(900, 290); time.sleep(1); pyautogui.write('Out of the Silent Planet'); time.sleep(1)",
+  "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter'); time.sleep(2)",
+  "DONE"
+ ]
+}

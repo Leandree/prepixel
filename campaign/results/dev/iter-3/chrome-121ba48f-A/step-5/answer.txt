@@ -1,0 +1,3 @@
+The Dota 2 store page (app/570) is loaded. Now I need to scroll down to the "Downloadable Content" section.
+
+{"action": "import pyautogui; pyautogui.moveTo(1750, 700); pyautogui.scroll(-12); pyautogui.scroll(-12)", "memo": "Step 5: On Dota 2 store page (store.steampowered.com/app/570). Scrolled down ~2x looking for 'Downloadable Content for Dota 2' section (has checkboxes + 'Add selected items to cart'). If not found, keep scrolling; fallback = navigate to store.steampowered.com/dlc/570/Dota_2/"}

@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e11", "memo": "Reading terminal output to confirm grep shows 'play-and-exit=0' in ~/.config/vlc/vlcrc. If confirmed -> done. If file/dir missing (No such file), need to create ~/.config/vlc/vlcrc with that line."}

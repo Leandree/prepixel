@@ -1,0 +1,5 @@
+Desktop is showing; Thunderbird isn't open yet. Launching it from the dock.
+
+```json
+{"action": "import pyautogui; pyautogui.click(35, 133)", "memo": "Launched Thunderbird from dock. Plan: Tools > Message Filters > New filter on anonym-x2024@outlook.com, condition Match all messages, action Forward Message to anonym-x2024@gmail.com. Wait for app to load."}
+```

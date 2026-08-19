@@ -1,0 +1,233 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Rotary Embeddings: A Relative Revolution | EleutherAI Blog - Memory usage - 67.1 MB"
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Language Models & Co. | Jay Alammar | Substack - Memory usage - 267 MB" state=selected
+e8 push-button 550,33,28,28 "Close"
+e9 page-tab 574,27,256,41 "Bookmarks - Memory usage - 27.0 MB"
+e10 push-button 788,33,28,28 "Close"
+e11 push-button 824,27,28,41 "New Tab"
+e12 push-button 70,73,39,34 "Back"
+e13 push-button 111,73,34,34 "Forward"
+e14 push-button 147,73,34,34 "Reload"
+~e15 push-button 195,78,24,24 "View site information"
+~e16 entry 227,78,1399,24 "Address and search bar"
+e17 push-button 1634,78,24,24 "Bookmark this tab"
+e18 push-button 1679,73,34,34 "You"
+e19 push-button 1718,73,202,34 "New Chrome available"
+~e20 text 524,973,616,124 "Post preview for The Illustrated DeepSeek-R1"
+~e21 toggle-button 532,1060,52,25 "Like (815)" state=checked:false
+~e22 text 556,1062,22,21 "815"
+~e23 push-button 666,1060,45,25 "View comments (25)"
+~e24 text 690,1062,15,21 "25"
+~e25 push-button 794,1060,45,25 "43"
+~e26 push-button 922,1060,26,25
+e27 toggle-button 0,0,99,27 "Activities" state=checked:false
+e28 menu 99,0,162,27 "Google Chrome"
+e29 menu 906,0,178,27 "Aug 19 21‎∶26"
+e30 menu 1814,0,106,27 "System"
+e31 push-button 0,840,70,8
+e32 push-button 62,33,8,815
+e33 push-button 0,33,70,64 "Google Chrome"
+e34 push-button 0,101,70,64 "Thunderbird Mail"
+e35 push-button 0,169,70,64 "Visual Studio Code"
+e36 push-button 0,237,70,64 "VLC media player"
+e37 push-button 0,305,70,64 "LibreOffice Writer"
+e38 push-button 0,373,70,64 "LibreOffice Calc"
+e39 push-button 0,441,70,64 "LibreOffice Impress"
+e40 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e41 push-button 0,577,70,64 "Files"
+e42 push-button 0,645,70,64 "Ubuntu Software"
+e43 push-button 0,713,70,64 "Help"
+e44 push-button 0,784,70,64 "Trash"
+e45 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e46 [pixels] image 95,130,40,40 alt=Language Models & Co.
+~e47 heading 860,136,264,27 "Language Models & Co."
+~e48 push-button 1609,130,40,40 "Search"
+~e49 [pixels] image 1619,140,20,20
+~e50 push-button 1653,130,40,40 "Share Publication"
+~e51 [pixels] image 1663,140,20,20
+~e52 push-button 1701,130,102,40 "Subscribe"
+~e53 push-button 1810,130,80,40 "Sign in"
+~e54 push-button 889,187,62,48 "Home"
+~e55 push-button 951,187,72,48 "Archive"
+~e56 push-button 1023,187,64,48 "About"
+~e57 push-button 70,187,56,48
+~e58 [pixels] image 86,199,24,24
+~e59 push-button 1854,187,56,48
+~e60 [pixels] image 1870,199,24,24
+~e61 article 524,252,932,321 "Post preview for Inside NeurIPS 2025: The Year’s AI Research, Mapped"
+~e62 [pixels] image 532,260,458,305
+~e63 [pixels] image 532,260,458,305
+~e64 link 1022,316,394,76 "Inside NeurIPS 2025: The Year’s AI Research, Mapped"
+~e65 link 1022,400,394,72 "Using Cohere's Command A Reasoning and Embed 4 to Visualize the ~6,000 Papers Accepted to NeurIPS 2025"
+~e66 text 1142,484,66,12 "Nov 3, 2025"
+~e67 text 1210,484,4,11 "•"
+~e68 link 1217,484,79,12 "Jay Alammar"
+~e69 push-button 1134,509,51,24 "Like (166)"
+~e70 [pixels] image 1140,514,14,14
+~e71 [pixels] image 1141,516,12,11
+~e72 text 1158,514,21,13 "166"
+~e73 push-button 1189,509,37,24 "View comments (6)"
+~e74 [pixels] image 1195,514,14,14
+~e75 [pixels] image 1196,516,11,11
+~e76 text 1213,514,7,13 "6"
+~e77 push-button 1230,509,44,24 "19"
+~e78 [pixels] image 1236,514,14,14
+~e79 push-button 1278,509,26,24
+~e80 [pixels] image 1284,514,14,14
+~e81 navigation 524,622,616,56 "Archive sort tabs"
+~e82 page-tab-list 532,622,199,40 "Tabs"
+~e83 page-tab 536,626,56,32 "Latest" state=selected
+~e84 page-tab 596,626,39,32 "Top"
+~e85 page-tab 639,626,88,32 "Discussions"
+~e86 [pixels] image 532,622,112,40
+~e87 [pixels] image 619,622,112,40
+~e88 push-button 1092,622,40,40 "Search"
+~e89 [pixels] image 1102,632,20,20
+~e90 article 524,678,616,123 "Post preview for The Illustrated GPT-OSS"
+~e91 link 532,686,416,26 "The Illustrated GPT-OSS"
+~e92 link 532,716,416,20 "OpenAI releases their first open source LLM in six years"
+~e93 text 532,744,71,12 "Aug 19, 2025"
+~e94 text 605,744,4,11 "•"
+~e95 link 612,744,79,12 "Jay Alammar"
+~e96 push-button 532,765,51,24 "Like (169)"
+~e97 [pixels] image 538,770,14,14
+~e98 [pixels] image 539,772,12,11
+~e99 text 556,770,21,13 "169"
+~e100 push-button 669,765,37,24 "View comments (9)"
+~e101 [pixels] image 675,770,14,14
+~e102 [pixels] image 676,772,11,11
+~e103 text 693,770,7,13 "9"
+~e104 push-button 792,765,44,24 "17"
+~e105 [pixels] image 798,770,14,14
+~e106 push-button 922,765,26,24
+~e107 [pixels] image 928,770,14,14
+~e108 [pixels] image 972,686,160,107
+~e109 [pixels] image 972,686,160,107
+~e110 article 524,818,616,139 "Post preview for How Transformer LLMs Work [Free Course]"
+~e111 link 532,826,416,26 "How Transformer LLMs Work [Free Course]"
+~e112 link 532,856,416,40 "Maarten and I teamed up with Andrew Ng to bring you the most accessible and up-to-date intro to Transformers yet!"
+~e113 text 532,904,68,12 "Feb 11, 2025"
+~e114 text 602,904,4,11 "•"
+~e115 link 609,904,79,12 "Jay Alammar"
+~e116 push-button 532,925,51,24 "Like (185)"
+~e117 [pixels] image 538,930,14,14
+~e118 [pixels] image 539,932,12,11
+~e119 text 556,930,21,13 "185"
+~e120 push-button 669,925,37,24 "View comments (2)"
+~e121 [pixels] image 675,930,14,14
+~e122 [pixels] image 676,932,11,11
+~e123 text 693,930,7,13 "2"
+~e124 push-button 792,925,44,24 "16"
+~e125 [pixels] image 798,930,14,14
+~e126 push-button 922,925,26,24
+~e127 [pixels] image 928,930,14,14
+~e128 [pixels] image 972,826,160,107
+~e129 [pixels] image 972,826,160,107
+~e130 article 524,974,616,123 "Post preview for The Illustrated DeepSeek-R1" [occluded]
+~e131 link 532,982,416,26 "The Illustrated DeepSeek-R1" [occluded]
+~e132 link 532,1012,416,20 "A recipe for reasoning LLMs" [occluded]
+~e133 text 532,1040,69,12 "Jan 28, 2025"
+~e134 text 604,1040,4,11 "•"
+~e135 link 611,1040,79,12 "Jay Alammar" [occluded]
+~e136 push-button 532,1061,51,24 "Like (815)" [occluded]
+~e137 [pixels] image 538,1066,14,14
+~e138 [pixels] image 539,1068,12,11
+~e139 text 556,1066,21,13 "815"
+~e140 push-button 667,1061,44,24 "View comments (25)" [occluded]
+~e141 [pixels] image 673,1066,14,14
+~e142 [pixels] image 674,1068,11,11
+~e143 text 691,1066,14,13 "25"
+~e144 push-button 794,1061,44,24 "43" [occluded]
+~e145 [pixels] image 800,1066,14,14
+~e146 push-button 922,1061,26,24 [occluded]
+~e147 [pixels] image 928,1066,14,14
+~e148 [pixels] image 972,982,160,107
+~e149 [pixels] image 972,982,160,107
+~e150 [offscreen] article 454,1000,616,165 "Post preview for SWE-Bench authors reflect on the state of LLM agents at Neurips 2024"
+~e151 [offscreen] link 462,1008,416,52 "SWE-Bench authors reflect on the state of LLM agents at Neurips 2024"
+~e152 [offscreen] link 462,1064,416,40 "The SWE-bench task measures AI agents on software engineering tasks at the level of a github issue."
+~e153 [offscreen] text 462,1112,69,12 "Jan 15, 2025"
+~e154 [offscreen] text 534,1112,4,11 "•"
+~e155 [offscreen] link 541,1112,79,12 "Jay Alammar"
+~e156 [offscreen] push-button 462,1133,37,24 "Like (6)"
+~e157 [offscreen] text 486,1138,7,13 "6"
+~e158 [offscreen] push-button 596,1133,26,24 "View comments (0)"
+~e159 [offscreen] push-button 718,1133,37,24 "1"
+~e160 [offscreen] push-button 852,1133,26,24
+~e161 [offscreen] article 454,1182,616,145 "Post preview for Our book, Hands-On Large Language Models, Is Now Out!"
+~e162 [offscreen] link 462,1190,416,52 "Our book, Hands-On Large Language Models, Is Now Out!"
+~e163 [offscreen] link 462,1246,416,20 "We would love to know what you think!"
+~e164 [offscreen] text 462,1274,70,12 "Oct 16, 2024"
+~e165 [offscreen] text 535,1274,4,11 "•"
+~e166 [offscreen] link 541,1274,79,12 "Jay Alammar"
+~e167 [offscreen] push-button 462,1295,44,24 "Like (62)"
+~e168 [offscreen] text 486,1300,14,13 "62"
+~e169 [offscreen] push-button 661,1295,37,24 "4"
+~e170 [offscreen] push-button 852,1295,26,24
+~e171 [offscreen] article 454,1344,616,165 "Post preview for LLM Tokenizers, Semantic Search Course, And book update #2"
+~e172 [offscreen] link 462,1352,416,52 "LLM Tokenizers, Semantic Search Course, And book update #2"
+~e173 [offscreen] link 462,1408,416,40 "Let me tell you what large language model Tokenizers are, why they're fascinating, and how they're are under-explored."
+~e174 [offscreen] text 462,1456,72,12 "Nov 14, 2023"
+~e175 [offscreen] text 537,1456,4,11 "•"
+~e176 [offscreen] link 543,1456,79,12 "Jay Alammar"
+~e177 [offscreen] push-button 462,1477,44,24 "Like (77)"
+~e178 [offscreen] text 486,1482,14,13 "77"
+~e179 [offscreen] push-button 661,1477,37,24 "6"
+~e180 [offscreen] push-button 852,1477,26,24
+~e181 [offscreen] article 454,1526,616,165 "Post preview for We're Writing a Book! ""Hands-On Large Language Models"""
+~e182 [offscreen] link 462,1534,416,52 "We're Writing a Book! ""Hands-On Large Language Models"""
+~e183 [offscreen] link 462,1590,416,40 "With lots of visuals explaining language understanding and generation with LLMs"
+~e184 [offscreen] text 462,1638,69,12 "Jun 22, 2023"
+~e185 [offscreen] text 534,1638,4,11 "•"
+~e186 [offscreen] link 541,1638,79,12 "Jay Alammar"
+~e187 [offscreen] push-button 462,1659,44,24 "Like (67)"
+~e188 [offscreen] text 486,1664,14,13 "67"
+~e189 [offscreen] push-button 666,1659,26,24
+~e190 [offscreen] push-button 852,1659,26,24
+~e191 [offscreen] push-button 462,1707,108,40 "See all"
+~e192 [pixels] image 1164,622,32,32 alt=Language Models & Co.
+~e193 text 1164,664,187,19 "Language Models & Co."
+~e194 text 1164,693,235,33 "Large language models, their internals, and applications."
+~e195 entry 1164,754,179,40 "Type your email..."
+~e196 push-button 1343,754,105,40 "Subscribe"
+~e197 text 1164,836,149,19 "Recommendations"
+~e198 link 1156,883,300,58 "LLM WatchPascal Biese"
+~e199 link 1164,891,40,40
+~e200 [pixels] image 1164,891,40,40 alt=LLM Watch
+~e201 text 1220,892,79,17 "LLM Watch"
+~e202 text 1220,916,66,13 "Pascal Biese"
+~e203 link 1156,945,300,58 "Exploring Language ModelsMaarten Grootendorst" [occluded]
+~e204 link 1164,953,40,40 [occluded]
+~e205 [pixels] image 1164,953,40,40 alt=Exploring Language Models
+~e206 text 1220,954,198,17 "Exploring Language Models"
+~e207 text 1220,978,123,13 "Maarten Grootendorst"
+~e208 [offscreen] heading 462,1821,916,48 "Language Models & Co."
+~e209 [offscreen] entry 462,1909,275,40 "Type your email..."
+~e210 [offscreen] push-button 737,1909,105,40 "Subscribe"
+~e211 [offscreen] link 462,1965,916,20 "About"
+~e212 [offscreen] link 462,2001,916,20 "Archive"
+~e213 [offscreen] link 462,2037,916,20 "Recommendations"
+~e214 [offscreen] link 462,2073,916,20 "Sitemap"
+~e215 [offscreen] text 744,2167,15,16 "©"
+~e216 [offscreen] text 759,2167,32,16 "2026"
+~e217 [offscreen] text 793,2167,82,16 "Jay Alammar"
+~e218 [offscreen] text 875,2167,10,16 "·"
+~e219 [offscreen] link 885,2167,45,16 "Privacy"
+~e220 [offscreen] text 930,2167,10,16 "∙"
+~e221 [offscreen] link 940,2167,39,16 "Terms"
+~e222 [offscreen] text 979,2167,10,16 "∙"
+~e223 [offscreen] link 989,2167,107,16 "Collection notice"
+~e224 [offscreen] link 768,2205,183,40 "Start your Substack"
+~e225 [offscreen] link 959,2205,112,40 "Get the app"
+~e226 heading 936,974,129,24 "Cookie Policy"
+~e227 text 616,1010,679,12 "We use cookies to improve your experience, for analytics, and for marketing. You can accept, reject, or manage your preferences. See our"
+~e228 link 1298,1010,67,12 "privacy policy"
+~e229 text 1365,1010,3,12 "."
+~e230 push-button 904,1034,65,32 "Manage"
+~e231 push-button 975,1034,56,32 "Reject"
+~e232 push-button 1037,1034,59,32 "Accept"
+~e233 [offscreen] +4 more lines truncated (scroll to reveal)

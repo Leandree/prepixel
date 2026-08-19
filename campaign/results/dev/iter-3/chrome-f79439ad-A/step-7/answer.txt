@@ -1,0 +1,5 @@
+Current screen shows the "To" field is still empty — the typed "Vienna" didn't register and the dropdown closed. I'll retry with a pause after clicking so the input gains focus.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1050, 328); time.sleep(2); pyautogui.write('Vienna', interval=0.3)", "memo": "Retried typing Vienna in To field (click + 2s wait + slow type). Next: verify text appeared, then click Vienna airport suggestion in right 'Pick an airport' list (~1052,441 or first result). Then date 10 Sep 2026, then 2 adults, then Search (1425,321). Today=Aug 19 2026."}
+```

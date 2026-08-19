@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Calc says best_awards_acl.xlsx 'is ready' but grid not yet in a11y tree. Next: read cells A1:D5 from Calc (expect header + 2022 Learned Incremental Representations / 2021 Vocabulary Learning OT / 2020 CheckList / 2019 Bridging the Gap, aclanthology .pdf links). If correct -> done."}

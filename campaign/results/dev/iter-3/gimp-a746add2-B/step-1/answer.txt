@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e18","memo":"Launching GIMP to reach Filters > Light and Shadow > Vignette. May need to open dog_with_background.png first since filters need an active image. Wait for GIMP to load."}
+```

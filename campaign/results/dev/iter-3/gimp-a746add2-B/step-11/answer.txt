@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"l","memo":"Menu popups aren't in the a11y tree, but the status bar acts as a tooltip readout: at step 8-9 it read 'Reset all plug-ins to their default settings' (= Filters>Reset all Filters highlighted), and after Down it reverted to the image name (= 'Blur' highlighted, no tooltip). So the Filters menu IS open and keyboard nav works. Pressing 'l' should jump to/open 'Light and Shadow'. NEXT STEP: press 'v' to activate 'Vignette' (only V item in that submenu), which opens the Vignette filter dialog -> then done."}
+```

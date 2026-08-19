@@ -1,0 +1,3 @@
+Thunderbird is loaded on the account page, which has a "Manage message filters" shortcut — that's the fastest route.
+
+{"action": "import pyautogui; pyautogui.click(1007, 210)", "memo": "Clicked 'Manage message filters' on the anonym-x2024@outlook.com account page. Expect Message Filters dialog (filters for anonym-x2024@outlook.com). Next: click 'New...' to create filter; name it, choose 'Match all messages', action 'Forward Message To' -> anonym-x2024@gmail.com, then OK."}

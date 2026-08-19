@@ -1,0 +1,5 @@
+Results page confirms the search: URL shows `adults=2&dateOut=2026-09-10&isReturn=false&originIata=DUB&destinationIata=VIE`, and the header reads "Dublin ✈ Vienna · One way · 10 Sept · 2" with flights listed (FR 7008 08:25→12:15, FR 7367 18:25→22:15).
+
+```json
+{"action": "DONE", "memo": "Search complete: Ryanair results page shows one-way Dublin->Vienna, Thu 10 Sept, 2 adults, with two flight options listed."}
+```

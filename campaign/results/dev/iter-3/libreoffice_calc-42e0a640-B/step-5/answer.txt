@@ -1,0 +1,1 @@
+{"action":"click","target":"e933","memo":"Sheet1: A=Revenue (larger nums, 39929...), B=Total Expenses (10828...), data rows 2-20, headers row 1. Now on Sheet2: click Name Box (e947 ~74,169), type A1+Enter, then type: Total Revenue<TAB>Total Expenses<ENTER> =SUM(Sheet1.A2:A1000)<TAB>=SUM(Sheet1.B2:B1000)<ENTER>, then Ctrl+S and Keep Current Format."}

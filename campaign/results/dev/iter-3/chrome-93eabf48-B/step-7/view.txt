@@ -1,0 +1,166 @@
+e1 text 94,54,1252,852 "Software"
+e2 toggle-button 126,77,36,46 "Search" state=checked:true
+e3 radio-button 532,77,125,46 "Explore" state=checked:false
+e4 radio-button 657,77,125,46 "Installed" state=checked:false
+e5 radio-button 782,77,125,46 "Updates" state=checked:false
+e6 toggle-button 0,0,99,27 "Activities" state=checked:false
+e7 menu 99,0,162,27 "Google Chrome"
+e8 menu 906,0,178,27 "Aug 19 19‎∶35"
+e9 menu 1814,0,106,27 "System"
+e10 push-button 0,908,70,8
+e11 push-button 62,33,8,883
+e12 push-button 0,33,70,64 "Google Chrome"
+e13 push-button 0,101,70,64 "Thunderbird Mail"
+e14 push-button 0,169,70,64 "Visual Studio Code"
+e15 push-button 0,237,70,64 "VLC media player"
+e16 push-button 0,305,70,64 "LibreOffice Writer"
+e17 push-button 0,373,70,64 "LibreOffice Calc"
+e18 push-button 0,441,70,64 "LibreOffice Impress"
+e19 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e20 push-button 0,577,70,64 "Files"
+e21 push-button 0,645,70,64 "Ubuntu Software"
+e22 push-button 0,713,70,64 "Help"
+e23 push-button 0,784,70,64 "Snap Store"
+e24 push-button 0,852,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1802,27,30,35 "Minimise"
+e27 push-button 1842,27,30,35 "Restore"
+e28 push-button 1882,27,38,35 "Close"
+e29 push-button 76,27,28,41 "Search tabs"
+e30 page-tab 98,27,256,41 "Experiments - Memory usage - 84.7 MB" state=selected
+e31 push-button 312,33,28,28 "Close"
+e32 push-button 348,27,28,41 "New Tab"
+e33 push-button 70,73,39,34 "Back"
+e34 push-button 111,73,34,34 "Forward"
+e35 push-button 147,73,34,34 "Reload"
+e36 push-button 195,78,88,24 "Chrome"
+e37 entry 291,78,1354,24 "Address and search bar"
+e38 push-button 1653,78,24,24 "Bookmark this tab"
+e39 push-button 1698,73,34,34 "You"
+e40 push-button 1737,73,183,34 "Relaunch to update"
+e41 entry 658,122,420,41 "Search flags"
+e42 push-button 1255,126,77,33 "Reset all"
+e43 [offscreen] heading 568,-13824,373,28 "Experiments"
+e44 [offscreen] text 1184,-13810,84,15 "130.0.6723.58"
+e45 [offscreen] text 568,-13779,292,16 "Warning: Experimental features ahead!"
+e46 [offscreen] text 568,-13779,698,55 "By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production."
+e47 [offscreen] page-tab-list 568,-13706,700,47
+e48 [offscreen] page-tab 568,-13706,350,47 "Available" state=selected
+e49 [offscreen] page-tab 918,-13706,350,47 "Unavailable"
+e50 tabpanel 638,-13545,700,58965
+e51 [offscreen] heading 568,-13648,195,20 "Temporarily unexpire M128 flags."
+e52 [offscreen] paragraph 568,-13626,533,38 "Temporarily unexpire flags that expired as of M128. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e53 [offscreen] text 568,-13625,500,15 "Temporarily unexpire flags that expired as of M128. These flags will be removed soon."
+e54 [offscreen] text 1067,-13625,12,15 "–"
+e55 [offscreen] text 568,-13606,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e56 [offscreen] link 568,-13584,198,15 "#temporary-unexpire-flags-m128"
+e57 [offscreen] combo-box 1114,-13620,150,26 value="Default"
+e58 [offscreen] heading 568,-13540,195,20 "Temporarily unexpire M129 flags."
+e59 [offscreen] paragraph 568,-13518,533,38 "Temporarily unexpire flags that expired as of M129. These flags will be removed soon. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e60 [offscreen] text 568,-13517,500,15 "Temporarily unexpire flags that expired as of M129. These flags will be removed soon."
+e61 [offscreen] text 1067,-13517,12,15 "–"
+e62 [offscreen] text 568,-13498,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e63 [offscreen] link 568,-13476,198,15 "#temporary-unexpire-flags-m129"
+e64 [offscreen] combo-box 1114,-13512,150,26 value="Default"
+e65 [offscreen] heading 568,-13432,126,20 "Enable benchmarking"
+e66 [offscreen] paragraph 568,-13410,533,151
+e67 [offscreen] text 568,-13409,523,128 "Sets all features to a fixed state; that is, disables randomization for feature states. If '(Default Feature States)' is selected, sets all features to their default state. If '(Match Field Trial Testing Config)' is selected, sets all features to the state configured in the field trial testing config. This is used by developers and testers to diagnose whether an observed problem is caused by a non-default base::Feature configuration. This flag is automatically reset after 3 restarts and will be off from the 4th restart. On the 3rd restart, the flag will appear to be off but the effect is still active."
+e68 [offscreen] text 819,-13296,15,15 "–"
+e69 [offscreen] text 568,-13296,511,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e70 [offscreen] link 568,-13255,136,15 "#enable-benchmarking"
+e71 [offscreen] combo-box 1114,-13348,150,26 value="Disabled"
+e72 [offscreen] heading 568,-13211,183,20 "Override software rendering list"
+e73 [offscreen] paragraph 568,-13189,533,38 "Overrides the built-in software rendering list and enables GPU-acceleration on unsupported system configurations. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e74 [offscreen] text 568,-13188,533,34 "Overrides the built-in software rendering list and enables GPU-acceleration on unsupported system configurations."
+e75 [offscreen] text 701,-13169,15,15 "–"
+e76 [offscreen] text 717,-13169,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e77 [offscreen] link 568,-13148,128,15 "#ignore-gpu-blocklist"
+e78 [offscreen] combo-box 1114,-13183,150,26 value="Disabled"
+e79 [offscreen] heading 568,-13103,133,20 "Accelerated 2D canvas"
+e80 [offscreen] paragraph 568,-13081,533,38 "Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e81 [offscreen] text 568,-13080,495,34 "Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering."
+e82 [offscreen] text 626,-13061,15,15 "–"
+e83 [offscreen] text 642,-13061,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e84 [offscreen] link 568,-13040,192,15 "#disable-accelerated-2d-canvas"
+e85 [offscreen] combo-box 1114,-13075,150,26 value="Enabled"
+e86 [offscreen] heading 568,-12995,167,20 "Select HW overlay strategies"
+e87 [offscreen] paragraph 568,-12973,533,57 "Select strategies used to promote quads to HW overlays. Note that strategies other than Default may break playback of protected content. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e88 [offscreen] text 568,-12972,512,34 "Select strategies used to promote quads to HW overlays. Note that strategies other than Default may break playback of protected content."
+e89 [offscreen] text 854,-12953,15,15 "–"
+e90 [offscreen] text 568,-12953,495,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e91 [offscreen] link 568,-12913,114,15 "#overlay-strategies"
+e92 [offscreen] combo-box 1114,-12958,150,26 value="Default"
+e93 [offscreen] heading 568,-12869,143,20 "Tint composited content"
+e94 [offscreen] paragraph 568,-12846,533,38 "Tint contents composited using Viz with a shade of red to help debug and study overlay support. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e95 [offscreen] text 568,-12845,509,34 "Tint contents composited using Viz with a shade of red to help debug and study overlay support."
+e96 [offscreen] text 616,-12826,15,15 "–"
+e97 [offscreen] text 632,-12826,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e98 [offscreen] link 568,-12805,153,15 "#tint-composited-content"
+e99 [offscreen] combo-box 1114,-12841,150,26 value="Disabled"
+e100 [offscreen] heading 568,-12761,146,20 "Show overdraw feedback"
+e101 [offscreen] paragraph 568,-12738,533,38 "Visualize overdraw by color-coding elements based on if they have other elements drawn underneath. – Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e102 [offscreen] text 568,-12737,519,34 "Visualize overdraw by color-coding elements based on if they have other elements drawn underneath."
+e103 [offscreen] text 638,-12718,15,15 "–"
+e104 paragraph 638,58,533,75 [occluded]
+e105 text 638,97,521,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e106 link 638,137,80,15 "#use-ml-kem" [occluded]
+e107 heading 638,182,198,20 "Auto Dark Mode for Web Contents" [occluded]
+e108 paragraph 638,204,533,38 "Automatically render all web contents using a dark theme. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+e109 text 638,205,338,15 "Automatically render all web contents using a dark theme."
+e110 text 976,205,15,15 "–"
+e111 text 638,205,478,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e112 link 638,245,114,15 "#enable-force-dark" [occluded]
+~e113 combo-box 1184,209,150,26 value="Disabled" [occluded]
+e114 heading 638,289,267,20 "Experimental accessibility language detection" [occluded]
+e115 paragraph 638,312,533,38 "Enable language detection for in-page content which is then exposed to assistive technologies such as screen readers. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+e116 text 638,313,473,34 "Enable language detection for in-page content which is then exposed to assistive technologies such as screen readers."
+e117 text 854,332,15,15 "–"
+e118 text 870,332,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e119 link 638,353,327,15 "#enable-experimental-accessibility-language-detection" [occluded]
+e120 combo-box 1184,317,150,26 value="Disabled" [occluded]
+e121 heading 638,397,388,20 "Experimental accessibility language detection for dynamic content" [occluded]
+e122 paragraph 638,420,533,38 "Enable language detection for dynamic content which is then exposed to assistive technologies such as screen readers. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+e123 text 638,421,477,34 "Enable language detection for dynamic content which is then exposed to assistive technologies such as screen readers."
+e124 text 854,440,15,15 "–"
+e125 text 870,440,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e126 link 638,461,383,15 "#enable-experimental-accessibility-language-detection-dynamic" [occluded]
+e127 combo-box 1184,425,150,26 value="Disabled" [occluded]
+e128 heading 638,505,165,20 "Touch Text Editing Redesign" [occluded]
+e129 paragraph 638,528,533,38 "Enables new touch text editing features. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+e130 text 638,529,233,15 "Enables new touch text editing features."
+e131 text 870,529,15,15 "–"
+e132 text 638,529,492,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e133 link 638,569,247,15 "#enable-cros-touch-text-editing-redesign" [occluded]
+e134 combo-box 1184,533,150,26 value="Default" [occluded]
+e135 heading 638,613,241,20 "Experimental Web Payments API features" [occluded]
+e136 paragraph 638,636,533,38 "Enable experimental Web Payments API features – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+e137 text 638,637,283,15 "Enable experimental Web Payments API features"
+e138 text 920,637,15,15 "–"
+e139 text 638,637,491,34 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e140 link 638,677,276,15 "#enable-web-payments-experimental-features" [occluded]
+e141 combo-box 1184,641,150,26 value="Default" [occluded]
+e142 heading 638,721,264,20 "Web Payments App Store Billing Debug Mode" [occluded]
+e143 paragraph 638,744,533,57 [occluded]
+e144 text 638,745,510,53 "App-store purchases (e.g., Google Play Store) within a TWA can be requested using the Payment Request API. This flag removes the restriction that the TWA has to be installed from the app-store."
+e145 text 751,782,15,15 "–"
+e146 text 767,782,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e147 link 638,804,188,15 "#enable-debug-for-store-billing" [occluded]
+e148 combo-box 1184,758,150,26 value="Default" [occluded]
+e149 heading 638,848,251,20 "Secure Payment Confirmation Debug Mode" [occluded]
+e150 paragraph 638,871,533,57 [occluded]
+e151 text 638,872,527,34 "This flag removes the restriction that PaymentCredential in WebAuthn and secure payment confirmation in PaymentRequest API must use user verifying platform authenticators."
+e152 text 1136,890,12,15 "–"
+e153 text 638,909,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e154 link 638,931,293,15 "#enable-debug-for-secure-payment-confirmation" [occluded]
+e155 combo-box 1184,885,150,26 value="Default" [occluded]
+e156 heading 638,975,326,20 "Secure Payment Confirmation Network and Issuer Icons" [occluded]
+e157 paragraph 638,997,533,38 "Allow the passing in and display of card network and issuer icons for the Secure Payment Confirmation Web API. – Mac, Windows, Linux, ChromeOS, Android, Lacros" [occluded]
+e158 text 638,998,520,34 "Allow the passing in and display of card network and issuer icons for the Secure Payment Confirmation Web API."
+e159 text 769,1017,15,15 "–"
+e160 text 784,1017,287,15 "Mac, Windows, Linux, ChromeOS, Android, Lacros"
+e161 link 638,1039,410,15 "#enable-network-and-issuer-icons-for-secure-payment-confirmation" [occluded]
+e162 combo-box 1184,1003,150,26 value="Default" [occluded]
+~e163 alert 70,988,1850,92
+~e164 text 99,1025,466,18 "Your changes will take effect the next time that you relaunch Chrome."
+~e165 push-button 1756,1012,135,44 "Relaunch"
+~e166 [offscreen] +4413 more lines truncated (scroll to reveal)

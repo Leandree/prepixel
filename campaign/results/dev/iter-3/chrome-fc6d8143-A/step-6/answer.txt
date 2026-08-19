@@ -1,0 +1,5 @@
+Origin is set to JFK, but the destination panel never opened, so "ORD" didn't register. I'll open the "To" field and type it.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(636, 297); time.sleep(2.5); pyautogui.write('ORD'); time.sleep(3)", "memo": "JFK origin confirmed. Just clicked To field (636,297) + typed ORD. Next: click the 'ORD Chicago-O'Hare, IL' suggestion row (~x=620, y=534) in the dropdown. Then set One Way (851,297), pick Aug 20 2026 in calendar, click Find Flights (1487,297)."}
+```

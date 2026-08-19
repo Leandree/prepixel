@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.moveTo(600, 267, duration=0.3); pyautogui.click(600, 267); pyautogui.sleep(1)", "memo": "Step7: submenu still not open; clicked 'Light and Shadow' (600,267) to force submenu. Next: locate 'Vignette...' in submenu (x~780-950, y varies) and click it. If submenu open, Vignette is usually near bottom of that list."}

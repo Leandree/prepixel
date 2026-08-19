@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e75","memo":"In VLC Simple Preferences; clicked 'All' radio to switch to Advanced Preferences. Next: in left tree navigate to Playlist (or Interface) section and UNCHECK 'Play and exit' (play-and-exit), then click Save."}
+```

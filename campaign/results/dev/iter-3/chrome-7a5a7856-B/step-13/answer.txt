@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e9","memo":"Opened Bookmarks manager tab to verify. Concern: toolbar star still reads 'Bookmark this tab' (may mean not saved). Check whether 'The Illustrated Transformer' appears under Bookmarks bar; if absent, go back to the page tab, press ctrl+d, and click the dialog's Done button with a click (never Escape)."}
+```

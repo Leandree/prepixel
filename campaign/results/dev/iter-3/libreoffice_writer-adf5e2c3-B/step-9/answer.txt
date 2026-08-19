@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"escape","memo":"Find selected '36.full' at end of ref [13]. Next: 10) key end (collapse to end of ref 13). 11) type '\\n'+full Steinberg ref from task WITHOUT '[14]' prefix (list is auto-numbered WWNum1 — verify in next view; if no auto number appears, press home and type '[14]  '). 12) ctrl+f 13) type '<add here>\\n' 14) esc 15) type '[14]'"}
+```

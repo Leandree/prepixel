@@ -1,0 +1,3 @@
+Master view confirmed with the "Close Master View" button at (1738, 431). I'll deselect, exit master view, and save.
+
+{"action": "import pyautogui, time; pyautogui.press('escape'); time.sleep(0.6); pyautogui.press('escape'); time.sleep(1.2); pyautogui.click(1738, 431); time.sleep(2); pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter'); time.sleep(2)", "memo": "Step12: <number> in master was set red (std palette Red FF0000). Then Esc,Esc -> clicked 'Close Master View' (1738,431) -> Ctrl+S -> Enter (Use PowerPoint Format). NEXT: verify normal view is back, title bar has no modified marker, and slide number shows red. If save dialog still open, press Enter again."}

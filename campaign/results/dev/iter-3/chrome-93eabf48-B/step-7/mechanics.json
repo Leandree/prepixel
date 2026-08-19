@@ -1,0 +1,41 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 557,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 88,
+  "cdp_records": 125,
+  "offscreen": 60,
+  "url": "chrome://flags/#enable-force-dark",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "visible",
+  "tab": "Available",
+  "picked_title": "Experiments"
+ },
+ "cdp_offscreen_skipped": 4413,
+ "history_views": 3,
+ "history_views_dropped": 3,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung1_error": "cdp: page.evaluate: Target page, context or browser has been closed",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1823,
+  1034
+ ],
+ "settle_ms": 7295,
+ "settle_captures": 2,
+ "guard_ms": 67
+}

@@ -1,0 +1,5 @@
+The ACL Wiki table loaded. I need to scroll to the 2019–2022 rows.
+
+```json
+{"action": "import pyautogui; pyautogui.click(700, 250); pyautogui.press('pagedown'); pyautogui.press('pagedown')", "memo": "On aclweb.org/aclwiki/Best_paper_awards, ACL table (Year|Author|Paper Title) visible from 2001-2010; scrolled 2 pagedowns to reach 2019-2022. Plan: read rows, then open GNOME Terminal and write xlsx via python3/openpyxl (faster than Calc GUI). Candidate IDs to verify: 2019 P19-1426, 2020 2020.acl-main.442, 2021 2021.acl-long.571, 2022 2022.acl-long.220"}
+```

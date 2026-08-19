@@ -1,0 +1,5 @@
+The screen is unchanged across steps 2–4 (cursor still parked on the dock), so those actions never executed. I'll retry with explicit `moveTo` + sleeps.
+
+```json
+{"action": "import pyautogui, time; pyautogui.FAILSAFE = False; pyautogui.moveTo(1889, 139, duration=0.3); pyautogui.click(); time.sleep(1); pyautogui.moveTo(700, 90, duration=0.3); pyautogui.click(); time.sleep(1); pyautogui.typewrite('chrome://flags/#enable-force-dark', interval=0.02); time.sleep(0.5); pyautogui.press('enter'); time.sleep(3)", "memo": "Steps 2-3 executed nothing (cursor never left dock at 34,64). Fix: use moveTo(duration)+click+time.sleep, FAILSAFE=False, typewrite not write. Step4: close update bubble X(1889,139), click omnibox(700,90), go to chrome://flags/#enable-force-dark. Next: set highlighted 'Auto Dark Mode for Web Contents' dropdown to Disabled, then Relaunch."}
+```

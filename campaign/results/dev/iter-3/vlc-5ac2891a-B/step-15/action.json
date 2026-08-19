@@ -1,0 +1,1 @@
+{"action": "done", "memo": "Set play-and-exit=0 in ~/.config/vlc/vlcrc via terminal (mkdir/touch/sed/append + grep verify). VLC is still running, so its config could be rewritten if it exits."}

@@ -1,0 +1,3 @@
+Reference [14] is in place at the end. Now I'll jump to the top to visually verify the in-text citation in paragraph 4 (and confirm no stray newline was inserted by the Enter after Ctrl+S).
+
+{"action": "import pyautogui, time; pyautogui.click(950, 950); time.sleep(0.5); pyautogui.hotkey('ctrl', 'home'); time.sleep(1.5)", "memo": "Ref [14] Steinberg confirmed at doc end (page 4). Replace All reported 1 replacement of <add here> -> [14]. Saved with Ctrl+S + Enter (Keep Word format). NOW: at doc top - verify para 4 shows [14] inline and that no stray Enter split a paragraph. If title bar/status shows unsaved, Ctrl+S + Enter again, then DONE."}

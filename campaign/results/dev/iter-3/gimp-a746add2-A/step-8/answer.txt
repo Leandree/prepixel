@@ -1,0 +1,5 @@
+The Light and Shadow submenu is open now, with "Vignette..." visible at (805, 479). I'll move into the submenu horizontally first so it doesn't close, then click.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(790, 270, duration=0.3); pyautogui.moveTo(805, 479, duration=0.4); pyautogui.click(805, 479); pyautogui.sleep(2)", "memo": "Step8: submenu open, clicked 'Vignette...' at (805,479). Next: verify Vignette dialog window appeared (title 'Vignette'); if yes DONE, if not re-open Filters>Light and Shadow>Vignette."}
+```

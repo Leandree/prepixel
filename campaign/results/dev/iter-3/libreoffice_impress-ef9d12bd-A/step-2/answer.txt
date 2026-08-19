@@ -1,0 +1,5 @@
+The View menu is open and "Slide Pane" is unchecked — clicking it will restore the panel.
+
+```json
+{"action": "import pyautogui; pyautogui.click(216, 353)", "memo": "Clicked View > Slide Pane to restore left panel. Next: verify slide panel is visible on the left side of the editing area; if visible, DONE."}
+```

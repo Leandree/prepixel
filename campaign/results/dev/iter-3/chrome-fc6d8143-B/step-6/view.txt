@@ -1,0 +1,184 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Delta Air Lines | Flights & Plane Tickets + Hotels & Cars - Memory usage - 215 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,24,24 "View site information"
+e12 entry 227,78,1459,24 "Address and search bar"
+e13 push-button 1694,78,24,24 "Bookmark this tab"
+e14 push-button 1739,73,34,34 "You"
+e15 push-button 1778,73,142,34 "Finish update"
+e16 text 110,1059,1755,40 "Supporting You Through Your Travel Journey"
+e17 text 658,1058,658,42 "Supporting You Through Your Travel Journey"
+e18 toggle-button 0,0,99,27 "Activities" state=checked:false
+e19 menu 99,0,162,27 "Google Chrome"
+e20 menu 906,0,178,27 "Aug 19 22‎∶14"
+e21 menu 1814,0,106,27 "System"
+e22 push-button 0,840,70,8
+e23 push-button 62,33,8,815
+e24 push-button 0,33,70,64 "Google Chrome"
+e25 push-button 0,101,70,64 "Thunderbird Mail"
+e26 push-button 0,169,70,64 "Visual Studio Code"
+e27 push-button 0,237,70,64 "VLC media player"
+e28 push-button 0,305,70,64 "LibreOffice Writer"
+e29 push-button 0,373,70,64 "LibreOffice Calc"
+e30 push-button 0,441,70,64 "LibreOffice Impress"
+e31 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e32 push-button 0,577,70,64 "Files"
+e33 push-button 0,645,70,64 "Ubuntu Software"
+e34 push-button 0,713,70,64 "Help"
+e35 push-button 0,784,70,64 "Trash"
+e36 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e37 [offscreen] push-button -9999,0,149,28 "Skip to main content"
+e38 [offscreen] text -9987,6,125,16 "Skip to Main Content"
+~e39 link 403,145,115,18
+e40 [pixels] image 403,145,115,18 alt=Delta Air Lines
+~e41 push-button 528,142,24,24 "Skyteam"
+e42 [pixels] image 528,142,24,24 alt=Skyteam
+~e43 page-tab-list 580,130,711,48
+~e44 none 580,138,30,40
+~e45 page-tab 580,143,30,16 "Book" state=selected
+~e46 none 633,138,52,40
+~e47 page-tab 633,143,52,16 "Check-in"
+~e48 none 709,138,52,40
+~e49 page-tab 709,143,52,16 "My Trips"
+~e50 none 786,138,75,40
+~e51 page-tab 786,143,75,16 "Flight Status"
+~e52 none 1059,138,61,40
+~e53 page-tab 1059,143,61,16 "Travel Info"
+~e54 none 1145,138,53,40
+~e55 page-tab 1145,143,53,16 "SkyMiles"
+~e56 none 1222,138,69,40
+~e57 page-tab 1222,143,69,16 "Need Help?"
+~e58 link 1347,142,46,18 "Sign Up"
+~e59 push-button 1409,137,59,28 "Log in, opens in new popup"
+e60 text 1421,143,35,16 "Log in"
+~e61 push-button 1485,135,32,32 "notification, 3 unread"
+e62 [pixels] image 1485,135,32,32
+e63 text 1509,136,5,12 "3"
+~e64 push-button 1541,135,32,32 "Search"
+e65 [pixels] image 1541,135,32,33
+~e66 region 412,194,1152,44 "Booking tabs and external links"
+~e67 page-tab-list 412,194,490,44
+~e68 page-tab 412,194,92,44 "Flights" state=selected
+e69 [pixels] image 424,206,20,20
+~e70 page-tab 507,194,84,44 "Stays"
+e71 [pixels] image 519,206,20,20
+~e72 page-tab 596,194,79,44 "Cars"
+e73 [pixels] image 608,206,20,20
+~e74 page-tab 679,194,111,44 "Vacations"
+e75 [pixels] image 691,206,20,20
+~e76 page-tab 794,194,108,44 "Cruises Opens in new tab"
+e77 [pixels] image 806,206,20,20
+e78 text 834,208,44,16 "Cruises"
+e79 [pixels] image 883,213,6,6
+~e80 push-button 1147,208,134,16 "Delta AMEX CardsThis link opens another site in a new window that may not follow the same accessibility policies as Delta Air Lines."
+e81 [pixels] image 1147,209,22,14
+e82 text 1173,209,96,14 "Delta AMEX Cards"
+e83 [pixels] image 1272,212,8,8
+~e84 push-button 1312,204,80,24 "Gift CardsThis link opens another site in a new window that may not follow the same accessibility policies as Delta Air Lines."
+e85 [pixels] image 1312,204,24,24
+e86 text 1340,209,52,14 "Gift Cards"
+~e87 push-button 1423,208,141,16 "Updated Bags & Travel FeesThis link opens another site in a new window that may not follow the same accessibility policies as Delta Air Lines."
+e88 text 1423,209,141,14 "Updated Bags & Travel Fees"
+~e89 push-button 413,262,133,72 "Origin, JFK, New York-Kennedy, NY" state=focused
+~e90 label 413,271,133,36 "JFK"
+~e91 text 424,308,138,16 "New York-Kennedy, NY"
+~e92 push-button 570,262,133,72 "One Way Route Picker Destination"
+~e93 label 570,271,133,36 "To"
+e94 text 601,308,69,16 "Destination"
+~e95 push-button 546,286,24,24 "Swap origin and destination"
+~e96 combo-box 716,261,272,74 "Trip Type, Round Trip"
+e97 label 732,286,1,1 "Trip Type" [occluded]
+e98 text 759,287,82,21 "Round Trip"
+~e99 push-button 1000,261,271,74 "Flight Date Field, DepartDate  - ReturnDate"
+e100 [pixels] image 1017,289,18,18
+e101 text 1043,287,118,21 "Depart - Return"
+e102 [pixels] image 1242,292,12,12
+~e103 combo-box 1283,261,95,74 "Passenger Count, 1"
+e104 label 1299,286,1,1 "Passenger Count" [occluded]
+e105 text 1326,287,6,21 "1"
+~e106 push-button 1412,266,151,64 "Find Flights"
+~e107 check-box 412,359,24,24 "Shop with Miles" state=checked:false
+~e108 label 448,361,107,20 "Shop with Miles"
+~e109 check-box 587,359,24,24 "My Dates are Flexible" state=checked:false
+~e110 label 623,361,145,20 "My Dates are Flexible"
+~e111 check-box 799,359,24,24 "Include Basic" state=checked:true
+~e112 label 835,361,88,20 "Include Basic"
+~e113 push-button 1105,362,18,19 "Refundable Only Help Icon"
+~e114 check-box 955,359,24,24 "Refundable Only" state=checked:false
+~e115 label 991,361,111,20 "Refundable Only"
+~e116 push-button 1413,359,151,21 "Advanced Search"
+e117 main 70,407,1835,2317
+e118 [pixels] image 70,407,1835,576
+e119 [pixels] image 70,407,1835,576
+~e120 link 188,607,542,74 "Nice, Say Hello to Boston"
+~e121 link 188,685,304,28 "Discover our new direct flight."
+~e122 push-button 188,722,132,52 "Book Now"
+e123 text 220,739,68,18 "Book Now"
+~e124 paragraph 110,1023,1755,20 "THE DELTA CUSTOMER EXPERIENCE"
+~e125 paragraph 110,1059,1755,40 "Supporting You Through Your Travel Journey"
+e126 [offscreen] text 843,1128,378,28 "How Can I Change/Cancel My Flight?"
+e127 [offscreen] text 843,1172,601,42 "We understand that your plans may change. It’s simple to cancel or change your flight prior to departure on delta.com in just a few easy steps."
+e128 [offscreen] link 843,1241,100,21 "Start a Change"
+e129 [offscreen] text 375,1665,252,28 "Discover Travel Products"
+e130 [offscreen] text 375,1709,274,90 "Explore products for all your travel needs. Choose from a la carte hotels, car rentals, cruises and vacation packages, and get exclusive SkyMiles® Member benefits."
+e131 [offscreen] link 375,1832,48,21 "Details"
+e132 [offscreen] text 767,1665,224,28 "Ready For Adventure?"
+e133 [offscreen] text 767,1709,299,66 "Explore flight deals to places you already love or discover new destinations that await you. Plan your next adventure today."
+e134 [offscreen] link 767,1832,88,21 "Search Deals"
+e135 [offscreen] text 1159,1665,189,58 "Elevate Your Flight Experience"
+e136 [offscreen] text 1159,1739,287,66 "Stretch out and relax with more spacious seats in Delta Comfort or Delta First. Check out our Premium Cabin flight deals today."
+e137 [offscreen] link 1159,1832,48,21 "Details"
+e138 [offscreen] text 375,2005,351,28 "See Where You Can Fly With Delta"
+e139 [offscreen] text 375,2049,587,42 "Explore our entire network and discover more destinations with our new interactive route map."
+e140 [offscreen] link 375,2118,85,21 "Explore Map"
+e141 [offscreen] text 843,2351,383,28 "Everything You Need, All in One Place"
+e142 [offscreen] text 843,2395,596,42 "Download the Fly Delta app to check in, track your flight status, make changes to your trip, chat with a live agent and more."
+e143 [offscreen] link 843,2464,109,21 "Go to Download"
+e144 [offscreen] entry 694,2742,403,64 "Try Asking Me A Question"
+e145 [offscreen] label 710,2764,199,22 "Try Asking Me A Question"
+e146 [offscreen] push-button 1113,2758,29,32 "Search"
+e147 [offscreen] heading 666,2854,116,24 "Popular Topics:"
+e148 [offscreen] list-item 814,2854,91,24 "Help Center"
+e149 [offscreen] link 814,2855,91,21 "Help Center"
+e150 [offscreen] list-item 930,2854,151,24 "Delta Discover Map"
+e151 [offscreen] link 930,2855,151,21 "Delta Discover Map"
+e152 [offscreen] list-item 1105,2854,64,24 "eCredits"
+e153 [offscreen] link 1105,2855,64,21 "eCredits"
+e154 [offscreen] heading 342,2976,93,20 "About Delta"
+e155 [offscreen] list-item 342,3012,220,20 "About Us"
+e156 [offscreen] link 342,3012,220,20 "About Us"
+e157 [offscreen] list-item 342,3048,220,20 "Careers"
+e158 [offscreen] link 342,3048,220,20 "Careers"
+e159 [offscreen] list-item 342,3084,220,20 "News Hub"
+e160 [offscreen] link 342,3084,220,20 "News Hub"
+e161 [offscreen] list-item 342,3120,220,20 "Investor Relations"
+e162 [offscreen] link 342,3120,220,20 "Investor Relations"
+e163 [offscreen] list-item 342,3156,220,20 "Business Travel"
+e164 [offscreen] link 342,3156,220,20 "Business Travel"
+e165 [offscreen] list-item 342,3192,220,20 "Travel Agents"
+e166 [offscreen] link 342,3192,220,20 "Travel Agents"
+e167 [offscreen] list-item 342,3228,220,20 "Mobile App"
+e168 [offscreen] link 342,3228,220,20 "Mobile App"
+e169 [offscreen] list-item 342,3264,220,20 "Delta Shop"
+e170 [offscreen] link 342,3264,220,20 "Delta Shop"
+e171 [offscreen] heading 652,2976,134,20 "Customer Service"
+e172 [offscreen] list-item 652,3012,220,20 "Help Center"
+e173 [offscreen] link 652,3012,220,20 "Help Center"
+e174 [offscreen] list-item 652,3048,220,20 "Message Us"
+e175 [offscreen] link 652,3048,220,20 "Message Us"
+e176 [offscreen] list-item 652,3084,220,20 "Comment/Complaint"
+e177 [offscreen] link 652,3084,220,20 "Comment/Complaint"
+e178 [offscreen] heading 963,2976,94,20 "Site Support"
+e179 [offscreen] list-item 963,3012,220,20 "Login Help"
+e180 [offscreen] link 963,3012,220,20 "Login Help"
+e181 [offscreen] list-item 963,3048,220,20 "Site Map"
+e182 [offscreen] link 963,3048,220,20 "Site Map"
+e183 [offscreen] list-item 963,3084,220,20 "Browser Compatibility"
+e184 [offscreen] +52 more lines truncated (scroll to reveal)

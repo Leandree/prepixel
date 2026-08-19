@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"v","memo":"Status bar read 'Add glow around bright areas' = Bloom highlighted, so Filters>Light and Shadow submenu IS open (step-11 'l' opened it). Pressing 'v' should jump to+activate Vignette (only V item). Next step: verify a Vignette dialog appeared in the tree; if only highlighted, press enter."}
+```

@@ -1,0 +1,5 @@
+Advanced Preferences is open. The `play-and-exit` option lives under the **Playlist** node, which is further down the tree — I'll scroll the tree pane.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(712, 600); pyautogui.scroll(-6)", "memo": "Advanced Preferences open (All radio selected). Scrolled tree down to find top-level 'Playlist' node. Next: click 'Playlist' in left tree, then in right pane uncheck 'Play and exit' (Exit if there are no more items in the playlist), then click Save at (1210,903). Tree pane approx x=560-870, y=300-845."}
+```

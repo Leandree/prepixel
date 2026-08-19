@@ -1,0 +1,1 @@
+{"action":"done","memo":"Cart page confirms 'Your Shopping Cart (1 item)': The Dota 2 Official Soundtrack 8,19€, estimated total 8,19€ — matching the 'Add all DLC to Cart' price. The only other DLC (Dota 2 Remixes EP) is free and not cart-addable. Task complete."}

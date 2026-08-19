@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e27","memo":"Snap Store window stole focus (top bar shows Snap Store); address bar typing likely lost. Clicked dock Chrome icon to raise Chrome. Next: click address bar, type chrome://settings/appearance + Enter, then set Mode to Light."}
+```

@@ -1,0 +1,3 @@
+Desktop is showing; I need to launch Thunderbird from the dock.
+
+{"action": "import pyautogui; pyautogui.click(34, 133)", "memo": "Clicked Thunderbird icon in dock (34,133) to launch it. Next: wait for Thunderbird window, then find local 'Bills' folder in folder pane, select all emails (Ctrl+A) and star them (press 'S' toggles star... verify). Task: star every email in local Bills folder."}

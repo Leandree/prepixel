@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"gsettings get org.gnome.desktop.interface show-battery-percentage\n","memo":"Ran 'gsettings get org.gnome.desktop.interface show-battery-percentage' in terminal e11 to verify the earlier set took effect. NEXT: crop the terminal element to read its output — expect 'true'. If it shows false/error, re-run the set command. Top-bar System menu width unchanged (VM may have no battery, so no visible %)."}
+```

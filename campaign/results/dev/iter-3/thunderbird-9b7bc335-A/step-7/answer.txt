@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1038, 697); pyautogui.write('anonym-x2024@gmail.com')", "memo": "Filter 'Forward to gmail', Match all messages, action Forward Message to. Just typed anonym-x2024@gmail.com into the action field. Next: verify text then click OK (1388,862), then close Message Filters window."}

@@ -1,0 +1,1 @@
+{"action":"click","target":"e44","memo":"Selected 'X (formerly Twitter)' row in Bills. AWS already Starred (confirmed in e40). Next: toggle the 'Starred' check-box for this row (appears ~x=1895 in list row, y~170) to true; or press 's' shortcut. Then verify both rows show Starred and done."}

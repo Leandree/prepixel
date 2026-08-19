@@ -1,0 +1,26 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "history_views": 0,
+ "history_views_dropped": 8,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  152,
+  314
+ ],
+ "settle_ms": 7219,
+ "settle_captures": 2,
+ "guard_ms": 91
+}

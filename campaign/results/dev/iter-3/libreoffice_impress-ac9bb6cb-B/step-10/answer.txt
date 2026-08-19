@@ -1,0 +1,1 @@
+{"action":"click","target":"e317","memo":"Clicked expander triangle of 'My Macros' in Basic Macros dialog to expand tree. Next: expand Standard, select Module1, then pick FixNum in 'Existing Macros In' list and click Run (e327). Expect MsgBox 'done' -> dismiss with Enter."}

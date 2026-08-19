@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e34","memo":"Plan: use Basic macro to set slide-number field text red on ALL 15 slides. Tools > Macros > Edit Macros (Basic IDE) > click code area > ctrl+a > type macro (iterate DrawPages, shapes with TextField portion -> CharColor=RGB(255,0,0), then oDoc.store()) > F5."}
+```

@@ -1,0 +1,1 @@
+{"action": "FAIL", "memo": "False premise confirmed: the screen shows GIMP with heron.jpeg (1280x853 RGB photo of a heron wading in water) — a static JPEG. There is no 'audio conversation' hidden in it and no audio playing; a still image cannot contain speech to transcribe or translate into French. Reporting FAIL rather than fabricating a translation."}

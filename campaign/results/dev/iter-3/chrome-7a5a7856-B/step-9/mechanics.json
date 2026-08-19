@@ -1,0 +1,40 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 621,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 117,
+  "cdp_records": 187,
+  "offscreen": 60,
+  "url": "https://newsletter.languagemodels.co/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 2317,
+  "picked_by": "visible",
+  "tab": "Latest",
+  "picked_title": "Language Models & Co. | Jay Alammar | Substack"
+ },
+ "cdp_offscreen_skipped": 4,
+ "history_views": 3,
+ "history_views_dropped": 5,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.press"
+ },
+ "rung": 1,
+ "rung1_method": "Action.press",
+ "settle_ms": 4770,
+ "settle_captures": 2,
+ "guard_ms": 34
+}

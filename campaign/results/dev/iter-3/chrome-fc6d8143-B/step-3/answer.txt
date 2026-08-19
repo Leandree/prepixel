@@ -1,0 +1,1 @@
+{"action":"click","target":"e94","memo":"Clicked Origin (e94, currently NTE Nantes). Next: type 'JFK' in the origin search box, pick New York-Kennedy JFK. Then Destination -> ORD Chicago O'Hare, trip type One Way, date tomorrow 2026-08-20, then Find Flights (e111)."}

@@ -1,0 +1,1 @@
+{"action": "click", "target": "e317", "memo": "F5 opened the 'Basic Macros' dialog instead of running. Expanding My Macros tree. NEXT: expand Standard -> select Module1 -> pick FixNum in 'Existing Macros In' -> click Run (e327). Then Keep Current Format dialog: choose 'Use PowerPoint Format!'; dismiss 'done' MsgBox with Enter."}

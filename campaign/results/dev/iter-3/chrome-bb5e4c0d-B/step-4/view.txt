@@ -1,0 +1,166 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Settings – Manage search engines and site search - Memory usage - 56.2 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,88,24 "Chrome"
+e12 entry 291,78,1395,24 "Address and search bar"
+e13 push-button 1694,78,24,24 "Bookmark this tab"
+e14 push-button 1739,73,34,34 "You"
+e15 push-button 1778,73,142,34 "Finish update"
+e16 toggle-button 0,0,99,27 "Activities" state=checked:false
+e17 menu 99,0,162,27 "Google Chrome"
+e18 menu 906,0,178,27 "Aug 19 22‎∶08"
+e19 menu 1814,0,106,27 "System"
+e20 text 810,41,274,28 "Software Updates Available to Download"
+e21 text 810,49,274,20 "Software Updates Available to Download"
+e22 push-button 1208,42,26,26
+e23 text 810,73,291,17 "Please download waiting software updates."
+e24 push-button 0,840,70,8
+e25 push-button 62,33,8,815
+e26 push-button 0,33,70,64 "Google Chrome"
+e27 push-button 0,101,70,64 "Thunderbird Mail"
+e28 push-button 0,169,70,64 "Visual Studio Code"
+e29 push-button 0,237,70,64 "VLC media player"
+e30 push-button 0,305,70,64 "LibreOffice Writer"
+e31 push-button 0,373,70,64 "LibreOffice Calc"
+e32 push-button 0,441,70,64 "LibreOffice Impress"
+e33 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e34 push-button 0,577,70,64 "Files"
+e35 push-button 0,645,70,64 "Ubuntu Software"
+e36 push-button 0,713,70,64 "Help"
+e37 push-button 0,784,70,64 "Trash"
+e38 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e39 [pixels] image 91,130,24,24
+e40 presentation 91,130,24,24 [occluded]
+e41 heading 137,129,183,26 "Settings" [occluded]
+e42 none 659,132,20,20 [occluded]
+e43 push-button 655,128,28,28 "Search settings" [occluded]
+e44 label 683,131,652,22 "Search settings" [occluded]
+e45 entry 683,131,652,22 "Search settings" [occluded]
+e46 banner 70,114,1850,56
+e47 navigation 70,178,250,634 [occluded]
+e48 menu 70,178,250,634 [occluded]
+e49 menu-item 71,178,247,40 "You and Google" [occluded]
+e50 [pixels] image 94,188,20,20
+e51 menu-item 71,218,247,40 "Autofill and passwords" [occluded]
+e52 [pixels] image 94,228,20,20
+e53 menu-item 71,258,247,40 "Privacy and security" [occluded]
+e54 [pixels] image 94,268,20,20
+e55 menu-item 71,298,247,40 "Performance" [occluded]
+e56 [pixels] image 94,308,20,20
+e57 menu-item 71,338,247,40 "Appearance" [occluded]
+e58 [pixels] image 94,348,20,20
+e59 menu-item 71,378,247,40 "Search engine" [occluded]
+e60 [pixels] image 94,388,20,20
+e61 menu-item 71,418,247,40 "Default browser" [occluded]
+e62 [pixels] image 94,428,20,20
+e63 menu-item 71,458,247,40 "On start-up" [occluded]
+e64 [pixels] image 94,468,20,20
+e65 menu-item 71,515,247,40 "Languages" [occluded]
+e66 [pixels] image 94,525,20,20
+e67 menu-item 71,555,247,40 "Downloads" [occluded]
+e68 [pixels] image 94,565,20,20
+e69 menu-item 71,595,247,40 "Accessibility" [occluded]
+e70 [pixels] image 94,605,20,20
+e71 menu-item 71,635,247,40 "System" [occluded]
+e72 [pixels] image 94,645,20,20
+e73 menu-item 71,675,247,40 "Reset settings" [occluded]
+e74 [pixels] image 94,685,20,20
+e75 menu-item 71,732,247,40 "Opens in a new tab" [occluded]
+e76 [pixels] image 94,742,20,20
+e77 text 134,744,69,16 "Extensions"
+e78 menu-item 71,772,247,40 "About Chrome" [occluded]
+e79 [pixels] image 94,782,20,20
+e80 push-button 658,182,32,32 "Manage search engines and site search sub-page back button" [occluded]
+e81 heading 700,188,408,20 "Manage search engines and site search" [occluded]
+e82 [pixels] image 1128,190,16,16
+e83 entry 1148,184,160,24 "Search" [occluded]
+e84 text 668,258,626,15 "You can use shortcuts in the address bar to quickly search a specific site or to use a different search engine"
+e85 text 668,304,108,15 "Keyboard shortcut"
+e86 text 668,324,556,15 "In the address bar, use this keyboard shortcut with shortcuts for search engines and site search"
+e87 radiogroup 708,354,600,96 [occluded]
+e88 none 708,422,600,15 [occluded]
+e89 radio-button 708,370,16,16 state=checked:true [occluded]
+e90 text 744,370,73,15 "Space or tab"
+e91 radio-button 708,418,16,16 state=checked:false [occluded]
+e92 text 744,418,22,15 "Tab"
+e93 heading 668,462,640,64 "Search engines" [occluded]
+e94 text 668,528,627,35 "To use a search engine other than the default, type its shortcut in the address bar followed by your preferred keyboard shortcut. You can also change your default search engine here."
+e95 table 648,578,680,285 [occluded]
+e96 rowgroup 708,578,600,40 [occluded]
+e97 table-row 708,578,600,40 [occluded]
+e98 columnheader 708,588,200,20 [occluded]
+e99 text 708,590,34,15 "Name"
+e100 columnheader 908,588,153,20 [occluded]
+e101 text 908,590,50,15 "Shortcut"
+e102 rowgroup 708,618,600,245 [occluded]
+e103 table-row 708,618,600,49 [occluded]
+~e104 table-cell 708,633,200,20 "Google" [occluded]
+e105 table-cell 908,633,181,20 "google.com" [occluded]
+e106 table-cell 1099,627,209,32 "Activate Details Make default Deactivate Delete" [occluded]
+~e107 push-button 1228,627,32,32 "Click to open Edit dialogue for Google" [occluded]
+~e108 push-button 1276,627,32,32 "More actions for Google" [occluded]
+e109 table-row 708,667,600,49 [occluded]
+~e110 table-cell 708,682,200,20 "Microsoft Bing (Default)" [occluded]
+e111 table-cell 908,682,174,20 "bing.com" [occluded]
+e112 table-cell 1092,676,216,32 "Activate Details Make default Deactivate Delete" [occluded]
+~e113 push-button 1228,676,32,32 "Click to open Edit dialogue for Microsoft Bing (Default)" [occluded]
+~e114 push-button 1276,676,32,32 "More actions for Microsoft Bing (Default)" [occluded]
+e115 table-row 708,716,600,49 [occluded]
+e116 table-cell 708,731,200,20 "Yahoo! Hong Kong" [occluded]
+e117 table-cell 908,731,188,20 "hk.yahoo.com" [occluded]
+e118 table-cell 1106,725,202,32 "Activate Details Make default Deactivate Delete" [occluded]
+e119 push-button 1228,725,32,32 "Click to open Edit dialogue for Yahoo! Hong Kong" [occluded]
+e120 push-button 1276,725,32,32 "More actions for Yahoo! Hong Kong" [occluded]
+e121 table-row 708,765,600,49 [occluded]
+e122 table-cell 708,780,200,20 "百度" [occluded]
+e123 table-cell 908,780,178,20 "baidu.com" [occluded]
+e124 table-cell 1095,774,212,32 "Activate Details Make default Deactivate Delete" [occluded]
+e125 push-button 1228,774,32,32 "Click to open Edit dialogue for 百度" [occluded]
+e126 push-button 1276,774,32,32 "More actions for 百度" [occluded]
+e127 table-row 708,814,600,49 [occluded]
+e128 table-cell 708,829,200,20 "360" [occluded]
+e129 table-cell 908,829,169,20 "so.com" [occluded]
+e130 table-cell 1086,823,221,32 "Activate Details Make default Deactivate Delete" [occluded]
+e131 push-button 1228,823,32,32 "Click to open Edit dialogue for 360" [occluded]
+e132 push-button 1276,823,32,32 "More actions for 360" [occluded]
+e133 heading 668,875,573,64 "Site Search" [occluded]
+e134 text 668,941,556,35 "To search a specific site or part of Chrome, type its shortcut in the address bar, followed by your preferred keyboard shortcut."
+e135 push-button 1241,915,67,36 "Click to open Add Site Search dialogue" [occluded]
+e136 text 1263,925,23,15 "Add"
+e137 table 648,991,680,236
+e138 rowgroup 708,991,600,40 [occluded]
+e139 table-row 708,991,600,40 [occluded]
+e140 columnheader 708,1001,200,20 [occluded]
+e141 text 708,1003,34,15 "Name"
+e142 columnheader 908,1001,153,20 [occluded]
+e143 text 908,1003,50,15 "Shortcut"
+e144 rowgroup 708,1031,600,196
+e145 table-row 708,1031,600,49 [occluded]
+e146 table-cell 708,1046,200,20 "Bookmarks" [occluded]
+e147 table-cell 908,1046,200,20 "@bookmarks" [occluded]
+e148 table-cell 1118,1040,190,32 "Activate Details Make default Deactivate Delete" [occluded]
+e149 push-button 1276,1040,32,32 "More actions for Bookmarks" [occluded]
+e150 [offscreen] table-row 638,966,600,49
+e151 [offscreen] table-cell 638,981,200,20 "Gemini"
+e152 [offscreen] table-cell 838,981,197,20 "@gemini"
+e153 [offscreen] table-cell 1044,975,193,32 "Activate Details Make default Deactivate Delete"
+e154 [offscreen] push-button 1206,975,32,32 "More actions for Gemini"
+e155 [offscreen] table-row 638,1015,600,49
+e156 [offscreen] table-cell 638,1030,200,20 "History"
+e157 [offscreen] table-cell 838,1030,197,20 "@history"
+e158 [offscreen] table-cell 1045,1024,193,32 "Activate Details Make default Deactivate Delete"
+e159 [offscreen] push-button 1206,1024,32,32 "More actions for History"
+e160 [offscreen] table-row 638,1064,600,49
+e161 [offscreen] table-cell 638,1079,200,20 "Tabs"
+e162 [offscreen] table-cell 838,1079,190,20 "@tabs"
+e163 [offscreen] table-cell 1037,1073,200,32 "Activate Details Make default Deactivate Delete"
+e164 [offscreen] push-button 1206,1073,32,32 "More actions for Tabs"
+e165 [offscreen] heading 598,1113,105,64 "Inactive shortcuts"
+e166 [offscreen] text 638,1179,257,15 "Other saved search engines will appear here"

@@ -1,0 +1,1 @@
+{"action": "set_value", "target": "e187", "value": "ORD", "memo": "Origin=JFK. Destination panel open (entry e187) - typed ORD; next: click list-item 'ORD Chicago O'Hare' in predictive_search_list; then Trip Type combo (e96) -> One Way; date field (e99) -> Aug 20 2026; then Find Flights (e106)."}

@@ -1,0 +1,7 @@
+The Diamond campground page is loaded with the availability grid. I'll click the "Next Available" button to jump to the next available dates.
+
+```json
+{"action": "import pyautogui; pyautogui.click(867, 403)"}
+```
+
+**memo:** Clicked "Next Available" button on Diamond (recreation.gov/camping/campgrounds/233869) availability grid. Grid previously showed AUG 19–28 with FF/R on Aug 19–22 and A from Aug 23. Next: read the date range headers the grid jumps to — those are the Next Available dates.

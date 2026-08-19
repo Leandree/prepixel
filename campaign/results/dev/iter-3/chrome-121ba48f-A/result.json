@@ -1,0 +1,43 @@
+{
+ "task_id": "121ba48f-9e17-48ce-9bc6-a4fb17a7ebba",
+ "domain": "chrome",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "7ca3a400e533c9498d8b6f3e0dc13488098370a5",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 10,
+ "termination": "DONE",
+ "wall_clock_s": 263.7,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 69388,
+  "cache_read_input_tokens": 138816,
+  "output_tokens": 8584,
+  "cost_usd": 0.978178,
+  "attempts": 10,
+  "steps_with_usage": 10,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(220, 47)",
+  "import pyautogui; pyautogui.click(452, 47)",
+  "import pyautogui, time; pyautogui.click(1381, 1029); time.sleep(1); pyautogui.click(1330, 241); time.sleep(0.5); pyautogui.write('Dota 2'); time.sleep(0.5); pyautogui.press('enter')",
+  "import pyautogui; pyautogui.click(609, 477)",
+  "import pyautogui; pyautogui.moveTo(1750, 700); pyautogui.scroll(-12); pyautogui.scroll(-12)",
+  "import pyautogui; pyautogui.moveTo(980, 600); pyautogui.scroll(10)",
+  "import pyautogui; pyautogui.moveTo(980, 600); pyautogui.scroll(5)",
+  "import pyautogui; pyautogui.click(1087, 268)",
+  "import pyautogui; pyautogui.click(1148, 697)",
+  "DONE"
+ ]
+}

@@ -1,0 +1,5 @@
+Preferences dialog is open on Interface (Simple mode). The `play-and-exit` option only appears in advanced settings, so I'll switch to "All".
+
+```json
+{"action": "import pyautogui; pyautogui.click(637, 898)", "memo": "Clicked 'All' radio in Simple Preferences to switch to Advanced Preferences. Next: in the left tree, select 'Interface' (top-level) and look for 'Play and exit' checkbox (play-and-exit) in the right pane; uncheck it, then click Save. Alternative: use the search box at top-left of advanced prefs to search 'exit'."}
+```

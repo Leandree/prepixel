@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e13","memo":"Reading results of trailing-data/steghide/audio-file-search. If nothing found: no hidden audio exists -> fail honestly. Even if an audio file were found, I cannot hear audio; only a text transcript could be translated. Never fabricate a conversation."}
+```

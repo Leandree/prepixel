@@ -1,0 +1,5 @@
+LibreOffice Writer appears to be running (dock indicator + lock file) but no window is visible. Let me bring it up.
+
+```json
+{"action": "import pyautogui; pyautogui.click(35, 337)", "memo": "Desktop was shown; clicked LibreOffice Writer dock icon to raise the Essay_Writing_English_for_uni... document window. Task: add Steinberg et al. 2003 ref to reference list + insert its number at '<add here>' in 4th paragraph."}
+```

@@ -1,0 +1,10 @@
+The cart page confirms the result. Verification chain:
+
+- **Step 8 screenshot** — Dota 2's "Content For This Game" lists exactly 2 DLC: *The Dota 2 Official Soundtrack* (8,19€) and *The Dota 2 Remixes EP* (Free), with an **Add all DLC to Cart** button priced at 8,19€.
+- **Step 10 (current)** — `store.steampowered.com/cart` shows "Your Shopping Cart (1 item)": The Dota 2 Official Soundtrack, 8,19€, estimated total **8,19€**, header badge **Cart 1**.
+
+The cart total matches the "Add all DLC to Cart" total exactly (8,19€), which confirms all purchasable DLC was added. The Remixes EP is free — Steam grants free DLC directly to the account rather than routing it through the cart, so it correctly isn't listed.
+
+```json
+{"action": "DONE"}
+```

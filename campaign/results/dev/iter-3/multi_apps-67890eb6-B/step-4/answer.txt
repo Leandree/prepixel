@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e1","memo":"Cropping terminal to read output of the openpyxl heredoc (expect HDR/ORDER/DONE, or an error like ModuleNotFoundError: openpyxl). Data verified: 2022 Learned Incremental Representations for Parsing (2022.acl-long.220), 2021 Vocab Learning Optimal Transport (2021.acl-long.571), 2020 CheckList (2020.acl-main.442), 2019 Bridging the Gap (P19-1426)."}
+```

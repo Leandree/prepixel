@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(531, 539)", "memo": "Clicked exact 'Diamond' suggestion (Uinta-Wasatch-Cache NF, Spanish Fork, Utah) in autocomplete. Next: wait for the Diamond facility page to load, then look for the 'Next Available' dates shown on the campsite/availability listing and read the dates off."}

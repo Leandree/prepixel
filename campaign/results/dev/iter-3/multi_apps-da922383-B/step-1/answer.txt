@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+p","memo":"Task: save both open Lil'Log tabs as PDF to /home/user/Documents/Blog. Tab2 (current)='Thinking about High-Quality Human Data', Tab1='LLM Powered Autonomous Agents'. Opened print dialog for tab2; next: ensure destination=Save as PDF, click Save, then type full path in GTK save dialog."}
+```

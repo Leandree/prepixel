@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(635, 607)", "memo": "Clicked 'Qt' under Interface > Main interfaces in Advanced Prefs. Next: in right pane find 'Display background cone or art' checkbox (may need to scroll down in right panel) and uncheck it, then click Save at (1210,903)."}

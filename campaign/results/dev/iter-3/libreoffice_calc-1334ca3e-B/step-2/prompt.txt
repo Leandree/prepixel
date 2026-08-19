@@ -1,0 +1,578 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: The cells are so big that I can not click on the cell I want, zoom out a little bit.
+
+STEP 2 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click menu "View"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Zoom is 260%; opened View menu to find Zoom... dialog and set a smaller zoom (e.g. 100%).
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value:
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 toggle-button 0,0,99,27 "Activities" state=checked:false
+e4 menu 99,0,165,27 "LibreOffice Calc"
+e5 menu 906,0,178,27 "Aug 19 19‎∶44"
+e6 menu 1814,0,106,27 "System"
+~e7 text 810,41,274,28 "Software Updates Available to Download"
+~e8 text 810,49,274,20 "Software Updates Available to Download"
+~e9 push-button 1208,42,26,26
+~e10 text 810,73,291,17 "Please download waiting software updates."
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+~e29 menu 153,64,49,25 "View" state=selected
+~e30 radio-menu-item 153,89,312,25 "Normal" state=checked:true,selected,focused
+~e31 radio-menu-item 153,114,312,25 "Page Break" state=checked:false
+~e32 menu-item 153,140,312,25 "User Interface..."
+~e33 menu 153,165,312,25 "Toolbars"
+~e34 check-menu-item 153,190,312,25 "Formula Bar" state=checked:true
+~e35 check-menu-item 153,215,312,25 "Status Bar" state=checked:true
+~e36 check-menu-item 153,241,312,25 "View Headers" state=checked:true
+~e37 check-menu-item 153,266,312,25 "View Grid Lines" state=checked:true
+~e38 menu 153,291,312,25 "Grid and Helplines"
+~e39 check-menu-item 153,317,312,25 "Value Highlighting" state=checked:false
+~e40 check-menu-item 153,342,312,25 "Show Formula" state=checked:false
+~e41 menu-item 153,367,312,25 "Comments"
+~e42 check-menu-item 153,393,312,25 "Split Window" state=checked:false
+~e43 check-menu-item 153,418,312,25 "Freeze Rows and Columns" state=checked:false
+~e44 menu 153,443,312,25 "Freeze Cells"
+~e45 check-menu-item 153,469,312,25 "Sidebar" state=checked:true
+~e46 menu-item 153,494,312,25 "Styles"
+~e47 check-menu-item 153,519,312,25 "Gallery" state=checked:true
+~e48 check-menu-item 153,544,312,25 "Navigator" state=checked:false
+~e49 check-menu-item 153,569,312,25 "Function List" state=checked:false
+~e50 check-menu-item 153,595,312,25 "Full Screen" state=checked:false
+~e51 menu 153,620,312,25 "Zoom"
+e52 menu 202,64,55,25 "Insert"
+e53 menu 257,64,66,25 "Format"
+e54 menu 323,64,56,25 "Styles"
+e55 menu 379,64,54,25 "Sheet"
+e56 menu 433,64,48,25 "Data"
+e57 menu 481,64,52,25 "Tools"
+e58 menu 533,64,70,25 "Window"
+e59 menu 603,64,47,25 "Help"
+e60 menu 70,64,40,21 "File" value="0.0"
+e61 menu 110,64,43,21 "Edit" value="0.0"
+e62 menu 153,64,50,21 "View" value="0.0"
+e63 menu 203,64,56,21 "Insert" value="0.0"
+e64 menu 259,64,66,21 "Format" value="0.0"
+e65 menu 325,64,56,21 "Styles" value="0.0"
+e66 menu 381,64,55,21 "Sheet" value="0.0"
+e67 menu 436,64,48,21 "Data" value="0.0"
+e68 menu 484,64,53,21 "Tools" value="0.0"
+e69 menu 537,64,73,21 "Window" value="0.0"
+e70 menu 610,64,48,21 "Help" value="0.0"
+e71 scroll-bar 1849,266,12,731 "Vertical scroll bar" value="0.0"
+e72 scroll-bar 70,997,1774,12 "Horizontal scroll bar" value="0.0"
+e73 table-cell 111,281,272,54 "A1" value="0.0"
+e74 table-cell 383,281,272,54 "B1" value="0.0"
+e75 table-cell 655,281,272,54 "C1" value="0.0"
+e76 table-cell 927,281,272,54 "D1" value="0.0"
+e77 table-cell 1199,281,272,54 "E1" value="0.0"
+e78 table-cell 1471,281,272,54 "F1" value="0.0"
+e79 table-cell 1743,281,106,54 "G1" value="0.0"
+e80 table-cell 111,335,272,54 "A2" value="0.0"
+e81 table-cell 383,335,272,54 "B2" value="0.0"
+e82 table-cell 655,335,272,54 "C2" value="0.0"
+e83 table-cell 927,335,272,54 "D2" value="0.0"
+e84 table-cell 1199,335,272,54 "E2" value="0.0"
+e85 table-cell 1471,335,272,54 "F2" value="0.0"
+e86 table-cell 1743,335,106,54 "G2" value="0.0"
+e87 table-cell 111,389,272,54 "A3" value="0.0"
+e88 table-cell 383,389,272,54 "B3" value="0.0"
+e89 table-cell 655,389,272,54 "C3" value="0.0"
+e90 table-cell 927,389,272,54 "D3" value="0.0"
+e91 table-cell 1199,389,272,54 "E3" value="0.0"
+e92 table-cell 1471,389,272,54 "F3" value="0.0"
+e93 table-cell 1743,389,106,54 "G3" value="0.0"
+e94 table-cell 111,443,272,54 "A4" value="0.0"
+e95 table-cell 383,443,272,54 "B4" value="0.0"
+e96 table-cell 655,443,272,54 "C4" value="0.0"
+e97 table-cell 927,443,272,54 "D4" value="0.0"
+e98 table-cell 1199,443,272,54 "E4" value="0.0"
+e99 table-cell 1471,443,272,54 "F4" value="0.0"
+e100 table-cell 1743,443,106,54 "G4" value="0.0"
+e101 table-cell 111,497,272,54 "A5" value="0.0"
+e102 table-cell 383,497,272,54 "B5" value="0.0"
+e103 table-cell 655,497,272,54 "C5" value="1.0"
+e104 table-cell 927,497,272,54 "D5" value="0.0"
+e105 table-cell 1199,497,272,54 "E5" value="28.0"
+e106 table-cell 1471,497,272,54 "F5" value="0.0"
+e107 table-cell 1743,497,106,54 "G5" value="0.0"
+e108 table-cell 111,551,272,54 "A6" value="0.0"
+e109 table-cell 383,551,272,54 "B6" value="0.0"
+e110 table-cell 655,551,272,54 "C6" value="2.0"
+e111 table-cell 927,551,272,54 "D6" value="0.0"
+e112 table-cell 1199,551,272,54 "E6" value="34.0"
+e113 table-cell 1471,551,272,54 "F6" value="0.0"
+e114 table-cell 1743,551,106,54 "G6" value="0.0"
+e115 table-cell 111,605,272,54 "A7" value="0.0"
+e116 table-cell 383,605,272,54 "B7" value="0.0"
+e117 table-cell 655,605,272,54 "C7" value="3.0"
+e118 table-cell 927,605,272,54 "D7" value="0.0"
+e119 table-cell 1199,605,272,54 "E7" value="22.0"
+e120 table-cell 1471,605,272,54 "F7" value="0.0"
+e121 table-cell 1743,605,106,54 "G7" value="0.0"
+e122 table-cell 111,659,272,54 "A8" value="0.0"
+e123 table-cell 383,659,272,54 "B8" value="0.0"
+e124 table-cell 655,659,272,54 "C8" value="4.0"
+e125 table-cell 927,659,272,54 "D8" value="0.0"
+e126 table-cell 1199,659,272,54 "E8" value="40.0"
+e127 table-cell 1471,659,272,54 "F8" value="0.0"
+e128 table-cell 1743,659,106,54 "G8" value="0.0"
+e129 table-cell 111,713,272,54 "A9" value="0.0"
+e130 table-cell 383,713,272,54 "B9" value="0.0"
+e131 table-cell 655,713,272,54 "C9" value="5.0"
+e132 table-cell 927,713,272,54 "D9" value="0.0"
+e133 table-cell 1199,713,272,54 "E9" value="31.0"
+e134 table-cell 1471,713,272,54 "F9" value="0.0"
+e135 table-cell 1743,713,106,54 "G9" value="0.0"
+e136 table-cell 111,767,272,54 "A10" value="0.0"
+e137 table-cell 383,767,272,54 "B10" value="0.0"
+e138 table-cell 655,767,272,54 "C10" value="6.0"
+e139 table-cell 927,767,272,54 "D10" value="0.0"
+e140 table-cell 1199,767,272,54 "E10" value="27.0"
+e141 table-cell 1471,767,272,54 "F10" value="0.0"
+e142 table-cell 1743,767,106,54 "G10" value="0.0"
+e143 table-cell 111,821,272,54 "A11" value="0.0"
+e144 table-cell 383,821,272,54 "B11" value="0.0"
+e145 table-cell 655,821,272,54 "C11" value="7.0"
+e146 table-cell 927,821,272,54 "D11" value="0.0"
+e147 table-cell 1199,821,272,54 "E11" value="36.0"
+e148 table-cell 1471,821,272,54 "F11" value="0.0"
+e149 table-cell 1743,821,106,54 "G11" value="0.0"
+e150 table-cell 111,875,272,54 "A12" value="0.0"
+e151 table-cell 383,875,272,54 "B12" value="0.0"
+e152 table-cell 655,875,272,54 "C12" value="8.0"
+e153 table-cell 927,875,272,54 "D12" value="0.0"
+e154 table-cell 1199,875,272,54 "E12" value="29.0"
+e155 table-cell 1471,875,272,54 "F12" value="0.0"
+e156 table-cell 1743,875,106,54 "G12" value="0.0"
+e157 table-cell 111,929,272,54 "A13" value="0.0"
+e158 table-cell 383,929,272,54 "B13" value="0.0"
+e159 table-cell 655,929,272,54 "C13" value="9.0"
+e160 table-cell 927,929,272,54 "D13" value="0.0"
+e161 table-cell 1199,929,272,54 "E13" value="45.0"
+e162 table-cell 1471,929,272,54 "F13" value="0.0"
+e163 table-cell 1743,929,106,54 "G13" value="0.0"
+e164 table-cell 111,983,272,14 "A14" value="0.0"
+e165 table-cell 383,983,272,14 "B14" value="0.0"
+e166 table-cell 655,983,272,14 "C14" value="10.0"
+e167 table-cell 927,983,272,14 "D14" value="0.0"
+e168 table-cell 1199,983,272,14 "E14" value="38.0"
+e169 table-cell 1471,983,272,14 "F14" value="0.0"
+e170 table-cell 1743,983,106,14 "G14" value="0.0"
+e171 push-button 76,1034,25,25 "Move To Home"
+e172 push-button 101,1034,25,25 "Move Left"
+e173 push-button 126,1034,25,25 "Move Right"
+e174 push-button 151,1034,25,25 "Move To End"
+e175 push-button 182,1034,25,25 "Add"
+e176 page-tab 213,1009,65,25 "Sheet1" state=selected
+e177 text 1870,144,48,888 "Properties"
+e178 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e179 text 1870,210,44,42 "Properties"
+e180 toggle-button 1874,214,37,35 state=checked:true
+e181 text 1870,252,44,42 "Styles"
+e182 toggle-button 1874,256,37,35 state=checked:false
+e183 text 1870,294,44,42 "Gallery"
+e184 toggle-button 1874,298,37,35 state=checked:false
+e185 text 1870,336,44,42 "Navigator"
+e186 toggle-button 1874,340,37,35 state=checked:false
+e187 text 1870,378,44,42 "Functions"
+e188 toggle-button 1874,382,37,35 state=checked:false
+e189 text 70,142,1791,39 "Formula Tool Bar"
+e190 text 74,169,137,34 "A1"
+e191 toggle-button 211,169,36,34 state=checked:false
+e192 push-button 255,147,25,27 "Function Wizard" value="0.0"
+e193 push-button 280,147,36,27 "Select Function" value="0.0"
+e194 push-button 316,147,25,27 "Formula" value="0.0"
+e195 push-button 1840,174,16,24
+e196 text 111,217,1598,26 "Help us make LibreOffice even better!"
+e197 [pixels] icon 73,210,32,32
+e198 push-button 1715,209,117,34 "Get involved"
+e199 push-button 1839,218,16,16
+e200 text 111,257,1632,26 "Your donations support our worldwide community."
+e201 [pixels] icon 73,250,32,32
+e202 push-button 1749,249,83,34 "Donate"
+e203 push-button 1839,258,16,16
+e204 text 70,64,1262,39 "Standard"
+e205 push-button 74,66,44,35 "New" value="0.0"
+e206 push-button 118,66,44,35 "Open" value="0.0"
+e207 push-button 162,66,44,35 "Save" value="0.0"
+e208 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e209 push-button 247,66,33,35 "Print" value="0.0"
+e210 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e211 push-button 321,66,33,35 "Cut" value="0.0"
+e212 push-button 354,66,33,35 "Copy" value="0.0"
+e213 push-button 387,66,44,35 "Paste" value="0.0"
+e214 push-button 439,66,33,35 "Clone" value="0.0"
+e215 push-button 472,66,33,35 "Clear" value="0.0"
+e216 push-button 513,66,44,35 "Undo" value="0.0"
+e217 push-button 557,66,44,35 "Redo" value="0.0"
+e218 toggle-button 609,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e219 push-button 642,66,33,35 "Spelling" value="0.0"
+e220 push-button 683,66,44,35 "Row" value="0.0"
+e221 push-button 727,66,44,35 "Column" value="0.0"
+e222 push-button 779,66,33,35 "Sort" value="0.0"
+e223 push-button 812,66,33,35 "Sort Ascending" value="0.0"
+e224 push-button 845,66,33,35 "Sort Descending" value="0.0"
+e225 push-button 878,66,33,35 "AutoFilter" value="0.0"
+e226 push-button 919,66,33,35 "Image" value="0.0"
+e227 push-button 952,66,33,35 "Chart" value="0.0"
+e228 push-button 985,66,33,35 "Pivot Table" value="0.0"
+e229 push-button 1026,66,44,35 "Symbol" value="0.0"
+e230 toggle-button 1070,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e231 push-button 1103,66,33,35 "Comment" value="0.0"
+e232 push-button 1136,66,33,35 "Headers and Footers" value="0.0"
+e233 push-button 1177,66,33,35 "Print Area" value="0.0"
+e234 push-button 1210,66,44,35 "Freeze Rows and Columns" value="0.0"
+e235 push-button 1254,66,33,35 "Split Window" value="0.0"
+e236 toggle-button 1295,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e237 text 70,103,1405,39 "Formatting"
+e238 text 74,105,221,34 "Font Name"
+e239 text 74,130,185,34 "思源黑体 CN Normal"
+e240 toggle-button 259,130,36,34 state=checked:false
+e241 text 303,105,101,34 "Font Size"
+e242 text 303,130,65,34 "10 pt"
+e243 toggle-button 368,130,36,34 state=checked:false
+e244 toggle-button 412,105,33,35 "Bold" value="0.0" state=checked:false
+e245 toggle-button 445,105,33,35 "Italic" value="0.0" state=checked:false
+e246 push-button 478,105,44,35 "Underline" value="0.0"
+e247 push-button 530,105,44,35 "Font Color" value="0.0"
+e248 push-button 574,105,44,35 "Background Color" value="0.0"
+e249 push-button 626,105,33,35 "Align Left" value="0.0"
+e250 push-button 659,105,33,35 "Align Center" value="0.0"
+e251 push-button 692,105,33,35 "Align Right" value="0.0"
+e252 push-button 733,105,33,35 "Align Top" value="0.0"
+e253 push-button 766,105,33,35 "Center Vertically" value="0.0"
+e254 push-button 799,105,33,35 "Align Bottom" value="1.0" state=checked:true
+e255 push-button 840,105,33,35 "Wrap Text" value="0.0"
+e256 push-button 881,105,33,35 "Merge and Center Cells" value="0.0"
+e257 push-button 914,105,33,35 "Merge Cells" value="0.0"
+e258 push-button 947,105,33,35 "Unmerge Cells" value="0.0"
+e259 push-button 988,105,44,35 "Currency" value="0.0"
+e260 push-button 1032,105,33,35 "Percent" value="0.0"
+e261 push-button 1065,105,33,35 "Number" value="0.0"
+e262 push-button 1098,105,33,35 "Date" value="0.0"
+e263 push-button 1139,105,33,35 "Add Decimal Place" value="0.0"
+e264 push-button 1172,105,33,35 "Delete Decimal Place" value="0.0"
+e265 push-button 1213,105,33,35 "Increase" value="0.0"
+e266 push-button 1246,105,33,35 "Decrease" value="0.0"
+e267 push-button 1287,105,44,35 "Borders (Shift to overwrite)" value="0.0"
+e268 push-button 1331,105,44,35 "Border Style" value="0.0"
+e269 push-button 1375,105,44,35 "Border Color" value="0.0"
+e270 push-button 1427,105,44,35 "Conditional" value="0.0"
+e271 text 76,1036,271,18 "Sheet 1 of 1"
+e272 text 630,1036,312,18 "PageStyle_Sheet1"
+e273 text 948,1036,312,18 "English (Hong Kong)"
+e274 text 1421,1036,306,18 "Average: ; Sum: 0"
+e275 text 1876,1036,38,18 "260%"
+[act-guard] previous action: CONFIRMED (state [none]→[selected])
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 1 ---
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 toggle-button 0,0,99,27 "Activities" state=checked:false
+e4 menu 99,0,165,27 "LibreOffice Calc"
+e5 menu 906,0,178,27 "Aug 19 19‎∶44"
+e6 menu 1814,0,106,27 "System"
+e7 push-button 0,840,70,8
+e8 push-button 62,33,8,815
+e9 push-button 0,33,70,64 "Google Chrome"
+e10 push-button 0,101,70,64 "Thunderbird Mail"
+e11 push-button 0,169,70,64 "Visual Studio Code"
+e12 push-button 0,237,70,64 "VLC media player"
+e13 push-button 0,305,70,64 "LibreOffice Writer"
+e14 push-button 0,373,70,64 "LibreOffice Calc"
+e15 push-button 0,441,70,64 "LibreOffice Impress"
+e16 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e17 push-button 0,577,70,64 "Files"
+e18 push-button 0,645,70,64 "Ubuntu Software"
+e19 push-button 0,713,70,64 "Help"
+e20 push-button 0,784,70,64 "Trash"
+e21 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e22 push-button 1896,68,16,16
+e23 menu 70,64,40,25 "File"
+e24 menu 110,64,43,25 "Edit"
+e25 menu 153,64,49,25 "View"
+e26 menu 202,64,55,25 "Insert"
+e27 menu 257,64,66,25 "Format"
+e28 menu 323,64,56,25 "Styles"
+e29 menu 379,64,54,25 "Sheet"
+e30 menu 433,64,48,25 "Data"
+e31 menu 481,64,52,25 "Tools"
+e32 menu 533,64,70,25 "Window"
+e33 menu 603,64,47,25 "Help"
+e34 menu 70,64,40,21 "File" value="0.0"
+e35 menu 110,64,43,21 "Edit" value="0.0"
+e36 menu 153,64,50,21 "View" value="0.0"
+e37 menu 203,64,56,21 "Insert" value="0.0"
+e38 menu 259,64,66,21 "Format" value="0.0"
+e39 menu 325,64,56,21 "Styles" value="0.0"
+e40 menu 381,64,55,21 "Sheet" value="0.0"
+e41 menu 436,64,48,21 "Data" value="0.0"
+e42 menu 484,64,53,21 "Tools" value="0.0"
+e43 menu 537,64,73,21 "Window" value="0.0"
+e44 menu 610,64,48,21 "Help" value="0.0"
+e45 scroll-bar 1849,266,12,731 "Vertical scroll bar" value="0.0"
+e46 scroll-bar 70,997,1774,12 "Horizontal scroll bar" value="0.0"
+e47 table-cell 111,281,272,54 "A1" value="0.0"
+e48 table-cell 383,281,272,54 "B1" value="0.0"
+e49 table-cell 655,281,272,54 "C1" value="0.0"
+e50 table-cell 927,281,272,54 "D1" value="0.0"
+e51 table-cell 1199,281,272,54 "E1" value="0.0"
+e52 table-cell 1471,281,272,54 "F1" value="0.0"
+e53 table-cell 1743,281,106,54 "G1" value="0.0"
+e54 table-cell 111,335,272,54 "A2" value="0.0"
+e55 table-cell 383,335,272,54 "B2" value="0.0"
+e56 table-cell 655,335,272,54 "C2" value="0.0"
+e57 table-cell 927,335,272,54 "D2" value="0.0"
+e58 table-cell 1199,335,272,54 "E2" value="0.0"
+e59 table-cell 1471,335,272,54 "F2" value="0.0"
+e60 table-cell 1743,335,106,54 "G2" value="0.0"
+e61 table-cell 111,389,272,54 "A3" value="0.0"
+e62 table-cell 383,389,272,54 "B3" value="0.0"
+e63 table-cell 655,389,272,54 "C3" value="0.0"
+e64 table-cell 927,389,272,54 "D3" value="0.0"
+e65 table-cell 1199,389,272,54 "E3" value="0.0"
+e66 table-cell 1471,389,272,54 "F3" value="0.0"
+e67 table-cell 1743,389,106,54 "G3" value="0.0"
+e68 table-cell 111,443,272,54 "A4" value="0.0"
+e69 table-cell 383,443,272,54 "B4" value="0.0"
+e70 table-cell 655,443,272,54 "C4" value="0.0"
+e71 table-cell 927,443,272,54 "D4" value="0.0"
+e72 table-cell 1199,443,272,54 "E4" value="0.0"
+e73 table-cell 1471,443,272,54 "F4" value="0.0"
+e74 table-cell 1743,443,106,54 "G4" value="0.0"
+e75 table-cell 111,497,272,54 "A5" value="0.0"
+e76 table-cell 383,497,272,54 "B5" value="0.0"
+e77 table-cell 655,497,272,54 "C5" value="1.0"
+e78 table-cell 927,497,272,54 "D5" value="0.0"
+e79 table-cell 1199,497,272,54 "E5" value="28.0"
+e80 table-cell 1471,497,272,54 "F5" value="0.0"
+e81 table-cell 1743,497,106,54 "G5" value="0.0"
+e82 table-cell 111,551,272,54 "A6" value="0.0"
+e83 table-cell 383,551,272,54 "B6" value="0.0"
+e84 table-cell 655,551,272,54 "C6" value="2.0"
+e85 table-cell 927,551,272,54 "D6" value="0.0"
+e86 table-cell 1199,551,272,54 "E6" value="34.0"
+e87 table-cell 1471,551,272,54 "F6" value="0.0"
+e88 table-cell 1743,551,106,54 "G6" value="0.0"
+e89 table-cell 111,605,272,54 "A7" value="0.0"
+e90 table-cell 383,605,272,54 "B7" value="0.0"
+e91 table-cell 655,605,272,54 "C7" value="3.0"
+e92 table-cell 927,605,272,54 "D7" value="0.0"
+e93 table-cell 1199,605,272,54 "E7" value="22.0"
+e94 table-cell 1471,605,272,54 "F7" value="0.0"
+e95 table-cell 1743,605,106,54 "G7" value="0.0"
+e96 table-cell 111,659,272,54 "A8" value="0.0"
+e97 table-cell 383,659,272,54 "B8" value="0.0"
+e98 table-cell 655,659,272,54 "C8" value="4.0"
+e99 table-cell 927,659,272,54 "D8" value="0.0"
+e100 table-cell 1199,659,272,54 "E8" value="40.0"
+e101 table-cell 1471,659,272,54 "F8" value="0.0"
+e102 table-cell 1743,659,106,54 "G8" value="0.0"
+e103 table-cell 111,713,272,54 "A9" value="0.0"
+e104 table-cell 383,713,272,54 "B9" value="0.0"
+e105 table-cell 655,713,272,54 "C9" value="5.0"
+e106 table-cell 927,713,272,54 "D9" value="0.0"
+e107 table-cell 1199,713,272,54 "E9" value="31.0"
+e108 table-cell 1471,713,272,54 "F9" value="0.0"
+e109 table-cell 1743,713,106,54 "G9" value="0.0"
+e110 table-cell 111,767,272,54 "A10" value="0.0"
+e111 table-cell 383,767,272,54 "B10" value="0.0"
+e112 table-cell 655,767,272,54 "C10" value="6.0"
+e113 table-cell 927,767,272,54 "D10" value="0.0"
+e114 table-cell 1199,767,272,54 "E10" value="27.0"
+e115 table-cell 1471,767,272,54 "F10" value="0.0"
+e116 table-cell 1743,767,106,54 "G10" value="0.0"
+e117 table-cell 111,821,272,54 "A11" value="0.0"
+e118 table-cell 383,821,272,54 "B11" value="0.0"
+e119 table-cell 655,821,272,54 "C11" value="7.0"
+e120 table-cell 927,821,272,54 "D11" value="0.0"
+e121 table-cell 1199,821,272,54 "E11" value="36.0"
+e122 table-cell 1471,821,272,54 "F11" value="0.0"
+e123 table-cell 1743,821,106,54 "G11" value="0.0"
+e124 table-cell 111,875,272,54 "A12" value="0.0"
+e125 table-cell 383,875,272,54 "B12" value="0.0"
+e126 table-cell 655,875,272,54 "C12" value="8.0"
+e127 table-cell 927,875,272,54 "D12" value="0.0"
+e128 table-cell 1199,875,272,54 "E12" value="29.0"
+e129 table-cell 1471,875,272,54 "F12" value="0.0"
+e130 table-cell 1743,875,106,54 "G12" value="0.0"
+e131 table-cell 111,929,272,54 "A13" value="0.0"
+e132 table-cell 383,929,272,54 "B13" value="0.0"
+e133 table-cell 655,929,272,54 "C13" value="9.0"
+e134 table-cell 927,929,272,54 "D13" value="0.0"
+e135 table-cell 1199,929,272,54 "E13" value="45.0"
+e136 table-cell 1471,929,272,54 "F13" value="0.0"
+e137 table-cell 1743,929,106,54 "G13" value="0.0"
+e138 table-cell 111,983,272,14 "A14" value="0.0"
+e139 table-cell 383,983,272,14 "B14" value="0.0"
+e140 table-cell 655,983,272,14 "C14" value="10.0"
+e141 table-cell 927,983,272,14 "D14" value="0.0"
+e142 table-cell 1199,983,272,14 "E14" value="38.0"
+e143 table-cell 1471,983,272,14 "F14" value="0.0"
+e144 table-cell 1743,983,106,14 "G14" value="0.0"
+e145 push-button 76,1034,25,25 "Move To Home"
+e146 push-button 101,1034,25,25 "Move Left"
+e147 push-button 126,1034,25,25 "Move Right"
+e148 push-button 151,1034,25,25 "Move To End"
+e149 push-button 182,1034,25,25 "Add"
+e150 page-tab 213,1009,65,25 "Sheet1" state=selected
+e151 text 1870,144,48,888 "Properties"
+e152 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e153 text 1870,210,44,42 "Properties"
+e154 toggle-button 1874,214,37,35 state=checked:true
+e155 text 1870,252,44,42 "Styles"
+e156 toggle-button 1874,256,37,35 state=checked:false
+e157 text 1870,294,44,42 "Gallery"
+e158 toggle-button 1874,298,37,35 state=checked:false
+e159 text 1870,336,44,42 "Navigator"
+e160 toggle-button 1874,340,37,35 state=checked:false
+e161 text 1870,378,44,42 "Functions"
+e162 toggle-button 1874,382,37,35 state=checked:false
+e163 text 70,142,1791,39 "Formula Tool Bar"
+e164 text 74,169,137,34 "A1"
+e165 toggle-button 211,169,36,34 state=checked:false
+e166 push-button 255,147,25,27 "Function Wizard" value="0.0"
+e167 push-button 280,147,36,27 "Select Function" value="0.0"
+e168 push-button 316,147,25,27 "Formula" value="0.0"
+e169 push-button 1840,174,16,24
+e170 text 111,217,1598,26 "Help us make LibreOffice even better!"
+e171 [pixels] icon 73,210,32,32
+e172 push-button 1715,209,117,34 "Get involved"
+e173 push-button 1839,218,16,16
+e174 text 111,257,1632,26 "Your donations support our worldwide community."
+e175 [pixels] icon 73,250,32,32
+e176 push-button 1749,249,83,34 "Donate"
+e177 push-button 1839,258,16,16
+e178 text 70,64,1262,39 "Standard"
+e179 push-button 74,66,44,35 "New" value="0.0"
+e180 push-button 118,66,44,35 "Open" value="0.0"
+e181 push-button 162,66,44,35 "Save" value="0.0"
+e182 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e183 push-button 247,66,33,35 "Print" value="0.0"
+e184 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e185 push-button 321,66,33,35 "Cut" value="0.0"
+e186 push-button 354,66,33,35 "Copy" value="0.0"
+e187 push-button 387,66,44,35 "Paste" value="0.0"
+e188 push-button 439,66,33,35 "Clone" value="0.0"
+e189 push-button 472,66,33,35 "Clear" value="0.0"
+e190 push-button 513,66,44,35 "Undo" value="0.0"
+e191 push-button 557,66,44,35 "Redo" value="0.0"
+e192 toggle-button 609,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e193 push-button 642,66,33,35 "Spelling" value="0.0"
+e194 push-button 683,66,44,35 "Row" value="0.0"
+e195 push-button 727,66,44,35 "Column" value="0.0"
+e196 push-button 779,66,33,35 "Sort" value="0.0"
+e197 push-button 812,66,33,35 "Sort Ascending" value="0.0"
+e198 push-button 845,66,33,35 "Sort Descending" value="0.0"
+e199 push-button 878,66,33,35 "AutoFilter" value="0.0"
+e200 push-button 919,66,33,35 "Image" value="0.0"
+e201 push-button 952,66,33,35 "Chart" value="0.0"
+e202 push-button 985,66,33,35 "Pivot Table" value="0.0"
+e203 push-button 1026,66,44,35 "Symbol" value="0.0"
+e204 toggle-button 1070,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e205 push-button 1103,66,33,35 "Comment" value="0.0"
+e206 push-button 1136,66,33,35 "Headers and Footers" value="0.0"
+e207 push-button 1177,66,33,35 "Print Area" value="0.0"
+e208 push-button 1210,66,44,35 "Freeze Rows and Columns" value="0.0"
+e209 push-button 1254,66,33,35 "Split Window" value="0.0"
+e210 toggle-button 1295,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e211 text 70,103,1405,39 "Formatting"
+e212 text 74,105,221,34 "Font Name"
+e213 text 74,130,185,34 "思源黑体 CN Normal"
+e214 toggle-button 259,130,36,34 state=checked:false
+e215 text 303,105,101,34 "Font Size"
+e216 text 303,130,65,34 "10 pt"
+e217 toggle-button 368,130,36,34 state=checked:false
+e218 toggle-button 412,105,33,35 "Bold" value="0.0" state=checked:false
+e219 toggle-button 445,105,33,35 "Italic" value="0.0" state=checked:false
+e220 push-button 478,105,44,35 "Underline" value="0.0"
+e221 push-button 530,105,44,35 "Font Color" value="0.0"
+e222 push-button 574,105,44,35 "Background Color" value="0.0"
+e223 push-button 626,105,33,35 "Align Left" value="0.0"
+e224 push-button 659,105,33,35 "Align Center" value="0.0"
+e225 push-button 692,105,33,35 "Align Right" value="0.0"
+e226 push-button 733,105,33,35 "Align Top" value="0.0"
+e227 push-button 766,105,33,35 "Center Vertically" value="0.0"
+e228 push-button 799,105,33,35 "Align Bottom" value="1.0" state=checked:true
+e229 push-button 840,105,33,35 "Wrap Text" value="0.0"
+e230 push-button 881,105,33,35 "Merge and Center Cells" value="0.0"
+e231 push-button 914,105,33,35 "Merge Cells" value="0.0"
+e232 push-button 947,105,33,35 "Unmerge Cells" value="0.0"
+e233 push-button 988,105,44,35 "Currency" value="0.0"
+e234 push-button 1032,105,33,35 "Percent" value="0.0"
+e235 push-button 1065,105,33,35 "Number" value="0.0"
+e236 push-button 1098,105,33,35 "Date" value="0.0"
+e237 push-button 1139,105,33,35 "Add Decimal Place" value="0.0"
+e238 push-button 1172,105,33,35 "Delete Decimal Place" value="0.0"
+e239 push-button 1213,105,33,35 "Increase" value="0.0"
+e240 push-button 1246,105,33,35 "Decrease" value="0.0"
+e241 push-button 1287,105,44,35 "Borders (Shift to overwrite)" value="0.0"
+e242 push-button 1331,105,44,35 "Border Style" value="0.0"
+e243 push-button 1375,105,44,35 "Border Color" value="0.0"
+e244 push-button 1427,105,44,35 "Conditional" value="0.0"
+e245 text 76,1036,271,18 "Sheet 1 of 1"
+e246 text 630,1036,312,18 "PageStyle_Sheet1"
+e247 text 948,1036,312,18 "English (Hong Kong)"
+e248 text 1421,1036,306,18 "Average: ; Sum: 0"
+e249 text 1876,1036,38,18 "260%"
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

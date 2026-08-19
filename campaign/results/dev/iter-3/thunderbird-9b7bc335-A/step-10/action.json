@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1007, 210)", "memo": "Reopening Message Filters to verify rule details. Next: double-click the 'Forward to gmail' row (~925, 453) to open the edit dialog; check condition is 'Match all messages' and action is 'Forward Message to anonym-x2024@gmail.com'. Then OK/close, then DONE."}

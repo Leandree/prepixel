@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1031, 620); time.sleep(2); pyautogui.click(1398, 748); time.sleep(2.5)", "memo": "Calendar was open (Aug 2026, today=19 circled). Clicked Aug 20 (tomorrow) then Done. Next: verify Depart shows 20AUG26 and JFK->ORD One Way, then click Find Flights at (1487,297)."}

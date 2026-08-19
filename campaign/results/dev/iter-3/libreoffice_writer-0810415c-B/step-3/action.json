@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+shift+down", "memo": "Selecting p1+p2. After this (sel covers p1), do ctrl+shift+down again, then shift+left to trim end back into p2. Then use Line Spacing dropdown e143 -> Double (or Format>Paragraph). Doc: e50=p1(y386,h74), e51=p2(y478,h56), e52=p3. Verify heights grow after."}

@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+a","memo":"Selected all in Basic Module1. Next: type FixOrder macro (find .xlsx doc via StarDesktop components, moveByName each sheet to target index, oDoc.store()), then F5 to run, then done."}
+```

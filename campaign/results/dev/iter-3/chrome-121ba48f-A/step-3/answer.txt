@@ -1,0 +1,5 @@
+The Steam store is loaded, with a cookie consent banner blocking the bottom. I'll dismiss it (choosing "Reject All" as the minimal-consent option) and then search for Dota 2.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1381, 1029); time.sleep(1); pyautogui.click(1330, 241); time.sleep(0.5); pyautogui.write('Dota 2'); time.sleep(0.5); pyautogui.press('enter')", "memo": "Step 3: On store.steampowered.com. Rejected cookie banner, clicked search box, typed 'Dota 2' + Enter -> search results page. Next: click the Dota 2 game result to open its store page (appid 570), then scroll to 'Downloadable Content for Dota 2' section and add each DLC to cart."}
+```

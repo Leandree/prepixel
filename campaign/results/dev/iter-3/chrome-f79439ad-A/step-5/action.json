@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1052, 441)", "memo": "Clicked 'Dublin' airport chip in Pick-an-airport panel to set origin. One way already selected. Next: click To field (~1050,328), type 'Vienna', pick Vienna airport chip in right panel (~1052,441). Then date 10 Sep 2026, then passengers 2 adults, then Search (1425,321)."}

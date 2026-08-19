@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e51","memo":"Goal: double line spacing for first 2 paragraphs. Plan: clicked in para2 (e51). Next: ctrl+down (start of next para), left (end of para2), ctrl+shift+home (select to doc start), then Format>Paragraph>Line Spacing=Double>OK."}
+```

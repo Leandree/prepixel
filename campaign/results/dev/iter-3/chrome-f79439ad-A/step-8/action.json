@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1053, 525)", "memo": "Clicked Vienna airport chip (1053,525) in 'Pick an airport'. Next: verify To=Vienna, then date picker should open -> pick 10 Sep 2026 (next month; today Aug 19 2026). Then passengers: 2 adults. Then Search (1425,321)."}

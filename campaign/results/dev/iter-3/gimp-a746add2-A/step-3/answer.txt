@@ -1,0 +1,5 @@
+The "Convert to RGB Working Space?" dialog is still open — my previous click only focused the window. Clicking **Keep** again.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "Step3: Convert-to-RGB dialog was STILL open (prior click only focused window); clicked Keep (1106,702) again. Next: verify dialog gone, then Filters menu (475,77) > 'Light and Shadow' > 'Vignette...'."}
+```

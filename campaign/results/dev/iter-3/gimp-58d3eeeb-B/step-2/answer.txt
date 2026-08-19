@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e1","memo":"Selecting heron.jpeg to open it full-size (press Enter next) for one final check for any readable conversation text. Core problem stands: task asks to translate a 'hidden AUDIO conversation' — I have no audio perception and a JPEG gives me no audible content. I must NOT fabricate a conversation. If the full-size image shows only a heron photo (no transcript/text), the correct move is fail + honest explanation."}
+```

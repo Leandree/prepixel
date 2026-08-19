@@ -1,0 +1,7 @@
+The Insert Sheet dialog is open with the name already defaulting to "Sheet2". I need to switch position to "After current sheet" and confirm.
+
+```json
+{"action": "import pyautogui; pyautogui.click(738, 392); pyautogui.click(1233, 794)"}
+```
+
+**memo:** Sheet1 data: Revenue A2:A20, Total Expenses B2:B20 (19 rows). Just clicked "After current sheet" + OK in Insert Sheet dialog (name Sheet2). Next: verify Sheet2 tab active, then type in A1: `Total Revenue<tab>Total Expenses<enter>` then in A2: `=SUM(Sheet1.A2:A20)<tab>=SUM(Sheet1.B2:B20)<enter>`, then Ctrl+S and Enter to keep xlsx format.

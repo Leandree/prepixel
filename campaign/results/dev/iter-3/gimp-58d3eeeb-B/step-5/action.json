@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e13", "memo": "Reading terminal output of ls/file/binwalk on heron.jpeg (cwd ~/Desktop). Looking for embedded audio (wav/mp3) or archive. Next: extract it (binwalk -e / foremost / steghide) then transcribe. NEVER fabricate a conversation - only translate a real transcript; if none found, report failure."}

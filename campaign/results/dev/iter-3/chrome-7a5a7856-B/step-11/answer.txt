@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e22","memo":"Bubble open on Illustrated Transformer, title='Edit bookmark' (so bookmark already exists). Cropping to read the Folder dropdown value + locate Done button. If folder != Bookmarks bar, change it via the dropdown; then click Done. NEVER press Escape."}
+```

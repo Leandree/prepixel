@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(585, 534); time.sleep(2.5)", "memo": "Clicked 'ORD Chicago-O'Hare, IL' suggestion. Next: verify To=ORD, then set trip type to One Way via dropdown (851,297), then open Depart-Return (1135,297) and pick Aug 20 2026, then Find Flights (1487,297)."}

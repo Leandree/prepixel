@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "Step2: GIMP open w/ dog_with_background.png; dismissed 'Convert to RGB Working Space?' dialog via Keep (1106,702). Next: click Filters menu (475,77) > 'Light and Shadow' > 'Vignette...'. Also a software-update notification banner at top may need dismissing."}

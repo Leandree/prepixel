@@ -1,0 +1,5 @@
+The flags page loaded with "Auto Dark Mode for Web Contents" highlighted. Now I'll set its dropdown to Disabled (last option in the list).
+
+```json
+{"action": "import pyautogui, time; pyautogui.FAILSAFE = False; pyautogui.moveTo(1257, 222, duration=0.3); pyautogui.click(); time.sleep(1.5); pyautogui.press('end'); time.sleep(0.7); pyautogui.press('enter'); time.sleep(2)", "memo": "Step5: clicked Auto Dark Mode dropdown (1257,222), pressed End+Enter to pick last option 'Disabled'. Verify dropdown now reads Disabled; if it reads something else, click dropdown and pick 'Disabled' by row. Then click 'Relaunch' button (bottom-right, ~1830,1030) to apply."}
+```
