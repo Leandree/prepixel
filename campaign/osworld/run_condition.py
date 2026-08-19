@@ -1106,7 +1106,10 @@ class Driver:
                 self.mech_total["cdp_scroll_to"] += 1
                 self.mech_total["rung1"] += 1
                 mech["cdp_scroll"] = res.get("scroll")
-                return (f"scroll_to {label}", None, True, 1)
+                # before_rec must be a record dict, None, or "KBD" — the
+                # guard subscripts anything else and dies. scroll_to has no
+                # element expectation; like `scroll`, verify by view diff.
+                return (f"scroll_to {label}", None, True, "KBD")
             self.mech_total["cdp_action_failures"] += 1
             mech["rung1_error"] = "cdp: %s" % res.get("err")
             # falls through to the pointer-scroll loop below
