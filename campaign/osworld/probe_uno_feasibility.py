@@ -81,8 +81,13 @@ for pat in ("/root/*.xlsx", "/root/Desktop/*.xlsx", "/home/*/Desktop/*.xlsx",
 out["task_doc"] = doc
 subprocess.run("pkill -f soffice.bin", shell=True)
 time.sleep(2)
+# DEVNULL + new session, or the spawned soffice inherits the server's
+# stdout pipe and run_python_script blocks on it until its 90 s timeout —
+# measured on the first attempt of this very probe.
 subprocess.Popen(["soffice", "--calc", doc] if doc else ["soffice"],
-                 env=dict(os.environ, DISPLAY=":0"))
+                 env=dict(os.environ, DISPLAY=":0"),
+                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                 stdin=subprocess.DEVNULL, start_new_session=True)
 print("VMPROBE:" + json.dumps(out))
 """
 
@@ -154,11 +159,16 @@ def main():
                 ((r or {}).get("error") or "")[:200]), flush=True)
             return {}
 
-        stage("checks", VM_CHECKS)
-        stage("config+relaunch", VM_RELAUNCH)
-        _t.sleep(20)                    # driver-side wait, not in-VM
-        stage("listen?", VM_LISTEN)
-        stage("uno connect", VM_CONNECT)
+        for name, script, wait in (("checks", VM_CHECKS, 0),
+                                   ("config+relaunch", VM_RELAUNCH, 20),
+                                   ("listen?", VM_LISTEN, 0),
+                                   ("uno connect", VM_CONNECT, 0)):
+            try:
+                stage(name, script)
+            except Exception as e:
+                print("== %s == STAGE RAISED %s" % (name, e), flush=True)
+            if wait:
+                _t.sleep(wait)          # driver-side wait, not in-VM
     finally:
         try:
             env.close()

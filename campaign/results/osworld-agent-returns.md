@@ -1,5 +1,55 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-19 — P9 : faisabilité UNO = OUI, preuves ; itération 3 en cours
+
+**La question posée** : établir l'acceptation UNO au niveau de l'image VM,
+avant toute tâche, identiquement pour A et B, sans toucher les setups par
+tâche ni les évaluateurs — et NON si la seule voie est de relancer soffice
+en cours de tâche.
+
+**Réponse : OUI.** Trois preuves, une VM jetable (hors comptage, détruite) :
+
+1. `python3-uno` est déjà dans l'image (`/usr/lib/python3/dist-packages/
+   uno.py`) — aucun paquet à installer.
+2. Le mécanisme de configuration marche : un item `ooSetupConnectionURL`
+   (`socket,host=localhost,port=2002;urp;`) écrit dans le
+   `registrymodifications.xcu` du profil utilisateur fait écouter TOUT
+   soffice lancé ensuite — y compris celui que le setup de la tâche lance
+   lui-même. Vérifié : après relance (sur la VM jetable uniquement — c'est
+   exactement le geste interdit en run, utilisé ici comme sonde), le port
+   écoute.
+3. La connexion et le modèle document marchent de bout en bout :
+   `UnoUrlResolver` → `ScModelObj`, lecture `Sheet1`, écriture d'une
+   cellule et relecture (`write_ok: true`), restauration.
+
+**Voie d'établissement au niveau image, identifiée avec l'outillage de
+l'image elle-même** : le conteneur OSWorld crée un overlay interne adossé à
+`/System.qcow2` monté en lecture seule (`install.sh:191 — qemu-img create
+-b /System.qcow2 /boot.qcow2`). Donc : copier `Ubuntu.qcow2`, booter UN
+conteneur manuel sur la copie montée en écriture, écrire l'item de config
+dans le profil, éteindre, `qemu-img commit` — et pointer les DEUX
+conditions sur la copie. Aucun snapshot par tâche n'existe dans le provider
+docker (revert = stop), aucun évaluateur touché.
+
+**Caveat honnête** : le mécanisme est prouvé pièce par pièce ; le bake
+image de bout en bout n'a pas encore été exécuté. Et le canal UNO lui-même
+(vue au vocabulaire commun + actuation + signature de fenêtre dans le
+routeur) est un chantier de la taille du canal CDP — je ne l'implémente pas
+dans cette passe pour ne pas mesurer un canal bâclé dans l'itération 3
+(le bug d'onglet du routeur CDP a montré ce que coûte un canal à moitié
+validé). Recommandation : itération 4 dédiée, après relecture.
+
+**Pourquoi ça vaut la peine** (au-delà du régime fort des 76 cellules) :
+l'analyse writer-adf5e2c3 a montré une classe d'échec que NI les pixels NI
+AT-SPI ne peuvent lever — la numérotation de liste rendue est
+indistinguable du texte littéral à l'écran, et B a perdu deux cellules à
+sept caractères près là-dessus. UNO expose `ListLabelString` séparément du
+texte : la distinction existe DANS ce canal.
+
+Itération 3 : lancée (56 cellules, 20 dev-core + 8 dev-browser, driver
+épinglé 7ca3a40 propre). Rapport complet au retour.
+
+
 ## 2026-08-19 — GRANDE PASSE, phase 1 : le tableau de causes, et l'annonce des chantiers
 
 ### Tableau de causes — chaque échec, A et B, itérations 1 et 2
