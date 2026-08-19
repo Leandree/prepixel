@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+o","memo":"Opened File>Open dialog from Calc. Goal: open ~/Desktop/reminder.docx to read assignment requirements, then apply them to the open workbook-with-sample-database.xlsx (10 sheets, Mkt Tera active). Next: type path /root/Desktop/reminder.docx or use ~/Desktop/reminder.docx in filename field, press Enter."}
+```

@@ -1,0 +1,89 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "404 Error Page Not Found | AccuWeather - Memory usage - 97.0 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Google Chrome - The Fast & Secure Web Browser Built to be Yours - Memory usage - 145 MB"
+e8 push-button 550,33,28,28 "Close"
+e9 push-button 586,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1459,24 "Address and search bar"
+e15 push-button 1694,78,24,24 "Bookmark this tab"
+e16 push-button 1739,73,34,34 "You"
+e17 push-button 1778,73,142,34 "Finish update"
+e18 toggle-button 0,0,99,27 "Activities" state=checked:false
+e19 menu 99,0,162,27 "Google Chrome"
+e20 menu 906,0,178,27 "Aug 20 02‎∶20"
+e21 menu 1814,0,106,27 "System"
+e22 push-button 0,840,70,8
+e23 push-button 62,33,8,815
+e24 push-button 0,33,70,64 "Google Chrome"
+e25 push-button 0,101,70,64 "Thunderbird Mail"
+e26 push-button 0,169,70,64 "Visual Studio Code"
+e27 push-button 0,237,70,64 "VLC media player"
+e28 push-button 0,305,70,64 "LibreOffice Writer"
+e29 push-button 0,373,70,64 "LibreOffice Calc"
+e30 push-button 0,441,70,64 "LibreOffice Impress"
+e31 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e32 push-button 0,577,70,64 "Files"
+e33 push-button 0,645,70,64 "Ubuntu Software"
+e34 push-button 0,713,70,64 "Help"
+e35 push-button 0,784,70,64 "Trash"
+e36 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e37 link 515,132,168,27
+~e38 [pixels] image 515,133,168,24
+~e39 [pixels] image 1090,133,19,24
+~e40 entry 1121,137,240,17 "Search"
+~e41 text 1311,137,51,17 "Location"
+~e42 [pixels] image 1372,144,10,6 alt=Chevron down
+~e43 link 1421,136,18,18
+~e44 [pixels] image 1421,136,18,18
+~e45 [pixels] image 1457,136,18,18
+~e46 paragraph 515,224,960,32 "Whoops! This page does not exist."
+~e47 paragraph 515,272,960,18 "Here are some other pages you might find helpful."
+~e48 heading 515,322,960,20 "Weather"
+~e49 paragraph 515,322,960,15 "Weather"
+~e50 link 515,342,960,36 "Today"
+~e51 heading 515,350,42,19 "Today"
+~e52 [pixels] image 1457,350,18,18
+~e53 link 515,378,960,36 "Hourly"
+~e54 heading 515,386,51,19 "Hourly"
+~e55 [pixels] image 1457,386,18,18
+~e56 link 515,414,960,36 "Daily"
+~e57 heading 515,422,35,19 "Daily"
+~e58 [pixels] image 1457,422,18,18
+~e59 link 515,450,960,36 "Radar"
+~e60 heading 515,458,43,19 "Radar"
+~e61 [pixels] image 1457,458,18,18
+~e62 link 515,486,960,36 "Monthly"
+~e63 heading 515,494,63,19 "Monthly"
+~e64 [pixels] image 1457,494,18,18
+~e65 link 515,522,960,36 "Air Quality"
+~e66 heading 515,530,79,19 "Air Quality"
+~e67 [pixels] image 1457,530,18,18
+~e68 heading 515,582,960,20 "Around the Globe"
+~e69 paragraph 515,582,960,15 "Around the Globe"
+~e70 link 515,602,960,36 "Hurricane"
+~e71 heading 515,610,75,19 "Hurricane"
+~e72 [pixels] image 1457,610,18,18
+~e73 link 515,638,960,36 "Radar & Maps"
+~e74 heading 515,646,97,19 "Radar & Maps"
+~e75 [pixels] image 1457,646,18,18
+~e76 link 515,674,960,36 "News"
+~e77 heading 515,682,39,19 "News"
+~e78 [pixels] image 1457,682,18,18
+~e79 link 515,710,960,36 "Video"
+~e80 heading 515,718,39,19 "Video"
+~e81 [pixels] image 1457,718,18,18
+~e82 text 681,780,615,15 "© 2026 AccuWeather, Inc. ""AccuWeather"" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved."
+~e83 link 834,802,71,16 "Terms of Use"
+~e84 text 905,802,7,16 "|"
+~e85 link 912,802,75,16 "Privacy Policy"
+~e86 text 987,802,7,16 "|"
+~e87 link 994,802,73,16 "Cookie Policy"
+~e88 text 1067,802,7,16 "|"
+~e89 link 1073,802,71,16 "Data Sources"

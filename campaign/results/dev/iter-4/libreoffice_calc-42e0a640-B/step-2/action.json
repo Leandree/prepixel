@@ -1,0 +1,1 @@
+{"action": "click", "target": "e51", "memo": "Add(+) click #2; still 'Sheet 1 of 1' so first click didn't register. After Sheet2 exists: A1='Total Revenue', B1='Total Expenses', A2='=SUM(Sheet1.A2:A20)', B2='=SUM(Sheet1.B2:B20)', then ctrl+s + Keep current format. If + fails again, use Sheet menu > Insert Sheet."}

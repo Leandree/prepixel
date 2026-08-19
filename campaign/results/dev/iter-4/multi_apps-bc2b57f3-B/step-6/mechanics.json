@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 179,
+  "rect": [
+   70,
+   166,
+   1779,
+   868
+  ],
+  "doc": "calc",
+  "doc_role": "document-text",
+  "atspi_records_replaced": 612,
+  "uno_records": 202,
+  "url": "file:///home/user/Desktop/workbook-with-sample-database.xlsx"
+ },
+ "history_views": 3,
+ "history_views_dropped": 2,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.click"
+ },
+ "rung": 1,
+ "rung1_method": "Action.click",
+ "settle_ms": 12887,
+ "settle_captures": 1,
+ "guard_ms": 94
+}

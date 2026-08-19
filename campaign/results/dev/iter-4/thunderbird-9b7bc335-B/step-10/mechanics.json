@@ -1,0 +1,30 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 6,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  648,
+  697
+ ],
+ "settle_ms": 4873,
+ "settle_captures": 3,
+ "guard_ms": 28
+}

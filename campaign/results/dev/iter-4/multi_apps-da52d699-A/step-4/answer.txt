@@ -1,0 +1,5 @@
+Data confirmed from the spreadsheet: "Out of the Silent Planet" has the lowest words/day (47840 ÷ 36 = 1328.9). Now opening the docx.
+
+```json
+{"action": "import pyautogui; pyautogui.doubleClick(1852, 767)", "memo": "ANSWER='Out of the Silent Planet' (1328.9 wpd, lowest; next Silence 1984). Just double-clicked book_list_result.docx on desktop -> wait for LibreOffice Writer to load, then click in the document body, type the title, Ctrl+S, and choose 'Use Word 2007-365!' to keep .docx format."}
+```

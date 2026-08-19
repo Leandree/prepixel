@@ -1,0 +1,3 @@
+```json
+{"action":"wait","memo":"alt+F11 pressed but no dialog visible in tree yet. Waiting for Basic Macros dialog. If it appears: click Edit to open Basic IDE, then ctrl+a in code pane and type macro looping oDoc.DrawPages+MasterPages, all shapes, if InStr(sh.String,\"<number>\")>0 or sh.supportsService(\"com.sun.star.presentation.SlideNumberShape\") then sh.CharColor=RGB(255,0,0). Then F5, then ctrl+s (Keep format)."}
+```

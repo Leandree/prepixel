@@ -1,0 +1,47 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 574,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 54,
+  "cdp_records": 53,
+  "offscreen": 0,
+  "url": "https://www.accuweather.com/en/gb/manchester/329260/monthly-weather/329260",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "title-partial",
+  "tab": "404 Error Page Not Found | AccuWeather - Memory usage - 90.0 MB",
+  "picked_title": "404 Error Page Not Found | AccuWeather"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 8,
+ "memo_in": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  956,
+  90
+ ],
+ "settle_ms": 4964,
+ "settle_captures": 3,
+ "guard_ms": 24
+}

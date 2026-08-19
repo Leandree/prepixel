@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "Dismissed 'Convert to RGB Working Space?' dialog via Keep (non-destructive). Next: click Filters menu (475, 76) > Light and Shadow > Vignette."}

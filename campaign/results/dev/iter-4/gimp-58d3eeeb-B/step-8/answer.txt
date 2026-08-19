@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"clear && ls -l /tmp/a.bin; file -b /tmp/a.bin; exiftool -a -G1 heron.jpeg | tail -24\n","memo":"Step8: ran exiftool tail (looking for Comment/UserComment holding audio or a transcript) + size/type of carved /tmp/a.bin. NEXT: crop e13 to read it. Reminder: I cannot hear audio - I need a TEXT transcript embedded somewhere; if only raw audio exists and no ASR tool, task may not be completable and I should report that rather than invent a translation."}
+```

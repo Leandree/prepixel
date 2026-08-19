@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e109","memo":"Applied Font Color (last color = Red) to selected shape 3 <number> on slide 1. NEXT: ctrl+s, then Enter to Keep current format (pptx), then done."}
+```

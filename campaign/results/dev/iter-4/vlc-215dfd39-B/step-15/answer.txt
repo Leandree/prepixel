@@ -1,0 +1,1 @@
+{"action":"done","memo":"Set qt-bgcone=0 in ~/.config/vlc/vlcrc via terminal sed (with append fallback). Note: terminal output was not readable through the accessibility structure, so the write was not visually verified. VLC's Advanced Preferences dialog was left open but never saved, so it cannot overwrite the file."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1822, 1034); pyautogui.sleep(4)", "memo": "Set #enable-force-dark to Disabled and clicked Relaunch at (1822,1034). Next: wait for Chrome to restart, then verify chrome://flags/#enable-force-dark shows Disabled (not Default/Enabled). Chrome UI itself is already light; Linux has no Light/Dark selector in chrome://settings/appearance."}

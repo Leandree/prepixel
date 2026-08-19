@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e214","memo":"Dota 2 Steam store page loaded; clicked 'Reject All' on cookie banner. Next: scroll down to 'Downloadable Content for this game' section and click 'Add all DLC to Cart'."}
+```

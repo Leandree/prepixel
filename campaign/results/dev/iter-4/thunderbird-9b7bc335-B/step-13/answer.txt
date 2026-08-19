@@ -1,0 +1,1 @@
+{"action":"set_value","target":"e116","value":"anonym-x2024@gmail.com","memo":"Set forward address entry e116 := anonym-x2024@gmail.com. Next: verify filter name e94 non-empty (typed 'Forward all to gmail' at step 8) and action row shows Forward Message to + address, then click OK (e120 @1343,849)."}

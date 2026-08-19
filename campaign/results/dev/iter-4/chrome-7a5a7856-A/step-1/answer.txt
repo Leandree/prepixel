@@ -1,0 +1,5 @@
+I can see Chrome with two tabs — the active one is `about:blank`, and another tab holds an actual page ("Rotary Embeddings: A R..."). Since a blank page isn't something to bookmark, the real target is the content tab. Let me switch to it first.
+
+```json
+{"action": "import pyautogui; pyautogui.click(215, 47)", "memo": "Task: bookmark page to BOOKMARKS BAR. Active tab was about:blank; clicked the 'Rotary Embeddings' tab (real content page) to make it active. Next: verify it's active + loaded, then Ctrl+D and ensure folder dropdown = 'Bookmarks bar' before clicking Done."}
+```

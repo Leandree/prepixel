@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1487, 297); time.sleep(3)", "memo": "Clicked 'Find Flights' with JFK->ORD, One Way, Aug 21 (tomorrow; system date Aug 20), 1 passenger. Next: WAIT for the search results page to load, then confirm flight list is shown and mark DONE."}

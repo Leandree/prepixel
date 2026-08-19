@@ -1,0 +1,5 @@
+The config now reads `4073:play-and-exit=0` (uncommented), so VLC will no longer quit when playback finishes.
+
+```json
+{"action": "DONE", "memo": "Verified ~/.config/vlc/vlcrc line 4073 is 'play-and-exit=0' (uncommented). Task complete; did not re-save VLC prefs to avoid re-commenting."}
+```

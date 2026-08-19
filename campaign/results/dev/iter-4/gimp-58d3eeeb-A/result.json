@@ -1,0 +1,35 @@
+{
+ "task_id": "58d3eeeb-e9d0-499f-962e-fd0db2a744d8",
+ "domain": "gimp",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "5d0535177d9036c7790501e816131a0a04df8bda",
+ "vm_image": "/home/leandre/dev/OSWorld/docker_vm_data/Ubuntu-uno.qcow2",
+ "success": true,
+ "score_raw": 1,
+ "steps": 1,
+ "termination": "FAIL",
+ "wall_clock_s": 41.7,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 6,
+  "cache_creation_input_tokens": 5187,
+  "cache_read_input_tokens": 4837,
+  "output_tokens": 923,
+  "cost_usd": 0.077394,
+  "attempts": 1,
+  "steps_with_usage": 1,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "FAIL"
+ ]
+}

@@ -1,0 +1,1 @@
+{"action":"set_value","target":"e187","value":"ORD","memo":"Origin=JFK. Typed ORD into Destination field (e187); next pick 'ORD Chicago-O'Hare, IL' from predictive list, then Trip Type=One Way, date Aug 20 2026, Find Flights."}

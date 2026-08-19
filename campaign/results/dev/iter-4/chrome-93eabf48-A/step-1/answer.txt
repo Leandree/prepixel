@@ -1,0 +1,5 @@
+Desktop is idle with no Chrome window. I'll launch Chrome from the dock.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 65)", "memo": "Task: disable Chrome dark mode. Step1: clicked Chrome dock icon to launch. Next: wait for window, then open chrome://settings/appearance and set Mode=Light."}
+```

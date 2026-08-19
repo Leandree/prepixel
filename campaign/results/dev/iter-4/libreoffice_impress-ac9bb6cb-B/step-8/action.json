@@ -1,0 +1,1 @@
+{"action": "key", "keys": "escape", "memo": "Closed Tools menu; shape 3 (<number>) on slide 1 should still be selected. NEXT: click e120 (Font Color dropdown arrow in sidebar Character panel) -> pick Red (FF0000). Then consider View>Master Slide to color the master's slide-number placeholder red too, since each of the 15 slides has its own <number> shape."}

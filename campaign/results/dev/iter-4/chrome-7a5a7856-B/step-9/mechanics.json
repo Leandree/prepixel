@@ -1,0 +1,39 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 563,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 83,
+  "cdp_records": 144,
+  "offscreen": 60,
+  "url": "https://jalammar.github.io/illustrated-transformer/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 28756,
+  "picked_by": "title-partial",
+  "tab": "The Illustrated Transformer \u2013 Jay Alammar \u2013 Visualizing machine learning one concept at a time. - Memory usage - 168 MB",
+  "picked_title": "The Illustrated Transformer \u2013 Jay Alammar \u2013 Visualizing machine learning one concept at a time."
+ },
+ "cdp_offscreen_skipped": 378,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 5,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 4648,
+ "settle_captures": 2,
+ "guard_ms": 34
+}

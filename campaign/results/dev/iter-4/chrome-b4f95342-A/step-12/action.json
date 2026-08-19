@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(244, 203)", "memo": "Step12: List layout (cards+map) shows only 'ENTER DATES' badges, no next-available info. Clicked grid/table layout icon at (244,203) to load the availability table, which should expose 'Next Available' dates per site for Diamond. Next: read the table (may need to scroll down slightly)."}

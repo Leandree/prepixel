@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e117","memo":"Typing went into CHROME, not Calc (uno still 2x4, only rows 1-2). Just clicked LibreOffice Calc dock icon to focus the Calc window. Next: confirm Calc is frontmost/focused, then click uno cell A2 and retype the 3 rows with a LEADING newline (tab-separated, ending newline)."}
+```

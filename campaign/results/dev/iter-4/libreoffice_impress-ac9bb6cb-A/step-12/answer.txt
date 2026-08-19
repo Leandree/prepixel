@@ -1,0 +1,3 @@
+Confirmed: `red=19` and every red shape is a `presentation.SlideNumberShape [<number>]` — no title/outliner shapes were affected, and `Fix2` already called `oDoc.store()`. Dismissing the dialog.
+
+{"action": "import pyautogui, time; pyautogui.click(995, 761); time.sleep(1)", "memo": "VERIFIED: Chk -> red=19, ALL entries are presentation.SlideNumberShape [<number>] (drawpages k=0 + masters k=1). No title/outliner shapes red. Fix2 already ran oDoc.store() successfully (MsgBox appeared after store, no format dialog). Dialog dismissed. Task complete -> answer DONE next step."}

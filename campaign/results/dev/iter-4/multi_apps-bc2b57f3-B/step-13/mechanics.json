@@ -1,0 +1,27 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": false,
+  "ms": 105,
+  "rect": [
+   70,
+   166,
+   1779,
+   868
+  ],
+  "reason": "unsupported document: com.sun.star.comp.basic.BasicIDE"
+ },
+ "history_views": 0,
+ "history_views_dropped": 12,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 23563,
+ "settle_captures": 1,
+ "guard_ms": 0
+}

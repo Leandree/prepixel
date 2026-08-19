@@ -1,0 +1,3 @@
+The Vignette filter dialog is open — title bar reads "Vignette" with all its settings (Vignette shape, Color, Radius, Softness, Gamma, etc.) and the on-canvas ellipse controls active.
+
+{"action": "DONE"}

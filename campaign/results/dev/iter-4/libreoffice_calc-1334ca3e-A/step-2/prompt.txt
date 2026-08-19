@@ -1,0 +1,31 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: The cells are so big that I can not click on the cell I want, zoom out a little bit.
+
+STEP 2 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. WAIT
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Calc window 'Zoom_Out_Oversized_Cells.xlsx' open but content area blank/loading. Goal: zoom out (reduce zoom %). Plan once UI renders: use View > Zoom dialog or the zoom slider/percentage at bottom-right of status bar to set a smaller zoom (e.g. 100% -> smaller), then confirm cells appear smaller.
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter4/libreoffice_calc-1334ca3e-A/_pixels/step-2/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter4/libreoffice_calc-1334ca3e-A/_pixels/step-1/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

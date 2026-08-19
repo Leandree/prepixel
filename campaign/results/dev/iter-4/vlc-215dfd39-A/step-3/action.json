@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(637, 898)", "memo": "In Simple Preferences, no cone checkbox in Simple view. Switched to 'All' settings. Next: expand Interface > Main interfaces > Qt in left tree, uncheck 'Display background cone or art' (qt-bgcone), then Save."}

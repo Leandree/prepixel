@@ -1,0 +1,1 @@
+{"action": "type", "text": "gsettings get org.gnome.shell favorite-apps\n", "memo": "Terminal open. Just ran 'gsettings get org.gnome.shell favorite-apps'. Next: read terminal output to see the list (expect vim.desktop among thunderbird/chrome/terminal), then run gsettings set with vim entry removed, then verify dock no longer shows Vim."}

@@ -1,0 +1,5 @@
+The welcome modal and Chrome popup are gone. Now dismissing the cookie banner.
+
+```json
+{"action": "import pyautogui; pyautogui.click(690, 1022)", "memo": "Delta.com/fr/en loaded. Modals closed; step3 clicked 'Accept All' cookies (690,1022). Next: click From field 'NTE' (~486,297), type JFK, pick New York-Kennedy; then To (~636,297) type ORD pick Chicago O'Hare; trip type Round Trip dropdown at ~851,297 -> One Way; date Aug 21 2026 (clock says Aug 20); then Find Flights (1487,297)."}
+```

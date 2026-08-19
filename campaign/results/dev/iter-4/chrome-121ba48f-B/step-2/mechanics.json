@@ -1,0 +1,49 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 558,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 165,
+  "cdp_records": 97,
+  "offscreen": 60,
+  "url": "https://www.dota2.com/home",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 4732,
+  "picked_by": "visible",
+  "tab": "Popular New Releases",
+  "picked_title": "Dota 2"
+ },
+ "cdp_offscreen_skipped": 811,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 1,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  956,
+  90
+ ],
+ "settle_ms": 6011,
+ "settle_captures": 2,
+ "guard_ms": 37
+}

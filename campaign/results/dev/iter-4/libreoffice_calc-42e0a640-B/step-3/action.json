@@ -1,0 +1,1 @@
+{"action": "click", "target": "e53", "memo": "Sheet2 exists & selected, cursor A1. Clicked Sheet2 tab to give grid keyboard focus. NEXT: type \"Total Revenue\\tTotal Expenses\\n=SUM(Sheet1.A2:A20)\\t=SUM(Sheet1.B2:B20)\\n\" (if \\t/\\n unsupported, do per-cell type + tab/enter keys). Then ctrl+s -> Keep current format."}

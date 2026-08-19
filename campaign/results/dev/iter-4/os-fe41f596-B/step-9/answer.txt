@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"Return","memo":"Ran printf to set terminal title to BAT=<gsettings value>. Next step: read e3/e9 title text - expect 'BAT=true'. If so, the setting is applied (VM has no battery so no % appears in top bar) -> done. If title unchanged/shows false, re-run the gsettings set command."}
+```

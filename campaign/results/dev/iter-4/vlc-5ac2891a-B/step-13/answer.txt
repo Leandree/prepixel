@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e57","memo":"Right pane still showed 'Advanced settings' after first click on Playlist node (e57); clicked it again. NEXT: verify right pane shows Playlist page, uncheck 'Play and exit' checkbox (toggle to false), then click Save (1171,891). Only ~2 steps left — prioritize toggle then Save."}
+```

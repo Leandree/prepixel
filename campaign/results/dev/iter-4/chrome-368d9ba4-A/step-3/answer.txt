@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.click(370, 249); time.sleep(1); pyautogui.click(1889, 139); time.sleep(1); pyautogui.click(230, 944)", "memo": "Step3: screen UNCHANGED from step2 -> my step2 action never executed, likely the embedded newline in write() broke it. NEVER put '\\n' inside write(); use press('enter'). This step: Block notif, close update bubble, 'Do Not Consent'. Next: ctrl+L, write openweathermap find?q=Manchester,GB, press enter separately."}
+```

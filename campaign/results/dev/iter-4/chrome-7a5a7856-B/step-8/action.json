@@ -1,0 +1,1 @@
+{"action": "click", "target": "e7", "memo": "Both 'Bookmarks bar' AND 'Other bookmarks' show 0 items -> the earlier ctrl+d/Enter did NOT save (Enter may have hit Remove). Now back on the Illustrated Transformer tab. NEXT: press ctrl+d, then CROP the dialog to read the folder dropdown + buttons before pressing anything; ensure folder=Bookmarks bar, then click Done."}

@@ -1,0 +1,20 @@
+I can read the whole sheet through the document model. Word counts (col G), days (col H) and words/day (col I) are already there:
+
+| Book | words/day |
+|---|---|
+| Fire and Blood | 4797.6 |
+| Song of Solomon | 2105.5 |
+| The Lost Symbol | 2305.9 |
+| 2001: A Space Odyssey | 3861.0 |
+| American Gods | 3797.3 |
+| **Out of the Silent Planet** | **1328.9** |
+| The Andromeda Strain | 3259.1 |
+| Brave New World | 4217.5 |
+| Silence | 1984.3 |
+| The Shining | 24767.2 |
+
+Slowest pace = *Out of the Silent Planet*. Opening the docx via File ▸ Open (more reliable than the partly-occluded desktop icon).
+
+```json
+{"action":"key","keys":"ctrl+o","memo":"Answer = 'Out of the Silent Planet' (1328.89 w/day, lowest in col I). Opened File>Open dialog in Calc; next type ~/Desktop/book_list_result.docx and Enter, then type title in Writer and Ctrl+S (keep .docx format)."}
+```

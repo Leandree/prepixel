@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"enter","memo":"Pressed enter on the item after 'Spacing: 1.5' (likely 'Spacing: 2'). Document should now be double-spaced but is UNSAVED (file on disk still has 1.5 from the ctrl+s at step 11). If any step remains, press ctrl+s and confirm 'Use Word 2007-365!' to persist."}
+```

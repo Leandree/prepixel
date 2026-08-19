@@ -1,0 +1,115 @@
+e1 push-button 1821,27,32,40 "Minimise"
+e2 push-button 1853,27,32,40 "Restore"
+e3 push-button 1885,27,35,40 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Settings – Appearance - Memory usage - 53.9 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,88,24 "Chrome"
+e12 entry 291,78,1358,24 "Address and search bar"
+e13 push-button 1657,78,24,24 "Bookmark this tab"
+e14 push-button 1702,73,34,34 "You"
+e15 push-button 1741,73,179,34 "Relaunch to update"
+e16 toggle-button 0,0,99,27 "Activities" state=checked:false
+e17 menu 99,0,162,27 "Google Chrome"
+e18 menu 906,0,178,27 "Aug 20 00‎∶31"
+e19 menu 1814,0,106,27 "System"
+e20 push-button 0,840,70,8
+e21 push-button 62,33,8,815
+e22 push-button 0,33,70,64 "Google Chrome"
+e23 push-button 0,101,70,64 "Thunderbird Mail"
+e24 push-button 0,169,70,64 "Visual Studio Code"
+e25 push-button 0,237,70,64 "VLC media player"
+e26 push-button 0,305,70,64 "LibreOffice Writer"
+e27 push-button 0,373,70,64 "LibreOffice Calc"
+e28 push-button 0,441,70,64 "LibreOffice Impress"
+e29 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e30 push-button 0,577,70,64 "Files"
+e31 push-button 0,645,70,64 "Ubuntu Software"
+e32 push-button 0,713,70,64 "Help"
+e33 push-button 0,784,70,64 "Trash"
+e34 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e35 [pixels] image 91,130,24,24
+e36 presentation 91,130,24,24 [occluded]
+e37 heading 137,129,183,26 "Settings" [occluded]
+e38 none 659,132,20,20 [occluded]
+e39 push-button 655,128,28,28 "Search settings" [occluded]
+e40 label 683,131,652,22 "Search settings" [occluded]
+e41 entry 683,131,652,22 "Search settings" [occluded]
+e42 banner 70,114,1850,56
+e43 navigation 70,178,250,634 [occluded]
+e44 menu 70,178,250,634 [occluded]
+e45 menu-item 71,178,247,40 "You and Google" [occluded]
+e46 [pixels] image 94,188,20,20
+e47 menu-item 71,218,247,40 "Autofill and passwords" [occluded]
+e48 [pixels] image 94,228,20,20
+e49 menu-item 71,258,247,40 "Privacy and security" [occluded]
+e50 [pixels] image 94,268,20,20
+e51 menu-item 71,298,247,40 "Performance" [occluded]
+e52 [pixels] image 94,308,20,20
+e53 menu-item 71,338,247,40 "Appearance" [occluded]
+e54 [pixels] image 94,348,20,20
+e55 menu-item 71,378,247,40 "Search engine" [occluded]
+e56 [pixels] image 94,388,20,20
+e57 menu-item 71,418,247,40 "Default browser" [occluded]
+e58 [pixels] image 94,428,20,20
+e59 menu-item 71,458,247,40 "On start-up" [occluded]
+e60 [pixels] image 94,468,20,20
+e61 menu-item 71,515,247,40 "Languages" [occluded]
+e62 [pixels] image 94,525,20,20
+e63 menu-item 71,555,247,40 "Downloads" [occluded]
+e64 [pixels] image 94,565,20,20
+e65 menu-item 71,595,247,40 "Accessibility" [occluded]
+e66 [pixels] image 94,605,20,20
+e67 menu-item 71,635,247,40 "System" [occluded]
+e68 [pixels] image 94,645,20,20
+e69 menu-item 71,675,247,40 "Reset settings" [occluded]
+e70 [pixels] image 94,685,20,20
+e71 menu-item 71,732,247,40 "Opens in a new tab" [occluded]
+e72 [pixels] image 94,742,20,20
+e73 text 134,744,69,16 "Extensions"
+e74 menu-item 71,772,247,40 "About Chrome" [occluded]
+e75 [pixels] image 94,782,20,20
+e76 heading 655,191,78,32 "Appearance" [occluded]
+e77 text 675,249,40,15 "Theme"
+e78 text 675,269,42,15 "Classic"
+e79 text 675,259,101,15 "Opens in new tab"
+e80 none 1080,257,20,20 [occluded]
+e81 link 1074,251,32,32 [occluded]
+e82 push-button 1135,249,84,36 "Use GTK" [occluded]
+e83 push-button 1239,249,76,36 "Use QT" [occluded]
+e84 text 675,316,136,15 "Customise your toolbar"
+e85 text 675,316,101,15 "Opens in new tab"
+e86 none 1297,314,20,20 [occluded]
+e87 link 1291,308,32,32 [occluded]
+e88 text 675,365,33,15 "Mode"
+~e89 combo-box 1115,355,200,36 value="Light" [occluded]
+e90 text 675,412,112,15 "Show Home button"
+e91 text 675,432,51,15 "Disabled"
+e92 push-button 1289,422,26,16 "Show Home button" [occluded]
+e93 text 675,479,123,15 "Show bookmarks bar"
+e94 push-button 1289,479,26,16 "Show bookmarks bar" [occluded]
+e95 text 675,528,204,15 "Show tab groups in bookmarks bar"
+e96 push-button 1289,528,26,16 "Show tab groups in bookmarks bar" state=pressed [occluded]
+e97 text 675,577,453,15 "Automatically pin new tab groups created on any device to the bookmarks bar"
+e98 push-button 1289,577,26,16 "Automatically pin new tab groups created on any device to the bookmarks bar" state=pressed [occluded]
+e99 text 675,626,111,15 "Side panel position"
+e100 combo-box 1115,616,200,36 "Side panel position" value="Show on right" [occluded]
+e101 text 675,675,135,15 "Tab hover preview card"
+e102 text 715,723,149,15 "Show tab preview images"
+e103 push-button 1289,723,26,16 "Show tab preview images" state=pressed [occluded]
+e104 text 715,772,145,15 "Show tab memory usage"
+e105 push-button 1289,772,26,16 "Show tab memory usage" state=pressed [occluded]
+e106 text 675,821,189,15 "Use system title bar and borders"
+e107 push-button 1289,821,26,16 "Use system title bar and borders" [occluded]
+e108 text 675,870,53,15 "Font size"
+e109 combo-box 1115,860,200,36 "Font size" value="Medium (Recommended)" [occluded]
+e110 text 675,919,96,15 "Customise fonts"
+e111 none 1297,917,20,20 [occluded]
+e112 link 1291,911,32,32 [occluded]
+e113 text 675,967,65,15 "Page zoom"
+e114 combo-box 1115,957,200,36 value="100%" [occluded]
+e115 main 655,170,680,829 [occluded]

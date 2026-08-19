@@ -1,0 +1,5 @@
+I overshot into the footer. Scrolling back up to find the campsite list table.
+
+```json
+{"action": "import pyautogui; pyautogui.scroll(300, x=960, y=500)", "memo": "Step10: Scrolled -500 overshot to footer/nearby-campgrounds. Now scrolling up 300 to locate Campsite List table with 'Next Available' column on Diamond page (recreation.gov/camping/campgrounds/233869)."}
+```

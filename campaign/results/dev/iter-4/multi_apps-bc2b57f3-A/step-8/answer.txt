@@ -1,0 +1,5 @@
+The macro succeeded — the message box shows the final sheet order exactly as required: `ReadMe | Raw_data | Beans | Millet | Sorghum | Mkt Gotheye | Mkt Mangaize | Mkt Ouallam | Mkt Tera | Millet spatial integration`, and `oDoc.store()` ran before it. Dismissing the dialog.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(994, 599); time.sleep(1)", "memo": "Macro OK: sheet order now ReadMe|Raw_data|Beans|Millet|Sorghum|Mkt Gotheye|Mkt Mangaize|Mkt Ouallam|Mkt Tera|Millet spatial integration, doc stored (xlsx, no Keep-format prompt appeared). Next: switch to workbook-with-sample-database.xlsx window (Window menu or taskbar) to visually confirm tab order, then DONE."}
+```

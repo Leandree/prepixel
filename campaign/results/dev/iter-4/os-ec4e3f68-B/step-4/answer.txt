@@ -1,0 +1,2 @@
+
+{"action":"done","memo":"Verified: dock now lists Thunderbird, Google Chrome, Terminal, Trash — Vim entry removed from org.gnome.shell favorite-apps."}

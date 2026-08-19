@@ -1,0 +1,5 @@
+Reference `[14]` in the list looks correct (Arial, matching entries). Now fixing the in-text citation formatting to match the body text.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1019, 763); time.sleep(0.3); pyautogui.keyDown('shift'); pyautogui.click(1060, 763); pyautogui.keyUp('shift'); time.sleep(0.5); pyautogui.hotkey('ctrl','m'); time.sleep(0.5); pyautogui.tripleClick(445, 147); time.sleep(0.3); pyautogui.write('Times New Roman'); pyautogui.press('enter'); time.sleep(0.5); pyautogui.tripleClick(620, 147); time.sleep(0.3); pyautogui.write('12'); pyautogui.press('enter')", "memo": "Selected in-text '[14]' (after 'Pennington', p2 para4), applied Ctrl+M + Times New Roman 12pt to match body. NEXT: screenshot check that [14] is not bold/highlighted and matches body; also check doc end (Ctrl+End) for stray highlighted empty paragraph after ref [14]. Then Ctrl+S + Enter (Keep current format, docx)."}
+```

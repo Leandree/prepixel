@@ -1,0 +1,48 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 571,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 94,
+  "cdp_records": 128,
+  "offscreen": 47,
+  "url": "https://www.accuweather.com/en/search-locations?query=Manchester",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 1803,
+  "picked_by": "title-partial",
+  "tab": "Find Your Location's Weather Forecast | AccuWeather - Memory usage - 128 MB",
+  "picked_title": "Find Your Location's Weather Forecast | AccuWeather"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 5,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  956,
+  90
+ ],
+ "settle_ms": 4681,
+ "settle_captures": 3,
+ "guard_ms": 22
+}

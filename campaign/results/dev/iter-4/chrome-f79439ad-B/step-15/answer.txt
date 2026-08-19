@@ -1,0 +1,1 @@
+{"action":"click","target":"e92","memo":"Adults=2 confirmed (e184). Clicked Search to run one-way DUB→VIE 10 Sept for 2 adults."}

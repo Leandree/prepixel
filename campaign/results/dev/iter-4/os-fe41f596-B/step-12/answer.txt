@@ -1,0 +1,1 @@
+{"action":"crop","target":"e11","memo":"Cropping terminal e11 to read output of 'gsettings get ...show-battery-percentage'. If it prints 'true', the setting is applied -> answer done. If 'false', re-run the set command with correct quoting."}

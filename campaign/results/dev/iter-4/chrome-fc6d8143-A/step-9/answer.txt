@@ -1,0 +1,5 @@
+JFK → ORD are both set. Now switching trip type to One Way.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(851, 297); time.sleep(1.5)", "memo": "JFK->ORD set. Opened trip-type dropdown at (851,297). Next: click 'One Way' option in the list, then date field (1135,297) -> pick Aug 21 2026 (tomorrow; clock=Aug 20 2026), then Find Flights (1487,297)."}
+```

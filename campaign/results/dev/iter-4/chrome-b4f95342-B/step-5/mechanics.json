@@ -1,0 +1,40 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 580,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 256,
+  "cdp_records": 473,
+  "offscreen": 60,
+  "url": "https://www.recreation.gov/camping/campgrounds/233869",
+  "scroll": [
+   0,
+   697
+  ],
+  "scroll_height": 5299,
+  "picked_by": "visible",
+  "tab": "Campsite List",
+  "picked_title": "Diamond, Uinta-Wasatch-Cache National Forest - Recreation.gov"
+ },
+ "cdp_offscreen_skipped": 2597,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 1,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 4873,
+ "settle_captures": 1,
+ "guard_ms": 324
+}

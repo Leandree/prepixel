@@ -1,0 +1,43 @@
+{
+ "task_id": "a746add2-cab0-4740-ac36-c3769d9bfb46",
+ "domain": "gimp",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "5d0535177d9036c7790501e816131a0a04df8bda",
+ "vm_image": "/home/leandre/dev/OSWorld/docker_vm_data/Ubuntu-uno.qcow2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 9,
+ "termination": "DONE",
+ "wall_clock_s": 207.2,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 40,
+  "cache_creation_input_tokens": 44741,
+  "cache_read_input_tokens": 72633,
+  "output_tokens": 3876,
+  "cost_usd": 0.580827,
+  "attempts": 9,
+  "steps_with_usage": 9,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(34, 541)",
+  "import pyautogui; pyautogui.click(1106, 702)",
+  "import pyautogui; pyautogui.click(1106, 702)",
+  "import pyautogui; pyautogui.click(475, 76)",
+  "import pyautogui; pyautogui.click(535, 267)",
+  "import pyautogui, time; pyautogui.moveTo(600, 267); time.sleep(0.6); pyautogui.moveTo(725, 267); time.sleep(1.2)",
+  "import pyautogui, time; pyautogui.press('right'); time.sleep(1.0)",
+  "import pyautogui, time; pyautogui.moveTo(850, 268); time.sleep(0.4); pyautogui.moveTo(850, 480); time.sleep(0.4); pyautogui.click(805, 480); time.sleep(1.5)",
+  "DONE"
+ ]
+}

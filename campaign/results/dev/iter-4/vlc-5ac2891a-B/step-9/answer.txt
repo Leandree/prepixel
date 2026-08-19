@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"playlist","memo":"Typed 'playlist' as Qt tree type-ahead while the prefs tree had focus (was on 'Advanced'). EXPECT: top-level 'Playlist' node selected/scrolled into view, right pane = Playlist settings. NEXT: uncheck 'Play and exit' checkbox on that page, then click Save (e82). If type-ahead failed, scroll the tree down to reach 'Playlist'."}
+```

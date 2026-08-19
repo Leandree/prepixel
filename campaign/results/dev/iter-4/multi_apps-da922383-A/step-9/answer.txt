@@ -1,0 +1,5 @@
+Print dialog is on tab 2 with "Save as PDF" selected. I'll click Save and fill the filename in the GTK dialog.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1566, 898); time.sleep(3); pyautogui.click(1020, 389); time.sleep(0.5); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('/home/user/Documents/Blog/Thinking about High-Quality Human Data.pdf', interval=0.02); time.sleep(0.5)", "memo": "Tab1 saved OK. Tab2 'Thinking about High-Quality Human Data': clicked print Save, typed full path /home/user/Documents/Blog/Thinking about High-Quality Human Data.pdf into GTK Name field. Next: verify field, click Save btn (1375,389). Only 2 tabs exist -> then DONE."}
+```

@@ -1,0 +1,5 @@
+Passenger dropdown is open with Adults = 1. Depart is set to Thu, 10 Sept. I'll increment adults to 2.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1271, 599); time.sleep(1.5)", "memo": "Ryanair one-way Dublin->Vienna, Thu 10 Sept 2026. Just clicked '+' on Adults (should now be 2). Next: verify shows '2 Adults', click Done (1263, 796), then click Search (1426, 383)."}
+```

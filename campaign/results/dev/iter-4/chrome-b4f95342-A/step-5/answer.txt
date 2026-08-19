@@ -1,0 +1,5 @@
+The autocomplete dropdown shows an exact match: **Diamond** (Uinta-Wasatch-Cache National Forest, Near Spanish Fork, Utah). I'll click that suggestion to open its detail page.
+
+```json
+{"action": "import pyautogui; pyautogui.click(531, 538)", "memo": "Step5: clicked autocomplete suggestion 'Diamond' (Uinta-Wasatch-Cache NF, Spanish Fork, Utah) at (531,538). Next: wait for the campground detail page to load, then locate and read the 'Next Available' dates (usually near the availability/booking section)."}
+```

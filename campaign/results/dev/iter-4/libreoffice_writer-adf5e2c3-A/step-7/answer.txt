@@ -1,0 +1,5 @@
+The step-6 font change landed on the empty trailing paragraphs (the orange selection block), not on the `[14]` entry — it's still Times New Roman. Selecting the reference paragraph itself now.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(950, 702, clicks=4, interval=0.12); time.sleep(0.8); pyautogui.tripleClick(445, 147); time.sleep(0.3); pyautogui.write('Arial'); pyautogui.press('enter')", "memo": "Quad-clicked [14] ref paragraph (p4, y=684-720) to select whole para, applied Arial. NEXT: verify [14] now sans-serif like [13]. Then check body [14] on p2 (~y=435) for gray highlight inherited from '<add here>' -> select it and set highlight None if present. Finally Ctrl+S + Enter (Keep current format)."}
+```

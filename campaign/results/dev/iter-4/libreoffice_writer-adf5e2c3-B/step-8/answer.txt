@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"shift+tab","memo":"Focus was a toggle (likely search combo's dropdown arrow). Shift+Tab should return to the Search field containing '<add here>'. NEW PLAN (avoids blind Replace field): next step press Enter in search field = Find Next (selects the marker in doc), then Escape to close dialog, then type '[14]' to overwrite the selection, then ctrl+s and confirm 'Use Word 2007-365!'. Verify act-guard focus is a text/combo before pressing Enter."}
+```

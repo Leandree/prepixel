@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(650, 316); pyautogui.keyDown('shift'); pyautogui.click(701, 445); pyautogui.keyUp('shift')"}

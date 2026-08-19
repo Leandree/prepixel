@@ -1,0 +1,5 @@
+Verified across screenshots: the filter "Forward to gmail" is created on **anonym-x2024@outlook.com** with "Getting New Mail" checked, **Match all messages**, and action **Forward Message to → anonym-x2024@gmail.com**. It shows as Enabled in the filter list, the dialog was closed (flushing `msgFilterRules.dat`), and the online account was never touched.
+
+```json
+{"action": "DONE"}
+```

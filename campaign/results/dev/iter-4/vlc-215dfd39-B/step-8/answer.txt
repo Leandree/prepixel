@@ -1,0 +1,1 @@
+{"action":"scroll","direction":"down","memo":"Qt (e59) selected in tree but right pane still listed stale 'Advanced settings' items. Scrolling to refresh/reveal Qt panel; look for checkbox 'Display background cone or art' -> uncheck -> Save (e64)."}

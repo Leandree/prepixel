@@ -1,0 +1,817 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Help me adding "Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028" to my reference list, and add a cross reference (using reference number) in the fourth paragraph where I marked "<add here>".
+
+STEP 12 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click paragraph "34"
+2. key backspace
+3. key enter
+4. set_value paragraph "34" := "Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028"
+5. key ctrl+h
+6. type "<add here>"
+7. key tab
+8. key shift+tab
+9. key enter
+10. key escape
+11. type "[14]"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Typed '[14]' replacing '<add here>' in para 11 (4th body paragraph). Selection was Bold=true, so [14] may be bold — next: select the 4 chars (shift+left x4) or just check; then ctrl+s and press Enter on 'Use Word 2007-365!' dialog.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value.
+`[uno] …` lines are the document MODEL of an active LibreOffice window,
+read through the application's own API; they have no screen position.
+`[uno] cell B7 "1500" formula "=SUM(B2:B6)"` is a spreadsheet cell: the
+value is what the cell shows, the formula (when present) is what it
+contains. `[uno] paragraph 12 list-label "[13]" text "Steinberg…"` is a
+text paragraph: `list-label` is numbering RENDERED by the document (not
+part of the paragraph's text), `text` is the paragraph's literal content.
+`[uno] shape "Title" text "…"` is a shape on the current slide. On a
+`[uno]` element, `click` places the caret or selection there (the
+application scrolls its own view) and `set_value` sets the cell,
+paragraph or shape content directly — in a cell, a leading `=` enters a
+formula, a number enters a numeric value, anything else enters text;
+`toggle`, `scroll_to` and `crop` do not apply to `[uno]` elements:
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "Essay_​Writing_​English_​for_​uni.​docx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​Essay_​Writing_​English_​for_​uni.​docx#"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,180,27 "LibreOffice Writer"
+e9 menu 906,0,178,27 "Aug 20 01‎∶34"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+e29 menu 153,64,49,25 "View"
+e30 menu 202,64,55,25 "Insert"
+e31 menu 257,64,66,25 "Format"
+e32 menu 323,64,56,25 "Styles"
+e33 menu 379,64,53,25 "Table"
+e34 menu 432,64,52,25 "Form"
+e35 menu 484,64,52,25 "Tools"
+e36 menu 536,64,70,25 "Window"
+e37 menu 606,64,47,25 "Help"
+e38 menu 70,64,40,21 "File" value="0.0"
+e39 menu 110,64,43,21 "Edit" value="0.0"
+e40 menu 153,64,50,21 "View" value="0.0"
+e41 menu 203,64,56,21 "Insert" value="0.0"
+e42 menu 259,64,66,21 "Format" value="0.0"
+e43 menu 325,64,56,21 "Styles" value="0.0"
+e44 menu 381,64,53,21 "Table" value="0.0"
+e45 menu 434,64,52,21 "Form" value="0.0"
+e46 menu 486,64,53,21 "Tools" value="0.0"
+e47 menu 539,64,73,21 "Window" value="0.0"
+e48 menu 612,64,48,21 "Help" value="0.0"
+e49 scroll-bar 1849,222,12,812 "Vertical scroll bar" value="21360.0"
+e50 text 70,222,1779,24 "Horizontal Ruler"
+e51 text 1870,144,48,888 "Properties"
+e52 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e53 text 1870,210,44,42 "Properties"
+e54 toggle-button 1874,214,37,35 state=checked:true
+e55 text 1870,252,44,42 "Styles"
+e56 toggle-button 1874,256,37,35 state=checked:false
+e57 text 1870,294,44,42 "Gallery"
+e58 toggle-button 1874,298,37,35 state=checked:false
+e59 text 1870,336,44,42 "Navigator"
+e60 toggle-button 1874,340,37,35 state=checked:false
+e61 text 1870,378,44,42 "Page"
+e62 toggle-button 1874,382,37,35 state=checked:false
+e63 text 1870,420,44,42 "Style Inspector"
+e64 toggle-button 1874,424,37,35 state=checked:false
+e65 text 111,178,1598,26 "Help us make LibreOffice even better!"
+e66 [pixels] icon 73,171,32,32
+e67 push-button 1715,170,117,34 "Get involved"
+e68 push-button 1839,179,16,16
+e69 text 111,218,1632,26 "Your donations support our worldwide community."
+e70 [pixels] icon 73,211,32,32
+e71 push-button 1749,210,83,34 "Donate"
+e72 push-button 1839,219,16,16
+e73 text 70,64,1254,39 "Standard"
+e74 push-button 74,66,44,35 "New" value="0.0"
+e75 push-button 118,66,44,35 "Open" value="0.0"
+e76 push-button 162,66,44,35 "Save" value="0.0"
+e77 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e78 push-button 247,66,33,35 "Print" value="0.0"
+e79 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e80 push-button 321,66,33,35 "Cut" value="0.0"
+e81 push-button 354,66,33,35 "Copy" value="0.0"
+e82 push-button 387,66,44,35 "Paste" value="0.0"
+e83 push-button 439,66,33,35 "Clone" value="0.0"
+e84 push-button 480,66,44,35 "Undo" value="0.0"
+e85 push-button 524,66,44,35 "Redo" value="0.0"
+e86 toggle-button 576,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e87 push-button 609,66,33,35 "Spelling" value="0.0"
+e88 toggle-button 642,66,33,35 "Formatting Marks" value="0.0" state=checked:false
+e89 push-button 683,66,44,35 "Table" value="0.0"
+e90 push-button 727,66,33,35 "Image" value="0.0"
+e91 push-button 760,66,33,35 "Chart" value="0.0"
+e92 push-button 793,66,33,35 "Text Box" value="0.0"
+e93 push-button 834,66,33,35 "Page Break" value="0.0"
+e94 push-button 867,66,44,35 "Field" value="0.0"
+e95 push-button 911,66,44,35 "Symbol" value="0.0"
+e96 toggle-button 963,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e97 push-button 996,66,33,35 "Footnote" value="0.0"
+e98 push-button 1029,66,33,35 "Endnote" value="0.0"
+e99 push-button 1062,66,33,35 "Bookmark" value="0.0"
+e100 push-button 1095,66,33,35 "Cross-reference" value="0.0"
+e101 push-button 1136,66,33,35 "Comment" value="0.0"
+e102 toggle-button 1169,66,33,35 "Track Changes Functions" value="0.0" state=checked:false
+e103 push-button 1210,66,33,35 "Line" value="0.0"
+e104 push-button 1243,66,44,35 "Basic Shapes" value="0.0"
+e105 toggle-button 1287,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e106 text 70,103,1437,39 "Formatting"
+e107 text 74,105,202,34 "Paragraph Style"
+e108 text 74,130,166,34 "normal"
+e109 toggle-button 240,130,36,34 state=checked:false
+e110 push-button 276,105,33,35 "Update" value="0.0"
+e111 push-button 309,105,33,35 "New" value="0.0"
+e112 text 350,105,221,34 "Font Name"
+e113 text 350,130,185,34 "Arial"
+e114 toggle-button 535,130,36,34 state=checked:false
+e115 text 579,105,101,34 "Font Size"
+e116 text 579,130,65,34 "12 pt"
+e117 toggle-button 644,130,36,34 state=checked:false
+e118 toggle-button 688,105,33,35 "Bold" value="1.0" state=checked:true
+e119 toggle-button 721,105,33,35 "Italic" value="0.0" state=checked:false
+e120 push-button 754,105,44,35 "Underline" value="0.0"
+e121 toggle-button 798,105,33,35 "Strikethrough" value="0.0" state=checked:false
+e122 toggle-button 839,105,33,35 "Superscript" value="0.0" state=checked:false
+e123 toggle-button 872,105,33,35 "Subscript" value="0.0" state=checked:false
+e124 push-button 913,105,33,35 "Clear" value="0.0"
+e125 push-button 954,105,44,35 "Font Color" value="0.0"
+e126 push-button 998,105,44,35 "Character Highlighting Color" value="0.0"
+e127 toggle-button 1050,105,33,35 "Left" value="0.0" state=checked:false
+e128 toggle-button 1083,105,33,35 "Center" value="0.0" state=checked:false
+e129 toggle-button 1116,105,33,35 "Right" value="0.0" state=checked:false
+e130 toggle-button 1149,105,33,35 "Justified" value="1.0" state=checked:true
+e131 push-button 1190,105,44,35 "Unordered List" value="0.0"
+e132 push-button 1234,105,44,35 "Ordered List" value="0.0"
+e133 push-button 1278,105,33,35 "No List" value="1.0" state=checked:true
+e134 push-button 1319,105,33,35 "Increase" value="0.0"
+e135 push-button 1352,105,33,35 "Decrease" value="0.0"
+e136 push-button 1393,105,44,35 "Line Spacing" value="0.0"
+e137 push-button 1437,105,33,35 "Increase" value="0.0"
+e138 push-button 1470,105,33,35 "Decrease" value="0.0"
+e139 text 105,1036,228,18 "Page 2 of 4"
+~e140 text 339,1036,346,18 "1,512 words, 10,350 characters"
+e141 text 691,1036,275,18 "Default Page Style"
+e142 text 972,1036,271,18 "English (Australia)"
+e143 text 1876,1036,38,18 "100%"
+e144 [uno] paragraph 1 text "Example essay"
+e145 [uno] paragraph 2 text ""
+e146 [uno] paragraph 3 text "“Chocolate is a healthy food.” Discuss."
+e147 [uno] paragraph 4 text ""
+e148 [uno] paragraph 5 text "Since Spanish explorers brought back chocolate from the new world, chocolate consumption has become a worldwide phenomenon.  At first, chocolate, a derivative of the cacao bean, was consumed as a drink, only later achieving mass popularity in tablet or bar form. However, chocolate’s inherent popular" …(truncated at 300 chars)
+e149 [uno] paragraph 6 text ""
+e150 [uno] paragraph 7 text "Consumption of chocolate is something that many enjoy, and there is evidence[11]  that high carbohydrate foods such as chocolate do have a ‘feel good’ effect. Moreover, Scholey and Owen[12]  in a systematic review of the literature in the field point to several studies, such as Macht and Dettmer (20" …(truncated at 300 chars)
+e151 [uno] paragraph 8 text ""
+e152 [uno] paragraph 9 text "Another possible positive influence of chocolate is upon cardiovascular health.  Chocolate, processed accordingly, can be a provider of significant quantities of heart-friendly flavanols (Hannum, Schmitz, & Keen, 2002) which help in delaying blood clotting and reducing inflammation (Schramm et al., " …(truncated at 300 chars)
+e153 [uno] paragraph 10 text ""
+e154 [uno] paragraph 11 text "The biological makeup of chocolate is also relevant in determining whether chocolate is better viewed as a food or a drug, but the boundaries between indulgence and addictive behaviour are unclear. Chocolate contains some biologically active elements including methylxanthines, and cannabinoid-like u" …(truncated at 300 chars)
+e155 [uno] paragraph 12 text ""
+e156 [uno] paragraph 13 text "A final point to consider in relation to chocolate is the perception that chocolate is linked to obesity. A person is defined as being obese when their Body Mass Index is greater than 30.  The literature on chocolate and obesity has clearly demonstrated that there are no specific correlations betwee" …(truncated at 300 chars)
+e157 [uno] paragraph 14 text ""
+e158 [uno] paragraph 15 text "Obesity and chocolate consumption seemingly have no proven correlations. Yet, in this essay, many chocolate focused arguments have been presented, including the transient effect of chocolate on mood and the fact that it is as likely to create feelings of guilt as of well-being.  Another possible pos" …(truncated at 300 chars)
+e159 [uno] paragraph 16 text ""
+e160 [uno] paragraph 17 text "(Word count: 1087. This is within 10% of the 1000 word limit, which is usually acceptable. Check this with your lecturer if you are in any doubt.)"
+e161 [uno] paragraph 18 text ""
+e162 [uno] paragraph 19 text "References"
+e163 [uno] paragraph 20 text ""
+e164 [uno] paragraph 21 list-label "[1] " text "Abraham, G. E., & Lubran, M. M. (1981). Serum and red cell magnesium levels in patients with premenstrual tension. The American Journal of Clinical Nutrition, 34(11), 2364-2366.  Retrieved from http://ajcn.nutrition.org/content/34/11/2364.short"
+e165 [uno] paragraph 22 list-label "[2] " text "Ariefdjohan, M. W., & Savaiano, D. A. (2005). Chocolate and cardiovascular health: Is it too good to be true? Nutrition Reviews, 63(12), 427-430. doi: 10.1111/j.1753-4887.2005.tb00118.x"
+e166 [uno] paragraph 23 list-label "[3] " text "Beckett, S. T. (2000). The science of chocolate. Cambridge, UK: Royal Society of Chemistry."
+e167 [uno] paragraph 24 list-label "[4] " text "Bruinsma, K., & Taren, D. L. (1999). Chocolate: Food or drug? Journal of the American Dietetic Association, 99(10), 1249-12.  doi: 10.1016/S0002-8223(99)00307-7"
+e168 [uno] paragraph 25 list-label "[5] " text "Hannum, S. M., Schmitz, H. H., & Keen, C. L. (2002). Chocolate: A heart-healthy food? Show me the science! Nutrition Today, 37(3), 103-109.  Retrieved from http://journals.lww.com/nutritiontodayonline/Abstract/2002/05000/Chocolate__A_Heart_healthy_Food__Show_Me_the.4.aspx"
+e169 [uno] paragraph 26 list-label "[6] " text "Lambert, J. P. (2009). Nutrition and health aspects of chocolate. In S. Beckett (Ed.), Industrial chocolate manufacture and use, (4th ed., pp. 623-635). London: Wiley Blackwell. Retrieved from  http://onlinelibrary.wiley.com/doi/10.1002/9781444301588.ch27/pdf"
+e170 [uno] paragraph 27 list-label "[7] " text "Macht, M., & Dettmer, D. (2006). Everyday mood and emotions after eating a chocolate bar or an apple. Appetite, 46(3), 332-336. doi: 10.1016/j.appet.2006.01.014"
+e171 [uno] paragraph 28 list-label "[8] " text "Macht, M., & Mueller, J. (2007). Immediate effects of chocolate on experimentally induced mood states. Appetite, 49(3), 667-674. doi:10.1016/j.appet.2007.05.004"
+e172 [uno] paragraph 29 list-label "[9] " text "Macdiarmid, J. I., & Hetherington, M. M. (1995). Mood modulation by food: An exploration of affect and cravings in ‘chocolate addicts’. British Journal of Clinical Psychology, 34(1), 129-138. doi: 10.1111/j.2044-8260.1995.tb01445.x"
+e173 [uno] paragraph 30 list-label "[10] " text "Mellor, D. D. (2013). The effects of polyphenol rich chocolate on cardiovascular risk and glycaemic control in type 2 diabetes mellitus (Doctoral dissertation, University of Hull, UK). Retrieved from https://hydra.hull.ac.uk/resources/hull:7109"
+e174 [uno] paragraph 31 list-label "[11] " text "Parker, G., Parker, I., & Brotchie, H. (2006). Mood state effects of chocolate. Journal of Affective Disorders, 92(2), 149-159. doi: 10.1016/j.jad.2006.02.007"
+e175 [uno] paragraph 32 list-label "[12] " text "Scholey, A., & Owen, L. (2013). Effects of chocolate on cognitive function and mood: A systematic review. Nutrition reviews, 71(10), 665-681. doi:10.1111/nure.12065"
+e176 [uno] paragraph 33 list-label "[13] " text "Schramm, D. D., Wang, J. F., Holt, R. R., Ensunsa, J. L., Gonsalves, J. L., Lazarus, S. A., Schmitz, H. H., German, J. Bruce, & Keen, C. L. (2001). Chocolate procyanidins decrease the leukotriene-prostacyclin ratio in humans and human aortic endothelial cells. The American Journal of Clinical Nutrit" …(truncated at 300 chars)
+e177 [uno] paragraph 34 list-label "[14] " text "Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028"
+e178 [uno] paragraph 35 text ""
+e179 [uno] paragraph 36 text ""
+e180 [uno] paragraph 37 text ""
+[act-guard] previous action: CONFIRMED (view changed outside the system bar)
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 9 ---
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "Essay_​Writing_​English_​for_​uni.​docx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​Essay_​Writing_​English_​for_​uni.​docx#"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,180,27 "LibreOffice Writer"
+e9 menu 906,0,178,27 "Aug 20 01‎∶32"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+e29 menu 153,64,49,25 "View"
+e30 menu 202,64,55,25 "Insert"
+e31 menu 257,64,66,25 "Format"
+e32 menu 323,64,56,25 "Styles"
+e33 menu 379,64,53,25 "Table"
+e34 menu 432,64,52,25 "Form"
+e35 menu 484,64,52,25 "Tools"
+e36 menu 536,64,70,25 "Window"
+e37 menu 606,64,47,25 "Help"
+e38 menu 70,64,40,21 "File" value="0.0"
+e39 menu 110,64,43,21 "Edit" value="0.0"
+e40 menu 153,64,50,21 "View" value="0.0"
+e41 menu 203,64,56,21 "Insert" value="0.0"
+e42 menu 259,64,66,21 "Format" value="0.0"
+e43 menu 325,64,56,21 "Styles" value="0.0"
+e44 menu 381,64,53,21 "Table" value="0.0"
+e45 menu 434,64,52,21 "Form" value="0.0"
+e46 menu 486,64,53,21 "Tools" value="0.0"
+e47 menu 539,64,73,21 "Window" value="0.0"
+e48 menu 612,64,48,21 "Help" value="0.0"
+e49 scroll-bar 1849,222,12,773 "Vertical scroll bar" value="48600.0"
+e50 text 70,222,1779,24 "Horizontal Ruler"
+e51 text 1870,144,48,849 "Properties"
+e52 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e53 text 1870,210,44,42 "Properties"
+e54 toggle-button 1874,214,37,35 state=checked:true
+e55 text 1870,252,44,42 "Styles"
+e56 toggle-button 1874,256,37,35 state=checked:false
+e57 text 1870,294,44,42 "Gallery"
+e58 toggle-button 1874,298,37,35 state=checked:false
+e59 text 1870,336,44,42 "Navigator"
+e60 toggle-button 1874,340,37,35 state=checked:false
+e61 text 1870,378,44,42 "Page"
+e62 toggle-button 1874,382,37,35 state=checked:false
+e63 text 1870,420,44,42 "Style Inspector"
+e64 toggle-button 1874,424,37,35 state=checked:false
+e65 text 111,178,1598,26 "Help us make LibreOffice even better!"
+e66 [pixels] icon 73,171,32,32
+e67 push-button 1715,170,117,34 "Get involved"
+e68 push-button 1839,179,16,16
+e69 text 111,218,1632,26 "Your donations support our worldwide community."
+e70 [pixels] icon 73,211,32,32
+e71 push-button 1749,210,83,34 "Donate"
+e72 push-button 1839,219,16,16
+e73 text 70,64,1254,39 "Standard"
+e74 push-button 74,66,44,35 "New" value="0.0"
+e75 push-button 118,66,44,35 "Open" value="0.0"
+e76 push-button 162,66,44,35 "Save" value="0.0"
+e77 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e78 push-button 247,66,33,35 "Print" value="0.0"
+e79 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e80 push-button 321,66,33,35 "Cut" value="0.0"
+e81 push-button 354,66,33,35 "Copy" value="0.0"
+e82 push-button 387,66,44,35 "Paste" value="0.0"
+e83 push-button 439,66,33,35 "Clone" value="0.0"
+e84 push-button 480,66,44,35 "Undo" value="0.0"
+e85 push-button 524,66,44,35 "Redo" value="0.0"
+e86 toggle-button 576,66,33,35 "Find and Replace" value="1.0" state=checked:true
+e87 push-button 609,66,33,35 "Spelling" value="0.0"
+e88 toggle-button 642,66,33,35 "Formatting Marks" value="0.0" state=checked:false
+e89 push-button 683,66,44,35 "Table" value="0.0"
+e90 push-button 727,66,33,35 "Image" value="0.0"
+e91 push-button 760,66,33,35 "Chart" value="0.0"
+e92 push-button 793,66,33,35 "Text Box" value="0.0"
+e93 push-button 834,66,33,35 "Page Break" value="0.0"
+e94 push-button 867,66,44,35 "Field" value="0.0"
+e95 push-button 911,66,44,35 "Symbol" value="0.0"
+e96 toggle-button 963,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e97 push-button 996,66,33,35 "Footnote" value="0.0"
+e98 push-button 1029,66,33,35 "Endnote" value="0.0"
+e99 push-button 1062,66,33,35 "Bookmark" value="0.0"
+e100 push-button 1095,66,33,35 "Cross-reference" value="0.0"
+e101 push-button 1136,66,33,35 "Comment" value="0.0"
+e102 toggle-button 1169,66,33,35 "Track Changes Functions" value="0.0" state=checked:false
+e103 push-button 1210,66,33,35 "Line" value="0.0"
+e104 push-button 1243,66,44,35 "Basic Shapes" value="0.0"
+e105 toggle-button 1287,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e106 text 70,103,1437,39 "Formatting"
+e107 text 74,105,202,34 "Paragraph Style"
+e108 text 74,130,166,34 "normal"
+e109 toggle-button 240,130,36,34 state=checked:false
+e110 push-button 276,105,33,35 "Update" value="0.0"
+e111 push-button 309,105,33,35 "New" value="0.0"
+e112 text 350,105,221,34 "Font Name"
+e113 text 350,130,185,34 "Arial"
+e114 toggle-button 535,130,36,34 state=checked:false
+e115 text 579,105,101,34 "Font Size"
+e116 text 579,130,65,34 "12 pt"
+e117 toggle-button 644,130,36,34 state=checked:false
+e118 toggle-button 688,105,33,35 "Bold" value="0.0" state=checked:false
+e119 toggle-button 721,105,33,35 "Italic" value="0.0" state=checked:false
+e120 push-button 754,105,44,35 "Underline" value="1.0" state=checked:true
+e121 toggle-button 798,105,33,35 "Strikethrough" value="0.0" state=checked:false
+e122 toggle-button 839,105,33,35 "Superscript" value="0.0" state=checked:false
+e123 toggle-button 872,105,33,35 "Subscript" value="0.0" state=checked:false
+e124 push-button 913,105,33,35 "Clear" value="0.0"
+e125 push-button 954,105,44,35 "Font Color" value="0.0"
+e126 push-button 998,105,44,35 "Character Highlighting Color" value="0.0"
+e127 toggle-button 1050,105,33,35 "Left" value="1.0" state=checked:true
+e128 toggle-button 1083,105,33,35 "Center" value="0.0" state=checked:false
+e129 toggle-button 1116,105,33,35 "Right" value="0.0" state=checked:false
+e130 toggle-button 1149,105,33,35 "Justified" value="0.0" state=checked:false
+e131 push-button 1190,105,44,35 "Unordered List" value="0.0"
+e132 push-button 1234,105,44,35 "Ordered List" value="1.0" state=checked:true
+e133 push-button 1278,105,33,35 "No List" value="0.0"
+e134 push-button 1319,105,33,35 "Increase" value="0.0"
+e135 push-button 1352,105,33,35 "Decrease" value="0.0"
+e136 push-button 1393,105,44,35 "Line Spacing" value="0.0"
+e137 push-button 1437,105,33,35 "Increase" value="0.0"
+e138 push-button 1470,105,33,35 "Decrease" value="0.0"
+e139 text 70,995,428,39 "Bullets and Numbering"
+e140 push-button 74,997,33,35 "Demote One Level" value="0.0"
+e141 push-button 107,997,33,35 "Promote One Level" value="0.0"
+e142 push-button 140,997,33,35 "Demote One Level With Subpoints" value="0.0"
+e143 push-button 173,997,33,35 "Promote One Level With Subpoints" value="0.0"
+e144 push-button 214,997,33,35 "Move Down" value="0.0"
+e145 push-button 247,997,33,35 "Move Up" value="0.0"
+e146 push-button 280,997,33,35 "Move Down with Subpoints" value="0.0"
+e147 push-button 313,997,33,35 "Move Up with Subpoints" value="0.0"
+e148 push-button 354,997,33,35 "Insert Unnumbered Entry" value="0.0"
+e149 toggle-button 387,997,33,35 "Restart Numbering" value="0.0" state=checked:false
+e150 push-button 420,997,33,35 "Add to List" value="0.0"
+e151 push-button 461,997,33,35 "Bullets and Numbering" value="0.0"
+e152 text 105,1036,228,18 "Page 4 of 4"
+e153 text 339,1036,346,18 "1,513 words, 10,356 characters"
+e154 text 691,1036,275,18 "Default Page Style"
+e155 text 972,1036,271,18 "English (Australia)"
+e156 text 1375,1036,276,18 "WWNum1 : Level 1"
+e157 text 1876,1036,38,18 "100%"
+e158 [uno] paragraph 1 text "Example essay"
+e159 [uno] paragraph 2 text ""
+e160 [uno] paragraph 3 text "“Chocolate is a healthy food.” Discuss."
+e161 [uno] paragraph 4 text ""
+e162 [uno] paragraph 5 text "Since Spanish explorers brought back chocolate from the new world, chocolate consumption has become a worldwide phenomenon.  At first, chocolate, a derivative of the cacao bean, was consumed as a drink, only later achieving mass popularity in tablet or bar form. However, chocolate’s inherent popular" …(truncated at 300 chars)
+e163 [uno] paragraph 6 text ""
+e164 [uno] paragraph 7 text "Consumption of chocolate is something that many enjoy, and there is evidence[11]  that high carbohydrate foods such as chocolate do have a ‘feel good’ effect. Moreover, Scholey and Owen[12]  in a systematic review of the literature in the field point to several studies, such as Macht and Dettmer (20" …(truncated at 300 chars)
+e165 [uno] paragraph 8 text ""
+e166 [uno] paragraph 9 text "Another possible positive influence of chocolate is upon cardiovascular health.  Chocolate, processed accordingly, can be a provider of significant quantities of heart-friendly flavanols (Hannum, Schmitz, & Keen, 2002) which help in delaying blood clotting and reducing inflammation (Schramm et al., " …(truncated at 300 chars)
+e167 [uno] paragraph 10 text ""
+e168 [uno] paragraph 11 text "The biological makeup of chocolate is also relevant in determining whether chocolate is better viewed as a food or a drug, but the boundaries between indulgence and addictive behaviour are unclear. Chocolate contains some biologically active elements including methylxanthines, and cannabinoid-like u" …(truncated at 300 chars)
+e169 [uno] paragraph 12 text ""
+e170 [uno] paragraph 13 text "A final point to consider in relation to chocolate is the perception that chocolate is linked to obesity. A person is defined as being obese when their Body Mass Index is greater than 30.  The literature on chocolate and obesity has clearly demonstrated that there are no specific correlations betwee" …(truncated at 300 chars)
+e171 [uno] paragraph 14 text ""
+e172 [uno] paragraph 15 text "Obesity and chocolate consumption seemingly have no proven correlations. Yet, in this essay, many chocolate focused arguments have been presented, including the transient effect of chocolate on mood and the fact that it is as likely to create feelings of guilt as of well-being.  Another possible pos" …(truncated at 300 chars)
+e173 [uno] paragraph 16 text ""
+e174 [uno] paragraph 17 text "(Word count: 1087. This is within 10% of the 1000 word limit, which is usually acceptable. Check this with your lecturer if you are in any doubt.)"
+e175 [uno] paragraph 18 text ""
+e176 [uno] paragraph 19 text "References"
+e177 [uno] paragraph 20 text ""
+e178 [uno] paragraph 21 list-label "[1] " text "Abraham, G. E., & Lubran, M. M. (1981). Serum and red cell magnesium levels in patients with premenstrual tension. The American Journal of Clinical Nutrition, 34(11), 2364-2366.  Retrieved from http://ajcn.nutrition.org/content/34/11/2364.short"
+e179 [uno] paragraph 22 list-label "[2] " text "Ariefdjohan, M. W., & Savaiano, D. A. (2005). Chocolate and cardiovascular health: Is it too good to be true? Nutrition Reviews, 63(12), 427-430. doi: 10.1111/j.1753-4887.2005.tb00118.x"
+e180 [uno] paragraph 23 list-label "[3] " text "Beckett, S. T. (2000). The science of chocolate. Cambridge, UK: Royal Society of Chemistry."
+e181 [uno] paragraph 24 list-label "[4] " text "Bruinsma, K., & Taren, D. L. (1999). Chocolate: Food or drug? Journal of the American Dietetic Association, 99(10), 1249-12.  doi: 10.1016/S0002-8223(99)00307-7"
+e182 [uno] paragraph 25 list-label "[5] " text "Hannum, S. M., Schmitz, H. H., & Keen, C. L. (2002). Chocolate: A heart-healthy food? Show me the science! Nutrition Today, 37(3), 103-109.  Retrieved from http://journals.lww.com/nutritiontodayonline/Abstract/2002/05000/Chocolate__A_Heart_healthy_Food__Show_Me_the.4.aspx"
+e183 [uno] paragraph 26 list-label "[6] " text "Lambert, J. P. (2009). Nutrition and health aspects of chocolate. In S. Beckett (Ed.), Industrial chocolate manufacture and use, (4th ed., pp. 623-635). London: Wiley Blackwell. Retrieved from  http://onlinelibrary.wiley.com/doi/10.1002/9781444301588.ch27/pdf"
+e184 [uno] paragraph 27 list-label "[7] " text "Macht, M., & Dettmer, D. (2006). Everyday mood and emotions after eating a chocolate bar or an apple. Appetite, 46(3), 332-336. doi: 10.1016/j.appet.2006.01.014"
+e185 [uno] paragraph 28 list-label "[8] " text "Macht, M., & Mueller, J. (2007). Immediate effects of chocolate on experimentally induced mood states. Appetite, 49(3), 667-674. doi:10.1016/j.appet.2007.05.004"
+e186 [uno] paragraph 29 list-label "[9] " text "Macdiarmid, J. I., & Hetherington, M. M. (1995). Mood modulation by food: An exploration of affect and cravings in ‘chocolate addicts’. British Journal of Clinical Psychology, 34(1), 129-138. doi: 10.1111/j.2044-8260.1995.tb01445.x"
+e187 [uno] paragraph 30 list-label "[10] " text "Mellor, D. D. (2013). The effects of polyphenol rich chocolate on cardiovascular risk and glycaemic control in type 2 diabetes mellitus (Doctoral dissertation, University of Hull, UK). Retrieved from https://hydra.hull.ac.uk/resources/hull:7109"
+e188 [uno] paragraph 31 list-label "[11] " text "Parker, G., Parker, I., & Brotchie, H. (2006). Mood state effects of chocolate. Journal of Affective Disorders, 92(2), 149-159. doi: 10.1016/j.jad.2006.02.007"
+e189 [uno] paragraph 32 list-label "[12] " text "Scholey, A., & Owen, L. (2013). Effects of chocolate on cognitive function and mood: A systematic review. Nutrition reviews, 71(10), 665-681. doi:10.1111/nure.12065"
+e190 [uno] paragraph 33 list-label "[13] " text "Schramm, D. D., Wang, J. F., Holt, R. R., Ensunsa, J. L., Gonsalves, J. L., Lazarus, S. A., Schmitz, H. H., German, J. Bruce, & Keen, C. L. (2001). Chocolate procyanidins decrease the leukotriene-prostacyclin ratio in humans and human aortic endothelial cells. The American Journal of Clinical Nutrit" …(truncated at 300 chars)
+e191 [uno] paragraph 34 list-label "[14] " text "Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028"
+e192 [uno] paragraph 35 text ""
+e193 [uno] paragraph 36 text ""
+e194 [uno] paragraph 37 text ""
+
+--- view at step 10 ---
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "Essay_​Writing_​English_​for_​uni.​docx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​Essay_​Writing_​English_​for_​uni.​docx#"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,180,27 "LibreOffice Writer"
+e9 menu 906,0,178,27 "Aug 20 01‎∶33"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+e29 menu 153,64,49,25 "View"
+e30 menu 202,64,55,25 "Insert"
+e31 menu 257,64,66,25 "Format"
+e32 menu 323,64,56,25 "Styles"
+e33 menu 379,64,53,25 "Table"
+e34 menu 432,64,52,25 "Form"
+e35 menu 484,64,52,25 "Tools"
+e36 menu 536,64,70,25 "Window"
+e37 menu 606,64,47,25 "Help"
+e38 menu 70,64,40,21 "File" value="0.0"
+e39 menu 110,64,43,21 "Edit" value="0.0"
+e40 menu 153,64,50,21 "View" value="0.0"
+e41 menu 203,64,56,21 "Insert" value="0.0"
+e42 menu 259,64,66,21 "Format" value="0.0"
+e43 menu 325,64,56,21 "Styles" value="0.0"
+e44 menu 381,64,53,21 "Table" value="0.0"
+e45 menu 434,64,52,21 "Form" value="0.0"
+e46 menu 486,64,53,21 "Tools" value="0.0"
+e47 menu 539,64,73,21 "Window" value="0.0"
+e48 menu 612,64,48,21 "Help" value="0.0"
+~e49 scroll-bar 1849,222,12,812 "Vertical scroll bar" value="21360.0"
+e50 text 70,222,1779,24 "Horizontal Ruler"
+~e51 text 1870,144,48,888 "Properties"
+e52 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e53 text 1870,210,44,42 "Properties"
+e54 toggle-button 1874,214,37,35 state=checked:true
+e55 text 1870,252,44,42 "Styles"
+e56 toggle-button 1874,256,37,35 state=checked:false
+e57 text 1870,294,44,42 "Gallery"
+e58 toggle-button 1874,298,37,35 state=checked:false
+e59 text 1870,336,44,42 "Navigator"
+e60 toggle-button 1874,340,37,35 state=checked:false
+e61 text 1870,378,44,42 "Page"
+e62 toggle-button 1874,382,37,35 state=checked:false
+e63 text 1870,420,44,42 "Style Inspector"
+e64 toggle-button 1874,424,37,35 state=checked:false
+e65 text 111,178,1598,26 "Help us make LibreOffice even better!"
+e66 [pixels] icon 73,171,32,32
+e67 push-button 1715,170,117,34 "Get involved"
+e68 push-button 1839,179,16,16
+e69 text 111,218,1632,26 "Your donations support our worldwide community."
+e70 [pixels] icon 73,211,32,32
+e71 push-button 1749,210,83,34 "Donate"
+e72 push-button 1839,219,16,16
+e73 text 70,64,1254,39 "Standard"
+e74 push-button 74,66,44,35 "New" value="0.0"
+e75 push-button 118,66,44,35 "Open" value="0.0"
+e76 push-button 162,66,44,35 "Save" value="0.0"
+e77 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e78 push-button 247,66,33,35 "Print" value="0.0"
+e79 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e80 push-button 321,66,33,35 "Cut" value="0.0"
+e81 push-button 354,66,33,35 "Copy" value="0.0"
+e82 push-button 387,66,44,35 "Paste" value="0.0"
+e83 push-button 439,66,33,35 "Clone" value="0.0"
+e84 push-button 480,66,44,35 "Undo" value="0.0"
+e85 push-button 524,66,44,35 "Redo" value="0.0"
+e86 toggle-button 576,66,33,35 "Find and Replace" value="1.0" state=checked:true
+e87 push-button 609,66,33,35 "Spelling" value="0.0"
+e88 toggle-button 642,66,33,35 "Formatting Marks" value="0.0" state=checked:false
+e89 push-button 683,66,44,35 "Table" value="0.0"
+e90 push-button 727,66,33,35 "Image" value="0.0"
+e91 push-button 760,66,33,35 "Chart" value="0.0"
+e92 push-button 793,66,33,35 "Text Box" value="0.0"
+e93 push-button 834,66,33,35 "Page Break" value="0.0"
+e94 push-button 867,66,44,35 "Field" value="0.0"
+e95 push-button 911,66,44,35 "Symbol" value="0.0"
+e96 toggle-button 963,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e97 push-button 996,66,33,35 "Footnote" value="0.0"
+e98 push-button 1029,66,33,35 "Endnote" value="0.0"
+e99 push-button 1062,66,33,35 "Bookmark" value="0.0"
+e100 push-button 1095,66,33,35 "Cross-reference" value="0.0"
+e101 push-button 1136,66,33,35 "Comment" value="0.0"
+e102 toggle-button 1169,66,33,35 "Track Changes Functions" value="0.0" state=checked:false
+e103 push-button 1210,66,33,35 "Line" value="0.0"
+e104 push-button 1243,66,44,35 "Basic Shapes" value="0.0"
+e105 toggle-button 1287,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e106 text 70,103,1437,39 "Formatting"
+e107 text 74,105,202,34 "Paragraph Style"
+e108 text 74,130,166,34 "normal"
+e109 toggle-button 240,130,36,34 state=checked:false
+e110 push-button 276,105,33,35 "Update" value="0.0"
+e111 push-button 309,105,33,35 "New" value="0.0"
+e112 text 350,105,221,34 "Font Name"
+e113 text 350,130,185,34 "Arial"
+e114 toggle-button 535,130,36,34 state=checked:false
+e115 text 579,105,101,34 "Font Size"
+e116 text 579,130,65,34 "12 pt"
+e117 toggle-button 644,130,36,34 state=checked:false
+~e118 toggle-button 688,105,33,35 "Bold" value="1.0" state=checked:true
+e119 toggle-button 721,105,33,35 "Italic" value="0.0" state=checked:false
+~e120 push-button 754,105,44,35 "Underline" value="0.0"
+e121 toggle-button 798,105,33,35 "Strikethrough" value="0.0" state=checked:false
+e122 toggle-button 839,105,33,35 "Superscript" value="0.0" state=checked:false
+e123 toggle-button 872,105,33,35 "Subscript" value="0.0" state=checked:false
+e124 push-button 913,105,33,35 "Clear" value="0.0"
+e125 push-button 954,105,44,35 "Font Color" value="0.0"
+e126 push-button 998,105,44,35 "Character Highlighting Color" value="0.0"
+~e127 toggle-button 1050,105,33,35 "Left" value="0.0" state=checked:false
+e128 toggle-button 1083,105,33,35 "Center" value="0.0" state=checked:false
+e129 toggle-button 1116,105,33,35 "Right" value="0.0" state=checked:false
+~e130 toggle-button 1149,105,33,35 "Justified" value="1.0" state=checked:true
+e131 push-button 1190,105,44,35 "Unordered List" value="0.0"
+~e132 push-button 1234,105,44,35 "Ordered List" value="0.0"
+~e133 push-button 1278,105,33,35 "No List" value="1.0" state=checked:true
+e134 push-button 1319,105,33,35 "Increase" value="0.0"
+e135 push-button 1352,105,33,35 "Decrease" value="0.0"
+e136 push-button 1393,105,44,35 "Line Spacing" value="0.0"
+e137 push-button 1437,105,33,35 "Increase" value="0.0"
+e138 push-button 1470,105,33,35 "Decrease" value="0.0"
+~e139 text 105,1036,228,18 "Page 2 of 4"
+~e140 text 339,1036,346,18 "Selected: 2 words, 10 characters"
+e141 text 691,1036,275,18 "Default Page Style"
+e142 text 972,1036,271,18 "English (Australia)"
+e143 text 1876,1036,38,18 "100%"
+e144 [uno] paragraph 1 text "Example essay"
+e145 [uno] paragraph 2 text ""
+e146 [uno] paragraph 3 text "“Chocolate is a healthy food.” Discuss."
+e147 [uno] paragraph 4 text ""
+e148 [uno] paragraph 5 text "Since Spanish explorers brought back chocolate from the new world, chocolate consumption has become a worldwide phenomenon.  At first, chocolate, a derivative of the cacao bean, was consumed as a drink, only later achieving mass popularity in tablet or bar form. However, chocolate’s inherent popular" …(truncated at 300 chars)
+e149 [uno] paragraph 6 text ""
+e150 [uno] paragraph 7 text "Consumption of chocolate is something that many enjoy, and there is evidence[11]  that high carbohydrate foods such as chocolate do have a ‘feel good’ effect. Moreover, Scholey and Owen[12]  in a systematic review of the literature in the field point to several studies, such as Macht and Dettmer (20" …(truncated at 300 chars)
+e151 [uno] paragraph 8 text ""
+e152 [uno] paragraph 9 text "Another possible positive influence of chocolate is upon cardiovascular health.  Chocolate, processed accordingly, can be a provider of significant quantities of heart-friendly flavanols (Hannum, Schmitz, & Keen, 2002) which help in delaying blood clotting and reducing inflammation (Schramm et al., " …(truncated at 300 chars)
+e153 [uno] paragraph 10 text ""
+e154 [uno] paragraph 11 text "The biological makeup of chocolate is also relevant in determining whether chocolate is better viewed as a food or a drug, but the boundaries between indulgence and addictive behaviour are unclear. Chocolate contains some biologically active elements including methylxanthines, and cannabinoid-like u" …(truncated at 300 chars)
+e155 [uno] paragraph 12 text ""
+e156 [uno] paragraph 13 text "A final point to consider in relation to chocolate is the perception that chocolate is linked to obesity. A person is defined as being obese when their Body Mass Index is greater than 30.  The literature on chocolate and obesity has clearly demonstrated that there are no specific correlations betwee" …(truncated at 300 chars)
+e157 [uno] paragraph 14 text ""
+e158 [uno] paragraph 15 text "Obesity and chocolate consumption seemingly have no proven correlations. Yet, in this essay, many chocolate focused arguments have been presented, including the transient effect of chocolate on mood and the fact that it is as likely to create feelings of guilt as of well-being.  Another possible pos" …(truncated at 300 chars)
+e159 [uno] paragraph 16 text ""
+e160 [uno] paragraph 17 text "(Word count: 1087. This is within 10% of the 1000 word limit, which is usually acceptable. Check this with your lecturer if you are in any doubt.)"
+e161 [uno] paragraph 18 text ""
+e162 [uno] paragraph 19 text "References"
+e163 [uno] paragraph 20 text ""
+e164 [uno] paragraph 21 list-label "[1] " text "Abraham, G. E., & Lubran, M. M. (1981). Serum and red cell magnesium levels in patients with premenstrual tension. The American Journal of Clinical Nutrition, 34(11), 2364-2366.  Retrieved from http://ajcn.nutrition.org/content/34/11/2364.short"
+e165 [uno] paragraph 22 list-label "[2] " text "Ariefdjohan, M. W., & Savaiano, D. A. (2005). Chocolate and cardiovascular health: Is it too good to be true? Nutrition Reviews, 63(12), 427-430. doi: 10.1111/j.1753-4887.2005.tb00118.x"
+e166 [uno] paragraph 23 list-label "[3] " text "Beckett, S. T. (2000). The science of chocolate. Cambridge, UK: Royal Society of Chemistry."
+e167 [uno] paragraph 24 list-label "[4] " text "Bruinsma, K., & Taren, D. L. (1999). Chocolate: Food or drug? Journal of the American Dietetic Association, 99(10), 1249-12.  doi: 10.1016/S0002-8223(99)00307-7"
+e168 [uno] paragraph 25 list-label "[5] " text "Hannum, S. M., Schmitz, H. H., & Keen, C. L. (2002). Chocolate: A heart-healthy food? Show me the science! Nutrition Today, 37(3), 103-109.  Retrieved from http://journals.lww.com/nutritiontodayonline/Abstract/2002/05000/Chocolate__A_Heart_healthy_Food__Show_Me_the.4.aspx"
+e169 [uno] paragraph 26 list-label "[6] " text "Lambert, J. P. (2009). Nutrition and health aspects of chocolate. In S. Beckett (Ed.), Industrial chocolate manufacture and use, (4th ed., pp. 623-635). London: Wiley Blackwell. Retrieved from  http://onlinelibrary.wiley.com/doi/10.1002/9781444301588.ch27/pdf"
+e170 [uno] paragraph 27 list-label "[7] " text "Macht, M., & Dettmer, D. (2006). Everyday mood and emotions after eating a chocolate bar or an apple. Appetite, 46(3), 332-336. doi: 10.1016/j.appet.2006.01.014"
+e171 [uno] paragraph 28 list-label "[8] " text "Macht, M., & Mueller, J. (2007). Immediate effects of chocolate on experimentally induced mood states. Appetite, 49(3), 667-674. doi:10.1016/j.appet.2007.05.004"
+e172 [uno] paragraph 29 list-label "[9] " text "Macdiarmid, J. I., & Hetherington, M. M. (1995). Mood modulation by food: An exploration of affect and cravings in ‘chocolate addicts’. British Journal of Clinical Psychology, 34(1), 129-138. doi: 10.1111/j.2044-8260.1995.tb01445.x"
+e173 [uno] paragraph 30 list-label "[10] " text "Mellor, D. D. (2013). The effects of polyphenol rich chocolate on cardiovascular risk and glycaemic control in type 2 diabetes mellitus (Doctoral dissertation, University of Hull, UK). Retrieved from https://hydra.hull.ac.uk/resources/hull:7109"
+e174 [uno] paragraph 31 list-label "[11] " text "Parker, G., Parker, I., & Brotchie, H. (2006). Mood state effects of chocolate. Journal of Affective Disorders, 92(2), 149-159. doi: 10.1016/j.jad.2006.02.007"
+e175 [uno] paragraph 32 list-label "[12] " text "Scholey, A., & Owen, L. (2013). Effects of chocolate on cognitive function and mood: A systematic review. Nutrition reviews, 71(10), 665-681. doi:10.1111/nure.12065"
+e176 [uno] paragraph 33 list-label "[13] " text "Schramm, D. D., Wang, J. F., Holt, R. R., Ensunsa, J. L., Gonsalves, J. L., Lazarus, S. A., Schmitz, H. H., German, J. Bruce, & Keen, C. L. (2001). Chocolate procyanidins decrease the leukotriene-prostacyclin ratio in humans and human aortic endothelial cells. The American Journal of Clinical Nutrit" …(truncated at 300 chars)
+e177 [uno] paragraph 34 list-label "[14] " text "Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028"
+e178 [uno] paragraph 35 text ""
+e179 [uno] paragraph 36 text ""
+e180 [uno] paragraph 37 text ""
+
+--- view at step 11 ---
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "Essay_​Writing_​English_​for_​uni.​docx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​Essay_​Writing_​English_​for_​uni.​docx#"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,180,27 "LibreOffice Writer"
+e9 menu 906,0,178,27 "Aug 20 01‎∶33"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+e29 menu 153,64,49,25 "View"
+e30 menu 202,64,55,25 "Insert"
+e31 menu 257,64,66,25 "Format"
+e32 menu 323,64,56,25 "Styles"
+e33 menu 379,64,53,25 "Table"
+e34 menu 432,64,52,25 "Form"
+e35 menu 484,64,52,25 "Tools"
+e36 menu 536,64,70,25 "Window"
+e37 menu 606,64,47,25 "Help"
+e38 menu 70,64,40,21 "File" value="0.0"
+e39 menu 110,64,43,21 "Edit" value="0.0"
+e40 menu 153,64,50,21 "View" value="0.0"
+e41 menu 203,64,56,21 "Insert" value="0.0"
+e42 menu 259,64,66,21 "Format" value="0.0"
+e43 menu 325,64,56,21 "Styles" value="0.0"
+e44 menu 381,64,53,21 "Table" value="0.0"
+e45 menu 434,64,52,21 "Form" value="0.0"
+e46 menu 486,64,53,21 "Tools" value="0.0"
+e47 menu 539,64,73,21 "Window" value="0.0"
+e48 menu 612,64,48,21 "Help" value="0.0"
+e49 scroll-bar 1849,222,12,812 "Vertical scroll bar" value="21360.0"
+e50 text 70,222,1779,24 "Horizontal Ruler"
+e51 text 1870,144,48,888 "Properties"
+e52 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e53 text 1870,210,44,42 "Properties"
+e54 toggle-button 1874,214,37,35 state=checked:true
+e55 text 1870,252,44,42 "Styles"
+e56 toggle-button 1874,256,37,35 state=checked:false
+e57 text 1870,294,44,42 "Gallery"
+e58 toggle-button 1874,298,37,35 state=checked:false
+e59 text 1870,336,44,42 "Navigator"
+e60 toggle-button 1874,340,37,35 state=checked:false
+e61 text 1870,378,44,42 "Page"
+e62 toggle-button 1874,382,37,35 state=checked:false
+e63 text 1870,420,44,42 "Style Inspector"
+e64 toggle-button 1874,424,37,35 state=checked:false
+e65 text 111,178,1598,26 "Help us make LibreOffice even better!"
+e66 [pixels] icon 73,171,32,32
+e67 push-button 1715,170,117,34 "Get involved"
+e68 push-button 1839,179,16,16
+e69 text 111,218,1632,26 "Your donations support our worldwide community."
+e70 [pixels] icon 73,211,32,32
+e71 push-button 1749,210,83,34 "Donate"
+e72 push-button 1839,219,16,16
+e73 text 70,64,1254,39 "Standard"
+e74 push-button 74,66,44,35 "New" value="0.0"
+e75 push-button 118,66,44,35 "Open" value="0.0"
+e76 push-button 162,66,44,35 "Save" value="0.0"
+e77 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e78 push-button 247,66,33,35 "Print" value="0.0"
+e79 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e80 push-button 321,66,33,35 "Cut" value="0.0"
+e81 push-button 354,66,33,35 "Copy" value="0.0"
+e82 push-button 387,66,44,35 "Paste" value="0.0"
+e83 push-button 439,66,33,35 "Clone" value="0.0"
+e84 push-button 480,66,44,35 "Undo" value="0.0"
+e85 push-button 524,66,44,35 "Redo" value="0.0"
+~e86 toggle-button 576,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e87 push-button 609,66,33,35 "Spelling" value="0.0"
+e88 toggle-button 642,66,33,35 "Formatting Marks" value="0.0" state=checked:false
+e89 push-button 683,66,44,35 "Table" value="0.0"
+e90 push-button 727,66,33,35 "Image" value="0.0"
+e91 push-button 760,66,33,35 "Chart" value="0.0"
+e92 push-button 793,66,33,35 "Text Box" value="0.0"
+e93 push-button 834,66,33,35 "Page Break" value="0.0"
+e94 push-button 867,66,44,35 "Field" value="0.0"
+e95 push-button 911,66,44,35 "Symbol" value="0.0"
+e96 toggle-button 963,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e97 push-button 996,66,33,35 "Footnote" value="0.0"
+e98 push-button 1029,66,33,35 "Endnote" value="0.0"
+e99 push-button 1062,66,33,35 "Bookmark" value="0.0"
+e100 push-button 1095,66,33,35 "Cross-reference" value="0.0"
+e101 push-button 1136,66,33,35 "Comment" value="0.0"
+e102 toggle-button 1169,66,33,35 "Track Changes Functions" value="0.0" state=checked:false
+e103 push-button 1210,66,33,35 "Line" value="0.0"
+e104 push-button 1243,66,44,35 "Basic Shapes" value="0.0"
+e105 toggle-button 1287,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e106 text 70,103,1437,39 "Formatting"
+e107 text 74,105,202,34 "Paragraph Style"
+e108 text 74,130,166,34 "normal"
+e109 toggle-button 240,130,36,34 state=checked:false
+e110 push-button 276,105,33,35 "Update" value="0.0"
+e111 push-button 309,105,33,35 "New" value="0.0"
+e112 text 350,105,221,34 "Font Name"
+e113 text 350,130,185,34 "Arial"
+e114 toggle-button 535,130,36,34 state=checked:false
+e115 text 579,105,101,34 "Font Size"
+e116 text 579,130,65,34 "12 pt"
+e117 toggle-button 644,130,36,34 state=checked:false
+e118 toggle-button 688,105,33,35 "Bold" value="1.0" state=checked:true
+e119 toggle-button 721,105,33,35 "Italic" value="0.0" state=checked:false
+e120 push-button 754,105,44,35 "Underline" value="0.0"
+e121 toggle-button 798,105,33,35 "Strikethrough" value="0.0" state=checked:false
+e122 toggle-button 839,105,33,35 "Superscript" value="0.0" state=checked:false
+e123 toggle-button 872,105,33,35 "Subscript" value="0.0" state=checked:false
+e124 push-button 913,105,33,35 "Clear" value="0.0"
+e125 push-button 954,105,44,35 "Font Color" value="0.0"
+e126 push-button 998,105,44,35 "Character Highlighting Color" value="0.0"
+e127 toggle-button 1050,105,33,35 "Left" value="0.0" state=checked:false
+e128 toggle-button 1083,105,33,35 "Center" value="0.0" state=checked:false
+e129 toggle-button 1116,105,33,35 "Right" value="0.0" state=checked:false
+e130 toggle-button 1149,105,33,35 "Justified" value="1.0" state=checked:true
+e131 push-button 1190,105,44,35 "Unordered List" value="0.0"
+e132 push-button 1234,105,44,35 "Ordered List" value="0.0"
+e133 push-button 1278,105,33,35 "No List" value="1.0" state=checked:true
+e134 push-button 1319,105,33,35 "Increase" value="0.0"
+e135 push-button 1352,105,33,35 "Decrease" value="0.0"
+e136 push-button 1393,105,44,35 "Line Spacing" value="0.0"
+e137 push-button 1437,105,33,35 "Increase" value="0.0"
+e138 push-button 1470,105,33,35 "Decrease" value="0.0"
+e139 text 105,1036,228,18 "Page 2 of 4"
+e140 text 339,1036,346,18 "Selected: 2 words, 10 characters"
+e141 text 691,1036,275,18 "Default Page Style"
+e142 text 972,1036,271,18 "English (Australia)"
+e143 text 1876,1036,38,18 "100%"
+e144 [uno] paragraph 1 text "Example essay"
+e145 [uno] paragraph 2 text ""
+e146 [uno] paragraph 3 text "“Chocolate is a healthy food.” Discuss."
+e147 [uno] paragraph 4 text ""
+e148 [uno] paragraph 5 text "Since Spanish explorers brought back chocolate from the new world, chocolate consumption has become a worldwide phenomenon.  At first, chocolate, a derivative of the cacao bean, was consumed as a drink, only later achieving mass popularity in tablet or bar form. However, chocolate’s inherent popular" …(truncated at 300 chars)
+e149 [uno] paragraph 6 text ""
+e150 [uno] paragraph 7 text "Consumption of chocolate is something that many enjoy, and there is evidence[11]  that high carbohydrate foods such as chocolate do have a ‘feel good’ effect. Moreover, Scholey and Owen[12]  in a systematic review of the literature in the field point to several studies, such as Macht and Dettmer (20" …(truncated at 300 chars)
+e151 [uno] paragraph 8 text ""
+e152 [uno] paragraph 9 text "Another possible positive influence of chocolate is upon cardiovascular health.  Chocolate, processed accordingly, can be a provider of significant quantities of heart-friendly flavanols (Hannum, Schmitz, & Keen, 2002) which help in delaying blood clotting and reducing inflammation (Schramm et al., " …(truncated at 300 chars)
+e153 [uno] paragraph 10 text ""
+e154 [uno] paragraph 11 text "The biological makeup of chocolate is also relevant in determining whether chocolate is better viewed as a food or a drug, but the boundaries between indulgence and addictive behaviour are unclear. Chocolate contains some biologically active elements including methylxanthines, and cannabinoid-like u" …(truncated at 300 chars)
+e155 [uno] paragraph 12 text ""
+e156 [uno] paragraph 13 text "A final point to consider in relation to chocolate is the perception that chocolate is linked to obesity. A person is defined as being obese when their Body Mass Index is greater than 30.  The literature on chocolate and obesity has clearly demonstrated that there are no specific correlations betwee" …(truncated at 300 chars)
+e157 [uno] paragraph 14 text ""
+e158 [uno] paragraph 15 text "Obesity and chocolate consumption seemingly have no proven correlations. Yet, in this essay, many chocolate focused arguments have been presented, including the transient effect of chocolate on mood and the fact that it is as likely to create feelings of guilt as of well-being.  Another possible pos" …(truncated at 300 chars)
+e159 [uno] paragraph 16 text ""
+e160 [uno] paragraph 17 text "(Word count: 1087. This is within 10% of the 1000 word limit, which is usually acceptable. Check this with your lecturer if you are in any doubt.)"
+e161 [uno] paragraph 18 text ""
+e162 [uno] paragraph 19 text "References"
+e163 [uno] paragraph 20 text ""
+e164 [uno] paragraph 21 list-label "[1] " text "Abraham, G. E., & Lubran, M. M. (1981). Serum and red cell magnesium levels in patients with premenstrual tension. The American Journal of Clinical Nutrition, 34(11), 2364-2366.  Retrieved from http://ajcn.nutrition.org/content/34/11/2364.short"
+e165 [uno] paragraph 22 list-label "[2] " text "Ariefdjohan, M. W., & Savaiano, D. A. (2005). Chocolate and cardiovascular health: Is it too good to be true? Nutrition Reviews, 63(12), 427-430. doi: 10.1111/j.1753-4887.2005.tb00118.x"
+e166 [uno] paragraph 23 list-label "[3] " text "Beckett, S. T. (2000). The science of chocolate. Cambridge, UK: Royal Society of Chemistry."
+e167 [uno] paragraph 24 list-label "[4] " text "Bruinsma, K., & Taren, D. L. (1999). Chocolate: Food or drug? Journal of the American Dietetic Association, 99(10), 1249-12.  doi: 10.1016/S0002-8223(99)00307-7"
+e168 [uno] paragraph 25 list-label "[5] " text "Hannum, S. M., Schmitz, H. H., & Keen, C. L. (2002). Chocolate: A heart-healthy food? Show me the science! Nutrition Today, 37(3), 103-109.  Retrieved from http://journals.lww.com/nutritiontodayonline/Abstract/2002/05000/Chocolate__A_Heart_healthy_Food__Show_Me_the.4.aspx"
+e169 [uno] paragraph 26 list-label "[6] " text "Lambert, J. P. (2009). Nutrition and health aspects of chocolate. In S. Beckett (Ed.), Industrial chocolate manufacture and use, (4th ed., pp. 623-635). London: Wiley Blackwell. Retrieved from  http://onlinelibrary.wiley.com/doi/10.1002/9781444301588.ch27/pdf"
+e170 [uno] paragraph 27 list-label "[7] " text "Macht, M., & Dettmer, D. (2006). Everyday mood and emotions after eating a chocolate bar or an apple. Appetite, 46(3), 332-336. doi: 10.1016/j.appet.2006.01.014"
+e171 [uno] paragraph 28 list-label "[8] " text "Macht, M., & Mueller, J. (2007). Immediate effects of chocolate on experimentally induced mood states. Appetite, 49(3), 667-674. doi:10.1016/j.appet.2007.05.004"
+e172 [uno] paragraph 29 list-label "[9] " text "Macdiarmid, J. I., & Hetherington, M. M. (1995). Mood modulation by food: An exploration of affect and cravings in ‘chocolate addicts’. British Journal of Clinical Psychology, 34(1), 129-138. doi: 10.1111/j.2044-8260.1995.tb01445.x"
+e173 [uno] paragraph 30 list-label "[10] " text "Mellor, D. D. (2013). The effects of polyphenol rich chocolate on cardiovascular risk and glycaemic control in type 2 diabetes mellitus (Doctoral dissertation, University of Hull, UK). Retrieved from https://hydra.hull.ac.uk/resources/hull:7109"
+e174 [uno] paragraph 31 list-label "[11] " text "Parker, G., Parker, I., & Brotchie, H. (2006). Mood state effects of chocolate. Journal of Affective Disorders, 92(2), 149-159. doi: 10.1016/j.jad.2006.02.007"
+e175 [uno] paragraph 32 list-label "[12] " text "Scholey, A., & Owen, L. (2013). Effects of chocolate on cognitive function and mood: A systematic review. Nutrition reviews, 71(10), 665-681. doi:10.1111/nure.12065"
+e176 [uno] paragraph 33 list-label "[13] " text "Schramm, D. D., Wang, J. F., Holt, R. R., Ensunsa, J. L., Gonsalves, J. L., Lazarus, S. A., Schmitz, H. H., German, J. Bruce, & Keen, C. L. (2001). Chocolate procyanidins decrease the leukotriene-prostacyclin ratio in humans and human aortic endothelial cells. The American Journal of Clinical Nutrit" …(truncated at 300 chars)
+e177 [uno] paragraph 34 list-label "[14] " text "Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028"
+e178 [uno] paragraph 35 text ""
+e179 [uno] paragraph 36 text ""
+e180 [uno] paragraph 37 text ""
+
+(8 earlier view(s) omitted: history budget)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

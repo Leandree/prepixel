@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e25","memo":"Opened View menu to find 'Slide Pane' item and re-enable the left slide panel."}
+```

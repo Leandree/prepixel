@@ -1,0 +1,37 @@
+{
+ "task_id": "ec4e3f68-9ea4-4c18-a5c9-69f89d1178b3",
+ "domain": "os",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "5d0535177d9036c7790501e816131a0a04df8bda",
+ "vm_image": "/home/leandre/dev/OSWorld/docker_vm_data/Ubuntu-uno.qcow2",
+ "success": true,
+ "score_raw": 1,
+ "steps": 3,
+ "termination": "DONE",
+ "wall_clock_s": 61.9,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 12,
+  "cache_creation_input_tokens": 12553,
+  "cache_read_input_tokens": 18078,
+  "output_tokens": 845,
+  "cost_usd": 0.155754,
+  "attempts": 3,
+  "steps_with_usage": 3,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "import pyautogui; pyautogui.click(35, 66, button='right')",
+  "import pyautogui; pyautogui.click(171, 105)",
+  "DONE"
+ ]
+}

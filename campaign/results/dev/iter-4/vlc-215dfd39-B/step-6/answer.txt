@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e55","value":"cone","memo":"Tree clicks on 'Main interfaces' (e77) failed - it sits at the clipped bottom edge of the tree viewport. Trying the Advanced Prefs search box (e55) with 'cone' to filter to the Qt module, then uncheck 'Display background cone or art', then Save (e82). If set_value fails, click e55 then type."}
+```

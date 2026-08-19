@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e39","memo":"Dismissed language dialog with France - English. Next: set Origin (e95) to JFK, Destination (e98) to ORD, trip type One Way, date = tomorrow (Aug 20, 2026 — today is Aug 19), then Find Flights."}
+```

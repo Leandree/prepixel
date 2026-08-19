@@ -1,0 +1,1 @@
+{"action": "key", "keys": "enter", "memo": "Caret was at end of ref [13]; Enter creates new list item [14]. NEXT: set_value on the new [uno] paragraph 34 (list-label [14]) with the full Steinberg reference text from TASK (avoids autocorrect). THEN Ctrl+H: search '<add here>' -> replace '[14]', Replace All, close. THEN Ctrl+S + Use Word 2007-365!"}

@@ -1,0 +1,5 @@
+The document appears to be open in LibreOffice Writer but the window isn't visible. I'll click the Writer icon in the dock to bring it up.
+
+```json
+{"action": "import pyautogui; pyautogui.click(35, 337)", "memo": "Task: add Steinberg et al. 2003 ref to reference list + cross-ref number at '<add here>' in 4th paragraph. Doc = Essay_Writing_English_for_uni....docx, already open in Writer (lock file on desktop). Step1: clicked dock Writer icon to raise window."}
+```

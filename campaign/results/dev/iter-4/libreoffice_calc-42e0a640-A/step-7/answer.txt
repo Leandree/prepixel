@@ -1,0 +1,5 @@
+Sheet2 verified clean (only A1/B1 headers, A2/B2 values, rows 3+ empty). Now replacing the formulas with literal values and saving.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(307, 1045); time.sleep(1.2); pyautogui.click(140, 186); time.sleep(0.5); pyautogui.write('A2\\n'); time.sleep(0.8); pyautogui.write('867786\\t411686\\n', interval=0.05); time.sleep(0.8); pyautogui.hotkey('ctrl','s'); time.sleep(2.5); pyautogui.press('enter')", "memo": "Step 7: Sheet1 verified A1=Revenue,B1=Total Expenses, data rows 2-20. Sums hand-checked: 867786 / 411686. Replaced Sheet2 A2/B2 formulas with literals + Ctrl+S + Enter (Keep xlsx). VERIFY next: Sheet2 A1='Total Revenue', B1='Total Expenses', A2=867786, B2=411686, no save dialog left open -> then DONE."}
+```

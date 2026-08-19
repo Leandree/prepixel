@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 560,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 47,
+  "cdp_records": 130,
+  "offscreen": 60,
+  "url": "https://www.google.com/chrome/ai-innovations/",
+  "scroll": [
+   0,
+   6400
+  ],
+  "scroll_height": 13385,
+  "picked_by": "visible",
+  "tab": "Learn complex subjects more easily Chrome UI showing programming explanation feature",
+  "picked_title": "AI in Chrome: help right where you need it"
+ },
+ "cdp_offscreen_skipped": 414,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 7,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "crop",
+ "rung": "crop"
+}

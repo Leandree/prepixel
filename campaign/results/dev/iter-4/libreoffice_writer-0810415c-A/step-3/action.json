@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1425, 147)", "memo": "Paras 1-2 selected (94 words). Opened Set Line Spacing dropdown at (1425,147). Next: click 'Double' entry in the popup menu. Do NOT use Ctrl+2 (=Heading 2 in LO). Then Ctrl+S and press Enter/'Use Word 2007-365!' to keep .docx format."}

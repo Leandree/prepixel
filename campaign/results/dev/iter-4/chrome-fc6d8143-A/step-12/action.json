@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1069, 620); time.sleep(1)", "memo": "Clicked Aug 21 (tomorrow) in calendar. Next: click 'Done' (1398,749), then 'Find Flights' (1487,297) and wait for results."}

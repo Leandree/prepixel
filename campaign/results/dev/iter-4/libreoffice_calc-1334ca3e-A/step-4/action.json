@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(2)", "memo": "Zoom changed 260%->100% (status bar confirms). Just pressed Ctrl+S; expect 'Keep current format' dialog -> click 'Use Excel 2007-365!' button. Then verify title has no modified marker and DONE."}

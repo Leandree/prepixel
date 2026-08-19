@@ -1,0 +1,5 @@
+```json
+{"action":"set_value","target":"e14","value":"https://www.accuweather.com/en/gb/manchester/329260/monthly-weather/329260"}
+```
+
+Memo for next step: Previous URL guess (`/M3/monthly-weather/`) 404'd. Trying the location-key form `/en/gb/manchester/329260/monthly-weather/329260`, which AccuWeather normally redirects to the canonical postal-code URL. If this also 404s, go back to `https://www.accuweather.com/en/search-locations?query=Manchester` and click the "Manchester, ENG GB" result (the notification-permission dialog that was likely blocking earlier clicks is now dismissed), then click the "Monthly" tab on the location page.

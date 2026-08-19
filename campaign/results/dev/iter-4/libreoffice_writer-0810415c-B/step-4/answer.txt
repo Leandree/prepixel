@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"shift+ctrl+down","memo":"Selection should now be doc-start -> start of para3. Next: shift+ctrl+right to extend INTO para3 (so paras 1-3 covered, para4 untouched), then ctrl+2 for double spacing, then ctrl+s + Enter (Keep current format .docx). Verify status bar char count grows past 349+."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e319","memo":"Clicked 'Add all DLC to Cart' (e319) in the 'Content For This Game' section of the Steam Dota 2 page (2 DLC: Official Soundtrack 8,19€ + Remixes EP Free, total 8,19€). Next: verify cart shows the DLC items (cart count / cart page), then done."}
+```

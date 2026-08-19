@@ -1,0 +1,1 @@
+{"action": "FAIL", "memo": "Task is infeasible: screen is a bare Ubuntu desktop \u2014 no image is open and no audio file/player is present. An image cannot contain a 'hidden audio conversation' to translate, and no output destination is specified. Declared FAIL at step 1."}

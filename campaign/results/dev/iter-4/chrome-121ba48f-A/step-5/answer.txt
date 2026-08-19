@@ -1,0 +1,7 @@
+The Dota 2 store page is loaded cleanly. Now I need to scroll down to the "Downloadable Content for this game" section.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(950, 600); time.sleep(0.5); pyautogui.scroll(-15); time.sleep(1); pyautogui.scroll(-15); time.sleep(1.5)"}
+```
+
+{"action": "import pyautogui, time; pyautogui.moveTo(950, 600); time.sleep(0.3); pyautogui.scroll(-15); time.sleep(1); pyautogui.scroll(-15); time.sleep(1.5)", "memo": "Step5: On /app/570 Dota_2 page, cookie banner gone, page loaded fine. Scrolled down ~30 notches looking for 'Downloadable Content for this game' section. Known DLC: Dota 2 Remixes EP (Free) + Dota 2 Official Soundtrack (8,19EUR). Next: locate Add to Cart buttons in DLC section and click each."}

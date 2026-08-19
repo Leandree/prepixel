@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(637, 898)", "memo": "Simple Prefs had no 'Play and exit'. Clicked 'All' radio (637,898) to show advanced prefs tree. Next: in left tree select 'Playlist' (may need scroll), then uncheck 'Play and exit' on right, then Save (1210,903)."}

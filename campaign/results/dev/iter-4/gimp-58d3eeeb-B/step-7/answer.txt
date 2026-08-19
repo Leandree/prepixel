@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e13","memo":"Step7: reading output of sig scan + /tmp/a.bin carve (file type, hex header, strings). If a.bin is an archive/audio, extract; if audio, I still need a TEXT transcript (no hearing) - look for subtitle/text payload or use speech tool if present."}
+```

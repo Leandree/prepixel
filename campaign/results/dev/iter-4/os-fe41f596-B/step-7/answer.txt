@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e87","memo":"Ran gsettings show-battery-percentage true (step 5-6). Now cropping top-right System menu e87 to check whether a battery % now renders in the top bar. If crop unsupported on non-[pixels] elements, next verify via Settings>Power panel toggle instead. VM may have no battery device."}
+```

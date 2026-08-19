@@ -1,0 +1,48 @@
+e1 text 48,8,952,774 "New Tab - Google Chrome"
+e2 push-button 1846,27,30,35 "Minimise"
+e3 push-button 1842,27,30,35 "Restore"
+e4 push-button 1882,27,38,35 "Close"
+e5 push-button 76,27,28,41 "Search tabs"
+e6 page-tab 98,27,256,41 "New Tab" state=selected
+e7 push-button 312,33,28,28 "Close"
+e8 push-button 348,27,28,41 "New Tab"
+e9 push-button 70,73,39,34 "Back"
+e10 push-button 111,73,34,34 "Forward"
+e11 push-button 147,73,34,34 "Reload"
+e12 text 195,78,24,24 "Search icon"
+e13 entry 227,78,1565,24 "Address and search bar" state=focused
+e14 push-button 1800,78,24,24 "Bookmark this tab"
+e15 push-button 1845,73,34,34 "You"
+e16 push-button 1881,73,39,34 "Chrome"
+e17 toggle-button 0,0,99,27 "Activities" state=checked:false
+e18 menu 99,0,162,27 "Google Chrome"
+e19 menu 906,0,178,27 "Aug 20 02‎∶36"
+e20 menu 1814,0,106,27 "System"
+e21 push-button 0,840,70,8
+e22 push-button 62,33,8,815
+e23 push-button 0,33,70,64 "Google Chrome"
+e24 push-button 0,101,70,64 "Thunderbird Mail"
+e25 push-button 0,169,70,64 "Visual Studio Code"
+e26 push-button 0,237,70,64 "VLC media player"
+e27 push-button 0,305,70,64 "LibreOffice Writer"
+e28 push-button 0,373,70,64 "LibreOffice Calc"
+e29 push-button 0,441,70,64 "LibreOffice Impress"
+e30 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e31 push-button 0,577,70,64 "Files"
+e32 push-button 0,645,70,64 "Ubuntu Software"
+e33 push-button 0,713,70,64 "Help"
+e34 push-button 0,784,70,64 "Trash"
+e35 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e36 [pixels] image 70,114,1850,966
+e37 [pixels] image 859,246,272,92
+e38 combo-box 622,376,746,48 "Search Google or type a URL" [occluded]
+e39 push-button 1289,376,26,48 "Search by voice" [occluded]
+e40 push-button 1326,376,26,48 "Search by image" [occluded]
+e41 link 883,442,112,112 "Web Store" [occluded]
+e42 [pixels] image 927,470,24,24
+e43 text 909,522,59,15 "Web Store"
+e44 push-button 995,442,112,112 "Add shortcut" [occluded]
+e45 text 1013,522,75,15 "Add shortcut"
+e46 push-button 1737,1032,167,32 "Customise this page"
+e47 text 1777,1040,111,15 "Customise Chrome"
+e48 [pixels] image 70,1080,300,150

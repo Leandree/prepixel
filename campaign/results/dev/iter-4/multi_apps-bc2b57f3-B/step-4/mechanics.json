@@ -1,0 +1,36 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 143,
+  "rect": [
+   70,
+   166,
+   1779,
+   868
+  ],
+  "doc": "text",
+  "doc_role": "document-text",
+  "atspi_records_replaced": 612,
+  "uno_records": 17,
+  "url": "file:///home/user/Desktop/reminder.docx"
+ },
+ "history_views": 2,
+ "history_views_dropped": 1,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.click"
+ },
+ "rung": 1,
+ "rung1_method": "Action.click",
+ "settle_ms": 12755,
+ "settle_captures": 1,
+ "guard_ms": 93
+}

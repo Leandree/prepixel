@@ -1,0 +1,5 @@
+The dialog is dismissed and the macro reported the correct order. Now I'll switch back to the Calc workbook via the Window menu to visually confirm the tab order.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(389, 76); time.sleep(1.5)", "memo": "Window menu opened in Basic IDE. Pick 'workbook-with-sample-database.xlsx - LibreOffice Calc' entry to verify tab order: ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Doc already stored by macro."}
+```

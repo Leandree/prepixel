@@ -1,0 +1,3 @@
+The ORD suggestion list is showing; "ORD Chicago-O'Hare, IL" is the first row.
+
+{"action": "import pyautogui; pyautogui.click(571, 533)", "memo": "Clicked 'ORD Chicago-O'Hare, IL' suggestion. Next: verify To=ORD, then trip type dropdown (851,297)->One Way, then date field (1135,297) -> pick Aug 21 2026 (tomorrow; VM clock shows Aug 20 2026), then click Find Flights (1487,297)."}

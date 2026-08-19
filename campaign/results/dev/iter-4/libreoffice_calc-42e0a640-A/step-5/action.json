@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter')", "memo": "Step 5: Sheet2 verified - A1/B1 headers, A2=867786, B2=411686. Pressed Ctrl+S + Enter to Keep xlsx format. Next: verify title bar has no modified marker / no dialog remains, then DONE."}

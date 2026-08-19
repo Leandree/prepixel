@@ -1,0 +1,31 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 98,
+  "rect": [
+   70,
+   247,
+   1428,
+   799
+  ],
+  "doc": "impress",
+  "doc_role": "document-presentation",
+  "atspi_records_replaced": 26,
+  "uno_records": 3,
+  "url": ""
+ },
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 4151,
+ "settle_captures": 2,
+ "guard_ms": 43
+}

@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"clear && python3 -c 'd=open(\"heron.jpeg\",\"rb\").read();S=[b\"RIFF\",b\"ID3\",b\"OggS\",b\"fLaC\",b\"PK\\x03\\x04\",b\"\\x1aE\\xdf\\xa3\",b\"ftyp\"];print([(s[:4],d.find(s)) for s in S]);i=d.rfind(b\"\\xff\\xd9\")+2;open(\"/tmp/a.bin\",\"wb\").write(d[i:]);print(\"tail\",len(d)-i)'; file /tmp/a.bin; head -c 48 /tmp/a.bin | xxd; strings -n 8 /tmp/a.bin | head -15\n","memo":"Step6: sig scan + carved tail after EOI to /tmp/a.bin; printed file type, first 48 bytes hex, strings. Next: crop terminal to read results, then decide (unzip / ffprobe / play). Remember: I cannot hear audio - need a text transcript or speech-to-text tool."}
+```

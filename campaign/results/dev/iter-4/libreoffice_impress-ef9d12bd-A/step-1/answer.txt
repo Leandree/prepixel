@@ -1,0 +1,5 @@
+The slide panel is indeed missing on the left. I'll open the View menu to restore it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Opened View menu to find 'Slide Pane' toggle; next click that entry to restore left panel."}
+```

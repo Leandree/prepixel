@@ -1,0 +1,1 @@
+{"action":"click","target":"e51","memo":"Bookmark manager open; list showed 0 items (unclear which folder was selected). Clicked 'Bookmarks bar' folder to see its contents. NEXT: check if 'The Illustrated Transformer' is listed. If not, check 'Other bookmarks' (e53) and move it to Bookmarks bar. Then ctrl+w and return to article tab e7."}

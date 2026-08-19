@@ -1,0 +1,43 @@
+{
+ "task_id": "42e0a640-4f19-4b28-973d-729602b5a4a7",
+ "domain": "libreoffice_calc",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "5d0535177d9036c7790501e816131a0a04df8bda",
+ "vm_image": "/home/leandre/dev/OSWorld/docker_vm_data/Ubuntu-uno.qcow2",
+ "success": true,
+ "score_raw": 1.0,
+ "steps": 9,
+ "termination": "DONE",
+ "wall_clock_s": 335.7,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 62,
+  "cache_creation_input_tokens": 82505,
+  "cache_read_input_tokens": 177552,
+  "output_tokens": 13237,
+  "cost_usd": 1.245061,
+  "attempts": 9,
+  "steps_with_usage": 9,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "WAIT",
+  "import pyautogui; pyautogui.click(195, 1045)",
+  "import pyautogui; pyautogui.click(151, 314); pyautogui.write('Total Revenue\tTotal Expenses\n'); pyautogui.write('=SUM(Sheet1.A2:A20)\t=SUM(Sheet1.B2:B20)\n')",
+  "import pyautogui, time; pyautogui.click(151, 314); time.sleep(1); pyautogui.write('Total Revenue', interval=0.05); pyautogui.press('tab'); time.sleep(0.3); pyautogui.write('Total Expenses', interval=0.05); pyautogui.press('enter'); time.sleep(0.5); pyautogui.click(151, 331); time.sleep(0.5); pyautogui.write('=SUM(Sheet1.A2:A20)', interval=0.05); pyautogui.press('tab'); time.sleep(0.3); pyautogui.write('=SUM(Sheet1.B2:B20)', interval=0.05); pyautogui.press('enter')",
+  "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2); pyautogui.press('enter')",
+  "import pyautogui, time; pyautogui.click(243, 1045); time.sleep(1); pyautogui.hotkey('ctrl','end')",
+  "import pyautogui, time; pyautogui.click(307, 1045); time.sleep(1.2); pyautogui.click(140, 186); time.sleep(0.5); pyautogui.write('A2\\n'); time.sleep(0.8); pyautogui.write('867786\\t411686\\n', interval=0.05); time.sleep(0.8); pyautogui.hotkey('ctrl','s'); time.sleep(2.5); pyautogui.press('enter')",
+  "import pyautogui, time; pyautogui.hotkey('ctrl','s'); time.sleep(2.5); pyautogui.press('enter'); time.sleep(2); pyautogui.click(140, 186); time.sleep(0.5); pyautogui.write('A1\\n'); time.sleep(0.8)",
+  "DONE"
+ ]
+}

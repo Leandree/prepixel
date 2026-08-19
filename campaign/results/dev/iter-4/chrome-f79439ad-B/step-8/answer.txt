@@ -1,0 +1,1 @@
+{"action":"click","target":"e176","memo":"From=Dublin confirmed. To field focused; destination panel open, clicked 'Austria' country. Next: click 'Vienna' in airport list (right column), then set date 10 Sep 2026, 2 adults, verify 'One way' tab active (e72), then Search (e83)."}

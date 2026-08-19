@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.press('right'); time.sleep(1.0)", "memo": "Filters>Light and Shadow highlighted; pressed Right to open submenu via keyboard. Next: verify submenu appeared, then click 'Vignette' (near bottom of Light and Shadow list). If keyboard nav works, could also type 'v'/use Down arrows + Enter."}

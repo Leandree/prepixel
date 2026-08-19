@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(222, 47)", "memo": "Task: find 'Next Available' dates for Diamond. Step1: Chrome open, tab2=about:blank(loading), clicked tab1 'New Tab' to see if target site is preloaded. If it's just a blank new tab, need to identify site (likely a booking/reservation site listing 'Diamond' tier/site with 'Next Available' column)."}

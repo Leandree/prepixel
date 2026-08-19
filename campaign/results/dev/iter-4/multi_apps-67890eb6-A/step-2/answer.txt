@@ -1,0 +1,5 @@
+The terminal didn't launch — my keystrokes went into Chrome instead of the Activities overview. Retrying with an explicit click on Activities first.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(48, 13); time.sleep(2); pyautogui.write('terminal'); time.sleep(2); pyautogui.press('enter'); time.sleep(3)", "memo": "Step2: super+type failed (went to Chrome; no terminal in dock). Now clicking Activities(48,13) then typing 'terminal'+enter. If terminal opens: run python3 heredoc w/ openpyxl to write ~/Desktop/best_awards_acl.xlsx. Data: 2022 Learned Incremental Representations for Parsing / Nikita Kitaev, Thomas Lu, Dan Klein / 2022.acl-long.220; 2021 VOLT Vocabulary Learning via Optimal Transport for NMT / Jingjing Xu, Hao Zhou, Chun Gan, Zaixiang Zheng, Lei Li / 2021.acl-long.571; 2020 CheckList Beyond Accuracy / Marco Tulio Ribeiro, Tongshuang Wu, Carlos Guestrin, Sameer Singh / 2020.acl-main.442; 2019 Bridging the Gap between Training and Inference for NMT / Wen Zhang, Yang Feng, Fandong Meng, Di You, Qun Liu / P19-1426. Verify with curl. If no terminal app, fall back to LibreOffice Calc icon in dock (35,405)."}
+```

@@ -1,0 +1,1 @@
+{"action":"key","keys":"enter","memo":"Pressed Enter to confirm Zoom dialog after typing 100 into Variable spin (guard still showed 260.0 - may not have taken). Next: check e151 status bar zoom %; if still 260%, reopen View>Zoom and pick the 100% radio instead of typing."}

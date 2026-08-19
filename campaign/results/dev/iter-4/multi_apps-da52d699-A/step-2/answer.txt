@@ -1,0 +1,5 @@
+Data spans rows 2–11 (10 books). Columns G/H/I hold unlabeled numbers (looks like word count, days, and words/day) — I'll treat those as unverified for now. First I need the full, untruncated titles, so I'll auto-fit column A by double-clicking the A/B header border.
+
+```json
+{"action": "import pyautogui; pyautogui.doubleClick(254, 296)", "memo": "10 books rows2-11. Cols: A Title,B Author,C Genre,D Start,E End,F Rating; G=wordcount?,H=days,I=G/H (unlabeled, verify vs howlongtoread). I-col min = Out of the Silent Planet 1328.9, next Silence 1984, Song of Solomon 2105. Just auto-fit col A to read full titles. Then confirm on howlongtoread.com, write title into book_list_result.docx on Desktop."}
+```

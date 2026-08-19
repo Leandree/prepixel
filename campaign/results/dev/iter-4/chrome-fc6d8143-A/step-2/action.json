@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(808, 587)", "memo": "Delta.com loaded (delta.com/fr/en). Step2: clicked 'France - English' to close welcome modal. Next: close cookie banner (Accept All at ~690,1022) and Chrome update popup (X at ~1890,139). Then set From=JFK (click NTE ~486,297), To=ORD, trip=One Way (~858,297), date Aug 21 2026(tomorrow; clock Aug 20)."}

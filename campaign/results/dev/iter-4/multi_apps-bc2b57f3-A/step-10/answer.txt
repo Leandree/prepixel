@@ -1,0 +1,5 @@
+The reorder macro ran successfully (msgbox at step 8 confirmed the exact target order and `oDoc.store()` saved it). Now I'll re-open reminder.docx to confirm no other requirement was missed.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(497, 152); time.sleep(2.5)", "memo": "Reorder DONE+saved (msgbox step8 confirmed: ReadMe|Raw_data|Beans|Millet|Sorghum|Mkt Gotheye|Mkt Mangaize|Mkt Ouallam|Mkt Tera|Millet spatial integration). Now viewing reminder.docx to re-verify requirements. If only reordering is required -> DONE."}
+```

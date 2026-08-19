@@ -1,0 +1,39 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I am preparing a PPT in Libreoffice impress. The slide number is barely visible to me. Please help me change the color of the slide number to red?
+
+STEP 8 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. WAIT
+2. import pyautogui; pyautogui.click(484, 76)
+3. import pyautogui; pyautogui.click(513, 405)
+4. import pyautogui; pyautogui.click(833, 430)
+5. import pyautogui; pyautogui.click(900, 300); pyautogui.hotkey('ctrl','a'); pyautogui.press('delete'); pyautogui.write('Sub FixNum\nDim oDoc\noDoc = ThisComponent\nCall SetRed(oDoc.getDrawPages())\nCall SetRed(oDoc.getMasterPages())\noDoc.store()\nMsgBox "OK"\nEnd Sub\n\nSub SetRed(oPages)\nDim i, j, oPage, oShape\nFor i = 0 To oPages.getCount()-1\noPage = oPages.getByIndex(i)\nFor j = 0 To oPage.getCount()-1\noShape = oPage.getByIndex(j)\nIf oShape.supportsService("com.sun.star.presentation.SlideNumberShape") Then\noShape.CharColor = RGB(255,0,0)\nEnd If\nNext j\nNext i\nEnd Sub\n', interval=0.01); pyautogui.press('f5')
+6. import pyautogui, time; pyautogui.click(1188, 819); time.sleep(1); pyautogui.click(600, 208); time.sleep(0.5); pyautogui.press('f5')
+7. import pyautogui, time; pyautogui.click(995, 591); time.sleep(1); pyautogui.click(900, 300); pyautogui.hotkey('ctrl','a'); pyautogui.press('delete'); pyautogui.write('Sub CheckNum\nDim oDoc, oPages, oPage, oShape, i, j, k, n, s\noDoc = ThisComponent\nn = 0\ns = ""\nFor k = 0 To 1\nIf k = 0 Then\noPages = oDoc.getDrawPages()\nElse\noPages = oDoc.getMasterPages()\nEnd If\nFor i = 0 To oPages.getCount()-1\noPage = oPages.getByIndex(i)\nFor j = 0 To oPage.getCount()-1\noShape = oPage.getByIndex(j)\nIf oShape.supportsService("com.sun.star.presentation.SlideNumberShape") Then\nn = n + 1\ns = s & "k" & k & " pg" & i & " col=" & Hex(oShape.CharColor) & Chr(10)\nEnd If\nNext j\nNext i\nNext k\nMsgBox "count=" & n & Chr(10) & s\nEnd Sub\n', interval=0.01); time.sleep(0.5); pyautogui.press('f5')
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Ran FixNum -> MsgBox OK (store succeeded). Now running CheckNum to verify: expect MsgBox 'count=N' + per-shape Hex CharColor. Want count>0 and col=FF0000. If count=0, no SlideNumberShape exists -> must insert/color slide number field on master (View>Master, or Insert>Header&Footer to enable slide nu
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter4/libreoffice_impress-ac9bb6cb-A/_pixels/step-8/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter4/libreoffice_impress-ac9bb6cb-A/_pixels/step-5/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/libreoffice_impress-ac9bb6cb-A/_pixels/step-6/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/libreoffice_impress-ac9bb6cb-A/_pixels/step-7/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

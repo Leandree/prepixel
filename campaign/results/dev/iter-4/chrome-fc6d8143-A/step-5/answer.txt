@@ -1,0 +1,3 @@
+The origin search panel is open with "NTE" pre-selected in the input. I'll replace it with JFK.
+
+{"action": "import pyautogui; pyautogui.click(620, 473); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('JFK', interval=0.15)", "memo": "Origin panel open; typed JFK into Origin field. Next: click the 'JFK New York-Kennedy' suggestion row (~appears at y≈534, x≈545). Then To field (636,297) -> type ORD -> pick Chicago O'Hare. Trip type dropdown (851,297) -> One Way. Date: tomorrow = Aug 21 2026. Then Find Flights (1487,297)."}

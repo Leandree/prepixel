@@ -1,0 +1,86 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 646,364,600,420 "VLC media player"
+e4 menu-item 652,364,44,20 "Media"
+e5 menu-item 702,364,62,20 "Playback"
+e6 menu-item 770,364,43,20 "Audio"
+e7 menu-item 819,364,42,20 "Video"
+e8 menu-item 867,364,55,20 "Subtitle"
+e9 menu-item 928,364,38,20 "Tools"
+e10 menu-item 972,364,37,20 "View"
+e11 menu-item 1015,364,36,20 "Help"
+e12 text 646,732,44,18 "--:--"
+e13 slider 690,732,512,18 value="0.0"
+e14 text 1202,732,44,18 "--:--"
+e15 [pixels] image 1128,767,16,16
+e16 slider 1144,757,85,26 value="0.0"
+e17 [pixels] unknown 1229,766,17,17
+e18 push-button 649,751,32,32
+e19 push-button 693,754,26,26
+e20 push-button 719,754,26,26
+e21 push-button 745,754,26,26
+e22 push-button 783,754,26,26
+e23 push-button 809,754,26,26
+e24 push-button 847,754,26,26
+e25 check-box 873,754,26,26 state=checked:false
+e26 check-box 899,754,26,26 state=checked:false
+e27 text 546,224,800,700 "Advanced Preferences"
+e28 list-item 0,0,753,23 "Never"
+e29 list-item 0,23,753,23 "When minimized"
+e30 list-item 0,46,753,23 "Always"
+e31 list-item 0,0,753,23 "System's default"
+e32 list-item 0,25,753,23 "Windows"
+e33 list-item 0,48,753,23 "Fusion"
+e34 list-item 0,23,753,23 "Video"
+e35 list-item 0,46,753,23 "Audio"
+e36 list-item 0,69,753,23 "Audio/Video"
+e37 list-item 0,23,753,23 "Ask"
+e38 text 890,274,445,15 "Advanced settings. Use with care..."
+e39 text 890,235,445,24 "Advanced settings"
+e40 text 899,304,427,65 "Special modules"
+e41 text 911,334,199,23 "VoD server module"
+e42 combo-box 1139,334,175,23 "Automatic"
+e43 list-item 0,23,753,23 "RTSP VoD server"
+e44 list-item 0,46,753,23 "Legacy RTSP VoD server"
+e45 list-item 0,69,753,23 "Disable"
+e46 text 899,375,427,119 "Plugins"
+e47 check-box 911,406,142,19 "Use a plugins cache" state=checked:true
+e48 check-box 911,433,148,19 "Scan for new plugins" state=checked:true
+e49 text 911,459,132,23 "Preferred keystore list"
+e50 text 1189,459,125,23 "Preferred keystore list"
+e51 text 899,500,427,93 "Performance options"
+e52 check-box 911,531,159,19 "Allow real-time priority" state=checked:false
+e53 text 911,557,112,24 "Adjust VLC priority"
+e54 spin-button 1224,557,90,24 "Adjust VLC priority" value="0.0"
+~e55 text 564,242,311,21 "cone"
+e56 check-box 564,270,132,19 "Only show current" state=checked:false
+~e57 table-cell 585,297,289,27 "Interface" state=expanded
+~e58 table-cell 605,324,269,27 "Main interfaces" state=expanded
+~e59 table-cell 625,351,249,27 "Qt"
+e60 [pixels] unknown 884,233,4,625
+e61 text 555,864,121,51 "Show settings"
+e62 radio-button 561,889,64,19 "Simple" state=checked:false
+e63 radio-button 630,889,38,19 "All" state=checked:true,focused
+e64 push-button 1171,891,80,24 "Save"
+e65 push-button 1257,891,80,24 "Cancel"
+e66 push-button 688,891,136,24 "Reset Preferences"
+e67 toggle-button 0,0,99,27 "Activities" state=checked:false
+e68 menu 99,0,173,27 "VLC media player"
+e69 menu 906,0,178,27 "Aug 20 02‎∶05"
+e70 menu 1774,0,40,27 "vlc"
+e71 menu 1814,0,106,27 "System"
+e72 push-button 0,840,70,8
+e73 push-button 62,33,8,815
+e74 push-button 0,33,70,64 "Google Chrome"
+e75 push-button 0,101,70,64 "Thunderbird Mail"
+e76 push-button 0,169,70,64 "Visual Studio Code"
+e77 push-button 0,237,70,64 "VLC media player"
+e78 push-button 0,305,70,64 "LibreOffice Writer"
+e79 push-button 0,373,70,64 "LibreOffice Calc"
+e80 push-button 0,441,70,64 "LibreOffice Impress"
+e81 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e82 push-button 0,577,70,64 "Files"
+e83 push-button 0,645,70,64 "Ubuntu Software"
+e84 push-button 0,713,70,64 "Help"
+e85 push-button 0,784,70,64 "Trash"
+e86 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

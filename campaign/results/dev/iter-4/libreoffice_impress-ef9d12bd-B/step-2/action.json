@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "View menu is open but the structure only lists the 7 view-mode radio items; the toggles (Slide Pane / .uno:LeftPaneImpress) further down aren't exposed yet. Waiting for the popup to fully populate. If still missing next step, arrow-key down through the menu or look for a 'Slide Pane' check item."}

@@ -1,0 +1,1 @@
+{"action":"key","keys":"enter","memo":"Step 15/15: pressed Enter to commit the address-bar URL (accuweather.com/en/gb/manchester/M3/august-weather/329260?year=2026). Task NOT verified complete — the monthly calendar was never confirmed on screen; the AccuWeather tab was last showing a 404 page."}

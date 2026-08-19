@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(990, 604)", "memo": "Tools menu was open; clicked Preferences (990,604). Next: Preferences dialog opens on Interface tab -> uncheck 'Play and exit' checkbox in Playlist and Instances section, then click Save (bottom right)."}
+```

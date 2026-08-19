@@ -1,0 +1,5 @@
+The save dialog is in the Blog folder with the full path in the Name field, and tab 1's PDF (6.4 MB) is confirmed saved. Clicking Save now.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1375, 389); time.sleep(4)", "memo": "Tab1 'LLM Powered Autonomous Agents.pdf' confirmed saved (6.4MB) in /home/user/Documents/Blog. Tab2 'Thinking about High-Quality Human Data': clicked Save in GTK dialog with full path. Next: verify dialog closed & PDF written (may take secs for 18 pages). Only 2 tabs -> then DONE."}
+```

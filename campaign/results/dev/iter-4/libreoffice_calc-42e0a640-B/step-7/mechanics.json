@@ -1,0 +1,31 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 112,
+  "rect": [
+   111,
+   306,
+   1738,
+   716
+  ],
+  "doc": "calc",
+  "doc_role": "document-spreadsheet",
+  "atspi_records_replaced": 946,
+  "uno_records": 5,
+  "url": "file:///home/user/NetIncome.xlsx"
+ },
+ "history_views": 3,
+ "history_views_dropped": 3,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 4078,
+ "settle_captures": 1,
+ "guard_ms": 87
+}

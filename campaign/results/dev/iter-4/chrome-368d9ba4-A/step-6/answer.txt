@@ -1,0 +1,5 @@
+Results loaded. Clicking the "Manchester, ENG GB" entry (the UK city, not the airport).
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(546, 338); time.sleep(3)", "memo": "Step6: clicked 'Manchester, ENG GB' in accuweather search results. Next: wait for city weather page, then click MONTHLY tab in the forecast nav bar (Today/Hourly/Daily/Monthly/Radar, near top ~y=230-260). Never use newline in write(); use press('enter')."}
+```

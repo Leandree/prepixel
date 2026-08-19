@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e87", "memo": "Checking the top-right System indicator area: if the battery percentage (e.g. '100%') is rendered next to the battery icon, the gsettings change took effect and the task is done. If the area shows only icons with no % (no battery in VM), rely on the gsettings value being true and answer done."}

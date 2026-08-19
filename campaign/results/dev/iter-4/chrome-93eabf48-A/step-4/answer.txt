@@ -1,0 +1,5 @@
+The flag page is loaded with "Auto Dark Mode for Web Contents" highlighted at `Default`. I'll open its dropdown to pick `Disabled`.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1257, 222); pyautogui.sleep(1)", "memo": "Task: disable Chrome dark mode. Appearance page (Linux) has NO Light/Dark selector. On chrome://flags/#enable-force-dark; 'Auto Dark Mode for Web Contents' dropdown at (1257,222) was Default. Just opened it -> select 'Disabled' option, then click 'Relaunch' button at bottom-right of flags page."}
+```

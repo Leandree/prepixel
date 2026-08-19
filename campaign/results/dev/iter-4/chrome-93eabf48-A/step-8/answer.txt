@@ -1,0 +1,3 @@
+The update bubble is dismissed and the flag state is confirmed persisted after the relaunch: **Auto Dark Mode for Web Contents** (`#enable-force-dark`) shows **Disabled** with the blue "modified" dot, and no relaunch banner remains — meaning the running Chrome instance is already using the setting.
+
+{"action": "DONE", "memo": "Task complete: #enable-force-dark set to Disabled, Chrome relaunched, setting active, update bubble dismissed."}

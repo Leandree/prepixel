@@ -1,0 +1,45 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 697,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 190,
+  "cdp_records": 217,
+  "offscreen": 60,
+  "url": "https://www.ryanair.com/gb/en",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 3110,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "Official Ryanair website | Book direct for the lowest fares | Ryanair.com"
+ },
+ "cdp_offscreen_skipped": 243,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 7,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung1_error": "cdp: page.evaluate: TypeError: el.click is not a function\n    at inPage (eval at evaluate (:290:30), <anonymous>:72:6)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1271,
+  599
+ ],
+ "settle_ms": 4951,
+ "settle_captures": 1,
+ "guard_ms": 59
+}

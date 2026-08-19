@@ -1,0 +1,1 @@
+{"action":"click","target":"e25","memo":"System menu is open; clicked Settings (e25). Next: in Settings window go to Power panel, then toggle 'Show Battery Percentage' on. Fallback: gsettings set org.gnome.desktop.interface show-battery-percentage true via terminal."}

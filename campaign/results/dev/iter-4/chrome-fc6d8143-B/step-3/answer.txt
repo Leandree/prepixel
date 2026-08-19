@@ -1,0 +1,1 @@
+{"action":"click","target":"e90","memo":"Clicked Origin (was NTE Nantes). Expect origin search overlay with a text input -> type JFK, pick New York-Kennedy. Then Destination -> ORD Chicago O'Hare; Trip Type e97 -> One Way; date field e100 -> Aug 20 2026 (tomorrow); then Find Flights e107."}

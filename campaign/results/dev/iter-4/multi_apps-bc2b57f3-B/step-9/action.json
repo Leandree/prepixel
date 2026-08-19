@@ -1,0 +1,1 @@
+{"action": "key", "keys": "Return", "memo": "Basic IDE: ctrl+a in code pane, type then F5:\nSub F\ns=ThisComponent.Sheets\nn=Array(\"ReadMe\",\"Raw_data\",\"Beans\",\"Millet\",\"Sorghum\",\"Mkt Gotheye\",\"Mkt Mangaize\",\"Mkt Ouallam\",\"Mkt Tera\",\"Millet spatial integration\")\nFor i=0 To 9\ns.moveByName(n(i),i)\nNext\nThisComponent.store()\nEnd Sub"}

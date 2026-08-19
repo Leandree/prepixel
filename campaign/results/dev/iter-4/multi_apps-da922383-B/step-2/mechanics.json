@@ -1,0 +1,44 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 555,
+  "rect": [
+   499,
+   110,
+   587,
+   15003
+  ],
+  "atspi_records_replaced": 21,
+  "cdp_records": 117,
+  "offscreen": 60,
+  "url": "https://lilianweng.github.io/posts/2024-02-05-human-data-quality/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 17714,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "Thinking about High-Quality Human Data | Lil'Log"
+ },
+ "cdp_offscreen_skipped": 1289,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 1,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.press"
+ },
+ "rung": 1,
+ "rung1_method": "Action.press",
+ "settle_ms": 7087,
+ "settle_captures": 2,
+ "guard_ms": 63
+}

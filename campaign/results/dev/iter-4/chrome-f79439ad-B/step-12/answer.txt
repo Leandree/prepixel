@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"escape","memo":"Adults still 1 (prev + click missed; destination panel had reopened). After escape closes destination tooltip: click Passengers button (was e86, 996,358), then + next to Adults (~1259,587), then Search (~1286,358) — Search is not occluded by passenger panel, so skip Done."}
+```

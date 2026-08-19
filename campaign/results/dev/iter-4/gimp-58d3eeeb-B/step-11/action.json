@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e13", "memo": "Step11: reading output of step-10 probe: /tmp/a.bin type+size, its strings, transcript-ish strings in heron.jpeg, Desktop listing. If a text transcript exists -> read it and translate to French. If only raw audio and no ASR available -> fail (cannot hear audio). 4 steps left."}

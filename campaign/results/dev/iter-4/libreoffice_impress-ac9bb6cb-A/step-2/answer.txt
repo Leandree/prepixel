@@ -1,0 +1,5 @@
+Impress is fully loaded with a 15-slide deck. Editing each slide's number placeholder by hand isn't feasible in the remaining steps, so I'll use a Basic macro. Opening the Tools menu.
+
+```json
+{"action": "import pyautogui; pyautogui.click(484, 76)", "memo": "Loaded: saa-format-guide.pptx, 15 slides. Plan: Tools > Macros > Edit Basic, write Basic macro looping DrawPages+MasterPages, set CharColor=RGB(255,0,0) on shapes supporting com.sun.star.presentation.SlideNumberShape, MsgBox count, then oDoc.store(). Just clicked Tools menu."}
+```

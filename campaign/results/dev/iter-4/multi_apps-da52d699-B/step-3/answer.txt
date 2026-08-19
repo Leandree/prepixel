@@ -1,0 +1,1 @@
+{"action":"key","keys":"enter","memo":"Answer='Out of the Silent Planet' (I7=1328.89 min). Pressed Enter in Open dialog to load ~/Desktop/book_list_result.docx in Writer. Next: wait for Writer, click into document body, type the title, then Ctrl+S and choose 'Use Word 2007-365!'."}

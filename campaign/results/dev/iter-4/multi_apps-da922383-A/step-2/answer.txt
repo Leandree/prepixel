@@ -1,0 +1,5 @@
+Tab 1 is loaded ("LLM Powered Autonomous Agents") and tab 2 now shows "Thinking about High-Qu...". Opening the print dialog for tab 1.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 'p')", "memo": "Tab1='LLM Powered Autonomous Agents' (tab x=220,y=47), Tab2='Thinking about High-Qu...' (x=460,y=47). Just pressed Ctrl+P on tab1. Next: in Chrome print preview set Destination=Save as PDF, click Save, then in GTK dialog type full path /home/user/Documents/Blog/LLM Powered Autonomous Agents.pdf (create Blog folder if missing)."}
+```

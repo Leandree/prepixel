@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1833, 45)", "memo": "ANSWER = 'Out of the Silent Planet' (47840w/36d = 1328.9 wpd; next lowest Silence 1984). Data read complete, no need to reopen Calc. Just minimized Calc to reach desktop -> find & double-click 'book_list_result.docx' icon on desktop, type title in Writer, Ctrl+S, Keep current format (docx)."}

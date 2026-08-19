@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e157","memo":"Dismissed color-profile dialog with 'Keep' (no image modification). Image dog_with_background.png is open in GIMP. Next: click Filters menu (e40), then 'Light and Shadow' > 'Vignette'."}
+```

@@ -1,0 +1,3 @@
+Checkbox is still checked — my last click landed after the pane finished scrolling, so it hit a spinbox instead. Clicking the actual checkbox at its current position.
+
+{"action": "import pyautogui; pyautogui.click(906, 679)", "memo": "Clicked 'Display background cone or art' checkbox at its CURRENT position (906,679) in Qt interface prefs. Prior click at y=783 missed (pane had scrolled 104px late). Next: verify checkbox is now UNCHECKED in screenshot; if unchecked, click Save at (1210, 903). If still checked, re-locate and click again."}

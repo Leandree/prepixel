@@ -1,0 +1,39 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find flights from New York–Kennedy Airport to Chicago O'Hare Airport for tomorrow.
+
+STEP 8 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. WAIT
+2. import pyautogui; pyautogui.click(808, 587)
+3. import pyautogui; pyautogui.click(690, 1022)
+4. import pyautogui; pyautogui.click(479, 297)
+5. import pyautogui; pyautogui.click(620, 473); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('JFK', interval=0.15)
+6. import pyautogui; pyautogui.click(571, 533)
+7. import pyautogui, time; pyautogui.click(636, 297); time.sleep(2.5); pyautogui.write('ORD', interval=0.2)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Origin=JFK set. Just clicked 'To' (636,297) and typed ORD in the destination search panel. Next: click the 'ORD Chicago-O'Hare, IL' suggestion (~first row at y≈533, x≈571). Then trip type dropdown (851,297)->One Way, date picker (1135,297)-> Aug 21 2026 (tomorrow; VM clock Aug 20). Then Find Flights
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter4/chrome-fc6d8143-A/_pixels/step-8/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter4/chrome-fc6d8143-A/_pixels/step-5/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/chrome-fc6d8143-A/_pixels/step-6/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/chrome-fc6d8143-A/_pixels/step-7/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

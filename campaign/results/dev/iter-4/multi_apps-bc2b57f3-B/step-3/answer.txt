@@ -1,0 +1,1 @@
+{"action":"key","keys":"Return","memo":"Pressed Enter in GTK Open dialog with ~/Desktop/reminder.docx. Next: wait/observe for Writer window with reminder.docx, read requirements via [uno] paragraphs, then apply to workbook-with-sample-database.xlsx (Calc, 10 sheets, Mkt Tera active)."}

@@ -1,0 +1,798 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: I browsed a lot of interesting blog articles today. I hope to store these articles in my local designated folder just like zotero stores papers. Please download the blogs opening now in pdf format and save them in their title to /home/user/Documents/Blog.
+
+STEP 15 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. key ctrl+p
+2. click push-button "Save"
+3. wait
+4. wait
+5. key ctrl+a
+6. type "/home/user/Documents/Blog/Thinking about High-Quality Human Data.pdf"
+7. key enter
+8. wait
+9. key enter
+10. click page-tab "LLM Powered Autonomous Agents | Lil'Log - Memory usage - 49.6 MB"
+11. key ctrl+p
+12. wait
+13. key ctrl+p
+14. key ctrl+p
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Tab1 (LLM Powered Autonomous Agents): ctrl+p at steps 11/13 never exposed the print dialog (focus stayed on document-web). Pressed ctrl+p again at step 14. NEXT (step 15): if print preview appears, click 'Save' (~1534,881), then Enter in the GTK dialog to accept default name 'LLM Powered Autonomous 
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value.
+`[uno] …` lines are the document MODEL of an active LibreOffice window,
+read through the application's own API; they have no screen position.
+`[uno] cell B7 "1500" formula "=SUM(B2:B6)"` is a spreadsheet cell: the
+value is what the cell shows, the formula (when present) is what it
+contains. `[uno] paragraph 12 list-label "[13]" text "Steinberg…"` is a
+text paragraph: `list-label` is numbering RENDERED by the document (not
+part of the paragraph's text), `text` is the paragraph's literal content.
+`[uno] shape "Title" text "…"` is a shape on the current slide. On a
+`[uno]` element, `click` places the caret or selection there (the
+application scrolls its own view) and `set_value` sets the cell,
+paragraph or shape content directly — in a cell, a leading `=` enters a
+formula, a number enters a numeric value, anything else enters text;
+`toggle`, `scroll_to` and `crop` do not apply to `[uno]` elements:
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "LLM Powered Autonomous Agents | Lil'Log - Memory usage - 58.5 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Thinking about High-Quality Human Data | Lil'Log - Memory usage - 88.3 MB"
+e8 push-button 550,33,28,28 "Close"
+e9 push-button 586,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1459,24 "Address and search bar"
+e15 push-button 1694,78,24,24 "Bookmark this tab"
+e16 push-button 1739,73,34,34 "You"
+e17 push-button 1778,73,142,34 "Finish update"
+e18 list-item 645,1009,701,109 "•"
+e19 list-item 665,1040,681,78 "◦ The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e20 text 665,1043,644,71 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e21 toggle-button 0,0,99,27 "Activities" state=checked:false
+e22 menu 99,0,162,27 "Google Chrome"
+e23 menu 906,0,178,27 "Aug 20 03‎∶07"
+e24 menu 1814,0,106,27 "System"
+e25 push-button 0,840,70,8
+e26 push-button 62,33,8,815
+e27 push-button 0,33,70,64 "Google Chrome"
+e28 push-button 0,101,70,64 "Thunderbird Mail"
+e29 push-button 0,169,70,64 "Visual Studio Code"
+e30 push-button 0,237,70,64 "VLC media player"
+e31 push-button 0,305,70,64 "LibreOffice Writer"
+e32 push-button 0,373,70,64 "LibreOffice Calc"
+e33 push-button 0,441,70,64 "LibreOffice Impress"
+e34 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e35 push-button 0,577,70,64 "Files"
+e36 push-button 0,645,70,64 "Ubuntu Software"
+e37 push-button 0,713,70,64 "Help"
+e38 push-button 0,784,70,64 "Trash"
+e39 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e40 link 497,114,72,60 "Lil'Log (Alt + H)"
+e41 text 497,130,72,28 "Lil'Log"
+e42 push-button 577,114,24,60 "(Alt + T)"
+e43 [pixels] image 577,135,24,18
+e44 list-item 609,114,4,60 "|"
+e45 list-item 1193,114,41,60 "Posts"
+e46 link 1193,114,41,60 "Posts"
+e47 list-item 1258,114,54,60 "Archive"
+e48 link 1258,114,54,60 "Archive"
+e49 list-item 1336,114,49,60 "Search"
+e50 link 1336,114,49,60 "Search (Alt + /)"
+e51 list-item 1410,114,34,60 "Tags"
+e52 link 1410,114,34,60 "Tags"
+e53 list-item 1468,114,30,60 "FAQ"
+e54 link 1468,114,30,60 "FAQ"
+e55 heading 626,222,720,43 "LLM Powered Autonomous Agents"
+e56 text 626,270,474,16 "Date: June 23, 2023 | Estimated Reading Time: 31 min | Author: Lilian Weng"
+e57 push-button 655,317,682,24 "(Alt + C)"
+e58 text 670,320,119,18 "Table of Contents"
+e59 list-item 675,351,622,24 "Agent System Overview"
+e60 link 675,354,160,18 "Agent System Overview"
+e61 list-item 675,375,622,72 "Component One: Planning Task Decomposition Self-Reflection" [occluded]
+e62 link 675,378,176,18 "Component One: Planning"
+e63 text 675,378,176,18 "Component One: Planning"
+e64 list-item 699,399,598,24 "Task Decomposition" [occluded]
+e65 link 699,402,137,18 "Task Decomposition" [occluded]
+e66 list-item 699,423,598,24 "Self-Reflection" [occluded]
+e67 link 699,426,102,18 "Self-Reflection" [occluded]
+e68 list-item 675,447,622,72 "Component Two: Memory Types of Memory Maximum Inner Product Search (MIPS)" [occluded]
+e69 link 675,450,173,18 "Component Two: Memory" [occluded]
+e70 text 675,450,173,18 "Component Two: Memory"
+e71 list-item 699,471,598,24 "Types of Memory" [occluded]
+e72 link 699,474,116,18 "Types of Memory" [occluded]
+e73 list-item 699,495,598,24 "Maximum Inner Product Search (MIPS)" [occluded]
+e74 link 699,498,263,18 "Maximum Inner Product Search (MIPS)" [occluded]
+e75 list-item 675,519,622,24 "Component Three: Tool Use" [occluded]
+e76 link 675,522,186,18 "Component Three: Tool Use" [occluded]
+e77 list-item 675,543,622,96 "Case Studies Scientific Discovery Agent Generative Agents Simulation Proof-of-Concept Examples" [occluded]
+e78 link 675,546,88,18 "Case Studies" [occluded]
+e79 text 675,546,88,18 "Case Studies"
+e80 list-item 699,567,598,24 "Scientific Discovery Agent" [occluded]
+e81 link 699,570,177,18 "Scientific Discovery Agent" [occluded]
+e82 list-item 699,591,598,24 "Generative Agents Simulation" [occluded]
+e83 link 699,594,200,18 "Generative Agents Simulation" [occluded]
+e84 list-item 699,615,598,24 "Proof-of-Concept Examples" [occluded]
+e85 link 699,618,188,18 "Proof-of-Concept Examples" [occluded]
+e86 list-item 675,639,622,24 "Challenges" [occluded]
+e87 link 675,642,74,18 "Challenges" [occluded]
+e88 list-item 675,663,622,24 "Citation" [occluded]
+e89 link 675,666,53,18 "Citation" [occluded]
+e90 list-item 675,687,622,24 "References" [occluded]
+e91 link 675,690,75,18 "References" [occluded]
+e92 paragraph 626,388,720,102
+e93 text 626,391,689,45 "Building agents with LLM (large language model) as its core controller is a cool concept. Several proof-of-concepts demos, such as"
+e94 link 878,416,62,19 "AutoGPT"
+e95 text 939,416,9,19 ","
+e96 link 948,416,97,19 "GPT-Engineer"
+e97 text 1045,416,34,19 "and"
+e98 link 1079,416,61,19 "BabyAGI"
+e99 text 626,416,699,70 ", serve as inspiring examples. The potentiality of LLM extends beyond generating well-written copies, stories, essays and programs; it can be framed as a powerful general problem solver."
+e100 heading 626,518,720,34 "Agent System Overview#"
+e101 text 626,518,298,33 "Agent System Overview"
+e102 paragraph 626,572,720,51 "In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components:"
+e103 list-item 646,643,700,164
+e104 text 646,646,63,19 "Planning"
+e105 list-item 666,673,680,51 "Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks."
+e106 list-item 666,730,680,77 "Reflection and refinement: The agent can do self-criticism and self-reflection over past actions, learn from mistakes and refine them for future steps, thereby improving the quality of final results."
+e107 list-item 646,826,700,164
+e108 text 646,829,59,19 "Memory"
+e109 list-item 666,857,680,51 "Short-term memory: I would consider all the in-context learning (See Prompt Engineering) as utilizing short-term memory of the model to learn."
+e110 text 666,860,496,19 "Short-term memory: I would consider all the in-context learning (See"
+e111 link 1162,860,142,19 "Prompt Engineering"
+e112 text 666,860,665,45 ") as utilizing short-term memory of the model to learn."
+e113 list-item 666,913,680,77 "Long-term memory: This provides the agent with the capability to retain and recall (infinite) information over extended periods, often by leveraging an external vector store and fast retrieval."
+e114 list-item 646,1010,700,107
+e115 text 646,1013,61,19 "Tool use"
+e116 list-item 666,1040,680,77
+e117 text 666,1043,643,70 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e118 [offscreen] text 759,1320,375,18 "Overview of a LLM-powered autonomous agent system."
+e119 [offscreen] heading 556,1374,720,34 "Component One: Planning#"
+e120 [offscreen] text 556,1374,328,33 "Component One: Planning"
+e121 [offscreen] paragraph 556,1428,720,51 "A complicated task usually involves many steps. An agent needs to know what they are and plan ahead."
+e122 [offscreen] heading 556,1503,720,29 "Task Decomposition#"
+e123 [offscreen] text 556,1503,220,28 "Task Decomposition"
+e124 [offscreen] paragraph 556,1548,720,128
+e125 [offscreen] link 556,1551,120,19 "Chain of thought"
+e126 [offscreen] text 675,1551,46,19 "(CoT;"
+e127 [offscreen] link 722,1551,107,19 "Wei et al. 2022"
+e128 [offscreen] text 556,1551,720,121 ") has become a standard prompting technique for enhancing model performance on complex tasks. The model is instructed to “think step by step” to utilize more test-time computation to decompose hard tasks into smaller and simpler steps. CoT transforms big tasks into multiple manageable tasks and shed lights into an interpretation of the model’s thinking process."
+e129 [offscreen] paragraph 556,1696,720,102
+e130 [offscreen] text 556,1699,122,19 "Tree of Thoughts"
+e131 [offscreen] text 677,1699,10,19 "("
+e132 [offscreen] link 687,1699,108,19 "Yao et al. 2023"
+e133 [offscreen] text 556,1699,715,96 ") extends CoT by exploring multiple reasoning possibilities at each step. It first decomposes the problem into multiple thought steps and generates multiple thoughts per step, creating a tree structure. The search process can be BFS (breadth-first search) or DFS (depth-first search) with each state evaluated by a classifier (via a prompt) or majority vote."
+e134 [offscreen] paragraph 556,1818,720,77
+e135 [offscreen] text 556,1821,515,19 "Task decomposition can be done (1) by LLM with simple prompting like"
+e136 [offscreen] text 1081,1824,150,15 """Steps for XYZ.\n1."""
+e137 [offscreen] text 1241,1821,5,19 ","
+e138 [offscreen] text 566,1850,315,15 """What are the subgoals for achieving XYZ?"""
+e139 [offscreen] text 891,1847,322,19 ", (2) by using task-specific instructions; e.g."
+e140 [offscreen] text 556,1850,712,41 """Write a story outline."""
+e141 [offscreen] text 693,1872,323,19 "for writing a novel, or (3) with human inputs."
+e142 [offscreen] paragraph 556,1915,720,205
+e143 [offscreen] text 556,1918,234,19 "Another quite distinct approach,"
+e144 [offscreen] text 790,1918,51,19 "LLM+P"
+e145 [offscreen] text 841,1918,10,19 "("
+e146 [offscreen] link 850,1918,103,19 "Liu et al. 2023"
+e147 [offscreen] text 556,1918,711,198 "), involves relying on an external classical planner to do long-horizon planning. This approach utilizes the Planning Domain Definition Language (PDDL) as an intermediate interface to describe the planning problem. In this process, LLM (1) translates the problem into “Problem PDDL”, then (2) requests a classical planner to generate a PDDL plan based on an existing “Domain PDDL”, and finally (3) translates the PDDL plan back into natural language. Essentially, the planning step is outsourced to an external tool, assuming the availability of domain-specific PDDL and a suitable planner which is common in certain robotic setups but not in many other domains."
+e148 [offscreen] heading 556,2144,720,29 "Self-Reflection#"
+e149 [offscreen] text 556,2144,162,28 "Self-Reflection"
+e150 [offscreen] paragraph 556,2188,720,77
+e151 [offscreen] text 556,2191,690,70 "Self-reflection is a vital aspect that allows autonomous agents to improve iteratively by refining past action decisions and correcting previous mistakes. It plays a crucial role in real-world tasks where trial and error are inevitable."
+e152 [offscreen] paragraph 556,2285,720,102
+e153 [offscreen] text 556,2288,43,19 "ReAct"
+e154 [offscreen] text 598,2288,10,19 "("
+e155 [offscreen] link 608,2288,108,19 "Yao et al. 2023"
+e156 [offscreen] text 556,2288,717,96 ") integrates reasoning and acting within LLM by extending the action space to be a combination of task-specific discrete actions and the language space. The former enables LLM to interact with the environment (e.g. use Wikipedia search API), while the latter prompting LLM to generate reasoning traces in natural language."
+e157 [offscreen] paragraph 556,2408,720,26 "The ReAct prompt template incorporates explicit steps for LLM to think, roughly formatted as:"
+e158 [offscreen] text 566,2464,53,15 "Thought"
+e159 [offscreen] text 618,2464,38,15 ": ..."
+e160 [offscreen] text 566,2483,45,15 "Action"
+e161 [offscreen] text 611,2483,38,15 ": ..."
+e162 [offscreen] text 566,2502,83,15 "Observation"
+e163 [offscreen] text 566,2502,188,34 ": ... ... (Repeated many times)"
+e164 [offscreen] text 658,2900,527,59 "Examples of reasoning trajectories for knowledge-intensive tasks (e.g. HotpotQA, FEVER) and decision-making tasks (e.g. AlfWorld Env, WebShop). (Image source:"
+e165 [offscreen] link 912,2940,101,18 "Yao et al. 2023"
+e166 [offscreen] text 1013,2940,10,18 ")."
+e167 [offscreen] paragraph 556,2995,720,51 "In both experiments on knowledge-intensive tasks and decision-making tasks, ReAct works better than the Act-only baseline where Thought: … step is removed."
+e168 [offscreen] text 556,2998,569,19 "In both experiments on knowledge-intensive tasks and decision-making tasks,"
+e169 [offscreen] text 1135,3001,38,15 "ReAct"
+e170 [offscreen] text 556,2998,674,45 "works better than the"
+e171 [offscreen] text 675,3026,23,15 "Act"
+e172 [offscreen] text 708,3023,152,19 "-only baseline where"
+e173 [offscreen] text 870,3026,75,15 "Thought: …"
+e174 [offscreen] text 955,3023,123,19 "step is removed."
+e175 [offscreen] paragraph 556,3066,720,154
+e176 [offscreen] text 556,3069,67,19 "Reflexion"
+e177 [offscreen] text 623,3069,10,19 "("
+e178 [offscreen] +1535 more lines truncated (scroll to reveal)
+[act-guard] previous action: CONFIRMED (view changed outside the system bar; focus: document-web 70,114,1850,966 "LLM Powered Autonomous Agents | Lil'Log" state=focused)
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 12 ---
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "LLM Powered Autonomous Agents | Lil'Log - Memory usage - 54.7 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Thinking about High-Quality Human Data | Lil'Log - Memory usage - 89.8 MB"
+e8 push-button 550,33,28,28 "Close"
+e9 push-button 586,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1459,24 "Address and search bar"
+e15 push-button 1694,78,24,24 "Bookmark this tab"
+e16 push-button 1739,73,34,34 "You"
+e17 push-button 1778,73,142,34 "Finish update"
+e18 list-item 645,1009,701,109 "•"
+e19 list-item 665,1040,681,78 "◦ The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e20 text 665,1043,644,71 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e21 toggle-button 0,0,99,27 "Activities" state=checked:false
+e22 menu 99,0,162,27 "Google Chrome"
+e23 menu 906,0,178,27 "Aug 20 03‎∶06"
+e24 menu 1814,0,106,27 "System"
+e25 push-button 0,840,70,8
+e26 push-button 62,33,8,815
+e27 push-button 0,33,70,64 "Google Chrome"
+e28 push-button 0,101,70,64 "Thunderbird Mail"
+e29 push-button 0,169,70,64 "Visual Studio Code"
+e30 push-button 0,237,70,64 "VLC media player"
+e31 push-button 0,305,70,64 "LibreOffice Writer"
+e32 push-button 0,373,70,64 "LibreOffice Calc"
+e33 push-button 0,441,70,64 "LibreOffice Impress"
+e34 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e35 push-button 0,577,70,64 "Files"
+e36 push-button 0,645,70,64 "Ubuntu Software"
+e37 push-button 0,713,70,64 "Help"
+e38 push-button 0,784,70,64 "Trash"
+e39 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e40 link 497,114,72,60 "Lil'Log (Alt + H)"
+e41 text 497,130,72,28 "Lil'Log"
+e42 push-button 577,114,24,60 "(Alt + T)"
+e43 [pixels] image 577,135,24,18
+e44 list-item 609,114,4,60 "|"
+e45 list-item 1193,114,41,60 "Posts"
+e46 link 1193,114,41,60 "Posts"
+e47 list-item 1258,114,54,60 "Archive"
+e48 link 1258,114,54,60 "Archive"
+e49 list-item 1336,114,49,60 "Search"
+e50 link 1336,114,49,60 "Search (Alt + /)"
+e51 list-item 1410,114,34,60 "Tags"
+e52 link 1410,114,34,60 "Tags"
+e53 list-item 1468,114,30,60 "FAQ"
+e54 link 1468,114,30,60 "FAQ"
+e55 heading 626,222,720,43 "LLM Powered Autonomous Agents"
+e56 text 626,270,474,16 "Date: June 23, 2023 | Estimated Reading Time: 31 min | Author: Lilian Weng"
+e57 push-button 655,317,682,24 "(Alt + C)"
+e58 text 670,320,119,18 "Table of Contents"
+e59 list-item 675,351,622,24 "Agent System Overview"
+e60 link 675,354,160,18 "Agent System Overview"
+e61 list-item 675,375,622,72 "Component One: Planning Task Decomposition Self-Reflection" [occluded]
+e62 link 675,378,176,18 "Component One: Planning"
+e63 text 675,378,176,18 "Component One: Planning"
+e64 list-item 699,399,598,24 "Task Decomposition" [occluded]
+e65 link 699,402,137,18 "Task Decomposition" [occluded]
+e66 list-item 699,423,598,24 "Self-Reflection" [occluded]
+e67 link 699,426,102,18 "Self-Reflection" [occluded]
+e68 list-item 675,447,622,72 "Component Two: Memory Types of Memory Maximum Inner Product Search (MIPS)" [occluded]
+e69 link 675,450,173,18 "Component Two: Memory" [occluded]
+e70 text 675,450,173,18 "Component Two: Memory"
+e71 list-item 699,471,598,24 "Types of Memory" [occluded]
+e72 link 699,474,116,18 "Types of Memory" [occluded]
+e73 list-item 699,495,598,24 "Maximum Inner Product Search (MIPS)" [occluded]
+e74 link 699,498,263,18 "Maximum Inner Product Search (MIPS)" [occluded]
+e75 list-item 675,519,622,24 "Component Three: Tool Use" [occluded]
+e76 link 675,522,186,18 "Component Three: Tool Use" [occluded]
+e77 list-item 675,543,622,96 "Case Studies Scientific Discovery Agent Generative Agents Simulation Proof-of-Concept Examples" [occluded]
+e78 link 675,546,88,18 "Case Studies" [occluded]
+e79 text 675,546,88,18 "Case Studies"
+e80 list-item 699,567,598,24 "Scientific Discovery Agent" [occluded]
+e81 link 699,570,177,18 "Scientific Discovery Agent" [occluded]
+e82 list-item 699,591,598,24 "Generative Agents Simulation" [occluded]
+e83 link 699,594,200,18 "Generative Agents Simulation" [occluded]
+e84 list-item 699,615,598,24 "Proof-of-Concept Examples" [occluded]
+e85 link 699,618,188,18 "Proof-of-Concept Examples" [occluded]
+e86 list-item 675,639,622,24 "Challenges" [occluded]
+e87 link 675,642,74,18 "Challenges" [occluded]
+e88 list-item 675,663,622,24 "Citation" [occluded]
+e89 link 675,666,53,18 "Citation" [occluded]
+e90 list-item 675,687,622,24 "References" [occluded]
+e91 link 675,690,75,18 "References" [occluded]
+e92 paragraph 626,388,720,102
+e93 text 626,391,689,45 "Building agents with LLM (large language model) as its core controller is a cool concept. Several proof-of-concepts demos, such as"
+e94 link 878,416,62,19 "AutoGPT"
+e95 text 939,416,9,19 ","
+e96 link 948,416,97,19 "GPT-Engineer"
+e97 text 1045,416,34,19 "and"
+e98 link 1079,416,61,19 "BabyAGI"
+e99 text 626,416,699,70 ", serve as inspiring examples. The potentiality of LLM extends beyond generating well-written copies, stories, essays and programs; it can be framed as a powerful general problem solver."
+e100 heading 626,518,720,34 "Agent System Overview#"
+e101 text 626,518,298,33 "Agent System Overview"
+e102 paragraph 626,572,720,51 "In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components:"
+e103 list-item 646,643,700,164
+e104 text 646,646,63,19 "Planning"
+e105 list-item 666,673,680,51 "Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks."
+e106 list-item 666,730,680,77 "Reflection and refinement: The agent can do self-criticism and self-reflection over past actions, learn from mistakes and refine them for future steps, thereby improving the quality of final results."
+e107 list-item 646,826,700,164
+e108 text 646,829,59,19 "Memory"
+e109 list-item 666,857,680,51 "Short-term memory: I would consider all the in-context learning (See Prompt Engineering) as utilizing short-term memory of the model to learn."
+e110 text 666,860,496,19 "Short-term memory: I would consider all the in-context learning (See"
+e111 link 1162,860,142,19 "Prompt Engineering"
+e112 text 666,860,665,45 ") as utilizing short-term memory of the model to learn."
+e113 list-item 666,913,680,77 "Long-term memory: This provides the agent with the capability to retain and recall (infinite) information over extended periods, often by leveraging an external vector store and fast retrieval."
+e114 list-item 646,1010,700,107
+e115 text 646,1013,61,19 "Tool use"
+e116 list-item 666,1040,680,77
+e117 text 666,1043,643,70 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e118 [offscreen] text 759,1320,375,18 "Overview of a LLM-powered autonomous agent system."
+e119 [offscreen] heading 556,1374,720,34 "Component One: Planning#"
+e120 [offscreen] text 556,1374,328,33 "Component One: Planning"
+e121 [offscreen] paragraph 556,1428,720,51 "A complicated task usually involves many steps. An agent needs to know what they are and plan ahead."
+e122 [offscreen] heading 556,1503,720,29 "Task Decomposition#"
+e123 [offscreen] text 556,1503,220,28 "Task Decomposition"
+e124 [offscreen] paragraph 556,1548,720,128
+e125 [offscreen] link 556,1551,120,19 "Chain of thought"
+e126 [offscreen] text 675,1551,46,19 "(CoT;"
+e127 [offscreen] link 722,1551,107,19 "Wei et al. 2022"
+e128 [offscreen] text 556,1551,720,121 ") has become a standard prompting technique for enhancing model performance on complex tasks. The model is instructed to “think step by step” to utilize more test-time computation to decompose hard tasks into smaller and simpler steps. CoT transforms big tasks into multiple manageable tasks and shed lights into an interpretation of the model’s thinking process."
+e129 [offscreen] paragraph 556,1696,720,102
+e130 [offscreen] text 556,1699,122,19 "Tree of Thoughts"
+e131 [offscreen] text 677,1699,10,19 "("
+e132 [offscreen] link 687,1699,108,19 "Yao et al. 2023"
+e133 [offscreen] text 556,1699,715,96 ") extends CoT by exploring multiple reasoning possibilities at each step. It first decomposes the problem into multiple thought steps and generates multiple thoughts per step, creating a tree structure. The search process can be BFS (breadth-first search) or DFS (depth-first search) with each state evaluated by a classifier (via a prompt) or majority vote."
+e134 [offscreen] paragraph 556,1818,720,77
+e135 [offscreen] text 556,1821,515,19 "Task decomposition can be done (1) by LLM with simple prompting like"
+e136 [offscreen] text 1081,1824,150,15 """Steps for XYZ.\n1."""
+e137 [offscreen] text 1241,1821,5,19 ","
+e138 [offscreen] text 566,1850,315,15 """What are the subgoals for achieving XYZ?"""
+e139 [offscreen] text 891,1847,322,19 ", (2) by using task-specific instructions; e.g."
+e140 [offscreen] text 556,1850,712,41 """Write a story outline."""
+e141 [offscreen] text 693,1872,323,19 "for writing a novel, or (3) with human inputs."
+e142 [offscreen] paragraph 556,1915,720,205
+e143 [offscreen] text 556,1918,234,19 "Another quite distinct approach,"
+e144 [offscreen] text 790,1918,51,19 "LLM+P"
+e145 [offscreen] text 841,1918,10,19 "("
+e146 [offscreen] link 850,1918,103,19 "Liu et al. 2023"
+e147 [offscreen] text 556,1918,711,198 "), involves relying on an external classical planner to do long-horizon planning. This approach utilizes the Planning Domain Definition Language (PDDL) as an intermediate interface to describe the planning problem. In this process, LLM (1) translates the problem into “Problem PDDL”, then (2) requests a classical planner to generate a PDDL plan based on an existing “Domain PDDL”, and finally (3) translates the PDDL plan back into natural language. Essentially, the planning step is outsourced to an external tool, assuming the availability of domain-specific PDDL and a suitable planner which is common in certain robotic setups but not in many other domains."
+e148 [offscreen] heading 556,2144,720,29 "Self-Reflection#"
+e149 [offscreen] text 556,2144,162,28 "Self-Reflection"
+e150 [offscreen] paragraph 556,2188,720,77
+e151 [offscreen] text 556,2191,690,70 "Self-reflection is a vital aspect that allows autonomous agents to improve iteratively by refining past action decisions and correcting previous mistakes. It plays a crucial role in real-world tasks where trial and error are inevitable."
+e152 [offscreen] paragraph 556,2285,720,102
+e153 [offscreen] text 556,2288,43,19 "ReAct"
+e154 [offscreen] text 598,2288,10,19 "("
+e155 [offscreen] link 608,2288,108,19 "Yao et al. 2023"
+e156 [offscreen] text 556,2288,717,96 ") integrates reasoning and acting within LLM by extending the action space to be a combination of task-specific discrete actions and the language space. The former enables LLM to interact with the environment (e.g. use Wikipedia search API), while the latter prompting LLM to generate reasoning traces in natural language."
+e157 [offscreen] paragraph 556,2408,720,26 "The ReAct prompt template incorporates explicit steps for LLM to think, roughly formatted as:"
+e158 [offscreen] text 566,2464,53,15 "Thought"
+e159 [offscreen] text 618,2464,38,15 ": ..."
+e160 [offscreen] text 566,2483,45,15 "Action"
+e161 [offscreen] text 611,2483,38,15 ": ..."
+e162 [offscreen] text 566,2502,83,15 "Observation"
+e163 [offscreen] text 566,2502,188,34 ": ... ... (Repeated many times)"
+e164 [offscreen] text 658,2900,527,59 "Examples of reasoning trajectories for knowledge-intensive tasks (e.g. HotpotQA, FEVER) and decision-making tasks (e.g. AlfWorld Env, WebShop). (Image source:"
+e165 [offscreen] link 912,2940,101,18 "Yao et al. 2023"
+e166 [offscreen] text 1013,2940,10,18 ")."
+e167 [offscreen] paragraph 556,2995,720,51 "In both experiments on knowledge-intensive tasks and decision-making tasks, ReAct works better than the Act-only baseline where Thought: … step is removed."
+e168 [offscreen] text 556,2998,569,19 "In both experiments on knowledge-intensive tasks and decision-making tasks,"
+e169 [offscreen] text 1135,3001,38,15 "ReAct"
+e170 [offscreen] text 556,2998,674,45 "works better than the"
+e171 [offscreen] text 675,3026,23,15 "Act"
+e172 [offscreen] text 708,3023,152,19 "-only baseline where"
+e173 [offscreen] text 870,3026,75,15 "Thought: …"
+e174 [offscreen] text 955,3023,123,19 "step is removed."
+e175 [offscreen] paragraph 556,3066,720,154
+e176 [offscreen] text 556,3069,67,19 "Reflexion"
+e177 [offscreen] text 623,3069,10,19 "("
+e178 [offscreen] +1535 more lines truncated (scroll to reveal)
+
+--- view at step 13 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 03‎∶06"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "LLM Powered Autonomous Agents | Lil'Log - Memory usage - 58.5 MB" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 page-tab 336,27,256,41 "Thinking about High-Quality Human Data | Lil'Log - Memory usage - 88.3 MB"
+e27 push-button 550,33,28,28 "Close"
+e28 push-button 586,27,28,41 "New Tab"
+e29 push-button 70,73,39,34 "Back"
+e30 push-button 111,73,34,34 "Forward"
+e31 push-button 147,73,34,34 "Reload"
+e32 push-button 195,78,24,24 "View site information"
+e33 entry 227,78,1459,24 "Address and search bar"
+e34 push-button 1694,78,24,24 "Bookmark this tab"
+e35 push-button 1739,73,34,34 "You"
+e36 push-button 1778,73,142,34 "Finish update"
+e37 list-item 645,1009,701,109 "•"
+e38 list-item 665,1040,681,78 "◦ The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e39 text 665,1043,644,71 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e40 link 497,114,72,60 "Lil'Log (Alt + H)"
+e41 text 497,130,72,28 "Lil'Log"
+e42 push-button 577,114,24,60 "(Alt + T)"
+e43 [pixels] image 577,135,24,18
+e44 list-item 609,114,4,60 "|"
+e45 list-item 1193,114,41,60 "Posts"
+e46 link 1193,114,41,60 "Posts"
+e47 list-item 1258,114,54,60 "Archive"
+e48 link 1258,114,54,60 "Archive"
+e49 list-item 1336,114,49,60 "Search"
+e50 link 1336,114,49,60 "Search (Alt + /)"
+e51 list-item 1410,114,34,60 "Tags"
+e52 link 1410,114,34,60 "Tags"
+e53 list-item 1468,114,30,60 "FAQ"
+e54 link 1468,114,30,60 "FAQ"
+e55 heading 626,222,720,43 "LLM Powered Autonomous Agents"
+e56 text 626,270,474,16 "Date: June 23, 2023 | Estimated Reading Time: 31 min | Author: Lilian Weng"
+e57 push-button 655,317,682,24 "(Alt + C)"
+e58 text 670,320,119,18 "Table of Contents"
+e59 list-item 675,351,622,24 "Agent System Overview"
+e60 link 675,354,160,18 "Agent System Overview"
+e61 list-item 675,375,622,72 "Component One: Planning Task Decomposition Self-Reflection" [occluded]
+e62 link 675,378,176,18 "Component One: Planning"
+e63 text 675,378,176,18 "Component One: Planning"
+e64 list-item 699,399,598,24 "Task Decomposition" [occluded]
+e65 link 699,402,137,18 "Task Decomposition" [occluded]
+e66 list-item 699,423,598,24 "Self-Reflection" [occluded]
+e67 link 699,426,102,18 "Self-Reflection" [occluded]
+e68 list-item 675,447,622,72 "Component Two: Memory Types of Memory Maximum Inner Product Search (MIPS)" [occluded]
+e69 link 675,450,173,18 "Component Two: Memory" [occluded]
+e70 text 675,450,173,18 "Component Two: Memory"
+e71 list-item 699,471,598,24 "Types of Memory" [occluded]
+e72 link 699,474,116,18 "Types of Memory" [occluded]
+e73 list-item 699,495,598,24 "Maximum Inner Product Search (MIPS)" [occluded]
+e74 link 699,498,263,18 "Maximum Inner Product Search (MIPS)" [occluded]
+e75 list-item 675,519,622,24 "Component Three: Tool Use" [occluded]
+e76 link 675,522,186,18 "Component Three: Tool Use" [occluded]
+e77 list-item 675,543,622,96 "Case Studies Scientific Discovery Agent Generative Agents Simulation Proof-of-Concept Examples" [occluded]
+e78 link 675,546,88,18 "Case Studies" [occluded]
+e79 text 675,546,88,18 "Case Studies"
+e80 list-item 699,567,598,24 "Scientific Discovery Agent" [occluded]
+e81 link 699,570,177,18 "Scientific Discovery Agent" [occluded]
+e82 list-item 699,591,598,24 "Generative Agents Simulation" [occluded]
+e83 link 699,594,200,18 "Generative Agents Simulation" [occluded]
+e84 list-item 699,615,598,24 "Proof-of-Concept Examples" [occluded]
+e85 link 699,618,188,18 "Proof-of-Concept Examples" [occluded]
+e86 list-item 675,639,622,24 "Challenges" [occluded]
+e87 link 675,642,74,18 "Challenges" [occluded]
+e88 list-item 675,663,622,24 "Citation" [occluded]
+e89 link 675,666,53,18 "Citation" [occluded]
+e90 list-item 675,687,622,24 "References" [occluded]
+e91 link 675,690,75,18 "References" [occluded]
+e92 paragraph 626,388,720,102
+e93 text 626,391,689,45 "Building agents with LLM (large language model) as its core controller is a cool concept. Several proof-of-concepts demos, such as"
+e94 link 878,416,62,19 "AutoGPT"
+e95 text 939,416,9,19 ","
+e96 link 948,416,97,19 "GPT-Engineer"
+e97 text 1045,416,34,19 "and"
+e98 link 1079,416,61,19 "BabyAGI"
+e99 text 626,416,699,70 ", serve as inspiring examples. The potentiality of LLM extends beyond generating well-written copies, stories, essays and programs; it can be framed as a powerful general problem solver."
+e100 heading 626,518,720,34 "Agent System Overview#"
+e101 text 626,518,298,33 "Agent System Overview"
+e102 paragraph 626,572,720,51 "In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components:"
+e103 list-item 646,643,700,164
+e104 text 646,646,63,19 "Planning"
+e105 list-item 666,673,680,51 "Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks."
+e106 list-item 666,730,680,77 "Reflection and refinement: The agent can do self-criticism and self-reflection over past actions, learn from mistakes and refine them for future steps, thereby improving the quality of final results."
+e107 list-item 646,826,700,164
+e108 text 646,829,59,19 "Memory"
+e109 list-item 666,857,680,51 "Short-term memory: I would consider all the in-context learning (See Prompt Engineering) as utilizing short-term memory of the model to learn."
+e110 text 666,860,496,19 "Short-term memory: I would consider all the in-context learning (See"
+e111 link 1162,860,142,19 "Prompt Engineering"
+e112 text 666,860,665,45 ") as utilizing short-term memory of the model to learn."
+e113 list-item 666,913,680,77 "Long-term memory: This provides the agent with the capability to retain and recall (infinite) information over extended periods, often by leveraging an external vector store and fast retrieval."
+e114 list-item 646,1010,700,107
+e115 text 646,1013,61,19 "Tool use"
+e116 list-item 666,1040,680,77
+e117 text 666,1043,643,70 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e118 [offscreen] text 759,1320,375,18 "Overview of a LLM-powered autonomous agent system."
+e119 [offscreen] heading 556,1374,720,34 "Component One: Planning#"
+e120 [offscreen] text 556,1374,328,33 "Component One: Planning"
+e121 [offscreen] paragraph 556,1428,720,51 "A complicated task usually involves many steps. An agent needs to know what they are and plan ahead."
+e122 [offscreen] heading 556,1503,720,29 "Task Decomposition#"
+e123 [offscreen] text 556,1503,220,28 "Task Decomposition"
+e124 [offscreen] paragraph 556,1548,720,128
+e125 [offscreen] link 556,1551,120,19 "Chain of thought"
+e126 [offscreen] text 675,1551,46,19 "(CoT;"
+e127 [offscreen] link 722,1551,107,19 "Wei et al. 2022"
+e128 [offscreen] text 556,1551,720,121 ") has become a standard prompting technique for enhancing model performance on complex tasks. The model is instructed to “think step by step” to utilize more test-time computation to decompose hard tasks into smaller and simpler steps. CoT transforms big tasks into multiple manageable tasks and shed lights into an interpretation of the model’s thinking process."
+e129 [offscreen] paragraph 556,1696,720,102
+e130 [offscreen] text 556,1699,122,19 "Tree of Thoughts"
+e131 [offscreen] text 677,1699,10,19 "("
+e132 [offscreen] link 687,1699,108,19 "Yao et al. 2023"
+e133 [offscreen] text 556,1699,715,96 ") extends CoT by exploring multiple reasoning possibilities at each step. It first decomposes the problem into multiple thought steps and generates multiple thoughts per step, creating a tree structure. The search process can be BFS (breadth-first search) or DFS (depth-first search) with each state evaluated by a classifier (via a prompt) or majority vote."
+e134 [offscreen] paragraph 556,1818,720,77
+e135 [offscreen] text 556,1821,515,19 "Task decomposition can be done (1) by LLM with simple prompting like"
+e136 [offscreen] text 1081,1824,150,15 """Steps for XYZ.\n1."""
+e137 [offscreen] text 1241,1821,5,19 ","
+e138 [offscreen] text 566,1850,315,15 """What are the subgoals for achieving XYZ?"""
+e139 [offscreen] text 891,1847,322,19 ", (2) by using task-specific instructions; e.g."
+e140 [offscreen] text 556,1850,712,41 """Write a story outline."""
+e141 [offscreen] text 693,1872,323,19 "for writing a novel, or (3) with human inputs."
+e142 [offscreen] paragraph 556,1915,720,205
+e143 [offscreen] text 556,1918,234,19 "Another quite distinct approach,"
+e144 [offscreen] text 790,1918,51,19 "LLM+P"
+e145 [offscreen] text 841,1918,10,19 "("
+e146 [offscreen] link 850,1918,103,19 "Liu et al. 2023"
+e147 [offscreen] text 556,1918,711,198 "), involves relying on an external classical planner to do long-horizon planning. This approach utilizes the Planning Domain Definition Language (PDDL) as an intermediate interface to describe the planning problem. In this process, LLM (1) translates the problem into “Problem PDDL”, then (2) requests a classical planner to generate a PDDL plan based on an existing “Domain PDDL”, and finally (3) translates the PDDL plan back into natural language. Essentially, the planning step is outsourced to an external tool, assuming the availability of domain-specific PDDL and a suitable planner which is common in certain robotic setups but not in many other domains."
+e148 [offscreen] heading 556,2144,720,29 "Self-Reflection#"
+e149 [offscreen] text 556,2144,162,28 "Self-Reflection"
+e150 [offscreen] paragraph 556,2188,720,77
+e151 [offscreen] text 556,2191,690,70 "Self-reflection is a vital aspect that allows autonomous agents to improve iteratively by refining past action decisions and correcting previous mistakes. It plays a crucial role in real-world tasks where trial and error are inevitable."
+e152 [offscreen] paragraph 556,2285,720,102
+e153 [offscreen] text 556,2288,43,19 "ReAct"
+e154 [offscreen] text 598,2288,10,19 "("
+e155 [offscreen] link 608,2288,108,19 "Yao et al. 2023"
+e156 [offscreen] text 556,2288,717,96 ") integrates reasoning and acting within LLM by extending the action space to be a combination of task-specific discrete actions and the language space. The former enables LLM to interact with the environment (e.g. use Wikipedia search API), while the latter prompting LLM to generate reasoning traces in natural language."
+e157 [offscreen] paragraph 556,2408,720,26 "The ReAct prompt template incorporates explicit steps for LLM to think, roughly formatted as:"
+e158 [offscreen] text 566,2464,53,15 "Thought"
+e159 [offscreen] text 618,2464,38,15 ": ..."
+e160 [offscreen] text 566,2483,45,15 "Action"
+e161 [offscreen] text 611,2483,38,15 ": ..."
+e162 [offscreen] text 566,2502,83,15 "Observation"
+e163 [offscreen] text 566,2502,188,34 ": ... ... (Repeated many times)"
+e164 [offscreen] text 658,2900,527,59 "Examples of reasoning trajectories for knowledge-intensive tasks (e.g. HotpotQA, FEVER) and decision-making tasks (e.g. AlfWorld Env, WebShop). (Image source:"
+e165 [offscreen] link 912,2940,101,18 "Yao et al. 2023"
+e166 [offscreen] text 1013,2940,10,18 ")."
+e167 [offscreen] paragraph 556,2995,720,51 "In both experiments on knowledge-intensive tasks and decision-making tasks, ReAct works better than the Act-only baseline where Thought: … step is removed."
+e168 [offscreen] text 556,2998,569,19 "In both experiments on knowledge-intensive tasks and decision-making tasks,"
+e169 [offscreen] text 1135,3001,38,15 "ReAct"
+e170 [offscreen] text 556,2998,674,45 "works better than the"
+e171 [offscreen] text 675,3026,23,15 "Act"
+e172 [offscreen] text 708,3023,152,19 "-only baseline where"
+e173 [offscreen] text 870,3026,75,15 "Thought: …"
+e174 [offscreen] text 955,3023,123,19 "step is removed."
+e175 [offscreen] paragraph 556,3066,720,154
+e176 [offscreen] text 556,3069,67,19 "Reflexion"
+e177 [offscreen] text 623,3069,10,19 "("
+e178 [offscreen] +1535 more lines truncated (scroll to reveal)
+
+--- view at step 14 ---
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "LLM Powered Autonomous Agents | Lil'Log - Memory usage - 58.5 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Thinking about High-Quality Human Data | Lil'Log - Memory usage - 88.3 MB"
+e8 push-button 550,33,28,28 "Close"
+e9 push-button 586,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+e13 push-button 195,78,24,24 "View site information"
+e14 entry 227,78,1459,24 "Address and search bar"
+e15 push-button 1694,78,24,24 "Bookmark this tab"
+e16 push-button 1739,73,34,34 "You"
+e17 push-button 1778,73,142,34 "Finish update"
+e18 list-item 645,1009,701,109 "•"
+e19 list-item 665,1040,681,78 "◦ The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e20 text 665,1043,644,71 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e21 toggle-button 0,0,99,27 "Activities" state=checked:false
+e22 menu 99,0,162,27 "Google Chrome"
+e23 menu 906,0,178,27 "Aug 20 03‎∶07"
+e24 menu 1814,0,106,27 "System"
+e25 push-button 0,840,70,8
+e26 push-button 62,33,8,815
+e27 push-button 0,33,70,64 "Google Chrome"
+e28 push-button 0,101,70,64 "Thunderbird Mail"
+e29 push-button 0,169,70,64 "Visual Studio Code"
+e30 push-button 0,237,70,64 "VLC media player"
+e31 push-button 0,305,70,64 "LibreOffice Writer"
+e32 push-button 0,373,70,64 "LibreOffice Calc"
+e33 push-button 0,441,70,64 "LibreOffice Impress"
+e34 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e35 push-button 0,577,70,64 "Files"
+e36 push-button 0,645,70,64 "Ubuntu Software"
+e37 push-button 0,713,70,64 "Help"
+e38 push-button 0,784,70,64 "Trash"
+e39 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e40 link 497,114,72,60 "Lil'Log (Alt + H)"
+e41 text 497,130,72,28 "Lil'Log"
+e42 push-button 577,114,24,60 "(Alt + T)"
+e43 [pixels] image 577,135,24,18
+e44 list-item 609,114,4,60 "|"
+e45 list-item 1193,114,41,60 "Posts"
+e46 link 1193,114,41,60 "Posts"
+e47 list-item 1258,114,54,60 "Archive"
+e48 link 1258,114,54,60 "Archive"
+e49 list-item 1336,114,49,60 "Search"
+e50 link 1336,114,49,60 "Search (Alt + /)"
+e51 list-item 1410,114,34,60 "Tags"
+e52 link 1410,114,34,60 "Tags"
+e53 list-item 1468,114,30,60 "FAQ"
+e54 link 1468,114,30,60 "FAQ"
+e55 heading 626,222,720,43 "LLM Powered Autonomous Agents"
+e56 text 626,270,474,16 "Date: June 23, 2023 | Estimated Reading Time: 31 min | Author: Lilian Weng"
+e57 push-button 655,317,682,24 "(Alt + C)"
+e58 text 670,320,119,18 "Table of Contents"
+e59 list-item 675,351,622,24 "Agent System Overview"
+e60 link 675,354,160,18 "Agent System Overview"
+e61 list-item 675,375,622,72 "Component One: Planning Task Decomposition Self-Reflection" [occluded]
+e62 link 675,378,176,18 "Component One: Planning"
+e63 text 675,378,176,18 "Component One: Planning"
+e64 list-item 699,399,598,24 "Task Decomposition" [occluded]
+e65 link 699,402,137,18 "Task Decomposition" [occluded]
+e66 list-item 699,423,598,24 "Self-Reflection" [occluded]
+e67 link 699,426,102,18 "Self-Reflection" [occluded]
+e68 list-item 675,447,622,72 "Component Two: Memory Types of Memory Maximum Inner Product Search (MIPS)" [occluded]
+e69 link 675,450,173,18 "Component Two: Memory" [occluded]
+e70 text 675,450,173,18 "Component Two: Memory"
+e71 list-item 699,471,598,24 "Types of Memory" [occluded]
+e72 link 699,474,116,18 "Types of Memory" [occluded]
+e73 list-item 699,495,598,24 "Maximum Inner Product Search (MIPS)" [occluded]
+e74 link 699,498,263,18 "Maximum Inner Product Search (MIPS)" [occluded]
+e75 list-item 675,519,622,24 "Component Three: Tool Use" [occluded]
+e76 link 675,522,186,18 "Component Three: Tool Use" [occluded]
+e77 list-item 675,543,622,96 "Case Studies Scientific Discovery Agent Generative Agents Simulation Proof-of-Concept Examples" [occluded]
+e78 link 675,546,88,18 "Case Studies" [occluded]
+e79 text 675,546,88,18 "Case Studies"
+e80 list-item 699,567,598,24 "Scientific Discovery Agent" [occluded]
+e81 link 699,570,177,18 "Scientific Discovery Agent" [occluded]
+e82 list-item 699,591,598,24 "Generative Agents Simulation" [occluded]
+e83 link 699,594,200,18 "Generative Agents Simulation" [occluded]
+e84 list-item 699,615,598,24 "Proof-of-Concept Examples" [occluded]
+e85 link 699,618,188,18 "Proof-of-Concept Examples" [occluded]
+e86 list-item 675,639,622,24 "Challenges" [occluded]
+e87 link 675,642,74,18 "Challenges" [occluded]
+e88 list-item 675,663,622,24 "Citation" [occluded]
+e89 link 675,666,53,18 "Citation" [occluded]
+e90 list-item 675,687,622,24 "References" [occluded]
+e91 link 675,690,75,18 "References" [occluded]
+e92 paragraph 626,388,720,102
+e93 text 626,391,689,45 "Building agents with LLM (large language model) as its core controller is a cool concept. Several proof-of-concepts demos, such as"
+e94 link 878,416,62,19 "AutoGPT"
+e95 text 939,416,9,19 ","
+e96 link 948,416,97,19 "GPT-Engineer"
+e97 text 1045,416,34,19 "and"
+e98 link 1079,416,61,19 "BabyAGI"
+e99 text 626,416,699,70 ", serve as inspiring examples. The potentiality of LLM extends beyond generating well-written copies, stories, essays and programs; it can be framed as a powerful general problem solver."
+e100 heading 626,518,720,34 "Agent System Overview#"
+e101 text 626,518,298,33 "Agent System Overview"
+e102 paragraph 626,572,720,51 "In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components:"
+e103 list-item 646,643,700,164
+e104 text 646,646,63,19 "Planning"
+e105 list-item 666,673,680,51 "Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks."
+e106 list-item 666,730,680,77 "Reflection and refinement: The agent can do self-criticism and self-reflection over past actions, learn from mistakes and refine them for future steps, thereby improving the quality of final results."
+e107 list-item 646,826,700,164
+e108 text 646,829,59,19 "Memory"
+e109 list-item 666,857,680,51 "Short-term memory: I would consider all the in-context learning (See Prompt Engineering) as utilizing short-term memory of the model to learn."
+e110 text 666,860,496,19 "Short-term memory: I would consider all the in-context learning (See"
+e111 link 1162,860,142,19 "Prompt Engineering"
+e112 text 666,860,665,45 ") as utilizing short-term memory of the model to learn."
+e113 list-item 666,913,680,77 "Long-term memory: This provides the agent with the capability to retain and recall (infinite) information over extended periods, often by leveraging an external vector store and fast retrieval."
+e114 list-item 646,1010,700,107
+e115 text 646,1013,61,19 "Tool use"
+e116 list-item 666,1040,680,77
+e117 text 666,1043,643,70 "The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more."
+e118 [offscreen] text 759,1320,375,18 "Overview of a LLM-powered autonomous agent system."
+e119 [offscreen] heading 556,1374,720,34 "Component One: Planning#"
+e120 [offscreen] text 556,1374,328,33 "Component One: Planning"
+e121 [offscreen] paragraph 556,1428,720,51 "A complicated task usually involves many steps. An agent needs to know what they are and plan ahead."
+e122 [offscreen] heading 556,1503,720,29 "Task Decomposition#"
+e123 [offscreen] text 556,1503,220,28 "Task Decomposition"
+e124 [offscreen] paragraph 556,1548,720,128
+e125 [offscreen] link 556,1551,120,19 "Chain of thought"
+e126 [offscreen] text 675,1551,46,19 "(CoT;"
+e127 [offscreen] link 722,1551,107,19 "Wei et al. 2022"
+e128 [offscreen] text 556,1551,720,121 ") has become a standard prompting technique for enhancing model performance on complex tasks. The model is instructed to “think step by step” to utilize more test-time computation to decompose hard tasks into smaller and simpler steps. CoT transforms big tasks into multiple manageable tasks and shed lights into an interpretation of the model’s thinking process."
+e129 [offscreen] paragraph 556,1696,720,102
+e130 [offscreen] text 556,1699,122,19 "Tree of Thoughts"
+e131 [offscreen] text 677,1699,10,19 "("
+e132 [offscreen] link 687,1699,108,19 "Yao et al. 2023"
+e133 [offscreen] text 556,1699,715,96 ") extends CoT by exploring multiple reasoning possibilities at each step. It first decomposes the problem into multiple thought steps and generates multiple thoughts per step, creating a tree structure. The search process can be BFS (breadth-first search) or DFS (depth-first search) with each state evaluated by a classifier (via a prompt) or majority vote."
+e134 [offscreen] paragraph 556,1818,720,77
+e135 [offscreen] text 556,1821,515,19 "Task decomposition can be done (1) by LLM with simple prompting like"
+e136 [offscreen] text 1081,1824,150,15 """Steps for XYZ.\n1."""
+e137 [offscreen] text 1241,1821,5,19 ","
+e138 [offscreen] text 566,1850,315,15 """What are the subgoals for achieving XYZ?"""
+e139 [offscreen] text 891,1847,322,19 ", (2) by using task-specific instructions; e.g."
+e140 [offscreen] text 556,1850,712,41 """Write a story outline."""
+e141 [offscreen] text 693,1872,323,19 "for writing a novel, or (3) with human inputs."
+e142 [offscreen] paragraph 556,1915,720,205
+e143 [offscreen] text 556,1918,234,19 "Another quite distinct approach,"
+e144 [offscreen] text 790,1918,51,19 "LLM+P"
+e145 [offscreen] text 841,1918,10,19 "("
+e146 [offscreen] link 850,1918,103,19 "Liu et al. 2023"
+e147 [offscreen] text 556,1918,711,198 "), involves relying on an external classical planner to do long-horizon planning. This approach utilizes the Planning Domain Definition Language (PDDL) as an intermediate interface to describe the planning problem. In this process, LLM (1) translates the problem into “Problem PDDL”, then (2) requests a classical planner to generate a PDDL plan based on an existing “Domain PDDL”, and finally (3) translates the PDDL plan back into natural language. Essentially, the planning step is outsourced to an external tool, assuming the availability of domain-specific PDDL and a suitable planner which is common in certain robotic setups but not in many other domains."
+e148 [offscreen] heading 556,2144,720,29 "Self-Reflection#"
+e149 [offscreen] text 556,2144,162,28 "Self-Reflection"
+e150 [offscreen] paragraph 556,2188,720,77
+e151 [offscreen] text 556,2191,690,70 "Self-reflection is a vital aspect that allows autonomous agents to improve iteratively by refining past action decisions and correcting previous mistakes. It plays a crucial role in real-world tasks where trial and error are inevitable."
+e152 [offscreen] paragraph 556,2285,720,102
+e153 [offscreen] text 556,2288,43,19 "ReAct"
+e154 [offscreen] text 598,2288,10,19 "("
+e155 [offscreen] link 608,2288,108,19 "Yao et al. 2023"
+e156 [offscreen] text 556,2288,717,96 ") integrates reasoning and acting within LLM by extending the action space to be a combination of task-specific discrete actions and the language space. The former enables LLM to interact with the environment (e.g. use Wikipedia search API), while the latter prompting LLM to generate reasoning traces in natural language."
+e157 [offscreen] paragraph 556,2408,720,26 "The ReAct prompt template incorporates explicit steps for LLM to think, roughly formatted as:"
+e158 [offscreen] text 566,2464,53,15 "Thought"
+e159 [offscreen] text 618,2464,38,15 ": ..."
+e160 [offscreen] text 566,2483,45,15 "Action"
+e161 [offscreen] text 611,2483,38,15 ": ..."
+e162 [offscreen] text 566,2502,83,15 "Observation"
+e163 [offscreen] text 566,2502,188,34 ": ... ... (Repeated many times)"
+e164 [offscreen] text 658,2900,527,59 "Examples of reasoning trajectories for knowledge-intensive tasks (e.g. HotpotQA, FEVER) and decision-making tasks (e.g. AlfWorld Env, WebShop). (Image source:"
+e165 [offscreen] link 912,2940,101,18 "Yao et al. 2023"
+e166 [offscreen] text 1013,2940,10,18 ")."
+e167 [offscreen] paragraph 556,2995,720,51 "In both experiments on knowledge-intensive tasks and decision-making tasks, ReAct works better than the Act-only baseline where Thought: … step is removed."
+e168 [offscreen] text 556,2998,569,19 "In both experiments on knowledge-intensive tasks and decision-making tasks,"
+e169 [offscreen] text 1135,3001,38,15 "ReAct"
+e170 [offscreen] text 556,2998,674,45 "works better than the"
+e171 [offscreen] text 675,3026,23,15 "Act"
+e172 [offscreen] text 708,3023,152,19 "-only baseline where"
+e173 [offscreen] text 870,3026,75,15 "Thought: …"
+e174 [offscreen] text 955,3023,123,19 "step is removed."
+e175 [offscreen] paragraph 556,3066,720,154
+e176 [offscreen] text 556,3069,67,19 "Reflexion"
+e177 [offscreen] text 623,3069,10,19 "("
+e178 [offscreen] +1535 more lines truncated (scroll to reveal)
+
+(11 earlier view(s) omitted: history budget)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

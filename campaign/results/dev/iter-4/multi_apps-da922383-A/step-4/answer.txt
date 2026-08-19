@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1020, 389); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('/home/user/Documents/Blog/LLM Powered Autonomous Agents.pdf', interval=0.02)", "memo": "Tab1='LLM Powered Autonomous Agents'(220,47), Tab2='Thinking about High-Qu...'(460,47). GTK save dlg open; typed full path /home/user/Documents/Blog/LLM Powered Autonomous Agents.pdf in Name. Next: press Enter (or click Save at 1375,389). If 'folder does not exist' error, create Blog dir via dialog's new-folder btn (1399,436)."}
+```

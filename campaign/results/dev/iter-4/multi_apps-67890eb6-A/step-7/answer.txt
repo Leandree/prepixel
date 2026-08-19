@@ -1,0 +1,3 @@
+All four aclanthology PDF links return HTTP 200, and the workbook was saved to `/home/user/Desktop/best_awards_acl.xlsx` (5312 bytes) with header + 4 rows sorted 2022→2019.
+
+{"action": "DONE", "memo": "Task complete: best_awards_acl.xlsx on Desktop with header (title, year, author list, PDF link) and 4 rows 2022 Learned Incremental Representations for Parsing / 2021 VOLT / 2020 CheckList / 2019 Bridging the Gap; all 4 aclanthology PDF URLs verified 200."}

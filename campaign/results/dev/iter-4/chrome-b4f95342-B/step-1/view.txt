@@ -1,0 +1,166 @@
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶33"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Recreation.gov - Camping, Cabins, RVs, Permits, Passes & More" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1565,24 "Address and search bar"
+e32 push-button 1800,78,24,24 "Bookmark this tab"
+e33 push-button 1845,73,34,34 "You"
+e34 push-button 1881,73,39,34 "Chrome"
+e35 text 409,104,1157,83 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+e36 text 462,109,1051,72 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+e37 link 918,108,139,22 "Skip to Main Content"
+e38 text 184,103,334,289 "www.recreation.gov wants to: Know your location"
+e39 status 409,114,1157,170
+e40 text 463,135,1049,71 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+e41 push-button 849,228,94,40 "Ignore"
+e42 link 960,228,166,40 "Upgrade Browser"
+e43 text 920,111,113,15 "Skip to Main Content"
+e44 presentation 1036,109,19,19 [occluded]
+e45 text 921,111,111,15 "Skip to Help Chatbot"
+e46 presentation 1035,109,19,19 [occluded]
+e47 [pixels] image 94,291,16,11
+e48 text 118,287,286,17 "An official website of the United States government"
+e49 push-button 412,288,139,16 "Here’s how you know"
+e50 presentation 535,288,16,16
+e51 link 94,330,240,35 "Recreation.gov Homepage"
+e52 [pixels] image 94,330,240,35
+e53 label 1376,327,1,1 "Search Recreation.gov" [occluded]
+e54 presentation 1385,338,20,20
+e55 combo-box 1377,328,248,40 "Search Recreation.gov"
+e56 link 1649,332,40,32 "Help"
+e57 push-button 1713,332,104,32 "Sign Up or Log In"
+e58 text 1713,338,104,19 "Sign Up / Log In"
+e59 push-button 1841,328,40,40 "Navigation Menu"
+e60 presentation 1845,332,32,32
+e61 main 70,388,1835,5567
+e62 heading 69,387,1,1 "Recreation.gov" [occluded]
+e63 push-button 1863,388,42,40 "View details about the background image"
+e64 presentation 1872,397,24,24
+e65 page-tab-list 442,534,917,48
+e66 page-tab 442,534,104,48 "Explore All" state=selected
+e67 page-tab 554,534,162,48 "Camping & Lodging"
+e68 page-tab 724,534,135,48 "Tickets & Tours"
+e69 page-tab 867,534,84,48 "Permits"
+e70 page-tab 960,534,149,48 "Day Use / Venues"
+e71 page-tab 1117,534,142,48 "AI Search Beta"
+e72 text 1133,548,63,19 "AI Search"
+e73 text 1209,551,28,15 "Beta"
+e74 label 1377,546,157,21 "Accessible camping"
+e75 presentation 1401,548,16,16
+e76 tabpanel 442,601,1090,371 "Explore All"
+e77 label 441,600,1,1 "Search Recreation.gov" [occluded]
+e78 presentation 454,615,20,20
+e79 combo-box 442,601,940,48 "Search Recreation.gov"
+e80 push-button 1390,601,143,48 "SEARCH"
+e81 link 442,698,255,274 "Camping & Lodging"
+e82 [pixels] image 442,698,255,274
+e83 [pixels] image 442,698,255,274
+e84 link 721,698,255,125 "Tickets & Tours"
+e85 [pixels] image 721,698,255,125
+e86 [pixels] image 721,698,255,125
+e87 link 999,698,255,125 "Permits"
+e88 [pixels] image 999,698,255,125
+e89 [pixels] image 999,698,255,125
+e90 link 1278,698,255,125 "Activity Passes"
+e91 [pixels] image 1278,698,255,125
+e92 [pixels] image 1278,698,255,125
+e93 link 721,847,255,125 "Lotteries"
+e94 [pixels] image 721,847,255,125
+e95 [pixels] image 721,847,255,125
+e96 link 999,847,255,125 "Hunting & Fishing"
+e97 [pixels] image 999,847,255,125
+e98 [pixels] image 999,847,255,125
+e99 link 1278,847,255,125 "Day Use & Venues"
+e100 [pixels] image 1278,847,255,125
+e101 [pixels] image 1278,847,255,125
+e102 [pixels] image 70,388,1835,338 alt=Scenic canyon landscape at Grand Canyon National Park, AZ
+e103 [offscreen] heading 146,975,1544,50 "Campground Explorer Beta"
+e104 [offscreen] text 146,973,265,34 "Campground Explorer"
+e105 [offscreen] text 427,988,28,15 "Beta"
+e106 [offscreen] paragraph 146,1025,1544,24 "Choose an activity and discover campgrounds nearby!"
+e107 [offscreen] link 162,1121,54,24 "Campgrounds with Biking"
+e108 [offscreen] text 162,1121,54,24 "Biking"
+e109 [offscreen] link 423,1109,126,48 "Campgrounds with Water Activities"
+e110 [offscreen] text 423,1109,79,48 "Water Activities"
+e111 [offscreen] link 684,1121,55,24 "Campgrounds with Hiking"
+e112 [offscreen] text 684,1121,55,24 "Hiking"
+e113 [offscreen] link 945,1121,61,24 "Campgrounds with Fishing"
+e114 [offscreen] text 945,1121,61,24 "Fishing"
+e115 [offscreen] link 1207,1109,126,48 "Campgrounds with Wildlife Viewing"
+e116 [offscreen] text 1207,1109,68,48 "Wildlife Viewing"
+e117 [offscreen] link 1468,1109,126,48 "Campgrounds with Education / Programs"
+e118 [offscreen] text 1468,1109,98,48 "Education / Programs"
+e119 [offscreen] heading 170,1301,400,30 "Adventure is at Your Fingertips"
+e120 [offscreen] paragraph 170,1347,400,72 "Get outdoors, experience America, and bring home a story with the Recreation.gov mobile app!"
+e121 [offscreen] text 170,1349,388,43 "Get outdoors, experience America, and bring home a story with the"
+e122 [offscreen] text 228,1373,99,19 "Recreation.gov"
+e123 [offscreen] text 326,1373,82,19 "mobile app!"
+e124 [offscreen] link 170,1435,128,40 "Learn more about the mobile app"
+e125 [offscreen] text 195,1445,78,19 "Learn More"
+e126 [offscreen] heading 954,1301,315,30 "Passes"
+e127 [offscreen] paragraph 954,1347,380,72 "Enjoy the convenience of purchasing a pass ahead of time to cover entrance or standard amenity (day-use) fees for your trips."
+e128 [offscreen] link 954,1435,128,40 "Learn more about interagency and site passes"
+e129 [offscreen] text 979,1445,78,19 "Learn More"
+e130 [offscreen] heading 146,1563,1544,50 "Available This Weekend"
+e131 [offscreen] paragraph 146,1613,1544,24 "Campgrounds with upcoming availability. Explore More"
+e132 [offscreen] text 146,1615,268,19 "Campgrounds with upcoming availability."
+e133 [offscreen] link 422,1613,110,24 "Explore more nearby available campsites"
+e134 [offscreen] text 422,1615,90,19 "Explore More"
+e135 [offscreen] presentation 516,1617,16,16
+e136 [offscreen] push-button 1622,1605,32,32 "Available Nearby Previous page"
+e137 [offscreen] presentation 1628,1611,20,20
+e138 [offscreen] push-button 1658,1605,32,32 "Available Nearby Next page"
+e139 [offscreen] presentation 1664,1611,20,20
+e140 [offscreen] none 146,1665,200,133
+e141 [offscreen] presentation 161,1675,14,14
+e142 [offscreen] text 179,1674,61,15 "Aug 21 - 23"
+e143 [offscreen] link 146,1806,200,17 "Tuolumne Horse Campsites"
+e144 [offscreen] text 146,1828,54,17 "California"
+e145 [offscreen] presentation 146,1851,16,16
+e146 [offscreen] presentation 161,1851,16,16
+e147 [offscreen] presentation 176,1851,16,16
+e148 [offscreen] presentation 191,1851,16,16
+e149 [offscreen] presentation 206,1851,16,16
+e150 [offscreen] text 226,1850,4,17 "("
+e151 [offscreen] text 229,1850,7,17 "3"
+e152 [offscreen] text 236,1850,4,17 ")"
+e153 [offscreen] text 225,1849,42,38 "3 reviews"
+e154 [offscreen] none 369,1665,200,133
+e155 [offscreen] presentation 384,1675,14,14
+e156 [offscreen] text 402,1674,61,15 "Aug 21 - 23"
+e157 [offscreen] link 369,1806,200,34 "Hodgdon Meadow Campground"
+e158 [offscreen] text 369,1845,190,17 "Yosemite National Park, California"
+e159 [offscreen] presentation 369,1868,16,16
+e160 [offscreen] presentation 385,1868,16,16
+e161 [offscreen] presentation 400,1868,16,16
+e162 [offscreen] presentation 415,1868,16,16
+e163 push-button 1829,1004,56,56 "Open Chat"
+e164 [pixels] image 1839,1014,36,36
+e165 region 70,114,1835,12 "Notifications: 0" [occluded]
+e166 [offscreen] +1605 more lines truncated (scroll to reveal)

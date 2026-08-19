@@ -1,0 +1,1 @@
+{"action":"click","target":"e191","memo":"Origin=JFK. Clicked 'ORD Chicago-O'Hare, IL' in predictive list. Next: set Trip Type (e96 combo) to One Way, then date field (e99) -> pick Aug 20 2026, then Find Flights (e106)."}

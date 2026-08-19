@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+s","memo":"Ctrl+S pressed in Writer for book_list_result.docx (paragraph 1 = 'Out of the Silent Planet'). Next: click 'Use Word 2007-365!' in the keep-format dialog, then done."}
+```

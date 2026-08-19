@@ -1,0 +1,1 @@
+{"action": "key", "keys": "left", "memo": "Tree focus was on 'Advanced' (expanded). Pressed Left to COLLAPSE it, freeing 4 rows so 'Playlist' node should appear near y~756. Next: click 'Playlist' tree node, uncheck 'Play and exit' on its page, then click Save (e82). If Left didn't collapse, try clicking search field e55 and typing 'play and exit'."}

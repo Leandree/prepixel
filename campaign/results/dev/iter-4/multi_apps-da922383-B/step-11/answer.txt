@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+p","memo":"Tab1 (LLM Powered Autonomous Agents): opened print dialog. NEXT: click the 'Save' push-button in the print preview; then wait for GTK save dialog; then type '/home/user/Documents/Blog/LLM Powered Autonomous Agents' (stem only, .pdf auto-kept) and press Enter. Budget is tight - skip extra waits if Save button visible."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(906, 783)", "memo": "Clicked 'Display background cone or art' checkbox at (906,783) to uncheck it. Next: verify it is unchecked in screenshot, then click Save at (1210, 903)."}

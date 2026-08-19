@@ -1,0 +1,31 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Set up to forward every email received by anonym-x2024@outlook.com in the future to anonym-x2024@gmail.com. Please don't touch the online account. Just locally in the Thunderbird!
+
+STEP 1 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+(none)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+(none)
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter4/thunderbird-9b7bc335-A/_pixels/step-1/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+(none)
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

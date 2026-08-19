@@ -1,0 +1,5 @@
+Data is loaded: Sheet1 has Revenue (A2:A20) and Total Expenses (B2:B20). Now I'll add a new sheet.
+
+```json
+{"action": "import pyautogui; pyautogui.click(195, 1045)", "memo": "Step 2: Sheet1 has A1='Revenue', B1='Total Expenses', data rows 2-20. Only Sheet1 existed; clicked '+' insert-sheet button to create Sheet2. Next: verify Sheet2 tab created & active, then type headers 'Total Revenue'/'Total Expenses' in A1/B1 and =SUM(Sheet1.A2:A20) / =SUM(Sheet1.B2:B20) in A2/B2, then Ctrl+S keep xlsx format."}
+```

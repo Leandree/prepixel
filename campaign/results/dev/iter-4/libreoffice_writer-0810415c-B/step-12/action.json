@@ -1,0 +1,1 @@
+{"action": "click", "target": "e136", "memo": "Uncertain whether 'Spacing: 2' or '1.5' got applied earlier (3 downs may have landed on 1.5). Re-opening Line Spacing dropdown. NEXT: click the 'Spacing: 2' item directly by its element id (do NOT use arrow keys). Then ctrl+s, then Enter on the 'Use Word 2007-365!' dialog."}

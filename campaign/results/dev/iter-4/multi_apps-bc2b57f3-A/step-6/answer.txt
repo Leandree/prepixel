@@ -1,0 +1,7 @@
+I now have the exact required order from reminder.docx. Opening the Basic IDE to reorder the sheets programmatically.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(864, 632); time.sleep(3)"}
+```
+
+{"action": "import pyautogui, time; pyautogui.click(864, 632); time.sleep(3)", "memo": "TARGET ORDER (from reminder.docx): ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Just clicked Tools>Macros>Edit Macros to open Basic IDE. Plan: type macro that reorders sheets of the xlsx doc by name (moveByName) then store() to save."}

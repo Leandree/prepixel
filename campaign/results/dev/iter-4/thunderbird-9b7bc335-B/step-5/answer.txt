@@ -1,0 +1,1 @@
+{"action":"click","target":"e84","memo":"Filter Rules dialog did not appear after first 'New…' click ('Copy…' at 1261,475 is just a normal button in the Message Filters dialog, not a popup). Re-clicked 'New…' (e84). Next: expect Filter Rules dialog — set name 'Forward to gmail', pick 'Match all messages', action 'Forward Message to' = anonym-x2024@gmail.com, then OK."}

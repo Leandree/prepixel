@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e26","memo":"Task: on Steam, find Dota 2 and add all DLC to cart. Switched to 'Welcome to Steam' tab; next: use Steam store search for Dota 2."}
+```

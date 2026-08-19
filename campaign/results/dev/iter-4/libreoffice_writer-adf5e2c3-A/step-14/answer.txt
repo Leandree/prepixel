@@ -1,0 +1,1 @@
+{"action": "DONE", "memo": "Verified: no dialog on screen, doc saved in Word format. Ref list ends with [14] Steinberg... jada.2003.50028; para 4 has 'Pennington [14]' cross-reference. Task complete."}

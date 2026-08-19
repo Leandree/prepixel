@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(571, 533)", "memo": "Clicked 'JFK New York-Kennedy, NY' suggestion. Next: Destination field should auto-open (or click To at ~636,297) -> type ORD -> pick 'ORD Chicago-O'Hare, IL'. Then trip type dropdown (851,297) -> One Way. VM clock says Aug 20 02:45, so tomorrow = Aug 21 2026. Then Find Flights (1487,297)."}
+```

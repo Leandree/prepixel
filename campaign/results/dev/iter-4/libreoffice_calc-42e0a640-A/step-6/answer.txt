@@ -1,0 +1,5 @@
+I haven't actually confirmed Sheet1's layout. Let me switch to Sheet1 to verify the columns and data extent.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(243, 1045); time.sleep(1); pyautogui.hotkey('ctrl','end')", "memo": "Step 6: Switched to Sheet1 + Ctrl+End to find last cell. VERIFY: col A header=Revenue, col B header=Total Expenses, and last row <=20 (my formula used Sheet1.A2:A20/B2:B20 -> 867786/411686). If layout differs, fix Sheet2 A2/B2 then Ctrl+S + Enter (Keep xlsx)."}
+```

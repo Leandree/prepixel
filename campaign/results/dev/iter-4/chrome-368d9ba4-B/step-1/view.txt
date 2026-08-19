@@ -1,0 +1,159 @@
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶17"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Local, National, & Global Daily Weather Forecast | AccuWeather" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1565,24 "Address and search bar"
+e32 push-button 1800,78,24,24 "Bookmark this tab"
+e33 push-button 1845,73,34,34 "You"
+e34 push-button 1881,73,39,34 "Chrome"
+e35 link 507,854,633,401 "FRANCE WEATHER RADAR See More France Weather Radar"
+e36 [pixels] image 507,898,633,357 alt=France Weather Radar
+e37 link 515,854,632,401 "FRANCE WEATHER RADAR See More France Weather Radar"
+e38 [pixels] image 515,898,632,357 alt=France Weather Radar
+e39 text 1592,103,334,207 "Can't update Chrome"
+e40 dialog 74,118,328,958 "privacy banner"
+e41 heading 94,138,125,30 "Privacy Promise"
+e42 paragraph 94,184,273,84 "Welcome! We’re glad you’re here and want you to know that we respect your privacy and your right to control how we collect, use, and share your personal data."
+e43 paragraph 94,268,273,21
+e44 paragraph 94,289,273,546
+e45 text 94,291,271,458 "We and third parties use cookies and similar technologies (""Cookies"") on the site. Some Cookies are necessary to make this site and our content available to you; these Cookies fire automatically and are not subject to your preference settings. If you click ""Consent,"" you consent to us and our advertisers, ad-tech providers, including 52 IAB TCF Framework vendors (""Vendors"") and other third-party vendors (""Non-IAB Vendors""), which may include Google vendors, using additional Cookies and processing your personal data (such as unique identifiers) and other information stored and/or accessed from your device or browser. Cookies used by both Vendors and Non-IAB Vendors may be accessed and managed by selecting the ""Manage Options"" button. Click on ""Manage Options"" for more information about these Cookies and where we and our partners may process your personal data based on legitimate interests. See also our"
+e46 link 143,732,75,17 "Privacy Policy (opens in a new tab)" state=focused
+e47 text 143,732,75,17 "Privacy Policy"
+e48 text 94,732,257,101 ". Your service-specific consent choices will be propagated to named vendors linked below who will store and/or access information from your device and process your personal data."
+e49 paragraph 94,835,273,189 [occluded]
+e50 text 94,837,268,185 "You can adjust your Cookies preferences, object to legitimate interests, or revoke your consent at any time by clicking on the ""About Your Privacy"" link at the bottom of the site. If you do not consent to these Cookies and the processing of your personal data for these purposes, click ""Do Not Consent"". Your preferences will apply to this site only and are browser and device-specific."
+e51 paragraph 94,1024,273,21
+e52 paragraph 94,1045,273,21 "We and our partners process data to provide:" [occluded]
+e53 paragraph 94,1066,273,252
+e54 text 94,1068,269,227 "Actively scan device characteristics for identification. Store and/or access information on a device. Use limited data to select advertising. Create profiles for personalized advertising. Use profiles to select personalized advertising. Create profiles to personalize content. Measure advertising performance. Measure content performance. Understand audiences through statistics or combinations of data from different sources. Use limited data to select content. Develop and improve services."
+e55 [offscreen] link 24,1183,84,21 "List of Vendors (opens in a new tab)"
+e56 [offscreen] text 24,1185,84,17 "List of Vendors"
+e57 group 94,860,273,160 "Privacy Promise"
+e58 push-button 94,872,273,40 "Consent"
+e59 text 207,884,48,17 "Consent"
+e60 push-button 94,924,273,40 "Do Not Consent"
+e61 text 186,936,90,17 "Do Not Consent"
+e62 push-button 94,976,273,40 "Manage Options"
+e63 text 184,988,93,17 "Manage Options"
+e64 link 94,1040,115,20 "Learn more about Ketch for data privacy (opens in a new tab)"
+e65 [pixels] image 94,1040,115,20
+e66 list-item 86,121,93,19 "For Business" [occluded]
+e67 link 91,121,83,19 "For Business" [occluded]
+e68 list-item 179,121,15,19 "|" [occluded]
+e69 list-item 194,121,71,19 "Warnings" [occluded]
+e70 link 199,121,61,19 "Warnings" [occluded]
+e71 list-item 265,121,78,19 "Data Suite" [occluded]
+e72 link 270,121,68,19 "Data Suite" [occluded]
+e73 list-item 343,121,73,19 "Forensics" [occluded]
+e74 link 348,121,63,19 "Forensics" [occluded]
+e75 list-item 416,121,84,19 "Advertising" [occluded]
+e76 link 421,121,74,19 "Advertising" [occluded]
+e77 list-item 500,121,135,19 "Superior Accuracy™" [occluded]
+e78 link 505,121,125,19 "Superior Accuracy™" [occluded]
+e79 link 427,164,168,27 [occluded]
+e80 [pixels] image 427,165,168,24
+e81 [pixels] image 1537,164,26,26
+e82 [pixels] image 731,274,24,24
+e83 entry 767,277,342,19 "Search" [occluded]
+e84 text 1156,280,51,17 "Location"
+e85 [pixels] image 1221,285,10,6 alt=Chevron down
+e86 text 719,332,103,15 "Recent Locations"
+e87 link 719,360,172,133 "Tours, France France 26° C RealFeel® 24°" [occluded]
+e88 text 735,376,41,21 "Tours"
+e89 text 735,398,34,15 "France"
+e90 [pixels] image 735,423,32,32
+e91 text 779,420,42,36 "26°"
+e92 text 808,436,7,15 "C"
+e93 text 735,461,46,15 "RealFeel®"
+e94 text 783,461,14,15 "24°"
+e95 [pixels] image 510,573,970,250
+e96 link 515,855,632,400 "France Weather Radar See More Static Radar Temporarily Unavailable Thank you for your patience as we work to get everything up and running again. Refresh Page" [occluded]
+e97 text 527,867,164,19 "France Weather Radar"
+e98 text 1056,868,53,17 "See More"
+e99 [pixels] image 1117,868,18,18
+e100 [pixels] image 515,899,632,356 alt=France Weather Radar
+e101 [offscreen] paragraph 445,1156,632,19 "France Weather Conditions See More"
+e102 [offscreen] text 445,1156,202,19 "France Weather Conditions"
+e103 [offscreen] link 998,1157,79,18 "See More"
+e104 [offscreen] link 445,1183,315,59 "Amiens 18°"
+e105 [offscreen] text 461,1202,54,21 "Amiens"
+e106 [offscreen] text 725,1202,19,21 "18°"
+e107 [offscreen] link 762,1183,315,59 "Angers 19°"
+e108 [offscreen] text 778,1202,51,21 "Angers"
+e109 [offscreen] text 1042,1202,19,21 "19°"
+e110 [offscreen] link 445,1244,315,59 "Besançon 29°"
+e111 [offscreen] text 461,1263,73,21 "Besançon"
+e112 [offscreen] text 722,1263,23,21 "29°"
+e113 [offscreen] link 762,1244,315,59 "Bordeaux 25°"
+e114 [offscreen] text 778,1263,70,21 "Bordeaux"
+e115 [offscreen] text 1039,1263,22,21 "25°"
+e116 [offscreen] link 445,1305,315,59 "Caen 20°"
+e117 [offscreen] text 461,1324,37,21 "Caen"
+e118 [offscreen] text 721,1324,23,21 "20°"
+e119 [offscreen] link 762,1305,315,59 "Clermont-ferrand 31°"
+e120 [offscreen] text 778,1324,130,21 "Clermont-ferrand"
+e121 [offscreen] text 1043,1324,18,21 "31°"
+e122 [offscreen] link 445,1366,315,59 "Dijon 32°"
+e123 [offscreen] text 461,1385,37,21 "Dijon"
+e124 [offscreen] text 722,1385,22,21 "32°"
+e125 [offscreen] link 762,1366,315,59 "Grenoble 29°"
+e126 [offscreen] text 778,1385,67,21 "Grenoble"
+e127 [offscreen] text 1039,1385,23,21 "29°"
+e128 [offscreen] link 445,1427,315,59 "Le Mans 19°"
+e129 [offscreen] text 461,1446,62,21 "Le Mans"
+e130 [offscreen] text 725,1446,19,21 "19°"
+e131 [offscreen] link 762,1427,315,59 "Lille 18°"
+e132 [offscreen] text 778,1446,31,21 "Lille"
+e133 [offscreen] text 1042,1446,19,21 "18°"
+e134 [offscreen] link 445,1488,315,59 "Limoges 25°"
+e135 [offscreen] text 461,1507,62,21 "Limoges"
+e136 [offscreen] text 722,1507,22,21 "25°"
+e137 [offscreen] link 762,1488,315,59 "Lyon 33°"
+e138 [offscreen] text 778,1507,36,21 "Lyon"
+e139 [offscreen] text 1039,1507,22,21 "33°"
+e140 [offscreen] link 445,1549,315,59 "Marseille 28°"
+e141 [offscreen] text 461,1568,68,21 "Marseille"
+e142 [offscreen] text 721,1568,23,21 "28°"
+e143 [offscreen] link 762,1549,315,59 "Metz 29°"
+e144 [offscreen] text 778,1568,36,21 "Metz"
+e145 [offscreen] text 1039,1568,23,21 "29°"
+e146 [offscreen] link 445,1610,315,59 "Montpellier 27°"
+e147 [offscreen] text 461,1629,85,21 "Montpellier"
+e148 [offscreen] text 723,1629,21,21 "27°"
+e149 [offscreen] link 762,1610,315,59 "Nantes 21°"
+e150 [offscreen] text 778,1629,53,21 "Nantes"
+e151 [offscreen] text 1043,1629,18,21 "21°"
+e152 [offscreen] link 445,1671,315,59 "Nice 29°"
+e153 [offscreen] text 461,1690,32,21 "Nice"
+e154 [offscreen] text 722,1690,23,21 "29°"
+e155 [offscreen] link 762,1671,315,59 "Paris 20°"
+e156 [offscreen] text 778,1690,36,21 "Paris"
+e157 [offscreen] text 1038,1690,23,21 "20°"
+e158 [offscreen] link 445,1732,315,59 "Strasbourg 30°"
+e159 [offscreen] +349 more lines truncated (scroll to reveal)

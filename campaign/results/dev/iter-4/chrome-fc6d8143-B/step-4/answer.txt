@@ -1,0 +1,1 @@
+{"action":"set_value","target":"e188","value":"JFK","memo":"Origin overlay open, entry e188 set to JFK. Next: pick 'JFK New York-Kennedy' from predictive_search_list, then Destination -> ORD Chicago O'Hare, Trip Type -> One Way, date -> Aug 20 2026, Find Flights."}

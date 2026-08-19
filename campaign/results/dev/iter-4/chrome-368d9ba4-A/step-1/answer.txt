@@ -1,0 +1,5 @@
+Chrome is open on a blank tab. "Monthly forecast" is an OpenWeatherMap feature, so I'll search their city finder for Manchester, GB.
+
+```json
+{"action": "import pyautogui; pyautogui.click(600, 90); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('https://openweathermap.org/find?q=Manchester%2CGB\n')", "memo": "Step1: opened openweathermap find?q=Manchester,GB. Next: click the Manchester, GB result, then open the 'Monthly forecast' tab on the city page and read this month's (August) forecast."}
+```

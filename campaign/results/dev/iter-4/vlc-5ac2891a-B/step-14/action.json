@@ -1,0 +1,1 @@
+{"action": "click", "target": "e80", "memo": "Playlist page confirmed: 'Play and exit' (e47) is unchecked (false) = VLC will NOT exit when video ends. Clicked Save (e80) to persist to vlcrc. NEXT: verify prefs dialog closed, then report done."}

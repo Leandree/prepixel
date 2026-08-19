@@ -1,0 +1,104 @@
+e1 [pixels] icon 1821,969,64,64
+e2 text 1833,1037,40,17 "Home"
+e3 text 44,4,786,533 "user@user-virtual-machine: ~"
+e4 push-button 684,35,34,30 "Minimize"
+e5 push-button 724,35,34,30 "Maximize"
+e6 push-button 764,35,34,30 "Close"
+e7 push-button 593,27,36,46
+e8 toggle-button 635,27,36,46 "Menu" state=checked:false
+e9 text 321,41,232,17 "user@user-virtual-machine: ~"
+e10 push-button 76,27,36,46
+e11 terminal 70,74,722,434 "Terminal" state=focused typed-by-driver="gsettings get org.gnome.desktop.interface show-battery-percentage"
+e12 scroll-bar 792,74,12,434 value="0.0"
+e13 text 479,119,1032,869 "Settings"
+e14 toggle-button 705,142,36,46 "Primary Menu" state=checked:false
+e15 text 583,156,85,17 "Settings"
+e16 toggle-button 511,142,36,46 "Search" state=checked:false
+e17 push-button 1365,150,34,30 "Minimize"
+e18 push-button 1405,150,34,30 "Maximize"
+e19 push-button 1445,150,34,30 "Close"
+e20 text 1082,156,68,17 "Power"
+e21 list-item 505,189,242,45 "Control how you connect to the Internet"
+e22 text 547,203,186,17 "Network"
+e23 [pixels] icon 519,203,16,17
+e24 list-item 505,234,242,45 "Turn Bluetooth on and off and connect your devices"
+e25 text 547,248,186,17 "Bluetooth"
+e26 [pixels] icon 519,248,16,17
+e27 list-item 505,280,242,45 "Change your background image to a wallpaper or photo"
+e28 text 547,294,186,17 "Background"
+e29 [pixels] icon 519,294,16,17
+e30 list-item 505,325,242,45 "Appearance Settings"
+e31 text 547,339,186,17 "Appearance"
+e32 [pixels] icon 519,339,16,17
+e33 list-item 505,370,242,45 "Control which notifications are displayed and what they show"
+e34 text 547,384,186,17 "Notifications"
+e35 [pixels] icon 519,384,16,17
+e36 list-item 505,415,242,45 "Control which applications show search results in the Activities Overview"
+e37 text 547,429,186,17 "Search"
+e38 [pixels] icon 519,429,16,17
+e39 list-item 505,460,242,45 "Manage preferences for productivity and multitasking"
+e40 text 547,474,186,17 "Multitasking"
+e41 [pixels] icon 519,474,16,17
+e42 list-item 505,506,242,45 "Control various application permissions and settings"
+e43 [pixels] icon 717,520,16,17 alt=Forward
+e44 text 547,520,158,17 "Applications"
+e45 [pixels] icon 519,520,16,17
+e46 list-item 505,551,242,45 "Privacy"
+e47 [pixels] icon 519,565,16,17
+e48 [pixels] icon 717,565,16,17 alt=Forward
+e49 list-item 505,596,242,45 "Connect to your online accounts and decide what to use them for"
+e50 text 547,610,186,17 "Online Accounts"
+e51 [pixels] icon 519,610,16,17
+e52 list-item 505,641,242,45 "Control what you want to share with others"
+e53 text 547,655,186,17 "Sharing"
+e54 [pixels] icon 519,655,16,17
+e55 list-item 505,687,242,45 "Change sound levels, inputs, outputs, and alert sounds"
+e56 text 547,701,186,17 "Sound"
+e57 [pixels] icon 519,701,16,17
+e58 list-item 505,732,242,45 "View your battery status and change power saving settings" state=selected
+e59 text 547,746,186,17 "Power"
+e60 [pixels] icon 519,746,16,17
+e61 list-item 505,777,242,45 "Choose how to use connected monitors and projectors"
+e62 text 547,791,186,17 "Displays"
+e63 [pixels] icon 519,791,16,17
+e64 list-item 505,822,242,45 "Change your mouse or touchpad sensitivity and select right or left-handed"
+e65 text 547,836,186,17 "Mouse & Touchpad"
+e66 [pixels] icon 519,836,16,17
+e67 list-item 505,867,242,45 "Change keyboard shortcuts and set your typing preferences, keyboard layouts and input sources"
+e68 text 547,881,186,17 "Keyboard"
+e69 [pixels] icon 519,881,16,17
+e70 list-item 505,912,242,45 "Add printers, view printer jobs and decide how you want to print"
+e71 text 547,926,186,17 "Printers"
+e72 [pixels] icon 519,926,16,17
+e73 list-item 505,957,242,45 "Configure Removable Media settings"
+e74 scroll-bar 741,189,6,770 value="0.0"
+e75 list-item 827,265,578,56 "Standard performance and power usage."
+e76 text 882,274,61,20 "Balanced"
+e77 radio-button 848,274,16,39 state=checked:true
+e78 list-item 827,321,578,56 "Reduced performance and power usage."
+e79 text 882,330,81,20 "Power Saver"
+e80 radio-button 848,330,16,38 state=checked:false
+e81 list-item 827,430,578,56
+e82 list-item 827,486,578,56 "Automatic suspend"
+e83 text 1368,489,22,50 "Off"
+e84 toggle-button 0,0,99,27 "Activities" state=checked:false
+e85 menu 99,0,116,27 "Terminal"
+e86 menu 906,0,178,27 "Aug 20 01‎∶56"
+e87 menu 1814,0,106,27 "System"
+e88 push-button 0,976,70,8
+e89 push-button 62,33,8,951
+e90 push-button 0,33,70,64 "Google Chrome"
+e91 push-button 0,101,70,64 "Thunderbird Mail"
+e92 push-button 0,169,70,64 "Visual Studio Code"
+e93 push-button 0,237,70,64 "VLC media player"
+e94 push-button 0,305,70,64 "LibreOffice Writer"
+e95 push-button 0,373,70,64 "LibreOffice Calc"
+e96 push-button 0,441,70,64 "LibreOffice Impress"
+e97 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e98 push-button 0,577,70,64 "Files"
+e99 push-button 0,645,70,64 "Ubuntu Software"
+e100 push-button 0,713,70,64 "Help"
+e101 push-button 0,784,70,64 "Terminal"
+e102 push-button 0,852,70,64 "Settings"
+e103 push-button 0,920,70,64 "Trash"
+e104 toggle-button 0,1010,70,70 "Show Applications" state=checked:false

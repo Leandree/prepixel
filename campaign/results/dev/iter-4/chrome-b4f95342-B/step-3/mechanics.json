@@ -1,0 +1,45 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 592,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 63,
+  "cdp_records": 184,
+  "offscreen": 60,
+  "url": "https://www.recreation.gov/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 6348,
+  "picked_by": "visible",
+  "tab": "Explore All",
+  "picked_title": "Recreation.gov - Camping, Cabins, RVs, Permits, Passes & More"
+ },
+ "cdp_offscreen_skipped": 1618,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung1_error": "cdp: stale-handle: element left the document",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  904,
+  718
+ ],
+ "settle_ms": 8294,
+ "settle_captures": 2,
+ "guard_ms": 57
+}

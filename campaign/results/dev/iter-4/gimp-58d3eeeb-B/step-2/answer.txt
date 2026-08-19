@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"cd ~/Desktop && ls -la && file * && which binwalk steghide exiftool ffmpeg python3\n","memo":"Task: extract hidden audio from ~/Desktop/heron.jpeg, translate convo to French. Terminal open (e13). Step2: ran ls -la, file *, which binwalk/steghide/exiftool/ffmpeg/python3. Next: read output, then try binwalk -e or strings/tail for appended audio (RIFF/ID3/OggS). I cannot hear audio -> need transcript via metadata or whisper."}
+```

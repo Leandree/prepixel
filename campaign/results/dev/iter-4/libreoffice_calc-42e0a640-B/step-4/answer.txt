@@ -1,0 +1,1 @@
+{"action":"type","text":"Total Revenue\tTotal Expenses\n=SUM(Sheet1.A2:A20)\t=SUM(Sheet1.B2:B20)\n","memo":"Typed headers+formulas into Sheet2 A1:B2. NEXT: verify via [uno] cells (A1 'Total Revenue', B1 'Total Expenses', A2/B2 sums). If empty, click grid cell first then retype per-cell. Then ctrl+s -> Keep current format (Use Excel 2007-365!)."}

@@ -1,0 +1,39 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 602,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 49,
+  "cdp_records": 138,
+  "offscreen": 60,
+  "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 23055,
+  "picked_by": "title-partial",
+  "tab": "LLM Powered Autonomous Agents | Lil'Log - Memory usage - 58.5 MB",
+  "picked_title": "LLM Powered Autonomous Agents | Lil'Log"
+ },
+ "cdp_offscreen_skipped": 1535,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 10,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 10738,
+ "settle_captures": 1,
+ "guard_ms": 44
+}

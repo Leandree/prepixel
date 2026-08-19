@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e13", "memo": "Step5: cropping terminal to read scan output (file len, EOI offset, tail size, sig offsets, 40 bytes after EOI). Next: carve payload to /tmp/audio.* with dd/python and inspect/transcribe."}

@@ -1,0 +1,3 @@
+```json
+{"action":"scroll","direction":"up","memo":"Steam Dota2 page (tab e7). DLC section top edge at viewport top: saw link 'The Dota 2 Remixes EP Free' at y~108, About-This-Game text at y~847, so 'Add all DLC to Cart' bubble should sit between them. Scrolling up 1 step to expose the whole DLC section (a11y tree is truncated/polluted by dota2.com tab - ignore Heroes/Play-for-Free links). Fallback: navigate to https://store.steampowered.com/dlc/570/Dota_2/"}
+```

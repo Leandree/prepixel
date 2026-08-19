@@ -1,0 +1,1 @@
+{"action": "key", "keys": "shift+ctrl+right", "memo": "Extended selection into para3 (word 'A '). Selection should now cover paras 1-3 (char count > 349). Next: press ctrl+2 for double line spacing, then ctrl+s and Enter to keep .docx format. Verify e136 area / no dialog issues."}

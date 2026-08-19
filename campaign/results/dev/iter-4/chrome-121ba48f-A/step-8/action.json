@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1149, 697); time.sleep(3)", "memo": "Step8: modal 'Added to your cart!' confirmed Soundtrack 8,19EUR, header Cart 1. Only 1 paid DLC is cart-addable (Remixes EP is Free -> account-only). Clicked 'View My Cart (1)'. Next: verify cart page lists The Dota 2 Official Soundtrack, then DONE."}

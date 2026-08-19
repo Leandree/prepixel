@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.click(1188, 819); time.sleep(1); pyautogui.click(900, 600); time.sleep(0.5); pyautogui.press('f5'); time.sleep(3)", "memo": "Pattern: after typing code, first F5 opens 'Basic Macros' dialog -> click Close (1188,819), click in code area, F5 again = actually runs. Just did that for Fix2 (dumps shape types/text-field impl names for masters+slide0, sets CharColor red on Page/Number-field shapes, then store()). Read the MsgBox: n=? and shape list."}
+```

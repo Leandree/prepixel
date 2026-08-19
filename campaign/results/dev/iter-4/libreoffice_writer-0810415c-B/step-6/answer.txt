@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e136","memo":"Selection covers paras 1-3 (status still 349 chars). Clicked Line Spacing dropdown (e136). NEXT: pick 'Double' from the menu that opens (if no menu, use Format>Paragraph dialog). DO NOT press ctrl+2 — in LibreOffice that applies Heading 2, not double spacing. After applying: ctrl+s then Enter to keep .docx."}
+```

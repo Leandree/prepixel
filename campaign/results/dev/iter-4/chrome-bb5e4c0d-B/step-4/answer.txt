@@ -1,0 +1,5 @@
+The table now shows "Microsoft Bing (Default)" and Google without the default marker — Bing is the default search engine.
+
+```json
+{"action":"done","memo":"Bing is now the default search engine in Chrome (table shows 'Microsoft Bing (Default)', Google no longer marked)."}
+```

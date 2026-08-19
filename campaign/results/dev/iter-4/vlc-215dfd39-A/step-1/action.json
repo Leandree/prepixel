@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(946, 373)", "memo": "Goal: uncheck 'Display background cone or art' in VLC Tools>Preferences>Interface (Look and feel). Just clicked Tools menu; next click Preferences (Ctrl+P)."}

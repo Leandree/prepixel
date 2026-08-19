@@ -1,0 +1,5 @@
+I haven't yet visually confirmed the new reference entry at the end. Let me jump there.
+
+```json
+{"action": "import pyautogui, time; pyautogui.press('escape'); time.sleep(0.3); pyautogui.hotkey('ctrl','end'); time.sleep(1.5)", "memo": "Undo confirmed OK: para4 reads 'Pennington [14] noted...' with no stray break. Doc is MODIFIED (undo) -> must re-save. Now at Ctrl+End to verify ref [14] Steinberg entry formatting/numbering. NEXT: if ref looks right -> Ctrl+S then Enter (Keep Word format), then verify + DONE."}
+```

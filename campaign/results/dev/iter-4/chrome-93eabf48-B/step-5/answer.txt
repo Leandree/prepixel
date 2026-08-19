@@ -1,0 +1,12 @@
+{"action":"done","memo":"Mode dropdown (e89) now reads \"Light\" (was \"Dark\") under Theme: Classic. Chrome dark mode is off."}
+
+Chrome's dark mode is now off.
+
+What I did on the Appearance settings page (`chrome://settings/appearance`):
+
+1. Switched the **Theme** from *GTK* to **Classic** — while Chrome follows the GTK system theme, it hides its own light/dark control, so the theme had to be set to Classic to expose it.
+2. Set the newly revealed **Mode** dropdown from **Dark** to **Light**.
+
+The Mode control now reads "Light", so the browser UI (tabs, toolbar, menus, and settings pages) renders in the light colour scheme with dark text on white — higher contrast for reading.
+
+One caveat worth knowing: this only controls Chrome's own interface. Individual websites that ship their own dark theme, or that follow your desktop's system-wide dark preference, may still appear dark. If you run into that, the fix is either the site's own theme toggle or switching Ubuntu's system appearance to Light in GNOME Settings, which I haven't touched.

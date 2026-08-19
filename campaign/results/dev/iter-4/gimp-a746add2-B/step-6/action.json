@@ -1,0 +1,1 @@
+{"action": "key", "keys": "/", "memo": "Pressed '/' to open GIMP's Search-and-Run-a-Command dialog. Next: if a search box appeared, type 'Vignette'; then click/Enter the 'Vignette' result to open the filter window. If no dialog appeared, fall back to Filters menu > Light and Shadow > Vignette (note: 'l' is the mnemonic for 'Reset all Filters', use arrow keys instead)."}

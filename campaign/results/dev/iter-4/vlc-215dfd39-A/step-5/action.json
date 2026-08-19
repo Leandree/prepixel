@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(595, 526)", "memo": "Advanced Prefs (All): clicked expand arrow on Interface > Main interfaces (y=526). Next: click the 'Qt' child entry that appears below it, then uncheck 'Display background cone or art' in the right pane, then Save (1210, 903)."}

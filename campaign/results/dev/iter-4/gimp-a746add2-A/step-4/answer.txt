@@ -1,0 +1,5 @@
+The dialog is dismissed and GIMP is ready. Opening the Filters menu now.
+
+```json
+{"action": "import pyautogui; pyautogui.click(475, 76)", "memo": "Dialog gone. Clicked Filters menu (475,76). Next: hover/click 'Light and Shadow' submenu in the dropdown, then 'Vignette'."}
+```

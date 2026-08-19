@@ -1,0 +1,1 @@
+{"action":"click","target":"e115","memo":"Opened action combo e115 (currently 'Add Star'). Dropdown should list actions -> click 'Forward Message to'. Then set the address entry := anonym-x2024@gmail.com, verify filter name e94 = 'Forward all to gmail', then click OK. Do NOT use set_value on this combo (it types chars and cycles)."}

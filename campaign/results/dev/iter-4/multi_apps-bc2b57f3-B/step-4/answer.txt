@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e156","memo":"Requirements read from reminder.docx: single Calc file, sheet order = ReadMe, Raw_data, Beans, Millet, Sorghum, Mkt Gotheye, Mkt Mangaize, Mkt Ouallam, Mkt Tera, Millet spatial integration. Current order: Mkt Ouallam, Sorghum, Millet spatial integration, Millet, ReadMe, Mkt Gotheye, Raw_data, Beans, Mkt Mangaize, Mkt Tera. Opened Writer's Window menu to switch to the Calc doc; then Alt+F11 -> Module1 -> Edit -> type Basic macro using ThisComponent.Sheets.moveByName to reorder + store(), F5, Keep current format."}
+```

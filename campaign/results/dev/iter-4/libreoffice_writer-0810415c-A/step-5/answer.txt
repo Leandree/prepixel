@@ -1,0 +1,3 @@
+The first two paragraphs now show clearly widened (double) line spacing while the rest remain single-spaced. Time to save.
+
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's'); pyautogui.sleep(1.5)", "memo": "Applied double spacing to paras 1-2 (verified visually). Pressed Ctrl+S; expect 'Keep current format' dialog -> click 'Use Word 2007-365!' to stay .docx."}

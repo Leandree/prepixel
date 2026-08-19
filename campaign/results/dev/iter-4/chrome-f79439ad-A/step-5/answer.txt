@@ -1,0 +1,5 @@
+The From field still says "Lille" — my typing didn't register. I'll clear it and type slowly.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(620, 328); time.sleep(0.5); pyautogui.hotkey('ctrl', 'a'); time.sleep(0.3); pyautogui.press('backspace'); time.sleep(0.5); pyautogui.write('Dublin', interval=0.25)", "memo": "Ryanair. sys date Aug 20 -> next month = SEPTEMBER, need Sep 10. One way IS selected. From field was pre-filled 'Lille'; step5 cleared it + typed 'Dublin' slowly (interval 0.25). Next: verify field shows Dublin, click Dublin in 'Pick an airport' list (right col ~x=1145), then To (1055,328)->Vienna, then Sep 10, pax 2 adults, Search."}
+```

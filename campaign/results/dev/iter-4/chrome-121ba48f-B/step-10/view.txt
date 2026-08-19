@@ -1,0 +1,162 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Shopping Cart - Memory usage - 237 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,24,24 "View site information"
+e12 entry 227,78,1459,24 "Address and search bar"
+e13 push-button 1694,78,24,24 "Bookmark this tab"
+e14 push-button 1739,73,34,34 "You"
+e15 push-button 1778,73,142,34 "Finish update"
+e16 toggle-button 0,0,99,27 "Activities" state=checked:false
+e17 menu 99,0,162,27 "Google Chrome"
+e18 menu 906,0,178,27 "Aug 20 00‎∶29"
+e19 menu 1814,0,106,27 "System"
+e20 push-button 0,840,70,8
+e21 push-button 62,33,8,815
+e22 push-button 0,33,70,64 "Google Chrome"
+e23 push-button 0,101,70,64 "Thunderbird Mail"
+e24 push-button 0,169,70,64 "Visual Studio Code"
+e25 push-button 0,237,70,64 "VLC media player"
+e26 push-button 0,305,70,64 "LibreOffice Writer"
+e27 push-button 0,373,70,64 "LibreOffice Calc"
+e28 push-button 0,441,70,64 "LibreOffice Impress"
+e29 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e30 push-button 0,577,70,64 "Files"
+e31 push-button 0,645,70,64 "Ubuntu Software"
+e32 push-button 0,713,70,64 "Help"
+e33 push-button 0,784,70,64 "Trash"
+e34 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e35 banner 70,114,1836,104
+~e36 link 388,174,145,17 "Link to the Steam Homepage"
+~e37 [pixels] image 388,144,145,44 alt=Link to the Steam Homepage
+~e38 navigation 588,114,335,73 "Global Menu"
+~e39 link 588,114,65,73 "STORE"
+~e40 link 653,114,114,73 "COMMUNITY"
+~e41 link 767,114,69,68 "About"
+~e42 link 836,114,87,68 "SUPPORT"
+~e43 navigation 1340,120,248,24 "Account Menu"
+~e44 link 1340,120,110,21 "Install Steam"
+~e45 link 1456,125,42,14 "sign in"
+~e46 text 1498,125,15,14 "|"
+~e47 text 1518,125,47,14 "language"
+~e48 navigation 380,218,1216,46 "Store menu"
+~e49 push-button 380,218,83,46 "Browse"
+~e50 presentation 439,234,14,14
+~e51 push-button 463,218,152,46 "Recommendations"
+~e52 presentation 591,234,14,14
+~e53 push-button 615,218,104,46 "Categories"
+~e54 presentation 695,234,14,14
+~e55 push-button 719,218,97,46 "Hardware"
+~e56 presentation 792,234,14,14
+~e57 push-button 816,218,117,46 "Ways to Play"
+~e58 presentation 909,234,14,14
+~e59 push-button 933,218,137,46 "Special Sections"
+~e60 presentation 1046,234,14,14
+~e61 search 1086,224,398,34
+~e62 combo-box 1086,224,364,34 "Search the store"
+~e63 push-button 1450,224,34,34
+~e64 [pixels] image 1458,232,18,18 alt=Search
+~e65 link 1096,275,378,31 "Advanced Search" [occluded]
+~e66 link 1508,226,75,30 "Cart1"
+~e67 [pixels] image 1518,234,14,14
+~e68 text 1537,233,26,16 "Cart"
+~e69 text 1567,236,6,12 "1"
+~e70 main 70,218,1836,843
+~e71 [pixels] image 70,218,1836,843
+~e72 link 388,290,34,15 "Home"
+~e73 text 425,290,11,15 ">"
+~e74 text 436,290,155,15 "Your Shopping Cart (1 item)"
+~e75 text 388,308,300,27 "Your Shopping Cart (1 item)"
+~e76 push-button 388,362,792,124 "The Dota 2 Official Soundtrack8,19€For my accountRemove"
+~e77 link 403,458,200,15
+~e78 [pixels] image 403,377,200,93 alt=The Dota 2 Official Soundtrack
+~e79 text 618,377,234,20 "The Dota 2 Official Soundtrack"
+~e80 [pixels] image 618,413,15,15 alt=Windows
+~e81 [pixels] image 637,411,16,16 alt=macOS
+~e82 [pixels] image 657,412,16,16 alt=Linux / SteamOS
+~e83 text 1126,411,39,17 "8,19€"
+~e84 label 618,443,128,28 "For my account"
+~e85 combo-box 618,443,128,28 "For my account"
+~e86 presentation 727,451,12,14
+~e87 push-button 1120,449,45,17 "Remove The Dota 2 Official Soundtrack"
+~e88 text 1120,450,45,15 "Remove"
+~e89 push-button 388,508,172,32 "Continue Shopping"
+~e90 push-button 575,508,185,32 "Continue to payment"
+~e91 push-button 1085,516,95,17 "Remove all items"
+~e92 text 388,613,294,21 "Recommendations For You"
+~e93 push-button 388,654,251,155 "-60%59,99€23,99€"
+~e94 link 388,654,251,155 "-60%59,99€23,99€"
+~e95 [pixels] image 388,654,251,117 alt=Kingdom Come: Deliverance II
+~e96 text 496,774,67,32 "-60%"
+~e97 text 587,774,44,14 "59,99€"
+~e98 text 579,787,52,19 "23,99€"
+~e99 push-button 659,654,251,155 "-35%28,99€18,84€"
+~e100 link 659,654,251,155 "-35%28,99€18,84€"
+~e101 [pixels] image 659,654,251,117 alt=No More Room in Hell 2
+~e102 text 769,774,65,32 "-35%"
+~e103 text 857,774,44,14 "28,99€"
+~e104 text 850,787,51,19 "18,84€"
+~e105 push-button 929,654,251,155 "23,83€"
+~e106 link 929,654,251,155 "23,83€"
+~e107 [pixels] image 929,654,251,117 alt=Big Walk and PEAK
+~e108 text 1215,380,92,16 "Estimated total"
+~e109 text 1530,378,43,19 "8,19€"
+~e110 text 1215,410,342,15 "Sales tax will be calculated during checkout where applicable"
+~e111 push-button 1215,438,358,32 "Continue to payment"
+~e112 [pixels] image 1256,516,277,168
+~e113 text 1221,691,326,37 "A purchase of a digital product grants a license for the product on Steam."
+~e114 text 1221,737,250,15 "For full terms and conditions, please see the"
+~e115 link 1221,737,286,32 "Steam Subscriber Agreement"
+~e116 text 1215,823,142,20 "Follow the creators"
+~e117 text 1215,850,346,37 "Follow the creators of your purchase and get notified when they release their next game."
+~e118 [pixels] image 1215,906,358,58
+~e119 link 1215,906,54,58
+~e120 [pixels] image 1215,906,54,54
+~e121 link 1281,907,292,22 "Valve"
+~e122 push-button 1281,932,52,28 "Follow"
+~e123 text 1339,932,51,14 "Followers:"
+~e124 text 1339,943,74,19 "1,004,559"
+~e125 [pixels] image 1215,976,358,58
+~e126 link 1215,976,54,58
+~e127 [pixels] image 1215,976,54,54
+~e128 link 1281,977,292,22 "Dota"
+~e129 push-button 1281,1002,52,28 "Follow"
+~e130 text 1339,1002,51,14 "Followers:"
+~e131 text 1339,1013,59,19 "147,742"
+~e132 [offscreen] link 393,987,142,38
+~e133 [offscreen] link 567,991,95,31
+~e134 [offscreen] paragraph 393,1049,400,42 "© 2026 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.VAT included in all prices where applicable."
+~e135 [offscreen] text 393,1049,337,28 "© 2026 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries."
+~e136 [offscreen] text 393,1077,220,14 "VAT included in all prices where applicable."
+~e137 [offscreen] link 393,1115,30,22
+~e138 [offscreen] link 455,1115,24,22
+~e139 [offscreen] link 511,1115,22,22
+~e140 [offscreen] link 565,1115,20,22
+~e141 [offscreen] heading 857,987,112,17 "STEAM"
+~e142 [offscreen] link 857,1020,112,17 "About Steam"
+~e143 [offscreen] link 857,1053,112,17 "Steam SSA"
+~e144 [offscreen] link 857,1086,112,17 "Steamworks"
+~e145 [offscreen] link 857,1119,112,17 "Steam Distribution"
+~e146 [offscreen] link 857,1152,112,17 "Gift Cards"
+~e147 [offscreen] heading 1033,987,73,17 "VALVE"
+~e148 [offscreen] link 1033,1020,73,17 "About Valve"
+~e149 [offscreen] link 1033,1053,73,17 "Jobs"
+~e150 [offscreen] link 1033,1086,73,17 "Hardware"
+~e151 [offscreen] link 1033,1119,73,17 "Recycling"
+~e152 [offscreen] heading 1170,987,108,17 "LEGAL"
+~e153 [offscreen] link 1170,1020,108,17 "Privacy"
+~e154 [offscreen] link 1170,1053,108,17 "Accessibility"
+~e155 [offscreen] link 1170,1086,108,17 "Notices & Policies"
+~e156 [offscreen] link 1170,1119,108,17 "Cookies"
+~e157 [offscreen] link 1170,1152,108,17 "Refunds"
+~e158 [offscreen] heading 1343,987,100,17 "MORE"
+~e159 [offscreen] link 1343,1020,100,17 "Get Steam"
+~e160 [offscreen] link 1343,1053,100,17 "Get Mobile Apps"
+~e161 [offscreen] link 1343,1086,100,17 "Get Support"
+~e162 [offscreen] link 1343,1119,100,17 "My Account"

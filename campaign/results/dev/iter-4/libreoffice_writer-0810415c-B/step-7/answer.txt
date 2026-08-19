@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"down","memo":"Line Spacing dropdown open; view only exposed 'Spacing: 1/1.15/1.5'. Pressed down to walk menu and reveal 'Spacing: 2' (=double). NEXT: if a 'Spacing: 2' element appears, click it; else keep pressing down until it is highlighted then Enter. Fallback: Esc then Format>Paragraph>Line Spacing=Double. Then ctrl+s + Enter (Keep format). Selection = paras 1-3, 349 chars."}
+```

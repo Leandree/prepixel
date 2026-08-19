@@ -1,0 +1,5 @@
+Submenu hasn't appeared yet — I'll hover across the "Light and Shadow" row toward its arrow to trigger it.
+
+```json
+{"action": "import pyautogui, time; pyautogui.moveTo(600, 267); time.sleep(0.6); pyautogui.moveTo(725, 267); time.sleep(1.2)", "memo": "Filters > Light and Shadow highlighted but submenu didn't open; hovered to arrow (725,267). Next: submenu should appear right of x~745; click 'Vignette' in it (it's usually near the bottom of that submenu list)."}
+```

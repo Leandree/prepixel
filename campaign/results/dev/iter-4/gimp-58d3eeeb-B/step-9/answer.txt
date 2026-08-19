@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e13","memo":"Step9: reading exiftool -a -G1 tail + /tmp/a.bin size/type. Looking for a Comment/UserComment holding a TEXT transcript (I cannot hear audio). If only raw audio bytes and no ASR tool exists, task is not completable -> fail. Next: act on what the output shows."}
+```

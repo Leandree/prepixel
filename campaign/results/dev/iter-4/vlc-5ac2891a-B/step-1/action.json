@@ -1,0 +1,1 @@
+{"action": "key", "keys": "ctrl+p", "memo": "Opened VLC Preferences (Ctrl+P). Goal: set 'Show settings: All' -> Playlist -> uncheck 'Play and exit' (play-and-exit=0), then Save."}

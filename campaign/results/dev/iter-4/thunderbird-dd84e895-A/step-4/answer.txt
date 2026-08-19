@@ -1,0 +1,5 @@
+Both stars at (1021, 181) and (1021, 227) now render filled orange, and the folder header confirms "Bills — 2 Messages," so every email in the local Bills folder is starred.
+
+```json
+{"action": "DONE", "memo": "Bills folder (2 messages) - both stars verified filled/orange. Task complete."}
+```

@@ -1,0 +1,44 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find the Next Available dates for Diamond.
+
+STEP 13 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(222, 47)
+2. import pyautogui; pyautogui.click(350, 343)
+3. import pyautogui; pyautogui.click(895, 247)
+4. import pyautogui; pyautogui.click(910, 455); pyautogui.write('Diamond', interval=0.1)
+5. import pyautogui; pyautogui.click(531, 538)
+6. import pyautogui; pyautogui.scroll(-600, x=960, y=800)
+7. import pyautogui; pyautogui.scroll(400, x=960, y=600)
+8. import pyautogui; pyautogui.click(282, 1048)
+9. import pyautogui; pyautogui.scroll(-500, x=960, y=700)
+10. import pyautogui; pyautogui.scroll(300, x=960, y=500)
+11. import pyautogui; pyautogui.click(960, 920); pyautogui.press('pagedown')
+12. import pyautogui; pyautogui.click(244, 203)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Step12: List layout (cards+map) shows only 'ENTER DATES' badges, no next-available info. Clicked grid/table layout icon at (244,203) to load the availability table, which should expose 'Next Available' dates per site for Diamond. Next: read the table (may need to scroll down slightly).
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter4/chrome-b4f95342-A/_pixels/step-13/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter4/chrome-b4f95342-A/_pixels/step-10/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/chrome-b4f95342-A/_pixels/step-11/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/chrome-b4f95342-A/_pixels/step-12/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

@@ -1,0 +1,3 @@
+The double spacing is visibly applied to the first two paragraphs (lines now spread out), no format dialog appeared, and the status-bar save indicator shows the document is no longer modified — the Ctrl+S completed and kept .docx format.
+
+{"action": "DONE"}

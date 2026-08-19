@@ -1,0 +1,40 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 698,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 133,
+  "cdp_records": 178,
+  "offscreen": 60,
+  "url": "https://www.ryanair.com/gb/en",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 3048,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "Official Ryanair website | Book direct for the lowest fares | Ryanair.com"
+ },
+ "cdp_offscreen_skipped": 243,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 5,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 4989,
+ "settle_captures": 1,
+ "guard_ms": 54
+}

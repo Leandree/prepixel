@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e13","memo":"Step12: re-reading step-10 probe output (step-11 crop content not retained). Looking for: /tmp/a.bin file type, any transcript/audio strings in heron.jpeg, extra Desktop files. If a text transcript exists -> translate to French; if only opaque binary/audio and no ASR tool -> fail (cannot hear audio). 3 steps left."}
+```

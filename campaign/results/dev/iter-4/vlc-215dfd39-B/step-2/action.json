@@ -1,0 +1,1 @@
+{"action": "click", "target": "e19", "memo": "Goal: VLC Preferences>Interface, uncheck 'Display background cone or art' (qt-bgcone), then Save. Clicked Tools>Preferences; expect Simple Preferences dialog on Interface page."}

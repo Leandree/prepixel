@@ -1,0 +1,1 @@
+{"action": "click", "target": "e51", "memo": "Clicked + to add Sheet2. Next: on Sheet2 set A1='Total Revenue', B1='Total Expenses', A2=SUM(Sheet1.A2:A20)=867786?, B2=SUM(Sheet1.B2:B20). Then save with ctrl+s (Keep current format)."}

@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e94","value":"Forward all to gmail","memo":"Filter Rules dlg open. Named filter. Next: click radio e105 'Match all messages', then set action combo e115 to 'Forward Message to' and type anonym-x2024@gmail.com in the field that appears (was e116 Choose Folder). Ensure 'Getting New Mail' checked (it is). Then OK e120."}
+```

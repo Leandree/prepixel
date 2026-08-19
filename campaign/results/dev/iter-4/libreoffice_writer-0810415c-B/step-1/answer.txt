@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e144","memo":"Task: double line spacing for first two paragraphs. Plan: caret in para1 -> ctrl+Home -> shift+ctrl+down x3 (covers paras 1,2,3 incl. empty one) -> ctrl+2 (double spacing) -> ctrl+s -> Enter to keep .docx format."}
+```

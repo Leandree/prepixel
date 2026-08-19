@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e14","value":"https://www.accuweather.com/en/gb/manchester/M3/monthly-weather/329260","memo":"Clicks on the search-result link were not navigating (act-guard: unchanged twice). Trying direct URL to AccuWeather Manchester GB monthly forecast (key 329260). If it 404s, go back to https://www.accuweather.com/en/search-locations?query=Manchester and click the 'Manchester, ENG GB' result, then the Monthly tab. Need August 2026 monthly calendar."}
+```

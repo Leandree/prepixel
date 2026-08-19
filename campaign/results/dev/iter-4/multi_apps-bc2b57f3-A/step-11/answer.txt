@@ -1,0 +1,3 @@
+The reminder lists exactly two requirements: all sheets in one Calc file, and arranged in the order ReadMe → Raw_data → Beans → Millet → Sorghum → Mkt Gotheye → Mkt Mangaize → Mkt Ouallam → Mkt Tera → Millet spatial integration. The workbook contains exactly those 10 sheets, and the step-8 confirmation showed them in precisely that order, with the file already saved.
+
+{"action": "DONE", "memo": "Verified reminder.docx (Page 1 of 1) lists only 2 requirements: one calc file + specific sheet order. Workbook sheets already reordered to ReadMe|Raw_data|Beans|Millet|Sorghum|Mkt Gotheye|Mkt Mangaize|Mkt Ouallam|Mkt Tera|Millet spatial integration and stored. Task complete."}

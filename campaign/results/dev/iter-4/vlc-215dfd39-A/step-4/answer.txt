@@ -1,0 +1,5 @@
+Advanced (All) settings are open. I need to scroll the left tree down to reach Interface → Main interfaces → Qt.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(715, 700); pyautogui.scroll(-4)", "memo": "In Advanced Preferences (All). Scrolled tree down to reveal Interface > Main interfaces. Next: click the expand arrow next to 'Main interfaces', then select 'Qt', uncheck 'Display background cone or art', then Save."}
+```

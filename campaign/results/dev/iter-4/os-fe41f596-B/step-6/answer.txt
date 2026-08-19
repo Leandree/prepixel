@@ -1,0 +1,1 @@
+{"action":"key","keys":"Return","memo":"Pressed Return to run gsettings show-battery-percentage true. Next: verify battery % appears in top bar (near clock e86 / System menu e87); if not visible, crop the top-right area."}

@@ -1,0 +1,1 @@
+{"action":"done","memo":"Cart page confirms Your Shopping Cart (1 item): The Dota 2 Official Soundtrack 8,19€, total 8,19€. Dota 2's DLC list has 2 entries; the second, 'The Dota 2 Remixes EP', is Free and cannot be carted (free items go straight to account), so Steam's 'Add all DLC to Cart' correctly carted all purchasable DLC. Task complete."}

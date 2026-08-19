@@ -1,0 +1,1 @@
+{"action":"done","memo":"Applied red font color to shape 3 (<number>, the slide number placeholder) on slide 1 and saved with ctrl+s; no keep-format dialog present, document back to normal editing state."}

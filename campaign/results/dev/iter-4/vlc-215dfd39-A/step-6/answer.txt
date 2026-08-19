@@ -1,0 +1,5 @@
+The tree expanded — "Qt" is now visible under Main interfaces. Clicking it to reach the cone setting.
+
+```json
+{"action": "import pyautogui; pyautogui.click(635, 607)", "memo": "Advanced Prefs (All): clicked 'Qt' under Interface > Main interfaces. Next: in right pane find 'Display background cone or art' checkbox (under Look and feel) and uncheck it, then click Save at (1210, 903)."}
+```

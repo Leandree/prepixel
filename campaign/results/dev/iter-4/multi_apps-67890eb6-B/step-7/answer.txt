@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+alt+t","memo":"Calc 'type' is unreliable (multi-cell tabs collapse to last field); switching to terminal+python. If a terminal opens, type ONE line: python3 -c \"import openpyxl,os;p=os.path.expanduser('~/Desktop/best_awards_acl.xlsx');w=openpyxl.load_workbook(p);s=w.active;rows=[(2022 Kitaev),(2021 VOLT),(2020 CheckList),(2019 Bridging)];[s.cell(i,j).__setattr__('value',v) for i,r in enumerate(rows,2) for j,v in enumerate(r,1)];w.save(p)\" then Enter. Do NOT save from Calc afterwards."}
+```

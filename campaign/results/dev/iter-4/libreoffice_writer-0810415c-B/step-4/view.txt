@@ -1,0 +1,210 @@
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "Novels_​Intro_​Packet.​docx"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 [pixels] icon 1821,735,64,64
+e6 text 1793,803,120,34 ".​~lock.​Novels_​Intro_​Packet.​docx#"
+e7 toggle-button 0,0,99,27 "Activities" state=checked:false
+e8 menu 99,0,180,27 "LibreOffice Writer"
+e9 menu 906,0,178,27 "Aug 20 01‎∶16"
+e10 menu 1814,0,106,27 "System"
+e11 push-button 0,840,70,8
+e12 push-button 62,33,8,815
+e13 push-button 0,33,70,64 "Google Chrome"
+e14 push-button 0,101,70,64 "Thunderbird Mail"
+e15 push-button 0,169,70,64 "Visual Studio Code"
+e16 push-button 0,237,70,64 "VLC media player"
+e17 push-button 0,305,70,64 "LibreOffice Writer"
+e18 push-button 0,373,70,64 "LibreOffice Calc"
+e19 push-button 0,441,70,64 "LibreOffice Impress"
+e20 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e21 push-button 0,577,70,64 "Files"
+e22 push-button 0,645,70,64 "Ubuntu Software"
+e23 push-button 0,713,70,64 "Help"
+e24 push-button 0,784,70,64 "Trash"
+e25 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e26 push-button 1896,68,16,16
+e27 menu 70,64,40,25 "File"
+e28 menu 110,64,43,25 "Edit"
+e29 menu 153,64,49,25 "View"
+e30 menu 202,64,55,25 "Insert"
+e31 menu 257,64,66,25 "Format"
+e32 menu 323,64,56,25 "Styles"
+e33 menu 379,64,53,25 "Table"
+e34 menu 432,64,52,25 "Form"
+e35 menu 484,64,52,25 "Tools"
+e36 menu 536,64,70,25 "Window"
+e37 menu 606,64,47,25 "Help"
+e38 menu 70,64,40,21 "File" value="0.0"
+e39 menu 110,64,43,21 "Edit" value="0.0"
+e40 menu 153,64,50,21 "View" value="0.0"
+e41 menu 203,64,56,21 "Insert" value="0.0"
+e42 menu 259,64,66,21 "Format" value="0.0"
+e43 menu 325,64,56,21 "Styles" value="0.0"
+e44 menu 381,64,53,21 "Table" value="0.0"
+e45 menu 434,64,52,21 "Form" value="0.0"
+e46 menu 486,64,53,21 "Tools" value="0.0"
+e47 menu 539,64,73,21 "Window" value="0.0"
+e48 menu 612,64,48,21 "Help" value="0.0"
+e49 scroll-bar 1849,222,12,812 "Vertical scroll bar" value="0.0"
+e50 text 70,222,1779,24 "Horizontal Ruler"
+e51 text 1870,144,48,888 "Properties"
+e52 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e53 text 1870,210,44,42 "Properties"
+e54 toggle-button 1874,214,37,35 state=checked:true
+e55 text 1870,252,44,42 "Styles"
+e56 toggle-button 1874,256,37,35 state=checked:false
+e57 text 1870,294,44,42 "Gallery"
+e58 toggle-button 1874,298,37,35 state=checked:false
+e59 text 1870,336,44,42 "Navigator"
+e60 toggle-button 1874,340,37,35 state=checked:false
+e61 text 1870,378,44,42 "Page"
+e62 toggle-button 1874,382,37,35 state=checked:false
+e63 text 1870,420,44,42 "Style Inspector"
+e64 toggle-button 1874,424,37,35 state=checked:false
+e65 text 111,178,1598,26 "Help us make LibreOffice even better!"
+e66 [pixels] icon 73,171,32,32
+e67 push-button 1715,170,117,34 "Get involved"
+e68 push-button 1839,179,16,16
+e69 text 111,218,1632,26 "Your donations support our worldwide community."
+e70 [pixels] icon 73,211,32,32
+e71 push-button 1749,210,83,34 "Donate"
+e72 push-button 1839,219,16,16
+e73 text 70,64,1254,39 "Standard"
+e74 push-button 74,66,44,35 "New" value="0.0"
+e75 push-button 118,66,44,35 "Open" value="0.0"
+e76 push-button 162,66,44,35 "Save" value="0.0"
+e77 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e78 push-button 247,66,33,35 "Print" value="0.0"
+e79 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e80 push-button 321,66,33,35 "Cut" value="0.0"
+e81 push-button 354,66,33,35 "Copy" value="0.0"
+e82 push-button 387,66,44,35 "Paste" value="0.0"
+e83 push-button 439,66,33,35 "Clone" value="0.0"
+e84 push-button 480,66,44,35 "Undo" value="0.0"
+e85 push-button 524,66,44,35 "Redo" value="0.0"
+e86 toggle-button 576,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e87 push-button 609,66,33,35 "Spelling" value="0.0"
+e88 toggle-button 642,66,33,35 "Formatting Marks" value="0.0" state=checked:false
+e89 push-button 683,66,44,35 "Table" value="0.0"
+e90 push-button 727,66,33,35 "Image" value="0.0"
+e91 push-button 760,66,33,35 "Chart" value="0.0"
+e92 push-button 793,66,33,35 "Text Box" value="0.0"
+e93 push-button 834,66,33,35 "Page Break" value="0.0"
+e94 push-button 867,66,44,35 "Field" value="0.0"
+e95 push-button 911,66,44,35 "Symbol" value="0.0"
+e96 toggle-button 963,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e97 push-button 996,66,33,35 "Footnote" value="0.0"
+e98 push-button 1029,66,33,35 "Endnote" value="0.0"
+e99 push-button 1062,66,33,35 "Bookmark" value="0.0"
+e100 push-button 1095,66,33,35 "Cross-reference" value="0.0"
+e101 push-button 1136,66,33,35 "Comment" value="0.0"
+e102 toggle-button 1169,66,33,35 "Track Changes Functions" value="0.0" state=checked:false
+e103 push-button 1210,66,33,35 "Line" value="0.0"
+e104 push-button 1243,66,44,35 "Basic Shapes" value="0.0"
+e105 toggle-button 1287,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e106 text 70,103,1437,39 "Formatting"
+e107 text 74,105,202,34 "Paragraph Style"
+e108 text 74,130,166,34 "normal"
+e109 toggle-button 240,130,36,34 state=checked:false
+e110 push-button 276,105,33,35 "Update" value="0.0"
+e111 push-button 309,105,33,35 "New" value="0.0"
+e112 text 350,105,221,34 "Font Name"
+e113 text 350,130,185,34 "Times New Roman"
+e114 toggle-button 535,130,36,34 state=checked:false
+e115 text 579,105,101,34 "Font Size"
+e116 text 579,130,65,34 "12 pt"
+e117 toggle-button 644,130,36,34 state=checked:false
+e118 toggle-button 688,105,33,35 "Bold" value="0.0" state=checked:false
+e119 toggle-button 721,105,33,35 "Italic" value="0.0" state=checked:false
+e120 push-button 754,105,44,35 "Underline" value="0.0"
+e121 toggle-button 798,105,33,35 "Strikethrough" value="0.0" state=checked:false
+e122 toggle-button 839,105,33,35 "Superscript" value="0.0" state=checked:false
+e123 toggle-button 872,105,33,35 "Subscript" value="0.0" state=checked:false
+e124 push-button 913,105,33,35 "Clear" value="0.0"
+e125 push-button 954,105,44,35 "Font Color" value="0.0"
+e126 push-button 998,105,44,35 "Character Highlighting Color" value="0.0"
+e127 toggle-button 1050,105,33,35 "Left" value="1.0" state=checked:true
+e128 toggle-button 1083,105,33,35 "Center" value="0.0" state=checked:false
+e129 toggle-button 1116,105,33,35 "Right" value="0.0" state=checked:false
+e130 toggle-button 1149,105,33,35 "Justified" value="0.0" state=checked:false
+e131 push-button 1190,105,44,35 "Unordered List" value="0.0"
+e132 push-button 1234,105,44,35 "Ordered List" value="0.0"
+e133 push-button 1278,105,33,35 "No List" value="1.0" state=checked:true
+e134 push-button 1319,105,33,35 "Increase" value="0.0"
+e135 push-button 1352,105,33,35 "Decrease" value="0.0"
+e136 push-button 1393,105,44,35 "Line Spacing" value="0.0"
+e137 push-button 1437,105,33,35 "Increase" value="0.0"
+e138 push-button 1470,105,33,35 "Decrease" value="0.0"
+~e139 text 105,1036,248,18 "Page 1 of 4"
+~e140 text 359,1036,385,18 "Selected: 58 words, 349 characters"
+~e141 text 750,1036,295,18 "Default Page Style"
+~e142 text 1051,1036,265,18 "English (USA)"
+e143 text 1876,1036,38,18 "100%"
+e144 [uno] paragraph 1 text "Compared to a short story, a novel has main characters that are more fully developed. A novel often develops several plots of equal importance, or one main plot and numerous subplots. Two separate plots may seem to proceed independently, moving close to each other as the novel progresses until they " …(truncated at 300 chars)
+e145 [uno] paragraph 2 text ""
+e146 [uno] paragraph 3 text "A novel may have any number of climaxes, each perhaps a little more intense than the one preceding, so that the effect is of being swept over ever-higher foothills to the highest peaks at the end."
+e147 [uno] paragraph 4 text ""
+e148 [uno] paragraph 5 text "The setting of a novel is likely to jump from one place to another."
+e149 [uno] paragraph 6 text ""
+e150 [uno] paragraph 7 text "There may be sudden shifts from one period of time to another. The action may jump back to an earlier date (flashbacks – which may explain later actions that otherwise could not be understood). When several plots are being pursued, the author may ask us to follow one plot through a certain period of" …(truncated at 300 chars)
+e151 [uno] paragraph 8 text ""
+e152 [uno] paragraph 9 text "In a novel, the point of view from which the story is told is likely to shift from person to person."
+e153 [uno] paragraph 10 text ""
+e154 [uno] paragraph 11 text "The length of a novel makes it likely that several themes will be illustrated in the course of the action. "
+e155 [uno] paragraph 12 text ""
+e156 [uno] paragraph 13 text ""
+e157 [uno] paragraph 14 text "Five hints which may be useful in reading a novel:"
+e158 [uno] paragraph 15 text ""
+e159 [uno] paragraph 16 list-label "1." text "Withhold your judgment until you are fairly well into the novel. Allow the author a generous number of pages in which to capture your interest. Don’t decide too early that you dislike what you are reading. The first few pages will seldom have the clarity and impact of a short story. Read attentively" …(truncated at 300 chars)
+e160 [uno] paragraph 17 list-label "2." text "As early as possible, place yourself in the world of the novel. Read the opening chapters of a novel with particular care. Use whatever help the author gives you to picture the setting in which the action will occur. Your mind should be precisely picturing – and enjoying – the looks of the place. As" …(truncated at 300 chars)
+e161 [uno] paragraph 18 list-label "3." text "Read with one eye on the novel as a whole. You should not let yourself flounder in details: you should not struggle and grow discouraged with puzzles or confusions that will be made in one relatively minor incident so that you lose sight of the overall shape and pattern. Reading with care early in a" …(truncated at 300 chars)
+e162 [uno] paragraph 19 list-label "4." text "Resume reading before the point where you set the novel down. The length of a novel means that, in reading, you will have to learn how to handle interruptions. The easiest way to recapture the plot and atmosphere where you left off is to take up the book again a page or two before the point of inter" …(truncated at 300 chars)
+e163 [uno] paragraph 20 list-label "5." text "At the end, look back over the novel as a whole. Because most novels must be read piecemeal, you are likely to finish the book with the last section so clear in your mind as to obscure much of what came before. It is a good idea, at the moment you finish the final chapter and while the mood of the b" …(truncated at 300 chars)
+e164 [uno] paragraph 21 text ""
+e165 [uno] paragraph 22 text "Journal Entry Focus Possibilities…"
+e166 [uno] paragraph 23 text ""
+e167 [uno] paragraph 24 list-label "1." text "Which character(s) is (was) your favorite?"
+e168 [uno] paragraph 25 list-label "2." text "Which characters(s) do (did) you dislike?"
+e169 [uno] paragraph 26 list-label "3." text "Are you like anyone in this work? Explain."
+e170 [uno] paragraph 27 list-label "4." text "Does anyone in this work remind you of anyone you know? Explain."
+e171 [uno] paragraph 28 list-label "5." text "If you could be anyone in this work, who would it be? Explain."
+e172 [uno] paragraph 29 list-label "6." text "What quality(ies) of which character strikes you as a good characteristic to develop within yourself over the years? Why? How does the character demonstrate this quality?"
+e173 [uno] paragraph 30 list-label "7." text "Overall, what kind of feeling did you have after reading a few paragraphs of this work? Midway? After finishing the work?"
+e174 [uno] paragraph 31 list-label "8." text "Do any incidents, ideas, or actions in this work remind you of your own life or something that happened to you? Explain."
+e175 [uno] paragraph 32 list-label "9." text "Do you like this piece of work? Why or why not?"
+e176 [uno] paragraph 33 list-label "10." text "Are there any parts of this work that were confusing to you? Which parts? Why do you think you got confused?"
+e177 [uno] paragraph 34 list-label "11." text "Do you feel there is an opinion expressed by the author in this work? What is it? How do you know this? Do you agree? Why or why not?"
+e178 [uno] paragraph 35 list-label "12." text "Do you think the title of this work is appropriate? Is it significant? Explain. What do you think the title means?"
+e179 [uno] paragraph 36 list-label "13." text "Would you change the ending of this story in any way? Why? Tell your ending…"
+e180 [uno] paragraph 37 list-label "14." text "What kind of a person do you think this author is? What makes you feel this way?"
+e181 [uno] paragraph 38 list-label "15." text "How does this work make you feel? Explain."
+e182 [uno] paragraph 39 list-label "16." text "Do you share any of the feelings of the characters in this work? Explain."
+e183 [uno] paragraph 40 list-label "17." text "Sometimes works leave you with the feeling that there is no more to tell. Did this work do this? What do you think might happen?"
+e184 [uno] paragraph 41 list-label "18." text "Would you like to read something else by this author? Explain."
+e185 [uno] paragraph 42 list-label "19." text "What do you feel is the most important word, phrase, passage, or image in this book? Explain why it is important. "
+e186 [uno] paragraph 43 list-label "20." text "If you were an English teacher, would you want to share this work with your students? Why or why not?"
+e187 [uno] paragraph 44 text ""
+e188 [uno] paragraph 45 text "Ontological Questions"
+e189 [uno] paragraph 46 text ""
+e190 [uno] paragraph 47 text "Definition of ontology"
+e191 [uno] paragraph 48 text "1:  a branch of metaphysics concerned with the nature and relations of being Ontologydeals with abstract entities."
+e192 [uno] paragraph 49 text "2:  a particular theory about the nature of being or the kinds of things that have existence"
+e193 [uno] paragraph 50 text ""
+e194 [uno] paragraph 51 text "Keep these in mind when making connections to the novels we read this year."
+e195 [uno] paragraph 52 text ""
+e196 [uno] paragraph 53 text "What does it mean to be an adult human being?"
+e197 [uno] paragraph 54 text "What does it mean to be a good person?"
+e198 [uno] paragraph 55 text "How should people treat one another?"
+e199 [uno] paragraph 56 text "Why am I on this earth?"
+e200 [uno] paragraph 57 text "Do I have free will or am I controlled by fate?"
+e201 [uno] paragraph 58 text "Does truth change?"
+e202 [uno] paragraph 59 text "What is love?"
+e203 [uno] paragraph 60 text "Is a person inherently good? Bad? Both?"
+e204 [uno] paragraph 61 text "How much freedom should an individual have?"
+e205 [uno] paragraph 62 text "Is a person basically alone or are they an integral member of society?"
+e206 [uno] paragraph 63 text "Why does suffering exist?"
+e207 [uno] paragraph 64 text "Is there a God?"
+e208 [uno] paragraph 65 text "What happens when I die?"
+e209 [uno] paragraph 66 text "Is there such a thing as a devil? Evil? Satan?"
+e210 [uno] paragraph 67 text "How important is money?"

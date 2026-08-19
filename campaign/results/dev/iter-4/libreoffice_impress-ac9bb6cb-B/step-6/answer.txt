@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e34","memo":"Macro route: alt+F11 produced no dialog. Opening Tools menu to find Macros submenu (step3 tree showed only 6 items - may have been truncated). Next: hover/click 'Macros' > 'Edit Macros...' to open Basic IDE, then type macro that loops all DrawPages+MasterPages shapes, sets CharColor=RGB(255,0,0) on any shape whose String contains '<number>' or that is a SlideNumberShape, then store(). If no Macros entry exists, fall back to per-slide manual formatting via Format>Character."}
+```

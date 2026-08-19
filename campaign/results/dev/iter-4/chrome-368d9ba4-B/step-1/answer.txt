@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e60","memo":"Dismissed AccuWeather privacy banner (Do Not Consent). Next: use search box (e83 area) or address bar to search 'Manchester, GB', then open Monthly forecast tab."}
+```

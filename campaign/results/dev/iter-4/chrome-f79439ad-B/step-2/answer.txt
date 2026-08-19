@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e72","memo":"Clicked 'One way' tab. Next: set From=Dublin (e79 currently 'Lille'), To=Vienna, date 10 Sep 2026, 2 adults, then Search."}
+```

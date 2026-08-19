@@ -1,0 +1,5 @@
+The desktop is showing with GIMP in the dock. I'll launch GIMP first.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 541)", "memo": "Clicked GIMP icon in dock to launch GIMP. Next: wait for GIMP to load, then Filters > Light and Shadow > Vignette."}
+```

@@ -1,0 +1,26 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "signal_activation_role": true,
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  649,
+  898
+ ],
+ "settle_ms": 4652,
+ "settle_captures": 3,
+ "guard_ms": 22
+}

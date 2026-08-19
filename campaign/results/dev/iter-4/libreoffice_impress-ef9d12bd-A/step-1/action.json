@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(177, 76)", "memo": "Opened View menu to find 'Slide Pane' toggle; next click that entry to restore left panel."}

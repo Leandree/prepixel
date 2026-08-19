@@ -1,0 +1,8 @@
+
+<invoke name="computer">
+<parameter name="action">click</parameter>
+<parameter name="coordinate">[1867, 13]</parameter>
+</invoke>
+
+
+{"action":"click","target":"e6","memo":"Goal: enable battery percentage. Opened System menu (top-right) to find Settings button; then go Settings > Power > Show Battery Percentage (or gsettings org.gnome.desktop.interface show-battery-percentage true)."}

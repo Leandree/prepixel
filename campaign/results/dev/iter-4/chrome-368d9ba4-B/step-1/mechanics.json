@@ -1,0 +1,40 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 631,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 67,
+  "cdp_records": 119,
+  "offscreen": 60,
+  "url": "https://www.accuweather.com/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "title-exact",
+  "tab": "Local, National, & Global Daily Weather Forecast | AccuWeather",
+  "picked_title": "Local, National, & Global Daily Weather Forecast | AccuWeather"
+ },
+ "cdp_offscreen_skipped": 349,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 0,
+ "history_views_dropped": 0,
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 5034,
+ "settle_captures": 3,
+ "guard_ms": 28
+}

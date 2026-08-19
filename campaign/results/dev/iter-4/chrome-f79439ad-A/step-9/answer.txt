@@ -1,0 +1,5 @@
+Austria is selected and the airport list now shows Salzburg and Vienna. I'll click Vienna.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1054, 521); time.sleep(2)", "memo": "Ryanair. Screen date Aug 20 -> next month = SEPTEMBER, need Sep 10. One way selected, From=Dublin, just clicked Vienna as destination. Typing does NOT work in these fields. Next: date picker should open - navigate to September and click day 10. Then set passengers to 2 adults (default 1, click + once). Then Search."}
+```

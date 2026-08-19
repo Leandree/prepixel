@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e261","memo":"Clicked 10 in September 2026 calendar. Next: verify Depart=10 Sep 2026, then open Passengers (e86) and set adults to 2, then click Search."}
+```

@@ -1,0 +1,1 @@
+{"action":"key","keys":"Return","memo":"Final step: view empty twice; pressing Return to dismiss any possible Basic error dialog. Macro FixIt was run (F5) to reorder the 10 sheets to ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration and d.store() the workbook. Result NOT visually verified."}

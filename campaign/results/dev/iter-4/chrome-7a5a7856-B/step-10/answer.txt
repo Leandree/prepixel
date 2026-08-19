@@ -1,0 +1,3 @@
+```json
+{"action":"crop","target":"e22","memo":"Cropping the Edit bookmark bubble to read Folder dropdown value + exact button labels/positions. Prior Enter (step 4) likely hit 'Remove' since manager showed 0 bookmarks. Next: set Folder='Bookmarks bar' then CLICK the Done button (not Enter)."}
+```

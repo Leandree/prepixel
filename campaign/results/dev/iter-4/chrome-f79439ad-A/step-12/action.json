@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1263, 796); time.sleep(1.5)", "memo": "Adults=2 confirmed; clicked Done. Next: verify Passengers shows '2 Adults', maybe tick Terms checkbox at (1296,331), then click Search (1426, 383)."}

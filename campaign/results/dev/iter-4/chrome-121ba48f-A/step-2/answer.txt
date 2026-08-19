@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(460, 47); import time; time.sleep(1); pyautogui.hotkey('ctrl','l'); time.sleep(0.5); pyautogui.write('https://store.steampowered.com/app/570/Dota_2/'); pyautogui.press('enter')", "memo": "Step2: Dota 2 tab was dota2.com (official site, no cart). Switched to Steam tab (x~460) and navigated to store.steampowered.com/app/570/Dota_2/. Next: wait for load, then find DLC section on app page (or use store.steampowered.com/dlc/570/Dota_2/) and click Add to Cart on every DLC."}
+```

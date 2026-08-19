@@ -1,0 +1,3 @@
+Thunderbird is loaded with the outlook account selected, and there's a "Manage message filters" link right on the account page.
+
+{"action": "import pyautogui; pyautogui.click(1017, 210)", "memo": "Task: local TB filter forwarding all mail for anonym-x2024@outlook.com -> anonym-x2024@gmail.com. TB open, outlook account selected. Step2: clicked 'Manage message filters' link on account page. Next: in Message Filters dialog verify 'Filters for: anonym-x2024@outlook.com', click New..., then set 'Match all messages' + action 'Forward Message to' gmail addr, OK."}

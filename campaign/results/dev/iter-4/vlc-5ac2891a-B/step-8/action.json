@@ -1,0 +1,1 @@
+{"action": "click", "target": "e57", "memo": "Clicked tree node 'Advanced' to put keyboard focus in the prefs tree. NEXT: type 'playlist' (Qt type-ahead jumps to the top-level 'Playlist' node), then on the Playlist page UNCHECK 'Play and exit' and click Save (e82)."}

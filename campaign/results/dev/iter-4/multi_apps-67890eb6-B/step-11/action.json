@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e9", "memo": "Cropping terminal to read output of the openpyxl rewrite+verify (title trick didn't update). Expect 'OK 5 4 2019' line. Remaining steps: 12-15. If OK, done. Do NOT reopen soffice."}

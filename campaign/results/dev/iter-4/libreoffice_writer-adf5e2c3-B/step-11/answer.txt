@@ -1,0 +1,1 @@
+{"action":"type","text":"[14]","memo":"Typed '[14]' replacing '<add here>' in para 11 (4th body paragraph). Selection was Bold=true, so [14] may be bold — next: select the 4 chars (shift+left x4) or just check; then ctrl+s and press Enter on 'Use Word 2007-365!' dialog."}

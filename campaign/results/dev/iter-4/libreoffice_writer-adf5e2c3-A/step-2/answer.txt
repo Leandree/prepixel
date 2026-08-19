@@ -1,0 +1,5 @@
+The document is open and focused. Now I'll close the notification bars and jump to the end of the document to inspect the reference list format.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1846, 227); pyautogui.click(1846, 187); pyautogui.click(960, 600); pyautogui.hotkey('ctrl', 'end')", "memo": "Doc open+focused. In-text cites look like numbered refs e.g. '[11]', '[12]'. Closed 2 info banners, clicked in body, Ctrl+End to view reference list at doc end (4 pages). NEXT: read screenshot to see ref list numbering/order (alphabetical?) to decide insert spot for Steinberg 2003, then find '<add here>' in para 4."}
+```

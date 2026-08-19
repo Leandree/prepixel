@@ -1,0 +1,5 @@
+The row now reads **Microsoft Bing (Default)** in bold, and Google no longer carries the "(Default)" label — the change took effect.
+
+```json
+{"action": "DONE"}
+```

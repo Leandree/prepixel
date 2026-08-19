@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+a","memo":"Tab2 (Thinking about High-Quality Human Data): print dialog stuck at 'Saving…'; GTK save dialog not exposed in tree. Sent ctrl+a assuming save dialog name field focused. NEXT: type '/home/user/Documents/Blog/Thinking about High-Quality Human Data.pdf' then Enter. Then repeat ctrl+p for Tab1 (LLM Powered Autonomous Agents)."}

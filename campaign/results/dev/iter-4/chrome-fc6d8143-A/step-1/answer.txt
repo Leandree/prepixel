@@ -1,0 +1,5 @@
+The delta.com page is still loading (blank content, stop button showing). I'll wait for it to render.
+
+```json
+{"action": "WAIT", "memo": "Task: find flights JFK -> ORD for tomorrow. VM clock shows Aug 20, so tomorrow = Aug 21. delta.com tab (2nd tab) was loading blank at step 1; waiting for it to render, then fill From=JFK, To=ORD, date Aug 21, likely need one-way trip type."}
+```

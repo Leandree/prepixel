@@ -1,0 +1,1 @@
+{"action": "key", "keys": "escape", "memo": "Escape closes F&R; '<add here>' (10 chars) should stay selected in para 11 on page 2. NEXT: type '[14]' to replace it, then check bold (Bold was checked:true on selection \u2014 may need to unbold), then ctrl+s and Keep current format."}

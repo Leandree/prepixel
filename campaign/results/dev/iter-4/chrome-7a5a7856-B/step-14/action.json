@@ -1,0 +1,1 @@
+{"action": "key", "keys": "f5", "memo": "Reloading chrome://bookmarks to refresh a stale list (right pane read '0 items' even after selecting Bookmarks bar). On reload the manager defaults to the 'Bookmarks bar' folder. Step 15: if the right pane lists 'The Illustrated Transformer' -> done; if it is still empty, report that the bookmark did not land in the Bookmarks bar."}

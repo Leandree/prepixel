@@ -1,0 +1,5 @@
+The flight results page has loaded showing One Way, JFK → ORD, Fri, Aug 21, 2026.
+
+```json
+{"action":"done","memo":"Results page confirmed: JFK-ORD, One Way, Fri Aug 21 2026 with Sort & Filter present."}
+```

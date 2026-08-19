@@ -1,0 +1,5 @@
+The dropdown is open and the first two paragraphs remain selected (94 words). I'll click "Spacing: 2".
+
+```json
+{"action": "import pyautogui; pyautogui.click(1465, 290)", "memo": "Clicked 'Spacing: 2' for paras 1-2. Next: verify spacing visually widened, then Ctrl+S and press Enter / click 'Use Word 2007-365!' to keep .docx format."}
+```

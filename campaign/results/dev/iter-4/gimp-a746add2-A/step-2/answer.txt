@@ -1,0 +1,5 @@
+GIMP loaded but a "Convert to RGB Working Space?" dialog is blocking. I'll dismiss it with "Keep" (leaves the image's embedded profile untouched rather than converting pixel data).
+
+```json
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "Dismissed 'Convert to RGB Working Space?' dialog via Keep (non-destructive). Next: click Filters menu (475, 76) > Light and Shadow > Vignette."}
+```

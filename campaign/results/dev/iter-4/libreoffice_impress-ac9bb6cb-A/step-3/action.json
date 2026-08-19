@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(513, 405)", "memo": "Tools menu open; clicked Macros to expand submenu. Next: click 'Edit Macros...' or 'Basic Macros...' in submenu to open Basic IDE. Then write macro: loop oDoc.DrawPages + MasterPages, for each shape if supportsService(\"com.sun.star.presentation.SlideNumberShape\") set CharColor=RGB(255,0,0); then oDoc.store()."}

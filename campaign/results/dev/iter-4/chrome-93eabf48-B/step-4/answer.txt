@@ -1,0 +1,3 @@
+```json
+{"action":"set_value","target":"e89","value":"Light","memo":"Switched theme to Classic, which revealed the 'Mode' dropdown (was 'Dark'). Setting it to 'Light'. Next: verify e89 reads 'Light' and the UI is light-coloured, then done."}
+```

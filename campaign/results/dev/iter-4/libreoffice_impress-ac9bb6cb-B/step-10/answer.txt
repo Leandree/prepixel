@@ -1,0 +1,1 @@
+{"action":"click","target":"e243","memo":"Clicked Red (FF0000) in Font Color palette for shape 3 (<number>) on slide 1. NEXT: verify red applied; then click Master Slide btn (e203) to open master view, select the <number> placeholder there, apply Font Color (button e109 now defaults red), return to Normal view (e203/View menu), then ctrl+s + Enter to keep pptx format."}

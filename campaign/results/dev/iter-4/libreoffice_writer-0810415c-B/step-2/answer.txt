@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"ctrl+home","memo":"Caret at doc start. Next: shift+ctrl+down x2 (to start of para3), then shift+ctrl+right (extend INTO para3 so para4 is untouched), then ctrl+2 for double spacing, then ctrl+s + Enter to keep .docx."}
+```

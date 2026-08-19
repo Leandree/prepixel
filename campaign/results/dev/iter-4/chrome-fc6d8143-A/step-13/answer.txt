@@ -1,0 +1,5 @@
+JFK → ORD, One Way, Aug 21 selected (tomorrow, since system date is Aug 20). Closing the calendar.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1398, 749); time.sleep(1.5)", "memo": "Clicked Done to close calendar. Form: JFK->ORD, One Way, Aug 21, 1 passenger. Next: click 'Find Flights' at (1487,297), then WAIT for results page to load."}
+```

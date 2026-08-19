@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e77","memo":"In All (advanced) prefs. Selected 'Main interfaces' (last child of Interface) to focus the left tree. Next: press Down to reach 'Playlist' node, then uncheck 'Play and exit' (play-and-exit=0) in right panel, then click Save (e82)."}
+```

@@ -1,0 +1,3 @@
+Terminal is open with an active prompt. I'll click into it to guarantee focus, then set the GSettings key.
+
+{"action": "import pyautogui, time; pyautogui.click(430, 300); time.sleep(1); pyautogui.write('gsettings set org.gnome.desktop.interface show-battery-percentage true'); time.sleep(0.5); pyautogui.press('enter'); time.sleep(2); pyautogui.write('gsettings get org.gnome.desktop.interface show-battery-percentage'); time.sleep(0.5); pyautogui.press('enter'); time.sleep(2)", "memo": "Power panel lacks the toggle (no battery hw), so used terminal. Ran: gsettings set org.gnome.desktop.interface show-battery-percentage true, then a 'gsettings get' to verify. Next: read screenshot - expect 'true' printed. If true, task done (DONE)."}

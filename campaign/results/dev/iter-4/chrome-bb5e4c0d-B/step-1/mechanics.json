@@ -1,0 +1,48 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 608,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 6,
+  "cdp_records": 13,
+  "offscreen": 0,
+  "url": "chrome://new-tab-page/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "title-exact",
+  "tab": "New Tab",
+  "picked_title": "New Tab"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 0,
+ "history_views_dropped": 0,
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "set_value",
+ "platform_result": {
+  "ok": false,
+  "err": "no-settable-interface: "
+ },
+ "rung1_error": "no-settable-interface: ",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1009,
+  90
+ ],
+ "settle_ms": 4661,
+ "settle_captures": 3,
+ "guard_ms": 29
+}

@@ -1,0 +1,1 @@
+{"action": "click", "target": "e62", "memo": "On AccuWeather 404 page; clicked its 'Monthly' link (e62). If it lands on a monthly page for the wrong city, use the header Search box (type 'Manchester, GB' + Enter) and pick 'Manchester, ENG GB'. Direct URLs /en/gb/manchester/M3/monthly-weather/329260 and .../329260/monthly-weather/329260 both 404'd."}

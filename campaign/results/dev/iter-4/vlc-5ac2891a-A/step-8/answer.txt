@@ -1,0 +1,5 @@
+Preferences saved and dialog closed. But I need to verify the setting actually persisted as an active (uncommented) line in `~/.config/vlc/vlcrc` — VLC writes default-valued options commented out, which would leave a pre-seeded `play-and-exit=1` scenario ambiguous. I'll open a terminal to check the file directly.
+
+```json
+{"action": "import pyautogui, time; pyautogui.press('win'); time.sleep(1.5); pyautogui.write('terminal'); time.sleep(1.5); pyautogui.press('enter'); time.sleep(2)", "memo": "Prefs saved via GUI (Playlist > 'Play and exit' unchecked). Opening GNOME Terminal via Activities search to verify ~/.config/vlc/vlcrc actually contains an uncommented play-and-exit=0 (VLC comments out default values, so a seeded play-and-exit=1 may still linger). Next: run grep -n 'play-and-exit' ~/.config/vlc/vlcrc; if it shows =1 or only '#', fix with sed."}
+```

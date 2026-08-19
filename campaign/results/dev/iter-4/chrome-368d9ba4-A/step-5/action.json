@@ -1,0 +1,1 @@
+{"action": "WAIT", "memo": "Step5: on accuweather.com/en/search-locations?query=Manchester, page still skeleton-loading. Next: click the 'Manchester, England, United Kingdom' result in list (results appear ~x=820,y=280+), then MONTHLY tab. Never use \\n in write(); use press('enter')."}

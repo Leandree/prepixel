@@ -1,0 +1,203 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Official Ryanair website | Book direct for the lowest fares | Ryanair.com - Memory usage - 317 MB" state=selected
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,24,24 "View site information"
+e12 entry 227,78,1418,24 "Address and search bar"
+e13 push-button 1653,78,24,24 "Bookmark this tab"
+e14 push-button 1698,73,34,34 "You"
+e15 push-button 1737,73,183,34 "Relaunch to update"
+e16 link 407,570,1161,692
+e17 [pixels] video 407,570,1161,692
+e18 toggle-button 0,0,99,27 "Activities" state=checked:false
+e19 menu 99,0,162,27 "Google Chrome"
+e20 menu 906,0,178,27 "Aug 20 02‎∶42"
+e21 menu 1814,0,106,27 "System"
+e22 push-button 0,840,70,8
+e23 push-button 62,33,8,815
+e24 push-button 0,33,70,64 "Google Chrome"
+e25 push-button 0,101,70,64 "Thunderbird Mail"
+e26 push-button 0,169,70,64 "Visual Studio Code"
+e27 push-button 0,237,70,64 "VLC media player"
+e28 push-button 0,305,70,64 "LibreOffice Writer"
+e29 push-button 0,373,70,64 "LibreOffice Calc"
+e30 push-button 0,441,70,64 "LibreOffice Impress"
+e31 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e32 push-button 0,577,70,64 "Files"
+e33 push-button 0,645,70,64 "Ubuntu Software"
+e34 push-button 0,713,70,64 "Help"
+e35 push-button 0,784,70,64 "Trash"
+e36 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e37 [offscreen] link -999,0,1,1 "Skip to main content"
+e38 link 98,125,166,33 "Ryanair logo"
+e39 [pixels] image 98,125,166,33
+e40 push-button 1248,114,84,55 "Plan"
+e41 text 1264,132,32,19 "Plan"
+e42 [pixels] image 1303,136,12,12
+e43 link 1332,114,69,55 "FAQs"
+e44 text 1348,132,37,19 "FAQs"
+e45 link 1402,114,52,55 "Assistance"
+e46 [pixels] image 1418,132,20,20
+e47 push-button 1471,114,92,55 "My Bookings"
+e48 push-button 1596,130,44,24 "Open market switcher"
+e49 [pixels] image 1596,130,24,24
+e50 [pixels] image 1628,136,12,12
+e51 push-button 1657,132,75,20 "Log in"
+e52 push-button 1733,126,140,32 "myRyanair Portal"
+e53 [pixels] image 1330,193,274,171
+e54 push-button 408,189,132,46 "flights"
+e55 [pixels] image 428,201,20,20
+e56 text 456,202,64,19 "flights"
+e57 push-button 539,189,137,46 "Car Hire"
+e58 [pixels] image 559,202,20,20
+e59 text 587,203,69,19 "Car Hire"
+e60 push-button 677,189,127,46 "hotels"
+e61 [pixels] image 697,202,20,20
+e62 text 725,203,59,19 "hotels"
+e63 push-button 804,189,156,46 "Gift cards"
+e64 [pixels] image 824,202,20,20
+e65 text 852,203,88,19 "Gift cards"
+e66 [pixels] image 1409,189,38,38
+e67 text 1443,204,42,14 "Verified"
+e68 text 1486,204,58,14 "by Ryanair"
+e69 [pixels] image 1548,201,20,20
+e70 label 408,253,93,20 "Return trip"
+e71 label 526,253,81,20 "One way"
+e72 label 633,253,81,20 "Multicity"
+e73 text 729,256,26,14 "NEW"
+e74 push-button 780,253,143,20 "Apply promo code"
+e75 [pixels] image 780,254,18,18
+e76 label 798,253,125,20 "Apply promo code"
+e77 label 425,301,28,14 "From"
+e78 entry 425,318,402,22 "From" value="Dublin"
+e79 [pixels] image 829,309,28,28
+e80 label 868,301,13,14 "To"
+e81 entry 868,318,393,22 "To" value="Vienna"
+e82 push-button 408,358,580,52 "Depart Thu, 10 Sept"
+e83 text 425,364,36,14 "Depart"
+e84 text 425,381,99,21 "Thu, 10 Sept"
+e85 push-button 996,358,282,52 "Passengers 1 Adult"
+e86 label 1013,364,63,14 "Passengers"
+e87 text 1013,381,57,21 "1 Adult"
+e88 label 1286,322,20,20
+e89 text 1314,323,187,14 "By clicking search you agree to the"
+e90 link 1314,323,231,30 "Website Terms of Use"
+e91 text 1314,323,231,30 "Website Terms of Use"
+e92 push-button 1286,358,282,52 "Search"
+e93 text 1401,374,50,19 "Search"
+e94 [pixels] image 408,462,1160,109 alt=null
+e95 text 855,477,57,58 "04"
+e96 text 858,531,52,19 "hours"
+e97 text 929,477,14,58 ":"
+~e98 text 959,477,57,58 "17"
+e99 text 953,531,68,19 "minutes"
+e100 text 1032,477,14,58 ":"
+~e101 text 1062,477,57,58 "49"
+e102 text 1055,531,71,19 "seconds"
+e103 link 408,571,1160,691
+e104 [pixels] video 408,571,1160,691
+e105 [offscreen] push-button 338,1179,1160,272 "gift cards"
+e106 [offscreen] link 387,1179,915,272 "gift cards"
+e107 [offscreen] push-button 387,1179,1160,272 "CAR HIRE"
+e108 [offscreen] link 436,1179,915,272 "CAR HIRE"
+e109 [offscreen] push-button 436,1179,1160,272 "HOTELS"
+e110 [offscreen] link 485,1179,915,272 "HOTELS"
+~e111 [offscreen] push-button 1400,1179,1160,272 "order to seat"
+~e112 [offscreen] link 1449,1179,915,272 "order to seat"
+e113 [offscreen] push-button 1449,1179,1160,272 "IMPORTANT UPDATE"
+e114 [offscreen] link 1498,1179,915,272 "IMPORTANT UPDATE"
+e115 [offscreen] heading 338,1484,1160,28 "Our Partners and Extras"
+e116 [offscreen] link 338,1528,278,362 "GIFT CARDS Gift a great getaway with a Ryanair Gift Card. Buy now"
+e117 [offscreen] heading 354,1839,246,28 "GIFT CARDS"
+e118 [offscreen] paragraph 354,1888,260,36 "Gift a great getaway with a Ryanair Gift Card."
+e119 [offscreen] text 450,1939,53,16 "Buy now"
+e120 [offscreen] link 632,1528,278,362 "CHEAP CAR HIRE Ryanair connects you to the biggest brands in car hire. Book now"
+e121 [offscreen] heading 648,1839,246,28 "CHEAP CAR HIRE"
+e122 [offscreen] paragraph 648,1888,260,36 "Ryanair connects you to the biggest brands in car hire."
+e123 [offscreen] text 740,1939,61,16 "Book now"
+e124 [offscreen] link 926,1528,278,362 "HOTELS High quality rooms at affordable prices. Book now"
+e125 [offscreen] heading 942,1839,246,28 "HOTELS"
+e126 [offscreen] paragraph 942,1888,260,18 "High quality rooms at affordable prices."
+e127 [offscreen] text 1034,1921,61,16 "Book now"
+e128 [offscreen] link 1220,1528,278,362 "PRIVATE TRANSFERS Making it easy for you to get to and from the airport. Book Now"
+e129 [offscreen] heading 1236,1839,246,28 "PRIVATE TRANSFERS"
+e130 [offscreen] paragraph 1236,1888,260,36 "Making it easy for you to get to and from the airport."
+e131 [offscreen] text 1327,1939,64,16 "Book Now"
+e132 [offscreen] heading 338,1922,1160,24 "Explore Ryanair"
+e133 [offscreen] link 338,1958,278,109 "My Bookings"
+e134 [offscreen] heading 430,2012,93,24 "My Bookings"
+e135 [offscreen] link 632,1958,278,109 "Travel Updates"
+e136 [offscreen] heading 717,2012,108,24 "Travel Updates"
+e137 [offscreen] link 926,1958,278,109 "Route Map"
+e138 [offscreen] heading 1026,2012,78,24 "Route Map"
+e139 [offscreen] link 1220,1958,278,109 "Group Travel"
+e140 [offscreen] heading 1313,2012,91,24 "Group Travel"
+e141 [offscreen] heading 338,2099,1160,40 "Explore Europe"
+e142 [offscreen] push-button 338,2200,24,44 "Swipe carousel back"
+e143 [offscreen] link 338,2139,383,168 "Where every panorama tells a story."
+e144 [offscreen] heading 350,2238,364,36 "Where every panorama tells a story."
+e145 [offscreen] text 350,2277,90,16 "Discover more"
+e146 [offscreen] link 728,2139,383,168 "Your next trip: Dakhla"
+e147 [offscreen] heading 740,2238,364,36 "Your next trip: Dakhla"
+e148 [offscreen] text 740,2277,86,16 "Find out more"
+e149 [offscreen] link 1119,2139,383,168 "Vienna Airport: gifts & gourmet delights"
+e150 [offscreen] heading 1131,2238,364,36 "Vienna Airport: gifts & gourmet delights"
+e151 [offscreen] text 1131,2277,86,16 "Find out more"
+e152 [offscreen] link 1510,2139,383,168 "Visit Gdansk"
+e153 [offscreen] heading 1522,2238,364,36 "Visit Gdansk"
+e154 [offscreen] text 1522,2277,154,16 "Let yourself be charmed!"
+e155 [offscreen] link 1901,2139,383,168 "Poznan - the vibe you’ve been looking for"
+e156 [offscreen] heading 1913,2238,364,36 "Poznan - the vibe you’ve been looking for"
+e157 [offscreen] text 1913,2277,53,16 "Let’s fly?"
+e158 [offscreen] link 2291,2139,383,168 "Unwind. Discover Sofia."
+e159 [offscreen] heading 2303,2238,364,36 "Unwind. Discover Sofia."
+e160 [offscreen] text 2303,2277,69,16 "Fly to Sofia"
+e161 [offscreen] link 2682,2139,383,168 "Toulouse in Southwest France"
+e162 [offscreen] heading 2694,2238,364,36 "Toulouse in Southwest France"
+e163 [offscreen] text 2694,2277,54,16 "Discover"
+e164 push-button 1548,769,56,46 "Why are you not subscribed?"
+e165 [pixels] image 1564,780,24,24
+e166 heading 1613,701,283,30 "Why are you not subscribed?"
+e167 [pixels] image 1827,699,78,49
+e168 paragraph 1613,731,283,99
+e169 text 1613,732,281,89 "Subscribe for the latest deals from us and our travel partners straight to your inbox and via push notifications on your device. For information on how to unsubscribe (including for push) please see our"
+e170 link 1767,805,85,16 "Privacy Policy"
+e171 text 1852,805,4,16 "."
+e172 entry 1613,842,283,40 "Email address"
+e173 push-button 1613,890,283,36 "Sign me up!"
+e174 text 1712,900,85,19 "Sign me up!"
+~e175 tooltip 974,409,325,431
+~e176 alert 982,433,309,134
+~e177 [pixels] image 999,450,16,16
+~e178 text 1027,452,240,96 "Choose passenger type based on their age at the time of travel. Minors (<16) must travel with an adult (18+) on the same booking. To add a minor (<16) to an existing booking,"
+~e179 link 1154,532,59,16 "click here"
+~e180 text 1213,532,4,16 "."
+~e181 text 990,581,46,19 "Adults"
+~e182 text 990,603,158,14 "16+ years at the time of travel"
+~e183 [pixels] image 1195,587,24,24
+~e184 push-button 1219,587,40,24 "1"
+~e185 [pixels] image 1259,587,24,24
+~e186 text 990,632,43,19 "Teens"
+~e187 text 990,654,168,14 "12-15 years at the time of travel"
+~e188 [pixels] image 1195,638,24,24
+~e189 push-button 1219,638,40,24 "0"
+~e190 [pixels] image 1259,638,24,24
+~e191 text 990,683,59,19 "Children"
+~e192 text 990,704,161,14 "2-11 years at the time of travel"
+~e193 [pixels] image 1195,689,24,24
+~e194 push-button 1219,689,40,24 "0"
+~e195 [pixels] image 1259,689,24,24
+~e196 text 990,733,42,19 "Infant"
+~e197 text 990,755,179,14 "Under 2 years at the time of travel"
+~e198 [pixels] image 1195,740,24,24
+~e199 push-button 1219,740,40,24 "0"
+~e200 [pixels] image 1259,740,24,24
+~e201 push-button 1246,789,37,16 "Done"
+~e202 text 1246,787,37,19 "Done"
+e203 [offscreen] +243 more lines truncated (scroll to reveal)

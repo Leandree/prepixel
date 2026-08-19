@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"clear && file -b /tmp/a.bin; ls -l /tmp/a.bin; strings -a -n 6 /tmp/a.bin | head -14; echo ===; strings -a -n 10 heron.jpeg | grep -aiE 'transcript|speaker|conversation|audio|\\.wav|\\.mp3' | head -8; echo ===; ls -la ~/Desktop | tail -5\n","memo":"Step10: lost step-9 crop content, so re-probing. This cmd re-prints /tmp/a.bin type+size, its strings, any transcript-ish strings in heron.jpeg, and Desktop listing. Next step: crop e13 to read. If payload is raw audio only (no text transcript, no ASR tool), I cannot hear audio -> emit fail."}
+```

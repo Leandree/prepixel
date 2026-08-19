@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"gsettings set org.gnome.shell favorite-apps \"$(gsettings get org.gnome.shell favorite-apps | python3 -c 'import sys,ast; l=ast.literal_eval(sys.stdin.read().strip()); print([x for x in l if \"vim\" not in x.lower()])')\"\n","memo":"Ran robust one-liner: gsettings set favorite-apps to list with any entry containing 'vim' filtered out (via python3 ast). Next: verify with 'gsettings get org.gnome.shell favorite-apps' and check dock (e20 'Vim') is gone; if python3 missing, fall back to manual set with explicit list."}
+```

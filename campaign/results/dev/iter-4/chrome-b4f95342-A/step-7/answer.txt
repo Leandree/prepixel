@@ -1,0 +1,7 @@
+I scrolled past the campsite list to the page bottom. Scrolling back up to reach the availability table.
+
+```json
+{"action": "import pyautogui; pyautogui.scroll(400, x=960, y=600)"}
+```
+
+{"action": "import pyautogui; pyautogui.scroll(400, x=960, y=600)", "memo": "Step7: Overscrolled to page footer (Explore Nearby Campgrounds + footer). Scrolled UP 400 to return to Campsite List section. Goal: switch grid->LIST view (list icon was at ~(282,1048) when tabs at y~975) to reveal 'Next Available' column for Diamond campsites."}

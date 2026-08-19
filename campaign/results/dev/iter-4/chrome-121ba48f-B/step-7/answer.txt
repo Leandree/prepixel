@@ -1,0 +1,1 @@
+{"action":"click","target":"e6","memo":"Closing the dota2.com tab (its 800+ hero links were eating the a11y budget and hiding the Steam page tree). Steam Dota2 page tab remains. Next: scroll down ~1-2 steps to the 'Downloadable Content For This Game' section and click 'Add all DLC to Cart'. Reference: 'The Dota 2 Remixes EP Free' link marks DLC list top."}

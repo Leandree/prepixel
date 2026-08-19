@@ -1,0 +1,32 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 99,
+  "rect": [
+   273,
+   222,
+   1225,
+   799
+  ],
+  "doc": "impress",
+  "doc_role": "document-presentation",
+  "atspi_records_replaced": 39,
+  "uno_records": 4,
+  "url": "file:///home/user/Desktop/saa-format-guide.pptx"
+ },
+ "history_views": 3,
+ "history_views_dropped": 3,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "uno:click",
+ "uno_act_ms": 393,
+ "settle_ms": 4355,
+ "settle_captures": 2
+}

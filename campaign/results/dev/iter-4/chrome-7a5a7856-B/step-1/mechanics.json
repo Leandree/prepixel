@@ -1,0 +1,63 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 860,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 88,
+  "cdp_records": 144,
+  "offscreen": 60,
+  "url": "https://jalammar.github.io/illustrated-transformer/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 28756,
+  "picked_by": "title-exact",
+  "tab": "The Illustrated Transformer \u2013 Jay Alammar \u2013 Visualizing machine learning one concept at a time.",
+  "picked_title": "The Illustrated Transformer \u2013 Jay Alammar \u2013 Visualizing machine learning one concept at a time."
+ },
+ "cdp_offscreen_skipped": 378,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 0,
+ "history_views_dropped": 0,
+ "memo_in": false,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.press",
+  "matched_by": "name",
+  "fresh_rect": [
+   1634,
+   78,
+   24,
+   24
+  ]
+ },
+ "rung": 1,
+ "rung1_method": "Action.press",
+ "reresolved_rect": [
+  1634,
+  78,
+  24,
+  24
+ ],
+ "stale_rect": [
+  1800,
+  78,
+  24,
+  24
+ ],
+ "settle_ms": 4743,
+ "settle_captures": 3,
+ "guard_ms": 34
+}

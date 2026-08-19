@@ -1,0 +1,5 @@
+First PDF saved — the print pane closed. Now switching to the second tab and opening its print dialog.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(460, 47); time.sleep(2); pyautogui.hotkey('ctrl', 'p'); time.sleep(3)", "memo": "Tab1 'LLM Powered Autonomous Agents.pdf' SAVED to /home/user/Documents/Blog. Now on tab2 'Thinking about High-Qua...', opened ctrl+p. Next: confirm Destination=Save as PDF, click Save (1566,898), then in GTK dialog set Name field (1020,389) to exact page title +'.pdf' and click Save (1375,389). Blog folder already exists."}
+```

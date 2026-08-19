@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(196, 508)", "memo": "Clicked 'Bills' folder under Local Folders (196,508). Next: click into the message list pane (first message row, ~y=200 in list area right of folder pane), then Ctrl+A to select all, then press 'S' to toggle star. Verify stars appear on all rows."}

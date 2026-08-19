@@ -1,0 +1,1 @@
+{"action": "key", "keys": "Return", "memo": "Pressed Return on 'gsettings get ...show-battery-percentage' in terminal e11. Next: crop e11 to read the printed value; expect 'true' -> done. VM has no battery so top bar shows no %, but the setting is what the task checks."}

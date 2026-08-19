@@ -1,0 +1,5 @@
+The dialog is still open — my last click only moved focus/dismissed the taskbar preview. Clicking "Keep" again.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1106, 702)", "memo": "Clicked Keep (2nd try) on 'Convert to RGB Working Space?' dialog. Verify dialog is gone, then: Filters menu at (475,76) > 'Light and Shadow' > 'Vignette'."}
+```

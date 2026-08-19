@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e82","memo":"Appearance page loaded; no Light/Dark 'Mode' row exists in this Chrome build — theme is GTK (dark). Clicked 'Use Classic' to switch off the dark system theme. Verify theme now reads 'Classic' / UI turns light."}
+```

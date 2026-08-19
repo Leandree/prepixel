@@ -1,0 +1,1 @@
+{"action": "key", "keys": "shift+ctrl+down", "memo": "Selection now doc-start -> start of para2 (empty). Next: shift+ctrl+down again (to start of para3), then shift+ctrl+right to extend INTO para3 (so para4 untouched), then ctrl+2 for double spacing, then ctrl+s + Enter to keep .docx format."}

@@ -1,0 +1,5 @@
+The calendar is open with August 2026 showing; today is Aug 20, so I need Aug 21.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1069, 620); time.sleep(1)", "memo": "Clicked Aug 21 (tomorrow) in calendar. Next: click 'Done' (1398,749), then 'Find Flights' (1487,297) and wait for results."}
+```

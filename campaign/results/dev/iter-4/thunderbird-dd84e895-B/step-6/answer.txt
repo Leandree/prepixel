@@ -1,0 +1,5 @@
+The structure now shows both messages in Bills with "Starred" in their labels (e40 and e44), and the folder header confirms only 2 messages exist.
+
+```json
+{"action":"done","memo":"Both Bills messages (AWS and X/Twitter) now report 'Starred' in their tree-item labels; folder shows 2 Messages total. Task complete."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e110","memo":"On chrome://settings/searchEngines. Clicked 'More actions for Microsoft Bing' — next choose 'Make default' in the popup menu."}
+```

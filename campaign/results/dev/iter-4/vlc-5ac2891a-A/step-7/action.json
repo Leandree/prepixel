@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1210, 903)", "memo": "In All-prefs > Playlist, 'Play and exit' was already UNCHECKED (in-memory default 0); other defaults showed checkmarks so rendering is reliable. Clicked Save (1210,903) to flush config to ~/.config/vlc/vlcrc with play-and-exit=0. Next: verify dialog closed; if it reopens/persists, recheck Playlist panel."}

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(534, 263)", "memo": "Ryanair form. Step3: clicked 'One way' radio (534,263). Next: verify One way selected; then From field (620,328) - clear 'Lille', type Dublin, pick suggestion; To (1055,328) type Vienna, pick; then date Sep 10 2026? (sys date Aug 20 -> Sep 10); then passengers 2 adults; then Search."}

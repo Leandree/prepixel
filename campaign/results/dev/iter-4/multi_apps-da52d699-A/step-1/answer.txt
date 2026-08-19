@@ -1,0 +1,5 @@
+The spreadsheet `2023_validation_Book_Reading_Rate.xlsx` is still loading in LibreOffice Calc (progress bar at bottom). I'll wait for it to finish.
+
+```json
+{"action": "WAIT", "memo": "Spreadsheet 2023_validation_Book_Reading_Rate.xlsx loading in LO Calc. Next: read book titles + read dates, then look up word counts on howlongtoread.com, compute words/day, find slowest, write title into book_list_result.docx on Desktop."}
+```

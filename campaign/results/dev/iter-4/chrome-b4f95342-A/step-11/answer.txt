@@ -1,0 +1,5 @@
+The page keeps snapping back to the top. I'll use a deterministic Page Down instead of mouse scroll.
+
+```json
+{"action": "import pyautogui; pyautogui.click(960, 920); pyautogui.press('pagedown')", "memo": "Step11: Mouse scrolls are erratic on this page (300 units = whole page). Clicked blank area at (960,920) to focus page, then PageDown to reveal Campsite List table with 'Next Available' column. List layout already toggled on. Next: read Next Available dates for Diamond sites."}
+```

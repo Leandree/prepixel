@@ -1,0 +1,1 @@
+{"action": "key", "keys": "enter", "memo": "Pressed Enter on dropdown item 4 (Spacing: 1 preselected on open, 3 downs -> 'Spacing: 2') to apply double spacing to paras 1-3 selection. NEXT: verify dropdown closed / spacing applied (check doc render or reopen Line Spacing menu). Then ctrl+s and press Enter on 'Use Word 2007-365!' dialog to keep .docx format."}

@@ -1,0 +1,1 @@
+{"action":"scroll","direction":"down","memo":"Advanced prefs tree: need 'Playlist' node (below Interface). Scrolling tree down to reveal Playlist/Stream output/Video. Then open Playlist page and uncheck 'Play and exit' (play-and-exit), then Save (e82)."}

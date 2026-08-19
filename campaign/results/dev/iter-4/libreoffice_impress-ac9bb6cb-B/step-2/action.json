@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "Tools menu open but only 6 items exposed (Spelling..Redact); expected Macros further down. Re-observing to see full menu. If Macros still missing, press Down repeatedly or use keyboard to reach Macros>Edit Macros; goal = Basic IDE macro setting CharColor red on <number> shapes across all 15 DrawPages + MasterPages, then oDoc.store()."}

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e18","memo":"Launching GIMP from dock. Next: wait for GIMP to load, then open dog_with_background.png (desktop) if no image open, then Filters > Light and Shadow > Vignette."}
+```

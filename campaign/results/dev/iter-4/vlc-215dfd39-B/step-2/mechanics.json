@@ -1,0 +1,78 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 1,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": false,
+  "err": "node-not-found",
+  "walk_s": 0.6,
+  "near": [
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589936457
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589936457
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589936457
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589936457
+   },
+   {
+    "rect": [
+     -2147483648,
+     -2147483648,
+     -2147483648,
+     -2147483648
+    ],
+    "dist": 8589936457
+   }
+  ]
+ },
+ "rung1_error": "node-not-found",
+ "rung": 2,
+ "occlusion_check": "not-implemented (full-rect center)",
+ "anchor": [
+  1088,
+  604
+ ],
+ "settle_ms": 4679,
+ "settle_captures": 3,
+ "guard_ms": 21
+}

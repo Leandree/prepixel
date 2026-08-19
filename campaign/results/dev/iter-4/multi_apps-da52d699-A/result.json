@@ -1,0 +1,42 @@
+{
+ "task_id": "da52d699-e8d2-4dc5-9191-a2199e0b6a9b",
+ "domain": "multi_apps",
+ "condition": "A",
+ "model": "claude-code-cli:claude-opus-5[1m]",
+ "driver": "v3-dev",
+ "phase": "development",
+ "driver_commit": "5d0535177d9036c7790501e816131a0a04df8bda",
+ "vm_image": "/home/leandre/dev/OSWorld/docker_vm_data/Ubuntu-uno.qcow2",
+ "success": true,
+ "score_raw": 1,
+ "steps": 8,
+ "termination": "DONE",
+ "wall_clock_s": 346.4,
+ "pixel_fallbacks": null,
+ "guard_hits": null,
+ "guard_suspects_checked": null,
+ "act_verdicts": null,
+ "mechanics": null,
+ "cost": {
+  "input_tokens": 54,
+  "cache_creation_input_tokens": 77468,
+  "cache_read_input_tokens": 158484,
+  "output_tokens": 14023,
+  "cost_usd": 1.204767,
+  "attempts": 8,
+  "steps_with_usage": 8,
+  "steps_missing_usage": 0
+ },
+ "infra_failure": false,
+ "notes": "",
+ "actions": [
+  "WAIT",
+  "import pyautogui; pyautogui.doubleClick(254, 296)",
+  "import pyautogui; pyautogui.click(1833, 45)",
+  "import pyautogui; pyautogui.doubleClick(1852, 767)",
+  "import pyautogui; pyautogui.click(900, 300); pyautogui.write('Out of the Silent Planet')",
+  "import pyautogui; pyautogui.hotkey('ctrl', 's')",
+  "import pyautogui; pyautogui.hotkey('ctrl', 's')",
+  "DONE"
+ ]
+}

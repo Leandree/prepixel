@@ -1,0 +1,7 @@
+The cart page confirms the result: **Your Shopping Cart (1 item)** — *The Dota 2 Official Soundtrack* at 8,19€, Cart badge shows 1.
+
+I used Dota 2's own **"Add all DLC to Cart"** button. Dota 2 has exactly 2 DLC items ("Content For This Game"): the Soundtrack (8,19€) and The Dota 2 Remixes EP (Free). The button's total was 8,19€ — free DLC is granted to an account rather than placed in a cart, so the cart correctly contains the one cart-eligible DLC.
+
+```json
+{"action": "DONE"}
+```

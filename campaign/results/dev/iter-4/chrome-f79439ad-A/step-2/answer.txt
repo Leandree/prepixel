@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(1213, 671)", "memo": "Site is Ryanair (not Google Flights; my URL nav didn't stick). Sys date Aug 20 -> need Sep 10. Step2: accepted cookie dialog. Next: close Chrome-update popup (X at 1890,139) & subscribe popup, select 'One way' radio (566,263), From=Dublin (currently Lille) at (620,328), To=Vienna (1055,328), date Sep 10, passengers 2 adults, Search."}
+```

@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1890, 139); pyautogui.sleep(1)", "memo": "Chrome relaunched; #enable-force-dark (Auto Dark Mode for Web Contents) persists as 'Disabled' with modified-dot, relaunch banner gone. Just dismissed the unrelated 'Can't update Chrome' bubble. Next: confirm bubble closed, then DONE."}

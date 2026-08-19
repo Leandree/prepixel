@@ -1,0 +1,3 @@
+"One way" is now selected (checkmark visible). Next: set the departure airport.
+
+{"action": "import pyautogui; pyautogui.click(620, 328); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('Dublin')", "memo": "Ryanair, sys date Aug 20 -> next month = SEPTEMBER, need Sep 10 (2026?). One way IS selected. Step4: clicked From (620,328), typed 'Dublin'. Next: click Dublin suggestion in dropdown (~appears under From field, first item ~y=400-430), then To field (1055,328) type Vienna + pick, then date Sep 10, then passengers 2 adults, then Search (1426,321)."}

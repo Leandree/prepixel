@@ -1,0 +1,5 @@
+The reference list is alphabetical and ends at `[13] Schramm...`, so Steinberg becomes `[14]` appended at the end. I'll click at the end of entry [13], start a new paragraph, clear the hyperlink formatting, and type the reference.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1188, 720); pyautogui.press('end'); pyautogui.press('enter'); pyautogui.hotkey('ctrl', 'm'); pyautogui.write('Steinberg, F. M., Bearden, M. M., & Keen, C. L. (2003). Cocoa and chocolate flavonoids: Implications for cardiovascular health. Journal of the American Dietetic Association, 103(2), 215-223. doi: 10.1053/jada.2003.50028', interval=0.01)", "memo": "Ref list is ALPHABETICAL, ends [13] Schramm -> Steinberg = [14] at end. Just clicked end of [13], Enter, Ctrl+M, typed Steinberg ref. NEXT: check screenshot whether '[14]' auto-numbered (if not, press Home and type '[14]\\t'). THEN: Ctrl+H or Ctrl+F find '<add here>' in 4th paragraph, replace with '[14]'. Then Ctrl+S (Keep current format)."}
+```

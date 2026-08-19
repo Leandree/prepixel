@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's')", "memo": "Verified from spreadsheet: Out of the Silent Planet = 47840 words/36 days = 1328.9 wpd, the slowest. Text is typed in book_list_result.docx. Just pressed Ctrl+S; next step click 'Use Word 2007-365!' in the Keep format dialog (right-hand button), then DONE."}

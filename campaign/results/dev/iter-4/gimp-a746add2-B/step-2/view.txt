@@ -1,0 +1,158 @@
+e1 [pixels] icon 1802,852,101,64
+e2 text 1793,920,120,34 "dog_​with_​background.​png"
+e3 [pixels] icon 1821,969,64,64
+e4 text 1833,1037,40,17 "Home"
+e5 toggle-button 0,0,99,27 "Activities" state=checked:false
+e6 menu 99,0,287,27 "GNU Image Manipulation Program"
+e7 menu 906,0,178,27 "Aug 20 00‎∶37"
+e8 menu 1814,0,106,27 "System"
+e9 push-button 0,840,70,8
+e10 push-button 62,33,8,815
+e11 push-button 0,33,70,64 "Google Chrome"
+e12 push-button 0,101,70,64 "Thunderbird Mail"
+e13 push-button 0,169,70,64 "Visual Studio Code"
+e14 push-button 0,237,70,64 "VLC media player"
+e15 push-button 0,305,70,64 "LibreOffice Writer"
+e16 push-button 0,373,70,64 "LibreOffice Calc"
+e17 push-button 0,441,70,64 "LibreOffice Impress"
+e18 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e19 push-button 0,577,70,64 "Files"
+e20 push-button 0,645,70,64 "Ubuntu Software"
+e21 push-button 0,713,70,64 "Help"
+e22 push-button 0,784,70,64 "Trash"
+e23 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e24 push-button 83,717,271,8
+~e25 push-button 346,355,8,370
+~e26 menu-item 83,355,271,182 "GNU Image Manipulation Program" state=focused
+~e27 [pixels] image 89,370,34,18
+~e28 push-button 301,370,38,38
+~e29 menu-item 83,536,271,189 "Convert to RGB Working Space?"
+~e30 [pixels] image 104,551,93,58
+~e31 push-button 300,551,38,38
+~e32 menu 70,64,36,25 "File"
+~e33 menu 106,64,39,25 "Edit"
+~e34 menu 145,64,53,25 "Select"
+~e35 menu 198,64,45,25 "View"
+~e36 menu 243,64,53,25 "Image"
+~e37 menu 296,64,48,25 "Layer"
+~e38 menu 344,64,56,25 "Colors"
+~e39 menu 400,64,48,25 "Tools"
+~e40 menu 448,64,55,25 "Filters"
+~e41 menu 503,64,73,25 "Windows"
+~e42 menu 576,64,43,25 "Help"
+~e43 toggle-button 70,124,47,40 state=checked:false
+~e44 toggle-button 117,124,47,40 state=checked:false
+~e45 toggle-button 164,124,47,40 state=checked:false
+~e46 toggle-button 211,124,47,40 state=checked:false
+~e47 toggle-button 70,164,47,40 state=checked:true
+~e48 toggle-button 117,164,47,40 state=checked:false
+~e49 toggle-button 164,164,47,40 state=checked:false
+~e50 toggle-button 211,164,47,40 state=checked:false
+~e51 toggle-button 70,204,47,40 state=checked:false
+~e52 toggle-button 117,204,47,40 state=checked:false
+~e53 toggle-button 164,204,47,40 state=checked:false
+~e54 toggle-button 211,204,47,40 state=checked:false
+~e55 toggle-button 70,244,47,40 state=checked:false
+~e56 toggle-button 117,244,47,40 state=checked:false
+~e57 toggle-button 164,244,47,40 state=checked:false
+~e58 toggle-button 211,244,47,40 state=checked:false
+~e59 text 76,365,176,15 "Crop"
+~e60 check-box 76,381,176,21 "Current layer only" state=checked:false
+~e61 check-box 76,406,176,21 "Delete cropped pixels" state=checked:false
+~e62 check-box 76,431,176,21 "Allow growing" state=checked:false
+~e63 check-box 76,458,176,21 "Expand from center" state=checked:false
+~e64 text 88,514,98,34 "1:1"
+~e65 radio-button 188,514,32,34 state=checked:false
+~e66 radio-button 220,514,32,34 state=checked:false
+~e67 check-box 76,483,21,29 state=checked:false
+~e68 combo-box 99,483,153,29 "Aspect ratio"
+~e69 spin-button 88,583,81,32 "0" value="0.0"
+~e70 spin-button 171,583,81,32 "0" value="0.0"
+~e71 text 76,552,47,29 "Position:"
+~e72 combo-box 201,552,51,29 "pixels"
+~e73 spin-button 88,650,81,32 "0" value="0.0"
+~e74 spin-button 171,650,81,32 "0" value="0.0"
+~e75 text 76,619,26,29 "Size:"
+~e76 combo-box 201,619,51,29 "pixels"
+~e77 spin-button 88,709,164,24 "50.0" value="50.0"
+~e78 check-box 76,686,176,21 "Highlight" state=checked:true
+~e79 combo-box 76,737,176,29 "No guides"
+~e80 push-button 76,770,176,31 "Auto Shrink"
+~e81 check-box 76,805,176,21 "Shrink merged" state=checked:false
+~e82 push-button 76,1045,43,32
+~e83 push-button 120,1045,43,32
+~e84 push-button 164,1045,43,32
+~e85 push-button 208,1045,44,32
+~e86 page-tab 155,340,18,18 "(None)"
+~e87 page-tab 1727,96,18,18 "2. Hardness 050 (51 × 51)"
+~e88 text 1726,122,188,32
+~e89 [pixels] unknown 1727,172,34,34
+~e90 [pixels] unknown 1761,172,34,34
+~e91 [pixels] unknown 1795,172,34,34
+~e92 [pixels] unknown 1829,172,34,34
+~e93 [pixels] unknown 1863,172,34,34
+~e94 [pixels] unknown 1727,206,34,34
+~e95 [pixels] unknown 1761,206,34,34
+~e96 [pixels] unknown 1795,206,34,34
+~e97 [pixels] unknown 1829,206,34,34
+~e98 [pixels] unknown 1863,206,34,34
+~e99 [pixels] unknown 1727,240,34,34
+~e100 [pixels] unknown 1761,240,34,34
+~e101 [pixels] unknown 1795,240,34,34
+~e102 [pixels] unknown 1829,240,34,34
+~e103 [pixels] unknown 1863,240,34,34
+~e104 [pixels] unknown 1727,274,34,34
+~e105 [pixels] unknown 1761,274,34,34
+~e106 [pixels] unknown 1795,274,34,34
+~e107 [pixels] unknown 1829,274,34,34
+~e108 [pixels] unknown 1863,274,34,34
+~e109 [pixels] unknown 1727,308,34,34
+~e110 [pixels] unknown 1761,308,34,34
+~e111 [pixels] unknown 1795,308,34,34
+~e112 [pixels] unknown 1829,308,34,34
+~e113 [pixels] unknown 1863,308,34,34
+~e114 scroll-bar 1899,171,15,160 value="0.0"
+~e115 text 1726,332,188,32 "Basic,"
+~e116 spin-button 1726,365,188,24 "10.0" value="10.0"
+~e117 push-button 1726,390,30,32
+~e118 push-button 1757,390,30,32
+~e119 push-button 1788,390,30,32
+~e120 push-button 1819,390,30,32
+~e121 push-button 1850,390,30,32
+~e122 push-button 1881,390,33,32
+~e123 page-tab 1755,97,18,18 "Pine (64 × 56)"
+~e124 page-tab 1783,97,18,18 "(None)"
+~e125 page-tab 1811,98,16,16 "(None)"
+~e126 combo-box 1726,466,141,29 "Normal"
+~e127 combo-box 1868,466,46,29 "Default"
+~e128 spin-button 1726,496,188,24 "100.0" value="100.0"
+~e129 text 1726,521,28,32 "Lock:"
+~e130 toggle-button 1755,521,32,32 state=checked:false
+~e131 toggle-button 1788,521,32,32 state=checked:false
+~e132 toggle-button 1821,521,32,32 state=checked:false
+~e133 push-button 1726,1045,22,32
+~e134 push-button 1749,1045,22,32
+~e135 push-button 1772,1045,22,32
+~e136 push-button 1795,1045,22,32
+~e137 push-button 1818,1045,22,32
+~e138 push-button 1841,1045,22,32
+~e139 push-button 1864,1045,22,32
+~e140 push-button 1887,1045,27,32
+~e141 text 736,376,517,355 "Convert to RGB Working Space?"
+~e142 [pixels] icon 739,416,1,36
+~e143 text 745,416,461,21 "Import the image from a color profile"
+~e144 text 745,437,461,15 "dog_with_background.png-1"
+~e145 [pixels] unknown 1214,423,34,21
+~e146 text 748,467,493,40 "The image 'dog_with_background.png' has an embedded color profile"
+~e147 toggle-button 760,486,481,21 "Display" state=checked:false,focused
+~e148 text 748,467,493,17 "The image 'dog_with_background.png' has an embedded color profile"
+~e149 text 748,519,493,40 "Convert the image to the built-in sRGB color profile?"
+~e150 toggle-button 760,538,481,21 "GIMP built-in sRGB" state=checked:false
+~e151 text 748,519,493,17 "Convert the image to the built-in sRGB color profile?"
+~e152 text 748,571,115,31 "Rendering Intent:"
+~e153 combo-box 869,571,372,31 "Relative colorimetric"
+~e154 check-box 748,608,493,21 "Black Point Compensation" state=checked:true
+~e155 check-box 748,641,493,21 "Don't ask me again" state=checked:false
+~e156 push-button 1156,686,85,33 "Convert"
+~e157 push-button 1065,686,85,33 "Keep"
+~e158 push-button 748,686,85,33 "Help"

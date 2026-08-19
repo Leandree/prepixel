@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"enter","memo":"Tab2 (High-Quality Human Data): print preview still shows 'Saving…'; GTK save dialog likely still open (not in a11y tree). Pressed Enter again to confirm. If preview closes -> saved. NEXT: click tab e26 (LLM Powered Autonomous Agents), ctrl+p, wait, click Save, ctrl+a, type '/home/user/Documents/Blog/LLM Powered Autonomous Agents.pdf', enter"}
+```

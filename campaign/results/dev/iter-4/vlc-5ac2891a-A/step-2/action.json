@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(945, 373)", "memo": "VLC is open (window ~645-1245 x, menu bar y=373). Step2: clicked Tools menu. Next: click 'Preferences' in dropdown, then in Preferences>Interface uncheck 'Play and exit' (or 'Continue playback' area), then Save."}

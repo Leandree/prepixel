@@ -1,0 +1,10 @@
+
+<invoke name="bash">
+<parameter name="command">echo '{"action":"click","target":"e10"}'</parameter>
+<parameter name="description">Emit action to open Thunderbird</parameter>
+</invoke>
+
+
+```
+{"action":"click","target":"e10"}
+```

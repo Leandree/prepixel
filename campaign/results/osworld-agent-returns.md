@@ -1,5 +1,109 @@
 # OSWorld agent — returns to the test manager
 
+## 2026-08-20 — RAPPORT ITÉRATION 4 : le canal UNO mesuré, gel inconditionnel driver-freeze-v4
+
+56/56 en 2h44, zéro crash, zéro rejeu, zéro reap, 523 appels modèle sans
+une erreur API, contamination 56/56 CLEAN, image cuite `Ubuntu-uno.qcow2`
+dans PINNED.json et chaque result.json (pin 5d053517, propre). Traces dans
+`campaign/results/dev/iter-4/`. Les cinq sections, delta vs iter-3.
+
+### (1) Causes, chaque échec lu dans les traces
+
+| cellule | classe | cause |
+|---|---|---|
+| `libreoffice_impress-ac9bb6cb-B` | prior/exhaustivité | LE changement de régime : plus AUCUN détour macro — la vue UNO montrait `shape 3 "<number>"` littéral, le modèle l'a coloré en rouge directement… sur la diapo 1 seulement, alors que la ligne d'en-tête annonçait `slide 1/15`. Échec d'exhaustivité, plus de stratégie. |
+| `thunderbird-9b7bc335-B` | actuation/vérification | le set_value sur le champ d'adresse ne prend jamais et la structure n'expose pas la valeur ; le modèle l'a découvert par l'alerte de l'app (« Enter a valid email address ») au pas 15. Cécité-entrée Thunderbird, récidive de la classe P2. |
+| `os-fe41f596` A+B | prior, symétrique | infaisable (pas de batterie) ; les deux déclarent encore `done`. Inchangé sur 2 itérations. |
+| `chrome-368d9ba4-B` | budget | chasse d'URL AccuWeather jusqu'au cap (réussie en 8 pas en iter-3 — variance de route). |
+| `chrome-f79439ad-B` | budget | tout configuré, Search cliqué AU pas 15 — la recherche part, l'évaluation tombe avant l'état attendu. Mort au cap à un pas près. |
+| `chrome-7a5a7856-B` | prior | plus rigoureux qu'en iter-3 (reload de chrome://bookmarks pour exclure le périmé) ; le favori n'a jamais atteint la barre ; `fail` déclaré sur barre réellement vide. |
+| `multi_apps-da922383-B` | prior | max_steps réel dans le flux print-to-PDF. |
+| `multi_apps-da922383-A` | **évaluateur ×2** | VOLÉ une seconde fois, à l'identique : checker `[1, 1]`, exact_match cassé par le warning fitz dans stdout. Déterministe. La règle pré-enregistrée (7cfe88f) s'applique : rapport DOUBLE — brut ❌ dans les tables, corrigé-avec-preuve ✅ ici, enveloppe verbatim dans le log. |
+| `chrome-93eabf48-A` | prior | 4e échec consécutif côté A (ligne Mode cachée par GTK) — pendant que B l'a RÉSOLU cette itération (5 pas, 0.47 $ éq.) : tirage de prior favorable, pas un effet de canal. |
+| `libreoffice_writer-adf5e2c3-A` | prior | A évite le préfixe cette fois (tape « Steinberg, F. M., … » sans `[14]`) et échoue AILLEURS dans l'édition à l'aveugle (14 pas, done, 0) — l'exact-match ne pardonne rien et le canal pixels ne montre pas ce que compare_docx compare. |
+
+### (2) Modifications depuis iter-3, toutes committées avant les runs
+
+1. **Règle pré-enregistrée artefacts d'évaluateur** (7cfe88f) — double
+   rapport brut/corrigé-avec-preuve, symétrique, décidée avant de voir une
+   cellule du test.
+2. **Bake de l'affordance UNO au niveau image** (49e9084, corrigé 244fa68
+   après un premier run raté par mes fautes, toutes documentées) —
+   `ooSetupConnectionURL` dans le profil de `Ubuntu-uno.qcow2`,
+   delta committé par le qemu-img du conteneur, vérifié monté RO.
+3. **Preuve évaluateur pré-runs** (b5b16b1) — le soffice du setup écoute
+   sans relance ni `--accept`, UNO lit le document de la tâche,
+   `env.evaluate()` inaffecté.
+4. **Canal UNO dans le routeur + politique rôles à activation-signal**
+   (d656bd9) — chantiers 1 et 2 de l'ordre, validés en vif sur les trois
+   types de documents avant commit ; grammaire `[uno]` documentée dans le
+   template (v6), descriptive seulement.
+5. **Preuves scratch 2 conditions** (5d05351) — A réussit ; B perd sa
+   cellule scratch sur la course du premier arbre (préexistante, hors
+   périmètre, documentée).
+
+### (3) Iter-4 vs iter-3 — core et browser séparés, LibreOffice en critère primaire
+
+**Critère primaire (déclaré d'avance) — les 6 tâches LibreOffice :**
+B **4/6 → 5/6** (A 5/6, stable) ; coût équiv. B sur le sous-ensemble
+19.30 → 18.10 $. Et le succès gagné est EXACTEMENT la tâche structurelle :
+`writer-adf5e2c3-B` ✅ — première fois en quatre itérations, par le canal
+construit pour elle (la vue portait `list-label "[n] "` séparé du texte ;
+B a inséré la référence sans préfixe et `[14]` au marqueur, 15 pas,
+5.00 $ éq.). Le seul échec LO restant côté B est une non-exhaustivité
+(diapo 1/15), plus un défaut de canal.
+
+**Dev-core (20 tâches)** : A 15/20 (=), B **12 → 15**. Bascules B :
++adf5e2c3 (UNO), +215dfd39 (politique radio — le contournement Qt n'est
+plus nécessaire, le barreau 1 EST le pointeur), +bc2b57f3 (plus de détour
+macro), +93eabf48 (tirage) ; −9b7bc335 (cécité-entrée Thunderbird).
+Médianes : B 10.5 pas (11), 2.07 $ (2.06). Morts au cap B : 6 → 5.
+
+**Dev-browser (8 tâches)** : A 7/8 (=), B **6 → 4** : deux morts au cap
+(368d9ba4, f79439ad) sur des tâches gagnées en iter-3 — variance de
+budget, aucun lien avec les chantiers (ces cellules ne touchent pas UNO,
+et le routeur CDP y est inchangé : 102 pas atspi+cdp, mêmes mécaniques).
+Rapporté tel quel.
+
+**Le canal en fonctionnement** : 92 pas `atspi+uno` (vue médiane 132 ms,
+~100 enregistrements AT-SPI remplacés par vue), 8 actions uno (5 click,
+3 set_value), zéro refus anormal, **zéro course de premier arbre en
+compté** (6/6 cellules LO B en `atspi+uno` dès le pas 1). Totaux :
+B 62.43 $ éq. (69.03 en iter-3), A 26.56 (24.39).
+
+**Global 28 tâches** : A 22/28 (=), B 18 → 19. L'écart se resserre ;
+A garde l'avantage. Il se publiera tel quel.
+
+### (4) Ce qui n'a PAS été fait, et pourquoi
+
+- **Course du premier arbre** : documentée (5d05351), non corrigée —
+  l'ordre borne à deux chantiers et une correction aurait confondu le
+  delta. Occurrences en compté : zéro sur 56.
+- **Vue UNO limitée à la diapo courante** (cap déclaré dans la vue) — a
+  probablement coûté ac9bb6cb-B ; l'étendre APRÈS avoir vu l'échec serait
+  du réglage sur mesure. Constat pour une éventuelle itération future,
+  qui n'existera qu'après relecture manager (le gel est posé).
+- **set_value UNO n'écrit pas les attributs de formatage** (couleur,
+  styles) — périmètre v1 du canal, déclaré ; le formatage passe par l'UI.
+- **L'évaluateur da922383 non réparé**, volé ×2, couvert par la règle
+  pré-enregistrée.
+- **Rien d'autre touché** : cap à 15, A intouché (code strictement
+  identique — seul l'environnement image, partagé, a changé), aucun
+  conseil de prompt.
+
+### (5) Gel : INCONDITIONNEL, posé
+
+Tag `driver-freeze-v4` sur ce commit. Lecture honnête du résultat : le
+critère primaire s'améliore (+1 succès LibreOffice, le structurel, coût
+stable), le core atteint la parité 15/15, le browser rend deux cellules au
+bruit de budget. UNO reste dans le driver — canal légitime du routeur,
+mesuré, rapporté tel quel. Prochaine étape selon l'ordre : campagne des
+50 sur v4 gelé (Google-credentials courues telles quelles per R4, taux
+sur 50 et 48, règle des artefacts d'évaluateur active), après relecture
+manager.
+
+---
+
 ## 2026-08-20 — Pré-runs iter-4 : bake prouvé, canal validé en vif, cellules scratch 2 conditions
 
 **Bake** (bake_uno_image.py, 244fa68) : `Ubuntu-uno.qcow2` porte

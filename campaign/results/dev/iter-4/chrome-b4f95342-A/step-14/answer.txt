@@ -1,0 +1,5 @@
+```json
+{"action": "DONE", "memo": "Task complete: Clicked 'Next Available' on Diamond campground (recreation.gov/camping/campgrounds/233869). Table now shows next available dates Sun Aug 23 through Tue Sep 1, all sites marked 'A' (Available). Earliest next available date = Saturday Aug 23."}
+```
+
+The **Next Available** view for the Diamond campground now shows the table starting at **Sunday, August 23** and running through **Tuesday, September 1**, with every site (A004–A025, B027–B029, …) marked **"A" (Available)** across that whole range. Aug 19–22 were unavailable (FF/R), so **August 23 is the first next-available date**.

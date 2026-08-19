@@ -1,0 +1,1 @@
+{"action":"key","keys":"ctrl+d","memo":"Star still read 'Bookmark this tab' after step 1 click (toolbar shifted when 'New Chrome available' button appeared, likely missed). Pressed Ctrl+D instead. Next: check if star now = 'Edit bookmark' and if bubble appeared; bubble may not expose in a11y tree — crop the area near the star (~1400-1900, 95-320) to read Folder field."}

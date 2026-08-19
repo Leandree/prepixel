@@ -1,0 +1,1 @@
+{"action": "click", "target": "e118", "memo": "Clicked 'Forward Message to' in action dropdown. Next: an address entry should appear next to the action combo (~739,684) \u2014 set_value it := anonym-x2024@gmail.com, verify filter name e94 = 'Forward all to gmail', then click OK (bottom-right ~1343,849)."}

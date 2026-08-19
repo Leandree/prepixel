@@ -1,0 +1,1 @@
+{"action":"crop","target":"e13","memo":"Task: extract hidden audio from ~/Desktop/heron.jpeg -> transcript -> translate to French. Terminal=e13. Step2 ran: ls -la, file *, which binwalk steghide exiftool ffmpeg python3. Step3: cropping terminal to read that output. Next: try binwalk/strings for appended RIFF/ID3/OggS payload."}

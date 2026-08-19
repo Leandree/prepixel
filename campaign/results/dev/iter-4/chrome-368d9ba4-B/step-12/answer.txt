@@ -1,0 +1,5 @@
+```json
+{"action":"set_value","target":"e14","value":"https://www.accuweather.com/en/search-locations?query=Manchester"}
+```
+
+**memo:** Back to AccuWeather search results. The outer result link "Manchester Manchester, ENG GB" ignored 2 clicks before — this time click the INNER paragraph "Manchester, ENG GB" (the sub-line under the second result, ~y=352) instead of the wrapper link. After it loads the Manchester UK page, click the "Monthly" tab in the forecast nav. Direct monthly URLs with key 329260 all 404 — do not retry them.

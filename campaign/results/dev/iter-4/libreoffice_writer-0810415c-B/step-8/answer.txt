@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"down","memo":"Line Spacing dropdown open, focus was 'Spacing: 1.15'; pressed down -> should be 'Spacing: 1.5'. NEXT: press down again to reach 'Spacing: 2' (double), then Enter to apply. Then ctrl+s and Keep Current Format for .docx. Selection = paras 1-3 (para2 empty)."}
+```

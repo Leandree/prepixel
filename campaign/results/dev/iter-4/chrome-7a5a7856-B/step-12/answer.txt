@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e52","memo":"Clicked 'Bookmarks bar' folder in the manager tree. Previous view showed empty list (that was 'Other bookmarks', so the bookmark likely IS on the Bookmarks bar). Next: verify 'The Illustrated Transformer' appears in the right pane; if yes -> done. Note an 'Edit bookmark' bubble element (e20) still lingers; ignore/press Escape if it blocks."}
+```

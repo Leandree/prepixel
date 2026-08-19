@@ -1,0 +1,3 @@
+The banner is gone and the main search box is now at ~(910, 455). I'll click it and type "Diamond".
+
+{"action": "import pyautogui; pyautogui.click(910, 455); pyautogui.write('Diamond', interval=0.1)", "memo": "Step4: clicked main search box (910,455) and typed 'Diamond'. Next: check autocomplete dropdown for a 'Diamond' campground suggestion; click it, or click SEARCH button (1461,455)/press Enter. Then on the result/detail page read the 'Next Available' dates."}

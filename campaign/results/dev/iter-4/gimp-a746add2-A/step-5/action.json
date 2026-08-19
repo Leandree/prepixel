@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(535, 267)", "memo": "Filters menu open; clicked 'Light and Shadow' (535,267). Next: submenu should appear to the right (~x=760+); click 'Vignette' entry in it."}

@@ -1,0 +1,5 @@
+Popups are cleared and AccuWeather (the preloaded site) is fully visible. Since the environment loaded accuweather.com, I'll search there for Manchester.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(940, 286); time.sleep(1); pyautogui.write('Manchester'); time.sleep(2); pyautogui.press('enter')", "memo": "Step4: all dialogs cleared, on accuweather.com home (task site = AccuWeather, not openweathermap). Typed 'Manchester' in site search + enter. NEVER put newline in write(); use press('enter'). Next: pick 'Manchester, England, United Kingdom' from results, then click MONTHLY tab and read this month's forecast."}
+```

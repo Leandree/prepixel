@@ -1,0 +1,1 @@
+{"action": "click", "target": "e120", "memo": "Clicked OK on Filter Rules (address entry values aren't exposed by the structure, same as filter-name entry, so typing likely succeeded). Next: confirm Message Filters list now shows 'Forward all to gmail' enabled; if an error dialog appeared instead, re-enter the address."}

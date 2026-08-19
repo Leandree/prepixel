@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"100","memo":"Zoom dialog open, focus in 'Variable' spin (was 260%); pressed ctrl+a then typed 100. Next: press Enter to confirm OK, then verify status bar bottom-right (e151 area) shows 100%."}
+```

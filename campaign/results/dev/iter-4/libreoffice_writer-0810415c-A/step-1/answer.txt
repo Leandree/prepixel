@@ -1,0 +1,7 @@
+I'll select the first two paragraphs by clicking at the start of paragraph 1 and shift-clicking at the end of paragraph 2.
+
+```json
+{"action": "import pyautogui; pyautogui.click(650, 316); pyautogui.keyDown('shift'); pyautogui.click(701, 445); pyautogui.keyUp('shift')"}
+```
+
+{"action": "import pyautogui; pyautogui.click(650, 316); pyautogui.keyDown('shift'); pyautogui.click(701, 445); pyautogui.keyUp('shift')", "memo": "Selected paragraphs 1-2 (from 'Compared to a short story...' through '...to the highest peaks at the end.'). Next: open the Line Spacing dropdown arrow in toolbar (~1427,147) and choose 'Double', then Ctrl+S and Keep Current Format (Use Word 2007-365!) since file is .docx."}

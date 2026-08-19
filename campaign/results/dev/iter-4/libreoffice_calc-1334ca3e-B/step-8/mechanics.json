@@ -1,0 +1,26 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 112,
+  "rect": [
+   111,
+   281,
+   1738,
+   716
+  ],
+  "doc": "calc",
+  "doc_role": "document-spreadsheet",
+  "atspi_records_replaced": 560,
+  "uno_records": 187,
+  "url": "file:///home/user/Zoom_Out_Oversized_Cells.xlsx"
+ },
+ "history_views": 3,
+ "history_views_dropped": 4,
+ "memo_in": true,
+ "memo_out": true
+}

@@ -1,0 +1,1 @@
+{"action": "scroll", "direction": "down", "memo": "Settings open on Power panel. Visible: Balanced/Power Saver, unnamed row e71, Automatic suspend. Scrolled down to look for 'Show Battery Percentage' toggle. If not found, fallback: ctrl+alt+t then run: gsettings set org.gnome.desktop.interface show-battery-percentage true"}

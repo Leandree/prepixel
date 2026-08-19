@@ -1,0 +1,5 @@
+Settings opened directly to the **Power** panel, but there's no "Show Battery Percentage" toggle — this machine reports no battery hardware, so GNOME hides that row. I'll set the underlying gsettings key instead via a terminal.
+
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl', 'alt', 't'); time.sleep(5)", "memo": "Power panel has NO 'Show Battery Percentage' row (no battery hw detected), so GUI toggle is unavailable. Opened terminal via ctrl+alt+t. Next: verify terminal is focused, then run: gsettings set org.gnome.desktop.interface show-battery-percentage true"}
+```

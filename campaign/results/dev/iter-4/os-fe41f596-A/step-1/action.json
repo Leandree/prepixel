@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.press('super'); time.sleep(1.5); pyautogui.write('settings'); time.sleep(1.5)", "memo": "Goal: enable 'Show Battery Percentage' in GNOME Settings > Power. Opened Activities and typed 'settings'; next: press Enter to launch Settings app, then go to Power panel."}

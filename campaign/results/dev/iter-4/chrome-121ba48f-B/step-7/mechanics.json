@@ -1,0 +1,44 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 577,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 159,
+  "cdp_records": 97,
+  "offscreen": 60,
+  "url": "https://www.dota2.com/home",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 4732,
+  "picked_by": "title-partial",
+  "tab": "Dota 2 on Steam - Memory usage - 212 MB",
+  "picked_title": "Dota 2"
+ },
+ "cdp_offscreen_skipped": 811,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 3,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.press"
+ },
+ "rung": 1,
+ "rung1_method": "Action.press",
+ "settle_ms": 5051,
+ "settle_captures": 2,
+ "guard_ms": 43
+}

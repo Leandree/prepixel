@@ -1,0 +1,1 @@
+{"action":"wait","memo":"Tab2 save: print preview still shows 'Saving…' after Enter in GTK dialog. Waiting for it to close. NEXT: once print dialog gone, click tab e26 (LLM Powered Autonomous Agents), ctrl+p, wait, click Save, wait, ctrl+a, type '/home/user/Documents/Blog/LLM Powered Autonomous Agents.pdf', enter"}

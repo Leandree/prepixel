@@ -1,0 +1,1 @@
+{"action":"click","target":"e79","memo":"Dismissing geolocation prompt by clicking search box; next: type 'Diamond' and search on Recreation.gov"}

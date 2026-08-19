@@ -1,0 +1,5 @@
+The left Slides panel is now visible — it shows the "Slides" header at (94, 185) and slide 1's thumbnail at (165, 256), occupying the region between the sidebar icons and the editing area.
+
+```json
+{"action": "DONE", "memo": "Slide Pane restored via View > Slide Pane; panel visible on left with slide 1 thumbnail. Task complete."}
+```

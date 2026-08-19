@@ -1,0 +1,1 @@
+{"action": "click", "target": "e7", "memo": "Tab2 save: preview stuck on 'Saving\u2026' but proceeding. Now on tab1 (LLM Powered Autonomous Agents). NEXT: ctrl+p -> wait -> click Save -> in GTK dialog type '/home/user/Documents/Blog/LLM Powered Autonomous Agents' (stem only, .pdf kept) then Enter. If tab did NOT switch, GTK dialog still modal -> press enter."}

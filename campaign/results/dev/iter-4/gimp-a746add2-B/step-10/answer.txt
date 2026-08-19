@@ -1,0 +1,1 @@
+{"action":"key","keys":"v","memo":"Status bar showed 'Add glow around bright areas' = Bloom (gegl:bloom), first item of Filters>Light and Shadow — so 'l' opened the Light and Shadow submenu. Pressed 'v' to hit Vignette (unique v-item there). Next: check for a Vignette dialog; if none, press down repeatedly / re-check status bar text at e87 for 'Vignette' then Enter."}

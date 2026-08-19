@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(700, 90); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('https://www.google.com/travel/flights\n')", "memo": "Task: one-way Dublin->Vienna, Sep 10 (next month; sys date Aug 20), 2 adults. Step1: navigated to Google Flights. Next: set trip type=One way, From=Dublin, To=Vienna, date Sep 10, passengers=2 adults, then Search."}

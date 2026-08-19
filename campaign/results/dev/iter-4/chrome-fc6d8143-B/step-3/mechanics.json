@@ -1,0 +1,40 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 564,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 81,
+  "cdp_records": 147,
+  "offscreen": 60,
+  "url": "https://www.delta.com/fr/en",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 3574,
+  "picked_by": "title-partial",
+  "tab": "Flights",
+  "picked_title": "Delta Air Lines | Flights & Plane Tickets + Hotels & Cars"
+ },
+ "cdp_offscreen_skipped": 52,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 4667,
+ "settle_captures": 3,
+ "guard_ms": 27
+}

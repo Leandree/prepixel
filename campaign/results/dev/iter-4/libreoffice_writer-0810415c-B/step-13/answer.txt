@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"up","memo":"Line Spacing popup is open; tree only exposed 'Spacing: 1', '1.15', '1.5' (item 4 likely unexposed). Pressed UP to wrap to the LAST menu item, which should be 'Spacing: 2'. NEXT: check which item is now focused/selected — if it is 'Spacing: 2', press enter (step 14) then ctrl+s (step 15). If focus shows 1.5, the menu lacks a '2' entry."}
+```

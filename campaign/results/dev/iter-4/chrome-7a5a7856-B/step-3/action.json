@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e20", "memo": "Ctrl+D opened the bookmark bubble ('Edit bookmark' at 1214,103,462,315). Cropping to read the Folder dropdown value \u2014 must confirm it says 'Bookmarks bar'. If yes, press Enter (Done) to close. If it says another folder, need to change it (bubble internals aren't in a11y tree, only clickable via eN ids)."}

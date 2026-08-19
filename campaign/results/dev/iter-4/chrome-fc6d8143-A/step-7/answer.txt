@@ -1,0 +1,5 @@
+Origin is now JFK New York-Kennedy. Next: open the destination field and enter ORD.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(636, 297); time.sleep(2.5); pyautogui.write('ORD', interval=0.2)", "memo": "Origin=JFK set. Just clicked 'To' (636,297) and typed ORD in the destination search panel. Next: click the 'ORD Chicago-O'Hare, IL' suggestion (~first row at y≈533, x≈571). Then trip type dropdown (851,297)->One Way, date picker (1135,297)-> Aug 21 2026 (tomorrow; VM clock Aug 20). Then Find Flights (1487,297)."}
+```

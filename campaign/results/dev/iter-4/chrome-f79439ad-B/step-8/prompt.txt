@@ -1,0 +1,1013 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Search for a one way flight from Dublin to Vienna on 10th next month for 2 adults.
+
+STEP 8 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click push-button "Yes, I agree"
+2. click label "One way"
+3. set_value entry "From" := "Dublin"
+4. key ctrl+a
+5. type "Dublin"
+6. click push-button "Ireland"
+7. click push-button "Dublin"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Clicked 'Dublin' in Ireland airport list (origin). Next: click To field (e82) and pick Vienna (via Austria country then Vienna), then date 10 Sep 2026, 2 adults, Search. One-way selection still unverified — verify 'One way' tab is active before searching.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value.
+`[uno] …` lines are the document MODEL of an active LibreOffice window,
+read through the application's own API; they have no screen position.
+`[uno] cell B7 "1500" formula "=SUM(B2:B6)"` is a spreadsheet cell: the
+value is what the cell shows, the formula (when present) is what it
+contains. `[uno] paragraph 12 list-label "[13]" text "Steinberg…"` is a
+text paragraph: `list-label` is numbering RENDERED by the document (not
+part of the paragraph's text), `text` is the paragraph's literal content.
+`[uno] shape "Title" text "…"` is a shape on the current slide. On a
+`[uno]` element, `click` places the caret or selection there (the
+application scrolls its own view) and `set_value` sets the cell,
+paragraph or shape content directly — in a cell, a leading `=` enters a
+formula, a number enters a numeric value, anything else enters text;
+`toggle`, `scroll_to` and `crop` do not apply to `[uno]` elements:
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶40"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Official Ryanair website | Book direct for the lowest fares | Ryanair.com - Memory usage - 319 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1418,24 "Address and search bar"
+e32 push-button 1653,78,24,24 "Bookmark this tab"
+e33 push-button 1698,73,34,34 "You"
+e34 push-button 1737,73,183,34 "Relaunch to update"
+e35 link 407,508,1161,692
+e36 [pixels] video 407,508,1161,692
+e37 text 1592,103,334,207 "Can't update Chrome"
+e38 [offscreen] link -999,0,1,1 "Skip to main content"
+e39 link 98,125,166,33 "Ryanair logo"
+e40 [pixels] image 98,125,166,33
+e41 push-button 1248,114,84,55 "Plan"
+e42 text 1264,132,32,19 "Plan"
+e43 [pixels] image 1303,136,12,12
+e44 link 1332,114,69,55 "FAQs"
+e45 text 1348,132,37,19 "FAQs"
+e46 link 1402,114,52,55 "Assistance"
+e47 [pixels] image 1418,132,20,20
+e48 push-button 1471,114,92,55 "My Bookings"
+e49 push-button 1596,130,44,24 "Open market switcher"
+e50 [pixels] image 1596,130,24,24
+e51 [pixels] image 1628,136,12,12
+e52 push-button 1657,132,75,20 "Log in"
+e53 push-button 1733,126,140,32 "myRyanair Portal"
+e54 [pixels] image 1330,193,274,171
+e55 push-button 408,189,132,46 "flights"
+e56 [pixels] image 428,201,20,20
+e57 text 456,202,64,19 "flights"
+e58 push-button 539,189,137,46 "Car Hire"
+e59 [pixels] image 559,202,20,20
+e60 text 587,203,69,19 "Car Hire"
+e61 push-button 677,189,127,46 "hotels"
+e62 [pixels] image 697,202,20,20
+e63 text 725,203,59,19 "hotels"
+e64 push-button 804,189,156,46 "Gift cards"
+e65 [pixels] image 824,202,20,20
+e66 text 852,203,88,19 "Gift cards"
+e67 [pixels] image 1409,189,38,38
+e68 text 1443,204,42,14 "Verified"
+e69 text 1486,204,58,14 "by Ryanair"
+e70 [pixels] image 1548,201,20,20
+e71 label 408,253,93,20 "Return trip"
+e72 label 526,253,81,20 "One way"
+e73 label 633,253,81,20 "Multicity"
+e74 text 729,256,26,14 "NEW"
+e75 push-button 780,253,143,20 "Apply promo code"
+e76 [pixels] image 780,254,18,18
+e77 label 798,253,125,20 "Apply promo code"
+e78 label 425,301,28,14 "From"
+~e79 entry 425,318,402,22 "From" value="Dublin"
+e80 [pixels] image 829,309,28,28
+e81 label 868,301,13,14 "To"
+~e82 entry 868,318,393,22 "To" state=focused
+e83 push-button 1286,296,282,52 "Search"
+e84 text 1401,312,50,19 "Search"
+e85 [pixels] image 408,400,1160,109 alt=null
+e86 text 855,415,57,58 "04"
+e87 text 858,469,52,19 "hours"
+e88 text 929,415,14,58 ":"
+e89 text 959,415,57,58 "19"
+e90 text 953,469,68,19 "minutes"
+e91 text 1032,415,14,58 ":"
+~e92 text 1062,415,57,58 "40"
+e93 text 1055,469,71,19 "seconds"
+e94 link 408,509,1160,691
+e95 [pixels] video 408,509,1160,691
+e96 [offscreen] push-button 338,1117,1160,272 "gift cards"
+e97 [offscreen] link 387,1117,915,272 "gift cards"
+e98 [offscreen] push-button 387,1117,1160,272 "CAR HIRE"
+e99 [offscreen] link 436,1117,915,272 "CAR HIRE"
+e100 [offscreen] push-button 436,1117,1160,272 "HOTELS"
+e101 [offscreen] link 485,1117,915,272 "HOTELS"
+e102 [offscreen] push-button 1400,1117,1160,272 "order to seat"
+e103 [offscreen] link 1449,1117,915,272 "order to seat"
+e104 [offscreen] push-button 1449,1117,1160,272 "IMPORTANT UPDATE"
+e105 [offscreen] link 1498,1117,915,272 "IMPORTANT UPDATE"
+e106 [offscreen] heading 338,1422,1160,28 "Our Partners and Extras"
+e107 [offscreen] link 338,1466,278,362 "GIFT CARDS Gift a great getaway with a Ryanair Gift Card. Buy now"
+e108 [offscreen] heading 354,1777,246,28 "GIFT CARDS"
+e109 [offscreen] paragraph 354,1826,260,36 "Gift a great getaway with a Ryanair Gift Card."
+e110 [offscreen] text 450,1877,53,16 "Buy now"
+e111 [offscreen] link 632,1466,278,362 "CHEAP CAR HIRE Ryanair connects you to the biggest brands in car hire. Book now"
+e112 [offscreen] heading 648,1777,246,28 "CHEAP CAR HIRE"
+e113 [offscreen] paragraph 648,1826,260,36 "Ryanair connects you to the biggest brands in car hire."
+e114 [offscreen] text 740,1877,61,16 "Book now"
+e115 [offscreen] link 926,1466,278,362 "HOTELS High quality rooms at affordable prices. Book now"
+e116 [offscreen] heading 942,1777,246,28 "HOTELS"
+e117 [offscreen] paragraph 942,1826,260,18 "High quality rooms at affordable prices."
+e118 [offscreen] text 1034,1859,61,16 "Book now"
+e119 [offscreen] link 1220,1466,278,362 "PRIVATE TRANSFERS Making it easy for you to get to and from the airport. Book Now"
+e120 [offscreen] heading 1236,1777,246,28 "PRIVATE TRANSFERS"
+e121 [offscreen] paragraph 1236,1826,260,36 "Making it easy for you to get to and from the airport."
+e122 [offscreen] text 1327,1877,64,16 "Book Now"
+e123 [offscreen] heading 338,1860,1160,24 "Explore Ryanair"
+e124 [offscreen] link 338,1896,278,109 "My Bookings"
+e125 [offscreen] heading 430,1950,93,24 "My Bookings"
+e126 [offscreen] link 632,1896,278,109 "Travel Updates"
+e127 [offscreen] heading 717,1950,108,24 "Travel Updates"
+e128 [offscreen] link 926,1896,278,109 "Route Map"
+e129 [offscreen] heading 1026,1950,78,24 "Route Map"
+e130 [offscreen] link 1220,1896,278,109 "Group Travel"
+e131 [offscreen] heading 1313,1950,91,24 "Group Travel"
+e132 [offscreen] heading 338,2037,1160,40 "Explore Europe"
+e133 [offscreen] push-button 338,2138,24,44 "Swipe carousel back"
+e134 [offscreen] link 338,2077,383,168 "Where every panorama tells a story."
+e135 [offscreen] heading 350,2176,364,36 "Where every panorama tells a story."
+e136 [offscreen] text 350,2215,90,16 "Discover more"
+e137 [offscreen] link 728,2077,383,168 "Your next trip: Dakhla"
+e138 [offscreen] heading 740,2176,364,36 "Your next trip: Dakhla"
+e139 [offscreen] text 740,2215,86,16 "Find out more"
+e140 [offscreen] link 1119,2077,383,168 "Vienna Airport: gifts & gourmet delights"
+e141 [offscreen] heading 1131,2176,364,36 "Vienna Airport: gifts & gourmet delights"
+e142 [offscreen] text 1131,2215,86,16 "Find out more"
+e143 [offscreen] link 1510,2077,383,168 "Visit Gdansk"
+e144 [offscreen] heading 1522,2176,364,36 "Visit Gdansk"
+e145 [offscreen] text 1522,2215,154,16 "Let yourself be charmed!"
+e146 [offscreen] link 1901,2077,383,168 "Poznan - the vibe you’ve been looking for"
+e147 [offscreen] heading 1913,2176,364,36 "Poznan - the vibe you’ve been looking for"
+e148 [offscreen] text 1913,2215,53,16 "Let’s fly?"
+e149 [offscreen] link 2291,2077,383,168 "Unwind. Discover Sofia."
+e150 [offscreen] heading 2303,2176,364,36 "Unwind. Discover Sofia."
+e151 [offscreen] text 2303,2215,69,16 "Fly to Sofia"
+e152 [offscreen] link 2682,2077,383,168 "Toulouse in Southwest France"
+e153 [offscreen] heading 2694,2176,364,36 "Toulouse in Southwest France"
+e154 [offscreen] text 2694,2215,54,16 "Discover"
+e155 push-button 1548,769,56,46 "Why are you not subscribed?"
+e156 [pixels] image 1564,780,24,24
+e157 heading 1613,701,283,30 "Why are you not subscribed?"
+e158 [pixels] image 1827,699,78,49
+e159 paragraph 1613,731,283,99
+e160 text 1613,732,281,89 "Subscribe for the latest deals from us and our travel partners straight to your inbox and via push notifications on your device. For information on how to unsubscribe (including for push) please see our"
+e161 link 1767,805,85,16 "Privacy Policy"
+e162 text 1852,805,4,16 "."
+e163 entry 1613,842,283,40 "Email address"
+e164 push-button 1613,890,283,36 "Sign me up!"
+e165 text 1712,900,85,19 "Sign me up!"
+~e166 tooltip 408,343,870,510
+~e167 push-button 408,359,290,54 "Destination or country"
+~e168 push-button 698,359,290,54 "Regions"
+~e169 push-button 988,359,290,54 "Popular attractions"
+~e170 text 432,445,234,24 "Pick a destination country"
+~e171 [pixels] image 440,497,22,24
+~e172 text 470,491,138,16 "Not sure where to go?"
+~e173 push-button 470,509,61,20 "Click here"
+~e174 text 535,511,192,16 "and let AI inspire your next trip."
+~e175 push-button 424,541,148,28 "Albania"
+~e176 push-button 424,569,148,28 "Austria"
+~e177 push-button 424,597,148,28 "Belgium"
+~e178 push-button 424,625,148,48 "Bosnia & Herzegovina"
+~e179 push-button 424,673,148,28 "Bulgaria"
+~e180 push-button 424,701,148,28 "Croatia"
+~e181 push-button 424,729,148,28 "Cyprus"
+~e182 push-button 424,757,148,28 "Czech Republic"
+~e183 push-button 424,785,148,28 "Denmark"
+~e184 push-button 572,541,148,28 "Estonia"
+~e185 push-button 572,569,148,28 "Finland"
+~e186 push-button 572,597,148,28 "France"
+~e187 push-button 572,625,148,28 "Germany"
+~e188 push-button 572,653,148,28 "Greece"
+~e189 push-button 572,681,148,28 "Hungary"
+~e190 push-button 572,709,148,28 "Ireland"
+~e191 push-button 572,737,148,28 "Italy"
+~e192 push-button 572,765,148,28 "Jordan"
+~e193 push-button 721,541,148,28 "Latvia"
+~e194 push-button 721,569,148,28 "Lithuania"
+~e195 push-button 721,597,148,28 "Luxembourg"
+~e196 push-button 721,625,148,28 "Malta"
+~e197 push-button 721,653,148,28 "Montenegro"
+~e198 push-button 721,681,148,28 "Morocco"
+~e199 push-button 721,709,148,28 "Netherlands"
+~e200 push-button 721,737,148,28 "Norway"
+~e201 push-button 721,765,148,28 "Poland"
+~e202 push-button 869,541,148,28 "Portugal"
+~e203 push-button 869,569,148,28 "Romania"
+~e204 push-button 869,597,148,28 "Serbia"
+~e205 push-button 869,625,148,28 "Slovakia"
+~e206 push-button 869,653,148,28 "Spain"
+~e207 push-button 869,681,148,28 "Sweden"
+~e208 push-button 869,709,148,28 "Switzerland"
+~e209 push-button 869,737,148,28 "Turkey"
+~e210 push-button 869,765,148,28 "United Kingdom"
+~e211 text 1033,445,104,19 "Pick an airport"
+~e212 push-button 1168,445,94,21 "Clear selection"
+~e213 text 1168,447,94,16 "Clear selection"
+~e214 push-button 1025,478,239,29 "Discover with AINEW"
+~e215 push-button 1033,482,148,20 "Discover with AINEW"
+~e216 text 1033,484,100,16 "Discover with AI"
+~e217 text 1148,486,26,14 "NEW"
+~e218 push-button 1025,507,239,29 "Agadir"
+~e219 push-button 1025,535,239,29 "Alghero"
+~e220 push-button 1025,564,239,29 "Alicante"
+~e221 push-button 1025,593,239,29 "Amsterdam"
+~e222 push-button 1025,622,239,29 "Athens"
+~e223 push-button 1025,651,239,29 "Barcelona (All Airports)"
+~e224 push-button 1025,679,239,29 "Barcelona"
+~e225 push-button 1025,708,239,29 "Barcelona Girona"
+~e226 push-button 1025,737,239,29 "Barcelona Reus"
+~e227 push-button 1025,766,239,29 "Bari"
+~e228 push-button 1025,795,239,29 "Basel"
+~e229 push-button 1025,823,239,29 "Berlin Brandenburg"
+~e230 push-button 1025,852,239,29 "Biarritz" [occluded]
+~e231 push-button 1025,881,239,29 "Birmingham" [occluded]
+~e232 push-button 1025,910,239,29 "Bodrum" [occluded]
+~e233 push-button 1025,939,239,29 "Bologna" [occluded]
+~e234 push-button 1025,967,239,29 "Bratislava" [occluded]
+~e235 push-button 1025,996,239,29 "Brindisi" [occluded]
+~e236 push-button 1025,1025,239,29 "Bristol" [occluded]
+~e237 push-button 1025,1054,239,29 "Brussels (All Airports)" [occluded]
+~e238 [offscreen] +455 more lines truncated (scroll to reveal)
+[act-guard] previous action: CONFIRMED (label "Dublin"→"Clear selection")
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 5 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶39"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Official Ryanair website | Book direct for the lowest fares | Ryanair.com - Memory usage - 333 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1418,24 "Address and search bar"
+e32 push-button 1653,78,24,24 "Bookmark this tab"
+e33 push-button 1698,73,34,34 "You"
+e34 push-button 1737,73,183,34 "Relaunch to update"
+e35 link 407,508,1161,692
+e36 [pixels] video 407,508,1161,692
+e37 text 1592,103,334,207 "Can't update Chrome"
+e38 [offscreen] link -999,0,1,1 "Skip to main content"
+e39 link 98,125,166,33 "Ryanair logo"
+e40 [pixels] image 98,125,166,33
+e41 push-button 1248,114,84,55 "Plan"
+e42 text 1264,132,32,19 "Plan"
+e43 [pixels] image 1303,136,12,12
+e44 link 1332,114,69,55 "FAQs"
+e45 text 1348,132,37,19 "FAQs"
+e46 link 1402,114,52,55 "Assistance"
+e47 [pixels] image 1418,132,20,20
+e48 push-button 1471,114,92,55 "My Bookings"
+e49 push-button 1596,130,44,24 "Open market switcher"
+e50 [pixels] image 1596,130,24,24
+e51 [pixels] image 1628,136,12,12
+e52 push-button 1657,132,75,20 "Log in"
+e53 push-button 1733,126,140,32 "myRyanair Portal"
+e54 [pixels] image 1330,193,274,171
+e55 push-button 408,189,132,46 "flights"
+e56 [pixels] image 428,201,20,20
+e57 text 456,202,64,19 "flights"
+e58 push-button 539,189,137,46 "Car Hire"
+e59 [pixels] image 559,202,20,20
+e60 text 587,203,69,19 "Car Hire"
+e61 push-button 677,189,127,46 "hotels"
+e62 [pixels] image 697,202,20,20
+e63 text 725,203,59,19 "hotels"
+e64 push-button 804,189,156,46 "Gift cards"
+e65 [pixels] image 824,202,20,20
+e66 text 852,203,88,19 "Gift cards"
+e67 [pixels] image 1409,189,38,38
+e68 text 1443,204,42,14 "Verified"
+e69 text 1486,204,58,14 "by Ryanair"
+e70 [pixels] image 1548,201,20,20
+e71 label 408,253,93,20 "Return trip"
+e72 label 526,253,81,20 "One way"
+e73 label 633,253,81,20 "Multicity"
+e74 text 729,256,26,14 "NEW"
+e75 push-button 780,253,143,20 "Apply promo code"
+e76 [pixels] image 780,254,18,18
+e77 label 798,253,125,20 "Apply promo code"
+e78 label 425,301,28,14 "From"
+e79 text 425,318,32,21 "Lille"
+e80 entry 425,318,402,22 "From" value="Lille" state=focused
+e81 [pixels] image 829,309,28,28
+e82 label 868,301,13,14 "To"
+e83 entry 868,318,393,22 "To"
+e84 push-button 1286,296,282,52 "Search"
+e85 text 1401,312,50,19 "Search"
+e86 [pixels] image 408,400,1160,109 alt=null
+e87 text 855,415,57,58 "04"
+e88 text 858,469,52,19 "hours"
+e89 text 929,415,14,58 ":"
+e90 text 959,415,57,58 "20"
+e91 text 953,469,68,19 "minutes"
+e92 text 1032,415,14,58 ":"
+~e93 text 1062,415,57,58 "34"
+e94 text 1055,469,71,19 "seconds"
+e95 link 408,509,1160,691
+e96 [pixels] video 408,509,1160,691
+e97 [offscreen] push-button 338,1117,1160,272 "gift cards"
+e98 [offscreen] link 387,1117,915,272 "gift cards"
+e99 [offscreen] push-button 387,1117,1160,272 "CAR HIRE"
+e100 [offscreen] link 436,1117,915,272 "CAR HIRE"
+e101 [offscreen] push-button 436,1117,1160,272 "HOTELS"
+e102 [offscreen] link 485,1117,915,272 "HOTELS"
+~e103 [offscreen] push-button 485,1117,1160,272 "order to seat"
+~e104 [offscreen] link 534,1117,915,272 "order to seat"
+~e105 [offscreen] push-button 534,1117,1160,272 "IMPORTANT UPDATE"
+~e106 [offscreen] link 583,1117,915,272 "IMPORTANT UPDATE"
+e107 [offscreen] heading 338,1422,1160,28 "Our Partners and Extras"
+e108 [offscreen] link 338,1466,278,362 "GIFT CARDS Gift a great getaway with a Ryanair Gift Card. Buy now"
+e109 [offscreen] heading 354,1777,246,28 "GIFT CARDS"
+e110 [offscreen] paragraph 354,1826,260,36 "Gift a great getaway with a Ryanair Gift Card."
+e111 [offscreen] text 450,1877,53,16 "Buy now"
+e112 [offscreen] link 632,1466,278,362 "CHEAP CAR HIRE Ryanair connects you to the biggest brands in car hire. Book now"
+e113 [offscreen] heading 648,1777,246,28 "CHEAP CAR HIRE"
+e114 [offscreen] paragraph 648,1826,260,36 "Ryanair connects you to the biggest brands in car hire."
+e115 [offscreen] text 740,1877,61,16 "Book now"
+e116 [offscreen] link 926,1466,278,362 "HOTELS High quality rooms at affordable prices. Book now"
+e117 [offscreen] heading 942,1777,246,28 "HOTELS"
+e118 [offscreen] paragraph 942,1826,260,18 "High quality rooms at affordable prices."
+e119 [offscreen] text 1034,1859,61,16 "Book now"
+e120 [offscreen] link 1220,1466,278,362 "PRIVATE TRANSFERS Making it easy for you to get to and from the airport. Book Now"
+e121 [offscreen] heading 1236,1777,246,28 "PRIVATE TRANSFERS"
+e122 [offscreen] paragraph 1236,1826,260,36 "Making it easy for you to get to and from the airport."
+e123 [offscreen] text 1327,1877,64,16 "Book Now"
+e124 [offscreen] heading 338,1860,1160,24 "Explore Ryanair"
+e125 [offscreen] link 338,1896,278,109 "My Bookings"
+e126 [offscreen] heading 430,1950,93,24 "My Bookings"
+e127 [offscreen] link 632,1896,278,109 "Travel Updates"
+e128 [offscreen] heading 717,1950,108,24 "Travel Updates"
+e129 [offscreen] link 926,1896,278,109 "Route Map"
+e130 [offscreen] heading 1026,1950,78,24 "Route Map"
+e131 [offscreen] link 1220,1896,278,109 "Group Travel"
+e132 [offscreen] heading 1313,1950,91,24 "Group Travel"
+e133 [offscreen] heading 338,2037,1160,40 "Explore Europe"
+e134 [offscreen] push-button 338,2138,24,44 "Swipe carousel back"
+e135 [offscreen] link 338,2077,383,168 "Where every panorama tells a story."
+e136 [offscreen] heading 350,2176,364,36 "Where every panorama tells a story."
+e137 [offscreen] text 350,2215,90,16 "Discover more"
+e138 [offscreen] link 728,2077,383,168 "Your next trip: Dakhla"
+e139 [offscreen] heading 740,2176,364,36 "Your next trip: Dakhla"
+e140 [offscreen] text 740,2215,86,16 "Find out more"
+e141 [offscreen] link 1119,2077,383,168 "Vienna Airport: gifts & gourmet delights"
+e142 [offscreen] heading 1131,2176,364,36 "Vienna Airport: gifts & gourmet delights"
+e143 [offscreen] text 1131,2215,86,16 "Find out more"
+e144 [offscreen] link 1510,2077,383,168 "Visit Gdansk"
+e145 [offscreen] heading 1522,2176,364,36 "Visit Gdansk"
+e146 [offscreen] text 1522,2215,154,16 "Let yourself be charmed!"
+e147 [offscreen] link 1901,2077,383,168 "Poznan - the vibe you’ve been looking for"
+e148 [offscreen] heading 1913,2176,364,36 "Poznan - the vibe you’ve been looking for"
+e149 [offscreen] text 1913,2215,53,16 "Let’s fly?"
+e150 [offscreen] link 2291,2077,383,168 "Unwind. Discover Sofia."
+e151 [offscreen] heading 2303,2176,364,36 "Unwind. Discover Sofia."
+e152 [offscreen] text 2303,2215,69,16 "Fly to Sofia"
+e153 [offscreen] link 2682,2077,383,168 "Toulouse in Southwest France"
+e154 [offscreen] heading 2694,2176,364,36 "Toulouse in Southwest France"
+e155 [offscreen] text 2694,2215,54,16 "Discover"
+e156 push-button 1548,769,56,46 "Why are you not subscribed?"
+e157 [pixels] image 1564,780,24,24
+e158 heading 1613,701,283,30 "Why are you not subscribed?"
+e159 [pixels] image 1827,699,78,49
+e160 paragraph 1613,731,283,99
+e161 text 1613,732,281,89 "Subscribe for the latest deals from us and our travel partners straight to your inbox and via push notifications on your device. For information on how to unsubscribe (including for push) please see our"
+e162 link 1767,805,85,16 "Privacy Policy"
+e163 text 1852,805,4,16 "."
+e164 entry 1613,842,283,40 "Email address"
+e165 push-button 1613,890,283,36 "Sign me up!"
+e166 text 1712,900,85,19 "Sign me up!"
+e167 tooltip 408,343,870,409
+e168 text 432,391,128,24 "Origin country"
+e169 push-button 424,431,148,28 "Albania"
+e170 push-button 424,459,148,28 "Austria"
+e171 push-button 424,487,148,28 "Belgium"
+e172 push-button 424,515,148,48 "Bosnia & Herzegovina"
+e173 push-button 424,563,148,28 "Bulgaria"
+e174 push-button 424,591,148,28 "Croatia"
+e175 push-button 424,619,148,28 "Cyprus"
+e176 push-button 424,647,148,28 "Czech Republic"
+e177 push-button 424,675,148,28 "Denmark"
+e178 push-button 572,431,148,28 "Estonia"
+e179 push-button 572,459,148,28 "Finland"
+e180 push-button 572,487,148,28 "France"
+e181 push-button 572,515,148,28 "Germany"
+e182 push-button 572,543,148,28 "Greece"
+e183 push-button 572,571,148,28 "Hungary"
+e184 push-button 572,599,148,28 "Ireland"
+e185 push-button 572,627,148,28 "Italy"
+e186 push-button 572,655,148,28 "Jordan"
+e187 push-button 721,431,148,28 "Latvia"
+e188 push-button 721,459,148,28 "Lithuania"
+e189 push-button 721,487,148,28 "Luxembourg"
+e190 push-button 721,515,148,28 "Malta"
+e191 push-button 721,543,148,28 "Montenegro"
+e192 push-button 721,571,148,28 "Morocco"
+e193 push-button 721,599,148,28 "Netherlands"
+e194 push-button 721,627,148,28 "Norway"
+e195 push-button 721,655,148,28 "Poland"
+e196 push-button 869,431,148,28 "Portugal"
+e197 push-button 869,459,148,28 "Romania"
+e198 push-button 869,487,148,28 "Serbia"
+e199 push-button 869,515,148,28 "Slovakia"
+e200 push-button 869,543,148,28 "Spain"
+e201 push-button 869,571,148,28 "Sweden"
+e202 push-button 869,599,148,28 "Switzerland"
+e203 push-button 869,627,148,28 "Turkey"
+e204 push-button 869,655,148,28 "United Kingdom"
+e205 text 1033,391,104,19 "Pick an airport"
+e206 push-button 1168,391,94,21 "Clear selection"
+e207 text 1168,393,94,16 "Clear selection"
+e208 push-button 1025,96,239,29 "Knock" [occluded]
+e209 push-button 1025,124,239,29 "Kos" [occluded]
+e210 push-button 1025,153,239,29 "Kosice" [occluded]
+e211 push-button 1025,182,239,29 "Krakow" [occluded]
+e212 push-button 1025,211,239,29 "La Rochelle" [occluded]
+e213 push-button 1025,239,239,29 "Lamezia" [occluded]
+e214 push-button 1025,268,239,29 "Lanzarote" [occluded]
+e215 push-button 1025,297,239,29 "Lapland Rovaniemi" [occluded]
+e216 push-button 1025,326,239,29 "Larnaca" [occluded]
+e217 push-button 1025,355,239,29 "Leeds Bradford"
+e218 push-button 1025,383,239,29 "Lemnos" [occluded]
+e219 push-button 1025,412,239,36 "Lille"
+e220 push-button 1025,448,239,29 "Limoges"
+e221 push-button 1025,477,239,29 "Linz"
+e222 push-button 1025,506,239,29 "Lisbon"
+e223 push-button 1025,535,239,29 "Liverpool"
+e224 push-button 1025,563,239,29 "Lodz"
+e225 push-button 1025,592,239,29 "London (All Airports)"
+e226 push-button 1025,621,239,29 "London Gatwick"
+e227 push-button 1025,650,239,29 "London Luton"
+e228 push-button 1025,679,239,29 "London Stansted"
+e229 push-button 1025,707,239,29 "Lourdes–Pyrenees" [occluded]
+e230 push-button 1025,736,239,29 "Lubeck"
+e231 push-button 1025,765,239,29 "Lublin" [occluded]
+e232 push-button 1025,794,239,29 "Luxembourg" [occluded]
+e233 push-button 1025,823,239,29 "Madeira Funchal" [occluded]
+e234 push-button 1025,851,239,29 "Madrid" [occluded]
+e235 push-button 1025,880,239,29 "Malaga" [occluded]
+e236 push-button 1025,909,239,29 "Malmo" [occluded]
+e237 push-button 1025,938,239,29 "Malta" [occluded]
+e238 push-button 1025,967,239,29 "Manchester" [occluded]
+e239 push-button 1025,995,239,29 "Marrakesh" [occluded]
+e240 push-button 1025,1024,239,29 "Marseille" [occluded]
+e241 push-button 1025,1053,239,29 "Memmingen" [occluded]
+e242 [offscreen] +649 more lines truncated (scroll to reveal)
+
+--- view at step 6 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶39"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Official Ryanair website | Book direct for the lowest fares | Ryanair.com - Memory usage - 333 MB"
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1418,24 "Address and search bar"
+e32 push-button 1653,78,24,24 "Bookmark this tab"
+e33 push-button 1698,73,34,34 "You"
+e34 push-button 1737,73,183,34 "Relaunch to update"
+e35 link 407,508,1161,692
+e36 [pixels] video 407,508,1161,692
+e37 text 1592,103,334,207 "Can't update Chrome"
+e38 [offscreen] link -999,0,1,1 "Skip to main content"
+e39 link 98,125,166,33 "Ryanair logo"
+e40 [pixels] image 98,125,166,33
+e41 push-button 1248,114,84,55 "Plan"
+e42 text 1264,132,32,19 "Plan"
+e43 [pixels] image 1303,136,12,12
+e44 link 1332,114,69,55 "FAQs"
+e45 text 1348,132,37,19 "FAQs"
+e46 link 1402,114,52,55 "Assistance"
+e47 [pixels] image 1418,132,20,20
+e48 push-button 1471,114,92,55 "My Bookings"
+e49 push-button 1596,130,44,24 "Open market switcher"
+e50 [pixels] image 1596,130,24,24
+e51 [pixels] image 1628,136,12,12
+e52 push-button 1657,132,75,20 "Log in"
+e53 push-button 1733,126,140,32 "myRyanair Portal"
+e54 [pixels] image 1330,193,274,171
+e55 push-button 408,189,132,46 "flights"
+e56 [pixels] image 428,201,20,20
+e57 text 456,202,64,19 "flights"
+e58 push-button 539,189,137,46 "Car Hire"
+e59 [pixels] image 559,202,20,20
+e60 text 587,203,69,19 "Car Hire"
+e61 push-button 677,189,127,46 "hotels"
+e62 [pixels] image 697,202,20,20
+e63 text 725,203,59,19 "hotels"
+e64 push-button 804,189,156,46 "Gift cards"
+e65 [pixels] image 824,202,20,20
+e66 text 852,203,88,19 "Gift cards"
+e67 [pixels] image 1409,189,38,38
+e68 text 1443,204,42,14 "Verified"
+e69 text 1486,204,58,14 "by Ryanair"
+e70 [pixels] image 1548,201,20,20
+e71 label 408,253,93,20 "Return trip"
+e72 label 526,253,81,20 "One way"
+e73 label 633,253,81,20 "Multicity"
+e74 text 729,256,26,14 "NEW"
+e75 push-button 780,253,143,20 "Apply promo code"
+e76 [pixels] image 780,254,18,18
+e77 label 798,253,125,20 "Apply promo code"
+e78 label 425,301,28,14 "From"
+e79 text 425,318,32,21 "Lille"
+~e80 entry 425,318,402,22 "From" value="Lille" state=focused typed-by-driver="Dublin"
+e81 [pixels] image 829,309,28,28
+e82 label 868,301,13,14 "To"
+e83 entry 868,318,393,22 "To"
+e84 push-button 1286,296,282,52 "Search"
+e85 text 1401,312,50,19 "Search"
+e86 [pixels] image 408,400,1160,109 alt=null
+e87 text 855,415,57,58 "04"
+e88 text 858,469,52,19 "hours"
+e89 text 929,415,14,58 ":"
+e90 text 959,415,57,58 "20"
+e91 text 953,469,68,19 "minutes"
+e92 text 1032,415,14,58 ":"
+~e93 text 1062,415,57,58 "19"
+e94 text 1055,469,71,19 "seconds"
+e95 link 408,509,1160,691
+e96 [pixels] video 408,509,1160,691
+e97 [offscreen] push-button 338,1117,1160,272 "gift cards"
+e98 [offscreen] link 387,1117,915,272 "gift cards"
+~e99 [offscreen] push-button 1302,1117,1160,272 "CAR HIRE"
+~e100 [offscreen] link 1351,1117,915,272 "CAR HIRE"
+~e101 [offscreen] push-button 1351,1117,1160,272 "HOTELS"
+~e102 [offscreen] link 1400,1117,915,272 "HOTELS"
+~e103 [offscreen] push-button 1400,1117,1160,272 "order to seat"
+~e104 [offscreen] link 1449,1117,915,272 "order to seat"
+~e105 [offscreen] push-button 1449,1117,1160,272 "IMPORTANT UPDATE"
+~e106 [offscreen] link 1498,1117,915,272 "IMPORTANT UPDATE"
+e107 [offscreen] heading 338,1422,1160,28 "Our Partners and Extras"
+e108 [offscreen] link 338,1466,278,362 "GIFT CARDS Gift a great getaway with a Ryanair Gift Card. Buy now"
+e109 [offscreen] heading 354,1777,246,28 "GIFT CARDS"
+e110 [offscreen] paragraph 354,1826,260,36 "Gift a great getaway with a Ryanair Gift Card."
+e111 [offscreen] text 450,1877,53,16 "Buy now"
+e112 [offscreen] link 632,1466,278,362 "CHEAP CAR HIRE Ryanair connects you to the biggest brands in car hire. Book now"
+e113 [offscreen] heading 648,1777,246,28 "CHEAP CAR HIRE"
+e114 [offscreen] paragraph 648,1826,260,36 "Ryanair connects you to the biggest brands in car hire."
+e115 [offscreen] text 740,1877,61,16 "Book now"
+e116 [offscreen] link 926,1466,278,362 "HOTELS High quality rooms at affordable prices. Book now"
+e117 [offscreen] heading 942,1777,246,28 "HOTELS"
+e118 [offscreen] paragraph 942,1826,260,18 "High quality rooms at affordable prices."
+e119 [offscreen] text 1034,1859,61,16 "Book now"
+e120 [offscreen] link 1220,1466,278,362 "PRIVATE TRANSFERS Making it easy for you to get to and from the airport. Book Now"
+e121 [offscreen] heading 1236,1777,246,28 "PRIVATE TRANSFERS"
+e122 [offscreen] paragraph 1236,1826,260,36 "Making it easy for you to get to and from the airport."
+e123 [offscreen] text 1327,1877,64,16 "Book Now"
+e124 [offscreen] heading 338,1860,1160,24 "Explore Ryanair"
+e125 [offscreen] link 338,1896,278,109 "My Bookings"
+e126 [offscreen] heading 430,1950,93,24 "My Bookings"
+e127 [offscreen] link 632,1896,278,109 "Travel Updates"
+e128 [offscreen] heading 717,1950,108,24 "Travel Updates"
+e129 [offscreen] link 926,1896,278,109 "Route Map"
+e130 [offscreen] heading 1026,1950,78,24 "Route Map"
+e131 [offscreen] link 1220,1896,278,109 "Group Travel"
+e132 [offscreen] heading 1313,1950,91,24 "Group Travel"
+e133 [offscreen] heading 338,2037,1160,40 "Explore Europe"
+e134 [offscreen] push-button 338,2138,24,44 "Swipe carousel back"
+e135 [offscreen] link 338,2077,383,168 "Where every panorama tells a story."
+e136 [offscreen] heading 350,2176,364,36 "Where every panorama tells a story."
+e137 [offscreen] text 350,2215,90,16 "Discover more"
+e138 [offscreen] link 728,2077,383,168 "Your next trip: Dakhla"
+e139 [offscreen] heading 740,2176,364,36 "Your next trip: Dakhla"
+e140 [offscreen] text 740,2215,86,16 "Find out more"
+e141 [offscreen] link 1119,2077,383,168 "Vienna Airport: gifts & gourmet delights"
+e142 [offscreen] heading 1131,2176,364,36 "Vienna Airport: gifts & gourmet delights"
+e143 [offscreen] text 1131,2215,86,16 "Find out more"
+e144 [offscreen] link 1510,2077,383,168 "Visit Gdansk"
+e145 [offscreen] heading 1522,2176,364,36 "Visit Gdansk"
+e146 [offscreen] text 1522,2215,154,16 "Let yourself be charmed!"
+e147 [offscreen] link 1901,2077,383,168 "Poznan - the vibe you’ve been looking for"
+e148 [offscreen] heading 1913,2176,364,36 "Poznan - the vibe you’ve been looking for"
+e149 [offscreen] text 1913,2215,53,16 "Let’s fly?"
+e150 [offscreen] link 2291,2077,383,168 "Unwind. Discover Sofia."
+e151 [offscreen] heading 2303,2176,364,36 "Unwind. Discover Sofia."
+e152 [offscreen] text 2303,2215,69,16 "Fly to Sofia"
+e153 [offscreen] link 2682,2077,383,168 "Toulouse in Southwest France"
+e154 [offscreen] heading 2694,2176,364,36 "Toulouse in Southwest France"
+e155 [offscreen] text 2694,2215,54,16 "Discover"
+e156 push-button 1548,769,56,46 "Why are you not subscribed?"
+e157 [pixels] image 1564,780,24,24
+e158 heading 1613,701,283,30 "Why are you not subscribed?"
+e159 [pixels] image 1827,699,78,49
+e160 paragraph 1613,731,283,99
+e161 text 1613,732,281,89 "Subscribe for the latest deals from us and our travel partners straight to your inbox and via push notifications on your device. For information on how to unsubscribe (including for push) please see our"
+e162 link 1767,805,85,16 "Privacy Policy"
+e163 text 1852,805,4,16 "."
+e164 entry 1613,842,283,40 "Email address"
+e165 push-button 1613,890,283,36 "Sign me up!"
+e166 text 1712,900,85,19 "Sign me up!"
+e167 tooltip 408,343,870,409
+e168 text 432,391,128,24 "Origin country"
+e169 push-button 424,431,148,28 "Albania"
+e170 push-button 424,459,148,28 "Austria"
+e171 push-button 424,487,148,28 "Belgium"
+e172 push-button 424,515,148,48 "Bosnia & Herzegovina"
+e173 push-button 424,563,148,28 "Bulgaria"
+e174 push-button 424,591,148,28 "Croatia"
+e175 push-button 424,619,148,28 "Cyprus"
+e176 push-button 424,647,148,28 "Czech Republic"
+e177 push-button 424,675,148,28 "Denmark"
+e178 push-button 572,431,148,28 "Estonia"
+e179 push-button 572,459,148,28 "Finland"
+e180 push-button 572,487,148,28 "France"
+e181 push-button 572,515,148,28 "Germany"
+e182 push-button 572,543,148,28 "Greece"
+e183 push-button 572,571,148,28 "Hungary"
+e184 push-button 572,599,148,28 "Ireland"
+e185 push-button 572,627,148,28 "Italy"
+e186 push-button 572,655,148,28 "Jordan"
+e187 push-button 721,431,148,28 "Latvia"
+e188 push-button 721,459,148,28 "Lithuania"
+e189 push-button 721,487,148,28 "Luxembourg"
+e190 push-button 721,515,148,28 "Malta"
+e191 push-button 721,543,148,28 "Montenegro"
+e192 push-button 721,571,148,28 "Morocco"
+e193 push-button 721,599,148,28 "Netherlands"
+e194 push-button 721,627,148,28 "Norway"
+e195 push-button 721,655,148,28 "Poland"
+e196 push-button 869,431,148,28 "Portugal"
+e197 push-button 869,459,148,28 "Romania"
+e198 push-button 869,487,148,28 "Serbia"
+e199 push-button 869,515,148,28 "Slovakia"
+e200 push-button 869,543,148,28 "Spain"
+e201 push-button 869,571,148,28 "Sweden"
+e202 push-button 869,599,148,28 "Switzerland"
+e203 push-button 869,627,148,28 "Turkey"
+e204 push-button 869,655,148,28 "United Kingdom"
+e205 text 1033,391,104,19 "Pick an airport"
+e206 push-button 1168,391,94,21 "Clear selection"
+e207 text 1168,393,94,16 "Clear selection"
+e208 push-button 1025,96,239,29 "Knock" [occluded]
+e209 push-button 1025,124,239,29 "Kos" [occluded]
+e210 push-button 1025,153,239,29 "Kosice" [occluded]
+e211 push-button 1025,182,239,29 "Krakow" [occluded]
+e212 push-button 1025,211,239,29 "La Rochelle" [occluded]
+e213 push-button 1025,239,239,29 "Lamezia" [occluded]
+e214 push-button 1025,268,239,29 "Lanzarote" [occluded]
+e215 push-button 1025,297,239,29 "Lapland Rovaniemi" [occluded]
+e216 push-button 1025,326,239,29 "Larnaca" [occluded]
+e217 push-button 1025,355,239,29 "Leeds Bradford"
+e218 push-button 1025,383,239,29 "Lemnos" [occluded]
+e219 push-button 1025,412,239,36 "Lille"
+e220 push-button 1025,448,239,29 "Limoges"
+e221 push-button 1025,477,239,29 "Linz"
+e222 push-button 1025,506,239,29 "Lisbon"
+e223 push-button 1025,535,239,29 "Liverpool"
+e224 push-button 1025,563,239,29 "Lodz"
+e225 push-button 1025,592,239,29 "London (All Airports)"
+e226 push-button 1025,621,239,29 "London Gatwick"
+e227 push-button 1025,650,239,29 "London Luton"
+e228 push-button 1025,679,239,29 "London Stansted"
+e229 push-button 1025,707,239,29 "Lourdes–Pyrenees" [occluded]
+e230 push-button 1025,736,239,29 "Lubeck"
+e231 push-button 1025,765,239,29 "Lublin" [occluded]
+e232 push-button 1025,794,239,29 "Luxembourg" [occluded]
+e233 push-button 1025,823,239,29 "Madeira Funchal" [occluded]
+e234 push-button 1025,851,239,29 "Madrid" [occluded]
+e235 push-button 1025,880,239,29 "Malaga" [occluded]
+e236 push-button 1025,909,239,29 "Malmo" [occluded]
+e237 push-button 1025,938,239,29 "Malta" [occluded]
+e238 push-button 1025,967,239,29 "Manchester" [occluded]
+e239 push-button 1025,995,239,29 "Marrakesh" [occluded]
+e240 push-button 1025,1024,239,29 "Marseille" [occluded]
+e241 push-button 1025,1053,239,29 "Memmingen" [occluded]
+e242 [offscreen] +649 more lines truncated (scroll to reveal)
+
+--- view at step 7 ---
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Official Ryanair website | Book direct for the lowest fares | Ryanair.com - Memory usage - 319 MB"
+e6 push-button 312,33,28,28 "Close"
+e7 push-button 348,27,28,41 "New Tab"
+e8 push-button 70,73,39,34 "Back"
+e9 push-button 111,73,34,34 "Forward"
+e10 push-button 147,73,34,34 "Reload"
+e11 push-button 195,78,24,24 "View site information"
+e12 entry 227,78,1418,24 "Address and search bar"
+e13 push-button 1653,78,24,24 "Bookmark this tab"
+e14 push-button 1698,73,34,34 "You"
+e15 push-button 1737,73,183,34 "Relaunch to update"
+e16 link 407,508,1161,692
+e17 [pixels] video 407,508,1161,692
+e18 text 1592,103,334,207 "Can't update Chrome"
+e19 toggle-button 0,0,99,27 "Activities" state=checked:false
+e20 menu 99,0,162,27 "Google Chrome"
+e21 menu 906,0,178,27 "Aug 20 02‎∶40"
+e22 menu 1814,0,106,27 "System"
+e23 push-button 0,840,70,8
+e24 push-button 62,33,8,815
+e25 push-button 0,33,70,64 "Google Chrome"
+e26 push-button 0,101,70,64 "Thunderbird Mail"
+e27 push-button 0,169,70,64 "Visual Studio Code"
+e28 push-button 0,237,70,64 "VLC media player"
+e29 push-button 0,305,70,64 "LibreOffice Writer"
+e30 push-button 0,373,70,64 "LibreOffice Calc"
+e31 push-button 0,441,70,64 "LibreOffice Impress"
+e32 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e33 push-button 0,577,70,64 "Files"
+e34 push-button 0,645,70,64 "Ubuntu Software"
+e35 push-button 0,713,70,64 "Help"
+e36 push-button 0,784,70,64 "Trash"
+e37 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e38 [offscreen] link -999,0,1,1 "Skip to main content"
+e39 link 98,125,166,33 "Ryanair logo"
+e40 [pixels] image 98,125,166,33
+e41 push-button 1248,114,84,55 "Plan"
+e42 text 1264,132,32,19 "Plan"
+e43 [pixels] image 1303,136,12,12
+e44 link 1332,114,69,55 "FAQs"
+e45 text 1348,132,37,19 "FAQs"
+e46 link 1402,114,52,55 "Assistance"
+e47 [pixels] image 1418,132,20,20
+e48 push-button 1471,114,92,55 "My Bookings"
+e49 push-button 1596,130,44,24 "Open market switcher"
+e50 [pixels] image 1596,130,24,24
+e51 [pixels] image 1628,136,12,12
+e52 push-button 1657,132,75,20 "Log in"
+e53 push-button 1733,126,140,32 "myRyanair Portal"
+e54 [pixels] image 1330,193,274,171
+e55 push-button 408,189,132,46 "flights"
+e56 [pixels] image 428,201,20,20
+e57 text 456,202,64,19 "flights"
+e58 push-button 539,189,137,46 "Car Hire"
+e59 [pixels] image 559,202,20,20
+e60 text 587,203,69,19 "Car Hire"
+e61 push-button 677,189,127,46 "hotels"
+e62 [pixels] image 697,202,20,20
+e63 text 725,203,59,19 "hotels"
+e64 push-button 804,189,156,46 "Gift cards"
+e65 [pixels] image 824,202,20,20
+e66 text 852,203,88,19 "Gift cards"
+e67 [pixels] image 1409,189,38,38
+e68 text 1443,204,42,14 "Verified"
+e69 text 1486,204,58,14 "by Ryanair"
+e70 [pixels] image 1548,201,20,20
+e71 label 408,253,93,20 "Return trip"
+e72 label 526,253,81,20 "One way"
+e73 label 633,253,81,20 "Multicity"
+e74 text 729,256,26,14 "NEW"
+e75 push-button 780,253,143,20 "Apply promo code"
+e76 [pixels] image 780,254,18,18
+e77 label 798,253,125,20 "Apply promo code"
+e78 label 425,301,28,14 "From"
+e79 entry 425,318,402,22 "From" value="Lille" state=focused typed-by-driver="Dublin"
+e80 [pixels] image 829,309,28,28
+e81 label 868,301,13,14 "To"
+e82 entry 868,318,393,22 "To"
+e83 push-button 1286,296,282,52 "Search"
+e84 text 1401,312,50,19 "Search"
+e85 [pixels] image 408,400,1160,109 alt=null
+e86 text 855,415,57,58 "04"
+e87 text 858,469,52,19 "hours"
+e88 text 929,415,14,58 ":"
+~e89 text 959,415,57,58 "19"
+e90 text 953,469,68,19 "minutes"
+e91 text 1032,415,14,58 ":"
+~e92 text 1062,415,57,58 "56"
+e93 text 1055,469,71,19 "seconds"
+e94 link 408,509,1160,691
+e95 [pixels] video 408,509,1160,691
+e96 [offscreen] push-button 338,1117,1160,272 "gift cards"
+e97 [offscreen] link 387,1117,915,272 "gift cards"
+~e98 [offscreen] push-button 387,1117,1160,272 "CAR HIRE"
+~e99 [offscreen] link 436,1117,915,272 "CAR HIRE"
+~e100 [offscreen] push-button 436,1117,1160,272 "HOTELS"
+~e101 [offscreen] link 485,1117,915,272 "HOTELS"
+e102 [offscreen] push-button 1400,1117,1160,272 "order to seat"
+e103 [offscreen] link 1449,1117,915,272 "order to seat"
+e104 [offscreen] push-button 1449,1117,1160,272 "IMPORTANT UPDATE"
+e105 [offscreen] link 1498,1117,915,272 "IMPORTANT UPDATE"
+e106 [offscreen] heading 338,1422,1160,28 "Our Partners and Extras"
+e107 [offscreen] link 338,1466,278,362 "GIFT CARDS Gift a great getaway with a Ryanair Gift Card. Buy now"
+e108 [offscreen] heading 354,1777,246,28 "GIFT CARDS"
+e109 [offscreen] paragraph 354,1826,260,36 "Gift a great getaway with a Ryanair Gift Card."
+e110 [offscreen] text 450,1877,53,16 "Buy now"
+e111 [offscreen] link 632,1466,278,362 "CHEAP CAR HIRE Ryanair connects you to the biggest brands in car hire. Book now"
+e112 [offscreen] heading 648,1777,246,28 "CHEAP CAR HIRE"
+e113 [offscreen] paragraph 648,1826,260,36 "Ryanair connects you to the biggest brands in car hire."
+e114 [offscreen] text 740,1877,61,16 "Book now"
+e115 [offscreen] link 926,1466,278,362 "HOTELS High quality rooms at affordable prices. Book now"
+e116 [offscreen] heading 942,1777,246,28 "HOTELS"
+e117 [offscreen] paragraph 942,1826,260,18 "High quality rooms at affordable prices."
+e118 [offscreen] text 1034,1859,61,16 "Book now"
+e119 [offscreen] link 1220,1466,278,362 "PRIVATE TRANSFERS Making it easy for you to get to and from the airport. Book Now"
+e120 [offscreen] heading 1236,1777,246,28 "PRIVATE TRANSFERS"
+e121 [offscreen] paragraph 1236,1826,260,36 "Making it easy for you to get to and from the airport."
+e122 [offscreen] text 1327,1877,64,16 "Book Now"
+e123 [offscreen] heading 338,1860,1160,24 "Explore Ryanair"
+e124 [offscreen] link 338,1896,278,109 "My Bookings"
+e125 [offscreen] heading 430,1950,93,24 "My Bookings"
+e126 [offscreen] link 632,1896,278,109 "Travel Updates"
+e127 [offscreen] heading 717,1950,108,24 "Travel Updates"
+e128 [offscreen] link 926,1896,278,109 "Route Map"
+e129 [offscreen] heading 1026,1950,78,24 "Route Map"
+e130 [offscreen] link 1220,1896,278,109 "Group Travel"
+e131 [offscreen] heading 1313,1950,91,24 "Group Travel"
+e132 [offscreen] heading 338,2037,1160,40 "Explore Europe"
+e133 [offscreen] push-button 338,2138,24,44 "Swipe carousel back"
+e134 [offscreen] link 338,2077,383,168 "Where every panorama tells a story."
+e135 [offscreen] heading 350,2176,364,36 "Where every panorama tells a story."
+e136 [offscreen] text 350,2215,90,16 "Discover more"
+e137 [offscreen] link 728,2077,383,168 "Your next trip: Dakhla"
+e138 [offscreen] heading 740,2176,364,36 "Your next trip: Dakhla"
+e139 [offscreen] text 740,2215,86,16 "Find out more"
+e140 [offscreen] link 1119,2077,383,168 "Vienna Airport: gifts & gourmet delights"
+e141 [offscreen] heading 1131,2176,364,36 "Vienna Airport: gifts & gourmet delights"
+e142 [offscreen] text 1131,2215,86,16 "Find out more"
+e143 [offscreen] link 1510,2077,383,168 "Visit Gdansk"
+e144 [offscreen] heading 1522,2176,364,36 "Visit Gdansk"
+e145 [offscreen] text 1522,2215,154,16 "Let yourself be charmed!"
+e146 [offscreen] link 1901,2077,383,168 "Poznan - the vibe you’ve been looking for"
+e147 [offscreen] heading 1913,2176,364,36 "Poznan - the vibe you’ve been looking for"
+e148 [offscreen] text 1913,2215,53,16 "Let’s fly?"
+e149 [offscreen] link 2291,2077,383,168 "Unwind. Discover Sofia."
+e150 [offscreen] heading 2303,2176,364,36 "Unwind. Discover Sofia."
+e151 [offscreen] text 2303,2215,69,16 "Fly to Sofia"
+e152 [offscreen] link 2682,2077,383,168 "Toulouse in Southwest France"
+e153 [offscreen] heading 2694,2176,364,36 "Toulouse in Southwest France"
+e154 [offscreen] text 2694,2215,54,16 "Discover"
+e155 push-button 1548,769,56,46 "Why are you not subscribed?"
+e156 [pixels] image 1564,780,24,24
+e157 heading 1613,701,283,30 "Why are you not subscribed?"
+e158 [pixels] image 1827,699,78,49
+e159 paragraph 1613,731,283,99
+e160 text 1613,732,281,89 "Subscribe for the latest deals from us and our travel partners straight to your inbox and via push notifications on your device. For information on how to unsubscribe (including for push) please see our"
+e161 link 1767,805,85,16 "Privacy Policy"
+e162 text 1852,805,4,16 "."
+e163 entry 1613,842,283,40 "Email address"
+e164 push-button 1613,890,283,36 "Sign me up!"
+e165 text 1712,900,85,19 "Sign me up!"
+e166 tooltip 408,343,870,409
+e167 text 432,391,128,24 "Origin country"
+e168 push-button 424,431,148,28 "Albania"
+e169 push-button 424,459,148,28 "Austria"
+e170 push-button 424,487,148,28 "Belgium"
+e171 push-button 424,515,148,48 "Bosnia & Herzegovina"
+e172 push-button 424,563,148,28 "Bulgaria"
+e173 push-button 424,591,148,28 "Croatia"
+e174 push-button 424,619,148,28 "Cyprus"
+e175 push-button 424,647,148,28 "Czech Republic"
+e176 push-button 424,675,148,28 "Denmark"
+e177 push-button 572,431,148,28 "Estonia"
+e178 push-button 572,459,148,28 "Finland"
+e179 push-button 572,487,148,28 "France"
+e180 push-button 572,515,148,28 "Germany"
+e181 push-button 572,543,148,28 "Greece"
+e182 push-button 572,571,148,28 "Hungary"
+e183 push-button 572,599,148,28 "Ireland"
+e184 push-button 572,627,148,28 "Italy"
+e185 push-button 572,655,148,28 "Jordan"
+e186 push-button 721,431,148,28 "Latvia"
+e187 push-button 721,459,148,28 "Lithuania"
+e188 push-button 721,487,148,28 "Luxembourg"
+e189 push-button 721,515,148,28 "Malta"
+e190 push-button 721,543,148,28 "Montenegro"
+e191 push-button 721,571,148,28 "Morocco"
+e192 push-button 721,599,148,28 "Netherlands"
+e193 push-button 721,627,148,28 "Norway"
+e194 push-button 721,655,148,28 "Poland"
+e195 push-button 869,431,148,28 "Portugal"
+e196 push-button 869,459,148,28 "Romania"
+e197 push-button 869,487,148,28 "Serbia"
+e198 push-button 869,515,148,28 "Slovakia"
+e199 push-button 869,543,148,28 "Spain"
+e200 push-button 869,571,148,28 "Sweden"
+e201 push-button 869,599,148,28 "Switzerland"
+e202 push-button 869,627,148,28 "Turkey"
+e203 push-button 869,655,148,28 "United Kingdom"
+e204 text 1033,391,104,19 "Pick an airport"
+e205 push-button 1168,391,94,21 "Clear selection"
+e206 text 1168,393,94,16 "Clear selection"
+~e207 push-button 1025,424,245,29 "Cork"
+~e208 push-button 1025,453,245,29 "Dublin"
+~e209 push-button 1025,481,245,29 "Kerry"
+~e210 push-button 1025,510,245,29 "Knock"
+~e211 push-button 1025,539,245,29 "Shannon"
+~e212 [offscreen] +243 more lines truncated (scroll to reveal)
+
+(4 earlier view(s) omitted: history budget)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

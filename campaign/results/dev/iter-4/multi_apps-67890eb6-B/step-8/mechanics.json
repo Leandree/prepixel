@@ -1,0 +1,50 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": true,
+  "ms": 572,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 157,
+  "cdp_records": 130,
+  "offscreen": 60,
+  "url": "https://www.google.com/chrome/ai-innovations/",
+  "scroll": [
+   0,
+   6400
+  ],
+  "scroll_height": 13385,
+  "picked_by": "visible",
+  "tab": "Learn complex subjects more easily Chrome UI showing programming explanation feature",
+  "picked_title": "AI in Chrome: help right where you need it"
+ },
+ "cdp_offscreen_skipped": 414,
+ "uno": {
+  "used": true,
+  "ms": 110,
+  "rect": [
+   111,
+   281,
+   1738,
+   716
+  ],
+  "doc": "calc",
+  "doc_role": "document-spreadsheet",
+  "atspi_records_replaced": 40,
+  "uno_records": 9,
+  "url": "file:///home/user/Desktop/best_awards_acl.xlsx"
+ },
+ "history_views": 3,
+ "history_views_dropped": 4,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "type",
+ "rung": "kbd",
+ "settle_ms": 5133,
+ "settle_captures": 2,
+ "guard_ms": 56
+}

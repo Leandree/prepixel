@@ -1,0 +1,3 @@
+The Advanced Preferences dialog has closed, confirming the Save succeeded — "Display background cone or art" (`qt-bgcone`) is now unchecked and written to VLC's config. The cone still visible in the open window is just the already-rendered background from this session; it won't appear on next launch.
+
+{"action": "DONE"}

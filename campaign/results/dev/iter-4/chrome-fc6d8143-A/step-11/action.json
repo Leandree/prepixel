@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1135, 297); time.sleep(2)", "memo": "JFK->ORD, One Way set. Clicked Depart field to open calendar. Today=Aug 20 2026, need Aug 21. Next: click '21' in August calendar, then 'done', then Find Flights (1487,297)."}

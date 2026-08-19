@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"down","memo":"Dropdown focus was 'Spacing: 1.5'; pressed down -> expect 'Spacing: 2'. NEXT: if focused item is 'Spacing: 2', press Enter to apply; if it wrapped to 'Spacing: 1', press Escape and use Format > Paragraph > Line Spacing = Double instead. Then ctrl+s + Enter (Keep Current Format) for .docx. Selection = paras 1-3."}
+```

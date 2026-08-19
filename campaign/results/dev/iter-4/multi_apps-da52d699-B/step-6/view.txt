@@ -1,0 +1,224 @@
+e1 [pixels] icon 1821,852,64,64
+e2 text 1793,920,120,34 "2023_​validation_​Book_​Reading_​Rate.​xlsx"
+e3 [pixels] icon 1821,735,64,64
+e4 text 1793,803,120,34 "book_​list_​result.​docx"
+e5 [pixels] icon 1821,618,64,64
+e6 text 1793,686,120,34 ".​~lock.​2023_​validation_​Book_​Reading_​Rate.​xlsx#"
+e7 [pixels] icon 1821,969,64,64
+e8 text 1833,1037,40,17 "Home"
+e9 [pixels] icon 1821,501,64,64
+e10 text 1793,569,120,34 ".​~lock.​book_​list_​result.​docx#"
+e11 toggle-button 0,0,99,27 "Activities" state=checked:false
+e12 menu 99,0,180,27 "LibreOffice Writer"
+e13 menu 906,0,178,27 "Aug 20 01‎∶49"
+e14 menu 1814,0,106,27 "System"
+e15 push-button 0,840,70,8
+e16 push-button 62,33,8,815
+e17 push-button 0,33,70,64 "Google Chrome"
+e18 push-button 0,101,70,64 "Thunderbird Mail"
+e19 push-button 0,169,70,64 "Visual Studio Code"
+e20 push-button 0,237,70,64 "VLC media player"
+e21 push-button 0,305,70,64 "LibreOffice Writer"
+e22 push-button 0,373,70,64 "LibreOffice Calc"
+e23 push-button 0,441,70,64 "LibreOffice Impress"
+e24 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e25 push-button 0,577,70,64 "Files"
+e26 push-button 0,645,70,64 "Ubuntu Software"
+e27 push-button 0,713,70,64 "Help"
+e28 push-button 0,784,70,64 "Trash"
+e29 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e30 menu 70,64,40,25 "File"
+e31 menu 110,64,43,25 "Edit"
+e32 menu 153,64,49,25 "View"
+e33 menu 202,64,55,25 "Insert"
+e34 menu 257,64,66,25 "Format"
+e35 menu 323,64,56,25 "Styles"
+e36 menu 379,64,54,25 "Sheet"
+e37 menu 433,64,48,25 "Data"
+e38 menu 481,64,52,25 "Tools"
+e39 menu 533,64,70,25 "Window"
+e40 menu 603,64,47,25 "Help"
+e41 menu 70,64,40,21 "File" value="0.0"
+e42 menu 110,64,43,21 "Edit" value="0.0"
+e43 menu 153,64,50,21 "View" value="0.0"
+e44 menu 203,64,56,21 "Insert" value="0.0"
+e45 menu 259,64,66,21 "Format" value="0.0"
+e46 menu 325,64,56,21 "Styles" value="0.0"
+e47 menu 381,64,55,21 "Sheet" value="0.0"
+e48 menu 436,64,48,21 "Data" value="0.0"
+e49 menu 484,64,53,21 "Tools" value="0.0"
+e50 menu 537,64,73,21 "Window" value="0.0"
+e51 menu 610,64,48,21 "Help" value="0.0"
+e52 scroll-bar 1849,266,12,731 "Vertical scroll bar" value="0.0"
+e53 push-button 76,1034,25,25 "Move To Home"
+e54 push-button 101,1034,25,25 "Move Left"
+e55 push-button 126,1034,25,25 "Move Right"
+e56 push-button 151,1034,25,25 "Move To End"
+e57 push-button 182,1034,25,25 "Add"
+e58 text 1870,144,48,888 "Properties"
+e59 toggle-button 1874,171,36,34 "Menu" state=checked:false
+e60 text 1870,210,44,42 "Properties"
+e61 toggle-button 1874,214,37,35 state=checked:true
+e62 text 1870,252,44,42 "Styles"
+e63 toggle-button 1874,256,37,35 state=checked:false
+e64 text 1870,294,44,42 "Gallery"
+e65 toggle-button 1874,298,37,35 state=checked:false
+e66 text 1870,336,44,42 "Navigator"
+e67 toggle-button 1874,340,37,35 state=checked:false
+e68 text 1870,378,44,42 "Functions"
+e69 toggle-button 1874,382,37,35 state=checked:false
+e70 text 70,142,1791,39 "Formula Tool Bar"
+e71 push-button 255,147,25,27 "Function Wizard" value="0.0"
+e72 push-button 280,147,36,27 "Select Function" value="0.0"
+e73 push-button 316,147,25,27 "Formula" value="0.0"
+e74 push-button 1840,174,16,24
+e75 push-button 1839,218,16,16
+e76 push-button 1839,258,16,16
+e77 text 70,64,1262,39 "Standard"
+e78 push-button 74,66,44,35 "New" value="0.0"
+e79 push-button 118,66,44,35 "Open" value="0.0"
+e80 push-button 162,66,44,35 "Save" value="0.0"
+e81 push-button 214,66,33,35 "Export Directly as PDF" value="0.0"
+e82 push-button 247,66,33,35 "Print" value="0.0"
+e83 toggle-button 280,66,33,35 "Print Preview" value="0.0" state=checked:false
+e84 push-button 321,66,33,35 "Cut" value="0.0"
+e85 push-button 354,66,33,35 "Copy" value="0.0"
+e86 push-button 387,66,44,35 "Paste" value="0.0"
+e87 push-button 439,66,33,35 "Clone" value="0.0"
+e88 push-button 472,66,33,35 "Clear" value="0.0"
+e89 push-button 513,66,44,35 "Undo" value="0.0"
+e90 push-button 557,66,44,35 "Redo" value="0.0"
+e91 toggle-button 609,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e92 push-button 642,66,33,35 "Spelling" value="0.0"
+e93 push-button 683,66,44,35 "Row" value="0.0"
+e94 push-button 727,66,44,35 "Column" value="0.0"
+e95 push-button 779,66,33,35 "Sort" value="0.0"
+e96 push-button 812,66,33,35 "Sort Ascending" value="0.0"
+e97 push-button 845,66,33,35 "Sort Descending" value="0.0"
+e98 push-button 878,66,33,35 "AutoFilter" value="0.0"
+e99 push-button 919,66,33,35 "Image" value="0.0"
+e100 push-button 952,66,33,35 "Chart" value="0.0"
+e101 push-button 985,66,33,35 "Pivot Table" value="0.0"
+e102 push-button 1026,66,44,35 "Symbol" value="0.0"
+e103 toggle-button 1070,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e104 push-button 1103,66,33,35 "Comment" value="0.0"
+e105 push-button 1136,66,33,35 "Headers and Footers" value="0.0"
+e106 push-button 1177,66,33,35 "Print Area" value="0.0"
+e107 push-button 1210,66,44,35 "Freeze Rows and Columns" value="0.0"
+e108 push-button 1254,66,33,35 "Split Window" value="0.0"
+e109 toggle-button 1295,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e110 text 70,103,1405,39 "Formatting"
+e111 text 74,105,221,34 "Font Name"
+e112 text 74,130,185,34 "Arial"
+e113 toggle-button 259,130,36,34 state=checked:false
+e114 text 303,105,101,34 "Font Size"
+e115 text 303,130,65,34 "11 pt"
+e116 toggle-button 368,130,36,34 state=checked:false
+e117 toggle-button 412,105,33,35 "Bold" value="0.0" state=checked:false
+e118 toggle-button 445,105,33,35 "Italic" value="0.0" state=checked:false
+e119 push-button 478,105,44,35 "Underline" value="0.0"
+e120 push-button 530,105,44,35 "Font Color" value="0.0"
+e121 push-button 574,105,44,35 "Background Color" value="0.0"
+e122 push-button 626,105,33,35 "Align Left" value="0.0"
+e123 push-button 659,105,33,35 "Align Center" value="0.0"
+e124 push-button 692,105,33,35 "Align Right" value="0.0"
+e125 push-button 733,105,33,35 "Align Top" value="0.0"
+e126 push-button 766,105,33,35 "Center Vertically" value="0.0"
+e127 push-button 799,105,33,35 "Align Bottom" value="1.0" state=checked:true
+e128 push-button 840,105,33,35 "Wrap Text" value="0.0"
+e129 push-button 881,105,33,35 "Merge and Center Cells" value="0.0"
+e130 push-button 914,105,33,35 "Merge Cells" value="0.0"
+e131 push-button 947,105,33,35 "Unmerge Cells" value="0.0"
+e132 push-button 988,105,44,35 "Currency" value="0.0"
+e133 push-button 1032,105,33,35 "Percent" value="0.0"
+e134 push-button 1065,105,33,35 "Number" value="0.0"
+e135 push-button 1098,105,33,35 "Date" value="0.0"
+e136 push-button 1139,105,33,35 "Add Decimal Place" value="0.0"
+e137 push-button 1172,105,33,35 "Delete Decimal Place" value="0.0"
+e138 push-button 1213,105,33,35 "Increase" value="0.0"
+e139 push-button 1246,105,33,35 "Decrease" value="0.0"
+e140 push-button 1287,105,44,35 "Borders (Shift to overwrite)" value="0.0"
+e141 push-button 1331,105,44,35 "Border Style" value="0.0"
+e142 push-button 1375,105,44,35 "Border Color" value="0.0"
+e143 push-button 1427,105,44,35 "Conditional" value="0.0"
+e144 text 76,1036,271,18 "Sheet 1 of 1"
+e145 text 630,1036,312,18 "PageStyle_Sheet1"
+e146 text 948,1036,312,18 "English (Hong Kong)"
+e147 text 1421,1036,306,18 "Average: ; Sum: 0"
+e148 text 1876,1036,38,18 "100%"
+e149 menu 379,64,53,25 "Table"
+e150 menu 432,64,52,25 "Form"
+e151 menu 484,64,52,25 "Tools"
+e152 menu 536,64,70,25 "Window"
+e153 menu 606,64,47,25 "Help"
+e154 menu 381,64,53,21 "Table" value="0.0"
+e155 menu 434,64,52,21 "Form" value="0.0"
+e156 menu 486,64,53,21 "Tools" value="0.0"
+e157 menu 539,64,73,21 "Window" value="0.0"
+e158 menu 612,64,48,21 "Help" value="0.0"
+e159 scroll-bar 1849,142,12,892 "Vertical scroll bar" value="0.0"
+e160 text 70,142,1779,24 "Horizontal Ruler"
+e161 text 1870,378,44,42 "Page"
+e162 text 1870,420,44,42 "Style Inspector"
+e163 toggle-button 1874,424,37,35 state=checked:false
+e164 text 70,64,1254,39 "Standard"
+e165 push-button 480,66,44,35 "Undo" value="0.0"
+e166 push-button 524,66,44,35 "Redo" value="0.0"
+e167 toggle-button 576,66,33,35 "Find and Replace" value="0.0" state=checked:false
+e168 push-button 609,66,33,35 "Spelling" value="0.0"
+e169 toggle-button 642,66,33,35 "Formatting Marks" value="0.0" state=checked:false
+e170 push-button 683,66,44,35 "Table" value="0.0"
+e171 push-button 727,66,33,35 "Image" value="0.0"
+e172 push-button 760,66,33,35 "Chart" value="0.0"
+e173 push-button 793,66,33,35 "Text Box" value="0.0"
+e174 push-button 834,66,33,35 "Page Break" value="0.0"
+e175 push-button 867,66,44,35 "Field" value="0.0"
+e176 push-button 911,66,44,35 "Symbol" value="0.0"
+e177 toggle-button 963,66,33,35 "Hyperlink" value="0.0" state=checked:false
+e178 push-button 996,66,33,35 "Footnote" value="0.0"
+e179 push-button 1029,66,33,35 "Endnote" value="0.0"
+e180 push-button 1062,66,33,35 "Bookmark" value="0.0"
+e181 push-button 1095,66,33,35 "Cross-reference" value="0.0"
+e182 push-button 1136,66,33,35 "Comment" value="0.0"
+e183 toggle-button 1169,66,33,35 "Track Changes Functions" value="0.0" state=checked:false
+e184 push-button 1210,66,33,35 "Line" value="0.0"
+e185 push-button 1243,66,44,35 "Basic Shapes" value="0.0"
+e186 toggle-button 1287,66,33,35 "Draw Functions" value="0.0" state=checked:false
+e187 text 70,103,1437,39 "Formatting"
+e188 text 74,105,202,34 "Paragraph Style"
+e189 text 74,130,166,34 "Default Paragraph Style"
+e190 toggle-button 240,130,36,34 state=checked:false
+e191 push-button 276,105,33,35 "Update" value="0.0"
+e192 push-button 309,105,33,35 "New" value="0.0"
+e193 text 350,105,221,34 "Font Name"
+e194 text 350,130,185,34 "Liberation Serif"
+e195 toggle-button 535,130,36,34 state=checked:false
+e196 text 579,105,101,34 "Font Size"
+e197 text 579,130,65,34 "12 pt"
+e198 toggle-button 644,130,36,34 state=checked:false
+e199 toggle-button 688,105,33,35 "Bold" value="0.0" state=checked:false
+e200 toggle-button 721,105,33,35 "Italic" value="0.0" state=checked:false
+e201 push-button 754,105,44,35 "Underline" value="0.0"
+e202 toggle-button 798,105,33,35 "Strikethrough" value="0.0" state=checked:false
+e203 toggle-button 839,105,33,35 "Superscript" value="0.0" state=checked:false
+e204 toggle-button 872,105,33,35 "Subscript" value="0.0" state=checked:false
+e205 push-button 913,105,33,35 "Clear" value="0.0"
+e206 push-button 954,105,44,35 "Font Color" value="0.0"
+e207 push-button 998,105,44,35 "Character Highlighting Color" value="0.0"
+e208 toggle-button 1050,105,33,35 "Left" value="1.0" state=checked:true
+e209 toggle-button 1083,105,33,35 "Center" value="0.0" state=checked:false
+e210 toggle-button 1116,105,33,35 "Right" value="0.0" state=checked:false
+e211 toggle-button 1149,105,33,35 "Justified" value="0.0" state=checked:false
+e212 push-button 1190,105,44,35 "Unordered List" value="0.0"
+e213 push-button 1234,105,44,35 "Ordered List" value="0.0"
+e214 push-button 1278,105,33,35 "No List" value="1.0" state=checked:true
+e215 push-button 1319,105,33,35 "Increase" value="0.0"
+e216 push-button 1352,105,33,35 "Decrease" value="0.0"
+e217 push-button 1393,105,44,35 "Line Spacing" value="0.0"
+e218 push-button 1437,105,33,35 "Increase" value="0.0"
+e219 push-button 1470,105,33,35 "Decrease" value="0.0"
+e220 text 105,1036,257,18 "Page 1 of 1"
+e221 text 368,1036,320,18 "5 words, 24 characters"
+e222 text 694,1036,305,18 "Default Page Style"
+e223 text 1005,1036,302,18 "English (Hong Kong)"
+e224 [uno] paragraph 1 text "Out of the Silent Planet"

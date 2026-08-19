@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(793, 435)", "memo": "Selected One Way. Next: click date field (~1135,297) to open calendar, pick Aug 21 (tomorrow; today=Aug 20 2026), confirm/done, then Find Flights (1487,297)."}

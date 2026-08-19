@@ -1,0 +1,34 @@
+{
+ "reprobes": 1,
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 583,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 109,
+  "cdp_records": 128,
+  "offscreen": 31,
+  "url": "https://store.steampowered.com/cart",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 1209,
+  "picked_by": "title-partial",
+  "tab": "Shopping Cart - Memory usage - 237 MB",
+  "picked_title": "Shopping Cart"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 6,
+ "memo_in": true,
+ "memo_out": true
+}

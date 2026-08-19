@@ -1,0 +1,7 @@
+The Enter from my save attempt got typed into the document, splitting the paragraph after "[14]". Undoing that.
+
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','z'); time.sleep(1)"}
+```
+
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','z'); time.sleep(1)", "memo": "Step10's Enter inserted a paragraph break after '[14]' (Keep-format dialog likely never appeared). Just pressed Ctrl+Z to remove it. NEXT: screenshot - confirm '...Pennington [14] noted that women...' is one continuous paragraph again. Then Ctrl+S and DO NOT blind-press Enter: screenshot and click 'Use Word 2007-365!' button if dialog shows."}

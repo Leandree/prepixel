@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui; pyautogui.click(34, 64)", "memo": "Task: set Bing as default search engine in Chrome. Step1: clicked Chrome icon in Ubuntu dock. Next: wait for Chrome to open, then go to chrome://settings/search and pick Bing from the dropdown."}
+```

@@ -1,0 +1,5 @@
+The selection currently covers only paragraph 1 (48 words). I'll extend it through the end of paragraph 2.
+
+```json
+{"action": "import pyautogui; pyautogui.keyDown('shift'); pyautogui.click(750, 525); pyautogui.keyUp('shift')", "memo": "Selected paras 1-2 (should be ~90 words). Next: Format > Paragraph > Line Spacing = Double, or use line-spacing dropdown arrow at (1428,147) and pick 'Double'. Then Ctrl+S and Keep current format."}
+```

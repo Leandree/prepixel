@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"~/Desktop/reminder.docx","memo":"Typed path into GTK Open dialog location entry (typing ~ auto-opens it). Next: press Enter to open reminder.docx in Writer and read the assignment requirements. Then apply them to workbook-with-sample-database.xlsx (Calc, 10 sheets, Mkt Tera active)."}
+```

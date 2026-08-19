@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e9","memo":"Goal: VLC Tools>Preferences>Interface, uncheck 'Display background cone or art' (qt-bgcone), then Save. Opened Tools menu."}
+```

@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e73","memo":"Clicked 'Manchester, ENG GB' in AccuWeather search results. Next: on the Manchester forecast page, open the 'Monthly' tab and read the August 2026 monthly forecast."}
+```

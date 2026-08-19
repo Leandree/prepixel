@@ -1,0 +1,25 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 3,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.toggle"
+ },
+ "rung": 1,
+ "rung1_method": "Action.toggle",
+ "settle_ms": 4740,
+ "settle_captures": 3,
+ "guard_ms": 21
+}

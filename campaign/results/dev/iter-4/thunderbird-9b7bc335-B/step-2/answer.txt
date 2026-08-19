@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e40","memo":"Goal: create Thunderbird message filter for anonym-x2024@outlook.com that forwards ALL incoming mail to anonym-x2024@gmail.com. Clicked 'Manage message filters' on account central page. Next: in Message Filters dialog click 'New...', name it, set match all messages, action 'Forward Message to' = anonym-x2024@gmail.com, then OK."}
+```

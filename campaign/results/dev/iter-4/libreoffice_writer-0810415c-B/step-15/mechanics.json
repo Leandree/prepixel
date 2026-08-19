@@ -1,0 +1,31 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 184,
+  "rect": [
+   70,
+   246,
+   1779,
+   788
+  ],
+  "doc": "text",
+  "doc_role": "document-text",
+  "atspi_records_replaced": 14,
+  "uno_records": 67,
+  "url": "file:///home/user/Desktop/Novels_Intro_Packet.docx"
+ },
+ "history_views": 2,
+ "history_views_dropped": 12,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 5928,
+ "settle_captures": 3,
+ "guard_ms": 40
+}

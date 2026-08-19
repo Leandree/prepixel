@@ -1,0 +1,1 @@
+{"action": "type", "text": "gsettings get org.gnome.desktop.interface show-battery-percentage", "memo": "Title-based check failed (PS1 rewrites title). Now typed 'gsettings get ...show-battery-percentage' in terminal e11. Next: key Return, then crop e11 to read printed value; expect 'true' -> done. VM likely has no battery so no % in top bar."}

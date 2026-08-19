@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(210, 47)", "memo": "Step1: 2 tabs open - 'Dota 2' tab (left, x~210) and blank loading store.steampowered.com tab. Clicked Dota 2 tab. Goal: find Dota 2 store page, open DLC section, add all DLC to cart."}

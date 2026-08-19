@@ -1,0 +1,1 @@
+{"action": "WAIT", "memo": "Calc window 'Zoom_Out_Oversized_Cells.xlsx' open but content area blank/loading. Goal: zoom out (reduce zoom %). Plan once UI renders: use View > Zoom dialog or the zoom slider/percentage at bottom-right of status bar to set a smaller zoom (e.g. 100% -> smaller), then confirm cells appear smaller."}

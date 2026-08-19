@@ -1,0 +1,50 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": true,
+  "ms": 608,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 498,
+  "cdp_records": 573,
+  "offscreen": 60,
+  "url": "https://aclanthology.org/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 2247,
+  "picked_by": "visible",
+  "tab": "",
+  "picked_title": "ACL Anthology"
+ },
+ "cdp_offscreen_skipped": 706,
+ "uno": {
+  "used": true,
+  "ms": 122,
+  "rect": [
+   111,
+   281,
+   1738,
+   716
+  ],
+  "doc": "calc",
+  "doc_role": "document-spreadsheet",
+  "atspi_records_replaced": 446,
+  "uno_records": 9,
+  "url": "file:///home/user/Desktop/best_awards_acl.xlsx"
+ },
+ "history_views": 1,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "type",
+ "rung": "kbd",
+ "settle_ms": 8315,
+ "settle_captures": 2,
+ "guard_ms": 64
+}

@@ -1,0 +1,5 @@
+Calendar is open with September 2026 visible. Clicking Sep 10 (Thursday).
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1062, 602); time.sleep(2)", "memo": "Ryanair. One way, Dublin->Vienna, just clicked Sep 10 2026 (next month from Aug 20). Next: click Passengers field (1135, 383), then click '+' next to Adults to make 2 adults, close dropdown, then click Search (1426, 383)."}
+```

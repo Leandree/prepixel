@@ -1,0 +1,1 @@
+{"action": "crop", "target": "e9", "memo": "Cropping terminal to read openpyxl output. Expect 'DONE 5 4'. If ModuleNotFoundError -> run 'pip3 install openpyxl' then rerun script. If DONE, next: close LibreOffice Calc WITHOUT saving (its in-memory copy is stale) - e.g. run 'pkill soffice' in terminal, then done."}

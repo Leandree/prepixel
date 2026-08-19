@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(215, 47)", "memo": "Task: bookmark page to BOOKMARKS BAR. Active tab was about:blank; clicked the 'Rotary Embeddings' tab (real content page) to make it active. Next: verify it's active + loaded, then Ctrl+D and ensure folder dropdown = 'Bookmarks bar' before clicking Done."}

@@ -1,0 +1,31 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 103,
+  "rect": [
+   70,
+   166,
+   1779,
+   868
+  ],
+  "doc": "text",
+  "doc_role": "document-text",
+  "atspi_records_replaced": 677,
+  "uno_records": 1,
+  "url": "file:///home/user/Desktop/book_list_result.docx"
+ },
+ "history_views": 3,
+ "history_views_dropped": 1,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 4997,
+ "settle_captures": 1,
+ "guard_ms": 94
+}

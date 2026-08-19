@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(977, 230); time.sleep(3)", "memo": "Step7: on AccuWeather Manchester GB page (accuweather.com/en/gb/manchester/m15-6/weather-forecast/329260). Clicked MONTHLY tab at (977,230). Next: verify monthly calendar for August 2026 loads; scroll down to see the month grid. Task = view monthly forecast, then DONE."}

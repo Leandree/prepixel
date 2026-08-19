@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"up","memo":"View menu open; only 7 radio items exposed. Pressed Up to wrap focus to the LAST View-menu item, hoping this forces the full item list (Toolbars/Rulers/Slide Pane/Sidebar...) into the a11y tree. Next: read structure for a 'Slide Pane' check item and click it; if still hidden, arrow up/down step-by-step to find it, or fall back to Tools>Macros dispatching .uno:LeftPaneImpress."}
+```

@@ -1,0 +1,1 @@
+{"action": "wait", "memo": "Two 'New\u2026' clicks (e84) issued; Filter Rules dialog still not in tree. Waiting to re-observe. If still absent next step, try keyboard: click e84 then press alt+n, or check for a separate window. Goal: Filter Rules dialog -> name 'Forward to gmail', Match all messages, action 'Forward Message to' anonym-x2024@gmail.com."}

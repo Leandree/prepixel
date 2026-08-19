@@ -1,0 +1,5 @@
+Sheet1 confirms Revenue in A2:A20 and Total Expenses in B2:B20, but Sheet2 is still empty — the earlier typing didn't register. Retyping with explicit key presses.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(151, 314); time.sleep(1); pyautogui.write('Total Revenue', interval=0.05); pyautogui.press('tab'); time.sleep(0.3); pyautogui.write('Total Expenses', interval=0.05); pyautogui.press('enter'); time.sleep(0.5); pyautogui.click(151, 331); time.sleep(0.5); pyautogui.write('=SUM(Sheet1.A2:A20)', interval=0.05); pyautogui.press('tab'); time.sleep(0.3); pyautogui.write('=SUM(Sheet1.B2:B20)', interval=0.05); pyautogui.press('enter')", "memo": "Step 4: Sheet1 layout confirmed (A=Revenue, B=Total Expenses, rows 2-20). Retyped Sheet2 A1/B1 headers + A2/B2 SUM formulas slowly. Next: verify cells show values, then Ctrl+S and Enter to Keep xlsx format."}
+```

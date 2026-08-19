@@ -1,0 +1,7 @@
+The verification output confirms it: `gsettings get org.gnome.desktop.interface show-battery-percentage` returned **true**.
+
+The battery percentage display is now enabled. Note that the top bar doesn't visibly show a percentage because this VM has no battery hardware — but the GNOME setting is set, so the percentage will appear next to the battery icon on any machine with a battery.
+
+```json
+{"action": "DONE"}
+```

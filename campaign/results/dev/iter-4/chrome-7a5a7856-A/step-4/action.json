@@ -1,0 +1,1 @@
+{"action": "import pyautogui, time; pyautogui.click(1500, 283); time.sleep(1)", "memo": "Selected 'Bookmarks bar' in Folder dropdown of the 'Bookmark added' bubble for The Illustrated Transformer (correct tab: it was the active tab, loading from about:blank at step 1). Next: verify Folder now reads 'Bookmarks bar', then click Done (~1603,299) to save."}

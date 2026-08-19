@@ -1,0 +1,5 @@
+Folder now reads "Bookmarks bar" — saving with Done.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1603, 299); time.sleep(1)", "memo": "Clicked Done in 'Bookmark added' bubble with Folder='Bookmarks bar' for The Illustrated Transformer (jalammar.github.io/illustrated-transformer/). Next: verify bubble closed, star is filled/blue, and bookmark appears on bookmarks bar (may need ctrl+shift+B to show bar) -> then DONE."}
+```

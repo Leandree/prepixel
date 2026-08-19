@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(990, 604)", "memo": "Clicked Tools>Preferences. Next: in Preferences (Interface/Look and feel section, Simple view), uncheck 'Display background cone or art', then click Save."}

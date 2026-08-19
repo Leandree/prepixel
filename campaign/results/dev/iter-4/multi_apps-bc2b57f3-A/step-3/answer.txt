@@ -1,0 +1,3 @@
+Desktop is visible with `reminder.docx` at (1852, 768). Opening it to read the requirements.
+
+{"action": "import pyautogui; pyautogui.doubleClick(1852, 768); import time; time.sleep(3)", "memo": "Calc has workbook-with-sample-database.xlsx open (10 sheets incl. Raw_data, Sorghum, Millet, Beans, ReadMe, Mkt Ouallam/Gotheye/Mangaize/Tera). Just double-clicked reminder.docx on desktop (1852,768) to open in Writer. NEXT: read the requirements text, then apply them to the Calc workbook and save as xlsx (Keep current format)."}

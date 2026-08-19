@@ -1,0 +1,1 @@
+{"action":"set_value","target":"e223","value":"Out of the Silent Planet","memo":"Typed 'Out of the Silent Planet' into book_list_result.docx paragraph 1. Next: Ctrl+S, then confirm 'Use Word 2007-365!' in the keep-format dialog."}

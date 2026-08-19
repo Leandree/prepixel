@@ -1,0 +1,17 @@
+{
+ "channel": "atspi",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 0,
+ "history_views_dropped": 13,
+ "memo_in": true,
+ "memo_out": true,
+ "settle_ms": 24267,
+ "settle_captures": 1
+}

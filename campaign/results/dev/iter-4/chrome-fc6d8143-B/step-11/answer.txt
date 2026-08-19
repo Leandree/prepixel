@@ -1,0 +1,1 @@
+{"action":"click","target":"e99","memo":"One Way set. Opened date picker (Flight Date Field). VM clock reads Aug 20 02:46, so today=Aug 20 2026 -> pick TOMORROW = Aug 21 2026 (verify which day the calendar marks as today). Then Done, then Find Flights button."}

@@ -1,0 +1,1 @@
+{"action":"set_value","target":"e80","value":"Diamond","memo":"Typed 'Diamond' into main search box; next: click SEARCH (e81) or pick a 'Diamond' suggestion from the dropdown. Geolocation prompt still open at top-left but not blocking."}

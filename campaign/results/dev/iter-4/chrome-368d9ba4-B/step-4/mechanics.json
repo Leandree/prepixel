@@ -1,0 +1,44 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 565,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 37,
+  "cdp_records": 115,
+  "offscreen": 60,
+  "url": "https://www.google.com/chrome/",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 15203,
+  "picked_by": "title-exact",
+  "tab": "Google Chrome - The Fast & Secure Web Browser Built to be Yours",
+  "picked_title": "Google Chrome - The Fast & Secure Web Browser Built to be Yours"
+ },
+ "cdp_offscreen_skipped": 421,
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 3,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "platform_result": {
+  "ok": true,
+  "method": "Action.dodefault"
+ },
+ "rung": 1,
+ "rung1_method": "Action.dodefault",
+ "settle_ms": 5623,
+ "settle_captures": 3,
+ "guard_ms": 28
+}

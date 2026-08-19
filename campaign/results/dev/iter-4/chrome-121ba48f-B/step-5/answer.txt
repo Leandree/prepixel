@@ -1,0 +1,1 @@
+{"action":"scroll","direction":"down","memo":"Steam Dota 2 page (tab e7). Scrolling down toward 'Downloadable Content for this game' -> click 'Add all DLC to Cart'. Ignore dota2.com elements (links like Heroes/Play for Free) that leak into the a11y view from the other tab."}

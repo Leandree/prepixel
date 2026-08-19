@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e123","memo":"Alert 'Enter a valid email address to forward to' confirmed the address entry (e116) is EMPTY — set_value on it does not stick. Dismissed alert. NEXT: click the forward-address entry e116 first to focus it, then use {\"action\":\"type\",\"text\":\"anonym-x2024@gmail.com\"} (typing, not set_value), then click OK (e120) on Filter Rules and OK/close Message Filters."}
+```

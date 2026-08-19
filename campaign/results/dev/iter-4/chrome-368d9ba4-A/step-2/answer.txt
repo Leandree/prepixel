@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.click(370, 249); time.sleep(1); pyautogui.click(1889, 139); time.sleep(0.5); pyautogui.hotkey('ctrl', 'l'); time.sleep(0.5); pyautogui.write('https://openweathermap.org/find?q=Manchester%2CGB\n')", "memo": "Step2: page was accuweather.com (my step1 URL didn't take); blocked notif popup, closed update bubble, retyped openweathermap find?q=Manchester,GB. Next: verify page loaded, click 'Manchester, GB' result, then open 'Monthly forecast' tab and read August values."}
+```

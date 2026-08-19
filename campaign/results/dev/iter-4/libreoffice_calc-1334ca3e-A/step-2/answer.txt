@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.doubleClick(1893, 1070)", "memo": "Calc rendered, zoom is 260% (status bar bottom-right ~1893,1070). Just double-clicked the zoom % to open the Zoom & View Layout dialog. Next: in dialog pick 100% radio (or Variable=100%) and click OK, then verify status bar shows 100% and cells are smaller."}

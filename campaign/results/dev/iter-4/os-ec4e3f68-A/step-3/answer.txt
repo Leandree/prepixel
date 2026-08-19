@@ -1,0 +1,5 @@
+The screen confirms it: a notification reads **"Vim has been removed from your favorites."** and the dock now shows only Thunderbird, Chrome, and Trash — the Vim icon is gone.
+
+```json
+{"action": "DONE"}
+```

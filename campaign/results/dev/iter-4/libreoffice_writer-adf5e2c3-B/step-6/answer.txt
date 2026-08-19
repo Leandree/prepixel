@@ -1,0 +1,3 @@
+```json
+{"action":"type","text":"<add here>","memo":"Typed '<add here>' into Find&Replace Search field (focus was at 735,388). Next: move to Replace field (Tab, or click its element if exposed), type '[14]', click Replace All, Close. Then Ctrl+S -> 'Use Word 2007-365!'. Ref [14] already on para 34."}
+```

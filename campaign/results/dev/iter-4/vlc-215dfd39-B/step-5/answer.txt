@@ -1,0 +1,1 @@
+{"action":"click","target":"e77","memo":"Advanced Prefs tree: clicking 'Main interfaces' (e77, bottom of tree). Next: expand it (right arrow) and pick 'Qt' child, then uncheck 'Display background cone or art', then Save (e82)."}

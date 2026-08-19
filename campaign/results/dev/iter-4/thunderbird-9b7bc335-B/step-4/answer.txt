@@ -1,0 +1,3 @@
+```json
+{"action":"wait","memo":"Clicked 'New…' in Message Filters; act-guard says unverified and a stray menu-item 'Copy…' appeared — Filter Rules dialog may still be opening. Waiting to re-observe. If dialog present: set name 'Forward to gmail', choose 'Match all messages', action 'Forward Message to' = anonym-x2024@gmail.com, then OK. If not, click New… again."}
+```

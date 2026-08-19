@@ -1,0 +1,162 @@
+e1 push-button 1802,27,30,35 "Minimise"
+e2 push-button 1842,27,30,35 "Restore"
+e3 push-button 1882,27,38,35 "Close"
+e4 push-button 76,27,28,41 "Search tabs"
+e5 page-tab 98,27,256,41 "Local, National, & Global Daily Weather Forecast | AccuWeather - Memory usage - 74.5 MB"
+e6 push-button 312,33,28,28 "Close"
+e7 page-tab 336,27,256,41 "Google Chrome - The Fast & Secure Web Browser Built to be Yours" state=selected
+~e8 push-button 550,33,28,28 "Close"
+e9 push-button 586,27,28,41 "New Tab"
+e10 push-button 70,73,39,34 "Back"
+e11 push-button 111,73,34,34 "Forward"
+e12 push-button 147,73,34,34 "Reload"
+~e13 push-button 195,78,24,24 "View site information"
+~e14 entry 227,78,1459,24 "Address and search bar"
+e15 push-button 1694,78,24,24 "Bookmark this tab"
+e16 push-button 1739,73,34,34 "You"
+e17 push-button 1778,73,142,34 "Finish update"
+~e18 text 453,1037,1069,601 "A demonstration of the new Chrome AI Mode. The screen shows a user interacting with the Chrome browser to search by attaching open tabs and files as context. It concludes by showcasing the new side-by-side interface, where an AI response remains open on the left while a selected webpage opens on the right for multitasking."
+~e19 document-web 453,1037,1069,602 "Meet Gemini in Chrome - YouTube"
+~e20 text 453,1037,1069,602 "YouTube Video Player"
+~e21 link 532,1075,953,14 "Google Chrome"
+~e22 push-button 471,1045,50,49 "thumbnail-image"
+~e23 [pixels] image 483,1053,38,37 alt=thumbnail-image
+~e24 text 475,1045,64,53 "Google Chrome2.54m subscribers"
+~e25 text 528,1073,100,15 "2.54m subscribers"
+~e26 [pixels] image 454,1038,1067,600 alt=To get missing image descriptions, open the context menu.
+~e27 push-button 1761,228,168,176 "Get Chrome for your phone Get Chrome for your phone mobile-icon chevron-right-color"
+e28 toggle-button 0,0,99,27 "Activities" state=checked:false
+e29 menu 99,0,162,27 "Google Chrome"
+e30 menu 906,0,178,27 "Aug 20 02‎∶18"
+e31 menu 1814,0,106,27 "System"
+e32 push-button 0,840,70,8
+e33 push-button 62,33,8,815
+e34 push-button 0,33,70,64 "Google Chrome"
+e35 push-button 0,101,70,64 "Thunderbird Mail"
+e36 push-button 0,169,70,64 "Visual Studio Code"
+e37 push-button 0,237,70,64 "VLC media player"
+e38 push-button 0,305,70,64 "LibreOffice Writer"
+e39 push-button 0,373,70,64 "LibreOffice Calc"
+e40 push-button 0,441,70,64 "LibreOffice Impress"
+e41 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e42 push-button 0,577,70,64 "Files"
+e43 push-button 0,645,70,64 "Ubuntu Software"
+e44 push-button 0,713,70,64 "Help"
+e45 push-button 0,784,70,64 "Trash"
+e46 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+~e47 region 70,1014,1835,66 "www.google.com uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic."
+~e48 paragraph 78,1029,1056,36 "www.google.com uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. Learn more"
+~e49 text 90,1036,939,22 "www.google.com uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic."
+~e50 link 1029,1036,93,22 "Learn more about how Google uses cookies. Opens in a new tab."
+~e51 text 1029,1036,93,22 "Learn more"
+~e52 push-button 1754,1022,143,50 "Understood"
+~e53 banner 70,114,1835,64
+~e54 link 202,162,143,44 "Jump to content" [occluded]
+~e55 link 82,122,150,48 "Google Chrome Homepage"
+~e56 presentation 90,128,134,36
+~e57 list-item 272,114,130,64 "AI Innovations"
+~e58 link 272,123,130,46 "ai innovations"
+~e59 list-item 404,114,72,64 "Safety"
+~e60 link 404,123,72,46 "safety"
+~e61 list-item 477,114,101,64 "By Google"
+~e62 link 477,123,101,46 "By Google"
+~e63 list-item 580,114,74,64 "Mobile"
+~e64 link 580,123,74,46 "Mobile"
+~e65 list-item 656,114,124,64 "Extensions"
+~e66 link 656,123,124,46 "extensions"
+~e67 [pixels] image 752,135,16,23
+~e68 main 70,114,1835,14515
+~e69 list-item 653,122,58,40 "AI" [occluded]
+~e70 link 654,122,56,40 "AI" [occluded]
+~e71 list-item 711,122,83,40 "Yours" [occluded]
+~e72 link 712,122,81,40 "Yours" [occluded]
+~e73 list-item 794,122,75,40 "Safe" [occluded]
+~e74 link 795,122,73,40 "Safe" [occluded]
+~e75 list-item 869,122,73,40 "Fast" [occluded]
+~e76 link 870,122,71,40 "Fast" [occluded]
+~e77 list-item 942,122,119,40 "By Google" [occluded]
+~e78 link 943,122,117,40 "By Google" [occluded]
+~e79 list-item 1061,122,104,40 "Updates" [occluded]
+~e80 link 1062,122,102,40 "Updates" [occluded]
+~e81 list-item 1165,122,157,40 "Download" [occluded]
+~e82 push-button 1174,122,147,40 "Download" [occluded]
+~e83 [pixels] image 1194,130,24,24
+~e84 [pixels] image 342,258,64,64 alt=Google Chrome logo.
+~e85 heading 342,330,614,168 "The browser that gets more done"
+~e86 push-button 342,546,256,64 "Download Chrome"
+~e87 [pixels] image 374,566,24,24
+~e88 link 377,634,184,24 "I want to update Chrome"
+~e89 [pixels] video 1020,209,551,551 alt=Several ways to use Gemini in Chrome include recipe substitutions, study help, Google Calendar assistance, analyzing info across tabs, and more.
+~e90 push-button 1461,759,109,28 "Pause video"
+~e91 [pixels] image 1470,765,16,16
+~e92 text 1490,765,67,15 "Pause video"
+~e93 heading 568,910,840,72 "Meet Gemini in Chrome"
+~e94 [pixels] image 454,1038,1067,600 alt=A demonstration of the new Chrome AI Mode. The screen shows a user interacting with the Chrome browser to search by attaching open tabs and files as context. It concludes by showcasing the new side-by-side interface, where an AI response remains open on the left while a selected webpage opens on the right for multitasking.
+~e95 [pixels] image 455,1038,1066,600
+~e96 [offscreen] paragraph 449,1564,938,24 "Gemini in Chrome"
+~e97 [offscreen] heading 449,1604,360,168 "Figure it out, right in your browser"
+~e98 [offscreen] paragraph 849,1604,538,112
+~e99 [offscreen] text 849,1607,527,106 "From big tasks to small to-do’s, Gemini in Chrome is your partner in figuring it all out. You can use Gemini in Chrome to visualize information, find the right product instantly, or even check your calendar – all from your open tab."
+~e100 [offscreen] link 849,1716,217,48 "Open in the same tab"
+~e101 [offscreen] text 849,1729,217,22 "Explore Gemini in Chrome"
+~e102 [offscreen] heading 498,1876,840,144 "Browsing boosted with built-in AI"
+~e103 [offscreen] text 635,1874,533,147 "Browsing boosted with built-in"
+~e104 [offscreen] push-button 1168,1968,32,32 "Play animation"
+~e105 [offscreen] heading 449,2740,360,222 "Gemini in Chrome: Your AI browsing assistant"
+~e106 [offscreen] paragraph 849,2740,538,140
+~e107 [offscreen] text 849,2743,531,134 "Gemini in Chrome helps you easily understand content on the web and get things done using the context of your open tabs and browsing history. Plus, with auto browse, Gemini in Chrome can do your tedious tasks for you* – from shopping and reservations, to research and more."
+~e108 [offscreen] paragraph 849,2896,538,18 "*Auto browse available only to Google AI Ultra and Pro subscribers in the U.S."
+~e109 [offscreen] link 849,2914,217,48 "Open in the same tab"
+~e110 [offscreen] text 849,2927,217,22 "Explore Gemini in Chrome"
+~e111 [offscreen] paragraph 296,3034,858,24 "Gemini in Chrome can do tasks for you with auto browse. Available to Google AI Pro and Ultra subscribers in the U.S."
+~e112 [offscreen] link 1411,3022,112,48 "Sign up now"
+~e113 [offscreen] text 1411,3036,59,20 "Sign up"
+~e114 [offscreen] text 1470,3036,32,20 "now"
+~e115 [offscreen] list-item 272,3146,614,669
+~e116 [offscreen] heading 337,3187,484,24 "NANO BANANA – GEMINI IN CHROME"
+~e117 [offscreen] heading 337,3227,484,88 "Make online inspiration your own creation"
+~e118 [offscreen] push-button 805,3734,56,56 "Flip card"
+~e119 [offscreen] paragraph 337,3531,484,112
+~e120 [offscreen] text 337,3534,477,106 "Our latest state of the art image model is right here in Chrome. Ask Gemini in Chrome to visualize a webpage in an infographic, or transform an image you find on the web. You can visualize almost anything just by asking."
+~e121 [offscreen] link 337,3651,484,48 "Get help with Nano Banana in Chrome"
+~e122 [offscreen] text 337,3664,250,22 "Get help with Nano Banana in"
+~e123 [offscreen] text 586,3664,68,22 "Chrome"
+~e124 [offscreen] list-item 950,3146,614,669
+~e125 [offscreen] heading 1015,3187,484,24 "SKILLS – GEMINI IN CHROME"
+~e126 [offscreen] heading 1015,3227,484,88 "Your most helpful prompts in one click"
+~e127 [offscreen] push-button 1483,3734,56,56 "Flip card"
+~e128 [offscreen] paragraph 1015,3531,484,140
+~e129 [offscreen] text 1015,3534,483,134 "Until now, repeating Gemini in Chrome tasks – like asking for ingredient substitutions to make a recipe vegan – meant re-entering the same prompt as you visited different pages. Now, you can use Skills in Chrome to save and reuse your most helpful prompts."
+~e130 [offscreen] link 1015,3679,484,48 "Learn more about Skills in Chrome"
+~e131 [offscreen] text 1015,3692,217,22 "Learn more about Skills in"
+~e132 [offscreen] text 1232,3692,68,22 "Chrome"
+~e133 [offscreen] heading 272,3985,388,24 "GOOGLE SEARCH"
+~e134 [offscreen] heading 272,4025,388,112 "Ask anything with AI Mode"
+~e135 [offscreen] paragraph 272,4153,388,140
+~e136 [offscreen] text 272,4156,383,134 "AI Mode is our most powerful AI search, built right into Chrome. Ask your toughest questions from the place where you already search, and keep the conversation open alongside your tabs as you dive deeper."
+~e137 [offscreen] link 272,4333,135,48 "Open in the same tab"
+~e138 [offscreen] text 272,4346,135,22 "Explore AI Mode"
+~e139 [offscreen] push-button 1508,3919,32,32 "Play"
+~e140 [offscreen] heading 498,4672,840,144 "Make it yours and take it with you"
+~e141 [offscreen] text 538,4670,214,75 "Make it"
+~e142 [offscreen] text 799,4670,498,147 "and take it with you"
+~e143 [offscreen] heading 272,4955,388,88 "Think outside the top bar with vertical tabs"
+~e144 [offscreen] paragraph 272,5059,388,168
+~e145 [offscreen] text 272,5062,380,162 "Vertical tabs stack down the side of your browser window, so you can read full page titles and manage tab groups with ease – even when your tab count hits double digits. Just right-click on any Chrome window and select “Show Tabs Vertically.”"
+~e146 [offscreen] link 272,5267,266,48 "Get help with managing tabs"
+~e147 [offscreen] text 272,5280,199,22 "Get help with managing"
+~e148 [offscreen] text 475,5280,37,22 "tabs"
+~e149 [offscreen] push-button 1516,5325,32,32 "Play"
+~e150 [offscreen] region 1063,5453,388,614
+~e151 [offscreen] list 1063,5493,388,432
+~e152 [offscreen] listitem 1063,5493,388,174
+~e153 [offscreen] push-button 1091,5493,324,52 "One window, two views" state=expanded
+~e154 [offscreen] heading 1099,5501,308,36 "One window, two views"
+~e155 [offscreen] paragraph 1101,5545,350,112 "Sick of juggling multiple windows or switching between tabs? Split view lets you view two tabs at the same time for a more streamlined, flexible way to work."
+~e156 push-button 1761,228,168,176 "Get Chrome for your phone mobile-icon chevron-right-color"
+~e157 [pixels] image 1771,246,100,100 alt=Get Chrome for your phone
+~e158 paragraph 1771,350,100,28 "Get Chrome for your phone"
+~e159 [pixels] image 1843,244,24,24
+~e160 push-button 1867,247,24,20 "chevron-right-color"
+~e161 [pixels] image 1873,250,14,14
+~e162 [offscreen] +421 more lines truncated (scroll to reveal)

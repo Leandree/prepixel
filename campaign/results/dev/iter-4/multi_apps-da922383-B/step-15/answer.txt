@@ -1,0 +1,3 @@
+```json
+{"action":"fail","memo":"Only 1 of 2 blogs saved. 'Thinking about High-Quality Human Data.pdf' was written to /home/user/Documents/Blog. For tab 1 (LLM Powered Autonomous Agents), ctrl+p at steps 11, 13 and 14 never surfaced Chrome's print preview (focus stayed on document-web, no Save button in the tree), so the PDF was never produced. Completing it needs at least 4 more steps: open print preview, click Save, type the target path, confirm. Out of steps at 15/15 — reporting incomplete rather than claiming success."}
+```

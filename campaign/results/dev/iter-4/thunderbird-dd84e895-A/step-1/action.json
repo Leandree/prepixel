@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(35, 133)", "memo": "Clicked Thunderbird icon in dock to launch it. Next: wait for Thunderbird window, then find 'Bills' folder under Local Folders, select all emails (Ctrl+A) and star them (press 'S' toggles star in Thunderbird)."}

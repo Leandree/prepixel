@@ -1,0 +1,1 @@
+{"action": "click", "target": "e100", "memo": "Switching back to Advanced (All) prefs. NEXT: click top-level tree cell 'Advanced' to focus the tree, then TYPE 'playlist' (Qt type-ahead jumps to the Playlist node). On Playlist page: UNCHECK 'Play and exit' (main fix, play-and-exit=0) and optionally CHECK 'Play and pause'/last-frame, then click Save."}

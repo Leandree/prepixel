@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(639, 471)", "memo": "Clicked 'Playlist' node in All-prefs tree (639,471). Right pane should show playlist options incl. 'Play and exit' checkbox - uncheck it (it's likely checked, causing auto-close), then click Save (1210,903). Cancel is at (1296,903)."}

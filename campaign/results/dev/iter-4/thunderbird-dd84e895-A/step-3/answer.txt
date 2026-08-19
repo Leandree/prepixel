@@ -1,0 +1,5 @@
+The Bills folder is open with 2 messages, both showing empty star outlines at x≈1021. I'll click each star directly — this toggles per-message and avoids any select-all toggle ambiguity.
+
+```json
+{"action": "import pyautogui; pyautogui.click(1021, 181); pyautogui.sleep(0.5); pyautogui.click(1021, 227)", "memo": "Clicked both star icons in Bills (1021,181) and (1021,227). Both were empty outlines before. Next: verify BOTH stars now render filled/orange. If one is still empty, click just that one. Do not use Ctrl+A + 'S' (toggle could unstar)."}
+```

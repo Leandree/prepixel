@@ -1,0 +1,1 @@
+{"action": "key", "keys": "up", "memo": "Zoom submenu is open (first item 'Entire Page' focused at ~463,620); submenu items are NOT exposed in the view. Pressing Up to wrap to the LAST item to learn the tail order (expected: 200% last, then 150%, then 100%). Goal: land on 100% and press Enter. Current zoom 260%."}

@@ -1,0 +1,3 @@
+The second tab is still loading. Let me switch to the first tab to see the blog article.
+
+{"action": "import pyautogui; pyautogui.click(220, 47)", "memo": "Task: save each open blog tab as PDF named by its title into /home/user/Documents/Blog. Chrome has 2 tabs: tab1='LLM Powered Autonomous...' (x=220,y=47), tab2=about:blank still loading (x=460,y=47). Plan: per tab use Ctrl+P -> Save as PDF -> set filename+folder."}

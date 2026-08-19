@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(531, 538)", "memo": "Step5: clicked autocomplete suggestion 'Diamond' (Uinta-Wasatch-Cache NF, Spanish Fork, Utah) at (531,538). Next: wait for the campground detail page to load, then locate and read the 'Next Available' dates (usually near the availability/booking section)."}

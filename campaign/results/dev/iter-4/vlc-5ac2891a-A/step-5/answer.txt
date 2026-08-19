@@ -1,0 +1,7 @@
+The Advanced Preferences tree is open. I need to scroll down to find the "Playlist" node.
+
+```json
+{"action": "import pyautogui; pyautogui.moveTo(715, 600); pyautogui.scroll(-10)"}
+```
+
+{"action": "import pyautogui; pyautogui.moveTo(715, 600); pyautogui.scroll(-10)", "memo": "In Advanced Prefs (All mode). Scrolled left tree down to look for top-level 'Playlist' node (below Interface). Next: click 'Playlist' in tree, then uncheck 'Play and exit' on right pane, then Save (1210,903)."}

@@ -1,0 +1,5 @@
+The context menu is open with "Remove from Favorites" visible. Clicking it.
+
+```json
+{"action": "import pyautogui; pyautogui.click(171, 105)", "memo": "Clicked 'Remove from Favorites' on Vim dock context menu; next: verify Vim icon is gone from dock, then DONE."}
+```

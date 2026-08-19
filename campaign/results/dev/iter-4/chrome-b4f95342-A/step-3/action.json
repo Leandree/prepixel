@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(895, 247)", "memo": "recreation.gov loaded, location prompt dismissed. Step3: clicked 'Ignore' on outdated-browser banner. Next: click main search box (~910,625) [may shift up ~150px after banner dismissal], type 'Diamond', press Enter/click SEARCH, then open the Diamond result and read its 'Next Available' dates."}

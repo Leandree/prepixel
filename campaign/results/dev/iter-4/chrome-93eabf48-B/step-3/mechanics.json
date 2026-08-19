@@ -1,0 +1,39 @@
+{
+ "channel": "atspi+cdp",
+ "cdp": {
+  "used": true,
+  "ms": 558,
+  "rect": [
+   70,
+   114,
+   1850,
+   966
+  ],
+  "atspi_records_replaced": 58,
+  "cdp_records": 79,
+  "offscreen": 0,
+  "url": "chrome://settings/appearance",
+  "scroll": [
+   0,
+   0
+  ],
+  "scroll_height": 966,
+  "picked_by": "title-partial",
+  "tab": "Settings \u2013 Appearance - Memory usage - 53.9 MB",
+  "picked_title": "Settings \u2013 Appearance"
+ },
+ "uno": {
+  "used": false,
+  "reason": "no libreoffice application in the tree"
+ },
+ "history_views": 2,
+ "history_views_dropped": 0,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "click",
+ "rung": 1,
+ "rung1_method": "cdp:Element.click",
+ "settle_ms": 4601,
+ "settle_captures": 3,
+ "guard_ms": 25
+}

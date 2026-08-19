@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e34","memo":"Clicked star to bookmark 'The Illustrated Transformer' tab. Next: in the bookmark bubble, verify Folder = 'Bookmarks bar' (change if needed), then click Done."}
+```

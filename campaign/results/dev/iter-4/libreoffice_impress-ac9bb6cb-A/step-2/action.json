@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(484, 76)", "memo": "Loaded: saa-format-guide.pptx, 15 slides. Plan: Tools > Macros > Edit Basic, write Basic macro looping DrawPages+MasterPages, set CharColor=RGB(255,0,0) on shapes supporting com.sun.star.presentation.SlideNumberShape, MsgBox count, then oDoc.store(). Just clicked Tools menu."}

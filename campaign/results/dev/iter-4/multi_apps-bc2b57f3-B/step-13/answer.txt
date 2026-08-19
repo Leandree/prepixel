@@ -1,0 +1,3 @@
+```json
+{"action":"key","keys":"f5","memo":"Ran FixIt macro (F5). NEXT: check for error dialog; if OK, switch to Calc (Window menu) and verify tab order: ReadMe,Raw_data,Beans,Millet,Sorghum,Mkt Gotheye,Mkt Mangaize,Mkt Ouallam,Mkt Tera,Millet spatial integration. Macro already calls d.store() so file is saved."}
+```

@@ -1,0 +1,5 @@
+The monthly forecast calendar for Manchester, GB (August 2026) is loaded and visible on AccuWeather.
+
+```json
+{"action": "DONE", "memo": "Monthly forecast for Manchester GB (August 2026) displayed at accuweather.com/en/gb/manchester/m15-6/august-weather/329260 with the full calendar grid of daily highs/lows. Task complete."}
+```

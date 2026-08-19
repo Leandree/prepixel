@@ -1,0 +1,14 @@
+The spreadsheet data (step-3) confirms the calculation — column G is word count, H is days, I is words/day:
+
+| Book | Words | Days | Words/day |
+|---|---|---|---|
+| **Out of the Silent Planet** | 47,840 | 36 | **1,328.9** ← slowest |
+| Silence | 65,481 | 33 | 1,984.3 |
+| Song of Solomon | 101,062 | 48 | 2,105.5 |
+| The Shining | 148,603 | 6 | 24,767.2 |
+
+The typed title is correct and the document shows "Out of the Silent Planet" (5 words, 24 characters). Now saving with Ctrl+S — a "Keep current format" dialog is expected next.
+
+```json
+{"action": "import pyautogui; pyautogui.hotkey('ctrl', 's')", "memo": "Verified from spreadsheet: Out of the Silent Planet = 47840 words/36 days = 1328.9 wpd, the slowest. Text is typed in book_list_result.docx. Just pressed Ctrl+S; next step click 'Use Word 2007-365!' in the Keep format dialog (right-hand button), then DONE."}
+```

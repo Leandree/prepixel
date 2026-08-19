@@ -1,0 +1,5 @@
+Desktop is idle — Thunderbird isn't running yet. Launching it from the dock.
+
+```json
+{"action": "import pyautogui; pyautogui.click(35, 133)", "memo": "Task: local Thunderbird forward-all filter for anonym-x2024@outlook.com -> anonym-x2024@gmail.com. Step1: clicked Thunderbird dock icon to launch. Next: wait for app, then select the outlook account folder, open Tools > Message Filters, create filter 'Match all messages' + action 'Forward Message to'."}
+```

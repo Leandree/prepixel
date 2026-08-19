@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1291, 691)", "memo": "On chrome://settings/searchEngines. Google is Default; clicked 3-dot menu next to Microsoft Bing row (y=691). Next: click 'Make default' in the popup menu, then verify Bing shows '(Default)'."}

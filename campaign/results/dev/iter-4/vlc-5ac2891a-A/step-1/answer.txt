@@ -1,0 +1,5 @@
+Desktop is idle. I'll launch VLC from the dock to access its preferences.
+
+```json
+{"action": "import pyautogui; pyautogui.click(34, 269)", "memo": "Task: disable VLC auto-close on video end (uncheck 'Play and exit' in Tools > Preferences > Interface, or set play-and-exit=0). Step1: clicked VLC dock icon to launch it. Next: wait for VLC window, then open Tools>Preferences (Ctrl+P)."}
+```

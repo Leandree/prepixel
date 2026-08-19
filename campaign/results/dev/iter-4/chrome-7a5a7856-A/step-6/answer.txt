@@ -1,0 +1,7 @@
+Confirmed the sequence worked: Folder was set to "Bookmarks bar" and Done was clicked, and the star is now filled/blue. Let me verify the bookmark actually appears on the bookmarks bar by revealing it (the bar is currently hidden).
+
+```json
+{"action": "import pyautogui, time; pyautogui.hotkey('ctrl','shift','b'); time.sleep(1)"}
+```
+
+**memo:** Bookmark confirmed saved: "The Illustrated Transformer" → Folder "Bookmarks bar", Done clicked, star filled blue. Just pressed Ctrl+Shift+B to reveal the hidden bookmarks bar for visual verification. Next: check the bar row (~y=120) shows the entry. If yes → DONE. Caveat to report: step 1 misclicked the "Rotary Embeddings" tab before step 2 switched back to Illustrated Transformer — flag the tab-ambiguity to the user in the final summary.

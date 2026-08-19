@@ -1,0 +1,1291 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find the Next Available dates for Diamond.
+
+STEP 6 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. click combo-box "Search Recreation.gov"
+2. set_value combo-box "Search Recreation.gov" := "Diamond"
+3. click list-item "Diamond"
+4. scroll_to push-button "Next Available"
+5. click push-button "Next Available"
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Clicked 'Next Available' (e171) on Diamond campground Campsite List. Table currently showed Wed 19 Aug - Fri 28 Aug 2026 (first 'A' available cells on 23 Aug). Next: read the new date range in the availability table header row (month + day columns) to report the Next Available dates.
+
+The current screen as a structured view. Grammar: `eN <type> x,y,w,h
+"content"` — eN is the element id, valid for THIS step only; `value="…"` is
+the current value; `state=…` lists element states (checked:true/false,
+pressed, selected, expanded, focused); a leading `~` marks a line that
+changed since the previous step; `[offscreen] …` is content that exists but
+is NOT on the screen right now — its x,y are positions within the scrollable
+document, not screen positions, so it cannot be clicked where it says and
+`scroll_to` is how it is brought into view; `[pixels] …` is a DECLARED
+opaque region
+whose content the structure cannot read (crop shows its pixels);
+`declares=N exposes=M` on a region means the structure announces N items
+there and exposes M of them; `typed-by-driver="…"` is NOT read from the
+screen — it is the driver's own record of what it last typed into that
+element, for channels that do not expose a field's value.
+`[uno] …` lines are the document MODEL of an active LibreOffice window,
+read through the application's own API; they have no screen position.
+`[uno] cell B7 "1500" formula "=SUM(B2:B6)"` is a spreadsheet cell: the
+value is what the cell shows, the formula (when present) is what it
+contains. `[uno] paragraph 12 list-label "[13]" text "Steinberg…"` is a
+text paragraph: `list-label` is numbering RENDERED by the document (not
+part of the paragraph's text), `text` is the paragraph's literal content.
+`[uno] shape "Title" text "…"` is a shape on the current slide. On a
+`[uno]` element, `click` places the caret or selection there (the
+application scrolls its own view) and `set_value` sets the cell,
+paragraph or shape content directly — in a cell, a leading `=` enters a
+formula, a number enters a numeric value, anything else enters text;
+`toggle`, `scroll_to` and `crop` do not apply to `[uno]` elements:
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶35"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Diamond, Uinta-Wasatch-Cache National Forest - Recreation.gov" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1386,24 "Address and search bar"
+e32 push-button 1621,78,24,24 "Install Recreation.gov"
+e33 push-button 1653,78,24,24 "Bookmark this tab"
+e34 push-button 1698,73,34,34 "You"
+e35 push-button 1737,73,183,34 "Relaunch to update"
+~e36 text 216,1039,88,50 "Open Site A020 in a new tab"
+~e37 table-cell 304,1039,88,50 "A"
+~e38 table-cell 392,1039,58,50 "23 Aug 2026 - Site A020 is available"
+~e39 table-cell 449,1039,58,50 "24 Aug 2026 - Site A020 is available"
+~e40 table-cell 506,1039,58,50 "25 Aug 2026 - Site A020 is available"
+~e41 table-cell 563,1039,59,50 "26 Aug 2026 - Site A020 is available"
+~e42 table-cell 621,1039,58,50 "27 Aug 2026 - Site A020 is available"
+~e43 table-cell 678,1039,58,50 "28 Aug 2026 - Site A020 is available"
+~e44 table-cell 735,1039,59,50 "29 Aug 2026 - Site A020 is available"
+~e45 table-cell 793,1039,58,50 "30 Aug 2026 - Site A020 is available"
+~e46 table-cell 850,1039,58,50 "31 Aug 2026 - Site A020 is available"
+~e47 table-cell 907,1039,58,50 "1 Sept 2026 - Site A020 is available"
+e48 text 211,1040,176,165 "Availability Table Bottom Menu"
+e49 text 985,569,775,887 "Map"
+e50 status 409,114,1157,170
+e51 text 463,135,1049,71 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+e52 push-button 849,228,94,40 "Ignore"
+e53 link 960,228,166,40 "Upgrade Browser"
+e54 [offscreen] text 850,-3,113,15 "Skip to Main Content"
+e55 [offscreen] presentation 966,-5,19,19
+e56 [offscreen] text 48,173,286,17 "An official website of the United States government"
+e57 [offscreen] push-button 342,174,139,16 "Here’s how you know"
+e58 [offscreen] presentation 465,174,16,16
+e59 link 94,136,240,35 "Recreation.gov Homepage" [occluded]
+e60 [pixels] image 94,136,240,35
+e61 label 1376,133,1,1 "Search Recreation.gov" [occluded]
+e62 presentation 1385,144,20,20 [occluded]
+e63 combo-box 1377,134,248,40 "Search Recreation.gov" [occluded]
+e64 link 1649,138,40,32 "Help" [occluded]
+e65 push-button 1713,138,104,32 "Sign Up or Log In" [occluded]
+e66 text 1713,144,104,19 "Sign Up / Log In"
+e67 push-button 1841,134,40,40 "Navigation Menu" [occluded]
+e68 presentation 1845,138,32,32 [occluded]
+e69 [offscreen] push-button 1561,566,113,32 "View Photos"
+e70 [offscreen] presentation 1572,574,16,16
+e71 [offscreen] push-button 146,654,176,24 "Back to Search Results"
+e72 [offscreen] presentation 146,654,24,24
+e73 presentation 220,129,16,16 [occluded]
+e74 text 238,129,81,15 "Campground"
+e75 heading 216,147,555,36 "Diamond" [occluded]
+e76 link 216,191,216,21 "Uinta-Wasatch-Cache National Forest" [occluded]
+e77 text 473,192,27,17 "Near"
+e78 text 503,192,105,17 "Spanish Fork, Utah"
+e79 push-button 216,230,129,20 "(214)214 reviews" [occluded]
+e80 [pixels] image 216,230,96,20 alt=4.3 stars
+e81 presentation 216,230,20,20 [occluded]
+e82 presentation 235,230,20,20 [occluded]
+e83 presentation 254,230,20,20 [occluded]
+e84 presentation 273,230,20,20 [occluded]
+e85 presentation 292,230,20,20 [occluded]
+e86 text 316,230,4,17 "("
+e87 text 320,230,21,17 "214"
+e88 text 340,230,4,17 ")"
+e89 text 315,229,68,17 "214 reviews"
+e90 push-button 385,230,113,20 "Some Coverage" [occluded]
+e91 [pixels] image 385,231,18,18 alt=Mobile signal rating 2
+e92 push-button 540,229,81,22 "Add To Favorites" [occluded]
+e93 presentation 541,230,20,20 [occluded]
+e94 text 565,230,55,19 "Favorite"
+e95 push-button 662,228,141,24 "Reservation Rules" [occluded]
+e96 presentation 662,232,16,16 [occluded]
+e97 text 216,286,884,43 "Diamond Campground is located among shady cottonwoods and willow at an elevation of 5,200 feet. The family sites are located just 15 miles from Spanish Fork and the group sites are 2-3 miles further. Visitors enjoy exploring local trails and relaxing along the stream."
+e98 link 1130,284,629,83 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+e99 [pixels] image 1146,298,31,55
+e100 [pixels] image 1146,298,31,55 alt=Scan & Pay
+e101 paragraph 1193,292,479,67 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+e102 text 1193,293,30,19 "This"
+e103 text 1223,293,84,19 "campground"
+e104 text 1307,293,37,19 "uses"
+e105 text 1344,293,68,19 "Scan & Pay"
+e106 text 1412,293,254,19 "to accept on-site payment through the"
+e107 text 1193,315,97,19 "Recreation.gov"
+e108 text 1290,315,81,19 "mobile app."
+e109 text 1376,315,124,19 "Download the app"
+e110 text 1193,315,450,41 "ahead of your visit to arrive ready."
+e111 text 1279,337,78,19 "Learn More"
+e112 presentation 1361,336,24,24
+e113 [pixels] image 1680,280,91,99
+e114 [pixels] image 1680,280,91,92 alt=Scan & Pay on Recreation.gov app
+e115 page-tab-list 216,423,1544,51
+e116 page-tab 216,423,271,51 "Campsite List" state=selected
+e117 page-tab 494,423,285,51 "Seasons & Fees"
+e118 page-tab 787,423,332,51 "Rules & Cancellations"
+e119 page-tab 1127,423,318,51 "Facility Information"
+e120 page-tab 1453,423,307,51 "Ratings & Reviews"
+~e121 tabpanel 216,493,1544,3681 "Campsite List"
+e122 push-button 224,501,40,40 "Grid layout"
+e123 presentation 232,509,24,24
+e124 push-button 264,501,40,40 "List layout, screen reader preferred"
+e125 presentation 271,509,24,24
+e126 text 311,502,88,43 "Campground Calendar"
+e127 group 312,501,288,40 "Campground Calendar"
+e128 push-button 313,502,32,38 "Calendar"
+e129 presentation 320,512,18,18
+e130 presentation 349,509,93,24
+e131 spin-button 349,509,21,24 "day, Start Date," value="dd"
+e132 text 351,511,17,19 "dd"
+e133 text 370,511,5,19 "/"
+e134 spin-button 375,509,30,24 "month, Start Date," value="mm"
+e135 text 377,511,26,19 "mm"
+e136 text 405,511,5,19 "/"
+e137 spin-button 410,509,32,24 "year, Start Date," value="yyyy"
+e138 text 412,511,28,19 "yyyy"
+e139 presentation 450,511,20,20
+e140 presentation 478,509,93,24
+e141 spin-button 478,509,21,24 "day, End Date," value="dd"
+e142 text 480,511,17,19 "dd"
+e143 text 499,511,5,19 "/"
+e144 spin-button 504,509,30,24 "month, End Date," value="mm"
+e145 text 506,511,26,19 "mm"
+e146 text 534,511,5,19 "/"
+e147 spin-button 539,509,32,24 "year, End Date," value="yyyy"
+e148 text 541,511,28,19 "yyyy"
+e149 label 607,500,1,1 "Search campsites" [occluded]
+e150 presentation 616,511,20,20
+e151 entry 608,501,400,40 "Search campsites"
+e152 push-button 1016,501,40,40 "Expand availability table"
+e153 presentation 1024,509,24,24
+e154 push-button 216,577,210,40 "Sort: Availability, Flexible"
+e155 presentation 225,589,16,16
+e156 text 245,587,39,19 "Sort:"
+e157 text 283,587,133,19 "Availability, Flexible"
+e158 push-button 434,577,80,40 "Filters"
+e159 presentation 443,589,16,16
+e160 text 463,587,42,19 "Filters"
+e161 push-button 522,577,40,40 "Legend"
+e162 presentation 530,585,24,24
+e163 push-button 570,577,40,40 "Refresh Table"
+e164 presentation 578,585,24,24
+e165 push-button 618,577,40,40 "Availability Alert Button"
+e166 presentation 626,585,24,24
+e167 push-button 770,577,56,40 "Go Back 5 Days"
+e168 presentation 788,583,16,16
+e169 text 779,596,38,17 "5 Days"
+e170 push-button 834,577,68,40 "Next Available"
+e171 push-button 910,577,56,40 "Go Forward 5 Days"
+e172 text 919,596,38,17 "5 Days"
+e173 presentation 932,583,16,16
+e174 text 590,625,59,38 "Campsite availability"
+e175 table-row 216,625,749,29
+e176 table-cell 216,625,88,29
+e177 table-cell 304,625,88,29
+~e178 table-cell 392,625,516,29 "August"
+~e179 table-cell 908,625,57,29 "Sept"
+e180 table-row 216,654,749,43
+e181 table-cell 216,654,88,43 "Sites"
+e182 push-button 217,654,87,42 "Sites"
+e183 presentation 286,663,18,18 [occluded]
+e184 presentation 286,671,18,18
+e185 table-cell 304,654,88,43 "Loop"
+e186 push-button 305,654,87,42 "Loop"
+e187 presentation 374,663,18,18 [occluded]
+e188 presentation 374,671,18,18
+~e189 table-cell 392,654,57,43 "Sun23"
+~e190 push-button 393,654,56,42 "Sunday 23 August 2026"
+~e191 text 407,661,22,15 "Sun"
+~e192 text 412,673,14,17 "23"
+e193 presentation 431,663,18,18 [occluded]
+e194 presentation 431,671,18,18
+~e195 table-cell 449,654,57,43 "Mon24"
+~e196 push-button 450,654,56,42 "Monday 24 August 2026"
+~e197 text 463,661,27,15 "Mon"
+~e198 text 469,673,14,17 "24"
+e199 presentation 488,663,18,18 [occluded]
+e200 presentation 488,671,18,18
+~e201 table-cell 507,654,57,43 "Tue25"
+~e202 push-button 507,654,56,42 "Tuesday 25 August 2026"
+~e203 text 523,661,20,15 "Tue"
+~e204 text 526,673,14,17 "25"
+e205 presentation 545,663,18,18 [occluded]
+e206 presentation 545,671,18,18
+~e207 table-cell 564,654,57,43 "Wed26"
+~e208 push-button 564,654,56,42 "Wednesday 26 August 2026"
+~e209 text 578,661,24,15 "Wed"
+~e210 text 584,673,14,17 "26"
+e211 presentation 603,663,18,18 [occluded]
+e212 presentation 603,671,18,18
+~e213 table-cell 621,654,57,43 "Thu27"
+~e214 push-button 622,654,56,42 "Thursday 27 August 2026"
+~e215 text 637,661,22,15 "Thu"
+~e216 text 641,673,14,17 "27"
+e217 presentation 660,663,18,18 [occluded]
+e218 presentation 660,671,18,18
+~e219 table-cell 678,654,57,43 "Fri28"
+~e220 push-button 679,654,56,42 "Friday 28 August 2026"
+~e221 text 697,661,16,15 "Fri"
+~e222 text 698,673,14,17 "28"
+e223 presentation 717,663,18,18 [occluded]
+e224 presentation 717,671,18,18
+~e225 table-cell 736,654,57,43 "Sat29"
+~e226 push-button 736,654,56,42 "Saturday 29 August 2026"
+~e227 text 753,661,19,15 "Sat"
+~e228 text 756,673,14,17 "29"
+e229 presentation 775,663,18,18 [occluded]
+e230 presentation 775,671,18,18
+~e231 table-cell 793,654,57,43 "Sun30"
+~e232 push-button 794,654,56,42 "Sunday 30 August 2026"
+~e233 text 809,661,22,15 "Sun"
+~e234 text 813,673,14,17 "30"
+e235 presentation 832,663,18,18 [occluded]
+e236 presentation 832,671,18,18
+~e237 table-cell 850,654,57,43 "Mon31"
+~e238 push-button 851,654,56,42 "Monday 31 August 2026"
+~e239 text 864,661,27,15 "Mon"
+~e240 text 870,673,14,17 "31"
+e241 presentation 889,663,18,18 [occluded]
+e242 presentation 889,671,18,18
+~e243 table-cell 908,654,57,43 "Tue1"
+~e244 push-button 908,654,56,42 "Tuesday 1 September 2026"
+~e245 text 924,661,20,15 "Tue"
+~e246 text 931,673,7,17 "1"
+e247 presentation 947,663,18,18 [occluded]
+e248 presentation 947,671,18,18
+~e249 table-row 216,697,749,49
+~e250 table-cell 216,697,88,49 "A004"
+~e251 link 227,712,33,21 "Open Site A004 in a new tab"
+~e252 table-cell 304,697,88,49 "Map"
+e253 push-button 315,709,68,25 "Map"
+~e254 presentation 326,713,16,16
+~e255 table-cell 392,697,57,49 "A"
+~e256 push-button 393,697,56,48 "23 Aug 2026 - Site A004 is available"
+~e257 table-cell 449,697,57,49 "A"
+~e258 push-button 450,697,56,48 "24 Aug 2026 - Site A004 is available"
+~e259 table-cell 507,697,57,49 "A"
+~e260 push-button 507,697,56,48 "25 Aug 2026 - Site A004 is available"
+~e261 table-cell 564,697,57,49 "A"
+~e262 push-button 564,697,56,48 "26 Aug 2026 - Site A004 is available"
+~e263 table-cell 621,697,57,49 "A"
+~e264 push-button 622,697,56,48 "27 Aug 2026 - Site A004 is available"
+~e265 table-cell 678,697,57,49 "A"
+~e266 push-button 679,697,56,48 "28 Aug 2026 - Site A004 is available"
+~e267 table-cell 736,697,57,49 "A"
+~e268 push-button 736,697,56,48 "29 Aug 2026 - Site A004 is available"
+~e269 table-cell 793,697,57,49 "A"
+~e270 push-button 794,697,56,48 "30 Aug 2026 - Site A004 is available"
+~e271 table-cell 850,697,57,49 "A"
+~e272 push-button 851,697,56,48 "31 Aug 2026 - Site A004 is available"
+~e273 table-cell 908,697,57,49 "A"
+~e274 push-button 908,697,56,48 "1 Sept 2026 - Site A004 is available"
+~e275 table-row 216,746,749,49
+~e276 table-cell 216,746,88,49 "A009"
+~e277 link 227,761,33,21 "Open Site A009 in a new tab"
+~e278 table-cell 304,746,88,49 "A"
+~e279 table-cell 392,746,57,49 "A"
+~e280 push-button 393,746,56,48 "23 Aug 2026 - Site A009 is available"
+~e281 table-cell 449,746,57,49 "A"
+~e282 push-button 450,746,56,48 "24 Aug 2026 - Site A009 is available"
+~e283 table-cell 507,746,57,49 "A"
+~e284 push-button 507,746,56,48 "25 Aug 2026 - Site A009 is available"
+~e285 table-cell 564,746,57,49 "A"
+~e286 push-button 564,746,56,48 "26 Aug 2026 - Site A009 is available"
+~e287 table-cell 621,746,57,49 "A"
+~e288 push-button 622,746,56,48 "27 Aug 2026 - Site A009 is available"
+~e289 table-cell 678,746,57,49 "A"
+~e290 push-button 679,746,56,48 "28 Aug 2026 - Site A009 is available"
+~e291 table-cell 736,746,57,49 "A"
+~e292 push-button 736,746,56,48 "29 Aug 2026 - Site A009 is available"
+~e293 table-cell 793,746,57,49 "A"
+~e294 push-button 794,746,56,48 "30 Aug 2026 - Site A009 is available"
+~e295 table-cell 850,746,57,49 "A"
+~e296 push-button 851,746,56,48 "31 Aug 2026 - Site A009 is available"
+~e297 table-cell 908,746,57,49 "A"
+~e298 push-button 908,746,56,48 "1 Sept 2026 - Site A009 is available"
+~e299 table-row 216,795,749,49
+~e300 table-cell 216,795,88,49 "A010"
+~e301 link 227,810,33,21 "Open Site A010 in a new tab"
+~e302 table-cell 304,795,88,49 "A"
+~e303 table-cell 392,795,57,49 "A"
+~e304 push-button 393,795,56,48 "23 Aug 2026 - Site A010 is available"
+~e305 table-cell 449,795,57,49 "A"
+~e306 push-button 450,795,56,48 "24 Aug 2026 - Site A010 is available"
+~e307 table-cell 507,795,57,49 "A"
+~e308 push-button 507,795,56,48 "25 Aug 2026 - Site A010 is available"
+~e309 table-cell 564,795,57,49 "A"
+~e310 push-button 564,795,56,48 "26 Aug 2026 - Site A010 is available"
+~e311 table-cell 621,795,57,49 "A"
+~e312 push-button 622,795,56,48 "27 Aug 2026 - Site A010 is available"
+~e313 table-cell 678,795,57,49 "A"
+~e314 push-button 679,795,56,48 "28 Aug 2026 - Site A010 is available"
+~e315 table-cell 736,795,57,49 "A"
+~e316 push-button 736,795,56,48 "29 Aug 2026 - Site A010 is available"
+~e317 table-cell 793,795,57,49 "A"
+~e318 push-button 794,795,56,48 "30 Aug 2026 - Site A010 is available"
+~e319 table-cell 850,795,57,49 "A"
+~e320 push-button 851,795,56,48 "31 Aug 2026 - Site A010 is available"
+~e321 table-cell 908,795,57,49 "A"
+~e322 push-button 908,795,56,48 "1 Sept 2026 - Site A010 is available"
+~e323 table-row 216,844,749,49
+~e324 table-cell 216,844,88,49 "A011"
+~e325 link 227,859,33,21 "Open Site A011 in a new tab"
+~e326 table-cell 304,844,88,49 "A"
+~e327 table-cell 392,844,57,49 "A"
+~e328 push-button 393,844,56,48 "23 Aug 2026 - Site A011 is available"
+~e329 table-cell 449,844,57,49 "A"
+~e330 push-button 450,844,56,48 "24 Aug 2026 - Site A011 is available"
+~e331 table-cell 507,844,57,49 "A"
+~e332 push-button 507,844,56,48 "25 Aug 2026 - Site A011 is available"
+~e333 table-cell 564,844,57,49 "A"
+~e334 push-button 564,844,56,48 "26 Aug 2026 - Site A011 is available"
+~e335 table-cell 621,844,57,49 "A"
+~e336 push-button 622,844,56,48 "27 Aug 2026 - Site A011 is available"
+~e337 table-cell 678,844,57,49 "A"
+~e338 push-button 679,844,56,48 "28 Aug 2026 - Site A011 is available"
+~e339 table-cell 736,844,57,49 "A"
+~e340 push-button 736,844,56,48 "29 Aug 2026 - Site A011 is available"
+~e341 table-cell 793,844,57,49 "A"
+~e342 push-button 794,844,56,48 "30 Aug 2026 - Site A011 is available"
+~e343 table-cell 850,844,57,49 "A"
+~e344 push-button 851,844,56,48 "31 Aug 2026 - Site A011 is available"
+~e345 table-cell 908,844,57,49 "A"
+~e346 push-button 908,844,56,48 "1 Sept 2026 - Site A011 is available"
+~e347 table-row 216,893,749,49
+~e348 table-cell 216,893,88,49 "A017"
+~e349 link 227,908,33,21 "Open Site A017 in a new tab"
+~e350 table-cell 304,893,88,49 "A"
+~e351 table-cell 392,893,57,49 "A"
+~e352 push-button 393,893,56,48 "23 Aug 2026 - Site A017 is available"
+~e353 table-cell 449,893,57,49 "A"
+~e354 push-button 450,893,56,48 "24 Aug 2026 - Site A017 is available"
+~e355 table-cell 507,893,57,49 "A"
+~e356 push-button 507,893,56,48 "25 Aug 2026 - Site A017 is available"
+~e357 table-cell 564,893,57,49 "A"
+~e358 push-button 564,893,56,48 "26 Aug 2026 - Site A017 is available"
+~e359 table-cell 621,893,57,49 "A"
+~e360 push-button 622,893,56,48 "27 Aug 2026 - Site A017 is available"
+~e361 table-cell 678,893,57,49 "A"
+~e362 push-button 679,893,56,48 "28 Aug 2026 - Site A017 is available"
+~e363 table-cell 736,893,57,49 "A"
+~e364 push-button 736,893,56,48 "29 Aug 2026 - Site A017 is available"
+~e365 table-cell 793,893,57,49 "A"
+~e366 push-button 794,893,56,48 "30 Aug 2026 - Site A017 is available"
+~e367 table-cell 850,893,57,49 "A"
+~e368 push-button 851,893,56,48 "31 Aug 2026 - Site A017 is available"
+~e369 table-cell 908,893,57,49 "A"
+~e370 push-button 908,893,56,48 "1 Sept 2026 - Site A017 is available"
+~e371 table-row 216,942,749,49
+~e372 table-cell 216,942,88,49 "A018"
+~e373 link 227,957,33,21 "Open Site A018 in a new tab"
+~e374 table-cell 304,942,88,49 "A"
+~e375 table-cell 392,942,57,49 "A"
+~e376 push-button 393,942,56,48 "23 Aug 2026 - Site A018 is available"
+~e377 table-cell 449,942,57,49 "A"
+~e378 push-button 450,942,56,48 "24 Aug 2026 - Site A018 is available"
+~e379 table-cell 507,942,57,49 "A"
+~e380 push-button 507,942,56,48 "25 Aug 2026 - Site A018 is available"
+~e381 table-cell 564,942,57,49 "A"
+~e382 push-button 564,942,56,48 "26 Aug 2026 - Site A018 is available"
+~e383 table-cell 621,942,57,49 "A"
+~e384 push-button 622,942,56,48 "27 Aug 2026 - Site A018 is available"
+~e385 table-cell 678,942,57,49 "A"
+~e386 push-button 679,942,56,48 "28 Aug 2026 - Site A018 is available"
+~e387 table-cell 736,942,57,49 "A"
+~e388 push-button 736,942,56,48 "29 Aug 2026 - Site A018 is available"
+~e389 table-cell 793,942,57,49 "A"
+~e390 push-button 794,942,56,48 "30 Aug 2026 - Site A018 is available"
+~e391 table-cell 850,942,57,49 "A" [occluded]
+~e392 push-button 851,942,56,48 "31 Aug 2026 - Site A018 is available" [occluded]
+~e393 table-cell 908,942,57,49 "A"
+~e394 push-button 908,942,56,48 "1 Sept 2026 - Site A018 is available"
+~e395 table-row 216,991,749,49 [occluded]
+~e396 table-cell 216,991,88,49 "A019" [occluded]
+~e397 link 227,1006,33,21 "Open Site A019 in a new tab" [occluded]
+~e398 table-cell 304,991,88,49 "A" [occluded]
+~e399 table-cell 392,991,57,49 "A" [occluded]
+~e400 push-button 393,991,56,48 "23 Aug 2026 - Site A019 is available" [occluded]
+~e401 table-cell 449,991,57,49 "A" [occluded]
+~e402 push-button 450,991,56,48 "24 Aug 2026 - Site A019 is available" [occluded]
+~e403 table-cell 507,991,57,49 "A" [occluded]
+~e404 push-button 507,991,56,48 "25 Aug 2026 - Site A019 is available" [occluded]
+~e405 table-cell 564,991,57,49 "A" [occluded]
+~e406 push-button 564,991,56,48 "26 Aug 2026 - Site A019 is available" [occluded]
+~e407 table-cell 621,991,57,49 "A" [occluded]
+~e408 push-button 622,991,56,48 "27 Aug 2026 - Site A019 is available" [occluded]
+~e409 table-cell 678,991,57,49 "A" [occluded]
+~e410 push-button 679,991,56,48 "28 Aug 2026 - Site A019 is available" [occluded]
+~e411 table-cell 736,991,57,49 "A" [occluded]
+~e412 push-button 736,991,56,48 "29 Aug 2026 - Site A019 is available" [occluded]
+~e413 table-cell 793,991,57,49 "A" [occluded]
+~e414 push-button 794,991,56,48 "30 Aug 2026 - Site A019 is available" [occluded]
+~e415 table-cell 850,991,57,49 "A" [occluded]
+~e416 push-button 851,991,56,48 "31 Aug 2026 - Site A019 is available" [occluded]
+~e417 table-cell 908,991,57,49 "A" [occluded]
+~e418 push-button 908,991,56,48 "1 Sept 2026 - Site A019 is available" [occluded]
+~e419 table-row 216,1040,749,49 [occluded]
+~e420 table-cell 216,1040,88,49 "A020" [occluded]
+~e421 link 227,1055,33,21 "Open Site A020 in a new tab" [occluded]
+~e422 table-cell 304,1040,88,49 "A" [occluded]
+~e423 table-cell 392,1040,57,49 "A" [occluded]
+~e424 push-button 393,1040,56,48 "23 Aug 2026 - Site A020 is available" [occluded]
+~e425 table-cell 449,1040,57,49 "A" [occluded]
+~e426 push-button 450,1040,56,48 "24 Aug 2026 - Site A020 is available" [occluded]
+~e427 table-cell 507,1040,57,49 "A" [occluded]
+~e428 push-button 507,1040,56,48 "25 Aug 2026 - Site A020 is available" [occluded]
+~e429 table-cell 564,1040,57,49 "A" [occluded]
+~e430 push-button 564,1040,56,48 "26 Aug 2026 - Site A020 is available" [occluded]
+~e431 table-cell 621,1040,57,49 "A" [occluded]
+~e432 push-button 622,1040,56,48 "27 Aug 2026 - Site A020 is available" [occluded]
+~e433 table-cell 678,1040,57,49 "A" [occluded]
+~e434 push-button 679,1040,56,48 "28 Aug 2026 - Site A020 is available" [occluded]
+~e435 table-cell 736,1040,57,49 "A" [occluded]
+~e436 push-button 736,1040,56,48 "29 Aug 2026 - Site A020 is available" [occluded]
+~e437 table-cell 793,1040,57,49 "A" [occluded]
+~e438 push-button 794,1040,56,48 "30 Aug 2026 - Site A020 is available" [occluded]
+~e439 table-cell 850,1040,57,49 "A" [occluded]
+~e440 push-button 851,1040,56,48 "31 Aug 2026 - Site A020 is available" [occluded]
+~e441 table-cell 908,1040,57,49 "A" [occluded]
+~e442 push-button 908,1040,56,48 "1 Sept 2026 - Site A020 is available" [occluded]
+~e443 [offscreen] table-row 146,1672,749,49
+~e444 [offscreen] table-cell 146,1672,88,49 "A022"
+~e445 [offscreen] link 157,1687,33,21 "Open Site A022 in a new tab"
+~e446 [offscreen] table-cell 234,1672,88,49 "A"
+~e447 [offscreen] table-cell 322,1672,57,49 "A"
+~e448 [offscreen] push-button 323,1672,56,48 "23 Aug 2026 - Site A022 is available"
+~e449 [offscreen] table-cell 379,1672,57,49 "A"
+~e450 [offscreen] push-button 380,1672,56,48 "24 Aug 2026 - Site A022 is available"
+~e451 [offscreen] table-cell 437,1672,57,49 "A"
+~e452 [offscreen] push-button 437,1672,56,48 "25 Aug 2026 - Site A022 is available"
+~e453 [offscreen] table-cell 494,1672,57,49 "A"
+~e454 [offscreen] push-button 494,1672,56,48 "26 Aug 2026 - Site A022 is available"
+~e455 [offscreen] table-cell 551,1672,57,49 "A"
+~e456 [offscreen] push-button 552,1672,56,48 "27 Aug 2026 - Site A022 is available"
+~e457 [offscreen] table-cell 608,1672,57,49 "A"
+~e458 [offscreen] push-button 609,1672,56,48 "28 Aug 2026 - Site A022 is available"
+~e459 [offscreen] table-cell 666,1672,57,49 "A"
+~e460 [offscreen] push-button 666,1672,56,48 "29 Aug 2026 - Site A022 is available"
+~e461 [offscreen] table-cell 723,1672,57,49 "A"
+~e462 [offscreen] push-button 724,1672,56,48 "30 Aug 2026 - Site A022 is available"
+~e463 [offscreen] table-cell 780,1672,57,49 "A"
+~e464 [offscreen] push-button 781,1672,56,48 "31 Aug 2026 - Site A022 is available"
+~e465 [offscreen] table-cell 838,1672,57,49 "A"
+~e466 [offscreen] push-button 838,1672,56,48 "1 Sept 2026 - Site A022 is available"
+~e467 [offscreen] table-row 146,1721,749,49
+~e468 [offscreen] table-cell 146,1721,88,49 "A025"
+~e469 [offscreen] link 157,1736,33,21 "Open Site A025 in a new tab"
+~e470 [offscreen] table-cell 234,1721,88,49 "A"
+~e471 [offscreen] table-cell 322,1721,57,49 "A"
+~e472 [offscreen] push-button 323,1721,56,48 "23 Aug 2026 - Site A025 is available"
+~e473 [offscreen] table-cell 379,1721,57,49 "A"
+~e474 [offscreen] push-button 380,1721,56,48 "24 Aug 2026 - Site A025 is available"
+~e475 [offscreen] table-cell 437,1721,57,49 "A"
+~e476 [offscreen] push-button 437,1721,56,48 "25 Aug 2026 - Site A025 is available"
+~e477 [offscreen] table-cell 494,1721,57,49 "A"
+~e478 [offscreen] push-button 494,1721,56,48 "26 Aug 2026 - Site A025 is available"
+~e479 [offscreen] table-cell 551,1721,57,49 "A"
+~e480 [offscreen] push-button 552,1721,56,48 "27 Aug 2026 - Site A025 is available"
+~e481 [offscreen] table-cell 608,1721,57,49 "A"
+~e482 [offscreen] push-button 609,1721,56,48 "28 Aug 2026 - Site A025 is available"
+~e483 [offscreen] table-cell 666,1721,57,49 "A"
+~e484 [offscreen] push-button 666,1721,56,48 "29 Aug 2026 - Site A025 is available"
+~e485 [offscreen] table-cell 723,1721,57,49 "A"
+~e486 [offscreen] push-button 724,1721,56,48 "30 Aug 2026 - Site A025 is available"
+~e487 [offscreen] table-cell 780,1721,57,49 "A"
+~e488 [offscreen] push-button 781,1721,56,48 "31 Aug 2026 - Site A025 is available"
+~e489 [offscreen] table-cell 838,1721,57,49 "A"
+~e490 [offscreen] push-button 838,1721,56,48 "1 Sept 2026 - Site A025 is available"
+~e491 [offscreen] table-row 146,1770,749,49
+~e492 [offscreen] table-cell 146,1770,88,49 "B027"
+~e493 [offscreen] link 157,1785,33,21 "Open Site B027 in a new tab"
+e494 heading 212,1044,1,1 "Availability Table Bottom Menu" [occluded]
+e495 push-button 236,1024,214,40 "Availability Alert Button Set Availability Alert"
+e496 presentation 261,1032,24,24
+e497 text 288,1041,161,19 "Availability Alert Button"
+e498 text 289,1034,136,19 "Set Availability Alert"
+e499 paragraph 476,1032,292,24 "No Campsites Selected"
+e500 push-button 831,1024,127,40 "Add to Cart"
+e501 push-button 868,938,50,50 "Back to top"
+e502 presentation 881,943,24,24
+e503 text 882,962,22,15 "TOP"
+e504 region 986,569,774,886 "Map"
+e505 region 986,569,774,886 "Map"
+e506 push-button 996,579,29,29 "Zoom in"
+e507 [pixels] image 996,579,29,29 alt=Zoom in
+e508 push-button 996,608,29,29 "Zoom out"
+e509 [pixels] image 996,609,29,28 alt=Zoom out
+e510 push-button 996,637,29,29 "Reset bearing to north"
+e511 [pixels] image 996,638,29,28 alt=Reset bearing to north
+e512 push-button 996,676,29,29 "Reset map position"
+e513 presentation 998,679,24,24
+e514 push-button 996,715,29,29 "3D"
+e515 push-button 1721,579,29,29
+e516 push-button 1721,579,29,29 "Toggle fullscreen"
+e517 push-button 1690,618,60,30 "Toggle Map View"
+e518 text 1707,624,25,17 "Map"
+e519 push-button 1690,648,60,30 "Toggle Satellite View"
+e520 text 1697,654,44,17 "Satellite"
+e521 push-button 1690,678,60,30 "Show Layer View Options"
+e522 text 1701,684,36,17 "Layers"
+e523 region 70,114,1835,12 "Notifications: 0" [occluded]
+e524 [offscreen] +2597 more lines truncated (scroll to reveal)
+[act-guard] previous action: UNVERIFIED (element re-read unchanged: still push-button 833,577,69,41 "Next Available")
+
+Previous views (up to 3, oldest first), same grammar:
+--- view at step 4 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶34"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Diamond, Uinta-Wasatch-Cache National Forest - Recreation.gov" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1386,24 "Address and search bar"
+e32 push-button 1621,78,24,24 "Install Recreation.gov"
+e33 push-button 1653,78,24,24 "Bookmark this tab"
+e34 push-button 1698,73,34,34 "You"
+e35 push-button 1737,73,183,34 "Relaunch to update"
+e36 link 918,108,139,22 "Skip to Main Content"
+~e37 [offscreen] text 589,1321,2,2 "Campsite availability"
+e38 status 409,114,1157,170
+e39 text 463,135,1049,71 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+e40 push-button 849,228,94,40 "Ignore"
+e41 link 960,228,166,40 "Upgrade Browser"
+e42 text 920,111,113,15 "Skip to Main Content"
+e43 presentation 1036,109,19,19 [occluded]
+e44 [pixels] image 94,291,16,11
+e45 text 118,287,286,17 "An official website of the United States government"
+e46 push-button 412,288,139,16 "Here’s how you know"
+e47 presentation 535,288,16,16
+e48 link 94,330,240,35 "Recreation.gov Homepage"
+e49 [pixels] image 94,330,240,35
+e50 label 1376,327,1,1 "Search Recreation.gov" [occluded]
+e51 presentation 1385,338,20,20
+e52 combo-box 1377,328,248,40 "Search Recreation.gov"
+e53 link 1649,332,40,32 "Help"
+e54 push-button 1713,332,104,32 "Sign Up or Log In"
+e55 text 1713,338,104,19 "Sign Up / Log In"
+e56 push-button 1841,328,40,40 "Navigation Menu"
+e57 presentation 1845,332,32,32
+~e58 [pixels] image 70,388,455,340 alt=Diamond Campground
+~e59 [pixels] image 533,388,910,340 alt=Diamond Campground
+~e60 [pixels] image 1450,388,455,340 alt=Diamond Campground 2
+~e61 push-button 1631,680,113,32 "View Photos"
+~e62 presentation 1642,688,16,16
+~e63 push-button 216,768,176,24 "Back to Search Results"
+~e64 presentation 216,768,24,24
+~e65 presentation 220,826,16,16
+~e66 text 238,826,81,15 "Campground"
+~e67 heading 216,844,555,36 "Diamond"
+~e68 link 216,888,216,21 "Uinta-Wasatch-Cache National Forest"
+~e69 text 473,889,27,17 "Near"
+~e70 text 503,889,105,17 "Spanish Fork, Utah"
+~e71 push-button 216,927,129,20 "(214)214 reviews"
+~e72 [pixels] image 216,927,96,20 alt=4.3 stars
+~e73 presentation 216,927,20,20
+~e74 presentation 235,927,20,20
+~e75 presentation 254,927,20,20
+~e76 presentation 273,927,20,20
+~e77 presentation 292,927,20,20
+~e78 text 316,927,4,17 "("
+~e79 text 320,927,21,17 "214"
+~e80 text 340,927,4,17 ")"
+~e81 text 315,926,68,17 "214 reviews"
+~e82 push-button 385,927,113,20 "Some Coverage"
+~e83 [pixels] image 385,928,18,18 alt=Mobile signal rating 2
+~e84 push-button 540,926,81,22 "Add To Favorites"
+~e85 presentation 541,927,20,20
+~e86 text 565,927,55,19 "Favorite"
+~e87 push-button 662,925,141,24 "Reservation Rules"
+~e88 presentation 662,929,16,16
+~e89 text 216,983,884,43 "Diamond Campground is located among shady cottonwoods and willow at an elevation of 5,200 feet. The family sites are located just 15 miles from Spanish Fork and the group sites are 2-3 miles further. Visitors enjoy exploring local trails and relaxing along the stream."
+~e90 link 1130,981,629,83 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e91 [pixels] image 1146,995,31,55
+~e92 [pixels] image 1146,995,31,55 alt=Scan & Pay
+~e93 paragraph 1193,989,479,67 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e94 text 1193,990,30,19 "This"
+~e95 text 1223,990,84,19 "campground"
+~e96 text 1307,990,37,19 "uses"
+~e97 text 1344,990,68,19 "Scan & Pay"
+~e98 text 1412,990,254,19 "to accept on-site payment through the"
+~e99 text 1193,1012,97,19 "Recreation.gov"
+~e100 text 1290,1012,81,19 "mobile app."
+~e101 text 1376,1012,124,19 "Download the app"
+~e102 text 1193,1012,450,41 "ahead of your visit to arrive ready."
+~e103 text 1279,1034,78,19 "Learn More"
+~e104 presentation 1361,1033,24,24
+~e105 [pixels] image 1680,977,91,99
+~e106 [pixels] image 1680,977,91,92 alt=Scan & Pay on Recreation.gov app
+~e107 [offscreen] page-tab-list 146,1006,1544,51
+~e108 [offscreen] page-tab 146,1006,271,51 "Campsite List" state=selected
+~e109 [offscreen] page-tab 424,1006,285,51 "Seasons & Fees"
+~e110 [offscreen] page-tab 717,1006,332,51 "Rules & Cancellations"
+~e111 [offscreen] page-tab 1057,1006,318,51 "Facility Information"
+~e112 [offscreen] page-tab 1383,1006,307,51 "Ratings & Reviews"
+~e113 [offscreen] tabpanel 146,1076,1544,3742 "Campsite List"
+~e114 [offscreen] push-button 154,1084,40,40 "Grid layout"
+~e115 [offscreen] presentation 162,1092,24,24
+~e116 [offscreen] push-button 194,1084,40,40 "List layout, screen reader preferred"
+~e117 [offscreen] presentation 201,1092,24,24
+~e118 [offscreen] text 241,1085,88,43 "Campground Calendar"
+~e119 [offscreen] group 242,1084,288,40 "Campground Calendar"
+~e120 [offscreen] push-button 243,1085,32,38 "Calendar"
+~e121 [offscreen] presentation 250,1095,18,18
+~e122 [offscreen] presentation 279,1092,93,24
+~e123 [offscreen] spin-button 279,1092,21,24 "day, Start Date," value="dd"
+~e124 [offscreen] text 281,1094,17,19 "dd"
+~e125 [offscreen] text 300,1094,5,19 "/"
+~e126 [offscreen] spin-button 305,1092,30,24 "month, Start Date," value="mm"
+~e127 [offscreen] text 307,1094,26,19 "mm"
+~e128 [offscreen] text 335,1094,5,19 "/"
+~e129 [offscreen] spin-button 340,1092,32,24 "year, Start Date," value="yyyy"
+~e130 [offscreen] text 342,1094,28,19 "yyyy"
+~e131 [offscreen] presentation 380,1094,20,20
+~e132 [offscreen] presentation 408,1092,93,24
+~e133 [offscreen] spin-button 408,1092,21,24 "day, End Date," value="dd"
+~e134 [offscreen] text 410,1094,17,19 "dd"
+~e135 [offscreen] text 429,1094,5,19 "/"
+~e136 [offscreen] spin-button 434,1092,30,24 "month, End Date," value="mm"
+~e137 [offscreen] text 436,1094,26,19 "mm"
+~e138 [offscreen] text 464,1094,5,19 "/"
+~e139 [offscreen] spin-button 469,1092,32,24 "year, End Date," value="yyyy"
+~e140 [offscreen] text 471,1094,28,19 "yyyy"
+~e141 [offscreen] label 537,1083,1,1 "Search campsites"
+~e142 [offscreen] presentation 546,1094,20,20
+~e143 [offscreen] entry 538,1084,400,40 "Search campsites"
+~e144 [offscreen] push-button 946,1084,40,40 "Expand availability table"
+~e145 [offscreen] presentation 954,1092,24,24
+~e146 [offscreen] push-button 146,1160,210,40 "Sort: Availability, Flexible"
+~e147 [offscreen] presentation 155,1172,16,16
+~e148 [offscreen] text 175,1170,39,19 "Sort:"
+~e149 [offscreen] text 213,1170,133,19 "Availability, Flexible"
+~e150 [offscreen] push-button 364,1160,80,40 "Filters"
+~e151 [offscreen] presentation 373,1172,16,16
+~e152 [offscreen] text 393,1170,42,19 "Filters"
+~e153 [offscreen] push-button 452,1160,40,40 "Legend"
+~e154 [offscreen] presentation 460,1168,24,24
+~e155 [offscreen] push-button 500,1160,40,40 "Refresh Table"
+~e156 [offscreen] presentation 508,1168,24,24
+~e157 [offscreen] push-button 548,1160,40,40 "Availability Alert Button"
+~e158 [offscreen] presentation 556,1168,24,24
+~e159 [offscreen] push-button 700,1160,56,40 "Go Back 5 Days"
+~e160 [offscreen] presentation 718,1166,16,16
+~e161 [offscreen] text 709,1179,38,17 "5 Days"
+~e162 [offscreen] push-button 764,1160,68,40 "Next Available"
+~e163 [offscreen] push-button 840,1160,56,40 "Go Forward 5 Days"
+~e164 [offscreen] text 849,1179,38,17 "5 Days"
+~e165 [offscreen] presentation 862,1166,16,16
+~e166 [offscreen] text 520,1208,59,38 "Campsite availability"
+e167 region 70,114,1835,12 "Notifications: 0" [occluded]
+~e168 [offscreen] +3039 more lines truncated (scroll to reveal)
+
+--- view at step 5 ---
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶34"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Diamond, Uinta-Wasatch-Cache National Forest - Recreation.gov" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1386,24 "Address and search bar"
+e32 push-button 1621,78,24,24 "Install Recreation.gov"
+e33 push-button 1653,78,24,24 "Bookmark this tab"
+e34 push-button 1698,73,34,34 "You"
+e35 push-button 1737,73,183,34 "Relaunch to update"
+~e36 text 216,1046,88,51 "Open Site A020 in a new tab"
+~e37 link 226,1062,34,22 "Open Site A020 in a new tab"
+~e38 table-cell 304,1046,88,51 "A"
+~e39 table-cell 392,1046,58,51 "19 Aug 2026 - Site A020 is First-come, First-served"
+~e40 table-cell 449,1046,58,51 "20 Aug 2026 - Site A020 is First-come, First-served"
+~e41 table-cell 506,1046,58,51 "21 Aug 2026 - Site A020 is First-come, First-served"
+~e42 table-cell 563,1046,59,51 "22 Aug 2026 - Site A020 is Reserved"
+~e43 table-cell 621,1046,58,51 "23 Aug 2026 - Site A020 is available"
+~e44 table-cell 678,1046,58,51 "24 Aug 2026 - Site A020 is available"
+~e45 table-cell 735,1046,59,51 "25 Aug 2026 - Site A020 is available"
+~e46 table-cell 793,1046,58,51 "26 Aug 2026 - Site A020 is available"
+~e47 table-cell 850,1046,58,51 "27 Aug 2026 - Site A020 is available"
+~e48 table-cell 907,1046,58,51 "28 Aug 2026 - Site A020 is available"
+~e49 text 211,1040,176,165 "Availability Table Bottom Menu"
+~e50 text 985,569,775,887 "Map"
+e51 status 409,114,1157,170
+e52 text 463,135,1049,71 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+e53 push-button 849,228,94,40 "Ignore"
+e54 link 960,228,166,40 "Upgrade Browser"
+~e55 [offscreen] text 850,-3,113,15 "Skip to Main Content"
+~e56 [offscreen] presentation 966,-5,19,19
+~e57 [offscreen] text 48,173,286,17 "An official website of the United States government"
+~e58 [offscreen] push-button 342,174,139,16 "Here’s how you know"
+~e59 [offscreen] presentation 465,174,16,16
+~e60 link 94,136,240,35 "Recreation.gov Homepage" [occluded]
+~e61 [pixels] image 94,136,240,35
+~e62 label 1376,133,1,1 "Search Recreation.gov" [occluded]
+~e63 presentation 1385,144,20,20 [occluded]
+~e64 combo-box 1377,134,248,40 "Search Recreation.gov" [occluded]
+~e65 link 1649,138,40,32 "Help" [occluded]
+~e66 push-button 1713,138,104,32 "Sign Up or Log In" [occluded]
+~e67 text 1713,144,104,19 "Sign Up / Log In"
+~e68 push-button 1841,134,40,40 "Navigation Menu" [occluded]
+~e69 presentation 1845,138,32,32 [occluded]
+~e70 [offscreen] push-button 1561,566,113,32 "View Photos"
+~e71 [offscreen] presentation 1572,574,16,16
+~e72 [offscreen] push-button 146,654,176,24 "Back to Search Results"
+~e73 [offscreen] presentation 146,654,24,24
+~e74 presentation 220,129,16,16 [occluded]
+~e75 text 238,129,81,15 "Campground"
+~e76 heading 216,147,555,36 "Diamond" [occluded]
+~e77 link 216,191,216,21 "Uinta-Wasatch-Cache National Forest" [occluded]
+~e78 text 473,192,27,17 "Near"
+~e79 text 503,192,105,17 "Spanish Fork, Utah"
+~e80 push-button 216,230,129,20 "(214)214 reviews" [occluded]
+~e81 [pixels] image 216,230,96,20 alt=4.3 stars
+~e82 presentation 216,230,20,20 [occluded]
+~e83 presentation 235,230,20,20 [occluded]
+~e84 presentation 254,230,20,20 [occluded]
+~e85 presentation 273,230,20,20 [occluded]
+~e86 presentation 292,230,20,20 [occluded]
+~e87 text 316,230,4,17 "("
+~e88 text 320,230,21,17 "214"
+~e89 text 340,230,4,17 ")"
+~e90 text 315,229,68,17 "214 reviews"
+~e91 push-button 385,230,113,20 "Some Coverage" [occluded]
+~e92 [pixels] image 385,231,18,18 alt=Mobile signal rating 2
+~e93 push-button 540,229,81,22 "Add To Favorites" [occluded]
+~e94 presentation 541,230,20,20 [occluded]
+~e95 text 565,230,55,19 "Favorite"
+~e96 push-button 662,228,141,24 "Reservation Rules" [occluded]
+~e97 presentation 662,232,16,16 [occluded]
+~e98 text 216,286,884,43 "Diamond Campground is located among shady cottonwoods and willow at an elevation of 5,200 feet. The family sites are located just 15 miles from Spanish Fork and the group sites are 2-3 miles further. Visitors enjoy exploring local trails and relaxing along the stream."
+~e99 link 1130,284,629,83 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e100 [pixels] image 1146,298,31,55
+~e101 [pixels] image 1146,298,31,55 alt=Scan & Pay
+~e102 paragraph 1193,292,479,67 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e103 text 1193,293,30,19 "This"
+~e104 text 1223,293,84,19 "campground"
+~e105 text 1307,293,37,19 "uses"
+~e106 text 1344,293,68,19 "Scan & Pay"
+~e107 text 1412,293,254,19 "to accept on-site payment through the"
+~e108 text 1193,315,97,19 "Recreation.gov"
+~e109 text 1290,315,81,19 "mobile app."
+~e110 text 1376,315,124,19 "Download the app"
+~e111 text 1193,315,450,41 "ahead of your visit to arrive ready."
+~e112 text 1279,337,78,19 "Learn More"
+~e113 presentation 1361,336,24,24
+~e114 [pixels] image 1680,280,91,99
+~e115 [pixels] image 1680,280,91,92 alt=Scan & Pay on Recreation.gov app
+~e116 page-tab-list 216,423,1544,51
+~e117 page-tab 216,423,271,51 "Campsite List" state=selected
+~e118 page-tab 494,423,285,51 "Seasons & Fees"
+~e119 page-tab 787,423,332,51 "Rules & Cancellations"
+~e120 page-tab 1127,423,318,51 "Facility Information"
+~e121 page-tab 1453,423,307,51 "Ratings & Reviews"
+~e122 tabpanel 216,493,1544,3742 "Campsite List"
+~e123 push-button 224,501,40,40 "Grid layout"
+~e124 presentation 232,509,24,24
+~e125 push-button 264,501,40,40 "List layout, screen reader preferred"
+~e126 presentation 271,509,24,24
+~e127 text 311,502,88,43 "Campground Calendar"
+~e128 group 312,501,288,40 "Campground Calendar"
+~e129 push-button 313,502,32,38 "Calendar"
+~e130 presentation 320,512,18,18
+~e131 presentation 349,509,93,24
+~e132 spin-button 349,509,21,24 "day, Start Date," value="dd"
+~e133 text 351,511,17,19 "dd"
+~e134 text 370,511,5,19 "/"
+~e135 spin-button 375,509,30,24 "month, Start Date," value="mm"
+~e136 text 377,511,26,19 "mm"
+~e137 text 405,511,5,19 "/"
+~e138 spin-button 410,509,32,24 "year, Start Date," value="yyyy"
+~e139 text 412,511,28,19 "yyyy"
+~e140 presentation 450,511,20,20
+~e141 presentation 478,509,93,24
+~e142 spin-button 478,509,21,24 "day, End Date," value="dd"
+~e143 text 480,511,17,19 "dd"
+~e144 text 499,511,5,19 "/"
+~e145 spin-button 504,509,30,24 "month, End Date," value="mm"
+~e146 text 506,511,26,19 "mm"
+~e147 text 534,511,5,19 "/"
+~e148 spin-button 539,509,32,24 "year, End Date," value="yyyy"
+~e149 text 541,511,28,19 "yyyy"
+~e150 label 607,500,1,1 "Search campsites" [occluded]
+~e151 presentation 616,511,20,20
+~e152 entry 608,501,400,40 "Search campsites"
+~e153 push-button 1016,501,40,40 "Expand availability table"
+~e154 presentation 1024,509,24,24
+~e155 push-button 216,577,210,40 "Sort: Availability, Flexible"
+~e156 presentation 225,589,16,16
+~e157 text 245,587,39,19 "Sort:"
+~e158 text 283,587,133,19 "Availability, Flexible"
+~e159 push-button 434,577,80,40 "Filters"
+~e160 presentation 443,589,16,16
+~e161 text 463,587,42,19 "Filters"
+~e162 push-button 522,577,40,40 "Legend"
+~e163 presentation 530,585,24,24
+~e164 push-button 570,577,40,40 "Refresh Table"
+~e165 presentation 578,585,24,24
+~e166 push-button 618,577,40,40 "Availability Alert Button"
+~e167 presentation 626,585,24,24
+~e168 push-button 770,577,56,40 "Go Back 5 Days"
+~e169 presentation 788,583,16,16
+~e170 text 779,596,38,17 "5 Days"
+~e171 push-button 834,577,68,40 "Next Available"
+~e172 push-button 910,577,56,40 "Go Forward 5 Days"
+~e173 text 919,596,38,17 "5 Days"
+~e174 presentation 932,583,16,16
+~e175 text 590,625,59,38 "Campsite availability"
+~e176 table-row 216,625,749,29
+~e177 table-cell 216,625,88,29
+~e178 table-cell 304,625,88,29
+~e179 table-cell 392,625,573,29 "August"
+~e180 table-row 216,654,749,43
+~e181 table-cell 216,654,88,43 "Sites"
+~e182 push-button 217,654,87,42 "Sites"
+~e183 presentation 286,663,18,18 [occluded]
+~e184 presentation 286,671,18,18
+~e185 table-cell 304,654,88,43 "Loop"
+~e186 push-button 305,654,87,42 "Loop"
+~e187 presentation 374,663,18,18 [occluded]
+~e188 presentation 374,671,18,18
+~e189 table-cell 392,654,57,43 "Wed19"
+~e190 push-button 393,654,56,42 "Wednesday 19 August 2026"
+~e191 text 407,661,24,15 "Wed"
+~e192 text 412,673,14,17 "19"
+~e193 presentation 431,663,18,18 [occluded]
+~e194 presentation 431,671,18,18
+~e195 table-cell 449,654,57,43 "Thu20"
+~e196 push-button 450,654,56,42 "Thursday 20 August 2026"
+~e197 text 465,661,22,15 "Thu"
+~e198 text 469,673,14,17 "20"
+~e199 presentation 488,663,18,18 [occluded]
+~e200 presentation 488,671,18,18
+~e201 table-cell 507,654,57,43 "Fri21"
+~e202 push-button 507,654,56,42 "Friday 21 August 2026"
+~e203 text 525,661,16,15 "Fri"
+~e204 text 526,673,14,17 "21"
+~e205 presentation 545,663,18,18 [occluded]
+~e206 presentation 545,671,18,18
+~e207 table-cell 564,654,57,43 "Sat22"
+~e208 push-button 564,654,56,42 "Saturday 22 August 2026"
+~e209 text 581,661,19,15 "Sat"
+~e210 text 584,673,14,17 "22"
+~e211 presentation 603,663,18,18 [occluded]
+~e212 presentation 603,671,18,18
+~e213 table-cell 621,654,57,43 "Sun23"
+~e214 push-button 622,654,56,42 "Sunday 23 August 2026"
+~e215 text 637,661,22,15 "Sun"
+~e216 text 641,673,14,17 "23"
+~e217 presentation 660,663,18,18 [occluded]
+~e218 presentation 660,671,18,18
+~e219 table-cell 678,654,57,43 "Mon24"
+~e220 push-button 679,654,56,42 "Monday 24 August 2026"
+~e221 text 692,661,27,15 "Mon"
+~e222 text 698,673,14,17 "24"
+~e223 presentation 717,663,18,18 [occluded]
+~e224 presentation 717,671,18,18
+~e225 table-cell 736,654,57,43 "Tue25"
+~e226 push-button 736,654,56,42 "Tuesday 25 August 2026"
+~e227 text 752,661,20,15 "Tue"
+~e228 text 756,673,14,17 "25"
+~e229 presentation 775,663,18,18 [occluded]
+~e230 presentation 775,671,18,18
+~e231 table-cell 793,654,57,43 "Wed26"
+~e232 push-button 794,654,56,42 "Wednesday 26 August 2026"
+~e233 text 808,661,24,15 "Wed"
+~e234 text 813,673,14,17 "26"
+~e235 presentation 832,663,18,18 [occluded]
+~e236 presentation 832,671,18,18
+~e237 table-cell 850,654,57,43 "Thu27"
+~e238 push-button 851,654,56,42 "Thursday 27 August 2026"
+~e239 text 866,661,22,15 "Thu"
+~e240 text 870,673,14,17 "27"
+~e241 presentation 889,663,18,18 [occluded]
+~e242 presentation 889,671,18,18
+~e243 table-cell 908,654,57,43 "Fri28"
+~e244 push-button 908,654,56,42 "Friday 28 August 2026"
+~e245 text 927,661,16,15 "Fri"
+~e246 text 927,673,14,17 "28"
+~e247 presentation 947,663,18,18 [occluded]
+~e248 presentation 947,671,18,18
+~e249 table-row 216,697,749,50
+~e250 table-cell 216,697,88,50 "A004"
+~e251 link 227,713,33,21 "Open Site A004 in a new tab"
+~e252 table-cell 304,697,88,50 "Map"
+~e253 push-button 315,709,68,25 "Map"
+~e254 presentation 326,714,16,16
+~e255 table-cell 392,697,57,50 "FF"
+~e256 push-button 393,697,56,49 "19 Aug 2026 - Site A004 is First-come, First-served"
+~e257 table-cell 449,697,57,50 "R"
+~e258 push-button 450,697,56,49 "20 Aug 2026 - Site A004 is Reserved"
+~e259 table-cell 507,697,57,50 "R"
+~e260 push-button 507,697,56,49 "21 Aug 2026 - Site A004 is Reserved"
+~e261 table-cell 564,697,57,50 "R"
+~e262 push-button 564,697,56,49 "22 Aug 2026 - Site A004 is Reserved"
+~e263 table-cell 621,697,57,50 "A"
+~e264 push-button 622,697,56,49 "23 Aug 2026 - Site A004 is available"
+~e265 table-cell 678,697,57,50 "A"
+~e266 push-button 679,697,56,49 "24 Aug 2026 - Site A004 is available"
+~e267 table-cell 736,697,57,50 "A"
+~e268 push-button 736,697,56,49 "25 Aug 2026 - Site A004 is available"
+~e269 table-cell 793,697,57,50 "A"
+~e270 push-button 794,697,56,49 "26 Aug 2026 - Site A004 is available"
+~e271 table-cell 850,697,57,50 "A"
+~e272 push-button 851,697,56,49 "27 Aug 2026 - Site A004 is available"
+~e273 table-cell 908,697,57,50 "A"
+~e274 push-button 908,697,56,49 "28 Aug 2026 - Site A004 is available"
+~e275 table-row 216,747,749,50
+~e276 table-cell 216,747,88,50 "A009"
+~e277 link 227,763,33,21 "Open Site A009 in a new tab"
+~e278 table-cell 304,747,88,50 "A"
+~e279 table-cell 392,747,57,50 "FF"
+~e280 push-button 393,747,56,49 "19 Aug 2026 - Site A009 is First-come, First-served"
+~e281 table-cell 449,747,57,50 "FF"
+~e282 push-button 450,747,56,49 "20 Aug 2026 - Site A009 is First-come, First-served"
+~e283 table-cell 507,747,57,50 "FF"
+~e284 push-button 507,747,56,49 "21 Aug 2026 - Site A009 is First-come, First-served"
+~e285 table-cell 564,747,57,50 "FF"
+~e286 push-button 564,747,56,49 "22 Aug 2026 - Site A009 is First-come, First-served"
+~e287 table-cell 621,747,57,50 "A"
+~e288 push-button 622,747,56,49 "23 Aug 2026 - Site A009 is available"
+~e289 table-cell 678,747,57,50 "A"
+~e290 push-button 679,747,56,49 "24 Aug 2026 - Site A009 is available"
+~e291 table-cell 736,747,57,50 "A"
+~e292 push-button 736,747,56,49 "25 Aug 2026 - Site A009 is available"
+~e293 table-cell 793,747,57,50 "A"
+~e294 push-button 794,747,56,49 "26 Aug 2026 - Site A009 is available"
+~e295 table-cell 850,747,57,50 "A"
+~e296 push-button 851,747,56,49 "27 Aug 2026 - Site A009 is available"
+~e297 table-cell 908,747,57,50 "A"
+~e298 push-button 908,747,56,49 "28 Aug 2026 - Site A009 is available"
+~e299 table-row 216,797,749,50
+~e300 table-cell 216,797,88,50 "A010"
+~e301 link 227,813,33,21 "Open Site A010 in a new tab"
+~e302 table-cell 304,797,88,50 "A"
+~e303 table-cell 392,797,57,50 "FF"
+~e304 push-button 393,797,56,49 "19 Aug 2026 - Site A010 is First-come, First-served"
+~e305 table-cell 449,797,57,50 "FF"
+~e306 push-button 450,797,56,49 "20 Aug 2026 - Site A010 is First-come, First-served"
+~e307 table-cell 507,797,57,50 "FF"
+~e308 push-button 507,797,56,49 "21 Aug 2026 - Site A010 is First-come, First-served"
+~e309 table-cell 564,797,57,50 "FF"
+~e310 push-button 564,797,56,49 "22 Aug 2026 - Site A010 is First-come, First-served"
+~e311 table-cell 621,797,57,50 "A"
+~e312 push-button 622,797,56,49 "23 Aug 2026 - Site A010 is available"
+~e313 table-cell 678,797,57,50 "A"
+~e314 push-button 679,797,56,49 "24 Aug 2026 - Site A010 is available"
+~e315 table-cell 736,797,57,50 "A"
+~e316 push-button 736,797,56,49 "25 Aug 2026 - Site A010 is available"
+~e317 table-cell 793,797,57,50 "A"
+~e318 push-button 794,797,56,49 "26 Aug 2026 - Site A010 is available"
+~e319 table-cell 850,797,57,50 "A"
+~e320 push-button 851,797,56,49 "27 Aug 2026 - Site A010 is available"
+~e321 table-cell 908,797,57,50 "A"
+~e322 push-button 908,797,56,49 "28 Aug 2026 - Site A010 is available"
+~e323 table-row 216,847,749,50
+~e324 table-cell 216,847,88,50 "A011"
+~e325 link 227,863,33,21 "Open Site A011 in a new tab"
+~e326 table-cell 304,847,88,50 "A"
+~e327 table-cell 392,847,57,50 "FF"
+~e328 push-button 393,847,56,49 "19 Aug 2026 - Site A011 is First-come, First-served"
+~e329 table-cell 449,847,57,50 "FF"
+~e330 push-button 450,847,56,49 "20 Aug 2026 - Site A011 is First-come, First-served"
+~e331 table-cell 507,847,57,50 "R"
+~e332 push-button 507,847,56,49 "21 Aug 2026 - Site A011 is Reserved"
+~e333 table-cell 564,847,57,50 "R"
+~e334 push-button 564,847,56,49 "22 Aug 2026 - Site A011 is Reserved"
+~e335 table-cell 621,847,57,50 "A"
+~e336 push-button 622,847,56,49 "23 Aug 2026 - Site A011 is available"
+~e337 table-cell 678,847,57,50 "A"
+~e338 push-button 679,847,56,49 "24 Aug 2026 - Site A011 is available"
+~e339 table-cell 736,847,57,50 "A"
+~e340 push-button 736,847,56,49 "25 Aug 2026 - Site A011 is available"
+~e341 table-cell 793,847,57,50 "A"
+~e342 push-button 794,847,56,49 "26 Aug 2026 - Site A011 is available"
+~e343 table-cell 850,847,57,50 "A"
+~e344 push-button 851,847,56,49 "27 Aug 2026 - Site A011 is available"
+~e345 table-cell 908,847,57,50 "A"
+~e346 push-button 908,847,56,49 "28 Aug 2026 - Site A011 is available"
+~e347 table-row 216,897,749,50
+~e348 table-cell 216,897,88,50 "A017"
+~e349 link 227,913,33,21 "Open Site A017 in a new tab"
+~e350 table-cell 304,897,88,50 "A"
+~e351 table-cell 392,897,57,50 "FF"
+~e352 push-button 393,897,56,49 "19 Aug 2026 - Site A017 is First-come, First-served"
+~e353 table-cell 449,897,57,50 "FF"
+~e354 push-button 450,897,56,49 "20 Aug 2026 - Site A017 is First-come, First-served"
+~e355 table-cell 507,897,57,50 "FF"
+~e356 push-button 507,897,56,49 "21 Aug 2026 - Site A017 is First-come, First-served"
+~e357 table-cell 564,897,57,50 "FF"
+~e358 push-button 564,897,56,49 "22 Aug 2026 - Site A017 is First-come, First-served"
+~e359 table-cell 621,897,57,50 "A"
+~e360 push-button 622,897,56,49 "23 Aug 2026 - Site A017 is available"
+~e361 table-cell 678,897,57,50 "A"
+~e362 push-button 679,897,56,49 "24 Aug 2026 - Site A017 is available"
+~e363 table-cell 736,897,57,50 "A"
+~e364 push-button 736,897,56,49 "25 Aug 2026 - Site A017 is available"
+~e365 table-cell 793,897,57,50 "A"
+~e366 push-button 794,897,56,49 "26 Aug 2026 - Site A017 is available"
+~e367 table-cell 850,897,57,50 "A"
+~e368 push-button 851,897,56,49 "27 Aug 2026 - Site A017 is available"
+~e369 table-cell 908,897,57,50 "A"
+~e370 push-button 908,897,56,49 "28 Aug 2026 - Site A017 is available"
+~e371 table-row 216,947,749,50
+~e372 table-cell 216,947,88,50 "A018"
+~e373 link 227,963,33,21 "Open Site A018 in a new tab"
+~e374 table-cell 304,947,88,50 "A"
+~e375 table-cell 392,947,57,50 "FF"
+~e376 push-button 393,947,56,49 "19 Aug 2026 - Site A018 is First-come, First-served"
+~e377 table-cell 449,947,57,50 "FF"
+~e378 push-button 450,947,56,49 "20 Aug 2026 - Site A018 is First-come, First-served"
+~e379 table-cell 507,947,57,50 "FF"
+~e380 push-button 507,947,56,49 "21 Aug 2026 - Site A018 is First-come, First-served"
+~e381 table-cell 564,947,57,50 "FF"
+~e382 push-button 564,947,56,49 "22 Aug 2026 - Site A018 is First-come, First-served"
+~e383 table-cell 621,947,57,50 "A"
+~e384 push-button 622,947,56,49 "23 Aug 2026 - Site A018 is available"
+~e385 table-cell 678,947,57,50 "A"
+~e386 push-button 679,947,56,49 "24 Aug 2026 - Site A018 is available"
+~e387 table-cell 736,947,57,50 "A"
+~e388 push-button 736,947,56,49 "25 Aug 2026 - Site A018 is available"
+~e389 table-cell 793,947,57,50 "A"
+~e390 push-button 794,947,56,49 "26 Aug 2026 - Site A018 is available"
+~e391 table-cell 850,947,57,50 "A" [occluded]
+~e392 push-button 851,947,56,49 "27 Aug 2026 - Site A018 is available" [occluded]
+~e393 table-cell 908,947,57,50 "A"
+~e394 push-button 908,947,56,49 "28 Aug 2026 - Site A018 is available"
+~e395 table-row 216,997,749,50 [occluded]
+~e396 table-cell 216,997,88,50 "A019" [occluded]
+~e397 link 227,1013,33,21 "Open Site A019 in a new tab" [occluded]
+~e398 table-cell 304,997,88,50 "A" [occluded]
+~e399 table-cell 392,997,57,50 "FF" [occluded]
+~e400 push-button 393,997,56,49 "19 Aug 2026 - Site A019 is First-come, First-served" [occluded]
+~e401 table-cell 449,997,57,50 "FF" [occluded]
+~e402 push-button 450,997,56,49 "20 Aug 2026 - Site A019 is First-come, First-served" [occluded]
+~e403 table-cell 507,997,57,50 "R" [occluded]
+~e404 push-button 507,997,56,49 "21 Aug 2026 - Site A019 is Reserved" [occluded]
+~e405 table-cell 564,997,57,50 "R" [occluded]
+~e406 push-button 564,997,56,49 "22 Aug 2026 - Site A019 is Reserved" [occluded]
+~e407 table-cell 621,997,57,50 "A" [occluded]
+~e408 push-button 622,997,56,49 "23 Aug 2026 - Site A019 is available" [occluded]
+~e409 table-cell 678,997,57,50 "A" [occluded]
+~e410 push-button 679,997,56,49 "24 Aug 2026 - Site A019 is available" [occluded]
+~e411 table-cell 736,997,57,50 "A" [occluded]
+~e412 push-button 736,997,56,49 "25 Aug 2026 - Site A019 is available" [occluded]
+~e413 table-cell 793,997,57,50 "A" [occluded]
+~e414 push-button 794,997,56,49 "26 Aug 2026 - Site A019 is available" [occluded]
+~e415 table-cell 850,997,57,50 "A" [occluded]
+~e416 push-button 851,997,56,49 "27 Aug 2026 - Site A019 is available" [occluded]
+~e417 table-cell 908,997,57,50 "A" [occluded]
+~e418 push-button 908,997,56,49 "28 Aug 2026 - Site A019 is available" [occluded]
+~e419 table-row 216,1047,749,50 [occluded]
+~e420 table-cell 216,1047,88,50 "A020" [occluded]
+~e421 link 227,1063,33,21 "Open Site A020 in a new tab" [occluded]
+~e422 table-cell 304,1047,88,50 "A" [occluded]
+~e423 table-cell 392,1047,57,50 "FF" [occluded]
+~e424 push-button 393,1047,56,49 "19 Aug 2026 - Site A020 is First-come, First-served" [occluded]
+~e425 table-cell 449,1047,57,50 "FF" [occluded]
+~e426 push-button 450,1047,56,49 "20 Aug 2026 - Site A020 is First-come, First-served" [occluded]
+~e427 table-cell 507,1047,57,50 "FF" [occluded]
+~e428 push-button 507,1047,56,49 "21 Aug 2026 - Site A020 is First-come, First-served" [occluded]
+~e429 table-cell 564,1047,57,50 "R" [occluded]
+~e430 push-button 564,1047,56,49 "22 Aug 2026 - Site A020 is Reserved" [occluded]
+~e431 table-cell 621,1047,57,50 "A" [occluded]
+~e432 push-button 622,1047,56,49 "23 Aug 2026 - Site A020 is available" [occluded]
+~e433 table-cell 678,1047,57,50 "A" [occluded]
+~e434 push-button 679,1047,56,49 "24 Aug 2026 - Site A020 is available" [occluded]
+~e435 table-cell 736,1047,57,50 "A" [occluded]
+~e436 push-button 736,1047,56,49 "25 Aug 2026 - Site A020 is available" [occluded]
+~e437 table-cell 793,1047,57,50 "A" [occluded]
+~e438 push-button 794,1047,56,49 "26 Aug 2026 - Site A020 is available" [occluded]
+~e439 table-cell 850,1047,57,50 "A" [occluded]
+~e440 push-button 851,1047,56,49 "27 Aug 2026 - Site A020 is available" [occluded]
+~e441 table-cell 908,1047,57,50 "A" [occluded]
+~e442 push-button 908,1047,56,49 "28 Aug 2026 - Site A020 is available" [occluded]
+~e443 [offscreen] table-row 146,1680,749,50
+~e444 [offscreen] table-cell 146,1680,88,50 "A022"
+~e445 [offscreen] link 157,1696,33,21 "Open Site A022 in a new tab"
+~e446 [offscreen] table-cell 234,1680,88,50 "A"
+~e447 [offscreen] table-cell 322,1680,57,50 "FF"
+~e448 [offscreen] push-button 323,1680,56,49 "19 Aug 2026 - Site A022 is First-come, First-served"
+~e449 [offscreen] table-cell 379,1680,57,50 "FF"
+~e450 [offscreen] push-button 380,1680,56,49 "20 Aug 2026 - Site A022 is First-come, First-served"
+~e451 [offscreen] table-cell 437,1680,57,50 "FF"
+~e452 [offscreen] push-button 437,1680,56,49 "21 Aug 2026 - Site A022 is First-come, First-served"
+~e453 [offscreen] table-cell 494,1680,57,50 "FF"
+~e454 [offscreen] push-button 494,1680,56,49 "22 Aug 2026 - Site A022 is First-come, First-served"
+~e455 [offscreen] table-cell 551,1680,57,50 "A"
+~e456 [offscreen] push-button 552,1680,56,49 "23 Aug 2026 - Site A022 is available"
+~e457 [offscreen] table-cell 608,1680,57,50 "A"
+~e458 [offscreen] push-button 609,1680,56,49 "24 Aug 2026 - Site A022 is available"
+~e459 [offscreen] table-cell 666,1680,57,50 "A"
+~e460 [offscreen] push-button 666,1680,56,49 "25 Aug 2026 - Site A022 is available"
+~e461 [offscreen] table-cell 723,1680,57,50 "A"
+~e462 [offscreen] push-button 724,1680,56,49 "26 Aug 2026 - Site A022 is available"
+~e463 [offscreen] table-cell 780,1680,57,50 "A"
+~e464 [offscreen] push-button 781,1680,56,49 "27 Aug 2026 - Site A022 is available"
+~e465 [offscreen] table-cell 838,1680,57,50 "A"
+~e466 [offscreen] push-button 838,1680,56,49 "28 Aug 2026 - Site A022 is available"
+~e467 [offscreen] table-row 146,1730,749,50
+~e468 [offscreen] table-cell 146,1730,88,50 "A025"
+~e469 [offscreen] link 157,1746,33,21 "Open Site A025 in a new tab"
+~e470 [offscreen] table-cell 234,1730,88,50 "A"
+~e471 [offscreen] table-cell 322,1730,57,50 "FF"
+~e472 [offscreen] push-button 323,1730,56,49 "19 Aug 2026 - Site A025 is First-come, First-served"
+~e473 [offscreen] table-cell 379,1730,57,50 "FF"
+~e474 [offscreen] push-button 380,1730,56,49 "20 Aug 2026 - Site A025 is First-come, First-served"
+~e475 [offscreen] table-cell 437,1730,57,50 "FF"
+~e476 [offscreen] push-button 437,1730,56,49 "21 Aug 2026 - Site A025 is First-come, First-served"
+~e477 [offscreen] table-cell 494,1730,57,50 "FF"
+~e478 [offscreen] push-button 494,1730,56,49 "22 Aug 2026 - Site A025 is First-come, First-served"
+~e479 [offscreen] table-cell 551,1730,57,50 "A"
+~e480 [offscreen] push-button 552,1730,56,49 "23 Aug 2026 - Site A025 is available"
+~e481 [offscreen] table-cell 608,1730,57,50 "A"
+~e482 [offscreen] push-button 609,1730,56,49 "24 Aug 2026 - Site A025 is available"
+~e483 [offscreen] table-cell 666,1730,57,50 "A"
+~e484 [offscreen] push-button 666,1730,56,49 "25 Aug 2026 - Site A025 is available"
+~e485 [offscreen] table-cell 723,1730,57,50 "A"
+~e486 [offscreen] push-button 724,1730,56,49 "26 Aug 2026 - Site A025 is available"
+~e487 [offscreen] table-cell 780,1730,57,50 "A"
+~e488 [offscreen] push-button 781,1730,56,49 "27 Aug 2026 - Site A025 is available"
+~e489 [offscreen] table-cell 838,1730,57,50 "A"
+~e490 [offscreen] push-button 838,1730,56,49 "28 Aug 2026 - Site A025 is available"
+~e491 [offscreen] table-row 146,1780,749,50
+~e492 [offscreen] table-cell 146,1780,88,50 "B027"
+~e493 [offscreen] link 157,1796,33,21 "Open Site B027 in a new tab"
+~e494 heading 212,1044,1,1 "Availability Table Bottom Menu" [occluded]
+~e495 push-button 236,1024,214,40 "Availability Alert Button Set Availability Alert"
+~e496 presentation 261,1032,24,24
+~e497 text 288,1041,161,19 "Availability Alert Button"
+~e498 text 289,1034,136,19 "Set Availability Alert"
+~e499 paragraph 476,1032,292,24 "No Campsites Selected"
+~e500 push-button 831,1024,127,40 "Add to Cart"
+~e501 push-button 868,938,50,50 "Back to top"
+~e502 presentation 881,943,24,24
+~e503 text 882,962,22,15 "TOP"
+~e504 region 986,569,774,886 "Map"
+~e505 region 986,569,774,886 "Map"
+~e506 push-button 996,579,29,29 "Zoom in"
+~e507 [pixels] image 996,579,29,29 alt=Zoom in
+~e508 push-button 996,608,29,29 "Zoom out"
+~e509 [pixels] image 996,609,29,28 alt=Zoom out
+~e510 push-button 996,637,29,29 "Reset bearing to north"
+~e511 [pixels] image 996,638,29,28 alt=Reset bearing to north
+~e512 push-button 996,676,29,29 "Reset map position"
+~e513 presentation 998,679,24,24
+~e514 push-button 996,715,29,29 "3D"
+~e515 push-button 1721,579,29,29
+~e516 push-button 1721,579,29,29 "Toggle fullscreen"
+~e517 push-button 1690,618,60,30 "Toggle Map View"
+~e518 text 1707,624,25,17 "Map"
+~e519 push-button 1690,648,60,30 "Toggle Satellite View"
+~e520 text 1697,654,44,17 "Satellite"
+~e521 push-button 1690,678,60,30 "Show Layer View Options"
+~e522 text 1701,684,36,17 "Layers"
+e523 region 70,114,1835,12 "Notifications: 0" [occluded]
+~e524 [offscreen] +2597 more lines truncated (scroll to reveal)
+
+(3 earlier view(s) omitted: history budget)
+
+ACTION SCHEMA — reply with exactly ONE JSON object and nothing else.
+Targets are the eN ids from the view; the driver resolves all geometry.
+  {"action":"click","target":"e17"}                    activate element e17
+  {"action":"set_value","target":"e17","value":"132"}  set a field's value
+  {"action":"toggle","target":"e18","to":true}         set a toggle/checkbox
+  {"action":"type","text":"hello"}                     type into current focus
+  {"action":"key","keys":"ctrl+alt+t"}                 key or chord (pyautogui
+                                                       names, joined with +)
+  {"action":"scroll","direction":"down"}               scroll the view ("up"
+                                                       or "down", fixed step)
+  {"action":"scroll_to","target":"e21"}                bring an [offscreen]
+                                                       element into view
+  {"action":"crop","target":"e21"}                     get the pixels of a
+                                                       [pixels] line (costs
+                                                       one step)
+  {"action":"wait"}    the screen is still loading, wait and re-observe
+  {"action":"done"}    the task is fully accomplished
+  {"action":"fail"}    the task is impossible or cannot be recovered
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

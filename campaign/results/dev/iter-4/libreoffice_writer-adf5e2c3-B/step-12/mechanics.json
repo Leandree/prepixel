@@ -1,0 +1,31 @@
+{
+ "channel": "atspi+uno",
+ "cdp": {
+  "used": false,
+  "reason": "no chromium application in the tree"
+ },
+ "uno": {
+  "used": true,
+  "ms": 156,
+  "rect": [
+   70,
+   246,
+   1779,
+   788
+  ],
+  "doc": "text",
+  "doc_role": "document-text",
+  "atspi_records_replaced": 6,
+  "uno_records": 37,
+  "url": "file:///home/user/Desktop/Essay_Writing_English_for_uni.docx"
+ },
+ "history_views": 3,
+ "history_views_dropped": 8,
+ "memo_in": true,
+ "memo_out": true,
+ "action_kind": "key",
+ "rung": "kbd",
+ "settle_ms": 4106,
+ "settle_captures": 2,
+ "guard_ms": 40
+}

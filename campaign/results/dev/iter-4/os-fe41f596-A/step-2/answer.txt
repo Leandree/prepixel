@@ -1,0 +1,3 @@
+```json
+{"action": "import pyautogui, time; pyautogui.click(48, 13); time.sleep(2); pyautogui.write('settings'); time.sleep(2); pyautogui.press('enter'); time.sleep(3)", "memo": "Retried Activities search (first attempt fell back to desktop). Clicked Activities, typed 'settings', pressed Enter. Next: verify GNOME Settings window opened, then click 'Power' in left sidebar and toggle 'Show Battery Percentage'."}
+```

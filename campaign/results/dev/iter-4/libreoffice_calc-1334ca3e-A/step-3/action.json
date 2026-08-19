@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(777, 582); pyautogui.click(1193, 662)", "memo": "Clicked 100% radio in Zoom dialog then OK. Next: verify status bar bottom-right shows 100% and cells are smaller; if dialog still open or zoom unchanged, retry via View > Zoom."}

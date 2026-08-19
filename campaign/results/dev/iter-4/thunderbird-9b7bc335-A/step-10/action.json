@@ -1,0 +1,1 @@
+{"action": "import pyautogui; pyautogui.click(1376, 321)", "memo": "Filter 'Forward to gmail' exists & enabled for anonym-x2024@outlook.com. Closed Message Filters window. Next: confirm window closed and main Thunderbird visible -> then DONE (filter saved to msgFilterRules.dat locally, online account untouched)."}

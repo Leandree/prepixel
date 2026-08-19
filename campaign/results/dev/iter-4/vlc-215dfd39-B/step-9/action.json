@@ -1,0 +1,1 @@
+{"action": "click", "target": "e59", "memo": "Qt selected but right pane still shows stale 'Advanced settings' widgets. Re-clicking Qt (e59) to force panel refresh. Target: checkbox 'Display background cone or art' -> uncheck -> Save (e64). If pane stays stale, try clicking e58 then arrow-key Down to Qt."}

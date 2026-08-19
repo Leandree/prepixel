@@ -1,0 +1,1 @@
+{"action": "click", "target": "e25", "memo": "Task: save both open Lil'Log tabs as PDF to /home/user/Documents/Blog, named by title. Tab1=LLM Powered Autonomous Agents, Tab2(current)=Thinking about High-Quality Human Data. Destination was 'Save as PDF'; just clicked Save -> expect GTK save dialog: set filename 'Thinking about High-Quality Human Data.pdf' and path."}

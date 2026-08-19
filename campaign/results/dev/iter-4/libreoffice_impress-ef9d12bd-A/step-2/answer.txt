@@ -1,0 +1,5 @@
+The View menu is open and **Slide Pane** (y≈353) is unchecked, confirming it's hidden. Clicking it now.
+
+```json
+{"action": "import pyautogui; pyautogui.click(216, 353)", "memo": "Clicked View > Slide Pane to re-enable the left slide panel. Next: verify slide thumbnails panel appears on the left of the editing area; if visible, DONE."}
+```

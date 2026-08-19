@@ -1,0 +1,41 @@
+You are an agent controlling an Ubuntu desktop (screen 1920x1080) to
+accomplish a task. You observe the screen and emit ONE action per step.
+
+TASK: Find the Monthly forecast for Manchester, GB for this month
+
+STEP 8 of 15.
+
+PREVIOUS ACTIONS (oldest first):
+1. import pyautogui; pyautogui.click(600, 90); pyautogui.hotkey('ctrl', 'a'); pyautogui.write('https://openweathermap.org/find?q=Manchester%2CGB
+')
+2. import pyautogui, time; pyautogui.click(370, 249); time.sleep(1); pyautogui.click(1889, 139); time.sleep(0.5); pyautogui.hotkey('ctrl', 'l'); time.sleep(0.5); pyautogui.write('https://openweathermap.org/find?q=Manchester%2CGB
+')
+3. import pyautogui, time; pyautogui.click(370, 249); time.sleep(1); pyautogui.click(1889, 139); time.sleep(1); pyautogui.click(230, 944)
+4. import pyautogui, time; pyautogui.click(940, 286); time.sleep(1); pyautogui.write('Manchester'); time.sleep(2); pyautogui.press('enter')
+5. WAIT
+6. import pyautogui, time; pyautogui.click(546, 338); time.sleep(3)
+7. import pyautogui, time; pyautogui.click(977, 230); time.sleep(3)
+
+YOUR NOTE FROM THE PREVIOUS STEP:
+Step7: on AccuWeather Manchester GB page (accuweather.com/en/gb/manchester/m15-6/weather-forecast/329260). Clicked MONTHLY tab at (977,230). Next: verify monthly calendar for August 2026 loads; scroll down to see the month grid. Task = view monthly forecast, then DONE.
+
+The current screen is the screenshot image at:
+/home/leandre/dev/osworld-dev-iter4/chrome-368d9ba4-A/_pixels/step-8/screenshot.png
+Read it (as an image) before deciding. Previous screenshots (up to 3, oldest
+first) are at:
+/home/leandre/dev/osworld-dev-iter4/chrome-368d9ba4-A/_pixels/step-5/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/chrome-368d9ba4-A/_pixels/step-6/screenshot.png
+/home/leandre/dev/osworld-dev-iter4/chrome-368d9ba4-A/_pixels/step-7/screenshot.png
+
+ACTION SPACE — reply with exactly ONE JSON object and nothing else:
+  {"action": "<python pyautogui code>"}   one or more pyautogui calls, e.g.
+      "import pyautogui; pyautogui.click(123, 456)"
+      "import pyautogui; pyautogui.write('hello'); pyautogui.press('enter')"
+  {"action": "WAIT"}    the screen is still loading, wait and re-observe
+  {"action": "DONE"}    the task is fully accomplished
+  {"action": "FAIL"}    the task is impossible or cannot be recovered
+Coordinates are absolute screen pixels.
+  Every reply may also carry "memo": a short note to your next step (it is
+  passed back to you verbatim, truncated to 300 characters).
+
+Use only what this prompt gives you.

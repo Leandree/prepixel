@@ -1,0 +1,1 @@
+{"action":"click","target":"e103","memo":"Selected One Way (e103). Next: click date field e105 (Flight Date Field) -> pick Aug 20 2026 -> done -> Find Flights (e112). Note ids shift each step; find by label."}

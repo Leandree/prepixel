@@ -1,0 +1,5 @@
+The Impress window (`saa-format-guide.pptx`) is open but its content area is still blank — no menu bar, toolbars, or slide panel have painted yet. I'll wait for it to finish loading before acting.
+
+```json
+{"action": "WAIT", "memo": "Task: make slide number text red in saa-format-guide.pptx (Impress). Step 1: window open but UI blank/still loading. Plan once loaded: Insert > Header and Footer to confirm slide number is on, then View > Master Slide, select the slide-number placeholder field, and set font color to red; then View > Normal and Ctrl+S (Keep current format)."}
+```

@@ -1,0 +1,5 @@
+The "Content For This Game" section is now visible with the **"Add all DLC to Cart"** button (8,19€ total for the 2 DLC). Clicking it.
+
+```json
+{"action": "import pyautogui, time; pyautogui.click(1087, 375); time.sleep(3)", "memo": "Step7: clicked 'Add all DLC to Cart' (1087,375) on /app/570. 2 DLC: Soundtrack 8,19EUR + Remixes EP Free. Next: verify cart shows the DLC (a cart flyout/page or 'In Cart' state). If nothing happened, re-click or open store.steampowered.com/cart to confirm."}
+```

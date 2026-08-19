@@ -1,0 +1,5 @@
+List layout is now active — I need to scroll down to see the campsite table with the "Next Available" column.
+
+```json
+{"action": "import pyautogui; pyautogui.scroll(-500, x=960, y=700)", "memo": "Step9: List layout active on Diamond page (recreation.gov/camping/campgrounds/233869). Scrolled down 500 to reveal campsite table. Next: read 'Next Available' column values for each site."}
+```

@@ -1,0 +1,5 @@
+Cookie banner is gone and the booking widget is fully visible. Now clicking the "From" field (NTE / Nantes) to change the origin.
+
+```json
+{"action": "import pyautogui; pyautogui.click(479, 297)", "memo": "Clicked From field (NTE, 479,297) to open origin search. Next: type 'JFK' and pick 'New York-Kennedy (JFK)' from suggestions. Then To field (~636,297) type ORD -> Chicago O'Hare. Trip type Round Trip dropdown (851,297) -> One Way. Date: tomorrow = Aug 21 2026 (system clock Aug 20). Then Find Flights (1487,297)."}
+```

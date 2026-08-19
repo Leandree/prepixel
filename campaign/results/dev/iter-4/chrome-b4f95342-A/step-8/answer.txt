@@ -1,0 +1,5 @@
+The page is back at top with the Campsite List toggle visible. I'll switch to the list view, which shows the "Next Available" column.
+
+```json
+{"action": "import pyautogui; pyautogui.click(282, 1048)", "memo": "Step8: Clicked list-view toggle (282,1048) on Diamond page to reveal 'Next Available' column. Next: scroll down ~500 to read the availability table listing each site's Next Available date."}
+```

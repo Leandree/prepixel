@@ -1,0 +1,168 @@
+e1 toggle-button 0,0,99,27 "Activities" state=checked:false
+e2 menu 99,0,162,27 "Google Chrome"
+e3 menu 906,0,178,27 "Aug 20 02‎∶34"
+e4 menu 1814,0,106,27 "System"
+e5 push-button 0,840,70,8
+e6 push-button 62,33,8,815
+e7 push-button 0,33,70,64 "Google Chrome"
+e8 push-button 0,101,70,64 "Thunderbird Mail"
+e9 push-button 0,169,70,64 "Visual Studio Code"
+e10 push-button 0,237,70,64 "VLC media player"
+e11 push-button 0,305,70,64 "LibreOffice Writer"
+e12 push-button 0,373,70,64 "LibreOffice Calc"
+e13 push-button 0,441,70,64 "LibreOffice Impress"
+e14 push-button 0,509,70,64 "GNU Image Manipulation Program"
+e15 push-button 0,577,70,64 "Files"
+e16 push-button 0,645,70,64 "Ubuntu Software"
+e17 push-button 0,713,70,64 "Help"
+e18 push-button 0,784,70,64 "Trash"
+e19 toggle-button 0,1010,70,70 "Show Applications" state=checked:false
+e20 push-button 1802,27,30,35 "Minimise"
+e21 push-button 1842,27,30,35 "Restore"
+e22 push-button 1882,27,38,35 "Close"
+e23 push-button 76,27,28,41 "Search tabs"
+e24 page-tab 98,27,256,41 "Diamond, Uinta-Wasatch-Cache National Forest - Recreation.gov" state=selected
+e25 push-button 312,33,28,28 "Close"
+e26 push-button 348,27,28,41 "New Tab"
+e27 push-button 70,73,39,34 "Back"
+e28 push-button 111,73,34,34 "Forward"
+e29 push-button 147,73,34,34 "Reload"
+e30 push-button 195,78,24,24 "View site information"
+e31 entry 227,78,1386,24 "Address and search bar"
+e32 push-button 1621,78,24,24 "Install Recreation.gov"
+e33 push-button 1653,78,24,24 "Bookmark this tab"
+e34 push-button 1698,73,34,34 "You"
+e35 push-button 1737,73,183,34 "Relaunch to update"
+e36 link 918,108,139,22 "Skip to Main Content"
+~e37 [offscreen] text 589,1321,2,2 "Campsite availability"
+e38 status 409,114,1157,170
+e39 text 463,135,1049,71 "You are using an outdated browser not supported by Recreation.gov. This may prevent you from making purchases on the site. Updating will provide you with better security, speed, and the best experience on the site. Alternatively, you may switch to an up-to-date version of another browser (e.g. Firefox, Safari, or Edge)."
+e40 push-button 849,228,94,40 "Ignore"
+e41 link 960,228,166,40 "Upgrade Browser"
+e42 text 920,111,113,15 "Skip to Main Content"
+e43 presentation 1036,109,19,19 [occluded]
+e44 [pixels] image 94,291,16,11
+e45 text 118,287,286,17 "An official website of the United States government"
+e46 push-button 412,288,139,16 "Here’s how you know"
+e47 presentation 535,288,16,16
+e48 link 94,330,240,35 "Recreation.gov Homepage"
+e49 [pixels] image 94,330,240,35
+e50 label 1376,327,1,1 "Search Recreation.gov" [occluded]
+e51 presentation 1385,338,20,20
+e52 combo-box 1377,328,248,40 "Search Recreation.gov"
+e53 link 1649,332,40,32 "Help"
+e54 push-button 1713,332,104,32 "Sign Up or Log In"
+e55 text 1713,338,104,19 "Sign Up / Log In"
+e56 push-button 1841,328,40,40 "Navigation Menu"
+e57 presentation 1845,332,32,32
+~e58 [pixels] image 70,388,455,340 alt=Diamond Campground
+~e59 [pixels] image 533,388,910,340 alt=Diamond Campground
+~e60 [pixels] image 1450,388,455,340 alt=Diamond Campground 2
+~e61 push-button 1631,680,113,32 "View Photos"
+~e62 presentation 1642,688,16,16
+~e63 push-button 216,768,176,24 "Back to Search Results"
+~e64 presentation 216,768,24,24
+~e65 presentation 220,826,16,16
+~e66 text 238,826,81,15 "Campground"
+~e67 heading 216,844,555,36 "Diamond"
+~e68 link 216,888,216,21 "Uinta-Wasatch-Cache National Forest"
+~e69 text 473,889,27,17 "Near"
+~e70 text 503,889,105,17 "Spanish Fork, Utah"
+~e71 push-button 216,927,129,20 "(214)214 reviews"
+~e72 [pixels] image 216,927,96,20 alt=4.3 stars
+~e73 presentation 216,927,20,20
+~e74 presentation 235,927,20,20
+~e75 presentation 254,927,20,20
+~e76 presentation 273,927,20,20
+~e77 presentation 292,927,20,20
+~e78 text 316,927,4,17 "("
+~e79 text 320,927,21,17 "214"
+~e80 text 340,927,4,17 ")"
+~e81 text 315,926,68,17 "214 reviews"
+~e82 push-button 385,927,113,20 "Some Coverage"
+~e83 [pixels] image 385,928,18,18 alt=Mobile signal rating 2
+~e84 push-button 540,926,81,22 "Add To Favorites"
+~e85 presentation 541,927,20,20
+~e86 text 565,927,55,19 "Favorite"
+~e87 push-button 662,925,141,24 "Reservation Rules"
+~e88 presentation 662,929,16,16
+~e89 text 216,983,884,43 "Diamond Campground is located among shady cottonwoods and willow at an elevation of 5,200 feet. The family sites are located just 15 miles from Spanish Fork and the group sites are 2-3 miles further. Visitors enjoy exploring local trails and relaxing along the stream."
+~e90 link 1130,981,629,83 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e91 [pixels] image 1146,995,31,55
+~e92 [pixels] image 1146,995,31,55 alt=Scan & Pay
+~e93 paragraph 1193,989,479,67 "This campground uses Scan & Pay to accept on-site payment through the Recreation.gov mobile app. Download the app ahead of your visit to arrive ready. Learn More"
+~e94 text 1193,990,30,19 "This"
+~e95 text 1223,990,84,19 "campground"
+~e96 text 1307,990,37,19 "uses"
+~e97 text 1344,990,68,19 "Scan & Pay"
+~e98 text 1412,990,254,19 "to accept on-site payment through the"
+~e99 text 1193,1012,97,19 "Recreation.gov"
+~e100 text 1290,1012,81,19 "mobile app."
+~e101 text 1376,1012,124,19 "Download the app"
+~e102 text 1193,1012,450,41 "ahead of your visit to arrive ready."
+~e103 text 1279,1034,78,19 "Learn More"
+~e104 presentation 1361,1033,24,24
+~e105 [pixels] image 1680,977,91,99
+~e106 [pixels] image 1680,977,91,92 alt=Scan & Pay on Recreation.gov app
+~e107 [offscreen] page-tab-list 146,1006,1544,51
+~e108 [offscreen] page-tab 146,1006,271,51 "Campsite List" state=selected
+~e109 [offscreen] page-tab 424,1006,285,51 "Seasons & Fees"
+~e110 [offscreen] page-tab 717,1006,332,51 "Rules & Cancellations"
+~e111 [offscreen] page-tab 1057,1006,318,51 "Facility Information"
+~e112 [offscreen] page-tab 1383,1006,307,51 "Ratings & Reviews"
+~e113 [offscreen] tabpanel 146,1076,1544,3742 "Campsite List"
+~e114 [offscreen] push-button 154,1084,40,40 "Grid layout"
+~e115 [offscreen] presentation 162,1092,24,24
+~e116 [offscreen] push-button 194,1084,40,40 "List layout, screen reader preferred"
+~e117 [offscreen] presentation 201,1092,24,24
+~e118 [offscreen] text 241,1085,88,43 "Campground Calendar"
+~e119 [offscreen] group 242,1084,288,40 "Campground Calendar"
+~e120 [offscreen] push-button 243,1085,32,38 "Calendar"
+~e121 [offscreen] presentation 250,1095,18,18
+~e122 [offscreen] presentation 279,1092,93,24
+~e123 [offscreen] spin-button 279,1092,21,24 "day, Start Date," value="dd"
+~e124 [offscreen] text 281,1094,17,19 "dd"
+~e125 [offscreen] text 300,1094,5,19 "/"
+~e126 [offscreen] spin-button 305,1092,30,24 "month, Start Date," value="mm"
+~e127 [offscreen] text 307,1094,26,19 "mm"
+~e128 [offscreen] text 335,1094,5,19 "/"
+~e129 [offscreen] spin-button 340,1092,32,24 "year, Start Date," value="yyyy"
+~e130 [offscreen] text 342,1094,28,19 "yyyy"
+~e131 [offscreen] presentation 380,1094,20,20
+~e132 [offscreen] presentation 408,1092,93,24
+~e133 [offscreen] spin-button 408,1092,21,24 "day, End Date," value="dd"
+~e134 [offscreen] text 410,1094,17,19 "dd"
+~e135 [offscreen] text 429,1094,5,19 "/"
+~e136 [offscreen] spin-button 434,1092,30,24 "month, End Date," value="mm"
+~e137 [offscreen] text 436,1094,26,19 "mm"
+~e138 [offscreen] text 464,1094,5,19 "/"
+~e139 [offscreen] spin-button 469,1092,32,24 "year, End Date," value="yyyy"
+~e140 [offscreen] text 471,1094,28,19 "yyyy"
+~e141 [offscreen] label 537,1083,1,1 "Search campsites"
+~e142 [offscreen] presentation 546,1094,20,20
+~e143 [offscreen] entry 538,1084,400,40 "Search campsites"
+~e144 [offscreen] push-button 946,1084,40,40 "Expand availability table"
+~e145 [offscreen] presentation 954,1092,24,24
+~e146 [offscreen] push-button 146,1160,210,40 "Sort: Availability, Flexible"
+~e147 [offscreen] presentation 155,1172,16,16
+~e148 [offscreen] text 175,1170,39,19 "Sort:"
+~e149 [offscreen] text 213,1170,133,19 "Availability, Flexible"
+~e150 [offscreen] push-button 364,1160,80,40 "Filters"
+~e151 [offscreen] presentation 373,1172,16,16
+~e152 [offscreen] text 393,1170,42,19 "Filters"
+~e153 [offscreen] push-button 452,1160,40,40 "Legend"
+~e154 [offscreen] presentation 460,1168,24,24
+~e155 [offscreen] push-button 500,1160,40,40 "Refresh Table"
+~e156 [offscreen] presentation 508,1168,24,24
+~e157 [offscreen] push-button 548,1160,40,40 "Availability Alert Button"
+~e158 [offscreen] presentation 556,1168,24,24
+~e159 [offscreen] push-button 700,1160,56,40 "Go Back 5 Days"
+~e160 [offscreen] presentation 718,1166,16,16
+~e161 [offscreen] text 709,1179,38,17 "5 Days"
+~e162 [offscreen] push-button 764,1160,68,40 "Next Available"
+~e163 [offscreen] push-button 840,1160,56,40 "Go Forward 5 Days"
+~e164 [offscreen] text 849,1179,38,17 "5 Days"
+~e165 [offscreen] presentation 862,1166,16,16
+~e166 [offscreen] text 520,1208,59,38 "Campsite availability"
+e167 region 70,114,1835,12 "Notifications: 0" [occluded]
+~e168 [offscreen] +3039 more lines truncated (scroll to reveal)

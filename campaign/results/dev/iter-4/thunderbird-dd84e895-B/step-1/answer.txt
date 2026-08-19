@@ -1,0 +1,3 @@
+I need to open Thunderbird first to access the local Bills folder.
+
+{"action":"click","target":"e10","memo":"Opened Thunderbird from dock. Next: find local folder 'Bills', select all emails (Ctrl+A) in message list, then add star (press 'S' or Message>Mark>As Starred)."}

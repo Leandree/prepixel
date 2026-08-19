@@ -1,0 +1,3 @@
+```json
+{"action":"click","target":"e358","memo":"Selecting shape 3 (<number>) on slide 1 to (re)apply red. NEXT: click e109 Font Color (now defaults Red) -> ctrl+s -> Enter (Keep current format) -> done."}
+```
