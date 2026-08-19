@@ -80,6 +80,15 @@ ANSWER_MODEL = "claude-opus-5[1m]"
 
 OSWORLD_IMAGE = "happysixd/osworld-docker"
 
+# The VM image, IDENTICAL in both conditions by construction — an
+# environment condition of the iteration, like --strict-mcp-config. From
+# iteration 4 on this is the UNO-baked copy (bake_uno_image.py: the
+# LibreOffice profile carries ooSetupConnectionURL, so every soffice a task
+# setup launches is already listening; proven against a real task setup and
+# evaluator in probe_uno_bake_evaluator.py before any counted run).
+VM_IMAGE = os.path.expanduser(
+    "~/dev/OSWorld/docker_vm_data/Ubuntu-uno.qcow2")
+
 print_lock = threading.Lock()
 reap_lock = threading.Lock()
 # Cell start times of the cells currently in flight, keyed by worker.
@@ -175,7 +184,7 @@ def pin_driver(runs):
                            [os.path.join(HERE, f) for f in PINNED],
                            capture_output=True, text=True).stdout.strip()
     json.dump({"commit": head, "uncommitted_changes": dirty or None,
-               "files": list(PINNED)},
+               "files": list(PINNED), "vm_image": VM_IMAGE},
               open(os.path.join(d, "PINNED.json"), "w"), indent=1)
     if dirty:
         say("WARNING: pinned driver has uncommitted changes:\n%s" % dirty)
@@ -207,6 +216,7 @@ def run_cell(cell, runs, driver_dir, max_steps, wid=0):
     env = dict(os.environ,
                CAMPAIGN_DRIVER_COMMIT=pinned_commit(driver_dir),
                CAMPAIGN_ANSWER_MODEL=ANSWER_MODEL,
+               CAMPAIGN_VM_IMAGE=VM_IMAGE,
                CAMPAIGN_MODEL=os.environ.get(
                    "CAMPAIGN_MODEL", "claude-code-cli:" + ANSWER_MODEL))
     with open(os.path.join(runs, name + ".log"), "wb") as dlog, \

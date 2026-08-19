@@ -58,6 +58,14 @@ feedback loop still runs, unchanged. Same action word, channel-appropriate
 mechanics — which is what the router is for. Condition A is untouched: its
 action space is pyautogui and always could scroll.
 
+v5→v6 (REPONSEGRANDEPASSE chantier 1, development phase only): the view can
+carry `[uno]` lines — the document MODEL of an active LibreOffice window,
+read through the application's own API. Grammar documented in the B
+observation block below, same rule as [offscreen] before it: a line format
+the legend never explained cost steps in iteration 2, so every format the
+view can emit is described where the model reads it. Descriptive only — the
+legend says what the lines and verbs mean, never when to use them.
+
 Amending this file after the first campaign run is forbidden (protocol §1
 spirit); v1→v2→v3 all happened pre-campaign, on manager order, in git
 history.
@@ -142,7 +150,20 @@ whose content the structure cannot read (crop shows its pixels);
 `declares=N exposes=M` on a region means the structure announces N items
 there and exposes M of them; `typed-by-driver="…"` is NOT read from the
 screen — it is the driver's own record of what it last typed into that
-element, for channels that do not expose a field's value:
+element, for channels that do not expose a field's value.
+`[uno] …` lines are the document MODEL of an active LibreOffice window,
+read through the application's own API; they have no screen position.
+`[uno] cell B7 "1500" formula "=SUM(B2:B6)"` is a spreadsheet cell: the
+value is what the cell shows, the formula (when present) is what it
+contains. `[uno] paragraph 12 list-label "[13]" text "Steinberg…"` is a
+text paragraph: `list-label` is numbering RENDERED by the document (not
+part of the paragraph's text), `text` is the paragraph's literal content.
+`[uno] shape "Title" text "…"` is a shape on the current slide. On a
+`[uno]` element, `click` places the caret or selection there (the
+application scrolls its own view) and `set_value` sets the cell,
+paragraph or shape content directly — in a cell, a leading `=` enters a
+formula, a number enters a numeric value, anything else enters text;
+`toggle`, `scroll_to` and `crop` do not apply to `[uno]` elements:
 {VIEW}
 {ACT_GUARD_LINE}
 

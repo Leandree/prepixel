@@ -71,6 +71,31 @@ CHROMIUM_APPS = ("chromium", "google-chrome", "chrome")
 WEB_DOC_ROLES = ("document-web", "document-frame")
 CDP_TIMEOUT = 25            # s; a slow page must not stall the whole step
 
+LO_APPS = ("soffice", "libreoffice")
+LO_DOC_ROLES = ("document-spreadsheet", "document-text",
+                "document-presentation")
+UNO_TIMEOUT = 30            # s; same discipline as CDP_TIMEOUT
+# Declared caps for the UNO document view — any truncation is emitted as a
+# visible [uno] +N line, never silent (same rule as the CDP offscreen cap).
+UNO_MAX_CELLS = 200         # non-empty cells emitted per view
+UNO_SCAN_ROWS = 400         # used-area scan bound, rows
+UNO_SCAN_COLS = 40          # used-area scan bound, columns
+UNO_MAX_PARAS = 150         # paragraphs emitted per view
+UNO_PARA_CHARS = 300        # characters per paragraph before truncation
+UNO_MAX_SHAPES = 80         # shapes emitted per view (current slide)
+
+# Roles whose ACTIVATION is an interaction signal the app listens to, not a
+# state mutation: AT-SPI Action.toggle on a Qt radio flips `checked` without
+# emitting clicked(), so the app-side handler never runs — measured on
+# vlc-215dfd39-B (iteration 3): the guard said CONFIRMED (state flipped) and
+# the panel never rebuilt. For these roles rung 1 IS the synthesized pointer,
+# because a real click is the input the app's signal wiring listens to. The
+# alternative (flag "state changed, view unchanged elsewhere" as UNVERIFIED)
+# would punish legitimately quiet toggles — a radio in a plain form changes
+# nothing else on screen. The list grows only when a role PROVES the same
+# mechanism.
+SIGNAL_ACTIVATION_ROLES = ("radio-button",)
+
 
 def _inside(rect, box, tol=2):
     """Is this AT-SPI record WHOLLY inside the web content area?
@@ -141,6 +166,43 @@ def _chromium_content_rect(tree_xml):
         return best, app_seen, tab
     return None, ("no on-screen web document in %r" % app_seen
                   if app_seen else "no chromium application in the tree"), tab
+
+
+def _lo_document_rect(tree_xml):
+    """Screen rect and role of the document area of the ACTIVE LibreOffice
+    window — the UNO router's signature step, same contract as
+    `_chromium_content_rect`: the channel is chosen per window from what the
+    window IS, never from the task. A window qualifies when its application
+    is soffice and it exposes an on-screen document-spreadsheet /
+    document-text / document-presentation; the largest such rect is the
+    document area, everything outside it (toolbars, sidebars, dialogs,
+    menus) is application chrome and stays on AT-SPI.
+
+    Returns (rect, app_name_or_reason, doc_role) so a decline is logged,
+    not silent."""
+    try:
+        root = ET.fromstring(tree_xml or "<desktop-frame/>")
+    except Exception as e:
+        return None, "tree-parse: %s" % str(e)[:80], ""
+    best, app_seen, role = None, None, ""
+    for app in root.iter("application"):
+        name = (app.get("name") or "").strip().lower()
+        if not any(c in name for c in LO_APPS):
+            continue
+        app_seen = name
+        for node in app.iter():
+            if node.tag not in LO_DOC_ROLES:
+                continue
+            if distill_osworld._position(node, VW, VH) != "on":
+                continue
+            x, y, w, h = distill_osworld._coords(node)
+            if w * h > 0 and (best is None or w * h > best[2] * best[3]):
+                best = (x, y, w, h)
+                role = node.tag
+    if best:
+        return best, app_seen, role
+    return None, ("no on-screen document in %r" % app_seen
+                  if app_seen else "no libreoffice application in the tree"), ""
 
 
 def _cost_accounting(out, model):
@@ -559,6 +621,219 @@ if isinstance(_res, dict) and _res.get("ok"):
 print("OSW_RESULT:" + json.dumps(_res))
 '''
 
+# In-VM UNO helper (chantier 1, REPONSEGRANDEPASSE). One script, two ops:
+# P["op"]=="view" reads the current document model; P["op"]=="act" performs
+# click (selection / caret placement — LibreOffice scrolls its own view) or
+# set_value on one addressed element and RE-READS it in the same round trip,
+# so the act-guard's re-read is atomic with the action. Strictly
+# opportunistic: connect-or-decline, never launches or configures soffice —
+# the affordance exists only because the image was baked offline
+# (bake_uno_image.py), identically for both conditions.
+UNO_SCRIPT = r'''
+import json
+
+
+def _addr(col, row):
+    s = ""
+    col += 1
+    while col:
+        col, r = divmod(col - 1, 26)
+        s = chr(65 + r) + s
+    return "%s%d" % (s, row + 1)
+
+
+def _run():
+    try:
+        import uno
+        ctx = uno.getComponentContext()
+        resolver = ctx.ServiceManager.createInstanceWithContext(
+            "com.sun.star.bridge.UnoUrlResolver", ctx)
+        rc = resolver.resolve("uno:socket,host=localhost,port=2002;urp;"
+                              "StarOffice.ComponentContext")
+    except Exception as e:
+        return {"ok": False, "err": "connect: %s" % str(e)[:120]}
+    try:
+        desktop = rc.ServiceManager.createInstanceWithContext(
+            "com.sun.star.frame.Desktop", rc)
+        comp = desktop.getCurrentComponent()
+        if comp is None:
+            return {"ok": False, "err": "no current component"}
+
+        def svc(s):
+            try:
+                return comp.supportsService(s)
+            except Exception:
+                return False
+        if svc("com.sun.star.sheet.SpreadsheetDocument"):
+            doc = "calc"
+        elif svc("com.sun.star.text.TextDocument"):
+            doc = "text"
+        elif svc("com.sun.star.presentation.PresentationDocument"):
+            doc = "impress"
+        else:
+            return {"ok": False, "err": "unsupported document: %s"
+                    % comp.getImplementationName()}
+        ctl = comp.getCurrentController()
+
+        if P["op"] == "view":
+            out = {"ok": True, "doc": doc, "url": (comp.getURL() or "")[-80:]}
+            if doc == "calc":
+                sheet = ctl.ActiveSheet
+                cur = sheet.createCursor()
+                cur.gotoStartOfUsedArea(False)
+                cur.gotoEndOfUsedArea(True)
+                ra = cur.RangeAddress
+                rows = ra.EndRow - ra.StartRow + 1
+                cols = ra.EndColumn - ra.StartColumn + 1
+                srows = min(rows, P["scan_rows"])
+                scols = min(cols, P["scan_cols"])
+                rng = sheet.getCellRangeByPosition(
+                    ra.StartColumn, ra.StartRow,
+                    ra.StartColumn + scols - 1, ra.StartRow + srows - 1)
+                data = rng.getDataArray()
+                formulas = rng.getFormulaArray()
+                cells, more = [], 0
+                for r in range(srows):
+                    for c in range(scols):
+                        v, f = data[r][c], formulas[r][c]
+                        if v == "" and f == "":
+                            continue
+                        if len(cells) >= P["max_cells"]:
+                            more += 1
+                            continue
+                        cell = {"a": _addr(ra.StartColumn + c,
+                                           ra.StartRow + r),
+                                "v": v if isinstance(v, str) else
+                                ("%g" % v)}
+                        if isinstance(f, str) and f.startswith("="):
+                            cell["f"] = f[:120]
+                        cells.append(cell)
+                try:
+                    active = ctl.getSelection().AbsoluteName
+                except Exception:
+                    active = ""
+                out.update({
+                    "sheet": sheet.Name,
+                    "sheets": [comp.Sheets.getByIndex(i).Name
+                               for i in range(comp.Sheets.Count)],
+                    "active": active, "cells": cells, "more_cells": more,
+                    "used": "%dx%d" % (rows, cols),
+                    "scan_truncated": rows > srows or cols > scols})
+            elif doc == "text":
+                paras, more, i = [], 0, 0
+                en = comp.getText().createEnumeration()
+                while en.hasMoreElements():
+                    p = en.nextElement()
+                    i += 1
+                    try:
+                        if p.supportsService("com.sun.star.text.TextTable"):
+                            paras.append({"i": i, "table": p.Name})
+                            continue
+                        if not p.supportsService("com.sun.star.text.Paragraph"):
+                            continue
+                        if len(paras) >= P["max_paras"]:
+                            more += 1
+                            continue
+                        s = p.getString()
+                        d = {"i": i, "t": s[:P["para_chars"]],
+                             "cut": len(s) > P["para_chars"]}
+                        lbl = getattr(p, "ListLabelString", "") or ""
+                        if lbl:
+                            d["lbl"] = lbl
+                        paras.append(d)
+                    except Exception:
+                        continue
+                out.update({"paras": paras, "more_paras": more})
+            else:
+                page = ctl.getCurrentPage()
+                shapes, more = [], 0
+                for i in range(page.Count):
+                    sh = page.getByIndex(i)
+                    if len(shapes) >= P["max_shapes"]:
+                        more += 1
+                        continue
+                    d = {"i": i, "name": sh.Name}
+                    try:
+                        d["t"] = sh.getString()[:P["para_chars"]]
+                    except Exception:
+                        d["t"] = ""
+                    shapes.append(d)
+                out.update({"slide": page.Name,
+                            "slide_n": getattr(page, "Number", 0),
+                            "slides": comp.DrawPages.Count,
+                            "shapes": shapes, "more_shapes": more})
+            return out
+
+        # ---- op == "act": act on ONE addressed element, re-read atomically
+        verb, value = P["verb"], P.get("value", "")
+        if doc == "calc":
+            sheet = ctl.ActiveSheet
+            cell = sheet.getCellRangeByName(P["addr"])
+            if verb == "click":
+                ctl.select(cell)
+                try:
+                    sel = ctl.getSelection().AbsoluteName
+                except Exception:
+                    sel = ""
+                return {"ok": True, "did": "select", "reread": {"sel": sel}}
+            # set_value semantics = what typing + Enter would mean: leading
+            # "=" is a formula, a parseable number is numeric, else text.
+            s = str(value)
+            if s.startswith("="):
+                cell.setFormula(s)
+            else:
+                try:
+                    cell.setValue(float(s))
+                except ValueError:
+                    cell.setString(s)
+            return {"ok": True, "did": "set_value",
+                    "reread": {"a": P["addr"], "v": cell.getString(),
+                               "f": cell.getFormula()[:120]}}
+        if doc == "text":
+            en = comp.getText().createEnumeration()
+            i = 0
+            while en.hasMoreElements():
+                p = en.nextElement()
+                i += 1
+                if i == P["idx"]:
+                    if not p.supportsService("com.sun.star.text.Paragraph"):
+                        return {"ok": False,
+                                "err": "index %d is not a paragraph" % i}
+                    if verb == "click":
+                        vc = ctl.getViewCursor()
+                        vc.gotoRange(p.getStart(), False)
+                        return {"ok": True, "did": "caret",
+                                "reread": {"i": i, "t": p.getString()[:120]}}
+                    p.setString(str(value))
+                    lbl = getattr(p, "ListLabelString", "") or ""
+                    return {"ok": True, "did": "set_value",
+                            "reread": {"i": i, "t": p.getString()[:300],
+                                       "lbl": lbl}}
+            return {"ok": False, "err": "paragraph %d not found (%d seen)"
+                    % (P["idx"], i)}
+        page = ctl.getCurrentPage()
+        idx = P.get("idx", -1)
+        if not (0 <= idx < page.Count):
+            return {"ok": False, "err": "shape %d not on current slide "
+                    "(%d shapes)" % (idx + 1, page.Count)}
+        target = page.getByIndex(idx)
+        if verb == "click":
+            ctl.select(target)
+            return {"ok": True, "did": "select",
+                    "reread": {"i": idx + 1,
+                               "name": target.Name or "unnamed"}}
+        target.setString(str(value))
+        return {"ok": True, "did": "set_value",
+                "reread": {"i": idx + 1,
+                           "t": target.getString()[:300]}}
+    except Exception as e:
+        return {"ok": False, "err": "%s: %s" % (type(e).__name__,
+                                                str(e)[:160])}
+
+
+print("OSW_UNO:" + json.dumps(_run()))
+'''
+
 
 class Driver:
     """Deterministic mechanics for one run (spec §3: no task heuristics,
@@ -597,7 +872,14 @@ class Driver:
                            "guard_suspects_superseded": 0,
                            "cdp_actions": 0, "cdp_action_failures": 0,
                            "cdp_scroll_to": 0,
-                           "noop_escalations": 0, "fingerprint_matches": 0}
+                           "noop_escalations": 0, "fingerprint_matches": 0,
+                           # UNO router (iteration 4): same accounting
+                           # discipline as CDP — declines are measurements.
+                           "uno_steps": 0, "uno_declines": 0,
+                           "uno_ms_total": 0, "uno_records_total": 0,
+                           "atspi_records_replaced_uno": 0,
+                           "uno_actions": 0, "uno_action_failures": 0,
+                           "signal_role_pointer": 0}
 
     # -------------------------------------------------------------- probe --
     def probe_platform(self):
@@ -733,6 +1015,131 @@ class Driver:
         self.web_meta = out.get("meta", {})
         return kept + web, sup
 
+    def _uno_call(self, params):
+        """One in-VM UNO round trip. Connect-or-decline, never configures."""
+        script = "P = " + repr(params) + "\n" + UNO_SCRIPT
+        t0 = time.time()
+        r = self.ctrl.run_python_script(script)
+        ms = int((time.time() - t0) * 1000)
+        for line in ((r or {}).get("output") or "").splitlines():
+            if line.startswith("OSW_UNO:"):
+                try:
+                    return json.loads(line[8:]), ms
+                except Exception as e:
+                    return {"ok": False, "err": "parse: %s" % e}, ms
+        return {"ok": False, "err": "no OSW_UNO output (status=%s)"
+                % ((r or {}).get("status"))}, ms
+
+    def route_uno(self, tree, records, suspects, mech):
+        """Per-window UNO router (chantier 1): AT-SPI for the application
+        chrome, the document MODEL for the document area of an active
+        LibreOffice window. Same composition rule as route_web — AT-SPI
+        records wholly inside the document rect are REPLACED by [uno]
+        records — and the same opportunism: soffice is never launched,
+        relaunched or configured; if port 2002 does not answer (profile
+        overwritten by a task setup, non-baked image), the router declines
+        and the AT-SPI view stands unchanged.
+
+        What this channel adds is what neither screen channel can see,
+        measured on writer-adf5e2c3 in BOTH directions (iter-2: B typed the
+        rendered list number as literal text; iter-3: A did): the document
+        model separates ListLabelString from the paragraph's literal text,
+        exposes cell formulas behind their displayed values, and acts
+        without coordinates."""
+        rect, why, docrole = _lo_document_rect(tree)
+        if rect is None:
+            mech["uno"] = {"used": False, "reason": why}
+            return records, suspects
+        params = {"op": "view", "scan_rows": UNO_SCAN_ROWS,
+                  "scan_cols": UNO_SCAN_COLS, "max_cells": UNO_MAX_CELLS,
+                  "max_paras": UNO_MAX_PARAS, "para_chars": UNO_PARA_CHARS,
+                  "max_shapes": UNO_MAX_SHAPES}
+        out, ms = self._uno_call(params)
+        if not out.get("ok"):
+            mech["uno"] = {"used": False, "ms": ms, "rect": list(rect),
+                           "reason": out.get("err", "no output")}
+            self.mech_total["uno_declines"] += 1
+            return records, suspects
+        uno = []
+
+        def rec_(role, label, value, line, **payload):
+            uno.append({"kind": "uno", "role": role, "rect": [0, 0, 0, 0],
+                        "label": label, "value": value, "states": {},
+                        "src": "uno", "uno": payload, "line": line})
+
+        def note(line):
+            uno.append({"kind": "note", "role": "note", "rect": [0, 0, 0, 0],
+                        "label": "", "value": "", "states": {}, "line": line})
+
+        doc = out["doc"]
+        if doc == "calc":
+            note('[uno] calc sheet "%s" (%d sheets: %s) selection %s used %s'
+                 % (out["sheet"], len(out["sheets"]),
+                    ", ".join(out["sheets"][:8]), out.get("active") or "?",
+                    out["used"]))
+            for c in out["cells"]:
+                line = '[uno] cell %s "%s"' % (c["a"], c["v"])
+                if c.get("f"):
+                    line += ' formula "%s"' % c["f"]
+                rec_("cell", c["a"], c["v"], line, doc="calc", addr=c["a"])
+            if out.get("more_cells"):
+                note("[uno] +%d more non-empty cells truncated (cap %d)"
+                     % (out["more_cells"], UNO_MAX_CELLS))
+            if out.get("scan_truncated"):
+                note("[uno] used area %s exceeds the %dx%d scan bound — "
+                     "cells outside it are not shown"
+                     % (out["used"], UNO_SCAN_ROWS, UNO_SCAN_COLS))
+        elif doc == "text":
+            for p in out["paras"]:
+                if "table" in p:
+                    note('[uno] paragraph %d is table "%s" (not enumerated '
+                         'by this channel)' % (p["i"], p["table"]))
+                    continue
+                if p.get("lbl"):
+                    line = ('[uno] paragraph %d list-label "%s" text "%s"'
+                            % (p["i"], p["lbl"], p["t"]))
+                else:
+                    line = '[uno] paragraph %d text "%s"' % (p["i"], p["t"])
+                if p.get("cut"):
+                    line += " …(truncated at %d chars)" % UNO_PARA_CHARS
+                rec_("paragraph", str(p["i"]), p["t"], line,
+                     doc="text", idx=p["i"])
+            if out.get("more_paras"):
+                note("[uno] +%d more paragraphs truncated (cap %d)"
+                     % (out["more_paras"], UNO_MAX_PARAS))
+        else:
+            note('[uno] impress slide "%s" (%d/%d)'
+                 % (out["slide"], out.get("slide_n", 0), out["slides"]))
+            for s in out["shapes"]:
+                # Addressed by INDEX: shape names can be empty (measured on
+                # a fresh deck — two 'shape "" text ""' lines were
+                # indistinguishable), so an empty name would resolve to the
+                # first empty-named shape, not the targeted one.
+                nm = s["name"] or "unnamed"
+                rec_("shape", str(s["i"] + 1), s.get("t", ""),
+                     '[uno] shape %d "%s" text "%s"'
+                     % (s["i"] + 1, nm, s.get("t", "")),
+                     doc="impress", idx=s["i"])
+            if out.get("more_shapes"):
+                note("[uno] +%d more shapes truncated (cap %d)"
+                     % (out["more_shapes"], UNO_MAX_SHAPES))
+
+        kept = [r for r in records if not _inside(r["rect"], rect)]
+        dropped = len(records) - len(kept)
+        sup = [s for s in suspects if not _inside(s["rect"], rect)]
+        self.mech_total["guard_suspects_superseded"] += len(suspects) - len(sup)
+        mech["channel"] = "atspi+uno"
+        mech["uno"] = {"used": True, "ms": ms, "rect": list(rect),
+                       "doc": doc, "doc_role": docrole,
+                       "atspi_records_replaced": dropped,
+                       "uno_records": len(uno),
+                       "url": out.get("url", "")}
+        self.mech_total["uno_steps"] += 1
+        self.mech_total["uno_ms_total"] += ms
+        self.mech_total["uno_records_total"] += len(uno)
+        self.mech_total["atspi_records_replaced_uno"] += dropped
+        return kept + uno, sup
+
     # ------------------------------------------------------------- render --
     def build_view(self, step_dir, shot_path, mech):
         """distill + re-probe + coverage guard + id assignment.
@@ -755,6 +1162,8 @@ class Driver:
                             f"declares={ic['declared']} "
                             f"exposes={ic['exposed']}"})
         records, suspects = self.route_web(
+            self.cur_tree, records, suspects, mech)
+        records, suspects = self.route_uno(
             self.cur_tree, records, suspects, mech)
         n_hits = 0
         for s in suspects:
@@ -859,6 +1268,11 @@ class Driver:
                 return (f"{kind} {tid} (RESOLUTION ERROR)",
                         f"EXPLICIT_FAILURE (resolution: unknown target "
                         f"{tid!r}; current view has {ids})", False, None)
+            if rec.get("src") == "uno":
+                # Document-model records have no screen rect by nature; the
+                # empty-rect refusal below is for SCREEN records that lost
+                # theirs.
+                return self._uno_execute(rec, kind, act, mech)
             if rec["rect"][2] <= 0 or rec["rect"][3] <= 0:
                 self.mech_total["resolve_errors"] += 1
                 mech["resolve_error"] = "empty rect"
@@ -961,6 +1375,80 @@ class Driver:
                 f"EXPLICIT_FAILURE (resolution: unknown action kind "
                 f"{kind!r})", False, None)
 
+    def _uno_execute(self, rec, verb, act, mech):
+        """Execute + guard for an element the UNO channel described.
+
+        Rung 1 is "the platform's own action for the channel that described
+        the element" — for a document-model record that is the document API,
+        and the act-guard's contract (re-read the targeted element, state
+        the ask) is honored through the same channel, atomically with the
+        action: the re-read comes back in the same round trip. There is no
+        rung 2: these records have no screen rect, and a pointer guess
+        would act on pixels the model was never shown."""
+        u = rec.get("uno") or {}
+        label = f'{rec["role"]} {_q(rec["label"])}'
+        if verb == "set_value":
+            hist = f'set_value {label} := {_q(str(act.get("value", "")))}'
+        else:
+            hist = f"{verb} {label}"
+        if verb in ("toggle", "crop", "scroll_to"):
+            reason = {"toggle": "not applicable to a document-model record",
+                      "crop": "document-model records have no pixels — crop "
+                              "an on-screen element instead",
+                      "scroll_to": "not needed: click places the caret or "
+                                   "selection and LibreOffice scrolls its "
+                                   "own view"}[verb]
+            self.mech_total["resolve_errors"] += 1
+            mech["resolve_error"] = f"uno: {reason}"
+            return (f"{hist} (RESOLUTION ERROR)",
+                    f"EXPLICIT_FAILURE (uno: {reason})", False, None)
+        params = dict(u, op="act", verb=verb,
+                      value=str(act.get("value", "")))
+        out, ms = self._uno_call(params)
+        mech["rung"] = 1
+        mech["rung1_method"] = "uno:%s" % verb
+        mech["uno_act_ms"] = ms
+        if not out.get("ok"):
+            self.mech_total["uno_action_failures"] += 1
+            self.mech_total["resolve_errors"] += 1
+            mech["rung1_error"] = "uno: %s" % out.get("err")
+            return (hist, "EXPLICIT_FAILURE (uno: %s)"
+                    % str(out.get("err"))[:160], False, None)
+        self.mech_total["rung1"] += 1
+        self.mech_total["uno_actions"] += 1
+        rr = out.get("reread") or {}
+        if verb == "click":
+            did = out.get("did")
+            if did == "caret":
+                verdict = ('CONFIRMED (caret placed at paragraph %s: "%s")'
+                           % (rr.get("i"), str(rr.get("t", ""))[:80]))
+            elif rr.get("name") is not None:
+                verdict = ('CONFIRMED (selection now shape %s "%s")'
+                           % (rr.get("i"), rr.get("name")))
+            else:
+                verdict = ("CONFIRMED (selection now %s)"
+                           % (rr.get("sel") or "?"))
+            return hist, verdict, True, None
+        # set_value: compare the ask against the atomic re-read
+        want = str(act.get("value", ""))
+        got_v = str(rr.get("v", rr.get("t", "")))
+        got_f = str(rr.get("f", ""))
+        ok = (got_v == want or got_f == want)
+        if not ok:
+            try:
+                ok = float(got_v) == float(want)
+            except (TypeError, ValueError):
+                pass
+        detail = 'value %s' % _q(got_v)
+        if got_f and got_f != got_v:
+            detail += ' formula %s' % _q(got_f)
+        if rr.get("lbl"):
+            detail += ' list-label %s' % _q(str(rr["lbl"]))
+        if ok:
+            return hist, f"CONFIRMED (re-read: {detail})", True, None
+        return (hist, f"UNVERIFIED (asked value={_q(want)}, re-read: "
+                f"{detail})", True, None)
+
     def _cdp_act(self, rec, verb, value, mech):
         """Rung 1 for an element the WEB channel described.
 
@@ -1006,6 +1494,15 @@ class Driver:
                 and pn["verb"] == verb:
             mech["escalated_from_rung1"] = True
             self.mech_total["noop_escalations"] += 1
+            return self._rung2(rec, verb, value, mech)
+        # Chantier 2 (REPONSEGRANDEPASSE): for roles whose activation is an
+        # interaction signal, rung 1 IS the pointer — see the
+        # SIGNAL_ACTIVATION_ROLES comment for the measured mechanism.
+        if rec["role"] in SIGNAL_ACTIVATION_ROLES and verb in ("click",
+                                                               "toggle") \
+                and rec.get("src") != "cdp":
+            mech["signal_activation_role"] = True
+            self.mech_total["signal_role_pointer"] += 1
             return self._rung2(rec, verb, value, mech)
         if rec.get("src") == "cdp":
             res = self._cdp_act(rec, verb, value, mech)
@@ -1277,9 +1774,15 @@ def main():
     os.makedirs(args.out, exist_ok=True)
     t0 = time.time()
 
+    # The VM image is an ENVIRONMENT condition, so it is set once for the
+    # whole iteration and applies to both conditions by construction (the
+    # UNO affordance was baked into it offline — bake_uno_image.py); the
+    # driver only records which file it ran on.
+    vm_image = os.environ.get("CAMPAIGN_VM_IMAGE") or None
     env = DesktopEnv(provider_name="docker", os_type="Ubuntu",
                      action_space="pyautogui", headless=True,
-                     require_a11y_tree=(args.condition == "B"))
+                     require_a11y_tree=(args.condition == "B"),
+                     path_to_vm=vm_image)
     try:
         obs = env.reset(task_config=task)
     except Exception as e:
@@ -1294,6 +1797,7 @@ def main():
             "model": os.environ.get("CAMPAIGN_MODEL", "UNSET"),
             "driver": "v3-dev", "phase": args.phase,
             "driver_commit": _git_head(),
+            "vm_image": os.environ.get("CAMPAIGN_VM_IMAGE") or "default",
             "success": False, "score_raw": None, "steps": 0,
             "termination": "setup_error", "wall_clock_s": round(
                 time.time() - t0, 1),
@@ -1519,6 +2023,7 @@ def main():
         # a corrupted record. The final run passes --phase campaign explicitly.
         "phase": args.phase,
         "driver_commit": _git_head(),
+            "vm_image": os.environ.get("CAMPAIGN_VM_IMAGE") or "default",
         "success": bool(score) if score is not None else False,
         "score_raw": score, "steps": len(actions), "termination": term,
         "wall_clock_s": round(time.time() - t0, 1),

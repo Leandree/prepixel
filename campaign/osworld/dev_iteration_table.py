@@ -147,6 +147,7 @@ def main():
     rungs = collections.Counter()
     channels = collections.Counter()
     cdp_decline = collections.Counter()
+    uno_decline = collections.Counter()
     escal = collections.Counter()
     for r in cells.values():
         if r["condition"] != "B":
@@ -158,6 +159,8 @@ def main():
                 escal["noop_escalations"] += 1
             if m.get("reresolved_rect"):
                 escal["fingerprint_matches"] += 1
+            if m.get("signal_activation_role"):
+                escal["signal_role_pointer"] += 1
             if m.get("rung1_error"):
                 # keep the reason, drop the element-specific tail
                 reasons[str(m["rung1_error"])[:90]] += 1
@@ -165,6 +168,12 @@ def main():
             c = m.get("cdp") or {}
             if c and not c.get("used"):
                 cdp_decline[str(c.get("reason"))[:70]] += 1
+            u = m.get("uno") or {}
+            if u and not u.get("used") and "no libreoffice application" \
+                    not in str(u.get("reason")):
+                # "no LO in the tree" is the normal state of most steps,
+                # not a decline worth a table row
+                uno_decline[str(u.get("reason"))[:70]] += 1
     if escal:
         W("")
         W("**Ladder self-corrections:** " +
@@ -184,6 +193,12 @@ def main():
         W("| router declined the web channel because | n |")
         W("|---|---|")
         for why, n in cdp_decline.most_common():
+            W("| `%s` | %d |" % (why, n))
+    if uno_decline:
+        W("")
+        W("| router declined the uno channel because | n |")
+        W("|---|---|")
+        for why, n in uno_decline.most_common():
             W("| `%s` | %d |" % (why, n))
 
     # ---- evidence for each B failure, cause left blank on purpose ----
